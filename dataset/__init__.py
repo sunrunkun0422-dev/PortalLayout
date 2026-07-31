@@ -11,6 +11,10 @@ from dataset.zind_bipair_dataset import (
     collate_zind_bipair,
 )
 from dataset.zind_bipair_feature_dataset import ZInDBiPairFeatureDataset
+from dataset.zind_matching_feature_dataset import (
+    ZInDMatchingFeatureDataset,
+    validate_disjoint_house_splits,
+)
 from dataset.zind_bipair_adapter import (
     adapt_zind_bipair_batch,
     canonicalize_zind_bipair_batch,

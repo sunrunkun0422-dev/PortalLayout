@@ -527,8 +527,31 @@ def _forward_batch(
     feature_b = raw_batch["feature_B"].to(device, dtype=torch.float32, non_blocking=True)
 
     if candidate_source == "gt":
-        masks_a, valid_a = pair.candidates_a.masks, pair.candidates_a.valid
-        masks_b, valid_b = pair.candidates_b.masks, pair.candidates_b.valid
+        # The complete-room ZInD_matching manifest preserves candidate
+        # identity explicitly.  Its opening union may contain overlapping or
+        # touching intervals, so splitting that union into connected
+        # components would silently merge different doors.  BiPair does not
+        # provide these fields and keeps the historical component path.
+        explicit_masks_a = raw_batch.get("manifest_candidate_masks_A")
+        explicit_masks_b = raw_batch.get("manifest_candidate_masks_B")
+        explicit_valid_a = raw_batch.get("manifest_candidate_valid_A")
+        explicit_valid_b = raw_batch.get("manifest_candidate_valid_B")
+        if all(
+            torch.is_tensor(value)
+            for value in (
+                explicit_masks_a,
+                explicit_masks_b,
+                explicit_valid_a,
+                explicit_valid_b,
+            )
+        ):
+            masks_a = explicit_masks_a.to(device=device, dtype=torch.bool)
+            masks_b = explicit_masks_b.to(device=device, dtype=torch.bool)
+            valid_a = explicit_valid_a.to(device=device, dtype=torch.bool)
+            valid_b = explicit_valid_b.to(device=device, dtype=torch.bool)
+        else:
+            masks_a, valid_a = pair.candidates_a.masks, pair.candidates_a.valid
+            masks_b, valid_b = pair.candidates_b.masks, pair.candidates_b.valid
     elif candidate_source == "predicted":
         with torch.no_grad():
             signal_a = matcher.opening_head(
@@ -568,9 +591,26 @@ def _forward_batch(
         opening_guidance_mode=guidance_mode,
         opening_guidance_mix_weight=mix_weight,
     )
-    candidate_target = candidate_targets_from_affinity(
-        masks_a, pair.affinity_ab, masks_b
-    )
+    explicit_target = raw_batch.get("candidate_target_AB")
+    if candidate_source == "gt" and torch.is_tensor(explicit_target):
+        candidate_target = explicit_target.to(device=device, dtype=torch.float32)
+        expected_shape = (
+            int(masks_a.shape[0]),
+            int(masks_a.shape[1]),
+            int(masks_b.shape[1]),
+        )
+        if tuple(candidate_target.shape) != expected_shape:
+            raise ValueError(
+                "candidate_target_AB must match explicit GT candidate padding "
+                f"{expected_shape}, got {tuple(candidate_target.shape)}"
+            )
+    else:
+        # Predicted intervals have no stable manifest indices.  Project the
+        # dense token affinity into them with IoU gating to measure whether the
+        # Opening Head actually recalled the shared opening.
+        candidate_target = candidate_targets_from_affinity(
+            masks_a, pair.affinity_ab, masks_b
+        )
     return outputs, pair, candidate_target, valid_a, valid_b
 
 
@@ -733,6 +773,12 @@ class MetricAccumulator:
         conditional_topk = self.correct_topk / available
         end_to_end_top1 = self.correct_top1 / positive
         negative_rejection = self.rejected_negative / negative
+        harmonic_flow = (
+            2.0 * end_to_end_top1 * negative_rejection
+            / (end_to_end_top1 + negative_rejection)
+            if end_to_end_top1 + negative_rejection > 0.0
+            else 0.0
+        )
         return {
             **{
                 key: value / max(self.samples, 1)
@@ -748,6 +794,7 @@ class MetricAccumulator:
             "end_to_end_candidate_top1": end_to_end_top1,
             "negative_rejection_rate": negative_rejection,
             "balanced_flow_score": 0.5 * (end_to_end_top1 + negative_rejection),
+            "harmonic_flow_score": harmonic_flow,
             "portal_shift_pair_count": float(self.portal_shift_count),
             "mean_portal_shift_error_degrees": self.portal_shift_error_sum
             / max(self.portal_shift_count, 1),
@@ -774,6 +821,9 @@ def train_one_epoch(
     matcher.opening_head.eval()
     metrics = MetricAccumulator(args.metric_top_k)
     start = time.perf_counter()
+    candidate_source = "gt"
+    if getattr(args, "sync_candidate_schedule", False) and mode != "gt":
+        candidate_source = "predicted"
     for step, raw_batch in enumerate(loader, start=1):
         optimizer.zero_grad()
         outputs, pair, target, valid_a, valid_b = _forward_batch(
@@ -782,7 +832,7 @@ def train_one_epoch(
             device,
             guidance_mode=mode,
             mix_weight=args.mix_guidance_weight,
-            candidate_source="gt",
+            candidate_source=candidate_source,
             opening_threshold=opening_threshold,
             min_width_tokens=args.min_opening_width_tokens,
             max_openings=args.max_openings_per_view,
@@ -809,6 +859,7 @@ def train_one_epoch(
             )
     result = metrics.result()
     result["guidance_mode"] = mode
+    result["candidate_source"] = candidate_source
     result["runtime_seconds"] = time.perf_counter() - start
     return result
 
