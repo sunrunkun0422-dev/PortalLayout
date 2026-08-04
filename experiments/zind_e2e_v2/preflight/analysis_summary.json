@@ -1,0 +1,9 @@
+{
+  "compatibility_status": "PASS",
+  "g0_name": "threshold_0.470_width_2",
+  "g1_name": "threshold_0.550_width_2",
+  "g1_joint_recall_gain": 0.012041598248494823,
+  "g1_challenge_gain_reached": false,
+  "validation_pair_count": 3630,
+  "test_split_accessed": false
+}

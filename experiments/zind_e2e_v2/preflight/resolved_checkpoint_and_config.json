@@ -1,0 +1,178 @@
+{
+  "selected_checkpoint": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_matching_v1/best.pt",
+  "selection_evidence": {
+    "task": "ZInD_matching full end-to-end joint fine-tuning",
+    "completed_epoch_zero_based": 8,
+    "best": {
+      "epoch": 8,
+      "harmonic_flow_score": 0.39965119200697613,
+      "balanced_flow_score": 0.595647465863772,
+      "end_to_end_candidate_top1": 0.25396825396825395,
+      "opening_token_f1": 0.8869007789288558
+    },
+    "not_selected_last_checkpoint_reason": "last.pt completed epoch 14 after six stale epochs; embedded best is epoch 8"
+  },
+  "model_contract": {
+    "composition": "live Bi-Layout -> OpeningSignalHead -> CrossAttentionMatcher",
+    "feature_dim": 512,
+    "token_count": 256,
+    "depth_branch_order": "extended_first",
+    "bi_layout_output_number": 2,
+    "matcher_heads": 8,
+    "activation_checkpointing": false,
+    "amp": false,
+    "amp_dtype": "bfloat16"
+  },
+  "training_contract": {
+    "epochs": 24,
+    "batch_size": 4,
+    "accumulation_steps": 1,
+    "bi_layout_lr": 2e-06,
+    "opening_lr": 1e-05,
+    "matcher_lr": 3e-05,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "minimum_lr_factor": 0.1,
+    "gt_guidance_epochs": 1,
+    "mix_guidance_epochs": 1,
+    "mix_guidance_weight": 0.5,
+    "opening_loss_weight": 1.0,
+    "feature_anchor_weight": 0.02,
+    "depth_anchor_weight": 0.02,
+    "candidate_loss_weight": 1.0,
+    "token_affinity_weight": 1.0,
+    "shared_response_weight": 0.0,
+    "portal_shift_loss_weight": 0.2,
+    "consistency_weight": 0.1,
+    "opening_pos_weight": 2.5,
+    "opening_tversky_weight": 0.5,
+    "min_opening_width_tokens": 2,
+    "max_openings_per_view": 12,
+    "metric_top_k": 3,
+    "image_height": 512,
+    "image_width": 1024,
+    "max_train_pairs": null,
+    "max_val_pairs": null,
+    "max_test_pairs": null,
+    "seed": 123,
+    "rotation_augmentation": true,
+    "candidate_schedule": "GT in GT-guidance epoch, predicted thereafter",
+    "teacher_cache_role": "regularization only; never live feature replacement"
+  },
+  "data_contract": {
+    "validation_manifest": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD_matching/val.json",
+    "validation_cache": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Cross_Scene_Matcher/zind_matching_feature_cache/val",
+    "validation_pair_count": 3630,
+    "validation_house_count": 157,
+    "token_count": 256,
+    "feature_dim": 512
+  },
+  "initialization": {
+    "bi_layout": {
+      "config": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+      "checkpoint": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+      "loaded": true,
+      "modelArgs": {
+        "decoder_name": "Share_Feature_Guidance_Module",
+        "win_size": 16,
+        "rpe": "lr_parameter_mirror",
+        "dropout": 0.0,
+        "depth": 8,
+        "output_name": "Bi_Layout",
+        "output_number": 2,
+        "feature_channel": 512,
+        "height_compression_scale": 16,
+        "use_same_head": false,
+        "share_TF": true,
+        "two_conv_out": false
+      },
+      "epoch": 0,
+      "missingKeys": [],
+      "unexpectedKeys": []
+    },
+    "opening_head": {
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Opening_Head/zind_matching_v1/best.pt",
+      "loaded": true,
+      "formatVersion": 1,
+      "task": "ZInD_matching single-view Opening Head (doors+openings)",
+      "completedEpoch": 20,
+      "operatingThreshold": 0.47000000000000003,
+      "thresholdPolicy": "max_recall_at_precision>=0.80",
+      "thresholdFallback": false,
+      "branchOrder": "extended_first",
+      "model": {
+        "feature_dim": 512,
+        "hidden_dim": 128,
+        "kernel_size": 5,
+        "prior_strength": 4.0,
+        "prior_relative_scale": 0.1,
+        "branch_order": "extended_first"
+      },
+      "backboneContract": {
+        "validated": true,
+        "tokenCount": 256,
+        "featureDim": 512,
+        "biLayoutConfig": {
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+          "savedPath": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+          "size": 1380,
+          "sha256": "867506b93ae973b3517d20a9b2e9899964684366b3644d1facc22110e1382cbd"
+        },
+        "biLayoutCheckpoint": {
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+          "savedPath": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+          "size": 1228718862,
+          "mtimeNs": 1778459017793688163
+        }
+      }
+    },
+    "matcher": {
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Cross_Scene_Matcher/zind_matching_v1/best.pt",
+      "loaded": true,
+      "formatVersion": 2,
+      "task": "ZInD_matching complete-room cross-scene opening matcher",
+      "completedEpoch": 5,
+      "model": {
+        "feature_dim": 512,
+        "heads": 8,
+        "hidden_dim": 128,
+        "dropout": 0.1,
+        "opening_bias_strength": 1.0,
+        "candidate_temperature": 0.2,
+        "shift_temperature": 0.05,
+        "has_dustbin": true
+      },
+      "openingProbabilityThreshold": 0.47000000000000003,
+      "openingHeadDependency": {
+        "branchOrder": "extended_first",
+        "backboneContractValidated": true,
+        "biLayoutConfig": {
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+          "size": 1380,
+          "sha256": "867506b93ae973b3517d20a9b2e9899964684366b3644d1facc22110e1382cbd"
+        },
+        "biLayoutCheckpoint": {
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+          "size": 1228718862,
+          "mtimeNs": 1778459017793688163
+        }
+      }
+    }
+  },
+  "g0": {
+    "opening_threshold": 0.47000000000000003,
+    "min_opening_width_tokens": 2,
+    "max_candidates": 12,
+    "candidate_target_iou_threshold": 0.3,
+    "gap_connection_parameter": null,
+    "gap_connection_note": "the existing component generator has no gap-connection option"
+  },
+  "historical_teacher_forcing": {
+    "gt_guidance_epochs": 1,
+    "mix_guidance_epochs": 1,
+    "mix_guidance_weight": 0.5,
+    "candidate_schedule": "GT in GT-guidance epoch, predicted thereafter",
+    "interpretation": "epoch 0 used GT guidance and GT candidates; epoch 1 used mixed guidance with predicted candidates; later epochs used predicted/predicted"
+  },
+  "sha256": "9406f52e209ffb7645b1187dcf21097e8ea0d924685c1521d74657bd6c7de2f8"
+}

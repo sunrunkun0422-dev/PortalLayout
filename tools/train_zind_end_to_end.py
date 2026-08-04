@@ -46,6 +46,8 @@ from dataset.zind_matching_feature_dataset import (
 )
 from models.cross_scene_matcher import (
     OpeningGuidedCrossAttentionMatcher,
+    candidate_assignment_loss,
+    candidate_listwise_ranking_loss,
     opening_detection_loss,
     resolve_enclosed_extended_depth,
 )
@@ -136,6 +138,12 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument("--feature_anchor_weight", type=float, default=0.02)
     parser.add_argument("--depth_anchor_weight", type=float, default=0.02)
     parser.add_argument("--candidate_loss_weight", type=float, default=1.0)
+    parser.add_argument(
+        "--candidate_missing_target_policy",
+        choices=("legacy_dustbin", "mask_positive"),
+        default="legacy_dustbin",
+    )
+    parser.add_argument("--candidate_rank_loss_weight", type=float, default=0.0)
     parser.add_argument("--token_affinity_weight", type=float, default=1.0)
     parser.add_argument("--shared_response_weight", type=float, default=0.0)
     parser.add_argument("--portal_shift_loss_weight", type=float, default=0.2)
@@ -146,6 +154,21 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument("--min_opening_width_tokens", type=int, default=2)
     parser.add_argument("--max_openings_per_view", type=int, default=12)
     parser.add_argument("--metric_top_k", type=int, default=3)
+    parser.add_argument(
+        "--opening_guidance_source",
+        choices=("predicted", "gt"),
+        help="override the training schedule and configured evaluation guidance",
+    )
+    parser.add_argument(
+        "--candidate_source",
+        choices=("predicted", "gt"),
+        help="override candidate generation independently of opening guidance",
+    )
+    parser.add_argument(
+        "--teacher_forced_manifest_candidates",
+        action="store_true",
+        help=argparse.SUPPRESS,
+    )
 
     parser.add_argument("--image_height", type=int, default=512)
     parser.add_argument("--image_width", type=int, default=1024)
@@ -198,6 +221,7 @@ def validate_args(args: argparse.Namespace) -> None:
         args.feature_anchor_weight,
         args.depth_anchor_weight,
         args.candidate_loss_weight,
+        args.candidate_rank_loss_weight,
         args.token_affinity_weight,
         args.shared_response_weight,
         args.portal_shift_loss_weight,
@@ -221,6 +245,33 @@ def validate_args(args: argparse.Namespace) -> None:
             raise ValueError("max pair limits must be positive")
     if args.image_width % 256 != 0:
         raise ValueError("image_width must be divisible by the 256 layout tokens")
+
+
+def _resolve_source_configuration(
+    args: argparse.Namespace, *, emit_compatibility_message: bool = False
+) -> Tuple[Optional[str], Optional[str]]:
+    """Resolve legacy teacher forcing without coupling either new source flag."""
+    guidance_source = args.opening_guidance_source
+    candidate_source = args.candidate_source
+    if not args.teacher_forced_manifest_candidates:
+        return guidance_source, candidate_source
+    conflicts = []
+    if guidance_source not in (None, "gt"):
+        conflicts.append("opening_guidance_source={}".format(guidance_source))
+    if candidate_source not in (None, "gt"):
+        conflicts.append("candidate_source={}".format(candidate_source))
+    if conflicts:
+        raise ValueError(
+            "--teacher_forced_manifest_candidates requires GT guidance and GT "
+            "candidates; conflicts with {}".format(", ".join(conflicts))
+        )
+    if emit_compatibility_message:
+        print(
+            "compatibility: --teacher_forced_manifest_candidates maps to "
+            "--opening_guidance_source gt --candidate_source gt",
+            flush=True,
+        )
+    return "gt", "gt"
 
 
 class JointZInDMatchingDataset(Dataset):
@@ -501,6 +552,56 @@ def _candidate_inputs(
     return masks_a, masks_b, valid_a, valid_b, target
 
 
+def _opening_guidance_inputs(
+    pair: Any, opening_guidance_source: str
+) -> Tuple[Optional[torch.Tensor], Optional[torch.Tensor]]:
+    """Return GT guidance only for modes that explicitly consume it."""
+    if opening_guidance_source == "predicted":
+        return None, None
+    if opening_guidance_source not in ("gt", "mix"):
+        raise ValueError("opening_guidance_source must be gt, mix, or predicted")
+    return pair.opening_all_a.float(), pair.opening_all_b.float()
+
+
+def _candidate_supervision_validity(
+    candidate_target: torch.Tensor,
+    is_match: torch.Tensor,
+    candidate_valid_a: torch.Tensor,
+    candidate_valid_b: torch.Tensor,
+    policy: str,
+) -> Tuple[torch.Tensor, torch.Tensor]:
+    """Select samples for candidate loss without mistaking padding for targets."""
+    if candidate_target.ndim != 3:
+        raise ValueError("candidate_target must have shape [B, K_A, K_B]")
+    batch, count_a, count_b = candidate_target.shape
+    candidate_valid_a = candidate_valid_a.to(
+        device=candidate_target.device, dtype=torch.bool
+    )
+    candidate_valid_b = candidate_valid_b.to(
+        device=candidate_target.device, dtype=torch.bool
+    )
+    if candidate_valid_a.shape != (batch, count_a):
+        raise ValueError("candidate_valid_a must have shape [B, K_A]")
+    if candidate_valid_b.shape != (batch, count_b):
+        raise ValueError("candidate_valid_b must have shape [B, K_B]")
+    is_match = torch.as_tensor(
+        is_match, device=candidate_target.device, dtype=torch.bool
+    ).reshape(-1)
+    if is_match.shape != (batch,):
+        raise ValueError("is_match must have shape [B]")
+    pair_valid = candidate_valid_a.unsqueeze(-1) & candidate_valid_b.unsqueeze(1)
+    has_target = ((candidate_target > 0) & pair_valid).flatten(1).any(dim=-1)
+    if policy == "legacy_dustbin":
+        sample_valid = torch.ones_like(is_match)
+    elif policy == "mask_positive":
+        sample_valid = (~is_match) | has_target
+    else:
+        raise ValueError(
+            "candidate_missing_target_policy must be legacy_dustbin or mask_positive"
+        )
+    return sample_valid, has_target
+
+
 def _teacher_anchor_losses(
     live: Mapping[str, torch.Tensor],
     raw_batch: Mapping[str, Any],
@@ -532,7 +633,7 @@ def _forward_loss(
     raw_batch: Mapping[str, Any],
     device: torch.device,
     *,
-    guidance_mode: str,
+    opening_guidance_source: str,
     candidate_source: str,
     opening_threshold: float,
     args: argparse.Namespace,
@@ -561,18 +662,67 @@ def _forward_loss(
         opening_threshold,
         args,
     )
+    guidance_a, guidance_b = _opening_guidance_inputs(
+        pair, opening_guidance_source
+    )
     outputs = model.forward_matcher(
         live,
         candidate_masks_a=masks_a,
         candidate_masks_b=masks_b,
         candidate_valid_a=valid_a,
         candidate_valid_b=valid_b,
-        opening_guidance_a=pair.opening_all_a.float(),
-        opening_guidance_b=pair.opening_all_b.float(),
-        opening_guidance_mode=guidance_mode,
+        opening_guidance_a=guidance_a,
+        opening_guidance_b=guidance_b,
+        opening_guidance_mode=opening_guidance_source,
         opening_guidance_mix_weight=args.mix_guidance_weight,
     )
     matching = matcher_losses(outputs, pair, target, valid_a, valid_b, args)
+    sample_valid, _ = _candidate_supervision_validity(
+        target,
+        pair.is_match,
+        valid_a,
+        valid_b,
+        args.candidate_missing_target_policy,
+    )
+    if args.candidate_missing_target_policy == "mask_positive":
+        masked_candidate = candidate_assignment_loss(
+            outputs,
+            candidate_target_ab=target,
+            is_match=pair.is_match,
+            candidate_valid_a=valid_a,
+            candidate_valid_b=valid_b,
+            sample_valid=sample_valid,
+            consistency_weight=args.consistency_weight,
+        )
+        original_candidate = matching["loss_candidate"]
+        matching = dict(matching)
+        matching["loss_total"] = matching["loss_total"] + (
+            args.candidate_loss_weight
+            * (masked_candidate["loss_candidate_total"] - original_candidate)
+        )
+        matching["loss_candidate"] = masked_candidate["loss_candidate_total"]
+        matching["loss_candidate_assignment"] = masked_candidate[
+            "loss_candidate_assignment"
+        ]
+        matching["loss_consistency"] = masked_candidate[
+            "loss_bidirectional_consistency"
+        ]
+    if args.candidate_rank_loss_weight > 0:
+        candidate_rank = candidate_listwise_ranking_loss(
+            outputs,
+            target,
+            pair.is_match,
+            candidate_valid_a=valid_a,
+            candidate_valid_b=valid_b,
+        )
+    else:
+        candidate_rank = outputs["candidate_pair_score"].sum() * 0.0
+    matching = dict(matching)
+    matching["loss_candidate_rank"] = candidate_rank
+    if args.candidate_rank_loss_weight > 0:
+        matching["loss_total"] = matching["loss_total"] + (
+            args.candidate_rank_loss_weight * candidate_rank
+        )
     opening_a = opening_detection_loss(
         outputs["opening_logits_A"].float(),
         pair.opening_all_a.float(),
@@ -615,11 +765,14 @@ def _forward_loss(
 
 
 def _schedule(epoch: int, args: argparse.Namespace) -> Tuple[str, str]:
-    mode = guidance_mode_for_epoch(
+    scheduled_guidance = guidance_mode_for_epoch(
         epoch, args.gt_guidance_epochs, args.mix_guidance_epochs
     )
-    candidate_source = "gt" if mode == "gt" else "predicted"
-    return mode, candidate_source
+    guidance_source = args.opening_guidance_source or scheduled_guidance
+    candidate_source = args.candidate_source
+    if candidate_source is None:
+        candidate_source = "gt" if scheduled_guidance == "gt" else "predicted"
+    return guidance_source, candidate_source
 
 
 def _opening_counts(
@@ -668,6 +821,11 @@ def train_one_epoch(
     optimizer.zero_grad(set_to_none=True)
     start = time.perf_counter()
     opening_tp = opening_fp = opening_fn = 0
+    positive_samples = 0
+    missing_positive_samples = 0
+    candidate_valid_samples = 0
+    masked_positive_samples = 0
+    valid_negative_samples = 0
     use_amp = _amp_enabled(args, device)
     for step, raw_batch in enumerate(loader, start=1):
         with autocast(enabled=use_amp, dtype=_autocast_dtype(args)):
@@ -675,7 +833,7 @@ def train_one_epoch(
                 model,
                 raw_batch,
                 device,
-                guidance_mode=mode,
+                opening_guidance_source=mode,
                 candidate_source=candidate_source,
                 opening_threshold=opening_threshold,
                 args=args,
@@ -695,6 +853,20 @@ def train_one_epoch(
             scaler.update()
             optimizer.zero_grad(set_to_none=True)
         metrics.update(outputs, pair, target, valid_a, valid_b, losses)
+        sample_valid, has_target = _candidate_supervision_validity(
+            target,
+            pair.is_match,
+            valid_a,
+            valid_b,
+            args.candidate_missing_target_policy,
+        )
+        positive = pair.is_match.bool()
+        negative = ~positive
+        positive_samples += int(positive.sum().item())
+        missing_positive_samples += int((positive & ~has_target).sum().item())
+        candidate_valid_samples += int(sample_valid.sum().item())
+        masked_positive_samples += int((positive & ~sample_valid).sum().item())
+        valid_negative_samples += int((negative & sample_valid).sum().item())
         counts = _opening_counts(outputs, pair, opening_threshold)
         opening_tp += counts[0]
         opening_fp += counts[1]
@@ -706,13 +878,18 @@ def train_one_epoch(
             rate = metrics.samples / max(elapsed, 1e-6)
             print(
                 "  train {}/{} pairs={} loss={:.4f} rate={:.2f} pair/s "
-                "elapsed={:.1f}s".format(
+                "elapsed={:.1f}s missing_target={:.4f} candidate_valid={} "
+                "masked_positive={} valid_negative={}".format(
                     step,
                     len(loader),
                     metrics.samples,
                     average_loss,
                     rate,
                     elapsed,
+                    missing_positive_samples / max(positive_samples, 1),
+                    candidate_valid_samples,
+                    masked_positive_samples,
+                    valid_negative_samples,
                 ),
                 flush=True,
             )
@@ -727,6 +904,15 @@ def train_one_epoch(
         ),
         guidance_mode=mode,
         candidate_source=candidate_source,
+        true_end_to_end=(
+            mode == "predicted" and candidate_source == "predicted"
+        ),
+        positive_missing_target_rate=(
+            missing_positive_samples / max(positive_samples, 1)
+        ),
+        candidate_loss_valid_samples=candidate_valid_samples,
+        candidate_loss_masked_positive_samples=masked_positive_samples,
+        candidate_loss_valid_negative_samples=valid_negative_samples,
         runtime_seconds=time.perf_counter() - start,
     )
     return result
@@ -738,15 +924,25 @@ def evaluate(
     loader: DataLoader,
     device: torch.device,
     *,
+    opening_guidance_source: str,
     candidate_source: str,
     opening_threshold: float,
     args: argparse.Namespace,
 ) -> Dict[str, Any]:
     model.eval()
+    if opening_guidance_source not in ("gt", "predicted"):
+        raise ValueError("evaluation opening_guidance_source must be gt or predicted")
+    if candidate_source not in ("gt", "predicted"):
+        raise ValueError("evaluation candidate_source must be gt or predicted")
+    print(
+        "evaluate opening_guidance_source={} candidate_source={}".format(
+            opening_guidance_source, candidate_source
+        ),
+        flush=True,
+    )
     metrics = MetricAccumulator(args.metric_top_k)
     opening_tp = opening_fp = opening_fn = 0
     start = time.perf_counter()
-    guidance_mode = "gt" if candidate_source == "gt" else "predicted"
     use_amp = _amp_enabled(args, device)
     for raw_batch in loader:
         with autocast(enabled=use_amp, dtype=_autocast_dtype(args)):
@@ -754,7 +950,7 @@ def evaluate(
                 model,
                 raw_batch,
                 device,
-                guidance_mode=guidance_mode,
+                opening_guidance_source=opening_guidance_source,
                 candidate_source=candidate_source,
                 opening_threshold=opening_threshold,
                 args=args,
@@ -773,8 +969,13 @@ def evaluate(
         opening_token_f1=(
             2.0 * precision * recall / max(precision + recall, 1e-12)
         ),
-        guidance_mode=guidance_mode,
+        guidance_mode=opening_guidance_source,
+        opening_guidance_source=opening_guidance_source,
         candidate_source=candidate_source,
+        true_end_to_end=(
+            opening_guidance_source == "predicted"
+            and candidate_source == "predicted"
+        ),
         runtime_seconds=time.perf_counter() - start,
     )
     return result
@@ -811,7 +1012,7 @@ def run_preflight(
             model,
             raw_batch,
             device,
-            guidance_mode="predicted",
+            opening_guidance_source="predicted",
             candidate_source="predicted",
             opening_threshold=opening_threshold,
             args=args,
@@ -981,6 +1182,8 @@ def _training_contract(args: argparse.Namespace) -> Dict[str, Any]:
         "feature_anchor_weight",
         "depth_anchor_weight",
         "candidate_loss_weight",
+        "candidate_missing_target_policy",
+        "candidate_rank_loss_weight",
         "token_affinity_weight",
         "shared_response_weight",
         "portal_shift_loss_weight",
@@ -996,11 +1199,17 @@ def _training_contract(args: argparse.Namespace) -> Dict[str, Any]:
         "max_val_pairs",
         "max_test_pairs",
         "seed",
+        "opening_guidance_source",
+        "candidate_source",
+        "teacher_forced_manifest_candidates",
     )
     return {
         **{key: getattr(args, key) for key in keys},
         "rotation_augmentation": not args.no_rotation_aug,
-        "candidate_schedule": "GT in GT-guidance epoch, predicted thereafter",
+        "candidate_schedule": (
+            "independent override, otherwise GT in scheduled GT-guidance epoch "
+            "and predicted thereafter"
+        ),
         "teacher_cache_role": "regularization only; never live feature replacement",
     }
 
@@ -1051,6 +1260,7 @@ def _checkpoint_payload(
         "validation": {
             "teacher_forced_manifest_candidates": dict(validation_gt),
             "predicted_openings": dict(validation_predicted),
+            "configured_sources": dict(validation_predicted),
         },
         "rng_state": _rng_state(),
     }
@@ -1074,6 +1284,11 @@ def _best_key(metrics: Mapping[str, Any]) -> Tuple[float, float, float, float]:
 
 def main(argv: Optional[Sequence[str]] = None) -> int:
     args = parse_args(argv)
+    guidance_override, candidate_override = _resolve_source_configuration(
+        args, emit_compatibility_message=True
+    )
+    args.opening_guidance_source = guidance_override
+    args.candidate_source = candidate_override
     if args.smoke_test:
         args.epochs = 1
         args.early_stop_patience = 0
@@ -1394,15 +1609,19 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             model,
             loaders["val"],
             device,
+            opening_guidance_source="gt",
             candidate_source="gt",
             opening_threshold=opening_threshold,
             args=args,
         )
+        configured_guidance_source = args.opening_guidance_source or "predicted"
+        configured_candidate_source = args.candidate_source or "predicted"
         validation_predicted = evaluate(
             model,
             loaders["val"],
             device,
-            candidate_source="predicted",
+            opening_guidance_source=configured_guidance_source,
+            candidate_source=configured_candidate_source,
             opening_threshold=opening_threshold,
             args=args,
         )
@@ -1446,6 +1665,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             "validation": {
                 "teacher_forced_manifest_candidates": validation_gt,
                 "predicted_openings": validation_predicted,
+                "configured_sources": validation_predicted,
             },
             "opening_threshold": opening_threshold,
             "improved": improved,
@@ -1497,9 +1717,11 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         _append_jsonl(output_dir / "metrics.jsonl", report)
         _atomic_json(output_dir / "latest_metrics.json", report)
         print(
-            "  val predicted opening_f1={:.4f} recall={:.4f} top1={:.4f} "
+            "  val configured sources={}/{} opening_f1={:.4f} recall={:.4f} top1={:.4f} "
             "negative_reject={:.4f} harmonic={:.4f} balanced={:.4f} "
             "epoch={:.1f}s{}".format(
+                configured_guidance_source,
+                configured_candidate_source,
                 validation_predicted["opening_token_f1"],
                 validation_predicted["positive_candidate_recall"],
                 validation_predicted["end_to_end_candidate_top1"],
@@ -1537,15 +1759,19 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             model,
             loaders["test"],
             device,
+            opening_guidance_source="gt",
             candidate_source="gt",
             opening_threshold=opening_threshold,
             args=args,
         )
+        configured_guidance_source = args.opening_guidance_source or "predicted"
+        configured_candidate_source = args.candidate_source or "predicted"
         test_predicted = evaluate(
             model,
             loaders["test"],
             device,
-            candidate_source="predicted",
+            opening_guidance_source=configured_guidance_source,
+            candidate_source=configured_candidate_source,
             opening_threshold=opening_threshold,
             args=args,
         )
@@ -1555,11 +1781,14 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             "opening_threshold": opening_threshold,
             "teacher_forced_manifest_candidates": test_gt,
             "predicted_openings": test_predicted,
+            "configured_sources": test_predicted,
         }
         _atomic_json(output_dir / "test_metrics.json", test_report)
         print(
-            "test predicted opening_f1={:.4f} recall={:.4f} top1={:.4f} "
+            "test configured sources={}/{} opening_f1={:.4f} recall={:.4f} top1={:.4f} "
             "negative_reject={:.4f} harmonic={:.4f} balanced={:.4f}".format(
+                configured_guidance_source,
+                configured_candidate_source,
                 test_predicted["opening_token_f1"],
                 test_predicted["positive_candidate_recall"],
                 test_predicted["end_to_end_candidate_top1"],

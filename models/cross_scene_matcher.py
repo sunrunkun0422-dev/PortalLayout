@@ -96,6 +96,33 @@ def opening_probabilities_to_intervals(
     return [(start, end) for _, _, start, end in ranked[:max_intervals]]
 
 
+def candidate_pair_score(
+    mutual_affinity: torch.Tensor,
+    opening_confidence: torch.Tensor,
+    candidate_valid_a: Optional[torch.Tensor] = None,
+    candidate_valid_b: Optional[torch.Tensor] = None,
+) -> torch.Tensor:
+    """Combine mutual affinity and two-sided opening confidence for ranking."""
+    if mutual_affinity.ndim != 3:
+        raise ValueError("mutual_affinity must have shape [B, K_A, K_B]")
+    if opening_confidence.shape != mutual_affinity.shape:
+        raise ValueError("opening_confidence must match mutual_affinity")
+    score = mutual_affinity * opening_confidence
+    if candidate_valid_a is None and candidate_valid_b is None:
+        return score
+    if candidate_valid_a is None or candidate_valid_b is None:
+        raise ValueError("candidate_valid_a and candidate_valid_b must be provided together")
+    batch, count_a, count_b = score.shape
+    candidate_valid_a = candidate_valid_a.to(device=score.device, dtype=torch.bool)
+    candidate_valid_b = candidate_valid_b.to(device=score.device, dtype=torch.bool)
+    if candidate_valid_a.shape != (batch, count_a):
+        raise ValueError("candidate_valid_a must have shape [B, K_A]")
+    if candidate_valid_b.shape != (batch, count_b):
+        raise ValueError("candidate_valid_b must have shape [B, K_B]")
+    pair_valid = candidate_valid_a.unsqueeze(-1) & candidate_valid_b.unsqueeze(1)
+    return score * pair_valid.to(score.dtype)
+
+
 def resolve_enclosed_extended_depth(
     output: Mapping[str, torch.Tensor],
     branch_order: str = "extended_first",
@@ -562,8 +589,13 @@ class OpeningGuidedCrossAttentionMatcher(nn.Module):
 
         affinity_ab = assignment_ab[:, :count_a, :count_b]
         affinity_ba = assignment_ba[:, :count_b, :count_a]
-        mutual_affinity = torch.sqrt(
-            (affinity_ab * affinity_ba.transpose(-2, -1)).clamp_min(0.0)
+        mutual_product = (
+            affinity_ab * affinity_ba.transpose(-2, -1)
+        ).clamp_min(0.0)
+        mutual_affinity = torch.zeros_like(mutual_product)
+        mutual_sqrt_valid = pair_valid & (mutual_product > 0)
+        mutual_affinity[mutual_sqrt_valid] = torch.sqrt(
+            mutual_product[mutual_sqrt_valid]
         )
         no_match_a = assignment_ab[:, :count_a, count_b]
         no_match_b = assignment_ba[:, :count_b, count_a]
@@ -587,8 +619,20 @@ class OpeningGuidedCrossAttentionMatcher(nn.Module):
         confidence_a = confidence_a / mask_a.sum(-1).clamp_min(1.0)
         confidence_b = (mask_b * opening_b.unsqueeze(1)).sum(-1)
         confidence_b = confidence_b / mask_b.sum(-1).clamp_min(1.0)
-        pair_confidence = torch.sqrt(confidence_a.unsqueeze(-1) * confidence_b.unsqueeze(1))
-        pair_score = mutual_affinity * pair_confidence * pair_valid.to(logits.dtype)
+        # This confidence already combines A and B exactly once.  Both inference
+        # and the listwise training objective use candidate_pair_score below.
+        confidence_product = confidence_a.unsqueeze(-1) * confidence_b.unsqueeze(1)
+        pair_confidence = torch.zeros_like(confidence_product)
+        confidence_sqrt_valid = pair_valid & (confidence_product > 0)
+        pair_confidence[confidence_sqrt_valid] = torch.sqrt(
+            confidence_product[confidence_sqrt_valid]
+        )
+        pair_score = candidate_pair_score(
+            mutual_affinity,
+            pair_confidence,
+            valid_a,
+            valid_b,
+        )
 
         best = torch.full((batch, 2), -1, dtype=torch.long, device=pooled_a.device)
         if count_a > 0 and count_b > 0:
@@ -637,6 +681,8 @@ class OpeningGuidedCrossAttentionMatcher(nn.Module):
             "candidate_valid_A": valid_a,
             "candidate_valid_B": valid_b,
             "candidate_logits": logits,
+            "candidate_mutual_affinity": mutual_affinity,
+            "candidate_opening_confidence": pair_confidence,
             # Backward-compatible real-candidate view. Rows now sum to <= 1;
             # the remaining mass is explicitly assigned to the dustbin.
             "candidate_affinity": affinity_ab,
@@ -899,6 +945,7 @@ def candidate_assignment_loss(
     is_match: Optional[torch.Tensor] = None,
     candidate_valid_a: Optional[torch.Tensor] = None,
     candidate_valid_b: Optional[torch.Tensor] = None,
+    sample_valid: Optional[torch.Tensor] = None,
     consistency_weight: float = 0.1,
 ) -> Dict[str, torch.Tensor]:
     """Supervise candidate correspondence including explicit no-match bins.
@@ -983,6 +1030,18 @@ def candidate_assignment_loss(
         if is_match.shape != (batch,):
             raise ValueError("is_match must have shape [B]")
 
+    has_sample_mask = sample_valid is not None
+    if sample_valid is None:
+        sample_valid = torch.ones(
+            (batch,), dtype=torch.bool, device=assignment_ab.device
+        )
+    else:
+        sample_valid = torch.as_tensor(
+            sample_valid, device=assignment_ab.device, dtype=torch.bool
+        ).reshape(-1)
+        if sample_valid.shape != (batch,):
+            raise ValueError("sample_valid must have shape [B]")
+
     pair_valid = candidate_valid_a.unsqueeze(-1) & candidate_valid_b.unsqueeze(1)
     candidate_target_ab = candidate_target_ab * pair_valid.to(
         candidate_target_ab.dtype
@@ -1003,9 +1062,19 @@ def candidate_assignment_loss(
         dustbin_target = (row_mass <= 0).to(real_target.dtype)
         target = torch.cat((normalized_real, dustbin_target), dim=-1)
         row_loss = -(target * probability[..., :real_count + 1].clamp_min(1e-8).log()).sum(-1)
-        if source_valid.any():
-            return row_loss[source_valid].mean()
-        return row_loss.new_zeros(())
+        # Form sample-level sums first so a sample mask never turns unmatched
+        # rows inside an otherwise valid positive sample into ignored rows.
+        sample_loss_sum = (
+            row_loss * source_valid.to(dtype=row_loss.dtype)
+        ).sum(dim=-1)
+        sample_row_count = source_valid.sum(dim=-1)
+        selected_loss = sample_loss_sum[sample_valid].sum()
+        selected_rows = sample_row_count[sample_valid].sum()
+        if bool(selected_rows > 0):
+            # Row-count normalization preserves the historical loss exactly
+            # whenever all samples are selected.
+            return selected_loss / selected_rows.to(dtype=row_loss.dtype)
+        return probability.sum() * 0.0
 
     loss_ab = directional_loss(
         assignment_ab[:, :count_a, :],
@@ -1018,10 +1087,15 @@ def candidate_assignment_loss(
         candidate_valid_b,
     )
     assignment_loss = 0.5 * (loss_ab + loss_ba)
+    consistency_valid_a = candidate_valid_a
+    consistency_valid_b = candidate_valid_b
+    if has_sample_mask:
+        consistency_valid_a = consistency_valid_a & sample_valid.unsqueeze(-1)
+        consistency_valid_b = consistency_valid_b & sample_valid.unsqueeze(-1)
     consistency_loss = bidirectional_candidate_consistency_loss(
         outputs,
-        candidate_valid_a=candidate_valid_a,
-        candidate_valid_b=candidate_valid_b,
+        candidate_valid_a=consistency_valid_a,
+        candidate_valid_b=consistency_valid_b,
     )
     total = assignment_loss + float(consistency_weight) * consistency_loss
     return {
@@ -1031,6 +1105,75 @@ def candidate_assignment_loss(
         "loss_candidate_assignment_ba": loss_ba,
         "loss_bidirectional_consistency": consistency_loss,
     }
+
+
+def candidate_listwise_ranking_loss(
+    outputs: Mapping[str, torch.Tensor],
+    candidate_target_ab: torch.Tensor,
+    is_match: torch.Tensor,
+    candidate_valid_a: Optional[torch.Tensor] = None,
+    candidate_valid_b: Optional[torch.Tensor] = None,
+    epsilon: float = 1e-8,
+) -> torch.Tensor:
+    """Put listwise probability mass on every valid positive candidate pair."""
+    if epsilon <= 0:
+        raise ValueError("epsilon must be positive")
+    mutual_affinity = outputs["candidate_mutual_affinity"]
+    opening_confidence = outputs["candidate_opening_confidence"]
+    batch, count_a, count_b = mutual_affinity.shape
+    if candidate_valid_a is None:
+        candidate_valid_a = outputs.get("candidate_valid_A")
+    if candidate_valid_b is None:
+        candidate_valid_b = outputs.get("candidate_valid_B")
+    if candidate_valid_a is None:
+        candidate_valid_a = torch.ones(
+            (batch, count_a), dtype=torch.bool, device=mutual_affinity.device
+        )
+    if candidate_valid_b is None:
+        candidate_valid_b = torch.ones(
+            (batch, count_b), dtype=torch.bool, device=mutual_affinity.device
+        )
+    candidate_valid_a = candidate_valid_a.to(
+        device=mutual_affinity.device, dtype=torch.bool
+    )
+    candidate_valid_b = candidate_valid_b.to(
+        device=mutual_affinity.device, dtype=torch.bool
+    )
+    if candidate_valid_a.shape != (batch, count_a):
+        raise ValueError("candidate_valid_a must have shape [B, K_A]")
+    if candidate_valid_b.shape != (batch, count_b):
+        raise ValueError("candidate_valid_b must have shape [B, K_B]")
+
+    candidate_target_ab = candidate_target_ab.to(mutual_affinity)
+    if candidate_target_ab.shape != (batch, count_a, count_b):
+        raise ValueError("candidate_target_ab must have shape [B, K_A, K_B]")
+    is_match = torch.as_tensor(
+        is_match, device=mutual_affinity.device, dtype=torch.bool
+    ).reshape(-1)
+    if is_match.shape != (batch,):
+        raise ValueError("is_match must have shape [B]")
+
+    pair_valid = candidate_valid_a.unsqueeze(-1) & candidate_valid_b.unsqueeze(1)
+    positive_pair = (candidate_target_ab > 0) & pair_valid
+    sample_valid = is_match & positive_pair.flatten(1).any(dim=-1)
+    pair_score = candidate_pair_score(
+        mutual_affinity,
+        opening_confidence,
+        candidate_valid_a,
+        candidate_valid_b,
+    )
+    if not bool(sample_valid.any()):
+        return pair_score.sum() * 0.0
+
+    sample_losses = []
+    for batch_index in torch.where(sample_valid)[0].tolist():
+        valid_score = pair_score[batch_index][pair_valid[batch_index]]
+        valid_positive = positive_pair[batch_index][pair_valid[batch_index]]
+        log_score = torch.log(valid_score + float(epsilon))
+        denominator = torch.logsumexp(log_score, dim=0)
+        numerator = torch.logsumexp(log_score[valid_positive], dim=0)
+        sample_losses.append(denominator - numerator)
+    return torch.stack(sample_losses).mean()
 
 
 def opening_matching_loss(
