@@ -2,6 +2,7 @@
 > 修改记录：2026-07-16 16:45 CST - 增加 ZInD 匹配数据格式与转换入口。
 > 修改记录：2026-07-17 11:48 CST - 增加 ZInD-BiPair-v1 数据集生成、加载和全量验证入口。
 > 修改记录：2026-07-17 13:43 CST - 增加 ZInD-BiPair-v1 开口召回评估、环形指标与阈值标定入口。
+> 修改记录：2026-08-04 - 增加 ZInD 端到端联合训练正式结果、Top-1 瓶颈与后续优化建议。
 
 # Bi-Layout 文档总索引
 
@@ -28,6 +29,10 @@
    - 看原始 ZInD 如何转换为正负全景对、开口区间、对应关系和相对位姿监督
    - 这是较早的跨 complete-room door/opening 诊断格式
 
+6. [ZInD端到端训练结果.md](ZInD端到端训练结果.md)
+   - 看 Bi-Layout、Opening Head 和 Matcher 的 15 轮联合微调配置、最佳/测试指标与 checkpoint 身份
+   - 重点记录端到端 Top-1 只有 25.65% 的两阶段瓶颈、Top-3 潜力和 M6–M9 几何重排建议
+
 ## 读法建议
 
 - 先读 [README.md](README.md) 和 [Bi_Layout_网络架构图_可编辑.md](Bi_Layout_网络架构图_可编辑.md)，建立原始单图布局估计基础。
@@ -41,6 +46,7 @@
 - 想生成首版 partial-opening 训练数据: 看 [ZInD-BiPair-v1数据集说明.md](ZInD-BiPair-v1数据集说明.md) 和 [tools/build_zind_bipair_v1.py](tools/build_zind_bipair_v1.py)
 - 想测试开口召回率并在 val 标定阈值: 看 [tools/evaluate_zind_opening_recall.py](tools/evaluate_zind_opening_recall.py)、[evaluation/opening_recall.py](evaluation/opening_recall.py) 和 [src/output/progress_report_20260716/进度汇报结果.md](src/output/progress_report_20260716/进度汇报结果.md)
 - 想生成跨 complete-room 的 door/opening 诊断清单: 看 [ZInD匹配数据格式.md](ZInD匹配数据格式.md) 和 [tools/build_zind_matching_dataset.py](tools/build_zind_matching_dataset.py)
+- 想查看完整端到端训练结果和 Top-1 诊断: 看 [ZInD端到端训练结果.md](ZInD端到端训练结果.md) 和 [tools/train_zind_end_to_end.py](tools/train_zind_end_to_end.py)
 - 想运行跨场景工程版: 看 [tools/estimate_cross_scene_layout.py](tools/estimate_cross_scene_layout.py)、[utils/cross_scene_pipeline.py](utils/cross_scene_pipeline.py) 和 [tools/join_room_layouts.py](tools/join_room_layouts.py)
 
 ## 关键代码位置
