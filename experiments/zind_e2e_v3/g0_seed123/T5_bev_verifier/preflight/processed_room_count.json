@@ -1,0 +1,14 @@
+{
+  "gpu_peak_allocated_bytes": 667409920,
+  "gpu_peak_reserved_bytes": 924844032,
+  "new_room_count": 2573,
+  "optimizer_created": false,
+  "phase": "phaseB_negative_cache",
+  "processed_room_count": 2637,
+  "remaining_seconds": 0.0,
+  "task_type": "frozen_inference_audit",
+  "test_data_accessed": false,
+  "throughput_rooms_per_second": 11.08651789750577,
+  "total_room_count": 2637,
+  "training_started": false
+}

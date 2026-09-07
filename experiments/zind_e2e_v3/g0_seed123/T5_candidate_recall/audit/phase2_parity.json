@@ -1,0 +1,26 @@
+{
+  "gates": {
+    "all_finite": true,
+    "legacy_interval_pairwise_exact": true,
+    "legacy_recall_exact": true,
+    "recall_topk_recall_exact": true,
+    "train_pair_count": true,
+    "val_pair_count": true
+  },
+  "legacy": {
+    "exact": true,
+    "expected": 1080,
+    "positive": 1827,
+    "recalled": 1080
+  },
+  "legacy_interval_exact_pairs": 1827,
+  "passed": true,
+  "recall_topk": {
+    "exact": true,
+    "expected": 1107,
+    "positive": 1827,
+    "recalled": 1107
+  },
+  "schema_version": "zind-t5-proposal-parity-v1",
+  "test_data_accessed": false
+}

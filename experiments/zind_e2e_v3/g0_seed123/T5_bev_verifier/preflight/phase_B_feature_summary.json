@@ -1,0 +1,46 @@
+{
+  "active_splits": [
+    "train",
+    "val"
+  ],
+  "input_uses_gt": false,
+  "schema_version": "zind-salve-phase-b-feature-summary-v1",
+  "shortlist_N": 3,
+  "splits": {
+    "train": {
+      "all_finite": true,
+      "candidate_geometry_hard_failure_count": 346,
+      "candidate_geometry_soft_failure_count": 14449,
+      "candidate_geometry_valid_count": 20294,
+      "candidate_row_count": 20640,
+      "feature_sha256": "fc53e9b937cac2d0efad122cdca3c68c802aa12cd8c6d0c534a16f346aafbd00",
+      "legacy_physical_target_present_count": 1985,
+      "negative_pair_count": 4096,
+      "newly_generated_row_count": 14983,
+      "pair_count": 8192,
+      "pair_meta_sha256": "19d8aff587923920fd8be46fb369bf5d24e7916b2f2c26d9c7f2fed23f961731",
+      "phase_A_reused_row_count": 5657,
+      "positive_pair_count": 4096,
+      "strict_target_shortlist_count": 1942,
+      "zero_candidate_pair_count": 4
+    },
+    "val": {
+      "all_finite": true,
+      "candidate_geometry_hard_failure_count": 127,
+      "candidate_geometry_soft_failure_count": 6305,
+      "candidate_geometry_valid_count": 8997,
+      "candidate_row_count": 9124,
+      "feature_sha256": "5969e778014f292ce8a0b868bdec2e2f451ac64b0b03f04991ad46c5c8ac474b",
+      "legacy_physical_target_present_count": 1080,
+      "negative_pair_count": 1803,
+      "newly_generated_row_count": 6108,
+      "pair_count": 3630,
+      "pair_meta_sha256": "390bb7fa86c1cfd0998a3d6140baa18770c35f84e94643ea30004ab5e393c0f4",
+      "phase_A_reused_row_count": 3016,
+      "positive_pair_count": 1827,
+      "strict_target_shortlist_count": 964,
+      "zero_candidate_pair_count": 3
+    }
+  },
+  "test_data_accessed": false
+}

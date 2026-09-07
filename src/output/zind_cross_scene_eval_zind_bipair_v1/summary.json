@@ -1,0 +1,208 @@
+{
+    "formatVersion": 1,
+    "task": "ZInD labeled adjacent-room dual-panorama evaluation",
+    "pairCount": 8,
+    "successCount": 8,
+    "failureCount": 0,
+    "houseCount": 4,
+    "runtimeSeconds": 18.663441858021542,
+    "meanPairRuntimeSeconds": 2.2553325722401496,
+    "checkpoint": {
+        "config": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+        "checkpoint": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+        "loaded": true,
+        "modelArgs": {
+            "decoder_name": "Share_Feature_Guidance_Module",
+            "win_size": 16,
+            "rpe": "lr_parameter_mirror",
+            "dropout": 0.0,
+            "depth": 8,
+            "output_name": "Bi_Layout",
+            "output_number": 2,
+            "feature_channel": 512,
+            "height_compression_scale": 16,
+            "use_same_head": false,
+            "share_TF": true,
+            "two_conv_out": false
+        },
+        "epoch": 0,
+        "missingKeys": [],
+        "unexpectedKeys": []
+    },
+    "neuralWeights": {
+        "biLayout": "trained checkpoint",
+        "openingCrossAttention": {
+            "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Cross_Scene_Matcher/zind_bipair_v1/best.pt",
+            "loaded": true,
+            "formatVersion": 1,
+            "task": "ZInD-BiPair-v1 1D cross-scene opening matcher",
+            "completedEpoch": 10,
+            "model": {
+                "feature_dim": 512,
+                "heads": 8,
+                "hidden_dim": 128,
+                "dropout": 0.1,
+                "opening_bias_strength": 1.0,
+                "candidate_temperature": 0.2,
+                "shift_temperature": 0.05,
+                "has_dustbin": true
+            },
+            "openingProbabilityThreshold": 0.375,
+            "openingHeadDependency": {
+                "branchOrder": "extended_first",
+                "backboneContractValidated": true,
+                "biLayoutConfig": {
+                    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+                    "size": 1380,
+                    "sha256": "867506b93ae973b3517d20a9b2e9899964684366b3644d1facc22110e1382cbd"
+                },
+                "biLayoutCheckpoint": {
+                    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+                    "size": 1228718862,
+                    "mtimeNs": 1778459017793688163
+                }
+            }
+        },
+        "crossAttentionMatcher": {
+            "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Cross_Scene_Matcher/zind_bipair_v1/best.pt",
+            "loaded": true,
+            "formatVersion": 1,
+            "task": "ZInD-BiPair-v1 1D cross-scene opening matcher",
+            "completedEpoch": 10,
+            "model": {
+                "feature_dim": 512,
+                "heads": 8,
+                "hidden_dim": 128,
+                "dropout": 0.1,
+                "opening_bias_strength": 1.0,
+                "candidate_temperature": 0.2,
+                "shift_temperature": 0.05,
+                "has_dustbin": true
+            },
+            "openingProbabilityThreshold": 0.375,
+            "openingHeadDependency": {
+                "branchOrder": "extended_first",
+                "backboneContractValidated": true,
+                "biLayoutConfig": {
+                    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+                    "size": 1380,
+                    "sha256": "867506b93ae973b3517d20a9b2e9899964684366b3644d1facc22110e1382cbd"
+                },
+                "biLayoutCheckpoint": {
+                    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+                    "size": 1228718862,
+                    "mtimeNs": 1778459017793688163
+                }
+            }
+        },
+        "openingHead": {
+            "path": null,
+            "loaded": false
+        },
+        "geometrySelector": "excluded from evaluation"
+    },
+    "openingCandidateThreshold": {
+        "value": 0.375,
+        "source": "matcher_checkpoint"
+    },
+    "openingCandidateSource": "learned_opening_probability",
+    "probabilityPeakFallbackPairCount": 5,
+    "depthBranchOrder": "extended_first",
+    "variants": {
+        "geometryOpening": {
+            "evaluatedPairCount": 8,
+            "openingTop1Accuracy": 0.0,
+            "openingTopKRecall": 0.0,
+            "meanYawErrorDegrees": 64.0035590765972,
+            "medianYawErrorDegrees": 63.27190125907387,
+            "meanTranslationError": 7.952668314008018,
+            "meanAbsoluteLogScaleError": 1.3681077358669809,
+            "meanCandidateCount": 3.5,
+            "openingWallRecallA": 0.5,
+            "openingWallRecallB": 0.25,
+            "bothSidesWithoutFallback": 1.0
+        },
+        "allWallsGeometry": {
+            "evaluatedPairCount": 8,
+            "openingTop1Accuracy": 0.0,
+            "openingTopKRecall": 0.375,
+            "meanYawErrorDegrees": 66.29541900330192,
+            "medianYawErrorDegrees": 87.66508889233711,
+            "meanTranslationError": 4.192989684821013,
+            "meanAbsoluteLogScaleError": 0.061370994502510504,
+            "meanCandidateCount": 8.0,
+            "openingWallRecallA": 1.0,
+            "openingWallRecallB": 1.0,
+            "bothSidesWithoutFallback": 0.0
+        },
+        "crossAttention": {
+            "evaluatedPairCount": 8,
+            "openingTop1Accuracy": 0.0,
+            "openingTopKRecall": 0.125,
+            "meanYawErrorDegrees": 64.0035590765972,
+            "medianYawErrorDegrees": 63.27190125907387,
+            "meanTranslationError": 7.952668314008018,
+            "meanAbsoluteLogScaleError": 1.3681077358669809,
+            "meanCandidateCount": 3.5,
+            "openingWallRecallA": 0.5,
+            "openingWallRecallB": 0.25,
+            "bothSidesWithoutFallback": 1.0
+        },
+        "allWallsCrossAttention": {
+            "evaluatedPairCount": 8,
+            "openingTop1Accuracy": 0.0,
+            "openingTopKRecall": 0.5,
+            "meanYawErrorDegrees": 42.681227610851074,
+            "medianYawErrorDegrees": 28.45291334930241,
+            "meanTranslationError": 4.783483613051612,
+            "meanAbsoluteLogScaleError": 0.07413900744527901,
+            "meanCandidateCount": 8.0,
+            "openingWallRecallA": 1.0,
+            "openingWallRecallB": 1.0,
+            "bothSidesWithoutFallback": 0.0
+        }
+    },
+    "crossAttentionDiagnostics": {
+        "eligibleForAccuracy": true,
+        "checkpoint": {
+            "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Cross_Scene_Matcher/zind_bipair_v1/best.pt",
+            "loaded": true,
+            "formatVersion": 1,
+            "task": "ZInD-BiPair-v1 1D cross-scene opening matcher",
+            "completedEpoch": 10,
+            "model": {
+                "feature_dim": 512,
+                "heads": 8,
+                "hidden_dim": 128,
+                "dropout": 0.1,
+                "opening_bias_strength": 1.0,
+                "candidate_temperature": 0.2,
+                "shift_temperature": 0.05,
+                "has_dustbin": true
+            },
+            "openingProbabilityThreshold": 0.375,
+            "openingHeadDependency": {
+                "branchOrder": "extended_first",
+                "backboneContractValidated": true,
+                "biLayoutConfig": {
+                    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+                    "size": 1380,
+                    "sha256": "867506b93ae973b3517d20a9b2e9899964684366b3644d1facc22110e1382cbd"
+                },
+                "biLayoutCheckpoint": {
+                    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+                    "size": 1228718862,
+                    "mtimeNs": 1778459017793688163
+                }
+            }
+        },
+        "meanTokenShiftErrorDegrees": 124.98046859880797,
+        "meanReciprocalTokenShiftErrorDegrees": 34.45312411953709,
+        "meanOpeningResponseAtTargetA": 0.02207890431247536,
+        "meanOpeningResponseAtTargetB": 0.18465937874655225,
+        "wallSwapConsistency": 1.0,
+        "meanPoseCycleYawDegrees": 1.1623641336828192e-14,
+        "meanPoseCycleTranslation": 8.257283745649602e-16
+    },
+    "peakCudaMemoryMiB": 0.0
+}

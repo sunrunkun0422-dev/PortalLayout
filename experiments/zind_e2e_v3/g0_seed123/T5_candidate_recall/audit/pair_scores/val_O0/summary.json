@@ -1,0 +1,18 @@
+{
+  "model_report": {
+    "completed_epoch": 8,
+    "mtime_ns": 1786733650604347717,
+    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T3/best.pt",
+    "sha256": "ca083dbbc5a05d738dad36404ad708c623c272aef7a64398b4de3a793278cc5d",
+    "size": 418836277
+  },
+  "optimizer_created": false,
+  "pair_count": 1827,
+  "parameter_hash_after": "a6d2de1fdbb05b835b74369025563a5ccc5edde3d5f448499d8743a062cf7c7f",
+  "parameter_hash_before": "a6d2de1fdbb05b835b74369025563a5ccc5edde3d5f448499d8743a062cf7c7f",
+  "runtime_seconds": 4.031419577077031,
+  "split": "val",
+  "test_data_accessed": false,
+  "training_started": false,
+  "view": "O0"
+}

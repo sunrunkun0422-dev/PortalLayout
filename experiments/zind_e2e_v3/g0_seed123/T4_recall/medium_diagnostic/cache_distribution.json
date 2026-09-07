@@ -1,0 +1,81 @@
+{
+  "schema_version": "zind-t4-medium-cache-distribution-v1",
+  "splits": {
+    "train": {
+      "legacy_predicted": {
+        "pair_count": 1024,
+        "positive_count": 512,
+        "positive_target_count": 306,
+        "positive_candidate_recall": 0.59765625,
+        "candidate_count_mean": 2.359375,
+        "candidate_count_median": 2.0,
+        "candidate_count_p95": 6.0,
+        "candidate_product_mean": 5.2861328125,
+        "candidate_product_median": 4.0,
+        "candidate_product_p95": 15.0,
+        "injected_candidate_count": 0
+      },
+      "recall_injected": {
+        "pair_count": 1024,
+        "positive_count": 512,
+        "positive_target_count": 512,
+        "positive_candidate_recall": 1.0,
+        "candidate_count_mean": 3.0654296875,
+        "candidate_count_median": 2.0,
+        "candidate_count_p95": 8.0,
+        "candidate_product_mean": 8.7216796875,
+        "candidate_product_median": 5.0,
+        "candidate_product_p95": 25.0,
+        "injected_candidate_count": 209
+      },
+      "recall_predicted": {
+        "pair_count": 1024,
+        "positive_count": 512,
+        "positive_target_count": 310,
+        "positive_candidate_recall": 0.60546875,
+        "candidate_count_mean": 2.96630859375,
+        "candidate_count_median": 2.0,
+        "candidate_count_p95": 8.0,
+        "candidate_product_mean": 8.2265625,
+        "candidate_product_median": 5.0,
+        "candidate_product_p95": 24.0,
+        "injected_candidate_count": 0
+      },
+      "injection_distribution_shift": {
+        "positive_targets_rescued": 202,
+        "predicted_target_presence_sha256": "d55669629e433f8b218a771fc1da65a8e157d715b461820a76b3703a53d77bcd",
+        "injected_target_presence_sha256": "7667e25d13cd8275ffc94fb4fe56c6a4b6e52d0a00be866f7f89a316aee793e8"
+      }
+    },
+    "val": {
+      "legacy_predicted": {
+        "pair_count": 512,
+        "positive_count": 256,
+        "positive_target_count": 151,
+        "positive_candidate_recall": 0.58984375,
+        "candidate_count_mean": 2.3642578125,
+        "candidate_count_median": 2.0,
+        "candidate_count_p95": 6.0,
+        "candidate_product_mean": 5.50390625,
+        "candidate_product_median": 4.0,
+        "candidate_product_p95": 15.0,
+        "injected_candidate_count": 0
+      },
+      "recall_predicted": {
+        "pair_count": 512,
+        "positive_count": 256,
+        "positive_target_count": 155,
+        "positive_candidate_recall": 0.60546875,
+        "candidate_count_mean": 3.0380859375,
+        "candidate_count_median": 2.0,
+        "candidate_count_p95": 8.0,
+        "candidate_product_mean": 9.091796875,
+        "candidate_product_median": 5.0,
+        "candidate_product_p95": 32.44999999999999,
+        "injected_candidate_count": 0
+      }
+    }
+  },
+  "validation_injected_view_present": false,
+  "test_data_accessed": false
+}

@@ -1,0 +1,397 @@
+{
+  "active_splits": [
+    "train",
+    "val"
+  ],
+  "cnn_training_started": false,
+  "config": {
+    "boundary_width_pixels": 1,
+    "grid_size": 128,
+    "half_extent_portal_widths": 6.0,
+    "portal_width_pixels": 2
+  },
+  "example_count": 8,
+  "examples": [
+    {
+      "candidate_A": 0,
+      "candidate_B": 0,
+      "input_uses_gt": false,
+      "metadata": {
+        "A_B_channel_order": "A channels precede transformed-B channels",
+        "channel_names": [
+          "A_occupancy",
+          "B_transformed_occupancy",
+          "A_boundary",
+          "B_transformed_boundary",
+          "overlap",
+          "portal_line",
+          "validity"
+        ],
+        "clipping_rate": 0.0,
+        "config": {
+          "boundary_width_pixels": 1,
+          "grid_size": 128,
+          "half_extent_portal_widths": 6.0,
+          "portal_width_pixels": 2
+        },
+        "coordinate_frame": "predicted portal-centered BEV; B transformed B_to_A before rasterization",
+        "failure_reason": null,
+        "portal_center_convention": "portal midpoint maps to (0,0)",
+        "portal_direction_convention": "A interval start-to-end tangent maps to +x",
+        "portal_midpoint_A_xy": [
+          0.16866530663796234,
+          -0.34004393253133053
+        ],
+        "portal_width_A": 1.1323236700205428,
+        "predicted_only": true,
+        "rotation_radians_A_to_raster": -0.5933028001234483,
+        "scale_normalization": "divide all coordinates by predicted A portal width",
+        "valid": true
+      },
+      "pair_id": "0003_floor_01_pano_75_pano_76_16",
+      "png": "raster_examples/0003_floor_01_pano_75_pano_76_16.png",
+      "png_sha256": "cf27331aa881abaa1000f0ae951434036c6a8492a6a12d1a1348917ab97262e3",
+      "selection": "stable first E1 physical-S3 win over E0; post-hoc visualization only",
+      "selection_uses_posthoc_GT": true,
+      "svg": "raster_examples/0003_floor_01_pano_75_pano_76_16.svg",
+      "svg_sha256": "3351bfcd14854f9683844cd6cef1e9f7804d994b58638f84da0b989157f38163",
+      "tensor": "raster_examples/0003_floor_01_pano_75_pano_76_16.pt",
+      "tensor_sha256": "d067e8513a6dab71de53be15d6fde93ae12560ed2af4691b64a20ef1835deb16",
+      "test_data_accessed": false
+    },
+    {
+      "candidate_A": 2,
+      "candidate_B": 0,
+      "input_uses_gt": false,
+      "metadata": {
+        "A_B_channel_order": "A channels precede transformed-B channels",
+        "channel_names": [
+          "A_occupancy",
+          "B_transformed_occupancy",
+          "A_boundary",
+          "B_transformed_boundary",
+          "overlap",
+          "portal_line",
+          "validity"
+        ],
+        "clipping_rate": 0.0,
+        "config": {
+          "boundary_width_pixels": 1,
+          "grid_size": 128,
+          "half_extent_portal_widths": 6.0,
+          "portal_width_pixels": 2
+        },
+        "coordinate_frame": "predicted portal-centered BEV; B transformed B_to_A before rasterization",
+        "failure_reason": null,
+        "portal_center_convention": "portal midpoint maps to (0,0)",
+        "portal_direction_convention": "A interval start-to-end tangent maps to +x",
+        "portal_midpoint_A_xy": [
+          1.793575877675472,
+          0.3255120133373035
+        ],
+        "portal_width_A": 0.6807555586887798,
+        "predicted_only": true,
+        "rotation_radians_A_to_raster": 3.0893641031785317,
+        "scale_normalization": "divide all coordinates by predicted A portal width",
+        "valid": true
+      },
+      "pair_id": "0018_floor_01_pano_8_pano_2_10",
+      "png": "raster_examples/0018_floor_01_pano_8_pano_2_10.png",
+      "png_sha256": "87dc25ae20cd9b9539394eff8e58ae0d7baf1357dee68efb53b46f4a1240fc0d",
+      "selection": "stable first E1 physical-S3 win over E0; post-hoc visualization only",
+      "selection_uses_posthoc_GT": true,
+      "svg": "raster_examples/0018_floor_01_pano_8_pano_2_10.svg",
+      "svg_sha256": "ac765b4f03eee32c0b4d1cea0beb55bbfb922787999d9c7976c4f1ebcace752e",
+      "tensor": "raster_examples/0018_floor_01_pano_8_pano_2_10.pt",
+      "tensor_sha256": "023e6b344a0b143c9ba387d85fe2368ccbdcad68383337092a5bc732fdb5824d",
+      "test_data_accessed": false
+    },
+    {
+      "candidate_A": 2,
+      "candidate_B": 0,
+      "input_uses_gt": false,
+      "metadata": {
+        "A_B_channel_order": "A channels precede transformed-B channels",
+        "channel_names": [
+          "A_occupancy",
+          "B_transformed_occupancy",
+          "A_boundary",
+          "B_transformed_boundary",
+          "overlap",
+          "portal_line",
+          "validity"
+        ],
+        "clipping_rate": 0.1016549983599979,
+        "config": {
+          "boundary_width_pixels": 1,
+          "grid_size": 128,
+          "half_extent_portal_widths": 6.0,
+          "portal_width_pixels": 2
+        },
+        "coordinate_frame": "predicted portal-centered BEV; B transformed B_to_A before rasterization",
+        "failure_reason": null,
+        "portal_center_convention": "portal midpoint maps to (0,0)",
+        "portal_direction_convention": "A interval start-to-end tangent maps to +x",
+        "portal_midpoint_A_xy": [
+          -2.363398973476585,
+          -0.5310546786721961
+        ],
+        "portal_width_A": 0.41726620115057667,
+        "predicted_only": true,
+        "rotation_radians_A_to_raster": 1.3681345178412743,
+        "scale_normalization": "divide all coordinates by predicted A portal width",
+        "valid": true
+      },
+      "pair_id": "0220_floor_02_pano_55_pano_54_6",
+      "png": "raster_examples/0220_floor_02_pano_55_pano_54_6.png",
+      "png_sha256": "76ced7f450e7aba066a4b15f17f94fa1aabf4411286e81c0d1d6749758d0bbba",
+      "selection": "stable first E1 physical-S3 win over E0; post-hoc visualization only",
+      "selection_uses_posthoc_GT": true,
+      "svg": "raster_examples/0220_floor_02_pano_55_pano_54_6.svg",
+      "svg_sha256": "262c19d1ddbe1e57ae3425f24035cc06f7355fb7ef422a34a37b8626f7fb131a",
+      "tensor": "raster_examples/0220_floor_02_pano_55_pano_54_6.pt",
+      "tensor_sha256": "f78f11f54c9e0d295cde8d42d524ec7cac9fefe6b2241848116141e4d1fc83f9",
+      "test_data_accessed": false
+    },
+    {
+      "candidate_A": 0,
+      "candidate_B": 0,
+      "input_uses_gt": false,
+      "metadata": {
+        "A_B_channel_order": "A channels precede transformed-B channels",
+        "channel_names": [
+          "A_occupancy",
+          "B_transformed_occupancy",
+          "A_boundary",
+          "B_transformed_boundary",
+          "overlap",
+          "portal_line",
+          "validity"
+        ],
+        "clipping_rate": 0.0,
+        "config": {
+          "boundary_width_pixels": 1,
+          "grid_size": 128,
+          "half_extent_portal_widths": 6.0,
+          "portal_width_pixels": 2
+        },
+        "coordinate_frame": "predicted portal-centered BEV; B transformed B_to_A before rasterization",
+        "failure_reason": null,
+        "portal_center_convention": "portal midpoint maps to (0,0)",
+        "portal_direction_convention": "A interval start-to-end tangent maps to +x",
+        "portal_midpoint_A_xy": [
+          0.009778480996751576,
+          0.18500561188105324
+        ],
+        "portal_width_A": 0.8352370280075567,
+        "predicted_only": true,
+        "rotation_radians_A_to_raster": -3.137289455561027,
+        "scale_normalization": "divide all coordinates by predicted A portal width",
+        "valid": true
+      },
+      "pair_id": "0277_floor_01_pano_29_pano_28_6",
+      "png": "raster_examples/0277_floor_01_pano_29_pano_28_6.png",
+      "png_sha256": "3698c991c50c29c416c9590191c843cfed113adbd259b036f2c63ae8145cc7ee",
+      "selection": "stable first E1 physical-S3 win over E0; post-hoc visualization only",
+      "selection_uses_posthoc_GT": true,
+      "svg": "raster_examples/0277_floor_01_pano_29_pano_28_6.svg",
+      "svg_sha256": "b9b614f8a9aa4298daa9b12a1008a41f1a14f192cd9419114f67c19677858550",
+      "tensor": "raster_examples/0277_floor_01_pano_29_pano_28_6.pt",
+      "tensor_sha256": "1c77f4464d3e2073c68fb79515616f011ce95725484e585d16570c4ff9956d2e",
+      "test_data_accessed": false
+    },
+    {
+      "candidate_A": 1,
+      "candidate_B": 0,
+      "input_uses_gt": false,
+      "metadata": {
+        "A_B_channel_order": "A channels precede transformed-B channels",
+        "channel_names": [
+          "A_occupancy",
+          "B_transformed_occupancy",
+          "A_boundary",
+          "B_transformed_boundary",
+          "overlap",
+          "portal_line",
+          "validity"
+        ],
+        "clipping_rate": 0.0,
+        "config": {
+          "boundary_width_pixels": 1,
+          "grid_size": 128,
+          "half_extent_portal_widths": 6.0,
+          "portal_width_pixels": 2
+        },
+        "coordinate_frame": "predicted portal-centered BEV; B transformed B_to_A before rasterization",
+        "failure_reason": null,
+        "portal_center_convention": "portal midpoint maps to (0,0)",
+        "portal_direction_convention": "A interval start-to-end tangent maps to +x",
+        "portal_midpoint_A_xy": [
+          -0.4589256936167007,
+          -1.1310466178546332
+        ],
+        "portal_width_A": 0.8900564921932724,
+        "predicted_only": true,
+        "rotation_radians_A_to_raster": 0.0035851253399638437,
+        "scale_normalization": "divide all coordinates by predicted A portal width",
+        "valid": true
+      },
+      "pair_id": "0277_floor_02_pano_51_pano_52_12",
+      "png": "raster_examples/0277_floor_02_pano_51_pano_52_12.png",
+      "png_sha256": "7cab158b13c79ce446bbf0d6cab0610027ed98e0e1bfc23bbb0ae39eefe6db7b",
+      "selection": "stable first E1 physical-S3 win over E0; post-hoc visualization only",
+      "selection_uses_posthoc_GT": true,
+      "svg": "raster_examples/0277_floor_02_pano_51_pano_52_12.svg",
+      "svg_sha256": "d858e2f3c8f1bef5caf87b7af6822a94b08c2bea5629909408011afe2150201f",
+      "tensor": "raster_examples/0277_floor_02_pano_51_pano_52_12.pt",
+      "tensor_sha256": "d4926a9b798a512a584e65b2d35fa706036d7d98663f29a20a26db9395d389a2",
+      "test_data_accessed": false
+    },
+    {
+      "candidate_A": 2,
+      "candidate_B": 1,
+      "input_uses_gt": false,
+      "metadata": {
+        "A_B_channel_order": "A channels precede transformed-B channels",
+        "channel_names": [
+          "A_occupancy",
+          "B_transformed_occupancy",
+          "A_boundary",
+          "B_transformed_boundary",
+          "overlap",
+          "portal_line",
+          "validity"
+        ],
+        "clipping_rate": 0.2486762285560352,
+        "config": {
+          "boundary_width_pixels": 1,
+          "grid_size": 128,
+          "half_extent_portal_widths": 6.0,
+          "portal_width_pixels": 2
+        },
+        "coordinate_frame": "predicted portal-centered BEV; B transformed B_to_A before rasterization",
+        "failure_reason": null,
+        "portal_center_convention": "portal midpoint maps to (0,0)",
+        "portal_direction_convention": "A interval start-to-end tangent maps to +x",
+        "portal_midpoint_A_xy": [
+          0.7212745849976439,
+          0.08498903489290431
+        ],
+        "portal_width_A": 0.4418266792245178,
+        "predicted_only": true,
+        "rotation_radians_A_to_raster": -1.606999702233286,
+        "scale_normalization": "divide all coordinates by predicted A portal width",
+        "valid": true
+      },
+      "pair_id": "0286_floor_02_pano_25_pano_33_7",
+      "png": "raster_examples/0286_floor_02_pano_25_pano_33_7.png",
+      "png_sha256": "a6a74946d6bb33060b0f41adf606efb0902402625a6bd3d29da2c99a5b507d46",
+      "selection": "stable first E1 physical-S3 win over E0; post-hoc visualization only",
+      "selection_uses_posthoc_GT": true,
+      "svg": "raster_examples/0286_floor_02_pano_25_pano_33_7.svg",
+      "svg_sha256": "6311a800173eafd8ec03076514f7167f10350856c8f46b569cde04001de18d93",
+      "tensor": "raster_examples/0286_floor_02_pano_25_pano_33_7.pt",
+      "tensor_sha256": "b8bcb38eb450d83b65c0bd22871a099e2b8d198bcc57da0f7c041978b82650b7",
+      "test_data_accessed": false
+    },
+    {
+      "candidate_A": 1,
+      "candidate_B": 1,
+      "input_uses_gt": false,
+      "metadata": {
+        "A_B_channel_order": "A channels precede transformed-B channels",
+        "channel_names": [
+          "A_occupancy",
+          "B_transformed_occupancy",
+          "A_boundary",
+          "B_transformed_boundary",
+          "overlap",
+          "portal_line",
+          "validity"
+        ],
+        "clipping_rate": 0.04034284128652199,
+        "config": {
+          "boundary_width_pixels": 1,
+          "grid_size": 128,
+          "half_extent_portal_widths": 6.0,
+          "portal_width_pixels": 2
+        },
+        "coordinate_frame": "predicted portal-centered BEV; B transformed B_to_A before rasterization",
+        "failure_reason": null,
+        "portal_center_convention": "portal midpoint maps to (0,0)",
+        "portal_direction_convention": "A interval start-to-end tangent maps to +x",
+        "portal_midpoint_A_xy": [
+          0.38885332604788253,
+          1.0789633595497448
+        ],
+        "portal_width_A": 0.4862335058079401,
+        "predicted_only": true,
+        "rotation_radians_A_to_raster": -2.849116991268408,
+        "scale_normalization": "divide all coordinates by predicted A portal width",
+        "valid": true
+      },
+      "pair_id": "0286_floor_02_pano_27_pano_25_5",
+      "png": "raster_examples/0286_floor_02_pano_27_pano_25_5.png",
+      "png_sha256": "6a2bf8e4e9cca71380e182ff99c4a8a266368ed2254ffc4ddae086de17fba4ba",
+      "selection": "stable first E1 physical-S3 win over E0; post-hoc visualization only",
+      "selection_uses_posthoc_GT": true,
+      "svg": "raster_examples/0286_floor_02_pano_27_pano_25_5.svg",
+      "svg_sha256": "4b604ea5d71c164c08fc974215ca17602cbf925de7a17cb48c840042d8f583d3",
+      "tensor": "raster_examples/0286_floor_02_pano_27_pano_25_5.pt",
+      "tensor_sha256": "ec286f15509472fa07a4eb88885784d1e279c9b3a525ec58399cf996dc5be895",
+      "test_data_accessed": false
+    },
+    {
+      "candidate_A": 6,
+      "candidate_B": 1,
+      "input_uses_gt": false,
+      "metadata": {
+        "A_B_channel_order": "A channels precede transformed-B channels",
+        "channel_names": [
+          "A_occupancy",
+          "B_transformed_occupancy",
+          "A_boundary",
+          "B_transformed_boundary",
+          "overlap",
+          "portal_line",
+          "validity"
+        ],
+        "clipping_rate": 0.18399664618216227,
+        "config": {
+          "boundary_width_pixels": 1,
+          "grid_size": 128,
+          "half_extent_portal_widths": 6.0,
+          "portal_width_pixels": 2
+        },
+        "coordinate_frame": "predicted portal-centered BEV; B transformed B_to_A before rasterization",
+        "failure_reason": null,
+        "portal_center_convention": "portal midpoint maps to (0,0)",
+        "portal_direction_convention": "A interval start-to-end tangent maps to +x",
+        "portal_midpoint_A_xy": [
+          1.2147601139502728,
+          0.2871134523516657
+        ],
+        "portal_width_A": 0.45185352740641305,
+        "predicted_only": true,
+        "rotation_radians_A_to_raster": -2.292114328449378,
+        "scale_normalization": "divide all coordinates by predicted A portal width",
+        "valid": true
+      },
+      "pair_id": "0288_floor_02_pano_25_pano_28_10",
+      "png": "raster_examples/0288_floor_02_pano_25_pano_28_10.png",
+      "png_sha256": "93df4982a925f1d2f51a4b7b05dc47f34cd60da5de9e01a73e7bb262667c802a",
+      "selection": "stable first E1 physical-S3 win over E0; post-hoc visualization only",
+      "selection_uses_posthoc_GT": true,
+      "svg": "raster_examples/0288_floor_02_pano_25_pano_28_10.svg",
+      "svg_sha256": "98757f6359d0d172736ec57a48d7fe8521b487ed0cc5653b8a21532bee6e58ad",
+      "tensor": "raster_examples/0288_floor_02_pano_25_pano_28_10.pt",
+      "tensor_sha256": "c569b75dfca603e9124dd4bf0424e6f3e1b6f695cadc1b0a5a3cecbb0b16ac5a",
+      "test_data_accessed": false
+    }
+  ],
+  "input_uses_gt": false,
+  "max_clipping_rate": 0.2486762285560352,
+  "mean_clipping_rate": 0.07183383929808967,
+  "schema_version": "zind-salve-bev-raster-prototype-v1",
+  "test_data_accessed": false
+}

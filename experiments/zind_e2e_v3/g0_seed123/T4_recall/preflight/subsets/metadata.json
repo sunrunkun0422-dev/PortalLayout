@@ -1,0 +1,365 @@
+{
+  "schema_version": "zind-t4-preflight-subsets-v1",
+  "seed": 123,
+  "test_data_accessed": false,
+  "train": {
+    "category_counts": {
+      "negative": 8,
+      "positive_missing": 8,
+      "positive_recalled": 8
+    },
+    "category_pool_counts": {
+      "negative": 1017,
+      "positive_missing": 380,
+      "positive_recalled": 651
+    },
+    "hard_negative_definition": "negative pairs sorted by predicted K_A*K_B descending",
+    "samples": [
+      {
+        "candidate_count_A": 8,
+        "candidate_count_B": 7,
+        "candidate_product": 56,
+        "category": "negative",
+        "dataset_index": 1139,
+        "pair_id": "0044_floor_02_pano_41_pano_45_negative",
+        "wrap_target": false
+      },
+      {
+        "candidate_count_A": 8,
+        "candidate_count_B": 7,
+        "candidate_product": 56,
+        "category": "negative",
+        "dataset_index": 1433,
+        "pair_id": "0674_floor_00_pano_35_pano_31_negative",
+        "wrap_target": false
+      },
+      {
+        "candidate_count_A": 10,
+        "candidate_count_B": 11,
+        "candidate_product": 110,
+        "category": "negative",
+        "dataset_index": 6,
+        "pair_id": "0919_floor_01_pano_41_pano_35_negative",
+        "wrap_target": false
+      },
+      {
+        "candidate_count_A": 8,
+        "candidate_count_B": 8,
+        "candidate_product": 64,
+        "category": "negative",
+        "dataset_index": 1843,
+        "pair_id": "1151_floor_01_pano_19_pano_20_negative",
+        "wrap_target": false
+      },
+      {
+        "candidate_count_A": 5,
+        "candidate_count_B": 12,
+        "candidate_product": 60,
+        "category": "negative",
+        "dataset_index": 1845,
+        "pair_id": "1151_floor_01_pano_23_pano_25_negative",
+        "wrap_target": false
+      },
+      {
+        "candidate_count_A": 8,
+        "candidate_count_B": 11,
+        "candidate_product": 88,
+        "category": "negative",
+        "dataset_index": 1762,
+        "pair_id": "1161_floor_01_pano_8_pano_12_negative",
+        "wrap_target": false
+      },
+      {
+        "candidate_count_A": 6,
+        "candidate_count_B": 10,
+        "candidate_product": 60,
+        "category": "negative",
+        "dataset_index": 115,
+        "pair_id": "1356_floor_02_pano_64_pano_69_negative",
+        "wrap_target": false
+      },
+      {
+        "candidate_count_A": 8,
+        "candidate_count_B": 10,
+        "candidate_product": 80,
+        "category": "negative",
+        "dataset_index": 116,
+        "pair_id": "1356_floor_02_pano_65_pano_69_negative",
+        "wrap_target": false
+      },
+      {
+        "candidate_count_A": 5,
+        "candidate_count_B": 11,
+        "candidate_product": 55,
+        "category": "positive_missing",
+        "dataset_index": 773,
+        "pair_id": "0058_floor_01_pano_14_pano_10_2",
+        "wrap_target": true
+      },
+      {
+        "candidate_count_A": 6,
+        "candidate_count_B": 8,
+        "candidate_product": 48,
+        "category": "positive_missing",
+        "dataset_index": 2012,
+        "pair_id": "0261_floor_01_pano_10_pano_6_2",
+        "wrap_target": true
+      },
+      {
+        "candidate_count_A": 8,
+        "candidate_count_B": 7,
+        "candidate_product": 56,
+        "category": "positive_missing",
+        "dataset_index": 1342,
+        "pair_id": "0364_floor_01_pano_18_pano_37_0",
+        "wrap_target": true
+      },
+      {
+        "candidate_count_A": 7,
+        "candidate_count_B": 8,
+        "candidate_product": 56,
+        "category": "positive_missing",
+        "dataset_index": 1305,
+        "pair_id": "0400_floor_02_pano_85_pano_98_3",
+        "wrap_target": true
+      },
+      {
+        "candidate_count_A": 10,
+        "candidate_count_B": 5,
+        "candidate_product": 50,
+        "category": "positive_missing",
+        "dataset_index": 418,
+        "pair_id": "0437_floor_01_pano_23_pano_44_1",
+        "wrap_target": true
+      },
+      {
+        "candidate_count_A": 9,
+        "candidate_count_B": 6,
+        "candidate_product": 54,
+        "category": "positive_missing",
+        "dataset_index": 54,
+        "pair_id": "0673_floor_01_pano_34_pano_16_11",
+        "wrap_target": true
+      },
+      {
+        "candidate_count_A": 7,
+        "candidate_count_B": 9,
+        "candidate_product": 63,
+        "category": "positive_missing",
+        "dataset_index": 634,
+        "pair_id": "0902_floor_01_pano_8_pano_58_12",
+        "wrap_target": true
+      },
+      {
+        "candidate_count_A": 9,
+        "candidate_count_B": 6,
+        "candidate_product": 54,
+        "category": "positive_missing",
+        "dataset_index": 1920,
+        "pair_id": "0930_floor_01_pano_8_pano_22_6",
+        "wrap_target": true
+      },
+      {
+        "candidate_count_A": 12,
+        "candidate_count_B": 4,
+        "candidate_product": 48,
+        "category": "positive_recalled",
+        "dataset_index": 668,
+        "pair_id": "0154_floor_01_pano_6_pano_27_9",
+        "wrap_target": true
+      },
+      {
+        "candidate_count_A": 6,
+        "candidate_count_B": 9,
+        "candidate_product": 54,
+        "category": "positive_recalled",
+        "dataset_index": 125,
+        "pair_id": "0454_floor_01_pano_18_pano_15_0",
+        "wrap_target": true
+      },
+      {
+        "candidate_count_A": 10,
+        "candidate_count_B": 6,
+        "candidate_product": 60,
+        "category": "positive_recalled",
+        "dataset_index": 1267,
+        "pair_id": "0495_floor_02_pano_36_pano_29_7",
+        "wrap_target": true
+      },
+      {
+        "candidate_count_A": 9,
+        "candidate_count_B": 4,
+        "candidate_product": 36,
+        "category": "positive_recalled",
+        "dataset_index": 1268,
+        "pair_id": "0495_floor_02_pano_40_pano_42_5",
+        "wrap_target": true
+      },
+      {
+        "candidate_count_A": 9,
+        "candidate_count_B": 5,
+        "candidate_product": 45,
+        "category": "positive_recalled",
+        "dataset_index": 631,
+        "pair_id": "0902_floor_01_pano_30_pano_32_18",
+        "wrap_target": true
+      },
+      {
+        "candidate_count_A": 9,
+        "candidate_count_B": 7,
+        "candidate_product": 63,
+        "category": "positive_recalled",
+        "dataset_index": 1800,
+        "pair_id": "1011_floor_01_pano_12_pano_17_6",
+        "wrap_target": true
+      },
+      {
+        "candidate_count_A": 5,
+        "candidate_count_B": 8,
+        "candidate_product": 40,
+        "category": "positive_recalled",
+        "dataset_index": 1364,
+        "pair_id": "1086_floor_01_pano_26_pano_9_9",
+        "wrap_target": true
+      },
+      {
+        "candidate_count_A": 5,
+        "candidate_count_B": 8,
+        "candidate_product": 40,
+        "category": "positive_recalled",
+        "dataset_index": 2046,
+        "pair_id": "1099_floor_01_pano_29_pano_15_0",
+        "wrap_target": true
+      }
+    ],
+    "scan_count": 2048,
+    "selection_model": {
+      "matcher": {
+        "completedEpoch": 5,
+        "formatVersion": 2,
+        "loaded": true,
+        "model": {
+          "candidate_temperature": 0.2,
+          "dropout": 0.1,
+          "feature_dim": 512,
+          "has_dustbin": true,
+          "heads": 8,
+          "hidden_dim": 128,
+          "opening_bias_strength": 1.0,
+          "shift_temperature": 0.05
+        },
+        "openingHeadDependency": {
+          "backboneContractValidated": true,
+          "biLayoutCheckpoint": {
+            "mtimeNs": 1778459017793688163,
+            "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+            "size": 1228718862
+          },
+          "biLayoutConfig": {
+            "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+            "sha256": "867506b93ae973b3517d20a9b2e9899964684366b3644d1facc22110e1382cbd",
+            "size": 1380
+          },
+          "branchOrder": "extended_first"
+        },
+        "openingProbabilityThreshold": 0.47000000000000003,
+        "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Cross_Scene_Matcher/zind_matching_v1/best.pt",
+        "task": "ZInD_matching complete-room cross-scene opening matcher"
+      },
+      "opening": {
+        "backboneContract": {
+          "biLayoutCheckpoint": {
+            "mtimeNs": 1778459017793688163,
+            "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+            "savedPath": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+            "size": 1228718862
+          },
+          "biLayoutConfig": {
+            "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+            "savedPath": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+            "sha256": "867506b93ae973b3517d20a9b2e9899964684366b3644d1facc22110e1382cbd",
+            "size": 1380
+          },
+          "featureDim": 512,
+          "tokenCount": 256,
+          "validated": true
+        },
+        "branchOrder": "extended_first",
+        "completedEpoch": 20,
+        "formatVersion": 1,
+        "loaded": true,
+        "model": {
+          "branch_order": "extended_first",
+          "feature_dim": 512,
+          "hidden_dim": 128,
+          "kernel_size": 5,
+          "prior_relative_scale": 0.1,
+          "prior_strength": 4.0
+        },
+        "operatingThreshold": 0.47000000000000003,
+        "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Opening_Head/zind_matching_v1/best.pt",
+        "task": "ZInD_matching single-view Opening Head (doors+openings)",
+        "thresholdFallback": false,
+        "thresholdPolicy": "max_recall_at_precision>=0.80"
+      }
+    },
+    "split": "train",
+    "wrap_target_count": 16
+  },
+  "val": {
+    "frozen_t3_baseline": {
+      "candidate_count_mean": 4.015625,
+      "candidate_count_p95": 7.0,
+      "candidate_product_mean": 16.75,
+      "candidate_product_p95": 37.8,
+      "conditional_candidate_top1": 0.375,
+      "end_to_end_candidate_top1": 0.1875,
+      "harmonic_flow_score": 0.3,
+      "negative_count": 16,
+      "negative_rejection_rate": 0.75,
+      "pair_count": 32,
+      "positive_candidate_recall": 0.5,
+      "positive_count": 16,
+      "positive_match_recall": 0.4375,
+      "source": "frozen full-val T3 artifacts filtered by exact pair id"
+    },
+    "negative_selection": "candidate burden descending, then stable pair id",
+    "pair_ids": [
+      "0003_floor_01_pano_103_pano_99_13",
+      "0003_floor_01_pano_10_pano_50_5",
+      "0003_floor_01_pano_28_pano_31_9",
+      "0003_floor_01_pano_4_pano_80_6",
+      "0003_floor_01_pano_4_pano_92_4",
+      "0003_floor_01_pano_59_pano_56_21",
+      "0003_floor_01_pano_75_pano_76_16",
+      "0003_floor_01_pano_8_pano_28_0",
+      "0018_floor_01_pano_6_pano_15_8",
+      "0018_floor_02_pano_33_pano_34_2",
+      "0018_floor_02_pano_33_pano_36_0",
+      "0020_floor_01_pano_11_pano_36_16",
+      "0020_floor_01_pano_17_pano_14_12",
+      "0020_floor_01_pano_39_pano_15_11",
+      "0020_floor_02_pano_62_pano_64_10",
+      "0025_floor_01_pano_27_pano_26_12",
+      "0059_floor_01_pano_12_pano_13_negative",
+      "0059_floor_02_pano_5_pano_7_negative",
+      "0062_floor_01_pano_33_pano_38_negative",
+      "0185_floor_01_pano_21_pano_12_negative",
+      "0340_floor_01_pano_26_pano_25_negative",
+      "0340_floor_01_pano_59_pano_25_negative",
+      "0340_floor_01_pano_59_pano_26_negative",
+      "0352_floor_01_pano_10_pano_11_negative",
+      "0352_floor_02_pano_39_pano_36_negative",
+      "0370_floor_01_pano_15_pano_12_negative",
+      "0424_floor_02_pano_26_pano_33_negative",
+      "0461_floor_01_pano_42_pano_62_negative",
+      "0618_floor_03_pano_34_pano_48_negative",
+      "0872_floor_01_pano_14_pano_13_negative",
+      "1147_floor_01_pano_8_pano_39_negative",
+      "1475_floor_00_pano_2_pano_3_negative"
+    ],
+    "positive_selection": "manifest-GT wrap targets first, then stable pair id; no model score or correctness is used",
+    "selection_uses_model_performance": false,
+    "split": "val"
+  }
+}

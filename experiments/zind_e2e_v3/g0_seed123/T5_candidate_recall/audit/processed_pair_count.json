@@ -1,0 +1,10 @@
+{
+  "optimizer_created": false,
+  "processed_pair_count": 1827,
+  "split": "val",
+  "task_type": "frozen_inference_audit",
+  "test_data_accessed": false,
+  "total_pair_count": 1827,
+  "training_started": false,
+  "view": "P1_recall_topk"
+}

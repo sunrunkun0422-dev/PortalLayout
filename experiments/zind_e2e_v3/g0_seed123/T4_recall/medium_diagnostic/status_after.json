@@ -1,0 +1,55 @@
+{
+  "schema_version": "zind-t4-medium-status-after-v1",
+  "branch": "agent/zind-bipair-opening-matcher",
+  "head": "50a6ae5ca403928627fb4de18ae918d59c03d479",
+  "dirty_worktree_preserved": true,
+  "formal_training_started": false,
+  "formal_training_path_exists": false,
+  "decision": "STOP_MEDIUM_GATE",
+  "gpu_after": {
+    "index": 0,
+    "name": "NVIDIA GeForce RTX 4060 Ti",
+    "memory_total_mib": 16380,
+    "memory_used_mib": 712,
+    "memory_free_mib": 15228,
+    "compute_processes": []
+  },
+  "disk_after": {
+    "filesystem": "/dev/sda5",
+    "size": "1.7T",
+    "used": "1.3T",
+    "available": "382G",
+    "use_percent": "77%"
+  },
+  "checkpoint_protection": {
+    "T0": "2504cc25391e356cbc2fc7566fd0efea1040c916e2c85be6fbbc488c84ee5120",
+    "T1": "171052202a4a40b4d2dafc685aa38256b16f904a79d4f4dac993169f098c51bf",
+    "T2": "966af20b2b83b3d170b014e122fac206518de161d88668222b72dff646d1dd51",
+    "T3": "ca083dbbc5a05d738dad36404ad708c623c272aef7a64398b4de3a793278cc5d",
+    "all_size_bytes": 418836277,
+    "sha_size_mtime_unchanged": true
+  },
+  "validation": {
+    "unit_tests": "194/194 PASS",
+    "git_diff_check": "PASS",
+    "all_json_valid": true,
+    "json_nonfinite_found": false,
+    "cache_train_shards": 256,
+    "cache_val_shards": 128,
+    "validation_cached_views": [
+      "legacy_predicted",
+      "recall_predicted"
+    ],
+    "validation_gt_candidate_injection_count": 0
+  },
+  "source_scope_added": [
+    "tools/diagnose_zind_t4_medium.py",
+    "tests/test_zind_t4_medium.py"
+  ],
+  "existing_M2_scale_layout_BEV_verifier_modified_by_this_run": false,
+  "active_splits": [
+    "train",
+    "val"
+  ],
+  "test_data_accessed": false
+}

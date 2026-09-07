@@ -40,6 +40,7 @@ from models.cross_scene_matcher import (
     candidate_intervals_to_mask,
     cyclic_token_shift_loss,
     opening_probabilities_to_intervals,
+    recall_topk_opening_intervals,
 )
 from utils.opening_checkpoint import load_opening_head_checkpoint
 
@@ -406,18 +407,38 @@ def predicted_candidate_masks(
     threshold: float,
     min_width_tokens: int,
     max_openings: int,
+    *,
+    proposal_mode: str = "legacy",
+    peak_top_k: int = 4,
+    peak_min_probability: float = 0.20,
+    expansion_threshold: float = 0.12,
+    dedup_iou: float = 0.50,
 ) -> Tuple[torch.Tensor, torch.Tensor]:
     """Convert a batch of frozen Opening Head scores to padded candidates."""
     if probability.ndim != 2:
         raise ValueError("opening probability must have shape [B, N]")
+    if proposal_mode not in ("legacy", "recall_topk"):
+        raise ValueError("proposal_mode must be legacy or recall_topk")
     per_sample = []
     for sample in probability:
-        intervals = opening_probabilities_to_intervals(
-            sample,
-            threshold=threshold,
-            min_width_tokens=min_width_tokens,
-            max_intervals=max_openings,
-        )
+        if proposal_mode == "legacy":
+            intervals = opening_probabilities_to_intervals(
+                sample,
+                threshold=threshold,
+                min_width_tokens=min_width_tokens,
+                max_intervals=max_openings,
+            )
+        else:
+            intervals = recall_topk_opening_intervals(
+                sample,
+                threshold=threshold,
+                min_width_tokens=min_width_tokens,
+                max_intervals=max_openings,
+                peak_top_k=peak_top_k,
+                peak_min_probability=peak_min_probability,
+                expansion_threshold=expansion_threshold,
+                dedup_iou=dedup_iou,
+            )
         per_sample.append(
             candidate_intervals_to_mask(
                 intervals, int(probability.shape[1]), device=probability.device

@@ -1,3 +1,5 @@
+> 统一文档已合并至 [项目总览与学习手册](项目总览与学习手册.md#project)（2026-09-07）。本文件保留为历史资料；其中“当前状态”和“下一步”以原记录日期为准，后续阅读与维护以统一手册为入口。
+
 > 修改记录：2026-07-13 16:32 CST - 跨场景入口由旧版更新为统一工程管线。
 > 修改记录：2026-07-16 16:45 CST - 增加 ZInD 匹配数据格式与转换入口。
 > 修改记录：2026-07-17 11:48 CST - 增加 ZInD-BiPair-v1 数据集生成、加载和全量验证入口。
@@ -13,7 +15,7 @@
 1. [README.md](README.md)
    - 看原始 Bi-Layout 项目说明、环境安装、数据准备和训练/测试入口
 
-2. [Bi_Layout_网络架构图_可编辑.md](Bi_Layout_网络架构图_可编辑.md)
+2. [统一手册：单图结构](项目总览与学习手册.md#single-view)
    - 看可编辑 Mermaid 网络图
    - 适合理解单图 Bi-Layout 双分支结构
 
@@ -35,13 +37,13 @@
 
 ## 读法建议
 
-- 先读 [README.md](README.md) 和 [Bi_Layout_网络架构图_可编辑.md](Bi_Layout_网络架构图_可编辑.md)，建立原始单图布局估计基础。
+- 先读 [README.md](README.md) 和 [统一手册：单图结构](项目总览与学习手册.md#single-view)，建立原始单图布局估计基础。
 - 再读 [跨场景共享开口融合网络架构_可编辑.md](跨场景共享开口融合网络架构_可编辑.md)，理解本文创新点如何从单图 enclosed/extended 输出扩展到跨场景共享开口融合。
 
 ## 按问题找文档
 
 - 想知道原始 Bi-Layout 如何训练、测试和组织数据: 看 [README.md](README.md)
-- 想直接改 Bi-Layout 网络架构图: 看 [Bi_Layout_网络架构图_可编辑.md](Bi_Layout_网络架构图_可编辑.md)
+- 想直接改 Bi-Layout 网络架构图: 看 [统一手册：单图结构](项目总览与学习手册.md#single-view)
 - 想确认跨场景共享开口融合的模块输入输出: 看 [跨场景共享开口融合网络架构_可编辑.md](跨场景共享开口融合网络架构_可编辑.md)
 - 想生成首版 partial-opening 训练数据: 看 [ZInD-BiPair-v1数据集说明.md](ZInD-BiPair-v1数据集说明.md) 和 [tools/build_zind_bipair_v1.py](tools/build_zind_bipair_v1.py)
 - 想测试开口召回率并在 val 标定阈值: 看 [tools/evaluate_zind_opening_recall.py](tools/evaluate_zind_opening_recall.py)、[evaluation/opening_recall.py](evaluation/opening_recall.py) 和 [src/output/progress_report_20260716/进度汇报结果.md](src/output/progress_report_20260716/进度汇报结果.md)

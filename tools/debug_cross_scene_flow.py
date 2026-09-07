@@ -32,7 +32,7 @@ from models.geometry_consistency_selector import (
     GeometryConsistencySelector,
     candidate_metrics_to_tensor,
 )
-from postprocessing.post_process import post_process
+from postprocessing.post_process import frame_preserving_manhattan, post_process
 from utils.conversion import depth2xyz
 from utils.cross_scene_estimator import (
     estimate_wall_pair_candidates,
@@ -299,12 +299,60 @@ def _convex_layout(depth: np.ndarray, ratio: float) -> Dict[str, Any]:
     return xyz2json(hull_xyz, max(abs(float(ratio)), 1e-3))
 
 
-def prediction_to_layout(depth: torch.Tensor, ratio: torch.Tensor) -> Tuple[Dict, Dict]:
+LAYOUT_FRAME_MODES = ("legacy_fixed_axis", "panorama_preserving")
+
+
+def prediction_to_layout(
+    depth: torch.Tensor,
+    ratio: torch.Tensor,
+    layout_frame_mode: str = "legacy_fixed_axis",
+) -> Tuple[Dict, Dict]:
+    """Serialize one predicted layout with an explicit horizontal frame.
+
+    ``legacy_fixed_axis`` deliberately preserves the historical fixed-axis
+    Manhattan behavior.  ``panorama_preserving`` estimates a Manhattan family
+    only from the predicted pre-fit depth geometry, fits in that canonical
+    frame, and inverse-rotates the fitted polygon before serialization.
+    """
+    if layout_frame_mode not in LAYOUT_FRAME_MODES:
+        raise ValueError(
+            "layout_frame_mode must be one of {}".format(
+                ", ".join(LAYOUT_FRAME_MODES)
+            )
+        )
     depth_np = depth.detach().cpu().numpy().reshape(1, -1)
     ratio_value = float(ratio.detach().cpu().reshape(-1)[0])
-    report = {"postProcessing": "manhattan", "fallbackUsed": False}
+    safe_depth = np.maximum(np.abs(depth_np), 1e-3)
+    pre_local = np.asarray(depth2xyz(safe_depth, plan_y=1)[0][..., ::2])
+    report = {
+        "postProcessing": "manhattan",
+        "fallbackUsed": False,
+        "layoutFrameMode": layout_frame_mode,
+        "layoutPolygonPreManhattanLocalBiXZ": pre_local.tolist(),
+    }
     try:
-        processed_xyz = post_process(np.maximum(np.abs(depth_np), 1e-3), type_name="manhattan")[0]
+        if layout_frame_mode == "legacy_fixed_axis":
+            processed_xyz = post_process(
+                safe_depth, type_name="manhattan"
+            )[0]
+            canonical = np.asarray(processed_xyz[..., ::2], dtype=np.float64)
+            report.update(
+                layoutFrame="manhattan_canonical",
+                notValidForCrossScenePose=True,
+                headingSource="legacy_fixed_axis_no_heading_estimation",
+                manhattanHeadingRadians=0.0,
+                manhattanHeadingDegrees=0.0,
+                layoutPolygonManhattanCanonicalBiXZ=canonical.tolist(),
+                layoutPolygonPanoramaLocalBiXZ=None,
+            )
+        else:
+            processed_batch, frame_reports = frame_preserving_manhattan(safe_depth)
+            processed_xyz = processed_batch[0]
+            report.update(frame_reports[0])
+            report.update(
+                layoutFrame="panorama_local",
+                notValidForCrossScenePose=False,
+            )
         layout = xyz2json(processed_xyz, max(abs(ratio_value), 1e-3))
         validity = polygon_validity(layout)
         if not validity["valid"]:
@@ -315,6 +363,13 @@ def prediction_to_layout(depth: torch.Tensor, ratio: torch.Tensor) -> Tuple[Dict
             postProcessing="convex_hull_fallback",
             fallbackUsed=True,
             fallbackReason=str(exc),
+            layoutFrame="panorama_local_fallback",
+            notValidForCrossScenePose=False,
+            headingSource="none_convex_hull_fallback",
+            manhattanHeadingRadians=None,
+            manhattanHeadingDegrees=None,
+            layoutPolygonManhattanCanonicalBiXZ=None,
+            layoutPolygonPanoramaLocalBiXZ=None,
         )
     report["validity"] = polygon_validity(layout)
     return layout, report

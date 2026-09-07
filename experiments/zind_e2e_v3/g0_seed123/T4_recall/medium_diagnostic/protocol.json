@@ -1,0 +1,72 @@
+{
+  "protocol_version": "zind-t4-matcher-only-medium-diagnostic-v1",
+  "sample": {
+    "train": {
+      "positive": 512,
+      "negative": 512
+    },
+    "val": {
+      "positive": 256,
+      "negative": 256
+    },
+    "selector": "deterministic house-first, model-performance independent"
+  },
+  "proposal": {
+    "mode": "recall_topk",
+    "threshold": 0.47,
+    "peak_top_k": 4,
+    "peak_min_probability": 0.2,
+    "expansion_threshold": 0.12,
+    "dedup_iou": 0.5,
+    "max_candidates": 12
+  },
+  "training": {
+    "epochs": 6,
+    "batch_size": 4,
+    "optimizer": "AdamW",
+    "matcher_lr": 3e-05,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "minimum_lr_factor": 0.1,
+    "seed": 123,
+    "candidate_missing_target_policy": "mask_positive",
+    "ranking_loss_weight": 0.1
+  },
+  "factors": {
+    "I0_M0": {
+      "train_gt_injection": false,
+      "dustbin_margin": false
+    },
+    "I1_M0": {
+      "train_gt_injection": true,
+      "dustbin_margin": false
+    },
+    "I0_M1": {
+      "train_gt_injection": false,
+      "dustbin_margin": true
+    },
+    "I1_M1": {
+      "train_gt_injection": true,
+      "dustbin_margin": true
+    }
+  },
+  "launch_policy": {
+    "status": "INHERITED_MINIMUM_NON_REGRESSION",
+    "source": "matcher_only_preflight/gpu_small_preflight_gate_v2.json",
+    "evaluated_factor": "I1_M1 (the formal injection+margin configuration)",
+    "criteria": [
+      "all finite; matcher-only gradients; frozen upstream unchanged",
+      "validation predicted-only with zero GT injection",
+      "positive acceptance or S3 improves",
+      "negative rejection drops by at most 5 percentage points",
+      "Harmonic is not below identical-proposal T3"
+    ],
+    "note": "the received message ends at the 2x2 table header; this reuses the already-established GPU gate and does not loosen it"
+  },
+  "active_splits": [
+    "train",
+    "val"
+  ],
+  "test_data_accessed": false,
+  "protocol_sha256": "2fdd90dde683a0b536f9202aa3ab1e4b6d01e7c276ac2b7b02aa5ceb1620e3eb"
+}

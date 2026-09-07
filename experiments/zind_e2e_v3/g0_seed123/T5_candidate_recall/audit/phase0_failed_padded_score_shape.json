@@ -1,0 +1,9 @@
+{
+  "error": "Phase 0 gate failed: pair_scores_within_2e_5",
+  "optimizer_created": false,
+  "pid": 701051,
+  "task_type": "frozen_inference_audit",
+  "test_data_accessed": false,
+  "traceback": "Traceback (most recent call last):\n  File \"tools/audit_zind_candidate_failures.py\", line 2020, in main\n    elif phase == \"smoke\": smoke(args, output, log)\n  File \"tools/audit_zind_candidate_failures.py\", line 909, in smoke\n    raise RuntimeError(\"Phase 0 gate failed: \" + \", \".join(key for key, value in gates.items() if not value))\nRuntimeError: Phase 0 gate failed: pair_scores_within_2e_5\n",
+  "training_started": false
+}

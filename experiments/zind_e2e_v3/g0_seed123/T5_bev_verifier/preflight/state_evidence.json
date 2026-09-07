@@ -1,0 +1,79 @@
+{
+  "active_splits": [
+    "train",
+    "val"
+  ],
+  "branch": "agent/zind-bipair-opening-matcher",
+  "candidate_audit_hashes": {
+    "oracle_summary.json": "78d0d7ad8249b9281a21014b1ec8992d8bd93576f77f47896fb65b5a6027bd90",
+    "phase3_summary.json": "4f3d73c8bda8eb4960386d1fe74f60e5d21a40a906a5bf77194e8532ebcd2bc2",
+    "room_cache_index.json": "59e5c9b70a9bf5fa5bcf5ef99737b777dcff20c3a70ef117e4e28bb77c025a6b",
+    "train_sample_4096.json": "03797b831223d0aefb43028a72f722082710385205dea13801a5fe0a107f4b4a"
+  },
+  "checkpoints": {
+    "T0": {
+      "mtime_ns": 1786418591863426196,
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T0/best.pt",
+      "sha256": "2504cc25391e356cbc2fc7566fd0efea1040c916e2c85be6fbbc488c84ee5120",
+      "size": 418836277
+    },
+    "T1": {
+      "mtime_ns": 1786521270460200002,
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T1/best.pt",
+      "sha256": "171052202a4a40b4d2dafc685aa38256b16f904a79d4f4dac993169f098c51bf",
+      "size": 418836277
+    },
+    "T2": {
+      "mtime_ns": 1786630977604574390,
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T2/best.pt",
+      "sha256": "966af20b2b83b3d170b014e122fac206518de161d88668222b72dff646d1dd51",
+      "size": 418836277
+    },
+    "T3": {
+      "mtime_ns": 1786733650604347717,
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T3/best.pt",
+      "sha256": "ca083dbbc5a05d738dad36404ad708c623c272aef7a64398b4de3a793278cc5d",
+      "size": 418836277
+    }
+  },
+  "disk": {
+    "free_bytes": 399857926144,
+    "total_bytes": 1833524600832,
+    "used_bytes": 1340453199872
+  },
+  "gpu_status": {
+    "available_to_process": true,
+    "compute_process_count": 0,
+    "device": "NVIDIA GeForce RTX 4060 Ti",
+    "memory_free_mib": 15597,
+    "memory_total_mib": 16380,
+    "memory_used_mib": 783,
+    "query_result": "Authorized read-only nvidia-smi query outside the restricted execution sandbox"
+  },
+  "head": "50a6ae5ca403928627fb4de18ae918d59c03d479",
+  "m2": {
+    "config": {
+      "context_padding_tokens": 4,
+      "probability_weight_floor": 0.25,
+      "probability_weight_span": 0.75,
+      "quality_max_angular_dispersion_degrees": 25.0,
+      "quality_max_normalized_residual": 0.05,
+      "quality_min_inlier_ratio": 0.6,
+      "quality_min_ray_condition": 0.05,
+      "quality_min_support": 4,
+      "ransac_median_edge_multiplier": 2.5,
+      "ransac_min_inliers": 4,
+      "ransac_radius_max_fraction": 0.06,
+      "ransac_radius_min_fraction": 0.008,
+      "ray_parallel_epsilon": 1e-08,
+      "width_ratio_max": 2.5,
+      "width_ratio_min": 0.03
+    },
+    "sha256": "cdce025fd5ba709a3c5afc827137860d1082c7ab44e27a5467ea6686a7a02a4c",
+    "source": "utils.candidate_local_portal_geometry.CandidateLocalPortalConfig",
+    "tuned_on_val": false
+  },
+  "schema_version": "zind-salve-verifier-state-v1",
+  "test_data_accessed": false,
+  "worktree_status": " M .gitignore\n M models/cross_scene_matcher.py\n M postprocessing/post_process.py\n M tests/test_zind_end_to_end_candidate_fixes.py\n M tools/debug_cross_scene_flow.py\n M tools/train_zind_cross_scene_matcher.py\n M tools/train_zind_end_to_end.py\n M utils/joint_layout.py\n?? experiments/zind_e2e_v2/full_ablation_g0_seed123/\n?? experiments/zind_e2e_v3/\n?? src/dataset/\n?? src/output/cross_scene_flow_zind_bipair_v1/\n?? src/output/cross_scene_format_smoke/\n?? src/output/progress_report_20260716/cross_scene_pair/\n?? src/output/progress_report_20260716/zind_adjacent_pairs_eval/\n?? src/output/zind_bipair_v1_smoke/\n?? src/output/zind_cross_scene_eval_zind_bipair_v1/\n?? src/output/zind_geometry_val_full/\n?? src/output/zind_geometry_val_smoke/\n?? src/output/zind_matching_dataset_smoke/\n?? src/output/zind_opening_recall/\n?? src/output/zind_room_group_debug/\n?? tests/test_audit_zind_candidate_failures.py\n?? tests/test_audit_zind_joint_geometry.py\n?? tests/test_audit_zind_portal_geometry.py\n?? tests/test_candidate_conditioned_verifier.py\n?? tests/test_candidate_local_portal_geometry.py\n?? tests/test_evaluate_zind_portal_geometry_val.py\n?? tests/test_evaluate_zind_portal_geometry_val_full.py\n?? tests/test_evaluate_zind_room_group.py\n?? tests/test_frame_preserving_manhattan.py\n?? tests/test_zind_t4_matcher_only.py\n?? tests/test_zind_t4_medium.py\n?? tests/test_zind_t4_recall.py\n?? tools/audit_zind_candidate_failures.py\n?? tools/audit_zind_joint_geometry.py\n?? tools/audit_zind_portal_geometry.py\n?? tools/audit_zind_t4_recall.py\n?? tools/diagnose_zind_t4_medium.py\n?? tools/evaluate_zind_portal_geometry_val.py\n?? tools/evaluate_zind_portal_geometry_val_full.py\n?? tools/evaluate_zind_room_group.py\n?? tools/preflight_zind_bev_verifier.py\n?? tools/preflight_zind_t4_cpu.py\n?? tools/preflight_zind_t4_matcher_only.py\n?? tools/prepare_zind_t4_preflight_subsets.py\n?? tools/summarize_zind_t4_preflight.py\n?? utils/candidate_conditioned_verifier.py\n?? utils/candidate_failure_trace.py\n?? utils/candidate_local_portal_geometry.py\n"
+}

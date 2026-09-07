@@ -1,0 +1,27 @@
+automatic_reason,observed_primary_mechanism,count
+below_threshold_A,probability exists but below threshold,2
+below_threshold_B,probability exists but below threshold,2
+candidate_cap_removed,candidate score calibration,1
+dedup_removed,annotation ambiguity,2
+dedup_removed,oblique/edge-on viewpoint,1
+dedup_removed,repeated door appearance,1
+interval_expansion_failure,annotation ambiguity,1
+interval_merge,adjacent openings merged,1
+interval_merge,broad response bridge,7
+interval_split,true opening split into fragments,4
+no_opening_signal_A,missing visual response,2
+no_opening_signal_A,probability exists but below threshold,1
+no_opening_signal_B,missing visual response,1
+no_opening_signal_B,oblique/edge-on viewpoint,1
+no_opening_signal_B,probability exists but below threshold,1
+no_opening_signal_both,missing visual response,2
+target_present_correct,broad response bridge,1
+target_present_correct,repeated door appearance,1
+target_present_correct,uncertain,2
+target_present_correct,wrap/seam handling,2
+target_present_dustbin_reject,annotation ambiguity,3
+target_present_dustbin_reject,candidate score calibration,2
+target_present_dustbin_reject,repeated door appearance,3
+target_present_wrong_selection,annotation ambiguity,3
+target_present_wrong_selection,repeated door appearance,4
+target_present_wrong_selection,wrap/seam handling,1

@@ -96,6 +96,134 @@ def opening_probabilities_to_intervals(
     return [(start, end) for _, _, start, end in ranked[:max_intervals]]
 
 
+def circular_interval_iou(
+    interval_a: Tuple[int, int],
+    interval_b: Tuple[int, int],
+    token_count: int,
+) -> float:
+    """Return IoU for two inclusive intervals on a circular token axis."""
+    if token_count <= 0:
+        raise ValueError("token_count must be positive")
+    mask_a = candidate_intervals_to_mask([interval_a], token_count)[0]
+    mask_b = candidate_intervals_to_mask([interval_b], token_count)[0]
+    intersection = int((mask_a & mask_b).sum().item())
+    union = int((mask_a | mask_b).sum().item())
+    return float(intersection / union) if union else 0.0
+
+
+def recall_topk_opening_intervals(
+    probability: torch.Tensor,
+    threshold: float,
+    min_width_tokens: int,
+    max_intervals: int,
+    *,
+    peak_top_k: int = 4,
+    peak_min_probability: float = 0.20,
+    expansion_threshold: float = 0.12,
+    dedup_iou: float = 0.50,
+) -> list:
+    """Add deterministic circular local-peak fallbacks to legacy proposals.
+
+    The legacy connected components are retained first.  Remaining local peaks
+    are ranked using prediction scores only, expanded circularly down to one
+    global probability boundary, and deduplicated by circular interval IoU.
+    No annotation or candidate target is consumed by this inference function.
+    """
+    values = probability.detach().reshape(-1)
+    token_count = int(values.numel())
+    if token_count <= 0:
+        raise ValueError("probability must contain at least one token")
+    if not torch.isfinite(values).all():
+        raise ValueError("probability must contain only finite values")
+    if min_width_tokens <= 0 or max_intervals <= 0:
+        raise ValueError("min_width_tokens and max_intervals must be positive")
+    if peak_top_k < 0:
+        raise ValueError("peak_top_k must be non-negative")
+    for name, value in (
+        ("threshold", threshold),
+        ("peak_min_probability", peak_min_probability),
+        ("expansion_threshold", expansion_threshold),
+        ("dedup_iou", dedup_iou),
+    ):
+        if not math.isfinite(float(value)) or not 0.0 <= float(value) <= 1.0:
+            raise ValueError(f"{name} must be finite and in [0, 1]")
+    if float(expansion_threshold) > float(peak_min_probability):
+        raise ValueError("expansion_threshold must not exceed peak_min_probability")
+
+    legacy = opening_probabilities_to_intervals(
+        values,
+        threshold=threshold,
+        min_width_tokens=min_width_tokens,
+        max_intervals=max_intervals,
+    )
+    proposals = list(legacy)
+    if peak_top_k == 0 or len(proposals) >= max_intervals:
+        return proposals[:max_intervals]
+
+    previous = torch.roll(values, shifts=1)
+    following = torch.roll(values, shifts=-1)
+    peak_mask = (
+        (values >= previous)
+        & (values >= following)
+        & (values >= float(peak_min_probability))
+    )
+    # Resolve flat plateaus deterministically to their lowest circular index.
+    peak_indices = torch.where(peak_mask)[0].tolist()
+    ranked_peaks = sorted(
+        peak_indices,
+        key=lambda index: (-float(values[index].item()), int(index)),
+    )
+
+    accepted_fallbacks = 0
+    for peak in ranked_peaks:
+        if accepted_fallbacks >= int(peak_top_k) or len(proposals) >= max_intervals:
+            break
+        tokens = {int(peak)}
+        cursor = (int(peak) - 1) % token_count
+        while cursor not in tokens and float(values[cursor].item()) >= float(expansion_threshold):
+            tokens.add(cursor)
+            cursor = (cursor - 1) % token_count
+        cursor = (int(peak) + 1) % token_count
+        while cursor not in tokens and float(values[cursor].item()) >= float(expansion_threshold):
+            tokens.add(cursor)
+            cursor = (cursor + 1) % token_count
+
+        # Very narrow peaks are widened toward their stronger neighbor.  This
+        # is deterministic and still depends only on the predicted signal.
+        left = (int(peak) - 1) % token_count
+        right = (int(peak) + 1) % token_count
+        while len(tokens) < int(min_width_tokens) and len(tokens) < token_count:
+            while left in tokens:
+                left = (left - 1) % token_count
+            while right in tokens:
+                right = (right + 1) % token_count
+            left_value = float(values[left].item())
+            right_value = float(values[right].item())
+            chosen = left if left_value >= right_value else right
+            tokens.add(chosen)
+
+        if len(tokens) == token_count:
+            interval = (0, token_count - 1)
+        else:
+            starts = [index for index in tokens if (index - 1) % token_count not in tokens]
+            if len(starts) != 1:
+                # This can only arise from a malformed/non-contiguous expansion.
+                continue
+            start = starts[0]
+            end = start
+            while (end + 1) % token_count in tokens:
+                end = (end + 1) % token_count
+            interval = (int(start), int(end))
+        if any(
+            circular_interval_iou(interval, existing, token_count) >= float(dedup_iou)
+            for existing in proposals
+        ):
+            continue
+        proposals.append(interval)
+        accepted_fallbacks += 1
+    return proposals[:max_intervals]
+
+
 def candidate_pair_score(
     mutual_affinity: torch.Tensor,
     opening_confidence: torch.Tensor,
@@ -1105,6 +1233,69 @@ def candidate_assignment_loss(
         "loss_candidate_assignment_ba": loss_ba,
         "loss_bidirectional_consistency": consistency_loss,
     }
+
+
+def positive_to_dustbin_margin_loss(
+    outputs: Mapping[str, torch.Tensor],
+    candidate_target_ab: torch.Tensor,
+    is_match: torch.Tensor,
+    candidate_valid_a: Optional[torch.Tensor] = None,
+    candidate_valid_b: Optional[torch.Tensor] = None,
+    margin: float = 0.20,
+) -> torch.Tensor:
+    """Hinge true real-real logits above both directional dustbins.
+
+    Only positive samples with at least one valid projected target contribute.
+    Positive samples without a recalled target and every negative sample are
+    exactly masked, leaving the existing assignment loss responsible for
+    negative-to-dustbin supervision.
+    """
+    if not math.isfinite(float(margin)) or float(margin) < 0.0:
+        raise ValueError("margin must be finite and non-negative")
+    logits = outputs["candidate_assignment_logits"]
+    if logits.ndim != 3:
+        raise ValueError("candidate_assignment_logits must have shape [B, K_A+1, K_B+1]")
+    batch, count_a_plus_bin, count_b_plus_bin = logits.shape
+    count_a = count_a_plus_bin - 1
+    count_b = count_b_plus_bin - 1
+    target = candidate_target_ab.to(device=logits.device)
+    if target.shape != (batch, count_a, count_b):
+        raise ValueError("candidate_target_ab must have shape [B, K_A, K_B]")
+    if candidate_valid_a is None:
+        candidate_valid_a = outputs.get("candidate_valid_A")
+    if candidate_valid_b is None:
+        candidate_valid_b = outputs.get("candidate_valid_B")
+    if candidate_valid_a is None:
+        candidate_valid_a = torch.ones((batch, count_a), dtype=torch.bool, device=logits.device)
+    if candidate_valid_b is None:
+        candidate_valid_b = torch.ones((batch, count_b), dtype=torch.bool, device=logits.device)
+    candidate_valid_a = candidate_valid_a.to(device=logits.device, dtype=torch.bool)
+    candidate_valid_b = candidate_valid_b.to(device=logits.device, dtype=torch.bool)
+    if candidate_valid_a.shape != (batch, count_a):
+        raise ValueError("candidate_valid_a must have shape [B, K_A]")
+    if candidate_valid_b.shape != (batch, count_b):
+        raise ValueError("candidate_valid_b must have shape [B, K_B]")
+    positive = torch.as_tensor(is_match, device=logits.device, dtype=torch.bool).reshape(-1)
+    if positive.shape != (batch,):
+        raise ValueError("is_match must have shape [B]")
+    pair_valid = candidate_valid_a.unsqueeze(-1) & candidate_valid_b.unsqueeze(1)
+    true_pair = (target > 0) & pair_valid & positive[:, None, None]
+    if not bool(true_pair.any()):
+        # Padded real-real cells are -inf, so summing the whole matrix and
+        # multiplying by zero would produce NaN on all-negative/missing-target
+        # batches.  The dustbin corner is always finite and graph-connected.
+        return logits[:, count_a, count_b].sum() * 0.0
+
+    real = logits[:, :count_a, :count_b]
+    dustbin_a_to_none = logits[:, :count_a, count_b].unsqueeze(-1)
+    dustbin_none_to_b = logits[:, count_a, :count_b].unsqueeze(1)
+    hinge_a = F.relu(float(margin) - (real - dustbin_a_to_none))
+    hinge_b = F.relu(float(margin) - (real - dustbin_none_to_b))
+    per_pair = 0.5 * (hinge_a + hinge_b)
+    sample_losses = []
+    for batch_index in torch.where(true_pair.flatten(1).any(dim=-1))[0].tolist():
+        sample_losses.append(per_pair[batch_index][true_pair[batch_index]].mean())
+    return torch.stack(sample_losses).mean()
 
 
 def candidate_listwise_ranking_loss(

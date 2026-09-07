@@ -1,0 +1,1 @@
+/home/feixia/anaconda3/envs/bi_layout/bin/python /home/feixia/pythonProject/AAAsrk/Bi_Layout/tools/preflight_zind_bev_verifier.py --phase report --resume

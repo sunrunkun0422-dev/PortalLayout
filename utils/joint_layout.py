@@ -7,7 +7,7 @@ opening observed from both rooms.
 """
 from dataclasses import asdict, dataclass
 from html import escape
-from typing import Dict, List, Tuple
+from typing import Any, Dict, List, Mapping, Optional, Sequence, Tuple
 
 import numpy as np
 
@@ -209,6 +209,122 @@ def build_joint_layout(layout_a: Dict, layout_b: Dict, door_a: DoorSpec, door_b:
             "centroidSideProduct": float(best["side_product"]),
             "scaleCalibratedFromSharedOpening": calibrate_scale,
             "scaleCalibratedFromSharedDoor": calibrate_scale,
+        },
+    }
+
+
+def build_joint_layout_from_endpoints(
+    layout_a: Dict,
+    layout_b: Dict,
+    endpoints_a: Sequence[Sequence[float]],
+    endpoints_b: Sequence[Sequence[float]],
+    boundary_a: Optional[Sequence[Sequence[float]]] = None,
+    boundary_b: Optional[Sequence[Sequence[float]]] = None,
+    calibrate_scale: bool = True,
+    room_ids: Tuple[str, str] = ("A", "B"),
+    coordinate_system: str = "ZInD panorama-A local xy",
+    opening_metadata_a: Optional[Mapping[str, Any]] = None,
+    opening_metadata_b: Optional[Mapping[str, Any]] = None,
+) -> Dict:
+    """Build a joint layout from explicit panorama-local portal endpoints.
+
+    This is the endpoint-based counterpart of :func:`build_joint_layout`.  It
+    intentionally reuses the same similarity fit, width-ratio scale, and
+    opposite-centroid-side selection.  The endpoint order is the predicted
+    interval start ray followed by its end ray; both same and reversed B-to-A
+    mappings are evaluated without ground truth.
+    """
+
+    endpoints_a_value = np.asarray(endpoints_a, dtype=np.float64)
+    endpoints_b_value = np.asarray(endpoints_b, dtype=np.float64)
+    if endpoints_a_value.shape != (2, 2) or endpoints_b_value.shape != (2, 2):
+        raise ValueError("portal endpoints must each have shape [2, 2]")
+    if not np.isfinite(endpoints_a_value).all() or not np.isfinite(endpoints_b_value).all():
+        raise ValueError("portal endpoints must be finite")
+    points_a = (
+        layout_xz(layout_a)
+        if boundary_a is None
+        else np.asarray(boundary_a, dtype=np.float64)
+    )
+    points_b = (
+        layout_xz(layout_b)
+        if boundary_b is None
+        else np.asarray(boundary_b, dtype=np.float64)
+    )
+    for side, points in (("A", points_a), ("B", points_b)):
+        if points.ndim != 2 or points.shape[1] != 2 or len(points) < 3:
+            raise ValueError(f"room {side} boundary must contain at least three [x, y] points")
+        if not np.isfinite(points).all():
+            raise ValueError(f"room {side} boundary must be finite")
+
+    centroid_a = points_a.mean(axis=0)
+    portal_vector_a = endpoints_a_value[1] - endpoints_a_value[0]
+    portal_midpoint_a = endpoints_a_value.mean(axis=0)
+    side_a = _cross_2d(portal_vector_a, centroid_a - portal_midpoint_a)
+    candidates = []
+    for mapping, target in (
+        ("same", endpoints_a_value),
+        ("reversed", endpoints_a_value[::-1]),
+    ):
+        matrix, scale = _fit_similarity(
+            endpoints_b_value, target, calibrate_scale
+        )
+        transformed_points_b = _transform_points(points_b, matrix)
+        transformed_endpoints_b = _transform_points(endpoints_b_value, matrix)
+        side_b = _cross_2d(
+            portal_vector_a,
+            transformed_points_b.mean(axis=0) - portal_midpoint_a,
+        )
+        candidates.append({
+            "mapping": mapping,
+            "matrix": matrix,
+            "scale": scale,
+            "points_b": transformed_points_b,
+            "endpoints_b": transformed_endpoints_b,
+            "side_product": side_a * side_b,
+        })
+    best = min(
+        candidates,
+        key=lambda candidate: (candidate["side_product"], candidate["mapping"]),
+    )
+    camera_center_a = np.zeros(2, dtype=np.float64)
+    camera_center_b = _transform_points(
+        np.zeros((1, 2), dtype=np.float64), best["matrix"]
+    )[0]
+    shared_opening = {
+        "roomA": {
+            "spec": dict(opening_metadata_a or {}),
+            "localEndpoints": endpoints_a_value.tolist(),
+            "worldEndpoints": endpoints_a_value.tolist(),
+        },
+        "roomB": {
+            "spec": dict(opening_metadata_b or {}),
+            "localEndpoints": endpoints_b_value.tolist(),
+            "worldEndpoints": best["endpoints_b"].tolist(),
+        },
+        "worldEndpoints": endpoints_a_value.tolist(),
+        "width": float(np.linalg.norm(portal_vector_a)),
+    }
+    return {
+        "formatVersion": 1,
+        "coordinateSystem": coordinate_system,
+        "rooms": [
+            _room_output(str(room_ids[0]), layout_a, points_a, camera_center_a),
+            _room_output(
+                str(room_ids[1]), layout_b, best["points_b"], camera_center_b
+            ),
+        ],
+        "sharedOpening": shared_opening,
+        "sharedDoor": dict(shared_opening),
+        "alignment": {
+            "roomBToWorld": best["matrix"].tolist(),
+            "roomBScale": best["scale"],
+            "endpointMapping": best["mapping"],
+            "centroidSideProduct": float(best["side_product"]),
+            "scaleCalibratedFromSharedOpening": calibrate_scale,
+            "scaleCalibratedFromSharedDoor": calibrate_scale,
+            "transformDirection": "B_to_A",
+            "selection": "predicted polygon centroid opposite-side rule",
         },
     }
 

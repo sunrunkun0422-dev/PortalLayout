@@ -1,0 +1,77 @@
+{
+  "schema_version": "zind-t4-matcher-only-gpu-small-v2",
+  "decision": "STOP_GPU_SMALL_PREFLIGHT",
+  "source_metrics": "checkpoints/End_To_End/zind_e2e_v3/g0_seed123/T4_recall_matcher_only_preflight_v2_6ep/metrics.jsonl",
+  "checkpoint_selection": "existing validation Harmonic ordering",
+  "selected_epoch": 1,
+  "protocol": {
+    "initial_checkpoint": "checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T3/best.pt",
+    "seed": 123,
+    "epochs": 6,
+    "batch_size": 4,
+    "matcher_lr": 0.00003,
+    "candidate_missing_target_policy": "mask_positive",
+    "candidate_proposal_mode": "recall_topk",
+    "opening_threshold": 0.47,
+    "proposal_peak_top_k": 4,
+    "proposal_peak_min_probability": 0.20,
+    "proposal_expansion_threshold": 0.12,
+    "proposal_dedup_iou": 0.50,
+    "max_candidates": 12,
+    "positive_dustbin_margin": 0.20,
+    "positive_dustbin_margin_loss_weight": 0.20,
+    "train_gt_candidate_injection": true,
+    "validation_predicted_only": true,
+    "upstream_frozen": true,
+    "active_splits": ["train", "val"],
+    "test_evaluation_enabled": false
+  },
+  "t3_subset_baseline": {
+    "positive_match_recall": 0.4375,
+    "end_to_end_candidate_top1": 0.1875,
+    "negative_rejection_rate": 0.75,
+    "harmonic_flow_score": 0.30
+  },
+  "selected_validation": {
+    "positive_candidate_recall": 0.50,
+    "positive_match_recall": 0.375,
+    "conditional_candidate_top1": 0.25,
+    "end_to_end_candidate_top1": 0.125,
+    "negative_rejection_rate": 0.75,
+    "harmonic_flow_score": 0.21428571428571427,
+    "gt_candidate_injection_count": 0,
+    "inference_uses_gt_candidates": false
+  },
+  "gradient_preflight": {
+    "matching_optim_loss": 0.14059726893901825,
+    "bi_layout_feature_extractor": 0.0,
+    "bi_layout_transformer": 0.0,
+    "bi_layout_depth_heads": 0.0,
+    "opening_head": 0.0,
+    "matcher": 2.192881382663483,
+    "peak_memory_gib": 1.3920955657958984
+  },
+  "frozen_state_identity": {
+    "bi_layout_sha256": "a9bcc85b823433aa4f520ab58d3b317f7cb68be2d22e16310b43530ae98d176d",
+    "bi_layout_t3_best_last_equal": true,
+    "opening_head_sha256": "1af4b66c29094e0356bc0834b7ddb6f2b9265e1f12d81ac1c277b7e043e4174e",
+    "opening_head_t3_best_last_equal": true,
+    "matcher_changed": true
+  },
+  "gates": {
+    "finite_no_oom": true,
+    "only_matcher_has_nonzero_gradient": true,
+    "frozen_upstream_unchanged": true,
+    "validation_predicted_only": true,
+    "positive_match_recall_or_s3_improves": false,
+    "negative_rejection_drop_at_most_5pp": true,
+    "harmonic_not_below_baseline": false
+  },
+  "failed_gates": [
+    "positive_match_recall_or_s3_improves",
+    "harmonic_not_below_baseline"
+  ],
+  "full_training_started": false,
+  "do_not_start_full_training": true,
+  "test_data_accessed": false
+}

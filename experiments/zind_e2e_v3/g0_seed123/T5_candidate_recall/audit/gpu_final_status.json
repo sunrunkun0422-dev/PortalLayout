@@ -1,0 +1,19 @@
+{
+  "captured_at": "2026-08-19T19:50:39+08:00",
+  "compute_process_count": 0,
+  "compute_processes": [],
+  "gpu": {
+    "index": 0,
+    "memory_total_mib": 16380,
+    "memory_used_mib": 741,
+    "name": "NVIDIA GeForce RTX 4060 Ti",
+    "temperature_c": 48,
+    "utilization_percent": 24
+  },
+  "optimizer_created": false,
+  "schema_version": "zind-t5-audit-gpu-final-v1",
+  "task_running": false,
+  "task_type": "frozen_inference_audit",
+  "test_data_accessed": false,
+  "training_started": false
+}

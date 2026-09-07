@@ -1,5 +1,6 @@
 import unittest
 from types import SimpleNamespace
+from unittest.mock import patch
 
 import torch
 
@@ -10,11 +11,17 @@ from models.cross_scene_matcher import (
     candidate_pair_score,
 )
 from tools.train_zind_end_to_end import (
+    _active_splits,
+    _build_evaluation_loaders,
+    _build_split_datasets,
     _candidate_inputs,
     _candidate_supervision_validity,
+    _data_contract,
     _opening_guidance_inputs,
+    _resolve_split_paths,
     _resolve_source_configuration,
     _schedule,
+    _validate_resume_contract,
     parse_args,
 )
 
@@ -572,6 +579,162 @@ class TeacherForcingSourceTest(unittest.TestCase):
         )
         with self.assertRaisesRegex(ValueError, "conflicts"):
             _resolve_source_configuration(conflict)
+
+
+class _SplitDatasetStub:
+    def __init__(self, split, length=3):
+        self.split = split
+        self.base = SimpleNamespace(split=split)
+        self.token_count = 256
+        self.feature_dim = 512
+        self._length = length
+
+    def __len__(self):
+        return self._length
+
+
+class SkipTestSplitLifecycleTest(unittest.TestCase):
+    @staticmethod
+    def _dataset_factory(*args, **kwargs):
+        return _SplitDatasetStub(kwargs["expected_split"])
+
+    def test_skip_test_never_resolves_or_constructs_test_split(self):
+        class MustNotBeAccessed:
+            def __bool__(self):
+                raise AssertionError("test split argument was accessed")
+
+            def __fspath__(self):
+                raise AssertionError("test split path was resolved")
+
+        args = parse_args(
+            [
+                "--skip_test",
+                "--manifest_root",
+                "/tmp/manifests",
+                "--cache_root",
+                "/tmp/cache",
+            ]
+        )
+        args.test_manifest = MustNotBeAccessed()
+        args.test_cache_dir = MustNotBeAccessed()
+        active = _active_splits(args)
+        manifests, caches = _resolve_split_paths(args, active)
+
+        self.assertEqual(active, ("train", "val"))
+        self.assertEqual(set(manifests), {"train", "val"})
+        self.assertEqual(set(caches), {"train", "val"})
+        with patch(
+            "tools.train_zind_end_to_end.JointZInDMatchingDataset",
+            side_effect=self._dataset_factory,
+        ) as dataset_class:
+            datasets = _build_split_datasets(
+                args, manifests, caches, active
+            )
+        self.assertEqual(dataset_class.call_count, 2)
+        self.assertEqual(set(datasets), {"train", "val"})
+
+        with patch(
+            "tools.train_zind_end_to_end._make_loader",
+            side_effect=lambda dataset, *unused, **unused_kwargs: dataset,
+        ) as make_loader:
+            loaders = _build_evaluation_loaders(
+                datasets, args, active, torch.device("cpu")
+            )
+        self.assertEqual(make_loader.call_count, 1)
+        self.assertEqual(set(loaders), {"val"})
+
+        contract = _data_contract(
+            manifests,
+            caches,
+            datasets,
+            {"train": 1, "val": 1},
+            256,
+            512,
+            active,
+        )
+        self.assertFalse(contract["test_evaluation_enabled"])
+        self.assertEqual(contract["active_splits"], ["train", "val"])
+        self.assertNotIn("test", contract["manifests"])
+        self.assertNotIn("test", contract["feature_caches"])
+        self.assertNotIn("test", contract["pair_counts"])
+
+    def test_default_behavior_constructs_train_val_and_test(self):
+        args = parse_args(
+            [
+                "--manifest_root",
+                "/tmp/manifests",
+                "--cache_root",
+                "/tmp/cache",
+            ]
+        )
+        active = _active_splits(args)
+        manifests, caches = _resolve_split_paths(args, active)
+        with patch(
+            "tools.train_zind_end_to_end.JointZInDMatchingDataset",
+            side_effect=self._dataset_factory,
+        ) as dataset_class:
+            datasets = _build_split_datasets(
+                args, manifests, caches, active
+            )
+        self.assertEqual(active, ("train", "val", "test"))
+        self.assertEqual(dataset_class.call_count, 3)
+        self.assertEqual(set(datasets), {"train", "val", "test"})
+
+        with patch(
+            "tools.train_zind_end_to_end._make_loader",
+            side_effect=lambda dataset, *unused, **unused_kwargs: dataset,
+        ) as make_loader:
+            loaders = _build_evaluation_loaders(
+                datasets, args, active, torch.device("cpu")
+            )
+        self.assertEqual(make_loader.call_count, 2)
+        self.assertEqual(set(loaders), {"val", "test"})
+
+    def test_resume_validates_active_split_contract(self):
+        model_contract = {"model": "same"}
+        training_contract = {"training": "same"}
+        skip_data = {
+            "active_splits": ["train", "val"],
+            "test_evaluation_enabled": False,
+            "manifests": {"train": "train.json", "val": "val.json"},
+        }
+        checkpoint = {
+            "task": "ZInD_matching full end-to-end joint fine-tuning",
+            "model_contract": model_contract,
+            "training_contract": training_contract,
+            "data_contract": dict(skip_data),
+        }
+        _validate_resume_contract(
+            checkpoint, model_contract, training_contract, skip_data
+        )
+
+        changed = dict(skip_data)
+        changed["active_splits"] = ["train", "val", "test"]
+        changed["test_evaluation_enabled"] = True
+        with self.assertRaisesRegex(ValueError, "data contract changed"):
+            _validate_resume_contract(
+                checkpoint, model_contract, training_contract, changed
+            )
+
+        full_data = {
+            "active_splits": ["train", "val", "test"],
+            "test_evaluation_enabled": True,
+            "manifests": {
+                "train": "train.json",
+                "val": "val.json",
+                "test": "test.json",
+            },
+        }
+        legacy_full_data = {
+            key: value
+            for key, value in full_data.items()
+            if key not in ("active_splits", "test_evaluation_enabled")
+        }
+        legacy_checkpoint = dict(checkpoint)
+        legacy_checkpoint["data_contract"] = legacy_full_data
+        _validate_resume_contract(
+            legacy_checkpoint, model_contract, training_contract, full_data
+        )
 
 
 if __name__ == "__main__":

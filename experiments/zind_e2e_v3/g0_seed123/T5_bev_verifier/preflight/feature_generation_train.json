@@ -1,0 +1,18 @@
+{
+  "all_finite": true,
+  "candidate_geometry_hard_failure_count": 50,
+  "candidate_geometry_soft_failure_count": 3810,
+  "candidate_geometry_valid_count": 5607,
+  "candidate_row_count": 5657,
+  "feature_file_sha256": "7e52f7a50d121429673ef7b4a7cb00593cea557441189dc23c6744a2340c5c3d",
+  "geometry_failure_reasons": {
+    "M2 hard failure; polygon mapper fallback forbidden": 50
+  },
+  "input_uses_gt": false,
+  "pair_count": 1985,
+  "schema_version": "zind-salve-feature-generation-v1",
+  "shortlist_N": 3,
+  "shortlist_has_strict_target": 1941,
+  "split": "train",
+  "test_data_accessed": false
+}

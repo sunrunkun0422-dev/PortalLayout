@@ -15,6 +15,7 @@ learned M1/M2/M4/M5 chain.  They are not differentiable training modules.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 import os
@@ -49,6 +50,7 @@ from models.cross_scene_matcher import (
     candidate_assignment_loss,
     candidate_listwise_ranking_loss,
     opening_detection_loss,
+    positive_to_dustbin_margin_loss,
     resolve_enclosed_extended_depth,
 )
 from tools.debug_cross_scene_flow import load_bi_layout
@@ -104,6 +106,16 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument("--overwrite", action="store_true")
     parser.add_argument("--skip_test", action="store_true")
     parser.add_argument("--device", default="cuda:0")
+    parser.add_argument(
+        "--training_stage",
+        choices=("joint", "matcher_only_finetune"),
+        default="joint",
+        help="joint training or a T3-initialized matcher-only second stage",
+    )
+    parser.add_argument(
+        "--initial_end_to_end_checkpoint",
+        help="required T3 end-to-end checkpoint for matcher_only_finetune",
+    )
 
     parser.add_argument("--epochs", type=int, default=24)
     parser.add_argument("--early_stop_patience", type=int, default=6)
@@ -153,6 +165,22 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument("--opening_threshold", type=float)
     parser.add_argument("--min_opening_width_tokens", type=int, default=2)
     parser.add_argument("--max_openings_per_view", type=int, default=12)
+    parser.add_argument(
+        "--candidate_proposal_mode",
+        choices=("legacy", "recall_topk"),
+        default="legacy",
+    )
+    parser.add_argument("--proposal_peak_top_k", type=int, default=4)
+    parser.add_argument("--proposal_peak_min_probability", type=float, default=0.20)
+    parser.add_argument("--proposal_expansion_threshold", type=float, default=0.12)
+    parser.add_argument("--proposal_dedup_iou", type=float, default=0.50)
+    parser.add_argument(
+        "--train_gt_candidate_injection",
+        action="store_true",
+        help="training-only target candidate injection; never active in eval",
+    )
+    parser.add_argument("--positive_dustbin_margin_loss_weight", type=float, default=0.0)
+    parser.add_argument("--positive_dustbin_margin", type=float, default=0.20)
     parser.add_argument("--metric_top_k", type=int, default=3)
     parser.add_argument(
         "--opening_guidance_source",
@@ -182,6 +210,10 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         "--preflight_only",
         action="store_true",
         help="run one mixed-precision forward/backward and report gradient flow",
+    )
+    parser.add_argument(
+        "--preflight_report",
+        help="optional JSON path for the one-batch gradient/memory preflight",
     )
     parser.add_argument(
         "--smoke_test",
@@ -227,6 +259,9 @@ def validate_args(args: argparse.Namespace) -> None:
         args.portal_shift_loss_weight,
         args.consistency_weight,
         args.opening_tversky_weight,
+        args.proposal_peak_top_k,
+        args.positive_dustbin_margin_loss_weight,
+        args.positive_dustbin_margin,
     )
     if min(nonnegative) < 0:
         raise ValueError("non-negative training arguments must be >= 0")
@@ -236,6 +271,17 @@ def validate_args(args: argparse.Namespace) -> None:
     if args.opening_threshold is not None:
         if not 0.0 <= float(args.opening_threshold) <= 1.0:
             raise ValueError("opening_threshold must be in [0, 1]")
+    for name in (
+        "proposal_peak_min_probability",
+        "proposal_expansion_threshold",
+        "proposal_dedup_iou",
+    ):
+        if not 0.0 <= float(getattr(args, name)) <= 1.0:
+            raise ValueError("{} must be in [0, 1]".format(name))
+    if args.proposal_expansion_threshold > args.proposal_peak_min_probability:
+        raise ValueError(
+            "proposal_expansion_threshold must not exceed proposal_peak_min_probability"
+        )
     for value in (
         args.max_train_pairs,
         args.max_val_pairs,
@@ -245,6 +291,17 @@ def validate_args(args: argparse.Namespace) -> None:
             raise ValueError("max pair limits must be positive")
     if args.image_width % 256 != 0:
         raise ValueError("image_width must be divisible by the 256 layout tokens")
+    if args.training_stage == "matcher_only_finetune":
+        if not args.initial_end_to_end_checkpoint:
+            raise ValueError(
+                "matcher_only_finetune requires --initial_end_to_end_checkpoint"
+            )
+        if not args.skip_test:
+            raise ValueError("matcher_only_finetune requires --skip_test")
+    elif args.initial_end_to_end_checkpoint:
+        raise ValueError(
+            "--initial_end_to_end_checkpoint is only valid for matcher_only_finetune"
+        )
 
 
 def _resolve_source_configuration(
@@ -472,6 +529,53 @@ class EndToEndOpeningMatcher(nn.Module):
         )
 
 
+def matcher_without_opening_parameters(
+    model: EndToEndOpeningMatcher,
+) -> Sequence[nn.Parameter]:
+    """Return the exclusive matcher/dustbin parameter set."""
+    opening_ids = {
+        id(parameter) for parameter in model.matcher.opening_head.parameters()
+    }
+    return tuple(
+        parameter
+        for parameter in model.matcher.parameters()
+        if id(parameter) not in opening_ids
+    )
+
+
+def configure_training_stage(
+    model: EndToEndOpeningMatcher,
+    training_stage: str,
+    *,
+    deterministic_matcher_dropout: bool = False,
+) -> None:
+    """Apply train/eval and gradient ownership without changing weights."""
+    if training_stage == "joint":
+        model.train()
+        model.requires_grad_(True)
+        return
+    if training_stage != "matcher_only_finetune":
+        raise ValueError("unknown training stage: {}".format(training_stage))
+    model.train()
+    model.bi_layout.requires_grad_(False)
+    model.bi_layout.eval()
+    model.matcher.requires_grad_(True)
+    model.matcher.opening_head.requires_grad_(False)
+    model.matcher.opening_head.eval()
+    if deterministic_matcher_dropout:
+        for module in model.matcher.modules():
+            if isinstance(module, nn.Dropout):
+                module.eval()
+
+
+def _optimization_loss(
+    losses: Mapping[str, torch.Tensor], args: argparse.Namespace
+) -> torch.Tensor:
+    if args.training_stage == "matcher_only_finetune":
+        return losses["matching_optim_loss"]
+    return losses["reported_end_to_end_loss"]
+
+
 def _make_loader(
     dataset: JointZInDMatchingDataset,
     args: argparse.Namespace,
@@ -503,6 +607,8 @@ def _candidate_inputs(
     opening_threshold: float,
     args: argparse.Namespace,
 ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
+    if isinstance(raw_batch, dict):
+        raw_batch["_t4_gt_candidate_injection_count"] = 0
     device = live["layout_feature_A"].device
     if candidate_source == "gt":
         masks_a = raw_batch["manifest_candidate_masks_A"].to(
@@ -539,17 +645,130 @@ def _candidate_inputs(
             opening_threshold,
             args.min_opening_width_tokens,
             args.max_openings_per_view,
+            proposal_mode=getattr(args, "candidate_proposal_mode", "legacy"),
+            peak_top_k=getattr(args, "proposal_peak_top_k", 4),
+            peak_min_probability=getattr(
+                args, "proposal_peak_min_probability", 0.20
+            ),
+            expansion_threshold=getattr(
+                args, "proposal_expansion_threshold", 0.12
+            ),
+            dedup_iou=getattr(args, "proposal_dedup_iou", 0.50),
         )
         masks_b, valid_b = predicted_candidate_masks(
             signal_b["opening_probability"],
             opening_threshold,
             args.min_opening_width_tokens,
             args.max_openings_per_view,
+            proposal_mode=getattr(args, "candidate_proposal_mode", "legacy"),
+            peak_top_k=getattr(args, "proposal_peak_top_k", 4),
+            peak_min_probability=getattr(
+                args, "proposal_peak_min_probability", 0.20
+            ),
+            expansion_threshold=getattr(
+                args, "proposal_expansion_threshold", 0.12
+            ),
+            dedup_iou=getattr(args, "proposal_dedup_iou", 0.50),
         )
+        if getattr(model, "training", False) and getattr(
+            args, "train_gt_candidate_injection", False
+        ):
+            target_manifest = raw_batch["candidate_target_AB"].to(
+                device=device, dtype=torch.float32, non_blocking=True
+            )
+            manifest_a = raw_batch["manifest_candidate_masks_A"].to(
+                device=device, dtype=torch.bool, non_blocking=True
+            )
+            manifest_b = raw_batch["manifest_candidate_masks_B"].to(
+                device=device, dtype=torch.bool, non_blocking=True
+            )
+            masks_a, valid_a, injected_a = _inject_gt_candidates_for_training(
+                masks_a,
+                valid_a,
+                manifest_a,
+                target_manifest.any(dim=-1),
+                args.max_openings_per_view,
+            )
+            masks_b, valid_b, injected_b = _inject_gt_candidates_for_training(
+                masks_b,
+                valid_b,
+                manifest_b,
+                target_manifest.any(dim=-2),
+                args.max_openings_per_view,
+            )
+            if isinstance(raw_batch, dict):
+                raw_batch["_t4_gt_candidate_injection_count"] = (
+                    injected_a + injected_b
+                )
         target = candidate_targets_from_affinity(
             masks_a, pair.affinity_ab, masks_b
         )
     return masks_a, masks_b, valid_a, valid_b, target
+
+
+def _inject_gt_candidates_for_training(
+    predicted_masks: torch.Tensor,
+    predicted_valid: torch.Tensor,
+    manifest_masks: torch.Tensor,
+    required_manifest: torch.Tensor,
+    max_candidates: int,
+    min_iou: float = 0.30,
+) -> Tuple[torch.Tensor, torch.Tensor, int]:
+    """Inject missing target masks into a bounded training-only candidate set."""
+    if predicted_masks.ndim != 3 or manifest_masks.ndim != 3:
+        raise ValueError("candidate masks must have shape [B, K, N]")
+    batch, _, token_count = predicted_masks.shape
+    if manifest_masks.shape[0] != batch or manifest_masks.shape[2] != token_count:
+        raise ValueError("manifest and predicted masks must share batch/token dimensions")
+    if required_manifest.shape != manifest_masks.shape[:2]:
+        raise ValueError("required_manifest must have shape [B, K_manifest]")
+    capacity = int(max_candidates)
+    if capacity <= 0:
+        raise ValueError("max_candidates must be positive")
+    masks = torch.zeros(
+        (batch, capacity, token_count),
+        dtype=torch.bool,
+        device=predicted_masks.device,
+    )
+    valid = torch.zeros(
+        (batch, capacity), dtype=torch.bool, device=predicted_masks.device
+    )
+    copy_count = min(int(predicted_masks.shape[1]), capacity)
+    masks[:, :copy_count] = predicted_masks[:, :copy_count]
+    valid[:, :copy_count] = predicted_valid[:, :copy_count]
+    injected = 0
+    for batch_index in range(batch):
+        protected = set()
+        required_indices = torch.where(required_manifest[batch_index].bool())[0].tolist()
+        for manifest_index in required_indices:
+            target = manifest_masks[batch_index, manifest_index].bool()
+            if not bool(target.any()):
+                continue
+            current_indices = torch.where(valid[batch_index])[0]
+            recalled = False
+            if current_indices.numel():
+                current = masks[batch_index, current_indices]
+                intersection = (current & target.unsqueeze(0)).sum(dim=-1).float()
+                union = (current | target.unsqueeze(0)).sum(dim=-1).float().clamp_min(1.0)
+                recalled = bool(((intersection / union) >= float(min_iou)).any())
+            if recalled:
+                continue
+            free = torch.where(~valid[batch_index])[0]
+            if free.numel():
+                slot = int(free[0].item())
+            else:
+                replaceable = [
+                    index for index in range(capacity - 1, -1, -1)
+                    if index not in protected
+                ]
+                if not replaceable:
+                    break
+                slot = replaceable[0]
+            masks[batch_index, slot] = target
+            valid[batch_index, slot] = True
+            protected.add(slot)
+            injected += 1
+    return masks, valid, injected
 
 
 def _opening_guidance_inputs(
@@ -628,54 +847,15 @@ def _teacher_anchor_losses(
     return torch.stack(feature_losses).mean(), torch.stack(depth_losses).mean()
 
 
-def _forward_loss(
-    model: EndToEndOpeningMatcher,
-    raw_batch: Mapping[str, Any],
-    device: torch.device,
-    *,
-    opening_guidance_source: str,
-    candidate_source: str,
-    opening_threshold: float,
+def _matching_loss_bundle(
+    outputs: Mapping[str, torch.Tensor],
+    pair: Any,
+    target: torch.Tensor,
+    valid_a: torch.Tensor,
+    valid_b: torch.Tensor,
     args: argparse.Namespace,
-) -> Tuple[
-    Mapping[str, torch.Tensor],
-    Any,
-    torch.Tensor,
-    torch.Tensor,
-    torch.Tensor,
-    Dict[str, torch.Tensor],
-]:
-    pair = adapt_zind_bipair_batch(raw_batch).to(device)
-    image_a = raw_batch["image_A"].to(
-        device=device, dtype=torch.float32, non_blocking=True
-    )
-    image_b = raw_batch["image_B"].to(
-        device=device, dtype=torch.float32, non_blocking=True
-    )
-    live = model.live_layout(image_a, image_b)
-    masks_a, masks_b, valid_a, valid_b, target = _candidate_inputs(
-        model,
-        live,
-        raw_batch,
-        pair,
-        candidate_source,
-        opening_threshold,
-        args,
-    )
-    guidance_a, guidance_b = _opening_guidance_inputs(
-        pair, opening_guidance_source
-    )
-    outputs = model.forward_matcher(
-        live,
-        candidate_masks_a=masks_a,
-        candidate_masks_b=masks_b,
-        candidate_valid_a=valid_a,
-        candidate_valid_b=valid_b,
-        opening_guidance_a=guidance_a,
-        opening_guidance_b=guidance_b,
-        opening_guidance_mode=opening_guidance_source,
-        opening_guidance_mix_weight=args.mix_guidance_weight,
-    )
+) -> Dict[str, torch.Tensor]:
+    """Return the complete matcher-owned optimization objective."""
     matching = matcher_losses(outputs, pair, target, valid_a, valid_b, args)
     sample_valid, _ = _candidate_supervision_validity(
         target,
@@ -723,6 +903,81 @@ def _forward_loss(
         matching["loss_total"] = matching["loss_total"] + (
             args.candidate_rank_loss_weight * candidate_rank
         )
+    dustbin_margin = positive_to_dustbin_margin_loss(
+        outputs,
+        target,
+        pair.is_match,
+        candidate_valid_a=valid_a,
+        candidate_valid_b=valid_b,
+        margin=getattr(args, "positive_dustbin_margin", 0.20),
+    )
+    matching["loss_positive_dustbin_margin"] = dustbin_margin
+    margin_weight = getattr(args, "positive_dustbin_margin_loss_weight", 0.0)
+    if margin_weight > 0:
+        matching["loss_total"] = matching["loss_total"] + (
+            margin_weight * dustbin_margin
+        )
+    return matching
+
+
+def _forward_loss(
+    model: EndToEndOpeningMatcher,
+    raw_batch: Mapping[str, Any],
+    device: torch.device,
+    *,
+    opening_guidance_source: str,
+    candidate_source: str,
+    opening_threshold: float,
+    args: argparse.Namespace,
+) -> Tuple[
+    Mapping[str, torch.Tensor],
+    Any,
+    torch.Tensor,
+    torch.Tensor,
+    torch.Tensor,
+    Dict[str, torch.Tensor],
+]:
+    pair = adapt_zind_bipair_batch(raw_batch).to(device)
+    image_a = raw_batch["image_A"].to(
+        device=device, dtype=torch.float32, non_blocking=True
+    )
+    image_b = raw_batch["image_B"].to(
+        device=device, dtype=torch.float32, non_blocking=True
+    )
+    if args.training_stage == "matcher_only_finetune":
+        with torch.no_grad():
+            live = {
+                key: value.detach()
+                for key, value in model.live_layout(image_a, image_b).items()
+            }
+    else:
+        live = model.live_layout(image_a, image_b)
+    masks_a, masks_b, valid_a, valid_b, target = _candidate_inputs(
+        model,
+        live,
+        raw_batch,
+        pair,
+        candidate_source,
+        opening_threshold,
+        args,
+    )
+    guidance_a, guidance_b = _opening_guidance_inputs(
+        pair, opening_guidance_source
+    )
+    outputs = model.forward_matcher(
+        live,
+        candidate_masks_a=masks_a,
+        candidate_masks_b=masks_b,
+        candidate_valid_a=valid_a,
+        candidate_valid_b=valid_b,
+        opening_guidance_a=guidance_a,
+        opening_guidance_b=guidance_b,
+        opening_guidance_mode=opening_guidance_source,
+        opening_guidance_mix_weight=args.mix_guidance_weight,
+    )
+    matching = _matching_loss_bundle(
+        outputs, pair, target, valid_a, valid_b, args
+    )
     opening_a = opening_detection_loss(
         outputs["opening_logits_A"].float(),
         pair.opening_all_a.float(),
@@ -759,6 +1014,10 @@ def _forward_loss(
         ),
         "loss_feature_anchor": feature_anchor,
         "loss_depth_anchor": depth_anchor,
+        "matching_optim_loss": matching["loss_total"],
+        "reported_end_to_end_loss": total,
+        # Keep the legacy name as the diagnostic joint total. Matcher-only
+        # backward consumes matching_optim_loss explicitly.
         "loss_total": total,
     }
     return outputs, pair, target, valid_a, valid_b, losses
@@ -793,6 +1052,30 @@ def _opening_counts(
     return true_positive, false_positive, false_negative
 
 
+def _candidate_count_summary(values: Sequence[int]) -> Dict[str, Any]:
+    ordered = sorted(int(value) for value in values)
+    if not ordered:
+        return {"count": 0, "mean": 0.0, "median": 0.0, "p95": 0.0, "max": 0, "histogram": {}}
+    location = 0.95 * (len(ordered) - 1)
+    lower = int(math.floor(location))
+    upper = int(math.ceil(location))
+    p95 = ordered[lower] if lower == upper else (
+        ordered[lower] * (upper - location) + ordered[upper] * (location - lower)
+    )
+    histogram: Dict[str, int] = {}
+    for value in ordered:
+        key = str(value)
+        histogram[key] = histogram.get(key, 0) + 1
+    return {
+        "count": len(ordered),
+        "mean": float(sum(ordered) / len(ordered)),
+        "median": float(np.median(np.asarray(ordered))),
+        "p95": float(p95),
+        "max": int(ordered[-1]),
+        "histogram": histogram,
+    }
+
+
 def _autocast_dtype(args: argparse.Namespace) -> torch.dtype:
     return (
         torch.bfloat16
@@ -815,7 +1098,7 @@ def train_one_epoch(
     opening_threshold: float,
     args: argparse.Namespace,
 ) -> Dict[str, Any]:
-    model.train()
+    configure_training_stage(model, args.training_stage)
     mode, candidate_source = _schedule(epoch, args)
     metrics = MetricAccumulator(args.metric_top_k)
     optimizer.zero_grad(set_to_none=True)
@@ -826,6 +1109,9 @@ def train_one_epoch(
     candidate_valid_samples = 0
     masked_positive_samples = 0
     valid_negative_samples = 0
+    gt_candidate_injection_count = 0
+    candidate_counts_a = []
+    candidate_counts_b = []
     use_amp = _amp_enabled(args, device)
     for step, raw_batch in enumerate(loader, start=1):
         with autocast(enabled=use_amp, dtype=_autocast_dtype(args)):
@@ -838,7 +1124,10 @@ def train_one_epoch(
                 opening_threshold=opening_threshold,
                 args=args,
             )
-            scaled_loss = losses["loss_total"] / args.accumulation_steps
+            scaled_loss = _optimization_loss(losses, args) / args.accumulation_steps
+        gt_candidate_injection_count += int(
+            raw_batch.get("_t4_gt_candidate_injection_count", 0)
+        )
         scaler.scale(scaled_loss).backward()
         should_step = (
             step % args.accumulation_steps == 0 or step == len(loader)
@@ -847,12 +1136,19 @@ def train_one_epoch(
             scaler.unscale_(optimizer)
             if args.grad_clip > 0:
                 torch.nn.utils.clip_grad_norm_(
-                    model.parameters(), args.grad_clip
+                    [
+                        parameter
+                        for parameter in model.parameters()
+                        if parameter.requires_grad
+                    ],
+                    args.grad_clip,
                 )
             scaler.step(optimizer)
             scaler.update()
             optimizer.zero_grad(set_to_none=True)
         metrics.update(outputs, pair, target, valid_a, valid_b, losses)
+        candidate_counts_a.extend(valid_a.sum(dim=-1).detach().cpu().tolist())
+        candidate_counts_b.extend(valid_b.sum(dim=-1).detach().cpu().tolist())
         sample_valid, has_target = _candidate_supervision_validity(
             target,
             pair.is_match,
@@ -913,6 +1209,13 @@ def train_one_epoch(
         candidate_loss_valid_samples=candidate_valid_samples,
         candidate_loss_masked_positive_samples=masked_positive_samples,
         candidate_loss_valid_negative_samples=valid_negative_samples,
+        gt_candidate_injection_enabled=bool(
+            getattr(args, "train_gt_candidate_injection", False)
+        ),
+        gt_candidate_injection_count=gt_candidate_injection_count,
+        inference_uses_gt_candidates=False,
+        candidate_count_A=_candidate_count_summary(candidate_counts_a),
+        candidate_count_B=_candidate_count_summary(candidate_counts_b),
         runtime_seconds=time.perf_counter() - start,
     )
     return result
@@ -942,6 +1245,8 @@ def evaluate(
     )
     metrics = MetricAccumulator(args.metric_top_k)
     opening_tp = opening_fp = opening_fn = 0
+    candidate_counts_a = []
+    candidate_counts_b = []
     start = time.perf_counter()
     use_amp = _amp_enabled(args, device)
     for raw_batch in loader:
@@ -956,6 +1261,10 @@ def evaluate(
                 args=args,
             )
         metrics.update(outputs, pair, target, valid_a, valid_b, losses)
+        if int(raw_batch.get("_t4_gt_candidate_injection_count", 0)) != 0:
+            raise RuntimeError("GT candidate injection reached validation inference")
+        candidate_counts_a.extend(valid_a.sum(dim=-1).detach().cpu().tolist())
+        candidate_counts_b.extend(valid_b.sum(dim=-1).detach().cpu().tolist())
         counts = _opening_counts(outputs, pair, opening_threshold)
         opening_tp += counts[0]
         opening_fp += counts[1]
@@ -976,6 +1285,10 @@ def evaluate(
             opening_guidance_source == "predicted"
             and candidate_source == "predicted"
         ),
+        gt_candidate_injection_count=0,
+        inference_uses_gt_candidates=False,
+        candidate_count_A=_candidate_count_summary(candidate_counts_a),
+        candidate_count_B=_candidate_count_summary(candidate_counts_b),
         runtime_seconds=time.perf_counter() - start,
     )
     return result
@@ -999,7 +1312,7 @@ def run_preflight(
     opening_threshold: float,
     args: argparse.Namespace,
 ) -> Dict[str, Any]:
-    model.train()
+    configure_training_stage(model, args.training_stage)
     optimizer.zero_grad(set_to_none=True)
     raw_batch = next(iter(loader))
     if device.type == "cuda":
@@ -1017,7 +1330,19 @@ def run_preflight(
             opening_threshold=opening_threshold,
             args=args,
         )
-    scaler.scale(losses["loss_total"]).backward()
+    nonfinite_losses = [
+        key
+        for key, value in losses.items()
+        if torch.is_tensor(value) and not bool(torch.isfinite(value).all())
+    ]
+    if nonfinite_losses:
+        raise RuntimeError(
+            "preflight produced non-finite losses: {}".format(
+                ", ".join(nonfinite_losses)
+            )
+        )
+    optimization_loss = _optimization_loss(losses, args)
+    scaler.scale(optimization_loss).backward()
     scaler.unscale_(optimizer)
     matcher_without_opening = nn.ModuleList(
         [
@@ -1038,7 +1363,35 @@ def run_preflight(
         "opening_head": _gradient_norm(model.matcher.opening_head),
         "matcher": _gradient_norm(matcher_without_opening),
     }
-    missing = [name for name, value in gradients.items() if not value > 0.0]
+    nonfinite_gradients = [
+        name for name, value in gradients.items() if not math.isfinite(value)
+    ]
+    if nonfinite_gradients:
+        raise RuntimeError(
+            "preflight produced non-finite gradients: {}".format(
+                ", ".join(nonfinite_gradients)
+            )
+        )
+    if args.training_stage == "matcher_only_finetune":
+        unexpected = [
+            name
+            for name in (
+                "bi_layout_feature_extractor",
+                "bi_layout_transformer",
+                "bi_layout_depth_heads",
+                "opening_head",
+            )
+            if gradients[name] != 0.0
+        ]
+        missing = [] if gradients["matcher"] > 0.0 else ["matcher"]
+        if unexpected:
+            raise RuntimeError(
+                "matcher-only preflight leaked gradients into: {}".format(
+                    ", ".join(unexpected)
+                )
+            )
+    else:
+        missing = [name for name, value in gradients.items() if not value > 0.0]
     peak_memory = (
         int(torch.cuda.max_memory_allocated(device))
         if device.type == "cuda"
@@ -1046,6 +1399,13 @@ def run_preflight(
     )
     result = {
         "loss_total": float(losses["loss_total"].detach().item()),
+        "matching_optim_loss": float(
+            losses["matching_optim_loss"].detach().item()
+        ),
+        "reported_end_to_end_loss": float(
+            losses["reported_end_to_end_loss"].detach().item()
+        ),
+        "training_stage": args.training_stage,
         "gradient_norms": gradients,
         "peak_memory_bytes": peak_memory,
         "peak_memory_gib": peak_memory / (1024.0 ** 3),
@@ -1089,6 +1449,25 @@ def _optimizer(
         for parameter in model.matcher.parameters()
         if id(parameter) not in opening_ids
     ]
+    if args.training_stage == "matcher_only_finetune":
+        if any(parameter.requires_grad for parameter in model.bi_layout.parameters()):
+            raise RuntimeError("Bi-Layout must be frozen before optimizer creation")
+        if any(parameter.requires_grad for parameter in opening_parameters):
+            raise RuntimeError("Opening Head must be frozen before optimizer creation")
+        if not matcher_parameters or not all(
+            parameter.requires_grad for parameter in matcher_parameters
+        ):
+            raise RuntimeError("exclusive matcher parameter set is not trainable")
+        return torch.optim.AdamW(
+            [
+                {
+                    "name": "matcher",
+                    "params": matcher_parameters,
+                    "lr": args.matcher_lr,
+                }
+            ],
+            weight_decay=args.weight_decay,
+        )
     return torch.optim.AdamW(
         [
             {
@@ -1161,11 +1540,15 @@ def _model_contract(
         "activation_checkpointing": bool(model.activation_checkpointing),
         "amp": bool(args.amp and not args.no_amp),
         "amp_dtype": args.amp_dtype,
+        "training_stage": args.training_stage,
+        "upstream_frozen": args.training_stage == "matcher_only_finetune",
     }
 
 
 def _training_contract(args: argparse.Namespace) -> Dict[str, Any]:
     keys = (
+        "training_stage",
+        "initial_end_to_end_checkpoint",
         "epochs",
         "batch_size",
         "accumulation_steps",
@@ -1192,6 +1575,14 @@ def _training_contract(args: argparse.Namespace) -> Dict[str, Any]:
         "opening_tversky_weight",
         "min_opening_width_tokens",
         "max_openings_per_view",
+        "candidate_proposal_mode",
+        "proposal_peak_top_k",
+        "proposal_peak_min_probability",
+        "proposal_expansion_threshold",
+        "proposal_dedup_iou",
+        "train_gt_candidate_injection",
+        "positive_dustbin_margin_loss_weight",
+        "positive_dustbin_margin",
         "metric_top_k",
         "image_height",
         "image_width",
@@ -1203,15 +1594,39 @@ def _training_contract(args: argparse.Namespace) -> Dict[str, Any]:
         "candidate_source",
         "teacher_forced_manifest_candidates",
     )
-    return {
+    contract = {
         **{key: getattr(args, key) for key in keys},
         "rotation_augmentation": not args.no_rotation_aug,
         "candidate_schedule": (
             "independent override, otherwise GT in scheduled GT-guidance epoch "
             "and predicted thereafter"
         ),
+        "validation_candidate_inference_uses_gt": False,
         "teacher_cache_role": "regularization only; never live feature replacement",
+        "optimization_objective": (
+            "matching_optim_loss"
+            if args.training_stage == "matcher_only_finetune"
+            else "reported_end_to_end_loss"
+        ),
+        "upstream_frozen": args.training_stage == "matcher_only_finetune",
+        "equal_compute_control_pending": args.training_stage == "matcher_only_finetune",
     }
+    proposal = {
+        key: contract[key]
+        for key in (
+            "candidate_proposal_mode",
+            "min_opening_width_tokens",
+            "max_openings_per_view",
+            "proposal_peak_top_k",
+            "proposal_peak_min_probability",
+            "proposal_expansion_threshold",
+            "proposal_dedup_iou",
+        )
+    }
+    contract["candidate_proposal_config_sha256"] = hashlib.sha256(
+        json.dumps(proposal, sort_keys=True, separators=(",", ":")).encode()
+    ).hexdigest()
+    return contract
 
 
 def _checkpoint_payload(
@@ -1236,8 +1651,24 @@ def _checkpoint_payload(
 ) -> Dict[str, Any]:
     payload: Dict[str, Any] = {
         "format_version": 1,
-        "task": "ZInD_matching full end-to-end joint fine-tuning",
-        "learned_chain": ["Bi-Layout", "OpeningSignalHead", "CrossSceneMatcher"],
+        "task": (
+            "ZInD_matching matcher-only fine-tuning"
+            if training_contract.get("training_stage") == "matcher_only_finetune"
+            else "ZInD_matching full end-to-end joint fine-tuning"
+        ),
+        "training_stage": training_contract.get("training_stage", "joint"),
+        "initial_checkpoint": training_contract.get(
+            "initial_end_to_end_checkpoint"
+        ),
+        "upstream_frozen": bool(training_contract.get("upstream_frozen", False)),
+        "equal_compute_control_pending": bool(
+            training_contract.get("equal_compute_control_pending", False)
+        ),
+        "learned_chain": (
+            ["CrossSceneMatcher"]
+            if training_contract.get("training_stage") == "matcher_only_finetune"
+            else ["Bi-Layout", "OpeningSignalHead", "CrossSceneMatcher"]
+        ),
         "analytical_evaluation_chain": [
             "PairGeometryRefiner",
             "RelativePose",
@@ -1273,6 +1704,144 @@ def _checkpoint_payload(
     return payload
 
 
+def _active_splits(args: argparse.Namespace) -> Tuple[str, ...]:
+    return ("train", "val") if args.skip_test else ("train", "val", "test")
+
+
+def _resolve_split_paths(
+    args: argparse.Namespace,
+    active_splits: Sequence[str],
+) -> Tuple[Dict[str, Path], Dict[str, Path]]:
+    manifest_root = Path(args.manifest_root).expanduser().resolve()
+    cache_root = Path(args.cache_root).expanduser().resolve()
+    manifests = {
+        split: (
+            Path(getattr(args, "{}_manifest".format(split))).expanduser().resolve()
+            if getattr(args, "{}_manifest".format(split))
+            else manifest_root / "{}.json".format(split)
+        )
+        for split in active_splits
+    }
+    caches = {
+        split: (
+            Path(getattr(args, "{}_cache_dir".format(split))).expanduser().resolve()
+            if getattr(args, "{}_cache_dir".format(split))
+            else cache_root / split
+        )
+        for split in active_splits
+    }
+    return manifests, caches
+
+
+def _build_split_datasets(
+    args: argparse.Namespace,
+    manifests: Mapping[str, Path],
+    caches: Mapping[str, Path],
+    active_splits: Sequence[str],
+) -> Dict[str, JointZInDMatchingDataset]:
+    limits = {
+        "train": args.max_train_pairs,
+        "val": args.max_val_pairs,
+        "test": args.max_test_pairs,
+    }
+    return {
+        split: JointZInDMatchingDataset(
+            str(manifests[split]),
+            str(caches[split]),
+            data_root=args.data_root,
+            max_pairs=limits[split],
+            expected_split=split,
+            image_shape=(args.image_height, args.image_width),
+            rotation_augmentation=(
+                split == "train" and not args.no_rotation_aug
+            ),
+        )
+        for split in active_splits
+    }
+
+
+def _build_evaluation_loaders(
+    datasets: Mapping[str, JointZInDMatchingDataset],
+    args: argparse.Namespace,
+    active_splits: Sequence[str],
+    device: torch.device,
+) -> Dict[str, DataLoader]:
+    return {
+        split: _make_loader(
+            datasets[split],
+            args,
+            shuffle=False,
+            seed=args.seed,
+            device=device,
+        )
+        for split in active_splits
+        if split != "train"
+    }
+
+
+def _data_contract(
+    manifests: Mapping[str, Path],
+    caches: Mapping[str, Path],
+    datasets: Mapping[str, JointZInDMatchingDataset],
+    house_counts: Mapping[str, int],
+    token_count: int,
+    feature_dim: int,
+    active_splits: Sequence[str],
+) -> Dict[str, Any]:
+    return {
+        "dataset": "ZInD_matching formatVersion=2 complete-room pairs",
+        "active_splits": list(active_splits),
+        "test_evaluation_enabled": "test" in active_splits,
+        "manifests": {
+            split: str(manifests[split]) for split in active_splits
+        },
+        "feature_caches": {
+            split: str(caches[split]) for split in active_splits
+        },
+        "pair_counts": {
+            split: len(datasets[split]) for split in active_splits
+        },
+        "house_counts": dict(house_counts),
+        "token_count": int(token_count),
+        "feature_dim": int(feature_dim),
+        "raw_image_live_forward": True,
+        "uses_ground_truth_depth_as_model_input": False,
+    }
+
+
+def _validate_resume_contract(
+    checkpoint: Mapping[str, Any],
+    model_contract: Mapping[str, Any],
+    training_contract: Mapping[str, Any],
+    data_contract: Mapping[str, Any],
+) -> None:
+    expected_task = (
+        "ZInD_matching matcher-only fine-tuning"
+        if training_contract.get("training_stage") == "matcher_only_finetune"
+        else "ZInD_matching full end-to-end joint fine-tuning"
+    )
+    if checkpoint.get("task") != expected_task:
+        raise ValueError("resume checkpoint is not an end-to-end checkpoint")
+    if checkpoint.get("model_contract") != model_contract:
+        raise ValueError("resume model contract changed")
+    if checkpoint.get("training_contract") != training_contract:
+        raise ValueError("resume training contract changed")
+    saved_data_contract = checkpoint.get("data_contract")
+    if saved_data_contract == data_contract:
+        return
+    # Preserve resume compatibility for historical train/val/test checkpoints
+    # that predate the explicit active-split fields. A skip-test run can never
+    # take this path because its split mappings omit test.
+    legacy_data_contract = {
+        key: value
+        for key, value in data_contract.items()
+        if key not in ("active_splits", "test_evaluation_enabled")
+    }
+    if data_contract.get("test_evaluation_enabled") and saved_data_contract == legacy_data_contract:
+        return
+    raise ValueError("resume data contract changed")
+
+
 def _best_key(metrics: Mapping[str, Any]) -> Tuple[float, float, float, float]:
     return (
         float(metrics["harmonic_flow_score"]),
@@ -1280,6 +1849,14 @@ def _best_key(metrics: Mapping[str, Any]) -> Tuple[float, float, float, float]:
         float(metrics["end_to_end_candidate_top1"]),
         float(metrics["opening_token_f1"]),
     )
+
+
+def _sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as file:
+        for chunk in iter(lambda: file.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def main(argv: Optional[Sequence[str]] = None) -> int:
@@ -1305,56 +1882,35 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     if device.type != "cuda":
         raise RuntimeError("full end-to-end training requires a CUDA GPU")
     print("device: {}".format(device), flush=True)
+    active_splits = _active_splits(args)
+    print(
+        "test split: {}".format(
+            "ENABLED" if "test" in active_splits else "SKIPPED"
+        ),
+        flush=True,
+    )
 
-    manifest_root = Path(args.manifest_root).expanduser().resolve()
-    cache_root = Path(args.cache_root).expanduser().resolve()
-    manifests = {
-        split: (
-            Path(getattr(args, "{}_manifest".format(split))).expanduser().resolve()
-            if getattr(args, "{}_manifest".format(split))
-            else manifest_root / "{}.json".format(split)
-        )
-        for split in ("train", "val", "test")
-    }
-    caches = {
-        split: (
-            Path(getattr(args, "{}_cache_dir".format(split))).expanduser().resolve()
-            if getattr(args, "{}_cache_dir".format(split))
-            else cache_root / split
-        )
-        for split in ("train", "val", "test")
-    }
+    manifests, caches = _resolve_split_paths(args, active_splits)
     config_path = Path(args.bi_layout_config).expanduser().resolve()
     bi_layout_path = Path(args.bi_layout_checkpoint).expanduser().resolve()
     opening_path = Path(args.opening_checkpoint).expanduser().resolve()
     matcher_path = Path(args.matcher_checkpoint).expanduser().resolve()
+    initial_end_to_end_path = (
+        Path(args.initial_end_to_end_checkpoint).expanduser().resolve()
+        if args.initial_end_to_end_checkpoint
+        else None
+    )
     required = (
         list(manifests.values())
         + [cache / "metadata.json" for cache in caches.values()]
         + [config_path, bi_layout_path, opening_path, matcher_path]
+        + ([initial_end_to_end_path] if initial_end_to_end_path else [])
     )
     for path in required:
         if not path.is_file():
             raise FileNotFoundError(path)
 
-    limits = {
-        "train": args.max_train_pairs,
-        "val": args.max_val_pairs,
-        "test": args.max_test_pairs,
-    }
-    datasets: Dict[str, JointZInDMatchingDataset] = {}
-    for split in ("train", "val", "test"):
-        datasets[split] = JointZInDMatchingDataset(
-            str(manifests[split]),
-            str(caches[split]),
-            data_root=args.data_root,
-            max_pairs=limits[split],
-            expected_split=split,
-            image_shape=(args.image_height, args.image_width),
-            rotation_augmentation=(
-                split == "train" and not args.no_rotation_aug
-            ),
-        )
+    datasets = _build_split_datasets(args, manifests, caches, active_splits)
     house_counts = validate_disjoint_house_splits(
         {split: dataset.base for split, dataset in datasets.items()}
     )
@@ -1363,13 +1919,14 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         for dataset in datasets.values()
     }
     if len(dimensions) != 1:
-        raise ValueError("train/val/test dimensions differ")
+        raise ValueError("active split dimensions differ")
     token_count, feature_dim = next(iter(dimensions))
     print(
-        "pairs train/val/test={}/{}/{} houses={} tensor=[{}, {}]".format(
-            len(datasets["train"]),
-            len(datasets["val"]),
-            len(datasets["test"]),
+        "pairs {} houses={} tensor=[{}, {}]".format(
+            "/".join(
+                "{}={}".format(split, len(datasets[split]))
+                for split in active_splits
+            ),
             house_counts,
             token_count,
             feature_dim,
@@ -1411,7 +1968,37 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         matcher,
         activation_checkpointing=not args.no_activation_checkpoint,
     ).to(device)
-    model.requires_grad_(True)
+    initial_end_to_end_report = None
+    if initial_end_to_end_path is not None:
+        checkpoint = torch.load(str(initial_end_to_end_path), map_location="cpu")
+        if checkpoint.get("task") != "ZInD_matching full end-to-end joint fine-tuning":
+            raise ValueError("initial checkpoint is not a T0-T3 end-to-end checkpoint")
+        saved_data = checkpoint.get("data_contract", {})
+        if saved_data.get("test_evaluation_enabled") not in (None, False):
+            raise ValueError("initial checkpoint unexpectedly enabled test evaluation")
+        model.bi_layout.load_state_dict(
+            checkpoint["bi_layout_state_dict"], strict=True
+        )
+        model.matcher.load_state_dict(
+            checkpoint["matcher_state_dict"], strict=True
+        )
+        opening_threshold = float(
+            checkpoint.get("opening_probability_threshold", opening_threshold)
+        )
+        threshold_report = {
+            "value": opening_threshold,
+            "source": "initial_end_to_end_checkpoint",
+        }
+        initial_end_to_end_report = {
+            "path": str(initial_end_to_end_path),
+            "sha256": _sha256_file(initial_end_to_end_path),
+            "size": initial_end_to_end_path.stat().st_size,
+            "mtime_ns": initial_end_to_end_path.stat().st_mtime_ns,
+            "completed_epoch": int(checkpoint.get("completed_epoch", -1)),
+            "best": dict(checkpoint.get("best", {})),
+        }
+        del checkpoint
+    configure_training_stage(model, args.training_stage)
     optimizer = _optimizer(model, args)
     scheduler = _scheduler(
         optimizer, args.epochs, args.minimum_lr_factor
@@ -1427,29 +2014,46 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         "matcher_total": sum(
             parameter.numel() for parameter in model.matcher.parameters()
         ),
+        "bi_layout_trainable": sum(
+            parameter.numel()
+            for parameter in model.bi_layout.parameters()
+            if parameter.requires_grad
+        ),
+        "opening_head_trainable": sum(
+            parameter.numel()
+            for parameter in model.matcher.opening_head.parameters()
+            if parameter.requires_grad
+        ),
+        "matcher_excluding_opening_trainable": sum(
+            parameter.numel()
+            for parameter in matcher_without_opening_parameters(model)
+            if parameter.requires_grad
+        ),
+        "optimizer": sum(
+            parameter.numel()
+            for group in optimizer.param_groups
+            for parameter in group["params"]
+        ),
     }
     print(
-        "trainable parameters: Bi-Layout={:,}, Opening={:,}, Matcher={:,}; "
+        "parameters: Bi-Layout={:,}/{:,} trainable, Opening={:,}/{:,}, "
+        "Matcher-exclusive={:,}, Optimizer={:,}; "
         "threshold={:.4f} ({})".format(
+            parameter_counts["bi_layout_trainable"],
             parameter_counts["bi_layout"],
+            parameter_counts["opening_head_trainable"],
             parameter_counts["opening_head"],
-            parameter_counts["matcher_total"],
+            parameter_counts["matcher_excluding_opening_trainable"],
+            parameter_counts["optimizer"],
             opening_threshold,
             threshold_report["source"],
         ),
         flush=True,
     )
 
-    loaders = {
-        split: _make_loader(
-            datasets[split],
-            args,
-            shuffle=False,
-            seed=args.seed,
-            device=device,
-        )
-        for split in ("val", "test")
-    }
+    loaders = _build_evaluation_loaders(
+        datasets, args, active_splits, device
+    )
     preflight_loader = _make_loader(
         datasets["train"],
         args,
@@ -1478,6 +2082,26 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         ),
         flush=True,
     )
+    if args.preflight_report:
+        report_path = Path(args.preflight_report).expanduser().resolve()
+        _atomic_json(
+            report_path,
+            {
+                **preflight,
+                "active_splits": list(active_splits),
+                "test_data_accessed": False,
+                "candidate_proposal_mode": args.candidate_proposal_mode,
+                "proposal_peak_top_k": args.proposal_peak_top_k,
+                "proposal_peak_min_probability": args.proposal_peak_min_probability,
+                "proposal_expansion_threshold": args.proposal_expansion_threshold,
+                "proposal_dedup_iou": args.proposal_dedup_iou,
+                "max_openings_per_view": args.max_openings_per_view,
+                "train_gt_candidate_injection": args.train_gt_candidate_injection,
+                "validation_candidate_inference_uses_gt": False,
+                "positive_dustbin_margin": args.positive_dustbin_margin,
+                "positive_dustbin_margin_loss_weight": args.positive_dustbin_margin_loss_weight,
+            },
+        )
     if args.preflight_only:
         return 0
 
@@ -1485,23 +2109,15 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     output_dir.mkdir(parents=True, exist_ok=True)
     model_contract = _model_contract(model, args)
     training_contract = _training_contract(args)
-    data_contract = {
-        "dataset": "ZInD_matching formatVersion=2 complete-room pairs",
-        "manifests": {
-            split: str(manifests[split]) for split in ("train", "val", "test")
-        },
-        "feature_caches": {
-            split: str(caches[split]) for split in ("train", "val", "test")
-        },
-        "pair_counts": {
-            split: len(datasets[split]) for split in ("train", "val", "test")
-        },
-        "house_counts": dict(house_counts),
-        "token_count": int(token_count),
-        "feature_dim": int(feature_dim),
-        "raw_image_live_forward": True,
-        "uses_ground_truth_depth_as_model_input": False,
-    }
+    data_contract = _data_contract(
+        manifests,
+        caches,
+        datasets,
+        house_counts,
+        token_count,
+        feature_dim,
+        active_splits,
+    )
     initialization = {
         "bi_layout": dict(bi_layout_report),
         "opening_head": dict(opening_report),
@@ -1509,6 +2125,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         "opening_threshold": dict(threshold_report),
         "parameter_counts": parameter_counts,
         "preflight": preflight,
+        "initial_end_to_end_checkpoint": initial_end_to_end_report,
     }
 
     start_epoch = 0
@@ -1528,14 +2145,9 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             else Path(args.resume).expanduser().resolve()
         )
         checkpoint = torch.load(str(resume_path), map_location="cpu")
-        if checkpoint.get("task") != "ZInD_matching full end-to-end joint fine-tuning":
-            raise ValueError("resume checkpoint is not an end-to-end checkpoint")
-        if checkpoint.get("model_contract") != model_contract:
-            raise ValueError("resume model contract changed")
-        if checkpoint.get("training_contract") != training_contract:
-            raise ValueError("resume training contract changed")
-        if checkpoint.get("data_contract") != data_contract:
-            raise ValueError("resume data contract changed")
+        _validate_resume_contract(
+            checkpoint, model_contract, training_contract, data_contract
+        )
         model.bi_layout.load_state_dict(
             checkpoint["bi_layout_state_dict"], strict=True
         )

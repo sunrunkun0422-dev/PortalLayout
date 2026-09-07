@@ -1,0 +1,55 @@
+{
+  "task": "ZInD v2 G0 seed123 single-seed full T0-T3 validation ablation",
+  "execution_order": ["T0", "T1", "T2", "T3"],
+  "serial_single_gpu": true,
+  "test_split_accessed": false,
+  "historical_end_to_end_checkpoint_used_for_initialization_or_resume": false,
+  "candidate_configuration": {
+    "name": "G0",
+    "opening_threshold": 0.47,
+    "min_opening_width_tokens": 2,
+    "max_candidates_per_view": 12,
+    "candidate_target_iou": 0.30
+  },
+  "source_schedule": {
+    "epoch_0": "GT guidance + GT candidates",
+    "epoch_1": "mixed guidance + predicted candidates",
+    "epoch_2_and_later": "predicted guidance + predicted candidates",
+    "validation": "predicted guidance + predicted candidates"
+  },
+  "fixed_training_configuration": {
+    "seed": 123,
+    "epochs": 24,
+    "early_stop_patience": 6,
+    "batch_size": 4,
+    "accumulation_steps": 1,
+    "workers": 4,
+    "optimizer": "AdamW",
+    "bi_layout_lr": 0.000002,
+    "opening_head_lr": 0.00001,
+    "matcher_lr": 0.00003,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "minimum_lr_factor": 0.1,
+    "amp": false,
+    "activation_checkpointing": false,
+    "rotation_augmentation": true,
+    "candidate_loss_weight": 1.0,
+    "opening_loss_weight": 1.0,
+    "feature_anchor_weight": 0.02,
+    "depth_anchor_weight": 0.02,
+    "token_affinity_weight": 1.0,
+    "shared_response_weight": 0.0,
+    "portal_shift_loss_weight": 0.2,
+    "consistency_weight": 0.1,
+    "opening_pos_weight": 2.5,
+    "opening_tversky_weight": 0.5,
+    "metric_top_k": 3
+  },
+  "experiments": {
+    "T0": {"candidate_missing_target_policy": "legacy_dustbin", "candidate_rank_loss_weight": 0.0, "output_dir": "checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T0"},
+    "T1": {"candidate_missing_target_policy": "mask_positive", "candidate_rank_loss_weight": 0.0, "output_dir": "checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T1"},
+    "T2": {"candidate_missing_target_policy": "legacy_dustbin", "candidate_rank_loss_weight": 0.1, "output_dir": "checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T2"},
+    "T3": {"candidate_missing_target_policy": "mask_positive", "candidate_rank_loss_weight": 0.1, "output_dir": "checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T3"}
+  }
+}

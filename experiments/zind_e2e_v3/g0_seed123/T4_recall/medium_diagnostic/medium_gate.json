@@ -1,0 +1,70 @@
+{
+  "schema_version": "zind-t4-medium-launch-gate-v1",
+  "gate_source": "minimum non-regression conditions inherited from matcher_only_preflight/gpu_small_preflight_gate_v2.json",
+  "evaluated_factor": "I1_M1",
+  "reason_for_factor": "formal T4 configuration requires train-only GT injection and dustbin margin",
+  "baseline": {
+    "name": "P1 = fresh T3 + identical Recall-TopK proposal on medium val",
+    "positive_candidate_recall": 0.60546875,
+    "positive_candidate_count": 155,
+    "positive_acceptance_rate": 0.4296875,
+    "positive_acceptance_count": 110,
+    "conditional_candidate_top1": 0.44516129032258067,
+    "end_to_end_candidate_top1": 0.26953125,
+    "end_to_end_candidate_top1_count": 69,
+    "negative_rejection_rate": 0.9453125,
+    "negative_rejection_count": 242,
+    "harmonic_flow_score": 0.41946342443729906
+  },
+  "candidate": {
+    "name": "I1_M1 best validation checkpoint-equivalent state",
+    "best_epoch": 4,
+    "positive_candidate_recall": 0.60546875,
+    "positive_candidate_count": 155,
+    "positive_acceptance_rate": 0.47265625,
+    "positive_acceptance_count": 121,
+    "conditional_candidate_top1": 0.41935483870967744,
+    "end_to_end_candidate_top1": 0.25390625,
+    "end_to_end_candidate_top1_count": 65,
+    "negative_rejection_rate": 0.9453125,
+    "negative_rejection_count": 242,
+    "harmonic_flow_score": 0.4002951954397394,
+    "validation_gt_candidate_injection_count": 0
+  },
+  "deltas": {
+    "positive_acceptance_absolute": 0.04296875,
+    "positive_acceptance_pairs": 11,
+    "conditional_candidate_top1_absolute": -0.025806451612903226,
+    "end_to_end_candidate_top1_absolute": -0.015625,
+    "end_to_end_candidate_top1_pairs": -4,
+    "negative_rejection_absolute": 0.0,
+    "negative_rejection_pairs": 0,
+    "harmonic_flow_absolute": -0.01916822899755965
+  },
+  "gates": {
+    "all_epochs_finite": true,
+    "only_matcher_has_nonzero_gradient": true,
+    "matcher_updated": true,
+    "frozen_upstream_unchanged": true,
+    "validation_predicted_only": true,
+    "positive_acceptance_or_s3_improves": true,
+    "negative_rejection_drop_at_most_5pp": true,
+    "harmonic_not_below_same_proposal_t3": false
+  },
+  "additional_diagnostic": {
+    "conditional_candidate_top1_not_lower": false,
+    "s3_not_lower": false,
+    "every_2x2_factor_harmonic_below_baseline": true
+  },
+  "failed_gates": [
+    "harmonic_not_below_same_proposal_t3"
+  ],
+  "decision": "STOP_MEDIUM_GATE",
+  "formal_training_started": false,
+  "formal_training_path_exists": false,
+  "active_splits": [
+    "train",
+    "val"
+  ],
+  "test_data_accessed": false
+}

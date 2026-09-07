@@ -1,0 +1,95 @@
+{
+  "schema_version": "zind-t5-candidate-audit-artifact-precheck-v1",
+  "status": "blocked_pending_gpu_forward_authorization",
+  "cpu_only": true,
+  "model_forward_executed": false,
+  "training_executed": false,
+  "optimizer_step_count": 0,
+  "background_job_started": false,
+  "active_splits": [
+    "train",
+    "val"
+  ],
+  "test_data_accessed": false,
+  "git": {
+    "branch": "agent/zind-bipair-opening-matcher",
+    "head": "50a6ae5ca403928627fb4de18ae918d59c03d479",
+    "dirty_worktree_preserved": true
+  },
+  "t3": {
+    "path": "checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T3/best.pt",
+    "sha256": "ca083dbbc5a05d738dad36404ad708c623c272aef7a64398b4de3a793278cc5d",
+    "size": 418836277,
+    "mtime": "2026-08-15 02:54:10.604347717 +0800"
+  },
+  "manifests": {
+    "train": {
+      "sha256": "52d212b3f068d910492d6339f029622ddca9a52f153c80d2ba51fa23b744db3f",
+      "pair_count": 29325,
+      "positive_pair_count": 14741,
+      "positive_side_count": 29482,
+      "unique_room_pano_count": 20603,
+      "medium_positive_coverage": 512,
+      "missing_t3_positive_pair_artifacts": 14229
+    },
+    "val": {
+      "sha256": "acae7ecbd55d4f8b8aea7c7a8db4b8cbb434fe92992858ac0a4d4a26da7da1ec",
+      "pair_count": 3630,
+      "positive_pair_count": 1827,
+      "positive_side_count": 3654,
+      "unique_room_pano_count": 2546,
+      "full_compact_prediction_coverage": 3630,
+      "medium_live_feature_positive_coverage": 256,
+      "missing_live_feature_positive_pairs": 1571
+    }
+  },
+  "full_val_compact_fields": [
+    "opening_probability_A/B",
+    "predicted_intervals_A/B",
+    "candidate_count_A/B",
+    "candidate_pair_scores",
+    "best_candidate_pair",
+    "pair_match_probability",
+    "pair_no_match_probability",
+    "layout_A/B"
+  ],
+  "missing_required_fields": {
+    "train_full": [
+      "opening_probability_A/B",
+      "layout_feature_A/B",
+      "enclosed_depth_A/B",
+      "extended_depth_A/B",
+      "legacy_and_recall_topk_candidates",
+      "matcher_decision"
+    ],
+    "val_oracles": [
+      "layout_feature_A/B",
+      "enclosed_depth_A/B",
+      "extended_depth_A/B",
+      "candidate_assignment_logits",
+      "row_dustbin_logits",
+      "column_dustbin_logits",
+      "O1_O2_O3_O4_matcher_outputs",
+      "recall_topk_matcher_outputs"
+    ]
+  },
+  "reusable_without_gpu": {
+    "val_proposal_trace": true,
+    "legacy_candidate_recall_expected": "1080/1827",
+    "recall_topk_candidate_recall_expected": "1107/1827",
+    "raw_stage_trace_reconstructible": true,
+    "O0_legacy": true,
+    "O5_offline": true,
+    "O1_O2_O3_O4": false
+  },
+  "estimated_forward_work": {
+    "minimal_missing_upstream_pair_samples": 15800,
+    "minimal_missing_batched_steps_at_batch4_split_separately": 3951,
+    "homogeneous_full_positive_pair_samples": 16568,
+    "homogeneous_full_batched_steps_at_batch4_split_separately": 4143,
+    "val_oracle_matcher_only_pair_evaluations_O1_to_O4": 7308,
+    "val_recall_topk_matcher_only_pair_evaluations": 1827,
+    "total_val_new_matcher_only_pair_evaluations": 9135
+  },
+  "stop_reason": "The requested full-train funnel and full-val O1-O4/Recall-TopK matcher audit require new frozen T3 upstream outputs. The protocol requires explicit user confirmation before any such GPU forward."
+}

@@ -1,0 +1,266 @@
+{
+  "legacy": {
+    "mode": "legacy",
+    "positive_pair_count": 1827,
+    "stages": {
+      "A_raw_hypothesis_recalled": {
+        "house_count": 155,
+        "interface_type": {
+          "door-door": 1086,
+          "door-opening": 1,
+          "opening-door": 1,
+          "opening-opening": 1
+        },
+        "pair_count": 1089,
+        "pair_rate": 0.5960591133004927,
+        "unique_room_side_count": 2178,
+        "wrap": {
+          "non_wrap": 676,
+          "wrap": 413
+        }
+      },
+      "B_raw_hypothesis_recalled": {
+        "house_count": 157,
+        "interface_type": {
+          "door-door": 1593,
+          "door-opening": 1,
+          "opening-door": 3
+        },
+        "pair_count": 1597,
+        "pair_rate": 0.8741105637657361,
+        "unique_room_side_count": 3194,
+        "wrap": {
+          "non_wrap": 1039,
+          "wrap": 558
+        }
+      },
+      "GT_positive": {
+        "house_count": 157,
+        "interface_type": {
+          "door-door": 1818,
+          "door-opening": 1,
+          "opening-door": 4,
+          "opening-opening": 4
+        },
+        "pair_count": 1827,
+        "pair_rate": 1.0,
+        "unique_room_side_count": 3654,
+        "wrap": {
+          "non_wrap": 1211,
+          "wrap": 616
+        }
+      },
+      "both_final_side_candidates": {
+        "house_count": 155,
+        "interface_type": {
+          "door-door": 1076,
+          "door-opening": 1,
+          "opening-door": 1,
+          "opening-opening": 1
+        },
+        "pair_count": 1079,
+        "pair_rate": 0.5905856595511768,
+        "unique_room_side_count": 2158,
+        "wrap": {
+          "non_wrap": 671,
+          "wrap": 408
+        }
+      },
+      "both_raw_hypothesis_recalled": {
+        "house_count": 152,
+        "interface_type": {
+          "door-door": 901,
+          "door-opening": 1,
+          "opening-door": 1
+        },
+        "pair_count": 903,
+        "pair_rate": 0.4942528735632184,
+        "unique_room_side_count": 1806,
+        "wrap": {
+          "non_wrap": 542,
+          "wrap": 361
+        }
+      },
+      "both_threshold_recalled": {
+        "house_count": 155,
+        "interface_type": {
+          "door-door": 1079,
+          "door-opening": 1,
+          "opening-door": 1,
+          "opening-opening": 1
+        },
+        "pair_count": 1082,
+        "pair_rate": 0.5922276956759716,
+        "unique_room_side_count": 2164,
+        "wrap": {
+          "non_wrap": 673,
+          "wrap": 409
+        }
+      },
+      "final_target_formed": {
+        "house_count": 155,
+        "interface_type": {
+          "door-door": 1077,
+          "door-opening": 1,
+          "opening-door": 1,
+          "opening-opening": 1
+        },
+        "pair_count": 1080,
+        "pair_rate": 0.5911330049261084,
+        "unique_room_side_count": 2160,
+        "wrap": {
+          "non_wrap": 672,
+          "wrap": 408
+        }
+      },
+      "matcher_candidate_top1_correct": {
+        "house_count": 139,
+        "interface_type": {
+          "door-door": 500,
+          "door-opening": 1
+        },
+        "pair_count": 501,
+        "pair_rate": 0.2742200328407225,
+        "unique_room_side_count": 1002,
+        "wrap": {
+          "non_wrap": 286,
+          "wrap": 215
+        }
+      },
+      "matcher_predicted_match": {
+        "house_count": 148,
+        "interface_type": {
+          "door-door": 804,
+          "door-opening": 1,
+          "opening-door": 1
+        },
+        "pair_count": 806,
+        "pair_rate": 0.44116037219485493,
+        "unique_room_side_count": 1612,
+        "wrap": {
+          "non_wrap": 501,
+          "wrap": 305
+        }
+      }
+    }
+  },
+  "recall_topk": {
+    "mode": "recall_topk",
+    "positive_pair_count": 1827,
+    "stages": {
+      "A_raw_peak_recalled": {
+        "house_count": 155,
+        "interface_type": {
+          "door-door": 1086,
+          "door-opening": 1,
+          "opening-door": 1,
+          "opening-opening": 1
+        },
+        "pair_count": 1089,
+        "pair_rate": 0.5960591133004927,
+        "unique_room_side_count": 2178,
+        "wrap": {
+          "non_wrap": 676,
+          "wrap": 413
+        }
+      },
+      "B_raw_peak_recalled": {
+        "house_count": 157,
+        "interface_type": {
+          "door-door": 1593,
+          "door-opening": 1,
+          "opening-door": 3
+        },
+        "pair_count": 1597,
+        "pair_rate": 0.8741105637657361,
+        "unique_room_side_count": 3194,
+        "wrap": {
+          "non_wrap": 1039,
+          "wrap": 558
+        }
+      },
+      "GT_positive": {
+        "house_count": 157,
+        "interface_type": {
+          "door-door": 1818,
+          "door-opening": 1,
+          "opening-door": 4,
+          "opening-opening": 4
+        },
+        "pair_count": 1827,
+        "pair_rate": 1.0,
+        "unique_room_side_count": 3654,
+        "wrap": {
+          "non_wrap": 1211,
+          "wrap": 616
+        }
+      },
+      "both_dedup_cap_recalled": {
+        "house_count": 155,
+        "interface_type": {
+          "door-door": 1102,
+          "door-opening": 1,
+          "opening-door": 2,
+          "opening-opening": 1
+        },
+        "pair_count": 1106,
+        "pair_rate": 0.6053639846743295,
+        "unique_room_side_count": 2212,
+        "wrap": {
+          "non_wrap": 684,
+          "wrap": 422
+        }
+      },
+      "both_expansion_wrap_recalled": {
+        "house_count": 152,
+        "interface_type": {
+          "door-door": 901,
+          "door-opening": 1,
+          "opening-door": 1
+        },
+        "pair_count": 903,
+        "pair_rate": 0.4942528735632184,
+        "unique_room_side_count": 1806,
+        "wrap": {
+          "non_wrap": 542,
+          "wrap": 361
+        }
+      },
+      "both_raw_peak_recalled": {
+        "house_count": 152,
+        "interface_type": {
+          "door-door": 901,
+          "door-opening": 1,
+          "opening-door": 1
+        },
+        "pair_count": 903,
+        "pair_rate": 0.4942528735632184,
+        "unique_room_side_count": 1806,
+        "wrap": {
+          "non_wrap": 542,
+          "wrap": 361
+        }
+      },
+      "final_target_formed": {
+        "house_count": 155,
+        "interface_type": {
+          "door-door": 1103,
+          "door-opening": 1,
+          "opening-door": 2,
+          "opening-opening": 1
+        },
+        "pair_count": 1107,
+        "pair_rate": 0.6059113300492611,
+        "unique_room_side_count": 2214,
+        "wrap": {
+          "non_wrap": 685,
+          "wrap": 422
+        }
+      }
+    }
+  },
+  "schema_version": "zind-t5-stage-funnel-v1",
+  "split": "val",
+  "test_data_accessed": false,
+  "unique_room_side_count": 3654
+}

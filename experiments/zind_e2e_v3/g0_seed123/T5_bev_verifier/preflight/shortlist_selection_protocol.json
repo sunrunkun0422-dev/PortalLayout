@@ -1,0 +1,22 @@
+{
+  "active_splits": [
+    "train",
+    "val"
+  ],
+  "candidate_source": "legacy predicted-only candidates",
+  "candidate_values": [
+    1,
+    3,
+    5,
+    8
+  ],
+  "gt_candidate_injection": false,
+  "ranking_source": "frozen T3 real-real candidate_pair_score; dustbin ignored",
+  "rule": "smallest N with train strict-manifest coverage >=0.95; else N=8",
+  "schema_version": "zind-salve-shortlist-selection-v1",
+  "seed": 123,
+  "selected_N": 3,
+  "sha256": "1399e18014f5cfd5e4a9dc43583959595957d095f6e482f7659965fa63c561f8",
+  "test_data_accessed": false,
+  "uses_val_verifier_result": false
+}

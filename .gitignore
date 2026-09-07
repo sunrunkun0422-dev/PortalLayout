@@ -1,4 +1,42 @@
 checkpoints
 __pycache__
-src/dataset
+src/dataset/*
+!src/dataset/ZInD_matching_groups/
+src/dataset/ZInD_matching_groups/*
+!src/dataset/ZInD_matching_groups/debug_train_0665_floor_03.json
 mp3d.zip
+
+# Python runtime files.
+.pytest_cache/
+*.py[cod]
+
+# Keep readable experiment evidence; regenerated tensors, caches, logs, and
+# bulk visualizations remain local. The curated PPT examples are separate.
+experiments/zind_e2e_v2/full_ablation_g0_seed123/*.log
+experiments/zind_e2e_v3/**
+!experiments/zind_e2e_v3/**/
+!experiments/zind_e2e_v3/**/*.md
+!experiments/zind_e2e_v3/**/*.json
+!experiments/zind_e2e_v3/**/*.csv
+!experiments/zind_e2e_v3/**/*.txt
+!experiments/zind_e2e_v3/**/*.sh
+!experiments/zind_e2e_v3/**/raster_examples/*.svg
+!experiments/zind_e2e_v3/**/visual_audit/*observations.jsonl
+experiments/zind_e2e_v3/**/frozen_room_cache*/
+experiments/zind_e2e_v3/**/upstream_cache/
+experiments/zind_e2e_v3/**/*room_cache_index.json
+experiments/zind_e2e_v3/**/*room_cache_plan.json
+experiments/zind_e2e_v3/**/medium_diagnostic/train_medium.json
+experiments/zind_e2e_v3/**/medium_diagnostic/val_medium.json
+experiments/zind_e2e_v3/**/medium_diagnostic/factors/
+experiments/zind_e2e_v3/**/medium_diagnostic/medium_proposal_isolation.json
+experiments/zind_e2e_v3/**/negative_pair_manifest.json
+
+# Publish output reports, not per-pair predictions or raw data. Existing
+# tracked examples are unaffected by these ignore rules.
+src/output/**
+!src/output/**/
+!src/output/**/*.md
+!src/output/**/summary.json
+!src/output/**/run_metadata.json
+!src/output/**/metadata.json
