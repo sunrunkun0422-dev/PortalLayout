@@ -1,0 +1,8 @@
+{
+  "schema_version": "observable-review-policy-v1",
+  "minimum_independent_reviewers": 2,
+  "minimum_circular_interval_iou": 0.30,
+  "minimum_vertical_overlap_fraction": 0.50,
+  "strict_core_requires_complete_gt_set": true,
+  "strict_core_requires_both_blind_reviews_correct": true
+}

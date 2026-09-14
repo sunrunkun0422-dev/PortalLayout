@@ -1,0 +1,32 @@
+/home/feixia/anaconda3/envs/bi_layout/lib/python3.8/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+  warnings.warn(
+test_explicit_multi_gt_set_is_not_remined_with_legacy_threshold (tests.test_zind_observable_training.ObservableTrainingTests) ... ok
+test_invalid_door_annotation_is_not_silently_dropped (tests.test_zind_observable_training.ObservableTrainingTests) ... ok
+test_union_has_real_and_virtual_openings_and_is_image_specific (tests.test_zind_observable_training.ObservableTrainingTests) ... ok
+test_preserves_explicit_candidates_and_multi_interface_targets (tests.test_zind_matching_feature_dataset.ZInDMatchingFeatureDatasetTest) ... ok
+test_all_samples_masked_returns_graph_connected_zero (tests.test_zind_end_to_end_candidate_fixes.CandidateAssignmentMaskTest) ... ok
+test_all_valid_matches_legacy_loss_exactly (tests.test_zind_end_to_end_candidate_fixes.CandidateAssignmentMaskTest) ... ok
+test_mixed_batch_uses_only_valid_samples (tests.test_zind_end_to_end_candidate_fixes.CandidateAssignmentMaskTest) ... ok
+test_negative_without_target_keeps_dustbin_loss_and_gradient (tests.test_zind_end_to_end_candidate_fixes.CandidateAssignmentMaskTest) ... ok
+test_padding_cannot_create_a_target (tests.test_zind_end_to_end_candidate_fixes.CandidateAssignmentMaskTest) ... ok
+test_positive_target_keeps_unmatched_rows_on_dustbin (tests.test_zind_end_to_end_candidate_fixes.CandidateAssignmentMaskTest) ... ok
+test_positive_without_target_is_fully_masked (tests.test_zind_end_to_end_candidate_fixes.CandidateAssignmentMaskTest) ... ok
+test_matcher_inference_and_shared_training_score_rank_identically (tests.test_zind_end_to_end_candidate_fixes.CandidateRankingLossTest) ... ok
+test_missing_target_returns_graph_connected_zero (tests.test_zind_end_to_end_candidate_fixes.CandidateRankingLossTest) ... ok
+test_multiple_positives_accumulate_probability_mass (tests.test_zind_end_to_end_candidate_fixes.CandidateRankingLossTest) ... ok
+test_padded_candidate_does_not_change_loss (tests.test_zind_end_to_end_candidate_fixes.CandidateRankingLossTest) ... ok
+test_padded_zero_candidates_keep_ranking_gradients_finite (tests.test_zind_end_to_end_candidate_fixes.CandidateRankingLossTest) ... ok
+test_product_and_log_scores_have_identical_order (tests.test_zind_end_to_end_candidate_fixes.CandidateRankingLossTest) ... ok
+test_raising_positive_score_lowers_ranking_loss (tests.test_zind_end_to_end_candidate_fixes.CandidateRankingLossTest) ... ok
+test_default_behavior_constructs_train_val_and_test (tests.test_zind_end_to_end_candidate_fixes.SkipTestSplitLifecycleTest) ... ok
+test_resume_validates_active_split_contract (tests.test_zind_end_to_end_candidate_fixes.SkipTestSplitLifecycleTest) ... ok
+test_skip_test_never_resolves_or_constructs_test_split (tests.test_zind_end_to_end_candidate_fixes.SkipTestSplitLifecycleTest) ... ok
+test_all_four_source_combinations_are_independent (tests.test_zind_end_to_end_candidate_fixes.TeacherForcingSourceTest) ... ok
+test_legacy_flag_maps_to_gt_gt_and_conflicts_fail (tests.test_zind_end_to_end_candidate_fixes.TeacherForcingSourceTest) ... ok
+test_predicted_predicted_does_not_read_gt_guidance_or_candidates (tests.test_zind_end_to_end_candidate_fixes.TeacherForcingSourceTest) ... ok
+test_source_overrides_do_not_modify_each_other (tests.test_zind_end_to_end_candidate_fixes.TeacherForcingSourceTest) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.109s
+
+OK

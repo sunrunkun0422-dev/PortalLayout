@@ -1788,8 +1788,16 @@ def _data_contract(
     feature_dim: int,
     active_splits: Sequence[str],
 ) -> Dict[str, Any]:
+    manifest_contracts = {
+        split: getattr(datasets[split].base, "dataset_contract", None)
+        for split in active_splits
+    }
     return {
         "dataset": "ZInD_matching formatVersion=2 complete-room pairs",
+        **({"dataset": "ZInD-ObservablePairs-v1 exploratory internal monitor",
+            "manifest_dataset_contracts": manifest_contracts,
+            "manifest_sha256": {s: _sha256_file(manifests[s]) for s in active_splits}}
+           if any(manifest_contracts.values()) else {}),
         "active_splits": list(active_splits),
         "test_evaluation_enabled": "test" in active_splits,
         "manifests": {

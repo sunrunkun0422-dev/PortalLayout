@@ -1,0 +1,6 @@
+/home/feixia/anaconda3/envs/bi_layout/lib/python3.8/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+  warnings.warn(
+----------------------------------------------------------------------
+Ran 47 tests in 7.140s
+
+OK

@@ -1,0 +1,61 @@
+{
+  "calibration_status": "draft_train_only",
+  "counts": {
+    "all_panorama_combinations": 850243,
+    "connections": 106404,
+    "negative": 98299,
+    "positive": 41169,
+    "unknown": 112182
+  },
+  "house_count": 1260,
+  "human_verified_count": 0,
+  "input_audit": {
+    "duplicate_bare_pano_ids": 1,
+    "layout_complete_present": 54034,
+    "layout_raw_present": 54034,
+    "layout_visible_present": 51602,
+    "missing_metric_floors": 211,
+    "panoramas": 54034,
+    "primary": 26606,
+    "secondary": 27428
+  },
+  "model_forward_run": false,
+  "model_predictions_used_for_selection": false,
+  "pilot_count": 300,
+  "relation_scopes": {
+    "cross_complete_room": {
+      "negative": 76625,
+      "positive": 25789,
+      "unknown": 90157
+    },
+    "within_complete_partial": {
+      "negative": 21674,
+      "positive": 15380,
+      "unknown": 22025
+    }
+  },
+  "reselection": {
+    "changed_panorama_pair": 9273,
+    "positive_connections_compared": 15591,
+    "primary_nearest_proxy_pass": 13172,
+    "reselected_proxy_pass": 14853
+  },
+  "selected_pair_count": 251650,
+  "split": "train",
+  "status": "auto_proposed_pending_review",
+  "test_data_accessed": false,
+  "version": "ZInD-ObservablePairs-v1",
+  "view_counts": {
+    "all": 251650,
+    "auto_observable": 35659,
+    "core_verified": 0,
+    "cross_complete_room": 192571,
+    "geometry_negative": 98299,
+    "geometry_positive": 41169,
+    "geometry_unknown": 112182,
+    "gt_candidate_diagnostic": 41169,
+    "hard_or_ambiguous": 215991,
+    "pending_review": 251650,
+    "within_complete_partial": 59079
+  }
+}

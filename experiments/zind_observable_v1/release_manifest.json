@@ -1,0 +1,164 @@
+{
+  "dataset": "ZInD-ObservablePairs-v1",
+  "build": "train_auto_v2",
+  "master_rows": 251650,
+  "master_sha256": "0eba445d9c0d3db169a5b12deef1a0028501cd0700730c821e13ccef686f6854",
+  "ordered_master_shards": [
+    {
+      "file": "dataset/master_shards/part-001.jsonl.gz",
+      "sha256": "958139c449826542e97269384420a54bfbc04a416a326ed8f3f2fd3c7c99be8e",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-002.jsonl.gz",
+      "sha256": "6df90c89456e34467e0601868639232f221fb9acfedda487e53b0ed1bd0f8053",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-003.jsonl.gz",
+      "sha256": "faaf4ebe9fdfa21e5c43b6d76287666a9fb44f5558fe066456cd5a740f6feb5c",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-004.jsonl.gz",
+      "sha256": "6e2b14580c63918214f903c623ec1b71c3d6fa937a36505f15d884f5fda71395",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-005.jsonl.gz",
+      "sha256": "407f634b4a123ee737b5814afb4041b0b061f8764467e9650c50ec5a44f51739",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-006.jsonl.gz",
+      "sha256": "7cf8b507fc691688d5ed6ebbd50f84f0672106d19545dd1f7066421a22a0970c",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-007.jsonl.gz",
+      "sha256": "55d626b1c424d56658570511da1c0938b83adfce229379863518df1fcd26c3c9",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-008.jsonl.gz",
+      "sha256": "18f8a5d21058b21f3c946564235c383b923629a0fc9120e260b6e2fe87fe97ce",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-009.jsonl.gz",
+      "sha256": "7111c65f4dc9c2be4d4334c2d51f60cef447600a91154064b2804048f4a92951",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-010.jsonl.gz",
+      "sha256": "70fe7b27cdf830d9521601e37f5fc100bbe5e9a98f56d83472df6d7e3f038c79",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-011.jsonl.gz",
+      "sha256": "58bff00517fe1e3b2999c173abc9b6c3ccf472af8d9f929c14dd68d7b1581641",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-012.jsonl.gz",
+      "sha256": "7a90a4f3546bcdcc9ec94e01aa488194bec6d6c9457be218023d1c7d6bd30dac",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-013.jsonl.gz",
+      "sha256": "fbbdce8a98e9989544df5e1b45a93b175bff58a2ba9d501b5798d86e59c139bc",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-014.jsonl.gz",
+      "sha256": "21955deb890732ce82665704193fc3bf75825d54a25ce78389c9b94071cf30ea",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-015.jsonl.gz",
+      "sha256": "fa82d4a0908e35a0b417a6faad7dccf68768fe08c4f640a7a9142185e17eceed",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-016.jsonl.gz",
+      "sha256": "d0f5d456ebf4293c9cdd223f0e4de347aa9e8302a882a458dcc412c9bdbe3eda",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-017.jsonl.gz",
+      "sha256": "19b984933d869ad0dd11e8c92d6b1c8cfa01beff0adb8817dfa5971d044c9002",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-018.jsonl.gz",
+      "sha256": "6e3e454a63f819565f3ef53b82c08a6688d3305c408fd80db18c456e181ff3b7",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-019.jsonl.gz",
+      "sha256": "e441d31a4737d22826150811a357c38376551c29e3641e3556fe4e7aa33cf1dc",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-020.jsonl.gz",
+      "sha256": "9ac04edc32f9bdc78a400437cb128fcc99e07ad33bd67f9d396870a575af693b",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-021.jsonl.gz",
+      "sha256": "c946157cbe0d0ead85649c8183e548e3e0ce2b65ed1bbbc86b041c18d3719a41",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-022.jsonl.gz",
+      "sha256": "18ca917bb1c322837d4276290465308ccbed18ff5508658cff3d5d5c439d9150",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-023.jsonl.gz",
+      "sha256": "b46132dbb4d98531d5ccb932abbdea15754dc91ee1603fa26e32d2eee6656de9",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-024.jsonl.gz",
+      "sha256": "cc4a3239b7e690f13c2e0fb1426372cbf11b728dcea68575a2bee07b31c6592b",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-025.jsonl.gz",
+      "sha256": "80cafd71aec0a803d60cb9b13089df06c95ad41cafd2592ee255932d6eb3613a",
+      "rows": 10000
+    },
+    {
+      "file": "dataset/master_shards/part-026.jsonl.gz",
+      "sha256": "5f72d743bbe3253c4452cc7c9ed69f96855e6fd0fda3ba13ff30677d0a61c0bc",
+      "rows": 1650
+    }
+  ],
+  "other_archives": [
+    {
+      "file": "dataset/connections.jsonl.gz",
+      "sha256": "46753ac460758541fb5a404e41ebafb5e2982b2de8a5368a4f6701f761c6cc5a",
+      "uncompressed_sha256": "2bddf8e18561c34716af7e358d973b49442f69286205805c84f13e56600b4e6a",
+      "bytes": 19683719
+    }
+  ],
+  "weights": {
+    "best.pt": {
+      "local_path": "checkpoints/End_To_End/zind_observable_v1/best1_balanced_seed123_20260910/best.pt",
+      "sha256": "863af5221762b30a13e09d4d2581ffebe8a56b58ba09e086e8b249ccd2e3c1b9",
+      "bytes": 418841781,
+      "uploaded": false
+    },
+    "last.pt": {
+      "local_path": "checkpoints/End_To_End/zind_observable_v1/best1_balanced_seed123_20260910/last.pt",
+      "sha256": "64ed2625c1a37e701360af8c8d5480fd383be9c6e53c8565aa56e149a8e19f90",
+      "bytes": 1255783884,
+      "uploaded": false
+    }
+  },
+  "original_rgb_uploaded": false,
+  "human_verified_count": 0,
+  "official_val_test_used": false,
+  "training_index_protocol": "Ordered actual training/monitor pair IDs published; full candidates regenerated from original ZInD annotations with prepare_zind_observable_training.py; original manifest hashes preserved."
+}

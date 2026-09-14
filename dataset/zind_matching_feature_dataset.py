@@ -130,6 +130,7 @@ class ZInDMatchingFeatureDataset(Dataset):
         if not all(isinstance(record, Mapping) for record in records):
             raise ValueError("every ZInD matching pair must be an object")
         self.records = records
+        self.dataset_contract = payload.get("datasetContract")
 
         self.split = str(payload.get("split") or self.manifest_path.stem)
         if self.split not in _VALID_SPLITS:
@@ -404,6 +405,21 @@ class ZInDMatchingFeatureDataset(Dataset):
     ) -> Tuple[Tuple[int, int], ...]:
         """Return every physically shared interface, preserving candidate IDs."""
         supervision = record["supervision"]
+        if "correspondence_pairs" in supervision:
+            # Versioned datasets can provide a verified offline GT set. Never
+            # re-mine it with this legacy loader's unrelated coordinate threshold.
+            pairs = tuple(tuple(pair) for pair in supervision["correspondence_pairs"])
+            if len(set(pairs)) != len(pairs) or any(
+                len(pair) != 2 or any(type(i) is not int for i in pair)
+                or not (0 <= pair[0] < len(record["candidates_a"]) and
+                        0 <= pair[1] < len(record["candidates_b"])) for pair in pairs
+            ):
+                raise ValueError("invalid explicit correspondence set")
+            if bool(pairs) != bool(supervision["is_match"]):
+                raise ValueError("explicit correspondence set contradicts adjacency")
+            if pairs and (int(supervision["target_candidate_a"]), int(supervision["target_candidate_b"])) not in pairs:
+                raise ValueError("primary target is missing from explicit GT set")
+            return pairs
         if not bool(supervision["is_match"]):
             return ()
         matches = []
@@ -479,7 +495,7 @@ class ZInDMatchingFeatureDataset(Dataset):
         image_path_b = self._normalize_path(record["image_b"])
         output: Dict[str, Any] = {
             "pair_id": pair_id,
-            "pair_type": "cross_complete_room_positive" if is_match else "cross_complete_room_negative",
+            "pair_type": str(record.get("relation_scope", "cross_complete_room")) + ("_positive" if is_match else "_negative"),
             "house_id": str(record["scene_id"]),
             "floor_id": str(record.get("floor_id", "")),
             "complete_room_id": "{}<->{}".format(

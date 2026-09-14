@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "master_sha256": "0eba445d9c0d3db169a5b12deef1a0028501cd0700730c821e13ccef686f6854",
+  "review_packages": {
+    "stage1_blind": {
+      "pairs": 300,
+      "distinct_rgb_assets": 597
+    },
+    "stage2_gt": {
+      "pairs": 300,
+      "distinct_rgb_assets": 597
+    }
+  },
+  "zip_sha256": {
+    "stage1_package.zip": "347d5b50d009ef9d68a15bade3c302183e0ad833a6d501683738b4c5ff76a411",
+    "stage2_package.zip": "ff1753810a3af2e1cf2d5907fa61fdb8326e1bd5ba12ba9dc8be810d7c13ea9b"
+  },
+  "local_report_links_valid": true,
+  "blind_fields_whitelisted": true,
+  "review_template_sha256": "5811301bbec682f75c4922a8fa8b19467902c332f933d0542f2cdd1e3221940c",
+  "human_reviews_completed": 0
+}
