@@ -1,0 +1,79 @@
+{
+  "schema_version": "research10.source-candidates.v1",
+  "method": "portallayout",
+  "coordinate_contract": {
+    "frame_id": "bi_panorama_local_xz_v1",
+    "units": "camera_height_normalized",
+    "transform_direction": "B_to_A",
+    "equation": "p_A=T_B_to_A*p_B"
+  },
+  "pairs": [
+    {
+      "floor_uid": "floor_427711a3d766604832c9b379",
+      "observation_a": "view_6c789bc691c0911a0a485fc2",
+      "observation_b": "view_c3b971dc3ca04565f1a71455",
+      "candidates": []
+    },
+    {
+      "floor_uid": "floor_427711a3d766604832c9b379",
+      "observation_a": "view_6c789bc691c0911a0a485fc2",
+      "observation_b": "view_c9382004c694be77e3bf08ff",
+      "candidates": [
+        {
+          "source_candidate_id": "fcccdcddb92de6a8ed3f7e745fea9204c0cbfb02f370f2286bfeb972ed7684ae",
+          "source_opening_a": "opening_126b2914d9eb6a1c7d55f669",
+          "source_opening_b": "opening_a9256c46d6119dddaba6b0f0",
+          "conversion_status": "converted",
+          "reason": null,
+          "T_B_to_A": [
+            [
+              0.028594248683148447,
+              -0.35463732161445705,
+              1.6203778923001078
+            ],
+            [
+              0.35463732161445705,
+              0.028594248683148447,
+              1.4096822600223962
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "source_candidate_id": "0180852370a2c4692280ee83ca34bdd12580bc4453e1e785ed9cb83bbb3ab347",
+          "source_opening_a": "opening_126b2914d9eb6a1c7d55f669",
+          "source_opening_b": "opening_a9256c46d6119dddaba6b0f0",
+          "conversion_status": "converted",
+          "reason": null,
+          "T_B_to_A": [
+            [
+              -0.028594248683148492,
+              0.35463732161445705,
+              2.3230535339168217
+            ],
+            [
+              -0.35463732161445705,
+              -0.028594248683148492,
+              -0.8735111755286638
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "floor_uid": "floor_427711a3d766604832c9b379",
+      "observation_a": "view_c3b971dc3ca04565f1a71455",
+      "observation_b": "view_c9382004c694be77e3bf08ff",
+      "candidates": []
+    }
+  ]
+}

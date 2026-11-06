@@ -12,19 +12,19 @@ from tools.audit_zind_portal_geometry import (
     load_inputs,
     parse_args as parse_audit_args,
 )
-from utils.candidate_local_portal_geometry import (
+from portallayout.geometry.candidate_local_portal_geometry import (
     CandidateLocalPortalConfig,
     bi_to_zind,
     estimate_candidate_local_portal_geometry,
     panorama_ray,
 )
-from utils.joint_layout import build_joint_layout_from_endpoints
+from portallayout.geometry.joint_layout import build_joint_layout_from_endpoints
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 AUDIT_ROOT = (
     REPO_ROOT
-    / "src/output/zind_room_group_debug/t3_portal_geometry_audit_0665_floor03"
+    / "outputs/zind_room_group_debug/t3_portal_geometry_audit_0665_floor03"
 )
 
 

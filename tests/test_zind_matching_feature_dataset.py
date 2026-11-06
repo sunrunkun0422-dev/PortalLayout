@@ -6,9 +6,9 @@ from tempfile import TemporaryDirectory
 import numpy as np
 import torch
 
-from dataset.zind_bipair_dataset import collate_zind_bipair
-from dataset.zind_matching_feature_dataset import ZInDMatchingFeatureDataset
-from models.cross_scene_matcher import OpeningGuidedCrossAttentionMatcher
+from portallayout.datasets.zind_bipair_dataset import collate_zind_bipair
+from portallayout.datasets.zind_matching_feature_dataset import ZInDMatchingFeatureDataset
+from portallayout.models.cross_scene_matcher import OpeningGuidedCrossAttentionMatcher
 from tools.train_zind_cross_scene_matcher import _forward_batch
 
 

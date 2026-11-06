@@ -26,8 +26,8 @@ from typing import Any, Dict, Iterable, List, Mapping, MutableMapping, Optional,
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_AUDIT_ROOT = REPO_ROOT / "experiments/zind_e2e_v3/g0_seed123/T5_candidate_recall/audit"
 DEFAULT_OUTPUT = DEFAULT_AUDIT_ROOT / "visual_audit"
-DEFAULT_VAL_MANIFEST = REPO_ROOT / "src/dataset/ZInD_matching/val.json"
-DEFAULT_FROZEN_VAL = REPO_ROOT / "src/output/zind_geometry_val_full/t3_frozen_m2"
+DEFAULT_VAL_MANIFEST = REPO_ROOT / "data/ZInD_matching/val.json"
+DEFAULT_FROZEN_VAL = REPO_ROOT / "outputs/zind_geometry_val_full/t3_frozen_m2"
 DEFAULT_T3 = REPO_ROOT / "checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T3/best.pt"
 
 EXPECTED_FUNNEL = {
@@ -880,7 +880,7 @@ def _plot_probability(ax: Any, room: Mapping[str, Any], target: Mapping[str, Any
     probability = room["opening_probability"].detach().cpu().numpy().astype(float)
     trace = room["candidate_trace"]
     token_count = int(room["token_count"])
-    config = trace["config"]
+    config = trace['portallayout.config']
     threshold = float(config["threshold"])
     if len(probability) != token_count:
         raise ValueError("probability/token_count mismatch")
@@ -1199,10 +1199,10 @@ def render(args: argparse.Namespace) -> int:
             trace = room["candidate_trace"]
             if int(trace["token_count"]) != token_count or int(room["token_count"]) != token_count:
                 raise ValueError("token_count disagreement")
-            threshold = float(trace["config"]["threshold"])
+            threshold = float(trace['portallayout.config']["threshold"])
             if abs(threshold - thresholds[pair_id]) > 1e-12:
                 raise ValueError("trace threshold disagrees with frozen prediction")
-            trace_configs[side] = trace["config"]
+            trace_configs[side] = trace['portallayout.config']
             if trace.get("production_parity") is not True:
                 raise ValueError("stored proposal trace lacks production parity")
         metrics = matcher_metrics(row, score, float(dustbin_evidence["shared_dustbin_logit"]))

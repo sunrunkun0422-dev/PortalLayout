@@ -6,7 +6,7 @@ from tempfile import TemporaryDirectory
 import numpy as np
 import torch
 
-from models.cross_scene_matcher import OpeningSignalHead
+from portallayout.models.cross_scene_matcher import OpeningSignalHead
 from tools.cache_zind_matching_features import _file_identity
 from tools.train_zind_matching_matcher import main
 
@@ -126,7 +126,7 @@ class TrainZInDMatchingMatcherTest(unittest.TestCase):
     def test_complete_smoke_train_and_test_contract(self):
         with TemporaryDirectory() as directory:
             root = Path(directory)
-            config = root / "config.yaml"
+            config = root / 'portallayout.config.yaml'
             config.write_text("model: fake\n", encoding="utf-8")
             backbone = root / "backbone.pt"
             backbone.write_bytes(b"frozen")

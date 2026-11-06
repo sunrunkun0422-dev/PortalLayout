@@ -22,11 +22,11 @@ def main():
  temporary.replace(target)
  for archive in m['other_archives']:
   source=a.release/archive['file'];assert digest(source)==archive['sha256']
-  relative=Path(archive['file']);dest=a.output/(relative.name[:-3] if relative.parts[0]=='dataset' else str(relative.with_suffix('')))
+  relative=Path(archive['file']);dest=a.output/(relative.name[:-3] if relative.parts[0]=='portallayout.datasets' else str(relative.with_suffix('')))
   dest.parent.mkdir(parents=True,exist_ok=True)
   with gzip.open(source,'rb') as fi,dest.open('wb') as fo:shutil.copyfileobj(fi,fo)
   assert digest(dest)==archive['uncompressed_sha256']
- for source in (a.release/'dataset').glob('*.json'):shutil.copyfile(source,a.output/source.name)
+ for source in (a.release/'portallayout.datasets').glob('*.json'):shutil.copyfile(source,a.output/source.name)
  shutil.copyfile(a.release/'dataset/all_combinations.jsonl.gz',a.output/'all_combinations.jsonl.gz')
  print('Restored',rows,'master records; SHA-256',h.hexdigest())
 if __name__=='__main__':main()

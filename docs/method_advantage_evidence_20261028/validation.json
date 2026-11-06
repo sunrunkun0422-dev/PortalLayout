@@ -1,0 +1,3037 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "house split fit/selection",
+      "passed": true
+    },
+    {
+      "name": "house split fit/calibration",
+      "passed": true
+    },
+    {
+      "name": "house split selection/calibration",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/021c92770e8d85936c1e75a161c014f3a4ff6d42b06e6cc9facd3094efb39722.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/0731650ca48337971d6ceaadbd07a43a584a18de2d72cd9ff0f04cf56b275a66.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/0ffaa623c242a307dac0c8be6dd670b17079f12b1e671821e4ab7923cf04143a.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/108e71af728dbd7beaaa3a8fb7a24d61e11231dd7a1686390bcd8562d0b24817.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/13ba11f97e954a254386ea223620429c31181d6d8f8e3413c61077ca12e56806.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/181ec1716c216809ffddd21dbeb4fd62b6123469625ce1bb6bb38f086cf2c671.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/1b668f55dca774d9258b59af623322c00118cde16288ad561a96063a8e9c4c4d.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/23d362263ee8d1e466e14e40e1145c50678147f094e18c647dceb60bc9acb017.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/25d4994b770e6fb3bc4bd1e09da90000ebfe23fe0d9f214b301481a0693de549.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/2c4d99fd24f42cb805889b23872bdcde3c48aee01472260c6f7b67c1ee5379ea.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/2cb62a42671600c7c55dcb228f9134c2b8be9deed927cc3a9d79a022922c9e87.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/2f6d7c08124d3307207d2123a2a5381db746f80a11c0295527750d0ce8ca5cb4.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/395b58413159966983982802e927142e33869eb661594724fd5955f191eb79f1.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/3b0eee55816e6abb17d5fa2ee19fde9e0ad30d6bf2f383b668140a28ad21e9d6.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/3d8b33d9eeca0158dd2f3d9f036381c9ab76782e3ce26d4e778d55010c9d7564.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/3dc811f5e46022d6534b2f08058aa63bd9d971e98009b64e6a8e42b8196182e5.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/40f5730c7c5b26611e3a71096426dfc8196f06beae8ffefc6392dafeee3d2f9f.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/45bddf09f2232e6888c5673642385d1643cfbef52c1c470f387d0ffac8f2c4a1.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/46d7eb371e0b96fad492907e4c232d0b8ef8b1fb5f83d4e93c1d750be6d39d3b.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/5d74c450ab4d7a5e47128176c50b90fd76289f934173093f76d8f153ac4e6156.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/5f31bda40b6dce457a7393affbd0fd8c7e431a6b5dddefd10ca94d6a77cb8230.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/61d41293c56d3232132deb134275cb75d6f00daf56084df4690ae4c4d646ca24.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/643844207efe16cfa7366cf1f077b81b7faa0d53119d50a8315d2b2573e2ddd8.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/6ace8de605eaf80754656d221fe806a4d2346116c28ec2844c5169fa6d998bc6.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/6ca93e08308712b126eacb39c462a3b8a13b8ace7f920acaca7d13a6656c9ced.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/6dfd8b069bb14b6356e5743e9fdcf37ac20855c191df6b79ce40b02d524a545e.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/70df4b43d7eb7a510204b0284ecf3aeca314cfe9be26d344490ee91f8e0198ec.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/72049236785ca1bca891370eef3ef8ef5a4bcb27512ad5f246b79bf7fed253bd.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/72f046ff42f3e6027213157be0871f84a3ae1ce88d766626a85cb4a6d5164cb4.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/8181192f1fa0fd7ed544b35c34a17c5ceec2b476c74c7586fc65927b718bec58.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/86d9819ca5e8c0f9982ac179322ef53f945ea0cb0920f46cd19b8219d4615c11.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/8e9c3d3a7929bbb0123ef955ffebe73bb8585fa34b3efa012bbd2bc30c7b5f45.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/945dff16d8a8b1af706ddd1328dab248f8c8f260f884aa3f269fde6daddd7458.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/9461f4738ab55ea646237d58ec3c63b6e334fcd55c4da91c669ab3b78ad08ab1.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/995ed1cff147b73f090cd68da4eb6466c6974d518ad55eae6d03ecd0e3ae8b24.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/9aa3f485bc9cb64b5b3ebac7397c71a7885a672dfca5f6f5eed740eded511926.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/9c7d7b42864267f138394c063cf9a1ca6f9294659835131980f3e81639d1e7f2.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/a0c94b4e3609d310554825fa0982649f7edb72fbf1e1f82841badb8e1b0369d1.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/a43e0b01fdf2725b8feb8d7be0be8b2ab8272688bf310a8da96edec81144ffc9.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/ab88c8735204d7dc52c0db6bd1d9a05e5b58d91ea4cf18f04e4ff2e017693286.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/ad74b46eb794beaba878a06f38a1c0d6fb5b2b77745e85cfe617b5a571964f92.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/b21296f926fd60c67da196927a178084275ea152b0281878d51eee8a69248afb.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/b526427bad67237ffbac341d8312b705605c2ccc6d79d07003d63632a85c4250.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/b56c6ae73a89894c66444ebcf6501ca6de800615ce416b55281236e19fc37ff9.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/b698b42994dfaeafafb9821c94aaad9bca3a31d6a07013ed102eaeacf902ea82.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/b98b46164caaf471ccb6256f47a3b72206dd86915fe3ea5d6dd2bd20d307f531.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/bae20f7a1ea1fd996a5db06746e4d3b2ec00f2df09442de17af61450eed110e4.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/bafdd3e417e8f28d822e3814afabc92d1ef2a1b447ee37eafa102f646bd3f957.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/c559f9fb3c9a2a393ce1d8cdf712150e13d2c8923a1462aaec83e62d1fe51c6c.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/ca0dcb22240ddaadb414a65209064a0d30735c7784868b8e40ddf9521407ef5c.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/cb6675d058ea10532ffd2c2914f79422dede03a1b80c5a32c9ddb13031b262fd.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/d543a78337aaf5923ed4999824724eb26714f4680c17d8d8012c43e3498b5203.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/db2572d1fea675a6712a2d82ecc074f01fdae39f5e44415b0d2be216a79753c3.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/e7108c90b0a34cba8879f457d6e26a6c73b808deda3aefb16623a485d8ccb0e0.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/eba7e7cd8538daf98220039ac5c8d5409110663047dfefafcdc0ae7a6ebc52e8.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/f022910528ad8bc13d6c860da00b45a26e98c965cd11a3f37f6cf431cf846576.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/f1aee4be7a17279285b455fd9349d4026b364cff2ac8ff12814c814af86d1f6a.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/f73ceca598347f29529ee883eed0283363babe256e2cdf18184d378642b300ad.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/ff47ee328b75f3895d3b8738106193709ddf01e9dd8a8afbe5426d4f8b39a521.json",
+      "passed": true
+    },
+    {
+      "name": "raw_cache_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_verifier_20261025/pose_supervision/prediction_pairs/ff48fc707fc253571db472f673544a90ff298bc760842cc9a0f04dd229a14dec.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_0f63866e6e8f01b1afc782d4/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_0f63866e6e8f01b1afc782d4/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_0f63866e6e8f01b1afc782d4/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_7520f46f0ff781a58da7e59c/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_7520f46f0ff781a58da7e59c/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_7520f46f0ff781a58da7e59c/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_8aa2aee37af9a8ab4889d637/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_8aa2aee37af9a8ab4889d637/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_8aa2aee37af9a8ab4889d637/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_6c3d2585234ba92584aee59b/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_6c3d2585234ba92584aee59b/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_6c3d2585234ba92584aee59b/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_9317fdc1b178dd7c3c145bdc/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_9317fdc1b178dd7c3c145bdc/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_9317fdc1b178dd7c3c145bdc/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_b07055d3f6428509082511b1/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_b07055d3f6428509082511b1/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_b07055d3f6428509082511b1/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_2d03b0dc7d4970f087ec0881/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_2d03b0dc7d4970f087ec0881/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_2d03b0dc7d4970f087ec0881/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_c90cd468810f1d900b04a8da/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_c90cd468810f1d900b04a8da/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_c90cd468810f1d900b04a8da/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_f14bacfd8461cf07b47a5def/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_f14bacfd8461cf07b47a5def/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_f14bacfd8461cf07b47a5def/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_74d91000a4a61f446d630cd7/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_74d91000a4a61f446d630cd7/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_74d91000a4a61f446d630cd7/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_2c7b3e409bf036e32b50c2ce/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_2c7b3e409bf036e32b50c2ce/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_2c7b3e409bf036e32b50c2ce/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_be3ad4b2154f5d332b0a3e4a/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_be3ad4b2154f5d332b0a3e4a/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_be3ad4b2154f5d332b0a3e4a/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_1a10217fafd940c0ed55d9d0/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_1a10217fafd940c0ed55d9d0/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_1a10217fafd940c0ed55d9d0/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_bd0d924cb003e128abfb16d1/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_bd0d924cb003e128abfb16d1/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_bd0d924cb003e128abfb16d1/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_7156dc7324fbeea662be1cd4/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_7156dc7324fbeea662be1cd4/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_7156dc7324fbeea662be1cd4/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_102ecd8ff9b82b5489a8ce26/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_102ecd8ff9b82b5489a8ce26/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_102ecd8ff9b82b5489a8ce26/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_3ea4cd7af3bc665222b06dbe/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_3ea4cd7af3bc665222b06dbe/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_3ea4cd7af3bc665222b06dbe/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_b9faff8fead8ddffaac39dba/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_b9faff8fead8ddffaac39dba/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_b9faff8fead8ddffaac39dba/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_b011d13fd8df85531d5dd2e8/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_b011d13fd8df85531d5dd2e8/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_b011d13fd8df85531d5dd2e8/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_61631513cb28c9b04c8a2bc1/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_61631513cb28c9b04c8a2bc1/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_61631513cb28c9b04c8a2bc1/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_a6cb3421ad37df56ad5d0a25/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_a6cb3421ad37df56ad5d0a25/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_a6cb3421ad37df56ad5d0a25/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_153a8807f99593dec8bebe3c/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_153a8807f99593dec8bebe3c/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_153a8807f99593dec8bebe3c/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_6918c97456a333fa9870570e/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_6918c97456a333fa9870570e/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_6918c97456a333fa9870570e/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_91cb8826a300d9f3ebb6ca83/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_91cb8826a300d9f3ebb6ca83/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_91cb8826a300d9f3ebb6ca83/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_1f512163a842f20fbbc7c80f/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_1f512163a842f20fbbc7c80f/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_1f512163a842f20fbbc7c80f/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_cd37238d4595cb75cc08cfa7/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_cd37238d4595cb75cc08cfa7/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_cd37238d4595cb75cc08cfa7/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_9f6d2a3a3760fb88d654f31f/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_9f6d2a3a3760fb88d654f31f/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_9f6d2a3a3760fb88d654f31f/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_80d83f39a0d0bbef99e62ff2/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_80d83f39a0d0bbef99e62ff2/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_80d83f39a0d0bbef99e62ff2/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_92635bbd667ef1f4352011f8/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_92635bbd667ef1f4352011f8/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_92635bbd667ef1f4352011f8/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_3cb9c46a9f30f362b2146607/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_3cb9c46a9f30f362b2146607/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_3cb9c46a9f30f362b2146607/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_b238e95e6947336d1c8f13c1/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_b238e95e6947336d1c8f13c1/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_b238e95e6947336d1c8f13c1/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_02c0241194a4e63fbad68220/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_02c0241194a4e63fbad68220/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_02c0241194a4e63fbad68220/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_f9fa550274ed291d51e67a09/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_f9fa550274ed291d51e67a09/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_f9fa550274ed291d51e67a09/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_d854e15c63afe5d5df804c7a/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_d854e15c63afe5d5df804c7a/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_d854e15c63afe5d5df804c7a/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_67253f7e0563d01fb16f28e5/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_67253f7e0563d01fb16f28e5/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_67253f7e0563d01fb16f28e5/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_666d65fcce83779ff38e9035/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_666d65fcce83779ff38e9035/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_666d65fcce83779ff38e9035/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_e4f746698b55c72c517ecbab/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_e4f746698b55c72c517ecbab/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_e4f746698b55c72c517ecbab/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_f4418b98b47599eee0fa59af/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_f4418b98b47599eee0fa59af/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_f4418b98b47599eee0fa59af/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_bb972da3ac59d6e12cae14d6/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_bb972da3ac59d6e12cae14d6/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_bb972da3ac59d6e12cae14d6/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_d94ab21758472e3f435d2794/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_d94ab21758472e3f435d2794/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_d94ab21758472e3f435d2794/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_56d52dddb42e1ebd0b131b40/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_56d52dddb42e1ebd0b131b40/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_56d52dddb42e1ebd0b131b40/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_78f86eb0eda006494ab42afd/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_78f86eb0eda006494ab42afd/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_78f86eb0eda006494ab42afd/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_3112bf984b4be345641f2983/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_3112bf984b4be345641f2983/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_3112bf984b4be345641f2983/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_a71328a43f233a1478b275ac/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_a71328a43f233a1478b275ac/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_a71328a43f233a1478b275ac/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_19064ab4515c8179fa9ebef8/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_19064ab4515c8179fa9ebef8/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_19064ab4515c8179fa9ebef8/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_af7630c78438e7fa37939592/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_af7630c78438e7fa37939592/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_af7630c78438e7fa37939592/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_a8f682266b33021442689cd4/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_a8f682266b33021442689cd4/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_a8f682266b33021442689cd4/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_f2b872e9b0b5efa5ed21dba8/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_f2b872e9b0b5efa5ed21dba8/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_f2b872e9b0b5efa5ed21dba8/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_70fdcbd54a8bf40ef0801e8b/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_70fdcbd54a8bf40ef0801e8b/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_70fdcbd54a8bf40ef0801e8b/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_613a83e984e35bcd8b75a433/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_613a83e984e35bcd8b75a433/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_613a83e984e35bcd8b75a433/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_5654d0f63b638b1c4604eb5e/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_5654d0f63b638b1c4604eb5e/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_5654d0f63b638b1c4604eb5e/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_187a051a13889606c4d6c2b8/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_187a051a13889606c4d6c2b8/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_187a051a13889606c4d6c2b8/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_e24ec4b67d8d47236b6239f3/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_e24ec4b67d8d47236b6239f3/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_e24ec4b67d8d47236b6239f3/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_1e0bac41462149f8544fc9e1/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_1e0bac41462149f8544fc9e1/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_1e0bac41462149f8544fc9e1/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_d08a1bc47177fa0b6bdccb41/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_d08a1bc47177fa0b6bdccb41/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_d08a1bc47177fa0b6bdccb41/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_00b1200525a3dd38093a16c8/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_00b1200525a3dd38093a16c8/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_00b1200525a3dd38093a16c8/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_5db4c426bc22afcf521d22d9/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_5db4c426bc22afcf521d22d9/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_5db4c426bc22afcf521d22d9/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_51fe53ed945b4afb9f30425c/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_51fe53ed945b4afb9f30425c/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_51fe53ed945b4afb9f30425c/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_45bcf94c0ef6efe44e259b71/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_45bcf94c0ef6efe44e259b71/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_45bcf94c0ef6efe44e259b71/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_bb6687a3575f62badc29712d/floor_gt.json",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_bb6687a3575f62badc29712d/observations_gt.jsonl",
+      "passed": true
+    },
+    {
+      "name": "annotation_hashes /home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD-FloorSet-v1/train_20261021/labels/floor_bb6687a3575f62badc29712d/portal_links.jsonl",
+      "passed": true
+    },
+    {
+      "name": "R3 checkpoint",
+      "passed": true
+    },
+    {
+      "name": "V0 frozen weights",
+      "passed": true
+    },
+    {
+      "name": "V0 frozen workpoint policy",
+      "passed": true
+    },
+    {
+      "name": "V0 workpoint policy binding",
+      "passed": true
+    },
+    {
+      "name": "V0 infeasible workpoint",
+      "passed": true
+    },
+    {
+      "name": "V1 frozen weights",
+      "passed": true
+    },
+    {
+      "name": "V1 frozen workpoint policy",
+      "passed": true
+    },
+    {
+      "name": "V1 workpoint policy binding",
+      "passed": true
+    },
+    {
+      "name": "V1 infeasible workpoint",
+      "passed": true
+    },
+    {
+      "name": "weak labels",
+      "passed": true
+    },
+    {
+      "name": "cache snapshot binding",
+      "passed": true
+    },
+    {
+      "name": "frontend contract fingerprint",
+      "passed": true
+    },
+    {
+      "name": "review package binding",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_02c0241194a4e63fbad68220",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_0f63866e6e8f01b1afc782d4",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_102ecd8ff9b82b5489a8ce26",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_153a8807f99593dec8bebe3c",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_19064ab4515c8179fa9ebef8",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_1a10217fafd940c0ed55d9d0",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_1f512163a842f20fbbc7c80f",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_2c7b3e409bf036e32b50c2ce",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_2d03b0dc7d4970f087ec0881",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_3112bf984b4be345641f2983",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_3cb9c46a9f30f362b2146607",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_3ea4cd7af3bc665222b06dbe",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_56d52dddb42e1ebd0b131b40",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_613a83e984e35bcd8b75a433",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_61631513cb28c9b04c8a2bc1",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_666d65fcce83779ff38e9035",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_67253f7e0563d01fb16f28e5",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_6918c97456a333fa9870570e",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_6c3d2585234ba92584aee59b",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_70fdcbd54a8bf40ef0801e8b",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_7156dc7324fbeea662be1cd4",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_74d91000a4a61f446d630cd7",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_7520f46f0ff781a58da7e59c",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_78f86eb0eda006494ab42afd",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_80d83f39a0d0bbef99e62ff2",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_8aa2aee37af9a8ab4889d637",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_91cb8826a300d9f3ebb6ca83",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_92635bbd667ef1f4352011f8",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_9317fdc1b178dd7c3c145bdc",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_9f6d2a3a3760fb88d654f31f",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_a6cb3421ad37df56ad5d0a25",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_a71328a43f233a1478b275ac",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_a8f682266b33021442689cd4",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_af7630c78438e7fa37939592",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_b011d13fd8df85531d5dd2e8",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_b07055d3f6428509082511b1",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_b238e95e6947336d1c8f13c1",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_b9faff8fead8ddffaac39dba",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_bb972da3ac59d6e12cae14d6",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_bd0d924cb003e128abfb16d1",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_be3ad4b2154f5d332b0a3e4a",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_c90cd468810f1d900b04a8da",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_cd37238d4595cb75cc08cfa7",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_d854e15c63afe5d5df804c7a",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_d94ab21758472e3f435d2794",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_e4f746698b55c72c517ecbab",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_f14bacfd8461cf07b47a5def",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_f2b872e9b0b5efa5ed21dba8",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_f4418b98b47599eee0fa59af",
+      "passed": true
+    },
+    {
+      "name": "geometry fingerprint floor_f9fa550274ed291d51e67a09",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s1p0/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s1p0/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s1p0/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s1p0/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s1p0/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s1p0/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s1p0/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s1p0/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s1p0/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s1p0/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s1p0/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s1p0/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s1p0/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s1p0/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s1p0/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s1p0/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s1p0/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s1p0/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s1p0/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s1p0/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s1p0/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s1p0/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s1p0/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s1p0/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s1p0/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s1p0/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s1p0/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s1p0/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s1p0/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s1p0/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s1p0/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s1p0/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p5/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p5/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p5/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p5/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p5/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p5/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p5/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p5/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p5/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p5/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p5/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p5/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p5/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p5/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p5/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p5/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p5/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p5/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p5/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p5/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p5/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p5/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p5/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p5/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p5/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p5/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p5/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p5/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p5/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p5/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p5/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p5/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p0/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p0/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p0/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p0/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p0/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p0/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p0/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p0/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p0/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p0/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p0/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p0/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p0/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p0/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p0/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p0/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p0/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p0/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p0/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p0/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p0/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p0/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p0/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p0/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p0/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p0/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p0/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p0/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p0/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p0/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "dominant_wall_s0p0/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV dominant_wall_s0p0/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s1p0/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s1p0/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s1p0/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s1p0/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s1p0/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s1p0/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s1p0/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s1p0/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s1p0/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s1p0/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s1p0/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s1p0/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s1p0/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s1p0/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s1p0/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s1p0/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s1p0/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s1p0/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s1p0/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s1p0/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s1p0/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s1p0/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s1p0/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s1p0/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s1p0/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s1p0/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s1p0/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s1p0/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s1p0/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s1p0/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s1p0/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s1p0/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p5/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p5/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p5/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p5/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p5/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p5/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p5/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p5/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p5/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p5/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p5/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p5/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p5/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p5/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p5/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p5/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p5/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p5/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p5/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p5/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p5/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p5/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p5/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p5/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p5/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p5/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p5/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p5/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p5/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p5/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p5/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p5/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p0/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p0/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p0/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p0/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p0/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p0/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p0/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p0/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p0/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p0/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p0/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p0/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p0/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p0/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p0/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p0/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p0/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p0/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p0/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p0/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p0/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p0/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p0/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p0/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p0/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p0/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p0/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p0/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p0/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p0/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "raw_depth_s0p0/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV raw_depth_s0p0/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s1p0/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s1p0/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s1p0/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s1p0/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s1p0/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s1p0/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s1p0/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s1p0/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s1p0/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s1p0/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s1p0/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s1p0/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s1p0/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s1p0/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s1p0/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s1p0/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s1p0/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s1p0/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s1p0/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s1p0/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s1p0/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s1p0/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s1p0/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s1p0/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s1p0/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s1p0/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s1p0/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s1p0/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s1p0/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s1p0/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s1p0/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s1p0/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p5/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p5/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p5/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p5/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p5/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p5/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p5/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p5/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p5/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p5/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p5/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p5/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p5/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p5/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p5/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p5/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p5/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p5/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p5/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p5/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p5/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p5/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p5/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p5/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p5/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p5/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p5/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p5/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p5/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p5/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p5/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p5/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p0/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p0/fit/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p0/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p0/fit/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p0/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p0/fit/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p0/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p0/fit/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p0/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p0/fit/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p0/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p0/fit/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p0/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p0/fit/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p0/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p0/fit/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p0/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p0/selection/r3/overall",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p0/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p0/selection/r3/cross_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p0/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p0/selection/r3/same_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p0/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p0/selection/r3/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p0/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p0/selection/weak/overall",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p0/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p0/selection/weak/cross_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p0/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p0/selection/weak/same_room",
+      "passed": true
+    },
+    {
+      "name": "local_m2_s0p0/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "CSV local_m2_s0p0/selection/weak/unknown_room",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/A_V0_rank/overall_iou",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/A_V0_rank/localization_coverage",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/A_V0_rank/translation_error_cm",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/A_V0_rank/rotation_error_degrees",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/A_V0_rank/wall_f1",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/A_V0_rank/junction_f1",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/A_V0_rank/wall_distance_cm",
+      "passed": true
+    },
+    {
+      "name": "failures selectionA_V0_rank",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/B_V1_rank/overall_iou",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/B_V1_rank/localization_coverage",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/B_V1_rank/translation_error_cm",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/B_V1_rank/rotation_error_degrees",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/B_V1_rank/wall_f1",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/B_V1_rank/junction_f1",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/B_V1_rank/wall_distance_cm",
+      "passed": true
+    },
+    {
+      "name": "failures selectionB_V1_rank",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/C_V0_filter/overall_iou",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/C_V0_filter/localization_coverage",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/C_V0_filter/translation_error_cm",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/C_V0_filter/rotation_error_degrees",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/C_V0_filter/wall_f1",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/C_V0_filter/junction_f1",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/C_V0_filter/wall_distance_cm",
+      "passed": true
+    },
+    {
+      "name": "failures selectionC_V0_filter",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/D_V1_filter/overall_iou",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/D_V1_filter/localization_coverage",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/D_V1_filter/translation_error_cm",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/D_V1_filter/rotation_error_degrees",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/D_V1_filter/wall_f1",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/D_V1_filter/junction_f1",
+      "passed": true
+    },
+    {
+      "name": "metrics selection/D_V1_filter/wall_distance_cm",
+      "passed": true
+    },
+    {
+      "name": "failures selectionD_V1_filter",
+      "passed": true
+    },
+    {
+      "name": "paired floor sets selection",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/A_V0_rank/overall_iou",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/A_V0_rank/localization_coverage",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/A_V0_rank/translation_error_cm",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/A_V0_rank/rotation_error_degrees",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/A_V0_rank/wall_f1",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/A_V0_rank/junction_f1",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/A_V0_rank/wall_distance_cm",
+      "passed": true
+    },
+    {
+      "name": "failures calibrationA_V0_rank",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/B_V1_rank/overall_iou",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/B_V1_rank/localization_coverage",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/B_V1_rank/translation_error_cm",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/B_V1_rank/rotation_error_degrees",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/B_V1_rank/wall_f1",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/B_V1_rank/junction_f1",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/B_V1_rank/wall_distance_cm",
+      "passed": true
+    },
+    {
+      "name": "failures calibrationB_V1_rank",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/C_V0_filter/overall_iou",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/C_V0_filter/localization_coverage",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/C_V0_filter/translation_error_cm",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/C_V0_filter/rotation_error_degrees",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/C_V0_filter/wall_f1",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/C_V0_filter/junction_f1",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/C_V0_filter/wall_distance_cm",
+      "passed": true
+    },
+    {
+      "name": "failures calibrationC_V0_filter",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/D_V1_filter/overall_iou",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/D_V1_filter/localization_coverage",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/D_V1_filter/translation_error_cm",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/D_V1_filter/rotation_error_degrees",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/D_V1_filter/wall_f1",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/D_V1_filter/junction_f1",
+      "passed": true
+    },
+    {
+      "name": "metrics calibration/D_V1_filter/wall_distance_cm",
+      "passed": true
+    },
+    {
+      "name": "failures calibrationD_V1_filter",
+      "passed": true
+    },
+    {
+      "name": "paired floor sets calibration",
+      "passed": true
+    },
+    {
+      "name": "coverage A_V0_rank",
+      "passed": true
+    },
+    {
+      "name": "coverage B_V1_rank",
+      "passed": true
+    },
+    {
+      "name": "coverage C_V0_filter",
+      "passed": true
+    },
+    {
+      "name": "coverage D_V1_filter",
+      "passed": true
+    },
+    {
+      "name": "edge counts selectionA_V0_rank",
+      "passed": true
+    },
+    {
+      "name": "edge counts selectionB_V1_rank",
+      "passed": true
+    },
+    {
+      "name": "edge counts selectionC_V0_filter",
+      "passed": true
+    },
+    {
+      "name": "edge counts selectionD_V1_filter",
+      "passed": true
+    },
+    {
+      "name": "edge counts calibrationA_V0_rank",
+      "passed": true
+    },
+    {
+      "name": "edge counts calibrationB_V1_rank",
+      "passed": true
+    },
+    {
+      "name": "edge counts calibrationC_V0_filter",
+      "passed": true
+    },
+    {
+      "name": "edge counts calibrationD_V1_filter",
+      "passed": true
+    },
+    {
+      "name": "AP R1",
+      "passed": true
+    },
+    {
+      "name": "AP R2",
+      "passed": true
+    },
+    {
+      "name": "AP R3",
+      "passed": true
+    },
+    {
+      "name": "AP R4",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_19064ab4515c8179fa9ebef8/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_19064ab4515c8179fa9ebef8/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_19064ab4515c8179fa9ebef8/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_19064ab4515c8179fa9ebef8/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_3112bf984b4be345641f2983/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_3112bf984b4be345641f2983/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_3112bf984b4be345641f2983/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_3112bf984b4be345641f2983/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_56d52dddb42e1ebd0b131b40/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_56d52dddb42e1ebd0b131b40/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_56d52dddb42e1ebd0b131b40/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_56d52dddb42e1ebd0b131b40/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_613a83e984e35bcd8b75a433/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_613a83e984e35bcd8b75a433/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_613a83e984e35bcd8b75a433/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_613a83e984e35bcd8b75a433/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_70fdcbd54a8bf40ef0801e8b/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_70fdcbd54a8bf40ef0801e8b/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_70fdcbd54a8bf40ef0801e8b/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_70fdcbd54a8bf40ef0801e8b/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_78f86eb0eda006494ab42afd/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_78f86eb0eda006494ab42afd/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_78f86eb0eda006494ab42afd/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_78f86eb0eda006494ab42afd/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_a71328a43f233a1478b275ac/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_a71328a43f233a1478b275ac/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_a71328a43f233a1478b275ac/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_a71328a43f233a1478b275ac/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_a8f682266b33021442689cd4/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_a8f682266b33021442689cd4/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_a8f682266b33021442689cd4/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_a8f682266b33021442689cd4/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_af7630c78438e7fa37939592/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_af7630c78438e7fa37939592/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_af7630c78438e7fa37939592/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_af7630c78438e7fa37939592/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_f2b872e9b0b5efa5ed21dba8/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_f2b872e9b0b5efa5ed21dba8/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_f2b872e9b0b5efa5ed21dba8/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_f2b872e9b0b5efa5ed21dba8/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_00b1200525a3dd38093a16c8/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_00b1200525a3dd38093a16c8/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_00b1200525a3dd38093a16c8/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_00b1200525a3dd38093a16c8/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_187a051a13889606c4d6c2b8/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_187a051a13889606c4d6c2b8/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_187a051a13889606c4d6c2b8/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_187a051a13889606c4d6c2b8/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_1e0bac41462149f8544fc9e1/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_1e0bac41462149f8544fc9e1/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_1e0bac41462149f8544fc9e1/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_1e0bac41462149f8544fc9e1/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_45bcf94c0ef6efe44e259b71/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_45bcf94c0ef6efe44e259b71/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_45bcf94c0ef6efe44e259b71/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_45bcf94c0ef6efe44e259b71/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_51fe53ed945b4afb9f30425c/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_51fe53ed945b4afb9f30425c/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_51fe53ed945b4afb9f30425c/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_51fe53ed945b4afb9f30425c/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_5654d0f63b638b1c4604eb5e/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_5654d0f63b638b1c4604eb5e/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_5654d0f63b638b1c4604eb5e/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_5654d0f63b638b1c4604eb5e/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_5db4c426bc22afcf521d22d9/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_5db4c426bc22afcf521d22d9/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_5db4c426bc22afcf521d22d9/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_5db4c426bc22afcf521d22d9/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_bb6687a3575f62badc29712d/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_bb6687a3575f62badc29712d/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_bb6687a3575f62badc29712d/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_bb6687a3575f62badc29712d/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_d08a1bc47177fa0b6bdccb41/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_d08a1bc47177fa0b6bdccb41/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_d08a1bc47177fa0b6bdccb41/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_d08a1bc47177fa0b6bdccb41/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_e24ec4b67d8d47236b6239f3/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_e24ec4b67d8d47236b6239f3/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_e24ec4b67d8d47236b6239f3/floor_result.json",
+      "passed": true
+    },
+    {
+      "name": "case link /home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_e24ec4b67d8d47236b6239f3/floor_result.json",
+      "passed": true
+    }
+  ],
+  "count": 756,
+  "limitations": [
+    "No new training/inference",
+    "No raw polygon metric recomputation",
+    "No pair-rank AP recomputation",
+    "Frontend tensors not fully rehashed",
+    "Cross-room edge categories sourced from frozen summary; all-edge totals independently recomputed"
+  ]
+}

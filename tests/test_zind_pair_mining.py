@@ -6,7 +6,7 @@ from tempfile import TemporaryDirectory
 
 import numpy as np
 
-from dataset.zind_pair_mining import (
+from portallayout.datasets.zind_pair_mining import (
     interface_token_interval,
     mine_zind_adjacent_pairs,
     mine_zind_matching_records,

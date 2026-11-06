@@ -10,7 +10,7 @@ from tools.preflight_zind_bev_verifier import (
     house_split,
     reject_test_path,
 )
-from utils.candidate_conditioned_verifier import (
+from portallayout.utils.candidate_conditioned_verifier import (
     endpoint_consistency,
     manifest_target_pair,
     pad_candidate_rows,
@@ -18,7 +18,7 @@ from utils.candidate_conditioned_verifier import (
     stable_topn,
     transform_points,
 )
-from utils.candidate_local_portal_geometry import (
+from portallayout.geometry.candidate_local_portal_geometry import (
     estimate_candidate_local_portal_geometry,
 )
 

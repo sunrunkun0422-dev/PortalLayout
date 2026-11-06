@@ -15,12 +15,12 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from dataset.zind_pair_mining import mine_zind_matching_records
+from portallayout.datasets.zind_pair_mining import mine_zind_matching_records
 
 
 DEFAULT_ZIND_ROOT = REPO_ROOT.parent / "zind/data"
 DEFAULT_PARTITION = REPO_ROOT.parent / "zind/zind_partition.json"
-DEFAULT_OUTPUT = REPO_ROOT / "src/dataset/ZInD_matching"
+DEFAULT_OUTPUT = REPO_ROOT / "data/ZInD_matching"
 
 
 def parse_args() -> argparse.Namespace:

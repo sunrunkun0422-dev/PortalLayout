@@ -25,15 +25,15 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from models.cross_scene_matcher import (  # noqa: E402
+from portallayout.models.cross_scene_matcher import (  # noqa: E402
     circular_interval_iou,
     opening_probabilities_to_intervals,
     recall_topk_opening_intervals,
 )
 
 
-DEFAULT_FROZEN_ROOT = REPO_ROOT / "src/output/zind_geometry_val_full/t3_frozen_m2"
-DEFAULT_VAL_MANIFEST = REPO_ROOT / "src/dataset/ZInD_matching/val.json"
+DEFAULT_FROZEN_ROOT = REPO_ROOT / "outputs/zind_geometry_val_full/t3_frozen_m2"
+DEFAULT_VAL_MANIFEST = REPO_ROOT / "data/ZInD_matching/val.json"
 DEFAULT_OUTPUT = REPO_ROOT / "experiments/zind_e2e_v3/g0_seed123/T4_recall/preflight/recall_audit"
 
 
@@ -261,7 +261,7 @@ def _audit_proposals(records, per_pair, artifacts):
             type_totals[interface] += 1
             type_recalled[interface] += int(hit)
             if config["family"] == "P0":
-                p0_recall_parity += int(hit == bool(per_pair[pair_id]["evaluation"]["gt_candidate_recalled"]))
+                p0_recall_parity += int(hit == bool(per_pair[pair_id]['portallayout.evaluation']["gt_candidate_recalled"]))
         rows.append({
             **config,
             **FIXED_PROPOSAL_DEFAULTS,
@@ -318,7 +318,7 @@ def _audit_scores(records, per_pair, artifacts):
         pair_id = record["id"]
         report = per_pair[pair_id]
         artifact = artifacts[pair_id]
-        evaluation = report["evaluation"]
+        evaluation = report['portallayout.evaluation']
         is_match = bool(record["supervision"]["is_match"])
         match_score = float(artifact["pair_match_probability"])
         no_match_score = float(artifact["pair_no_match_probability"])
@@ -475,11 +475,11 @@ def main(argv: Sequence[str] | None = None) -> int:
         json.dumps(proposal_config, sort_keys=True, separators=(",", ":")).encode()
     ).hexdigest()
     positive = sum(bool(record["supervision"]["is_match"]) for record in records)
-    recalled = sum(bool(per_pair[record["id"]]["evaluation"]["gt_candidate_recalled"]) for record in records)
-    selected_correct = sum(bool(per_pair[record["id"]]["evaluation"]["selected_candidate_correct"]) for record in records)
+    recalled = sum(bool(per_pair[record["id"]]['portallayout.evaluation']["gt_candidate_recalled"]) for record in records)
+    selected_correct = sum(bool(per_pair[record["id"]]['portallayout.evaluation']["selected_candidate_correct"]) for record in records)
     rejected = sum(
         bool(record["supervision"]["is_match"])
-        and bool(per_pair[record["id"]]["evaluation"]["gt_candidate_recalled"])
+        and bool(per_pair[record["id"]]['portallayout.evaluation']["gt_candidate_recalled"])
         and int(artifacts[record["id"]]["best_candidate_pair"][0]) < 0
         for record in records
     )

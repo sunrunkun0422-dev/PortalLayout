@@ -3,7 +3,7 @@ from types import SimpleNamespace
 
 import torch
 
-from models.cross_scene_matcher import OpeningGuidedCrossAttentionMatcher
+from portallayout.models.cross_scene_matcher import OpeningGuidedCrossAttentionMatcher
 from tools.train_zind_cross_scene_matcher import (
     _losses,
     candidate_targets_from_affinity,

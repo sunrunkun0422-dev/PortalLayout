@@ -27,7 +27,7 @@ from tools.evaluate_zind_portal_geometry_val import (
     validate_args,
     validate_sample_manifest,
 )
-from utils.candidate_local_portal_geometry import CandidateLocalPortalConfig
+from portallayout.geometry.candidate_local_portal_geometry import CandidateLocalPortalConfig
 
 
 class DeterministicValSmokeSelectionTest(unittest.TestCase):
@@ -143,7 +143,7 @@ class ValOnlyAndGroundTruthIsolationTest(unittest.TestCase):
         first = _m2_contract()
         second = _m2_contract()
         self.assertEqual(first, second)
-        self.assertEqual(first["config"], CandidateLocalPortalConfig().to_json())
+        self.assertEqual(first['portallayout.config'], CandidateLocalPortalConfig().to_json())
         self.assertFalse(first["tuned_on_val"])
 
 
@@ -246,7 +246,7 @@ class SummaryContractTest(unittest.TestCase):
                     for mode in GEOMETRY_MODES
                 },
             },
-            "evaluation": {
+            'portallayout.evaluation': {
                 "gt_candidate_recalled": True,
                 "selected_candidate_correct": True,
             },
@@ -266,7 +266,7 @@ class SummaryContractTest(unittest.TestCase):
                     mode: self._geometry(mode, False) for mode in GEOMETRY_MODES
                 },
             },
-            "evaluation": {
+            'portallayout.evaluation': {
                 "gt_candidate_recalled": False,
                 "selected_candidate_correct": False,
             },

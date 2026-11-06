@@ -1,0 +1,73 @@
+{
+  "status": "complete",
+  "floor_samples": 12,
+  "unique_observations": 222,
+  "observations_inferred": 222,
+  "observations_reused": 0,
+  "input_errors": [],
+  "floors": [
+    {
+      "sample_id": "sample_f06e1939dc1c7cd7538be569",
+      "floor_uid": "floor_1c68d80c249a3a23bdadf67f",
+      "predictions_file": "floors/055a4260471234c6c0503fba3c116d6b8381ab9ed5eac842a004d2640fba63f3.json"
+    },
+    {
+      "sample_id": "sample_c44b0b87dc23740e00069212",
+      "floor_uid": "floor_7520f46f0ff781a58da7e59c",
+      "predictions_file": "floors/43d8ba4c7b243ebdec39e4c6cb0309a1afb5bdafd503923725cd6840bf117502.json"
+    },
+    {
+      "sample_id": "sample_c20bf3846edf74c60684e4de",
+      "floor_uid": "floor_8aa2aee37af9a8ab4889d637",
+      "predictions_file": "floors/7af187237da5c6f87a3539825c3f6ff55f64635e2defa15cbb63a1c85282dedf.json"
+    },
+    {
+      "sample_id": "sample_12870b7aac8711c5009901bd",
+      "floor_uid": "floor_75df3de0498c85721f092a14",
+      "predictions_file": "floors/f5a160bf89233568bb35b7abfa0f8f0bf7d1147ddc49b0415fe35e4ff213c4a1.json"
+    },
+    {
+      "sample_id": "sample_edf2187e642f1164e8fa7e44",
+      "floor_uid": "floor_204b7bd1fc36a3b6cc48f29f",
+      "predictions_file": "floors/c095d38b53b3d67ba5f6121efb1426e9e85d01032b92cf8f20c56df93261e23f.json"
+    },
+    {
+      "sample_id": "sample_8e66b927db84a1b60779443a",
+      "floor_uid": "floor_3112bf984b4be345641f2983",
+      "predictions_file": "floors/23d28c61ebde1e076deb4746803e01c811aee0936794ed70c6cee4d5ee216c90.json"
+    },
+    {
+      "sample_id": "sample_21c7df2cf94e8633011194b3",
+      "floor_uid": "floor_45d4c65d7782d1687c10579f",
+      "predictions_file": "floors/d5c64148cfa42823695f6da9793a80972dbff2352c4eef7106d4a72035832fb8.json"
+    },
+    {
+      "sample_id": "sample_8769789f2e6384d9e69729e1",
+      "floor_uid": "floor_5654d0f63b638b1c4604eb5e",
+      "predictions_file": "floors/8cc28914ba5fa8aa3fbb760961f3bf77dcb6006fb90d967cf1df59550544b3fa.json"
+    },
+    {
+      "sample_id": "sample_ce272ea94c1c62bbd72a64c1",
+      "floor_uid": "floor_187a051a13889606c4d6c2b8",
+      "predictions_file": "floors/2e01574a9aec139eca3cf147e94d574738da72480d87db6d8b3a0efd6bb5bbf0.json"
+    },
+    {
+      "sample_id": "sample_8e83c8aa7aa71f7073a5d403",
+      "floor_uid": "floor_e24ec4b67d8d47236b6239f3",
+      "predictions_file": "floors/6a4ddc52e6ac2c8c8d91d186dc96bbf3556b0a19c964d9c5353e48157ed5c1a9.json"
+    },
+    {
+      "sample_id": "sample_b34f5e49e04e766129496212",
+      "floor_uid": "floor_0720962ddfcd23840d5e269c",
+      "predictions_file": "floors/f4d5c3f9a96aaef222a97d3ab2989d176be2dbfc764ec6db7d41fecd1085002b.json"
+    },
+    {
+      "sample_id": "sample_6842eef45eb1e86dd76cd2d6",
+      "floor_uid": "floor_1ee821022ab13bef2c2de3d8",
+      "predictions_file": "floors/5971d4b862a3a2bfbc9578415c34fe8246b5ad5b935277d9008cc6d5c6a08f57.json"
+    }
+  ],
+  "contract_fingerprint": "1ad32b6476d34f4e06cc1257f60e00562d181ee16ddeee24d3a88a414b6a563d",
+  "ground_truth_read": false,
+  "global_layout_status": "not_run"
+}

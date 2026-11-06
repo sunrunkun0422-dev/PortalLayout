@@ -177,7 +177,7 @@ class VisualAuditTests(unittest.TestCase):
 
         probability = torch.tensor([0.05, 0.1, 0.35, 0.6, 0.5, 0.1, 0.05, 0.02], dtype=torch.float32)
         trace = {
-            "config": {"threshold": 0.31},
+            'portallayout.config': {"threshold": 0.31},
             "threshold_components": [{"interval": [2, 4]}],
             "local_peaks": [{
                 "peak_index": 3, "peak_probability": 0.6, "interval": [1, 5],

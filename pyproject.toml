@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61,<76"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portallayout"
+version = "0.1.0"
+description = "Opening-guided cross-room layout reconstruction"
+requires-python = ">=3.8"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.5"]
+
+[project.scripts]
+portallayout = "portallayout.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["portallayout*", "tools*", "models", "dataset", "utils", "loss", "config", "evaluation", "preprocessing", "postprocessing", "visualization"]
+
+[tool.setuptools.package-data]
+portallayout = ["_legacy_modules.json"]
+"portallayout.visualization.visualizer.shader" = ["*.glsl", "*.vert", "*.frag"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

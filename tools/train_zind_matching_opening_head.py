@@ -25,8 +25,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from dataset.zind_opening_dataset import OpeningFeatureCacheDataset
-from models.cross_scene_matcher import OpeningSignalHead
+from portallayout.datasets.zind_opening_dataset import OpeningFeatureCacheDataset
+from portallayout.models.cross_scene_matcher import OpeningSignalHead
 from tools.train_zind_opening_head import (
     _append_jsonl,
     _atomic_torch_save,
@@ -39,7 +39,7 @@ from tools.train_zind_opening_head import (
     train_one_epoch,
     validate_opening_head,
 )
-from utils.opening_checkpoint import load_opening_head_checkpoint
+from portallayout.utils.opening_checkpoint import load_opening_head_checkpoint
 
 
 DEFAULT_CACHE_ROOT = (
@@ -425,10 +425,10 @@ def train_from_cache(
             print("warm-started Opening Head weights: {}".format(warm_path))
 
         initial_validation = validate_opening_head(head, val_loader, device, args)
-        initial_selected = initial_validation["evaluation"][
+        initial_selected = initial_validation['portallayout.evaluation'][
             "metricsAtSelectedThreshold"
         ]
-        initial_component = initial_validation["evaluation"][
+        initial_component = initial_validation['portallayout.evaluation'][
             "componentMetricsAtSelectedThreshold"
         ]["overlap"]["iouAtLeast0.30"]
         initial_report = {
@@ -464,12 +464,12 @@ def train_from_cache(
         train_metrics = train_one_epoch(head, train_loader, optimizer, device, args)
         global_step += len(train_loader)
         validation = validate_opening_head(head, val_loader, device, args)
-        selected = validation["evaluation"]["metricsAtSelectedThreshold"]
-        component = validation["evaluation"]["componentMetricsAtSelectedThreshold"]
+        selected = validation['portallayout.evaluation']["metricsAtSelectedThreshold"]
+        component = validation['portallayout.evaluation']["componentMetricsAtSelectedThreshold"]
         component_recall = float(component["overlap"]["iouAtLeast0.30"]["recall"])
         score = (
             component_recall,
-            float(validation["evaluation"]["averagePrecision"]),
+            float(validation['portallayout.evaluation']["averagePrecision"]),
             float(selected["f1"]),
         )
         best_score = (

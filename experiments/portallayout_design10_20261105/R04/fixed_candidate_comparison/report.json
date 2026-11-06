@@ -1,0 +1,253 @@
+{
+  "schema": "research10.r04-fixed-compare.v1",
+  "status": "diagnostic_only",
+  "fixed_pair_denominator": 4885,
+  "cross_room": {
+    "scope": "cross_room",
+    "pair_denominator": 3651,
+    "pairs_with_known_positive_candidate": 200,
+    "pairs_without_known_positive_candidate": 3451,
+    "methods": {
+      "matcher_raw_logit": {
+        "known_positive_pair_outcomes": {
+          "correct": 99,
+          "unknown": 60,
+          "incorrect": 41
+        },
+        "correct_over_known_positive_pairs": 0.495,
+        "house_macro_correct_over_known_positive_pairs": 0.5848934221076274,
+        "house_rates": {
+          "0081": 0.38095238095238093,
+          "0361": 0.44642857142857145,
+          "0423": 0.5217391304347826,
+          "0476": 0.4827586206896552,
+          "0530": 0.6666666666666666,
+          "0674": 0.6153846153846154,
+          "0830": 1.0,
+          "1053": 0.5652173913043478
+        },
+        "houses_with_known_positive_pairs": 8
+      },
+      "single_view_descriptor_cosine": {
+        "known_positive_pair_outcomes": {
+          "incorrect": 71,
+          "unknown": 68,
+          "correct": 61
+        },
+        "correct_over_known_positive_pairs": 0.305,
+        "house_macro_correct_over_known_positive_pairs": 0.3873436736302179,
+        "house_rates": {
+          "0081": 0.3333333333333333,
+          "0361": 0.26785714285714285,
+          "0423": 0.2608695652173913,
+          "0476": 0.3448275862068966,
+          "0530": 0.3333333333333333,
+          "0674": 0.38461538461538464,
+          "0830": 1.0,
+          "1053": 0.17391304347826086
+        },
+        "houses_with_known_positive_pairs": 8,
+        "matcher_minus_baseline_house_macro_delta": 0.19754974847740964,
+        "matcher_minus_baseline_house_bootstrap_ci95": [
+          0.10884195179196117,
+          0.28648822909973576
+        ]
+      },
+      "opening_width_ratio": {
+        "known_positive_pair_outcomes": {
+          "correct": 91,
+          "unknown": 54,
+          "incorrect": 55
+        },
+        "correct_over_known_positive_pairs": 0.455,
+        "house_macro_correct_over_known_positive_pairs": 0.5329550197428758,
+        "house_rates": {
+          "0081": 0.47619047619047616,
+          "0361": 0.42857142857142855,
+          "0423": 0.7391304347826086,
+          "0476": 0.29310344827586204,
+          "0530": 0.3333333333333333,
+          "0674": 0.38461538461538464,
+          "0830": 1.0,
+          "1053": 0.6086956521739131
+        },
+        "houses_with_known_positive_pairs": 8,
+        "matcher_minus_baseline_house_macro_delta": 0.051938402364751696,
+        "matcher_minus_baseline_house_bootstrap_ci95": [
+          -0.0650606337456272,
+          0.17406227346491585
+        ]
+      }
+    }
+  },
+  "same_room": {
+    "scope": "same_room",
+    "pair_denominator": 1030,
+    "pairs_with_known_positive_candidate": 122,
+    "pairs_without_known_positive_candidate": 908,
+    "methods": {
+      "matcher_raw_logit": {
+        "known_positive_pair_outcomes": {
+          "unknown": 36,
+          "correct": 72,
+          "incorrect": 14
+        },
+        "correct_over_known_positive_pairs": 0.5901639344262295,
+        "house_macro_correct_over_known_positive_pairs": 0.6324936877147243,
+        "house_rates": {
+          "0081": 0.5384615384615384,
+          "0361": 0.5365853658536586,
+          "0423": 0.45454545454545453,
+          "0476": 0.6875,
+          "0530": 1.0,
+          "0674": 0.42857142857142855,
+          "0830": 0.7142857142857143,
+          "1053": 0.7
+        },
+        "houses_with_known_positive_pairs": 8
+      },
+      "single_view_descriptor_cosine": {
+        "known_positive_pair_outcomes": {
+          "unknown": 59,
+          "correct": 40,
+          "incorrect": 23
+        },
+        "correct_over_known_positive_pairs": 0.32786885245901637,
+        "house_macro_correct_over_known_positive_pairs": 0.4258975970675666,
+        "house_rates": {
+          "0081": 0.23076923076923078,
+          "0361": 0.21951219512195122,
+          "0423": 0.6363636363636364,
+          "0476": 0.40625,
+          "0530": 1.0,
+          "0674": 0.42857142857142855,
+          "0830": 0.2857142857142857,
+          "1053": 0.2
+        },
+        "houses_with_known_positive_pairs": 8,
+        "matcher_minus_baseline_house_macro_delta": 0.20659609064715773,
+        "matcher_minus_baseline_house_bootstrap_ci95": [
+          0.047889610389610385,
+          0.3576407967032966
+        ]
+      },
+      "opening_width_ratio": {
+        "known_positive_pair_outcomes": {
+          "correct": 68,
+          "unknown": 39,
+          "incorrect": 15
+        },
+        "correct_over_known_positive_pairs": 0.5573770491803278,
+        "house_macro_correct_over_known_positive_pairs": 0.5090954396213543,
+        "house_rates": {
+          "0081": 0.46153846153846156,
+          "0361": 0.4146341463414634,
+          "0423": 0.9090909090909091,
+          "0476": 0.6875,
+          "0530": 0.0,
+          "0674": 0.2857142857142857,
+          "0830": 0.7142857142857143,
+          "1053": 0.6
+        },
+        "houses_with_known_positive_pairs": 8,
+        "matcher_minus_baseline_house_macro_delta": 0.12339824809337005,
+        "matcher_minus_baseline_house_bootstrap_ci95": [
+          -0.12093874875124876,
+          0.41413243006992995
+        ]
+      }
+    }
+  },
+  "unknown_room": {
+    "scope": "unknown_room",
+    "pair_denominator": 204,
+    "pairs_with_known_positive_candidate": 2,
+    "pairs_without_known_positive_candidate": 202,
+    "methods": {
+      "matcher_raw_logit": {
+        "known_positive_pair_outcomes": {
+          "unknown": 2
+        },
+        "correct_over_known_positive_pairs": 0.0,
+        "house_macro_correct_over_known_positive_pairs": 0.0,
+        "house_rates": {
+          "0476": 0.0,
+          "1053": 0.0
+        },
+        "houses_with_known_positive_pairs": 2
+      },
+      "single_view_descriptor_cosine": {
+        "known_positive_pair_outcomes": {
+          "unknown": 2
+        },
+        "correct_over_known_positive_pairs": 0.0,
+        "house_macro_correct_over_known_positive_pairs": 0.0,
+        "house_rates": {
+          "0476": 0.0,
+          "1053": 0.0
+        },
+        "houses_with_known_positive_pairs": 2,
+        "matcher_minus_baseline_house_macro_delta": 0.0,
+        "matcher_minus_baseline_house_bootstrap_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "opening_width_ratio": {
+        "known_positive_pair_outcomes": {
+          "unknown": 1,
+          "correct": 1
+        },
+        "correct_over_known_positive_pairs": 0.5,
+        "house_macro_correct_over_known_positive_pairs": 0.5,
+        "house_rates": {
+          "0476": 0.0,
+          "1053": 1.0
+        },
+        "houses_with_known_positive_pairs": 2,
+        "matcher_minus_baseline_house_macro_delta": -0.5,
+        "matcher_minus_baseline_house_bootstrap_ci95": [
+          -1.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "source_sha256": {
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R04/selection_baselines/selection_baseline_scores.json": "ec96a2aa7a5c3dfe2ef83c2a84a37fc86ceb5709c3db018d0e9b16a1c78752b0",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R04/selection_baselines/selection_fixed_pairs.json": "0259c763828b252f379910273895e896c58193c754f51a84165437913e2037a9",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R04/pipeline_seed123/weak_supervision/opening_weak.json": "b410f495532021d41a96701dbb51b4bc5a181ff81dd1783e7289ffc6201013bd",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/run_contract.json": "f28a2726b0901c6bf4296c050f78da538101c39a7858b65f76829c122cdd4900",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/prediction_barrier.json": "7e7f42430c2cdcc88d6583ce6988eea0d3e526e08faf91fce2dec821d4a4d146",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/summary.json": "b6d8aed386e1666ac5c185a11bbaf52f1bc2b679cbb1848d9e96bc3c90808e03",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_068fa1bfa1df099540cce729.json": "8ac27cdf8a13e31fad31905822062feb7b9ae28087a8f3a4a0a51557e05e3253",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_068fa1bfa1df099540cce729.json": "3f8ea96d432557c7087afc832f2ec2bf95b5b08528eb94ffddf9215190f6e1a0",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_182694debae2cc874400dcff.json": "c21a1964b0427e7a1b03eaf7bb7807dd4543a31b0d4e6c0e28f8ab282cdbd064",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_182694debae2cc874400dcff.json": "165ce70352a4687fb684715fbbaf85bad06a6247025bdec0b99b77939ea1a17f",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_182df23771bd55bf0db88e1f.json": "fa69e627962fb8cfadd9e5b770964a1ccb688d111b27d936e5ffc32f752506d4",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_182df23771bd55bf0db88e1f.json": "3b3fd6227971d1a96f6a6ac77184fd0fb87a09237dac1f9878f75400af037700",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_183777d9c8c7effbac7539d0.json": "f8eb6cc990ca106f433bda5fe4063912e3e3ac7a3a1251b68271d700473c5d01",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_183777d9c8c7effbac7539d0.json": "4bb8882320c88b948514cd0a1c80f993ad3196feab6f31a900ce36b545790732",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_3e79ae330fc854cd567c6465.json": "7f7d2bb56c8510bfee53115579a7bf307c845163d9861710587dd9ef5ea935a1",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_3e79ae330fc854cd567c6465.json": "285264d80bed6d56628e050b2ba29f9db4b71d9767b14830e363a5e84f51f5d5",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_427711a3d766604832c9b379.json": "b1a4fceda0358527ac7f20c5f7779cea890f49611a6014a82249e59eafefc8e3",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_427711a3d766604832c9b379.json": "dfee887a875ecf0c79ed0b2e6a46d6fe98bf13ce93f55e53f75f46711e9d5dfe",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_544e43e4808e28328ed44b83.json": "a648a6190105e0da711b15919763d58b6732a9fbf29934e5940cab8db9be067a",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_544e43e4808e28328ed44b83.json": "844f2d46de8ff5d5dd6488432af59f0e2bd4958bc7ffb07f4971e118a4471952",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_8fa4824a9386165d9626163d.json": "93d2cf3da3b3a909b07527a9cf4fa8dcc819902fb8ddb193d4cb6522c2f45f89",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_8fa4824a9386165d9626163d.json": "7101553d19f671783c3680f9692d23066fcd2f719487b5bca19a32db450a3935",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_9bf954e7101cc521821500a9.json": "cd88acc1d1b3a4277383ecca754228ca4b7a66fc0cd3293e88450d5fab73179d",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_9bf954e7101cc521821500a9.json": "fbc95c2211393e9e451a2f24681cc50c3b7ca462904b93cbbdab88f2bbefcc67",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_b0f6ba0022f4f60e9e4cf85c.json": "a6537d0b635acc2f99a17d4cd502b6504d8ab2ced4398b5b714035e0276de815",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_b0f6ba0022f4f60e9e4cf85c.json": "a7e7d2721e668ae5a8bbf2abe41b989e4d4d5586e53ab48bf11af5b583ae7fd6"
+  },
+  "pairs_sha256": "650af9bd4a9e76eb3190f5aeaba52672c4355173d0a9e39f7a95f7fbc118c569",
+  "limitations": [
+    "development weak labels, not visually verified; pretraining exposure known",
+    "positive denominator includes only pairs with a known positive among predicted candidates; not candidate recall or end-to-end accuracy",
+    "forced top-1 raw-score ranking; no dustbin or No-Match threshold and no precision/rejection claim",
+    "appearance descriptor contains trained single-view representation, not pure RGB",
+    "width comparison assumes shared camera height",
+    "one seed only; not a trained-module ablation"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "research10.candidate-scores.v1",
+  "method": "salve_dav2",
+  "union_fingerprint": "210337890fe1bfd2ae9f6645fb95d2193ccfdcd788a024604e51cb7685b31f02",
+  "scores": [
+    {
+      "candidate_id": "02cb173f9db3ed0c34d7756818e011d56c074f87c4aaaa4b461c6d4c2f7fe8a0",
+      "status": "scored",
+      "score": 0.9624085426330566,
+      "reason": null
+    }
+  ]
+}

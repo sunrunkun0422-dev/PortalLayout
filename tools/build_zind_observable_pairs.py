@@ -10,7 +10,7 @@ from collections import Counter,defaultdict
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from dataset.zind_observable_pairs import load_house,build_floor,stable_id,public_input
+from portallayout.datasets.zind_observable_pairs import load_house,build_floor,stable_id,public_input
 
 
 def dumps(x):return json.dumps(x,ensure_ascii=False,sort_keys=True,allow_nan=False,separators=(',',':'))
@@ -87,10 +87,10 @@ def main():
     out=args.output;out.mkdir(parents=True,exist_ok=True);(out/'shards').mkdir(exist_ok=True)
     identity={'version':cfg['schema_version'],'split':args.split,'houses':houses,'root':str(args.root.resolve()),
               'config_sha256':sha(args.config),'partition_sha256':sha(args.partition),
-              'core_source_sha256':sha(ROOT/'dataset/zind_observable_pairs.py'),'builder_source_sha256':sha(Path(__file__)),
+              'core_source_sha256':sha(ROOT/'portallayout/datasets/zind_observable_pairs.py'),'builder_source_sha256':sha(Path(__file__)),
               'calibration_status':cfg['calibration_status'],'freeze_record':str(args.freeze_record) if args.freeze_record else None}
     if (out/'build_identity.json').exists():assert json.loads((out/'build_identity.json').read_text())==identity,'resume identity changed'
-    write(out/'build_identity.json',identity);write(out/'config.json',cfg)
+    write(out/'build_identity.json',identity);write(out/'portallayout.config.json',cfg)
     for i,hid in enumerate(houses):
         source=args.root/hid/'zind_data.json';dest=out/'shards'/f'{hid}.json.gz'
         if dest.exists():

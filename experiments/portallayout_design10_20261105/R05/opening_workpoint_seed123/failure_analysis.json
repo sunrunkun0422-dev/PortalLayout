@@ -1,0 +1,802 @@
+{
+  "schema": "research10.r05-failure-analysis.v1",
+  "status": "posthoc_diagnostic_not_a_workpoint",
+  "thresholds": [
+    0.0,
+    0.5,
+    0.7,
+    0.9,
+    0.95,
+    0.99
+  ],
+  "tables": {
+    "selection": {
+      "0.0": {
+        "pairs": 3651,
+        "houses": 9,
+        "threshold": 0.0,
+        "positive_cells": 200,
+        "accepted_true": 66,
+        "accepted_false": 535,
+        "accepted_unknown": 463,
+        "accepted_positive_houses": 8,
+        "precision_known": 0.10981697171381032,
+        "recall_all_weak_positives": 0.33,
+        "f1_known": 0.1647940074906367,
+        "known_negative_pairs": 444,
+        "false_accepted_negative_pairs": 140,
+        "negative_pair_false_acceptance": 0.3153153153153153,
+        "numerical_status": {
+          "assigned": 3600,
+          "no_candidates": 51
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 103,
+          "raw_bidirectional_top3": 186,
+          "assignment_mutual_without_dustbin": 104,
+          "mutual_with_dustbin": 66,
+          "dustbin_wins_either_direction": 130,
+          "assignment_supervised": 139
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 139,
+            "retrieved": 48
+          },
+          "partial_positive_only": {
+            "positive_cells": 61,
+            "retrieved": 18
+          }
+        },
+        "losses_by_supervision": {
+          "complete_positive_row": {
+            "pairs": 139,
+            "assignment_loss": 1.1762501415964082,
+            "auxiliary_loss": 1.0564267189918661,
+            "objective_loss": 1.7044634908276926
+          },
+          "partial_positive_only": {
+            "pairs": 61,
+            "assignment_loss": 0.00017802715301513673,
+            "auxiliary_loss": 0.7213357268053977,
+            "objective_loss": 0.36068245579229025
+          },
+          "unknown_assignment": {
+            "pairs": 1700,
+            "assignment_loss": null,
+            "auxiliary_loss": 0.5729476229736513,
+            "objective_loss": 0.28647381148682566
+          },
+          "unmatched_row": {
+            "pairs": 1751,
+            "assignment_loss": 0.348040425668945,
+            "auxiliary_loss": 0.425357233410906,
+            "objective_loss": 0.5607190434046022
+          }
+        },
+        "unretrieved_positive_cells": 134
+      },
+      "0.5": {
+        "pairs": 3651,
+        "houses": 9,
+        "threshold": 0.5,
+        "positive_cells": 200,
+        "accepted_true": 63,
+        "accepted_false": 497,
+        "accepted_unknown": 392,
+        "accepted_positive_houses": 8,
+        "precision_known": 0.1125,
+        "recall_all_weak_positives": 0.315,
+        "f1_known": 0.16578947368421051,
+        "known_negative_pairs": 444,
+        "false_accepted_negative_pairs": 138,
+        "negative_pair_false_acceptance": 0.3108108108108108,
+        "numerical_status": {
+          "assigned": 3600,
+          "no_candidates": 51
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 103,
+          "raw_bidirectional_top3": 186,
+          "assignment_mutual_without_dustbin": 104,
+          "mutual_with_dustbin": 66,
+          "dustbin_wins_either_direction": 130,
+          "assignment_supervised": 139
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 139,
+            "retrieved": 48
+          },
+          "partial_positive_only": {
+            "positive_cells": 61,
+            "retrieved": 18
+          }
+        },
+        "losses_by_supervision": {
+          "complete_positive_row": {
+            "pairs": 139,
+            "assignment_loss": 1.1762501415964082,
+            "auxiliary_loss": 1.0564267189918661,
+            "objective_loss": 1.7044634908276926
+          },
+          "partial_positive_only": {
+            "pairs": 61,
+            "assignment_loss": 0.00017802715301513673,
+            "auxiliary_loss": 0.7213357268053977,
+            "objective_loss": 0.36068245579229025
+          },
+          "unknown_assignment": {
+            "pairs": 1700,
+            "assignment_loss": null,
+            "auxiliary_loss": 0.5729476229736513,
+            "objective_loss": 0.28647381148682566
+          },
+          "unmatched_row": {
+            "pairs": 1751,
+            "assignment_loss": 0.348040425668945,
+            "auxiliary_loss": 0.425357233410906,
+            "objective_loss": 0.5607190434046022
+          }
+        },
+        "unretrieved_positive_cells": 134
+      },
+      "0.7": {
+        "pairs": 3651,
+        "houses": 9,
+        "threshold": 0.7,
+        "positive_cells": 200,
+        "accepted_true": 31,
+        "accepted_false": 148,
+        "accepted_unknown": 85,
+        "accepted_positive_houses": 7,
+        "precision_known": 0.17318435754189945,
+        "recall_all_weak_positives": 0.155,
+        "f1_known": 0.16358839050131926,
+        "known_negative_pairs": 444,
+        "false_accepted_negative_pairs": 41,
+        "negative_pair_false_acceptance": 0.09234234234234234,
+        "numerical_status": {
+          "assigned": 3600,
+          "no_candidates": 51
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 103,
+          "raw_bidirectional_top3": 186,
+          "assignment_mutual_without_dustbin": 104,
+          "mutual_with_dustbin": 66,
+          "dustbin_wins_either_direction": 130,
+          "assignment_supervised": 139
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 139,
+            "retrieved": 48
+          },
+          "partial_positive_only": {
+            "positive_cells": 61,
+            "retrieved": 18
+          }
+        },
+        "losses_by_supervision": {
+          "complete_positive_row": {
+            "pairs": 139,
+            "assignment_loss": 1.1762501415964082,
+            "auxiliary_loss": 1.0564267189918661,
+            "objective_loss": 1.7044634908276926
+          },
+          "partial_positive_only": {
+            "pairs": 61,
+            "assignment_loss": 0.00017802715301513673,
+            "auxiliary_loss": 0.7213357268053977,
+            "objective_loss": 0.36068245579229025
+          },
+          "unknown_assignment": {
+            "pairs": 1700,
+            "assignment_loss": null,
+            "auxiliary_loss": 0.5729476229736513,
+            "objective_loss": 0.28647381148682566
+          },
+          "unmatched_row": {
+            "pairs": 1751,
+            "assignment_loss": 0.348040425668945,
+            "auxiliary_loss": 0.425357233410906,
+            "objective_loss": 0.5607190434046022
+          }
+        },
+        "unretrieved_positive_cells": 134
+      },
+      "0.9": {
+        "pairs": 3651,
+        "houses": 9,
+        "threshold": 0.9,
+        "positive_cells": 200,
+        "accepted_true": 6,
+        "accepted_false": 12,
+        "accepted_unknown": 3,
+        "accepted_positive_houses": 4,
+        "precision_known": 0.3333333333333333,
+        "recall_all_weak_positives": 0.03,
+        "f1_known": 0.05504587155963303,
+        "known_negative_pairs": 444,
+        "false_accepted_negative_pairs": 3,
+        "negative_pair_false_acceptance": 0.006756756756756757,
+        "numerical_status": {
+          "assigned": 3600,
+          "no_candidates": 51
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 103,
+          "raw_bidirectional_top3": 186,
+          "assignment_mutual_without_dustbin": 104,
+          "mutual_with_dustbin": 66,
+          "dustbin_wins_either_direction": 130,
+          "assignment_supervised": 139
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 139,
+            "retrieved": 48
+          },
+          "partial_positive_only": {
+            "positive_cells": 61,
+            "retrieved": 18
+          }
+        },
+        "losses_by_supervision": {
+          "complete_positive_row": {
+            "pairs": 139,
+            "assignment_loss": 1.1762501415964082,
+            "auxiliary_loss": 1.0564267189918661,
+            "objective_loss": 1.7044634908276926
+          },
+          "partial_positive_only": {
+            "pairs": 61,
+            "assignment_loss": 0.00017802715301513673,
+            "auxiliary_loss": 0.7213357268053977,
+            "objective_loss": 0.36068245579229025
+          },
+          "unknown_assignment": {
+            "pairs": 1700,
+            "assignment_loss": null,
+            "auxiliary_loss": 0.5729476229736513,
+            "objective_loss": 0.28647381148682566
+          },
+          "unmatched_row": {
+            "pairs": 1751,
+            "assignment_loss": 0.348040425668945,
+            "auxiliary_loss": 0.425357233410906,
+            "objective_loss": 0.5607190434046022
+          }
+        },
+        "unretrieved_positive_cells": 134
+      },
+      "0.95": {
+        "pairs": 3651,
+        "houses": 9,
+        "threshold": 0.95,
+        "positive_cells": 200,
+        "accepted_true": 0,
+        "accepted_false": 2,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": 0.0,
+        "recall_all_weak_positives": 0.0,
+        "f1_known": 0.0,
+        "known_negative_pairs": 444,
+        "false_accepted_negative_pairs": 1,
+        "negative_pair_false_acceptance": 0.0022522522522522522,
+        "numerical_status": {
+          "assigned": 3600,
+          "no_candidates": 51
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 103,
+          "raw_bidirectional_top3": 186,
+          "assignment_mutual_without_dustbin": 104,
+          "mutual_with_dustbin": 66,
+          "dustbin_wins_either_direction": 130,
+          "assignment_supervised": 139
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 139,
+            "retrieved": 48
+          },
+          "partial_positive_only": {
+            "positive_cells": 61,
+            "retrieved": 18
+          }
+        },
+        "losses_by_supervision": {
+          "complete_positive_row": {
+            "pairs": 139,
+            "assignment_loss": 1.1762501415964082,
+            "auxiliary_loss": 1.0564267189918661,
+            "objective_loss": 1.7044634908276926
+          },
+          "partial_positive_only": {
+            "pairs": 61,
+            "assignment_loss": 0.00017802715301513673,
+            "auxiliary_loss": 0.7213357268053977,
+            "objective_loss": 0.36068245579229025
+          },
+          "unknown_assignment": {
+            "pairs": 1700,
+            "assignment_loss": null,
+            "auxiliary_loss": 0.5729476229736513,
+            "objective_loss": 0.28647381148682566
+          },
+          "unmatched_row": {
+            "pairs": 1751,
+            "assignment_loss": 0.348040425668945,
+            "auxiliary_loss": 0.425357233410906,
+            "objective_loss": 0.5607190434046022
+          }
+        },
+        "unretrieved_positive_cells": 134
+      },
+      "0.99": {
+        "pairs": 3651,
+        "houses": 9,
+        "threshold": 0.99,
+        "positive_cells": 200,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": 0.0,
+        "f1_known": 0.0,
+        "known_negative_pairs": 444,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": 0.0,
+        "numerical_status": {
+          "assigned": 3600,
+          "no_candidates": 51
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 103,
+          "raw_bidirectional_top3": 186,
+          "assignment_mutual_without_dustbin": 104,
+          "mutual_with_dustbin": 66,
+          "dustbin_wins_either_direction": 130,
+          "assignment_supervised": 139
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 139,
+            "retrieved": 48
+          },
+          "partial_positive_only": {
+            "positive_cells": 61,
+            "retrieved": 18
+          }
+        },
+        "losses_by_supervision": {
+          "complete_positive_row": {
+            "pairs": 139,
+            "assignment_loss": 1.1762501415964082,
+            "auxiliary_loss": 1.0564267189918661,
+            "objective_loss": 1.7044634908276926
+          },
+          "partial_positive_only": {
+            "pairs": 61,
+            "assignment_loss": 0.00017802715301513673,
+            "auxiliary_loss": 0.7213357268053977,
+            "objective_loss": 0.36068245579229025
+          },
+          "unknown_assignment": {
+            "pairs": 1700,
+            "assignment_loss": null,
+            "auxiliary_loss": 0.5729476229736513,
+            "objective_loss": 0.28647381148682566
+          },
+          "unmatched_row": {
+            "pairs": 1751,
+            "assignment_loss": 0.348040425668945,
+            "auxiliary_loss": 0.425357233410906,
+            "objective_loss": 0.5607190434046022
+          }
+        },
+        "unretrieved_positive_cells": 134
+      }
+    },
+    "calibration": {
+      "0.0": {
+        "pairs": 3805,
+        "houses": 10,
+        "threshold": 0.0,
+        "positive_cells": 283,
+        "accepted_true": 119,
+        "accepted_false": 848,
+        "accepted_unknown": 412,
+        "accepted_positive_houses": 10,
+        "precision_known": 0.12306101344364012,
+        "recall_all_weak_positives": 0.4204946996466431,
+        "f1_known": 0.1904,
+        "known_negative_pairs": 629,
+        "false_accepted_negative_pairs": 223,
+        "negative_pair_false_acceptance": 0.35453100158982515,
+        "numerical_status": {
+          "assigned": 3805
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 173,
+          "raw_bidirectional_top3": 275,
+          "assignment_mutual_without_dustbin": 174,
+          "mutual_with_dustbin": 119,
+          "dustbin_wins_either_direction": 150,
+          "assignment_supervised": 207
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 207,
+            "retrieved": 78
+          },
+          "partial_positive_only": {
+            "positive_cells": 76,
+            "retrieved": 41
+          }
+        },
+        "losses_by_supervision": {
+          "complete_positive_row": {
+            "pairs": 207,
+            "assignment_loss": 1.0930957177446947,
+            "auxiliary_loss": 1.0581116027509172,
+            "objective_loss": 1.6221515175656995
+          },
+          "partial_positive_only": {
+            "pairs": 76,
+            "assignment_loss": 0.2026514967282613,
+            "auxiliary_loss": 0.5795141465128645,
+            "objective_loss": 0.3297540792018959
+          },
+          "unknown_assignment": {
+            "pairs": 1330,
+            "assignment_loss": null,
+            "auxiliary_loss": 0.6054683416710461,
+            "objective_loss": 0.30273417083552306
+          },
+          "unmatched_row": {
+            "pairs": 2192,
+            "assignment_loss": 0.43756477125951104,
+            "auxiliary_loss": 0.6450178934620258,
+            "objective_loss": 0.7600737194281313
+          }
+        },
+        "unretrieved_positive_cells": 164
+      },
+      "0.5": {
+        "pairs": 3805,
+        "houses": 10,
+        "threshold": 0.5,
+        "positive_cells": 283,
+        "accepted_true": 110,
+        "accepted_false": 720,
+        "accepted_unknown": 296,
+        "accepted_positive_houses": 10,
+        "precision_known": 0.13253012048192772,
+        "recall_all_weak_positives": 0.38869257950530034,
+        "f1_known": 0.1976639712488769,
+        "known_negative_pairs": 629,
+        "false_accepted_negative_pairs": 212,
+        "negative_pair_false_acceptance": 0.3370429252782194,
+        "numerical_status": {
+          "assigned": 3805
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 173,
+          "raw_bidirectional_top3": 275,
+          "assignment_mutual_without_dustbin": 174,
+          "mutual_with_dustbin": 119,
+          "dustbin_wins_either_direction": 150,
+          "assignment_supervised": 207
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 207,
+            "retrieved": 78
+          },
+          "partial_positive_only": {
+            "positive_cells": 76,
+            "retrieved": 41
+          }
+        },
+        "losses_by_supervision": {
+          "complete_positive_row": {
+            "pairs": 207,
+            "assignment_loss": 1.0930957177446947,
+            "auxiliary_loss": 1.0581116027509172,
+            "objective_loss": 1.6221515175656995
+          },
+          "partial_positive_only": {
+            "pairs": 76,
+            "assignment_loss": 0.2026514967282613,
+            "auxiliary_loss": 0.5795141465128645,
+            "objective_loss": 0.3297540792018959
+          },
+          "unknown_assignment": {
+            "pairs": 1330,
+            "assignment_loss": null,
+            "auxiliary_loss": 0.6054683416710461,
+            "objective_loss": 0.30273417083552306
+          },
+          "unmatched_row": {
+            "pairs": 2192,
+            "assignment_loss": 0.43756477125951104,
+            "auxiliary_loss": 0.6450178934620258,
+            "objective_loss": 0.7600737194281313
+          }
+        },
+        "unretrieved_positive_cells": 164
+      },
+      "0.7": {
+        "pairs": 3805,
+        "houses": 10,
+        "threshold": 0.7,
+        "positive_cells": 283,
+        "accepted_true": 47,
+        "accepted_false": 209,
+        "accepted_unknown": 65,
+        "accepted_positive_houses": 8,
+        "precision_known": 0.18359375,
+        "recall_all_weak_positives": 0.16607773851590105,
+        "f1_known": 0.17439703153988867,
+        "known_negative_pairs": 629,
+        "false_accepted_negative_pairs": 79,
+        "negative_pair_false_acceptance": 0.12559618441971382,
+        "numerical_status": {
+          "assigned": 3805
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 173,
+          "raw_bidirectional_top3": 275,
+          "assignment_mutual_without_dustbin": 174,
+          "mutual_with_dustbin": 119,
+          "dustbin_wins_either_direction": 150,
+          "assignment_supervised": 207
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 207,
+            "retrieved": 78
+          },
+          "partial_positive_only": {
+            "positive_cells": 76,
+            "retrieved": 41
+          }
+        },
+        "losses_by_supervision": {
+          "complete_positive_row": {
+            "pairs": 207,
+            "assignment_loss": 1.0930957177446947,
+            "auxiliary_loss": 1.0581116027509172,
+            "objective_loss": 1.6221515175656995
+          },
+          "partial_positive_only": {
+            "pairs": 76,
+            "assignment_loss": 0.2026514967282613,
+            "auxiliary_loss": 0.5795141465128645,
+            "objective_loss": 0.3297540792018959
+          },
+          "unknown_assignment": {
+            "pairs": 1330,
+            "assignment_loss": null,
+            "auxiliary_loss": 0.6054683416710461,
+            "objective_loss": 0.30273417083552306
+          },
+          "unmatched_row": {
+            "pairs": 2192,
+            "assignment_loss": 0.43756477125951104,
+            "auxiliary_loss": 0.6450178934620258,
+            "objective_loss": 0.7600737194281313
+          }
+        },
+        "unretrieved_positive_cells": 164
+      },
+      "0.9": {
+        "pairs": 3805,
+        "houses": 10,
+        "threshold": 0.9,
+        "positive_cells": 283,
+        "accepted_true": 3,
+        "accepted_false": 18,
+        "accepted_unknown": 6,
+        "accepted_positive_houses": 3,
+        "precision_known": 0.14285714285714285,
+        "recall_all_weak_positives": 0.01060070671378092,
+        "f1_known": 0.019736842105263157,
+        "known_negative_pairs": 629,
+        "false_accepted_negative_pairs": 9,
+        "negative_pair_false_acceptance": 0.014308426073131956,
+        "numerical_status": {
+          "assigned": 3805
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 173,
+          "raw_bidirectional_top3": 275,
+          "assignment_mutual_without_dustbin": 174,
+          "mutual_with_dustbin": 119,
+          "dustbin_wins_either_direction": 150,
+          "assignment_supervised": 207
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 207,
+            "retrieved": 78
+          },
+          "partial_positive_only": {
+            "positive_cells": 76,
+            "retrieved": 41
+          }
+        },
+        "losses_by_supervision": {
+          "complete_positive_row": {
+            "pairs": 207,
+            "assignment_loss": 1.0930957177446947,
+            "auxiliary_loss": 1.0581116027509172,
+            "objective_loss": 1.6221515175656995
+          },
+          "partial_positive_only": {
+            "pairs": 76,
+            "assignment_loss": 0.2026514967282613,
+            "auxiliary_loss": 0.5795141465128645,
+            "objective_loss": 0.3297540792018959
+          },
+          "unknown_assignment": {
+            "pairs": 1330,
+            "assignment_loss": null,
+            "auxiliary_loss": 0.6054683416710461,
+            "objective_loss": 0.30273417083552306
+          },
+          "unmatched_row": {
+            "pairs": 2192,
+            "assignment_loss": 0.43756477125951104,
+            "auxiliary_loss": 0.6450178934620258,
+            "objective_loss": 0.7600737194281313
+          }
+        },
+        "unretrieved_positive_cells": 164
+      },
+      "0.95": {
+        "pairs": 3805,
+        "houses": 10,
+        "threshold": 0.95,
+        "positive_cells": 283,
+        "accepted_true": 0,
+        "accepted_false": 5,
+        "accepted_unknown": 2,
+        "accepted_positive_houses": 0,
+        "precision_known": 0.0,
+        "recall_all_weak_positives": 0.0,
+        "f1_known": 0.0,
+        "known_negative_pairs": 629,
+        "false_accepted_negative_pairs": 4,
+        "negative_pair_false_acceptance": 0.006359300476947536,
+        "numerical_status": {
+          "assigned": 3805
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 173,
+          "raw_bidirectional_top3": 275,
+          "assignment_mutual_without_dustbin": 174,
+          "mutual_with_dustbin": 119,
+          "dustbin_wins_either_direction": 150,
+          "assignment_supervised": 207
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 207,
+            "retrieved": 78
+          },
+          "partial_positive_only": {
+            "positive_cells": 76,
+            "retrieved": 41
+          }
+        },
+        "losses_by_supervision": {
+          "complete_positive_row": {
+            "pairs": 207,
+            "assignment_loss": 1.0930957177446947,
+            "auxiliary_loss": 1.0581116027509172,
+            "objective_loss": 1.6221515175656995
+          },
+          "partial_positive_only": {
+            "pairs": 76,
+            "assignment_loss": 0.2026514967282613,
+            "auxiliary_loss": 0.5795141465128645,
+            "objective_loss": 0.3297540792018959
+          },
+          "unknown_assignment": {
+            "pairs": 1330,
+            "assignment_loss": null,
+            "auxiliary_loss": 0.6054683416710461,
+            "objective_loss": 0.30273417083552306
+          },
+          "unmatched_row": {
+            "pairs": 2192,
+            "assignment_loss": 0.43756477125951104,
+            "auxiliary_loss": 0.6450178934620258,
+            "objective_loss": 0.7600737194281313
+          }
+        },
+        "unretrieved_positive_cells": 164
+      },
+      "0.99": {
+        "pairs": 3805,
+        "houses": 10,
+        "threshold": 0.99,
+        "positive_cells": 283,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": 0.0,
+        "f1_known": 0.0,
+        "known_negative_pairs": 629,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": 0.0,
+        "numerical_status": {
+          "assigned": 3805
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 173,
+          "raw_bidirectional_top3": 275,
+          "assignment_mutual_without_dustbin": 174,
+          "mutual_with_dustbin": 119,
+          "dustbin_wins_either_direction": 150,
+          "assignment_supervised": 207
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 207,
+            "retrieved": 78
+          },
+          "partial_positive_only": {
+            "positive_cells": 76,
+            "retrieved": 41
+          }
+        },
+        "losses_by_supervision": {
+          "complete_positive_row": {
+            "pairs": 207,
+            "assignment_loss": 1.0930957177446947,
+            "auxiliary_loss": 1.0581116027509172,
+            "objective_loss": 1.6221515175656995
+          },
+          "partial_positive_only": {
+            "pairs": 76,
+            "assignment_loss": 0.2026514967282613,
+            "auxiliary_loss": 0.5795141465128645,
+            "objective_loss": 0.3297540792018959
+          },
+          "unknown_assignment": {
+            "pairs": 1330,
+            "assignment_loss": null,
+            "auxiliary_loss": 0.6054683416710461,
+            "objective_loss": 0.30273417083552306
+          },
+          "unmatched_row": {
+            "pairs": 2192,
+            "assignment_loss": 0.43756477125951104,
+            "auxiliary_loss": 0.6450178934620258,
+            "objective_loss": 0.7600737194281313
+          }
+        },
+        "unretrieved_positive_cells": 164
+      }
+    }
+  },
+  "source_sha256": {
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R05/opening_workpoint_seed123/matching_report.json": "7d255f93e3febdf836bf08d386dcdff9b667c089175ff5f0f5ddd1dcd1517772",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R05/opening_workpoint_seed123/matching_report.pairs.jsonl": "a479dbefad864eff64692ab23a30a935c957d21f1b06fad5fc1e358efcdc6435"
+  },
+  "limitations": [
+    "thresholds summarize observed failure; they are not selected acceptance thresholds",
+    "labels are weak and unknowns remain separate",
+    "calibration was inspected and cannot be considered untouched for subsequent model revisions",
+    "Opening Head training cache exposed the cohort houses"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+    "room_ids": [
+        "complete_room_04",
+        "complete_room_01",
+        "complete_room_05"
+    ],
+    "adjacency_matrix": [
+        [
+            0,
+            1,
+            0
+        ],
+        [
+            1,
+            0,
+            1
+        ],
+        [
+            0,
+            1,
+            0
+        ]
+    ]
+}

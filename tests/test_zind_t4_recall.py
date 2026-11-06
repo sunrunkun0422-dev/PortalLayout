@@ -3,7 +3,7 @@ from types import SimpleNamespace
 
 import torch
 
-from models.cross_scene_matcher import (
+from portallayout.models.cross_scene_matcher import (
     candidate_assignment_loss,
     candidate_intervals_to_mask,
     candidate_listwise_ranking_loss,

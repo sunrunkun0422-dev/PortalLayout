@@ -1,0 +1,28 @@
+flowchart LR
+    s_rgb["整层全景输入<br/>无序、稀疏全景<br/>姿态校正；已知相机高度<br/>论文 §4.1"]:::base
+    s_layout["布局与 W/D/O<br/>房间轮廓、置信度、语义开口<br/>§4.2"]:::base
+    s_depth["HoHoNet 深度<br/>用于地板／天花板纹理渲染<br/>§4.3"]:::base
+    s_pose["语义几何对齐假设<br/>同类型配对；方向、位置与宽度<br/>§4.2；不是已确认对应"]:::done
+    s_bev["候选位姿下的 RGB BEV<br/>两图 × 地板／天花板<br/>§4.3 / Fig. 3"]:::done
+    s_verify["CNN 对齐验证<br/>接受或拒绝相对位姿假设<br/>§4.3"]:::done
+    s_graph["位姿图与全局定位<br/>全景节点；可信相对约束<br/>初始化与鲁棒 PGO<br/>§4.4"]:::done
+    s_fuse["同房间轮廓融合<br/>空间分组；高置信边界选择<br/>§4.5"]:::done
+    s_out["整体平面图<br/>融合、拼接后的房间区域<br/>§4.5"]:::eval
+    s_rgb --> s_layout
+    s_rgb --> s_depth
+    s_layout --> s_pose
+    s_pose --> s_bev
+    s_depth --> s_bev
+    s_rgb -->|"RGB"| s_bev
+    s_bev --> s_verify
+    s_verify --> s_graph
+    s_graph --> s_fuse
+    s_layout -->|"局部布局"| s_fuse
+    s_fuse --> s_out
+    note_0["汇报要点<br/>SALVe 已使用视觉信息，也有轮廓置信度融合。比较重点是视觉证据的作用阶段与优化对象。"]:::base
+    classDef base fill:#EDF2F7,stroke:#71859A,color:#142B42;
+    classDef done fill:#EAF3FF,stroke:#3574B8,color:#142B42;
+    classDef partial fill:#FFF4DF,stroke:#BB7A21,color:#142B42,stroke-dasharray: 5 3;
+    classDef plan fill:#F2ECFA,stroke:#8560A9,color:#142B42,stroke-dasharray: 5 3;
+    classDef unknown fill:#F2F2F2,stroke:#8A8A8A,color:#142B42,stroke-dasharray: 5 3;
+    classDef eval fill:#E7F5F0,stroke:#2E8169,color:#142B42;

@@ -10,8 +10,8 @@ from collections import Counter,defaultdict
 from pathlib import Path
 import numpy as np
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
-from dataset.zind_observable_pairs import parse_interfaces,projection,endpoint_error,stable_id
-from dataset.zind_pair_mining import zind_transform_matrix
+from portallayout.datasets.zind_observable_pairs import parse_interfaces,projection,endpoint_error,stable_id
+from portallayout.datasets.zind_pair_mining import zind_transform_matrix
 from tools.audit_zind_observable_build import digest
 from tools.build_zind_observable_pairs import write
 
@@ -70,7 +70,7 @@ def main():
     p.add_argument('--seed',type=int,default=123);p.add_argument('--dev_houses',type=int,default=100);a=p.parse_args()
     if a.output.exists():p.error('choose a new training-view directory')
     identity=json.loads((a.build/'build_identity.json').read_text());assert identity['split']=='train'
-    cfg=json.loads((a.build/'config.json').read_text());pilot=json.loads((a.build/'pilot_sampling.json').read_text())
+    cfg=json.loads((a.build/'portallayout.config.json').read_text());pilot=json.loads((a.build/'pilot_sampling.json').read_text())
     pilot_houses={s['house'] for s in pilot['samples']};eligible=set(identity['houses'])-pilot_houses
     if not 0<a.dev_houses<len(eligible):p.error('invalid internal dev house count')
     dev=set(sorted(eligible,key=lambda h:stable_id(a.seed,'observable_internal_dev',h))[:a.dev_houses])
@@ -99,7 +99,7 @@ def main():
         stats[split][r['labels']['adjacency']]+=1;stats[split][r['relation_scope']]+=1
         if len(row['supervision']['correspondence_pairs'])>1:stats[split]['multi_gt']+=1
     master_sha=digest(a.build/'main_index.jsonl')
-    contract={'dataset':'ZInD-ObservablePairs-v1','source_master_sha256':master_sha,'source_build':str(a.build.resolve()),
+    contract={'portallayout.datasets':'ZInD-ObservablePairs-v1','source_master_sha256':master_sha,'source_build':str(a.build.resolve()),
         'selection':'best passing view per positive connection; best negative view; 1:1 negative sampling within each relation scope',
         'label_status':'auto_proposed_pending_review','evaluation_protocol':'internal_train_house_monitor_NOT_official_val',
         'official_source_split':'train','official_val_test_used':False,'dev_houses_exclude_human_pilot':True,

@@ -45,7 +45,7 @@ def main():
             print('Retrying from completed cache rows / last epoch checkpoint in 30 seconds.',flush=True);time.sleep(30)
     output=Path(config['training_output']);metrics=json.loads((output/'best_metrics.json').read_text())
     completed={'completed_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'best_checkpoint':str(output/'best.pt'),'metrics':metrics,
-        'evaluation':'internal official-train house monitor, not official val/test','human_verified':False}
+        'portallayout.evaluation':'internal official-train house monitor, not official val/test','human_verified':False}
     atomic(job/'COMPLETED.json',completed);save(status='completed',stage='done')
     (job/'训练完成报告.md').write_text('# ObservablePairs 端到端探索性训练完成\n\n最佳权重：`'+str(output/'best.pt')+'`。\n\n结果来自官方训练房屋内的独立监控划分；预训练初始化可能见过这些房屋，不作为未见房屋泛化结论。没有使用正式 val/test；标签仍为自动提议。\n\n```json\n'+json.dumps(metrics,ensure_ascii=False,indent=2)+'\n```\n')
     print('TRAINING COMPLETE',output/'best.pt',flush=True);return 0

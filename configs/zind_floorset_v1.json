@@ -1,0 +1,23 @@
+{
+  "schema_version": "ZInD-FloorSet-v1",
+  "seed": 123,
+  "dev_fraction": 0.1,
+  "sample_view_counts": [2, 3, 5, 8],
+  "minimum_polygon_annotation_iou": 0.9,
+  "endpoint_tolerance_m": 0.2,
+  "width_relative_tolerance": 0.25,
+  "direction_tolerance_deg": 15.0,
+  "minimum_height_overlap_ratio": 0.5,
+  "side_tolerance_m": 0.03,
+  "negative_polygon_clearance_m": 0.75,
+  "near_conflict_m": 0.45,
+  "dedup_tolerance_m": 0.06,
+  "dedup_relative_tolerance": 0.08,
+  "boundary_tolerance_m": 0.2,
+  "side_probe_m": 0.3,
+  "max_polygon_overlap_ratio": 0.1,
+  "camera_membership_tolerance_m": 0.05,
+  "pair_storage": "lazy_all_unordered",
+  "visual_labels": "unknown_without_review",
+  "predictions": "not_run"
+}

@@ -9,7 +9,7 @@ from pathlib import Path
 from collections import Counter
 from datetime import datetime
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
-from dataset.zind_observable_pairs import circular_iou
+from portallayout.datasets.zind_observable_pairs import circular_iou
 from tools.build_zind_observable_pairs import write,sha,dumps,public_input
 
 

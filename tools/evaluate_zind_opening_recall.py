@@ -17,7 +17,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from evaluation.opening_recall import (
+from portallayout.evaluation.opening_recall import (
     UniqueViewReference,
     deduplicate_manifest_views,
     evaluate_opening_scores,
@@ -27,7 +27,7 @@ from evaluation.opening_recall import (
 
 
 DEFAULT_DATASET_ROOT = REPO_ROOT.parent / "zind/ZInD-BiPair-v1"
-DEFAULT_CONFIG = REPO_ROOT / "src/config/zind_all.yaml"
+DEFAULT_CONFIG = REPO_ROOT / "configs/layout/zind_all.yaml"
 DEFAULT_CHECKPOINT = (
     REPO_ROOT / "checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl"
 )
@@ -95,7 +95,7 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument("--progress_every", type=int, default=100)
     parser.add_argument(
         "--output",
-        help="output JSON path; default is src/output/zind_opening_recall/<name>.json",
+        help="output JSON path; default is outputs/zind_opening_recall/<name>.json",
     )
     return parser.parse_args(argv)
 
@@ -294,7 +294,7 @@ def _load_opening_head(
 
     import torch
 
-    from models.cross_scene_matcher import OpeningSignalHead
+    from portallayout.models.cross_scene_matcher import OpeningSignalHead
 
     path = Path(checkpoint_path).expanduser().resolve()
     if not path.is_file():
@@ -383,7 +383,7 @@ def _learned_opening_probability(
 ):
     """Score a Bi-Layout batch with its learned single-view Opening Head."""
 
-    from models.cross_scene_matcher import resolve_enclosed_extended_depth
+    from portallayout.models.cross_scene_matcher import resolve_enclosed_extended_depth
 
     if "layout_feature" not in output:
         raise ValueError(
@@ -623,13 +623,13 @@ def main() -> int:
         Path(args.output).expanduser().resolve()
         if args.output
         else REPO_ROOT
-        / "src/output/zind_opening_recall"
+        / "outputs/zind_opening_recall"
         / f"{args.split}_{args.source}_{args.branch_order}.json"
     )
     report: Dict[str, Any] = {
         "formatVersion": 1,
         "task": "ZInD-BiPair-v1 unique-panorama opening recall",
-        "dataset": {
+        'portallayout.datasets': {
             "name": dataset_info.get("datasetName", "ZInD-BiPair-v1"),
             "datasetRoot": str(dataset_root),
             "dataRoot": str(data_root),
@@ -658,7 +658,7 @@ def main() -> int:
                 },
             ),
         },
-        "evaluation": evaluation,
+        'portallayout.evaluation': evaluation,
         "runtimeSeconds": time.perf_counter() - start_time,
     }
     _write_json(output_path, report)

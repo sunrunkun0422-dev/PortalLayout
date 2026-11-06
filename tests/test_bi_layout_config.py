@@ -4,9 +4,9 @@ from unittest.mock import patch
 import torch
 import torch.nn as nn
 
-import models.modules as modules
-from models.bi_layout import Bi_Layout
-from models.modules.horizon_net_feature_extractor import HorizonNetFeatureExtractor
+import portallayout.models.modules as modules
+from portallayout.models.bi_layout import Bi_Layout
+from portallayout.models.modules.horizon_net_feature_extractor import HorizonNetFeatureExtractor
 
 
 class DummyFeatureExtractor(nn.Module):
@@ -14,14 +14,16 @@ class DummyFeatureExtractor(nn.Module):
         super().__init__()
         self.second = bool(second)
 
-    def forward(self, image, second=False):
+    def forward(self, image, second=False, return_pyramid=False):
         batch = image.shape[0]
         primary = image.new_zeros((batch, 8, 256))
         if second:
             if not self.second:
                 raise AssertionError("second feature output was not initialized")
-            return primary, primary + 1.0
-        return primary
+            result = (primary, primary + 1.0)
+        else:
+            result = primary
+        return (result, (image * 2,)) if return_pyramid else result
 
 
 class DummyPositionEncoding(nn.Module):
@@ -70,9 +72,9 @@ def build_test_model(**overrides):
     }
     options.update(overrides)
     with patch(
-        "models.bi_layout.HorizonNetFeatureExtractor", DummyFeatureExtractor
+        'portallayout.models.bi_layout.HorizonNetFeatureExtractor', DummyFeatureExtractor
     ), patch(
-        "models.bi_layout.PositionEmbeddingSine", DummyPositionEncoding
+        'portallayout.models.bi_layout.PositionEmbeddingSine', DummyPositionEncoding
     ), patch.object(
         modules, "DummyTransformer", DummyTransformer, create=True
     ):
@@ -80,6 +82,36 @@ def build_test_model(**overrides):
 
 
 class BiLayoutConfigTest(unittest.TestCase):
+    def test_optional_pyramid_keeps_legacy_outputs_and_state_keys(self):
+        for second in (False, True):
+            model = build_test_model(two_conv_out=second).eval()
+            image = torch.rand(1, 3, 8, 16, requires_grad=True)
+            keys = list(model.state_dict())
+            old = model(image, return_features=True)
+            new = model(image, return_features=True, return_feature_pyramid=True)
+            self.assertNotIn('feature_2d_pyramid', old)
+            self.assertEqual(keys, list(model.state_dict()))
+            for name in old:
+                torch.testing.assert_close(old[name], new[name])
+            spatial = new['feature_2d_pyramid'][0]
+            torch.testing.assert_close(spatial, image * 2)
+            spatial.sum().backward()
+            torch.testing.assert_close(image.grad, torch.full_like(image, 2))
+
+    def test_extractor_returns_actual_precompression_spatial_tensor(self):
+        extractor = HorizonNetFeatureExtractor.__new__(HorizonNetFeatureExtractor)
+        nn.Module.__init__(extractor)
+        extractor.second = False
+        extractor.step_cols = 4
+        extractor.feature_extractor = DummyEncoder()
+        extractor.reduce_height_module = ConstantHeightStage(7)
+        extractor._prepare_x = lambda x: x
+        image = torch.rand(1, 3, 4, 16)
+        features, pyramid = extractor(image, return_pyramid=True)
+        self.assertIs(pyramid[0], image)
+        self.assertEqual(features.shape, (1, 1, 4))
+        self.assertEqual(pyramid[0].shape, (1, 3, 4, 16))
+
     def test_same_head_reuses_both_depth_and_ratio_heads(self):
         model = build_test_model(use_same_head=True)
         original = torch.randn(2, model.patch_num, model.patch_dim)

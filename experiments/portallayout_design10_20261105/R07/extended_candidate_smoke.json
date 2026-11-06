@@ -1,0 +1,870 @@
+{
+  "status": "unverified_proposals_only",
+  "sample_rule": "first 5 observations from first R01 fit floor in frozen run report order",
+  "floor_uid": "floor_ac1c867472a93630371dc745",
+  "ground_truth_read": false,
+  "source_sha256": {
+    "experiments/portallayout_design10_20261105/R01/frontend_cache_development/observations/view_061c2f5aab8efea705aa63e3/24b7d6fd089cb2a28fc1a33fd0e145719d1c2d1cd4b3c6ada6f0b0c9d77ff675.json": "742aafa2fbfd5a0405cb062f32c5dc74a46edc4808c6b1a661c9eed0d8b591a7",
+    "experiments/portallayout_design10_20261105/R01/frontend_cache_development/observations/view_061c2f5aab8efea705aa63e3/24b7d6fd089cb2a28fc1a33fd0e145719d1c2d1cd4b3c6ada6f0b0c9d77ff675.npz": "12f9dfcc3f8a9814d678f0a44d9c159190fd9232395091748a4a30b0d30efb25",
+    "experiments/portallayout_design10_20261105/R01/frontend_cache_development/observations/view_0681d3c06faac6e329442cc3/4333ab25e5379455e9494e0a4fdd9319804bccd4f0095983b14e18753d3c0da2.json": "172c2c08e4fa16cf93ee6be0152dced9c792285396ad1deddea5a96bc099e7ef",
+    "experiments/portallayout_design10_20261105/R01/frontend_cache_development/observations/view_0681d3c06faac6e329442cc3/4333ab25e5379455e9494e0a4fdd9319804bccd4f0095983b14e18753d3c0da2.npz": "1ee44d5f50398566b18a8dc36224e1cd2115fe9bb1a9ba6b7bf9670c131a6d5c",
+    "experiments/portallayout_design10_20261105/R01/frontend_cache_development/observations/view_0b431ca2201c539d7df871d7/858dcedd4fa6058af2699416a49d8e0504ab140eaae42b3778b10fab7d988cbf.json": "9c00bc4f8ed6c4098d6a55ce84d561dc4b9e9b6aefe694113eeab38db75362e2",
+    "experiments/portallayout_design10_20261105/R01/frontend_cache_development/observations/view_0b431ca2201c539d7df871d7/858dcedd4fa6058af2699416a49d8e0504ab140eaae42b3778b10fab7d988cbf.npz": "c22dd63f1e0986eb417e633d03c03741ee98abaa5b455d1ec74dbb2610c1c506",
+    "experiments/portallayout_design10_20261105/R01/frontend_cache_development/observations/view_0dc4e21d3a9848255574a0e5/c005174a5ab0df04f72d000a1c727c79f984034955d191c02f6423b96d550dee.json": "36fc2f88c5ce3ca60ab2dc40696bf00f94dd63972667c203610a680f4fdf16d8",
+    "experiments/portallayout_design10_20261105/R01/frontend_cache_development/observations/view_0dc4e21d3a9848255574a0e5/c005174a5ab0df04f72d000a1c727c79f984034955d191c02f6423b96d550dee.npz": "17b6387aeca2e147ac0e98aa036b5dc31f7572771f29a72b3679ca2a645578b0",
+    "experiments/portallayout_design10_20261105/R01/frontend_cache_development/observations/view_18e347c9aa781f57c53d0644/227ebfcc5989a73a25435787a4e67cfb56662766c54781cac8fd4d91b445feed.json": "2d976c830522461c675c883a1b1e60c5ff8cfe0e44711566bdb1c9098d1544a8",
+    "experiments/portallayout_design10_20261105/R01/frontend_cache_development/observations/view_18e347c9aa781f57c53d0644/227ebfcc5989a73a25435787a4e67cfb56662766c54781cac8fd4d91b445feed.npz": "a1f03fad8442db00b11de6a248fb00be5b7e2a4e5f2879de9c29884189a48f0e"
+  },
+  "implementation_sha256": "d02da85c4b89b9c36fadfc0b29052f162191879a3513a00fd298c9310b0f7f23",
+  "results": [
+    {
+      "schema_version": "research10.extended-proposals.v1",
+      "observation_id": "view_061c2f5aab8efea705aa63e3",
+      "minimum_extension_height_units": 0.05,
+      "minimum_run_tokens": 2,
+      "openings": [
+        {
+          "source_observation_id": "view_061c2f5aab8efea705aa63e3",
+          "source_opening_id": "opening_77b08ec58dd0c7b0188723c2",
+          "source_opening_tokens": [
+            224,
+            18
+          ],
+          "token_count": 51,
+          "runs": [],
+          "status": "no_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        },
+        {
+          "source_observation_id": "view_061c2f5aab8efea705aa63e3",
+          "source_opening_id": "opening_8eae326e9c20d9a5864c4ab9",
+          "source_opening_tokens": [
+            95,
+            129
+          ],
+          "token_count": 35,
+          "runs": [],
+          "status": "no_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        }
+      ],
+      "uses_ground_truth": false,
+      "accepted_for_refinement": false
+    },
+    {
+      "schema_version": "research10.extended-proposals.v1",
+      "observation_id": "view_0681d3c06faac6e329442cc3",
+      "minimum_extension_height_units": 0.05,
+      "minimum_run_tokens": 2,
+      "openings": [
+        {
+          "source_observation_id": "view_0681d3c06faac6e329442cc3",
+          "source_opening_id": "opening_9d0a2decb958780a73374325",
+          "source_opening_tokens": [
+            114,
+            128
+          ],
+          "token_count": 15,
+          "runs": [],
+          "status": "no_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        },
+        {
+          "source_observation_id": "view_0681d3c06faac6e329442cc3",
+          "source_opening_id": "opening_7baa3b436d52885ab6cca84a",
+          "source_opening_tokens": [
+            97,
+            111
+          ],
+          "token_count": 15,
+          "runs": [],
+          "status": "no_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        },
+        {
+          "source_observation_id": "view_0681d3c06faac6e329442cc3",
+          "source_opening_id": "opening_13f5a9bd1cf05b250d4b7b7b",
+          "source_opening_tokens": [
+            131,
+            143
+          ],
+          "token_count": 13,
+          "runs": [],
+          "status": "no_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        },
+        {
+          "source_observation_id": "view_0681d3c06faac6e329442cc3",
+          "source_opening_id": "opening_170779e6ed60d2db7a456550",
+          "source_opening_tokens": [
+            249,
+            21
+          ],
+          "token_count": 29,
+          "runs": [
+            {
+              "token_indices": [
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ],
+              "boundary_points": [
+                [
+                  0.5625694274741351,
+                  -3.4963621121403103
+                ],
+                [
+                  0.4761544864486836,
+                  -3.505871983634102
+                ],
+                [
+                  0.39048256396201275,
+                  -3.521099345719354
+                ],
+                [
+                  0.30420104290326144,
+                  -3.5325038442572367
+                ],
+                [
+                  0.2180120346511934,
+                  -3.5485836233791943
+                ],
+                [
+                  0.131274354033444,
+                  -3.564121116037488
+                ],
+                [
+                  0.043855869527400164,
+                  -3.5735183511680724
+                ],
+                [
+                  -0.04340347639235531,
+                  -3.53665589267742
+                ],
+                [
+                  -0.12832585634627347,
+                  -3.4840689006233876
+                ],
+                [
+                  -0.2106999718214789,
+                  -3.429565118496383
+                ],
+                [
+                  -0.2910070518021364,
+                  -3.379289957016746
+                ],
+                [
+                  -0.36905131194791013,
+                  -3.3278472663457292
+                ],
+                [
+                  -0.4459486015104181,
+                  -3.2834694467268855
+                ],
+                [
+                  -0.5223927441508932,
+                  -3.246664516603445
+                ],
+                [
+                  -0.5961305796075063,
+                  -3.2018116410851456
+                ],
+                [
+                  -0.6527270043733511,
+                  -3.0832404209587154
+                ],
+                [
+                  -0.7130154562295417,
+                  -3.002366933010278
+                ],
+                [
+                  -0.7777476162461072,
+                  -2.9508237653052753
+                ],
+                [
+                  -0.8478457835690224,
+                  -2.923660327553105
+                ],
+                [
+                  -0.9224722350370134,
+                  -2.911857715724242
+                ],
+                [
+                  -1.0053604822542606,
+                  -2.9223675351578775
+                ],
+                [
+                  -1.0919870296871987,
+                  -2.937735837514719
+                ],
+                [
+                  -1.2000732213012708,
+                  -3.000871764467329
+                ],
+                [
+                  -1.3155118935419245,
+                  -3.068856932312773
+                ],
+                [
+                  -1.4508859469140845,
+                  -3.1676402840878572
+                ],
+                [
+                  -1.537618303825276,
+                  -3.1504038980308895
+                ],
+                [
+                  -0.6755887714962927,
+                  -1.3021258504668376
+                ]
+              ],
+              "extension_depth": [
+                2.3254839181900024,
+                2.32427978515625,
+                2.328981637954712,
+                2.3317564725875854,
+                2.3401764631271362,
+                2.349221348762512,
+                2.354923367500305,
+                2.3146640062332153,
+                2.2608152627944946,
+                2.2047064304351807,
+                2.1541415452957153,
+                2.1041983366012573,
+                2.0611608028411865,
+                2.027960419654846,
+                1.9872649908065796,
+                1.8738547563552856,
+                1.7970210313796997,
+                1.7506184577941895,
+                1.7314032316207886,
+                1.729067087173462,
+                1.7533206939697266,
+                1.7833428382873535,
+                1.8663554191589355,
+                1.955743670463562,
+                2.0798122882843018,
+                2.083222508430481,
+                0.06843018531799316
+              ]
+            }
+          ],
+          "status": "unverified_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        },
+        {
+          "source_observation_id": "view_0681d3c06faac6e329442cc3",
+          "source_opening_id": "opening_b1ea9b38567c7003a50a0f38",
+          "source_opening_tokens": [
+            228,
+            237
+          ],
+          "token_count": 10,
+          "runs": [
+            {
+              "token_indices": [
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237
+              ],
+              "boundary_points": [
+                [
+                  1.1293620927925567,
+                  -1.4110932891529062
+                ],
+                [
+                  1.1437577713654177,
+                  -1.5032667980334975
+                ],
+                [
+                  1.1663560392908114,
+                  -1.6136652528452056
+                ],
+                [
+                  1.1993310070912464,
+                  -1.7480995413285996
+                ],
+                [
+                  1.2286224109805994,
+                  -1.8885282731354351
+                ],
+                [
+                  1.269175756570936,
+                  -2.059741941173939
+                ],
+                [
+                  1.3047770006097326,
+                  -2.238740775782835
+                ],
+                [
+                  1.355689255272211,
+                  -2.463124813273759
+                ],
+                [
+                  1.3778745545068645,
+                  -2.655707364925782
+                ],
+                [
+                  1.3928317894017952,
+                  -2.8537529032506717
+                ]
+              ],
+              "extension_depth": [
+                0.4056905508041382,
+                0.5048400163650513,
+                0.6245418787002563,
+                0.768798828125,
+                0.9213438034057617,
+                1.1023198366165161,
+                1.2884609699249268,
+                1.520668864250183,
+                1.7113600969314575,
+                1.904464840888977
+              ]
+            }
+          ],
+          "status": "unverified_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        },
+        {
+          "source_observation_id": "view_0681d3c06faac6e329442cc3",
+          "source_opening_id": "opening_ef63d0c705a936503e61e83d",
+          "source_opening_tokens": [
+            62,
+            65
+          ],
+          "token_count": 4,
+          "runs": [],
+          "status": "no_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        },
+        {
+          "source_observation_id": "view_0681d3c06faac6e329442cc3",
+          "source_opening_id": "opening_271966e25fa65d3990633f8a",
+          "source_opening_tokens": [
+            69,
+            70
+          ],
+          "token_count": 2,
+          "runs": [],
+          "status": "no_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        }
+      ],
+      "uses_ground_truth": false,
+      "accepted_for_refinement": false
+    },
+    {
+      "schema_version": "research10.extended-proposals.v1",
+      "observation_id": "view_0b431ca2201c539d7df871d7",
+      "minimum_extension_height_units": 0.05,
+      "minimum_run_tokens": 2,
+      "openings": [
+        {
+          "source_observation_id": "view_0b431ca2201c539d7df871d7",
+          "source_opening_id": "opening_bb4ed21c49eaee99f161165f",
+          "source_opening_tokens": [
+            73,
+            130
+          ],
+          "token_count": 58,
+          "runs": [],
+          "status": "no_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        },
+        {
+          "source_observation_id": "view_0b431ca2201c539d7df871d7",
+          "source_opening_id": "opening_7e50fdf55f8fea5c6697562b",
+          "source_opening_tokens": [
+            137,
+            191
+          ],
+          "token_count": 55,
+          "runs": [],
+          "status": "no_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        },
+        {
+          "source_observation_id": "view_0b431ca2201c539d7df871d7",
+          "source_opening_id": "opening_0710a2a56c97e2c4240e7ed1",
+          "source_opening_tokens": [
+            40,
+            45
+          ],
+          "token_count": 6,
+          "runs": [],
+          "status": "no_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        }
+      ],
+      "uses_ground_truth": false,
+      "accepted_for_refinement": false
+    },
+    {
+      "schema_version": "research10.extended-proposals.v1",
+      "observation_id": "view_0dc4e21d3a9848255574a0e5",
+      "minimum_extension_height_units": 0.05,
+      "minimum_run_tokens": 2,
+      "openings": [
+        {
+          "source_observation_id": "view_0dc4e21d3a9848255574a0e5",
+          "source_opening_id": "opening_e9a4177e4d46a29531388b4d",
+          "source_opening_tokens": [
+            122,
+            156
+          ],
+          "token_count": 35,
+          "runs": [],
+          "status": "no_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        },
+        {
+          "source_observation_id": "view_0dc4e21d3a9848255574a0e5",
+          "source_opening_id": "opening_359e69cfb489a4fea30b41b9",
+          "source_opening_tokens": [
+            199,
+            202
+          ],
+          "token_count": 4,
+          "runs": [],
+          "status": "no_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        }
+      ],
+      "uses_ground_truth": false,
+      "accepted_for_refinement": false
+    },
+    {
+      "schema_version": "research10.extended-proposals.v1",
+      "observation_id": "view_18e347c9aa781f57c53d0644",
+      "minimum_extension_height_units": 0.05,
+      "minimum_run_tokens": 2,
+      "openings": [
+        {
+          "source_observation_id": "view_18e347c9aa781f57c53d0644",
+          "source_opening_id": "opening_82c933207a35032660cc5e1d",
+          "source_opening_tokens": [
+            104,
+            145
+          ],
+          "token_count": 42,
+          "runs": [],
+          "status": "no_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        },
+        {
+          "source_observation_id": "view_18e347c9aa781f57c53d0644",
+          "source_opening_id": "opening_3cf3b47d656fdd6e531ac012",
+          "source_opening_tokens": [
+            16,
+            92
+          ],
+          "token_count": 77,
+          "runs": [
+            {
+              "token_indices": [
+                16,
+                17,
+                18,
+                19
+              ],
+              "boundary_points": [
+                [
+                  -0.8731315750832096,
+                  -2.036861772340855
+                ],
+                [
+                  -0.8657984555092889,
+                  -1.8902506233556304
+                ],
+                [
+                  -0.8564458330476149,
+                  -1.7547594771557278
+                ],
+                [
+                  -0.8541190243941,
+                  -1.6462240166837587
+                ]
+              ],
+              "extension_depth": [
+                0.19997715950012207,
+                0.1849675178527832,
+                0.1691981554031372,
+                0.1659940481185913
+              ]
+            }
+          ],
+          "status": "unverified_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        },
+        {
+          "source_observation_id": "view_18e347c9aa781f57c53d0644",
+          "source_opening_id": "opening_376f744b2e39ff427b18780a",
+          "source_opening_tokens": [
+            207,
+            232
+          ],
+          "token_count": 26,
+          "runs": [],
+          "status": "no_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        },
+        {
+          "source_observation_id": "view_18e347c9aa781f57c53d0644",
+          "source_opening_id": "opening_909708e02fa8c12d9539a9c2",
+          "source_opening_tokens": [
+            246,
+            252
+          ],
+          "token_count": 7,
+          "runs": [
+            {
+              "token_indices": [
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252
+              ],
+              "boundary_points": [
+                [
+                  1.1462377304840767,
+                  -4.82658016639998
+                ],
+                [
+                  1.0382012358809678,
+                  -4.904077806050982
+                ],
+                [
+                  0.9178788552498022,
+                  -4.929918552038861
+                ],
+                [
+                  0.7979170708371607,
+                  -4.959044837596139
+                ],
+                [
+                  0.6702273324722346,
+                  -4.934808543137528
+                ],
+                [
+                  0.5468672371988127,
+                  -4.931267228831799
+                ],
+                [
+                  0.4239325376086493,
+                  -4.922873717052019
+                ]
+              ],
+              "extension_depth": [
+                2.3516411781311035,
+                2.4069879055023193,
+                2.4016053676605225,
+                2.4148447513580322,
+                2.3762829303741455,
+                2.3555023670196533,
+                2.334937334060669
+              ]
+            }
+          ],
+          "status": "unverified_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        },
+        {
+          "source_observation_id": "view_18e347c9aa781f57c53d0644",
+          "source_opening_id": "opening_8593f0b81cf348eed4e0b3c1",
+          "source_opening_tokens": [
+            4,
+            11
+          ],
+          "token_count": 8,
+          "runs": [
+            {
+              "token_indices": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ],
+              "boundary_points": [
+                [
+                  -0.5409190856742353,
+                  -4.877630948049063
+                ],
+                [
+                  -0.656180037211765,
+                  -4.831379886470184
+                ],
+                [
+                  -0.766823657435913,
+                  -4.765799653545968
+                ],
+                [
+                  -0.8689751370164642,
+                  -4.667257149171485
+                ],
+                [
+                  -0.9631085087479202,
+                  -4.549367597854657
+                ],
+                [
+                  -0.9575902003010288,
+                  -4.032222762689922
+                ],
+                [
+                  -0.9521841355443662,
+                  -3.612646978813596
+                ],
+                [
+                  -0.9352118876313967,
+                  -3.2249283380453053
+                ]
+              ],
+              "extension_depth": [
+                2.2954723834991455,
+                2.2638559341430664,
+                2.2110683917999268,
+                2.1180334091186523,
+                2.007460594177246,
+                1.4996569156646729,
+                1.097259521484375,
+                0.7406017780303955
+              ]
+            }
+          ],
+          "status": "unverified_candidate",
+          "visibility": "unknown",
+          "target_membership": "unknown",
+          "source": "predicted_extended_depth_inside_opening",
+          "coordinate_spec": {
+            "frame": "bi_panorama_local_xz",
+            "units": "camera_height_normalized",
+            "camera_height_m": null,
+            "scale_status": "unknown",
+            "token_u": "(token_index+0.5)/token_count",
+            "ray_xz": "[sin(2*pi*(u-0.5)),cos(2*pi*(u-0.5))]"
+          }
+        }
+      ],
+      "uses_ground_truth": false,
+      "accepted_for_refinement": false
+    }
+  ]
+}

@@ -1,4 +1,3 @@
-"""
-@date: 2021/6/29
-@description:
-"""
+"""Compatibility import; new code uses portallayout."""
+from portallayout._compat import alias_package
+alias_package(__name__)

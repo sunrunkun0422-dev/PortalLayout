@@ -98,8 +98,8 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--output_dir", default=str(DEFAULT_OUTPUT))
     parser.add_argument("--audit_root", default=str(AUDIT_ROOT))
-    parser.add_argument("--train_manifest", default=str(REPO_ROOT / "src/dataset/ZInD_matching/train.json"))
-    parser.add_argument("--val_manifest", default=str(REPO_ROOT / "src/dataset/ZInD_matching/val.json"))
+    parser.add_argument("--train_manifest", default=str(REPO_ROOT / "data/ZInD_matching/train.json"))
+    parser.add_argument("--val_manifest", default=str(REPO_ROOT / "data/ZInD_matching/val.json"))
     parser.add_argument("--train_cache_dir", default=str(DEFAULT_CACHE_ROOT / "train"))
     parser.add_argument("--val_cache_dir", default=str(DEFAULT_CACHE_ROOT / "val"))
     parser.add_argument("--t3_checkpoint", default=str(T3_CHECKPOINT))
@@ -906,7 +906,7 @@ def train_and_evaluate_phase_b(
         log(f"trained Phase-B {name} dev_harmonic={protocol['dev']['harmonic']:.4f}")
     frozen = {
         "schema_version": "zind-salve-phase-b-frozen-before-val-v1",
-        "models": artifacts, "protocols": protocols,
+        'portallayout.models': artifacts, "protocols": protocols,
         "normalization_sha256": sha256_file(output / "phase_B_normalization.json"),
         "split_sha256": sha256_file(output / "phase_B_subtrain_dev_split.json"),
         "val_used": False, "test_data_accessed": False,
@@ -944,7 +944,7 @@ def train_and_evaluate_phase_b(
     summary = {
         "schema_version": "zind-salve-phase-b-v2",
         "status": "passed" if passed else "failed_hard_gate",
-        "models": results, "model_artifacts": artifacts,
+        'portallayout.models': results, "model_artifacts": artifacts,
         "training_protocols": protocols, "leakage_gates": leakage,
         "passed": passed, "cnn_training_started": False,
         "active_splits": ["train", "val"], "test_data_accessed": False,

@@ -35,7 +35,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from tools.evaluate_zind_portal_geometry_val import _layout_state, _m2_contract  # noqa: E402
-from utils.candidate_conditioned_verifier import (  # noqa: E402
+from portallayout.utils.candidate_conditioned_verifier import (  # noqa: E402
     circular_interval_width,
     endpoint_consistency,
     feature_names_are_predicted_only,
@@ -48,17 +48,17 @@ from utils.candidate_conditioned_verifier import (  # noqa: E402
     transform_points,
     yaw_scale_translation,
 )
-from utils.candidate_local_portal_geometry import (  # noqa: E402
+from portallayout.geometry.candidate_local_portal_geometry import (  # noqa: E402
     CandidateLocalPortalConfig,
     estimate_candidate_local_portal_geometry,
 )
-from utils.joint_layout import build_joint_layout_from_endpoints  # noqa: E402
+from portallayout.geometry.joint_layout import build_joint_layout_from_endpoints  # noqa: E402
 
 
 DEFAULT_OUTPUT = REPO_ROOT / "experiments/zind_e2e_v3/g0_seed123/T5_bev_verifier/preflight"
 AUDIT_ROOT = REPO_ROOT / "experiments/zind_e2e_v3/g0_seed123/T5_candidate_recall/audit"
-TRAIN_MANIFEST = REPO_ROOT / "src/dataset/ZInD_matching/train.json"
-VAL_MANIFEST = REPO_ROOT / "src/dataset/ZInD_matching/val.json"
+TRAIN_MANIFEST = REPO_ROOT / "data/ZInD_matching/train.json"
+VAL_MANIFEST = REPO_ROOT / "data/ZInD_matching/val.json"
 T3_CHECKPOINT = REPO_ROOT / "checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T3/best.pt"
 SHORTLIST_VALUES = (1, 3, 5, 8)
 EXPECTED_T3_SHA256 = "ca083dbbc5a05d738dad36404ad708c623c272aef7a64398b4de3a793278cc5d"
@@ -865,11 +865,11 @@ def rank_metrics(
         "wrong_selection_recovered":wrong_recovered,"dustbin_reject_recovered":dust_recovered,
         "original_correct_retained":retained,"original_correct_denominator":baseline_count,
         "original_correct_retention_rate":retained/max(1,baseline_count),"improved_house_count":len(improved_houses),
-        "paired_win_tie_loss":{"win":int(wins),"tie":int(len(groups)-wins-losses),"loss":int(losses)},
+        "paired_win_tie_loss":{"win":int(wins),"tie":int(len(groups)-wins-losses),'portallayout.losses':int(losses)},
         "house_paired_win_tie_loss":{
             "win":sum(value > 0 for value in house_deltas.values()),
             "tie":sum(value == 0 for value in house_deltas.values()),
-            "loss":sum(value < 0 for value in house_deltas.values()),
+            'portallayout.losses':sum(value < 0 for value in house_deltas.values()),
         },
         "house_bootstrap":bootstrap,"strict_success_by_pair":strict,"physical_success_by_pair":physical,
     }
@@ -921,7 +921,7 @@ def phase_a(context: Mapping[str, Any], output: Path, log: Logger) -> Dict[str, 
         )
         ablation_models[name]=(model,indices,protocol,artifact)
     torch.manual_seed(SEED)
-    frozen={"schema_version":"zind-salve-phase-a-frozen-models-v1","models":{name:artifact for name,(_,artifact) in models.items()},"normalization_sha256":sha256_file(output/"normalization.json"),"split_sha256":sha256_file(output/"subtrain_dev_split.json"),"val_evaluated":False,"test_data_accessed":False}
+    frozen={"schema_version":"zind-salve-phase-a-frozen-models-v1",'portallayout.models':{name:artifact for name,(_,artifact) in models.items()},"normalization_sha256":sha256_file(output/"normalization.json"),"split_sha256":sha256_file(output/"subtrain_dev_split.json"),"val_evaluated":False,"test_data_accessed":False}
     atomic_json(output/"phase_A_frozen_before_val.json",frozen)
 
     if not (output/".features_val_complete").is_file(): generate_features(context,output,"val",log)
@@ -969,7 +969,7 @@ def phase_a(context: Mapping[str, Any], output: Path, log: Logger) -> Dict[str, 
         "val_pair_count":len(val_groups),"val_shortlist_manifest_target_coverage":sum(g["shortlist_has_target"] for g in val_groups),
         "T3_reported_compatibility_baseline":{"correct":501,"denominator":1080,"rate":501/1080},
         "strict_manifest_note":"T3 strict single-manifest accepted count is 500; legacy 501 includes one alternate physical shared portal",
-        "models":results,"model_artifacts":{name:artifact for name,(_,artifact) in models.items()},"passed":passed,"leakage_audit":leakage,"visualizations":visual,
+        'portallayout.models':results,"model_artifacts":{name:artifact for name,(_,artifact) in models.items()},"passed":passed,"leakage_audit":leakage,"visualizations":visual,
         "val_used_for_standardization_selection_or_threshold":False,"test_data_accessed":False,
     }
     atomic_json(output/"phase_A_summary.json",summary); atomic_json(output/"ablation_summary.json",ablations)
@@ -1043,7 +1043,7 @@ def write_report(context: Mapping[str, Any], output: Path) -> None:
     shortlist=json.loads((output/"shortlist_audit.json").read_text()); a=json.loads((output/"phase_A_summary.json").read_text()); b=json.loads((output/"phase_B_summary.json").read_text()) if (output/"phase_B_summary.json").is_file() else {"status":"not_run"}
     features_train=json.loads((output/"feature_generation_train.json").read_text()); features_val=json.loads((output/"feature_generation_val.json").read_text()); ablations=json.loads((output/"ablation_summary.json").read_text()); state=json.loads((output/"state_evidence.json").read_text())
     model_lines=[]
-    for name,value in a["models"].items():
+    for name,value in a['portallayout.models'].items():
         model_lines.append(
             f"| {name} | {value['strict_manifest_top1']}/1080 | "
             f"{value['physical_compatibility_top1']}/1080 | {value['candidate_mrr']:.4f} | "
@@ -1063,7 +1063,7 @@ def write_report(context: Mapping[str, Any], output: Path) -> None:
         if (output / "phase_B_negative_smoke.json").is_file() else None
     )
     if phase_b_passed:
-        e0, e1, e2 = (b["models"][name] for name in ("E0_T3_legacy", "E1_logistic", "E2_mlp"))
+        e0, e1, e2 = (b['portallayout.models'][name] for name in ("E0_T3_legacy", "E1_logistic", "E2_mlp"))
         phase_b_text = f"""| 模型 | S3 | Harmonic | Negative rejection | Positive recall | 原501保留 | Gate |
 |---|---:|---:|---:|---:|---:|---:|
 | E0 T3 | {e0['end_to_end_s3_count']}/1827 | {e0['harmonic']:.6f} | {e0['negative_rejection']:.4%} | {e0['positive_match_recall']:.4%} | 100.00% | baseline |
@@ -1116,7 +1116,7 @@ Phase A和Phase B均通过硬门禁；E1将完整val S3从501提高到526、Harm
 
 ## 7. wrong-selection恢复情况
 
-- V1={a['models']['V1_logistic']['wrong_selection_recovered']}/142；V2={a['models']['V2_mlp']['wrong_selection_recovered']}/142。主要提升来自移除positive dustbin reject，而非候选内几何重排。
+- V1={a['portallayout.models']['V1_logistic']['wrong_selection_recovered']}/142；V2={a['portallayout.models']['V2_mlp']['wrong_selection_recovered']}/142。主要提升来自移除positive dustbin reject，而非候选内几何重排。
 
 ## 8. Phase A门禁
 
@@ -1130,8 +1130,8 @@ Phase A和Phase B均通过硬门禁；E1将完整val S3从501提高到526、Harm
 
 ## 10. dustbin恢复和negative false positive
 
-- Phase A V1/V2 dustbin恢复={a['models']['V1_logistic']['dustbin_reject_recovered']}/{a['models']['V2_mlp']['dustbin_reject_recovered']}。
-- Phase B E1 dustbin恢复={b['models']['E1_logistic']['dustbin_reject_recovered'] if phase_b_passed else 'n/a'}，wrong-selection恢复={b['models']['E1_logistic']['wrong_selection_recovered'] if phase_b_passed else 'n/a'}，negative FP={b['models']['E1_logistic']['false_positive_count'] if phase_b_passed else 'n/a'}。
+- Phase A V1/V2 dustbin恢复={a['portallayout.models']['V1_logistic']['dustbin_reject_recovered']}/{a['portallayout.models']['V2_mlp']['dustbin_reject_recovered']}。
+- Phase B E1 dustbin恢复={b['portallayout.models']['E1_logistic']['dustbin_reject_recovered'] if phase_b_passed else 'n/a'}，wrong-selection恢复={b['portallayout.models']['E1_logistic']['wrong_selection_recovered'] if phase_b_passed else 'n/a'}，negative FP={b['portallayout.models']['E1_logistic']['false_positive_count'] if phase_b_passed else 'n/a'}。
 
 ## 11. A0-A4消融
 
@@ -1139,9 +1139,9 @@ Phase A和Phase B均通过硬门禁；E1将完整val S3从501提高到526、Harm
 
 ## 12. house-bootstrap
 
-- V1={a['models']['V1_logistic']['house_bootstrap']}；house win/tie/loss={a['models']['V1_logistic']['house_paired_win_tie_loss']}。
-- V2={a['models']['V2_mlp']['house_bootstrap']}；house win/tie/loss={a['models']['V2_mlp']['house_paired_win_tie_loss']}。
-- Phase B E1={b['models']['E1_logistic']['house_bootstrap'] if phase_b_passed else 'n/a'}；E2={b['models']['E2_mlp']['house_bootstrap'] if phase_b_passed else 'n/a'}。
+- V1={a['portallayout.models']['V1_logistic']['house_bootstrap']}；house win/tie/loss={a['portallayout.models']['V1_logistic']['house_paired_win_tie_loss']}。
+- V2={a['portallayout.models']['V2_mlp']['house_bootstrap']}；house win/tie/loss={a['portallayout.models']['V2_mlp']['house_paired_win_tie_loss']}。
+- Phase B E1={b['portallayout.models']['E1_logistic']['house_bootstrap'] if phase_b_passed else 'n/a'}；E2={b['portallayout.models']['E2_mlp']['house_bootstrap'] if phase_b_passed else 'n/a'}。
 
 ## 13. 是否支持SALVe风格verifier
 
@@ -1150,7 +1150,7 @@ Phase A和Phase B均通过硬门禁；E1将完整val S3从501提高到526、Harm
 
 ## 14. 是否允许进入栅格BEV CNN
 
-- Phase A+B已通过，因此按授权实现了7-channel raster原型：grid={raster['config']['grid_size'] if raster else 'n/a'}，范围=±{raster['config']['half_extent_portal_widths'] if raster else 'n/a'}个predicted portal width，examples={raster['example_count'] if raster else 0}，mean/max clipping={raster['mean_clipping_rate'] if raster else 'n/a'}/{raster['max_clipping_rate'] if raster else 'n/a'}。
+- Phase A+B已通过，因此按授权实现了7-channel raster原型：grid={raster['portallayout.config']['grid_size'] if raster else 'n/a'}，范围=±{raster['portallayout.config']['half_extent_portal_widths'] if raster else 'n/a'}个predicted portal width，examples={raster['example_count'] if raster else 0}，mean/max clipping={raster['mean_clipping_rate'] if raster else 'n/a'}/{raster['max_clipping_rate'] if raster else 'n/a'}。
 - CNN训练仍未授权且未启动。
 
 ## 15. 测试、安全和GT隔离

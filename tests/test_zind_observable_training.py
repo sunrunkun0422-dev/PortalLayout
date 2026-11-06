@@ -1,6 +1,6 @@
 import copy,json,unittest
 from pathlib import Path
-from dataset.zind_matching_feature_dataset import ZInDMatchingFeatureDataset
+from portallayout.datasets.zind_matching_feature_dataset import ZInDMatchingFeatureDataset
 from tools.prepare_zind_observable_training import all_candidates
 
 CFG=json.loads((Path(__file__).resolve().parents[1]/'configs/zind_observable_pairs_v1.json').read_text())

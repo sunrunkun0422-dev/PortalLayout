@@ -1,0 +1,19 @@
+flowchart LR
+    t_front["01  单图感知<br/>Bi-Layout 双布局<br/>候选开口与视觉特征<br/>已有基础模型与前端适配"]:::done
+    t_match["02  研究一：开口对应<br/>联合表征 + 双向检索<br/>匹配置信度与无匹配判断<br/>已实现 · 可靠性待验证"]:::done
+    t_pose["03  初始位姿与关联<br/>端点多假设 + 验证<br/>保留歧义与不连通分量<br/>已有流程 · 接边门槛未通过"]:::partial
+    t_refine["04  研究二：局部修正<br/>可信跨图观测约束<br/>墙段与开口端点更新<br/>拟研究 · 不等同于 PGO"]:::plan
+    t_floor["05  整体平面重建<br/>重估位姿 → 全局定位<br/>房间融合与结构输出<br/>后端已有 · 修正后闭环待接入"]:::partial
+    t_front --> t_match
+    t_match --> t_pose
+    t_pose --> t_refine
+    t_refine --> t_floor
+    note_0["开口实例驱动的视觉—几何匹配｜已实现<br/>结构代理采样 + 邻域软覆盖上下文 + 几何属性<br/>门控融合与图内交互 → 单图开口描述子<br/>候选对条件化双向检索 → 联合分配与拒绝<br/>验证目标：在控制误接受时保留更多跨房间正确对应"]:::done
+    note_1["匹配约束下的局部结构更新｜拟研究<br/>固定可靠对应与当前位姿，筛选有效跨图观测<br/>优化墙段方向 / 位置及开口沿墙端点<br/>本图证据 + 跨图一致性 + 结构保持约束<br/>无有效观测保留原布局；异常更新回退"]:::plan
+    note_2["验证闭环｜只设计，不在本轮执行<br/>对应精确率 / 召回率与误接受 → 相对位姿质量 → 局部几何改善 → 七项整层指标；GT 仅用于离线监督及评价。"]:::eval
+    classDef base fill:#EDF2F7,stroke:#71859A,color:#142B42;
+    classDef done fill:#EAF3FF,stroke:#3574B8,color:#142B42;
+    classDef partial fill:#FFF4DF,stroke:#BB7A21,color:#142B42,stroke-dasharray: 5 3;
+    classDef plan fill:#F2ECFA,stroke:#8560A9,color:#142B42,stroke-dasharray: 5 3;
+    classDef unknown fill:#F2F2F2,stroke:#8A8A8A,color:#142B42,stroke-dasharray: 5 3;
+    classDef eval fill:#E7F5F0,stroke:#2E8169,color:#142B42;

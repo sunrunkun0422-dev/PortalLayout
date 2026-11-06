@@ -40,3 +40,34 @@ src/output/**
 !src/output/**/summary.json
 !src/output/**/run_metadata.json
 !src/output/**/metadata.json
+
+# Canonical PortalLayout runtime locations.
+data/*
+!data/ZInD_matching_groups/
+data/ZInD_matching_groups/*
+!data/ZInD_matching_groups/debug_train_0665_floor_03.json
+outputs/**
+!outputs/**/
+!outputs/**/*.md
+!outputs/**/summary.json
+!outputs/**/run_metadata.json
+!outputs/**/metadata.json
+*.egg-info/
+build/
+dist/
+
+# Retain previously versioned examples after migration.
+!/outputs/custom_panorama_test/u=745743147,2360825291&fm=253&fmt=auto&app=138&f=JPEG_3d.obj
+!/outputs/custom_panorama_test/u=745743147,2360825291&fm=253&fmt=auto&app=138&f=JPEG_pred.json
+!/outputs/custom_panorama_test/u=745743147,2360825291&fm=253&fmt=auto&app=138&f=JPEG_pred.png
+!/outputs/custom_panorama_test/u=745743147,2360825291&fm=253&fmt=auto&app=138&f=JPEG_vp.txt
+
+# Experiment directories can contain thousands of per-view predictions,
+# model checkpoints and feature caches. Publish small reports by default;
+# explicitly force-add other reviewed evidence when it is needed.
+/experiments/**
+!/experiments/**/
+!/experiments/**/*.md
+!/experiments/**/report.json
+!/experiments/**/summary.json
+!/experiments/**/*_report.json

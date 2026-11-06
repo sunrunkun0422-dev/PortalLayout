@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+<rect width="100%" height="100%" fill="white"/>
+<polygon points="482.54,721.10 481.01,701.02 141.77,726.85 143.30,746.94 103.12,750.00 60.80,194.27 98.74,191.38 100.27,211.46 133.75,208.91 135.79,235.70 441.55,212.41 439.68,187.86 698.58,168.14 739.20,701.56" fill="none" stroke="#1e6ecd" stroke-width="4"/>
+<text x="300.01" y="425.54" fill="#1e6ecd" font-size="20">predicted</text>
+<polygon points="87.17,493.28 119.33,50.00 674.24,90.27 642.07,533.55" fill="none" stroke="#289128" stroke-width="4"/>
+<text x="380.70" y="291.77" fill="#289128" font-size="20">GT complete</text>
+</svg>

@@ -1,0 +1,14 @@
+{
+  "schema": "salve-unlabeled-bev.v1",
+  "candidates": [
+    {
+      "candidate_id": "fixture-0001",
+      "images": {
+        "ceiling_a": "inputs/ceiling_a.jpg",
+        "ceiling_b": "inputs/ceiling_b.jpg",
+        "floor_a": "inputs/floor_a.jpg",
+        "floor_b": "inputs/floor_b.jpg"
+      }
+    }
+  ]
+}

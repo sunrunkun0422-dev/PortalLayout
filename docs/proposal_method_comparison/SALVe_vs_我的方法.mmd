@@ -1,0 +1,26 @@
+flowchart LR
+    u_front["布局与 W/D/O<br/>单图布局、语义开口<br/>HoHoNet 深度<br/>SALVe §4.1–4.3"]:::base
+    u_assoc["几何候选关联<br/>同类语义与宽度筛选<br/>生成相对对齐假设<br/>尚未确认对应"]:::base
+    u_verify["RGB BEV 验证<br/>对齐地板 / 天花板纹理<br/>CNN 判断位姿假设<br/>外观用于对齐验证"]:::done
+    u_geom["位姿定位后融合<br/>位姿图优化<br/>同房间高置信轮廓选择<br/>已有轮廓融合"]:::base
+    u_out["平面拼接输出<br/>房间区域与相机位置<br/>原论文协议评测<br/>不能直接对比异协议数字"]:::eval
+    v_front["双布局与候选开口<br/>Bi-Layout 为基础<br/>共享前端与特征缓存<br/>基础技术 · 非本课题原创"]:::done
+    v_assoc["研究一：开口实例匹配<br/>结构 / 上下文 / 几何<br/>候选对检索 + 无匹配分配<br/>先判断具体候选对应"]:::done
+    v_verify["位姿多假设与验证<br/>几何 BEV + 视觉特征<br/>工作点筛选 / 诊断排序<br/>工作点未通过"]:::partial
+    v_geom["研究二：局部形状修正<br/>跨房间有效观测约束<br/>墙段位置 / 方向、端点<br/>拟研究；与相机 PGO 分开"]:::plan
+    v_out["重定位与整体输出<br/>PGO、区域融合、结构图<br/>七项指标与失败诊断<br/>已有后端；完整目标待验证"]:::partial
+    u_front --> u_assoc
+    u_assoc --> u_verify
+    u_verify --> u_geom
+    u_geom --> u_out
+    v_front --> v_assoc
+    v_assoc --> v_verify
+    v_verify --> v_geom
+    v_geom --> v_out
+    note_0["可检验的差异，而非已经证明的优势<br/>H1：候选对视觉检索改善固定误接受率下的对应召回。  H2：可靠跨图约束改善局部几何，并减少整体重建误差。"]:::eval
+    classDef base fill:#EDF2F7,stroke:#71859A,color:#142B42;
+    classDef done fill:#EAF3FF,stroke:#3574B8,color:#142B42;
+    classDef partial fill:#FFF4DF,stroke:#BB7A21,color:#142B42,stroke-dasharray: 5 3;
+    classDef plan fill:#F2ECFA,stroke:#8560A9,color:#142B42,stroke-dasharray: 5 3;
+    classDef unknown fill:#F2F2F2,stroke:#8A8A8A,color:#142B42,stroke-dasharray: 5 3;
+    classDef eval fill:#E7F5F0,stroke:#2E8169,color:#142B42;

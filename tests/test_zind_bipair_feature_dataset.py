@@ -6,9 +6,9 @@ from tempfile import TemporaryDirectory
 import numpy as np
 import torch
 
-from dataset.zind_bipair_adapter import adapt_zind_bipair_batch
-from dataset.zind_bipair_dataset import collate_zind_bipair
-from dataset.zind_bipair_feature_dataset import ZInDBiPairFeatureDataset
+from portallayout.datasets.zind_bipair_adapter import adapt_zind_bipair_batch
+from portallayout.datasets.zind_bipair_dataset import collate_zind_bipair
+from portallayout.datasets.zind_bipair_feature_dataset import ZInDBiPairFeatureDataset
 
 
 class ZInDBiPairFeatureDatasetTest(unittest.TestCase):

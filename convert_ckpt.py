@@ -7,7 +7,7 @@ import os
 
 import torch
 
-from config.defaults import merge_from_file
+from portallayout.config.defaults import merge_from_file
 
 
 def parse_option():

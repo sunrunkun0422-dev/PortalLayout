@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from utils.cross_scene_estimator import (
+from portallayout.engine.cross_scene_estimator import (
     OpeningCandidate,
     estimate_wall_pair_candidates,
     extract_opening_candidates,

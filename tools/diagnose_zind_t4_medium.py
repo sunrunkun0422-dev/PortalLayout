@@ -32,8 +32,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from dataset.zind_bipair_adapter import adapt_zind_bipair_batch  # noqa: E402
-from dataset.zind_bipair_dataset import collate_zind_bipair  # noqa: E402
+from portallayout.datasets.zind_bipair_adapter import adapt_zind_bipair_batch  # noqa: E402
+from portallayout.datasets.zind_bipair_dataset import collate_zind_bipair  # noqa: E402
 from tools.preflight_zind_t4_matcher_only import (  # noqa: E402
     _finite_mapping,
     _load_t3_model,
@@ -95,8 +95,8 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--small_t4_checkpoint", default=str(DEFAULT_SMALL_T4))
     parser.add_argument("--small_val_manifest", default=str(DEFAULT_SMALL_VAL))
     parser.add_argument("--small_gate_artifact", default=str(DEFAULT_SMALL_GATE))
-    parser.add_argument("--train_manifest", default=str(REPO_ROOT / "src/dataset/ZInD_matching/train.json"))
-    parser.add_argument("--val_manifest", default=str(REPO_ROOT / "src/dataset/ZInD_matching/val.json"))
+    parser.add_argument("--train_manifest", default=str(REPO_ROOT / "data/ZInD_matching/train.json"))
+    parser.add_argument("--val_manifest", default=str(REPO_ROOT / "data/ZInD_matching/val.json"))
     parser.add_argument("--train_cache_dir", default=str(DEFAULT_CACHE_ROOT / "train"))
     parser.add_argument("--val_cache_dir", default=str(DEFAULT_CACHE_ROOT / "val"))
     parser.add_argument("--data_root")
@@ -1081,7 +1081,7 @@ def _proposal_comparison(p0: Mapping[str, Any], p1: Mapping[str, Any]) -> Dict[s
                 }
             )
     return {
-        "pair_level_win_tie_loss": {"win": wins, "tie": ties, "loss": losses},
+        "pair_level_win_tie_loss": {"win": wins, "tie": ties, 'portallayout.losses': losses},
         "newly_recalled_positive": new_recall,
         "newly_recalled_and_s3": new_recall_s3,
         "new_recall_not_converted_to_s3": new_recall - new_recall_s3,
@@ -1405,7 +1405,7 @@ def run_factor(
         },
         "initial_validation_predicted_only": baseline,
         "epochs": epochs,
-        "best": {**best, "evaluation": best_eval},
+        "best": {**best, 'portallayout.evaluation': best_eval},
         "gradient_audit": gradient_audit,
         "initial_matcher_hash": initial_matcher_hash,
         "final_matcher_hash": _state_hash(model.matcher),

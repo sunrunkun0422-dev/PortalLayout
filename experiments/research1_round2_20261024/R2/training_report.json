@@ -1,0 +1,1590 @@
+{
+  "status": "passed",
+  "training_status": "trained",
+  "steps": 6000,
+  "initial_fit_probe": {
+    "mean_loss": 0.38316979029020015,
+    "evaluated_pairs": 233,
+    "skipped_pairs": 23
+  },
+  "final_fit_probe": {
+    "mean_loss": 0.31192690742693246,
+    "evaluated_pairs": 233,
+    "skipped_pairs": 23
+  },
+  "selection_loss": 0.5254500982945147,
+  "selection_pairs": 4762,
+  "selected_step": 4000,
+  "selection_metric": "cross_room_ap",
+  "selection_metrics": {
+    "cross_room_house_macro_ap": 0.20135424352030037,
+    "cross_room_ap_by_house": {
+      "0060": 0.3255555555555556,
+      "0180": 0.057662736558690364,
+      "0430": 0.5833333333333333,
+      "0561": 0.23412698412698413,
+      "0641": 0.027564102564102563,
+      "0726": 0.01335978835978836,
+      "0799": 0.14450755511968327,
+      "0988": 0.052566231302660874,
+      "1236": 0.37351190476190477,
+      "1289": null
+    },
+    "overall_ap": 0.13165709161890146,
+    "balanced_loss": 0.9948834687018143,
+    "losses_by_pair_class": {
+      "no_known_positive": 0.25489196350580645,
+      "positive": 1.7348749738978222
+    },
+    "assignment_loss": 0.5254500982945147,
+    "pair_count": 4762,
+    "zero_positive_house_false_acceptance": {
+      "1289": {
+        "pairs": 1120,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 793,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 1120
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unknown_assignment": {
+            "pairs": 1120,
+            "assignment_loss": null,
+            "auxiliary_loss": null,
+            "objective_loss": null
+          }
+        },
+        "unretrieved_positive_cells": 0
+      }
+    },
+    "elapsed_seconds": 81.02042672003154
+  },
+  "best_assignment_loss": 0.3744212770217119,
+  "best_assignment_step": 1000,
+  "initial_fit_quality": {
+    "cross_room_house_macro_ap": 0.0,
+    "cross_room_ap_by_house": {
+      "0067": null,
+      "0163": 0.0,
+      "0178": null,
+      "0191": null,
+      "0202": null,
+      "0282": 0.0,
+      "0358": null,
+      "0364": 0.0,
+      "0414": null,
+      "0553": null,
+      "0685": null,
+      "0703": 0.0,
+      "0705": null,
+      "0706": 0.0,
+      "0771": null,
+      "0884": 0.0,
+      "0912": null,
+      "0923": 0.0,
+      "0956": 0.0,
+      "1017": null,
+      "1022": null,
+      "1076": null,
+      "1119": 0.0,
+      "1144": 0.0,
+      "1312": 0.0,
+      "1324": null,
+      "1374": 0.0,
+      "1461": 0.0,
+      "1515": 0.0
+    },
+    "overall_ap": 0.0,
+    "balanced_loss": 0.7595145406120498,
+    "losses_by_pair_class": {
+      "positive": 1.220539900271789,
+      "no_known_positive": 0.2984891809523106
+    },
+    "assignment_loss": 0.38316979374368815,
+    "pair_count": 256,
+    "zero_positive_house_false_acceptance": {
+      "0067": {
+        "pairs": 1,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 1
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 1,
+            "assignment_loss": 0.3121325969696045,
+            "auxiliary_loss": null,
+            "objective_loss": 0.3121325969696045
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0178": {
+        "pairs": 4,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 4
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 4,
+            "assignment_loss": 0.23725584149360657,
+            "auxiliary_loss": null,
+            "objective_loss": 0.23725584149360657
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0191": {
+        "pairs": 0,
+        "houses": 0,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {},
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {},
+        "unretrieved_positive_cells": 0
+      },
+      "0202": {
+        "pairs": 19,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 6,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": 0.0,
+        "numerical_status": {
+          "assigned": 19
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 19,
+            "assignment_loss": 0.3365307348339181,
+            "auxiliary_loss": null,
+            "objective_loss": 0.3365307348339181
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0358": {
+        "pairs": 7,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 7
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 7,
+            "assignment_loss": 0.2884723458971296,
+            "auxiliary_loss": null,
+            "objective_loss": 0.2884723458971296
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0414": {
+        "pairs": 19,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 4,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": 0.0,
+        "numerical_status": {
+          "assigned": 19
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 19,
+            "assignment_loss": 0.3112370473773856,
+            "auxiliary_loss": null,
+            "objective_loss": 0.3112370473773856
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0553": {
+        "pairs": 1,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 1
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 1,
+            "assignment_loss": 0.24410760402679443,
+            "auxiliary_loss": null,
+            "objective_loss": 0.24410760402679443
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0685": {
+        "pairs": 2,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 2
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 2,
+            "assignment_loss": 0.14803344011306763,
+            "auxiliary_loss": null,
+            "objective_loss": 0.14803344011306763
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0705": {
+        "pairs": 1,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 1,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": 0.0,
+        "numerical_status": {
+          "assigned": 1
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 1,
+            "assignment_loss": 0.41189002990722656,
+            "auxiliary_loss": null,
+            "objective_loss": 0.41189002990722656
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0771": {
+        "pairs": 2,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 2
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 2,
+            "assignment_loss": 0.4249017536640167,
+            "auxiliary_loss": null,
+            "objective_loss": 0.4249017536640167
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0912": {
+        "pairs": 1,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 1
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 1,
+            "assignment_loss": 0.15315765142440796,
+            "auxiliary_loss": null,
+            "objective_loss": 0.15315765142440796
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "1017": {
+        "pairs": 1,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 1
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 1,
+            "assignment_loss": 0.35652589797973633,
+            "auxiliary_loss": null,
+            "objective_loss": 0.35652589797973633
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "1022": {
+        "pairs": 0,
+        "houses": 0,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {},
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {},
+        "unretrieved_positive_cells": 0
+      },
+      "1076": {
+        "pairs": 5,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 2,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": 0.0,
+        "numerical_status": {
+          "assigned": 5
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 5,
+            "assignment_loss": 0.2928501546382904,
+            "auxiliary_loss": null,
+            "objective_loss": 0.2928501546382904
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "1324": {
+        "pairs": 1,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 1
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 1,
+            "assignment_loss": 0.22964930534362793,
+            "auxiliary_loss": null,
+            "objective_loss": 0.22964930534362793
+          }
+        },
+        "unretrieved_positive_cells": 0
+      }
+    },
+    "elapsed_seconds": 5.778778050036635
+  },
+  "final_fit_quality": {
+    "cross_room_house_macro_ap": 0.39625850340136054,
+    "cross_room_ap_by_house": {
+      "0067": null,
+      "0163": 0.5,
+      "0178": null,
+      "0191": null,
+      "0202": null,
+      "0282": 0.0,
+      "0358": null,
+      "0364": 0.5,
+      "0414": null,
+      "0553": null,
+      "0685": null,
+      "0703": 0.5,
+      "0705": null,
+      "0706": 0.0,
+      "0771": null,
+      "0884": 0.0,
+      "0912": null,
+      "0923": 1.0,
+      "0956": 0.0,
+      "1017": null,
+      "1022": null,
+      "1076": null,
+      "1119": 1.0,
+      "1144": 1.0,
+      "1312": 1.0,
+      "1324": null,
+      "1374": 0.0,
+      "1461": 0.0,
+      "1515": 0.047619047619047616
+    },
+    "overall_ap": 0.29653050512562285,
+    "balanced_loss": 0.6701146821925658,
+    "losses_by_pair_class": {
+      "positive": 1.1141565789357233,
+      "no_known_positive": 0.22607278544940831
+    },
+    "assignment_loss": 0.31192688841526117,
+    "pair_count": 256,
+    "zero_positive_house_false_acceptance": {
+      "0067": {
+        "pairs": 1,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 1
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 1,
+            "assignment_loss": 0.000331878662109375,
+            "auxiliary_loss": null,
+            "objective_loss": 0.000331878662109375
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0178": {
+        "pairs": 4,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 1,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 4
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 4,
+            "assignment_loss": 4.208087921142578e-05,
+            "auxiliary_loss": null,
+            "objective_loss": 4.208087921142578e-05
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0191": {
+        "pairs": 0,
+        "houses": 0,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {},
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {},
+        "unretrieved_positive_cells": 0
+      },
+      "0202": {
+        "pairs": 19,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 5,
+        "accepted_unknown": 5,
+        "accepted_positive_houses": 0,
+        "precision_known": 0.0,
+        "recall_all_weak_positives": null,
+        "f1_known": 0.0,
+        "known_negative_pairs": 6,
+        "false_accepted_negative_pairs": 1,
+        "negative_pair_false_acceptance": 0.16666666666666666,
+        "numerical_status": {
+          "assigned": 19
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 19,
+            "assignment_loss": 0.39887626616186217,
+            "auxiliary_loss": null,
+            "objective_loss": 0.39887626616186217
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0358": {
+        "pairs": 7,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 4,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 7
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 7,
+            "assignment_loss": 0.004750864846365792,
+            "auxiliary_loss": null,
+            "objective_loss": 0.004750864846365792
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0414": {
+        "pairs": 19,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 5,
+        "accepted_unknown": 1,
+        "accepted_positive_houses": 0,
+        "precision_known": 0.0,
+        "recall_all_weak_positives": null,
+        "f1_known": 0.0,
+        "known_negative_pairs": 4,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": 0.0,
+        "numerical_status": {
+          "assigned": 19
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 19,
+            "assignment_loss": 0.36870247201601924,
+            "auxiliary_loss": null,
+            "objective_loss": 0.36870247201601924
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0553": {
+        "pairs": 1,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 1,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 1
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 1,
+            "assignment_loss": 0.16547590494155884,
+            "auxiliary_loss": null,
+            "objective_loss": 0.16547590494155884
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0685": {
+        "pairs": 2,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 1,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": 0.0,
+        "recall_all_weak_positives": null,
+        "f1_known": 0.0,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 2
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 2,
+            "assignment_loss": 0.2540142759680748,
+            "auxiliary_loss": null,
+            "objective_loss": 0.2540142759680748
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0705": {
+        "pairs": 1,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 1,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": 0.0,
+        "numerical_status": {
+          "assigned": 1
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 1,
+            "assignment_loss": 0.0006073912372812629,
+            "auxiliary_loss": null,
+            "objective_loss": 0.0006073912372812629
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0771": {
+        "pairs": 2,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 2
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 2,
+            "assignment_loss": 0.0011931359767913818,
+            "auxiliary_loss": null,
+            "objective_loss": 0.0011931359767913818
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "0912": {
+        "pairs": 1,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 1
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 1,
+            "assignment_loss": 0.0006514787673950195,
+            "auxiliary_loss": null,
+            "objective_loss": 0.0006514787673950195
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "1017": {
+        "pairs": 1,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 1,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 1
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 1,
+            "assignment_loss": 0.014205217361450195,
+            "auxiliary_loss": null,
+            "objective_loss": 0.014205217361450195
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "1022": {
+        "pairs": 0,
+        "houses": 0,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {},
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {},
+        "unretrieved_positive_cells": 0
+      },
+      "1076": {
+        "pairs": 5,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 1,
+        "accepted_unknown": 1,
+        "accepted_positive_houses": 0,
+        "precision_known": 0.0,
+        "recall_all_weak_positives": null,
+        "f1_known": 0.0,
+        "known_negative_pairs": 2,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": 0.0,
+        "numerical_status": {
+          "assigned": 5
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 5,
+            "assignment_loss": 0.1471465309499763,
+            "auxiliary_loss": null,
+            "objective_loss": 0.1471465309499763
+          }
+        },
+        "unretrieved_positive_cells": 0
+      },
+      "1324": {
+        "pairs": 1,
+        "houses": 1,
+        "threshold": 0.0,
+        "positive_cells": 0,
+        "accepted_true": 0,
+        "accepted_false": 0,
+        "accepted_unknown": 0,
+        "accepted_positive_houses": 0,
+        "precision_known": null,
+        "recall_all_weak_positives": null,
+        "f1_known": null,
+        "known_negative_pairs": 0,
+        "false_accepted_negative_pairs": 0,
+        "negative_pair_false_acceptance": null,
+        "numerical_status": {
+          "assigned": 1
+        },
+        "positive_stages": {
+          "raw_mutual_top1": 0,
+          "raw_bidirectional_top3": 0,
+          "assignment_mutual_without_dustbin": 0,
+          "mutual_with_dustbin": 0,
+          "dustbin_wins_either_direction": 0,
+          "assignment_supervised": 0
+        },
+        "positive_supervision_groups": {
+          "complete_positive_row": {
+            "positive_cells": 0,
+            "retrieved": 0
+          },
+          "partial_positive_only": {
+            "positive_cells": 0,
+            "retrieved": 0
+          }
+        },
+        "losses_by_supervision": {
+          "unmatched_row": {
+            "pairs": 1,
+            "assignment_loss": 0.0003867149353027344,
+            "auxiliary_loss": null,
+            "objective_loss": 0.0003867149353027344
+          }
+        },
+        "unretrieved_positive_cells": 0
+      }
+    },
+    "elapsed_seconds": 9.725230988988187
+  },
+  "objective": "positive_margin",
+  "sampler_positive_pairs": 1230,
+  "sampler_unmatched_row_pairs": 5651,
+  "fit_houses": [
+    "0067",
+    "0108",
+    "0163",
+    "0176",
+    "0178",
+    "0191",
+    "0202",
+    "0282",
+    "0358",
+    "0364",
+    "0414",
+    "0553",
+    "0685",
+    "0693",
+    "0703",
+    "0705",
+    "0706",
+    "0771",
+    "0791",
+    "0821",
+    "0884",
+    "0912",
+    "0923",
+    "0956",
+    "1017",
+    "1022",
+    "1076",
+    "1119",
+    "1144",
+    "1312",
+    "1324",
+    "1374",
+    "1461",
+    "1515"
+  ],
+  "selection_houses": [
+    "0060",
+    "0180",
+    "0430",
+    "0561",
+    "0641",
+    "0726",
+    "0799",
+    "0988",
+    "1236",
+    "1289"
+  ],
+  "parameters_changed": true,
+  "matcher_type": "new",
+  "encoder_frozen": false,
+  "gradient_norms_first_step": {
+    "encoder": 8.602799800360035,
+    "matcher": 4.8329183286987245
+  },
+  "skipped_batches": 0,
+  "elapsed_seconds": 1568.9518147970084,
+  "source_files_verified": 3163,
+  "peak_allocated_MiB": 298.0126953125,
+  "final_benchmark_evaluated": false
+}

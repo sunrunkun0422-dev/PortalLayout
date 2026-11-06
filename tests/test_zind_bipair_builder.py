@@ -7,13 +7,13 @@ import numpy as np
 import torch
 from PIL import Image
 
-from dataset.zind_bipair_builder import (
+from portallayout.datasets.zind_bipair_builder import (
     PairThresholds,
     build_house_pair_examples,
     build_pair_record_and_arrays,
     build_view_label_arrays,
 )
-from dataset.zind_bipair_dataset import ZInDBiPairDataset, collate_zind_bipair
+from portallayout.datasets.zind_bipair_dataset import ZInDBiPairDataset, collate_zind_bipair
 
 
 def make_layout(vertices, opening):

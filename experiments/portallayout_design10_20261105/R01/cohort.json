@@ -1,0 +1,790 @@
+{
+  "schema_version": "research10.cohort.v1",
+  "seed": 123,
+  "dataset_root": "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021",
+  "raw_root": "/home/feixia/pythonProject/AAAsrk/zind/data",
+  "roles": {
+    "fit": [
+      "1482",
+      "0449",
+      "0732",
+      "0839",
+      "1505",
+      "1487",
+      "0001",
+      "0958",
+      "1191",
+      "0153",
+      "1281",
+      "0079",
+      "0024",
+      "1067",
+      "1018",
+      "0061",
+      "0033",
+      "0937",
+      "1472",
+      "0549",
+      "0998",
+      "0002",
+      "0993",
+      "0951",
+      "0786",
+      "0401",
+      "1484",
+      "1011",
+      "0419",
+      "0818",
+      "0676",
+      "0216",
+      "0012",
+      "1156",
+      "1150",
+      "1242",
+      "0858",
+      "0652",
+      "0694",
+      "0236"
+    ],
+    "selection": [
+      "0830",
+      "0674",
+      "0361",
+      "0476",
+      "0423",
+      "1053",
+      "0530",
+      "1195",
+      "0451",
+      "0081"
+    ],
+    "calibration": [
+      "0380",
+      "1264",
+      "1254",
+      "0486",
+      "0469",
+      "0511",
+      "0686",
+      "0633",
+      "1377",
+      "0351"
+    ],
+    "audit": [
+      "0005",
+      "1140",
+      "0359",
+      "0313",
+      "0798",
+      "0273",
+      "0242",
+      "0317",
+      "0910",
+      "1087"
+    ]
+  },
+  "cohort": [
+    {
+      "role": "fit",
+      "house_id": "1482",
+      "floor_uid": "floor_ac1c867472a93630371dc745",
+      "observations": 48,
+      "input_manifest": "inputs/sample_70132b9059ce02fcd309fc1a/manifest.json",
+      "dataset_index": 2040
+    },
+    {
+      "role": "fit",
+      "house_id": "0449",
+      "floor_uid": "floor_1c85c58549352fa1394b1fb2",
+      "observations": 9,
+      "input_manifest": "inputs/sample_f918aa0e560ada825d110baf/manifest.json",
+      "dataset_index": 591
+    },
+    {
+      "role": "fit",
+      "house_id": "0732",
+      "floor_uid": "floor_d574a714c7eaa3e0b57e4945",
+      "observations": 30,
+      "input_manifest": "inputs/sample_46bd7216f13766f1a57071e1/manifest.json",
+      "dataset_index": 979
+    },
+    {
+      "role": "fit",
+      "house_id": "0839",
+      "floor_uid": "floor_f8a738c2cc8fae616dab08e9",
+      "observations": 19,
+      "input_manifest": "inputs/sample_bfd841a0cf9cb1acbb5e2d7d/manifest.json",
+      "dataset_index": 1132
+    },
+    {
+      "role": "fit",
+      "house_id": "1505",
+      "floor_uid": "floor_5bb178202dbb3d9516e4c672",
+      "observations": 32,
+      "input_manifest": "inputs/sample_d61b53429ba658eceb386969/manifest.json",
+      "dataset_index": 2067
+    },
+    {
+      "role": "fit",
+      "house_id": "1487",
+      "floor_uid": "floor_360b06cb229899878bcbb69b",
+      "observations": 29,
+      "input_manifest": "inputs/sample_5991406f10b81367a59d5ca5/manifest.json",
+      "dataset_index": 2045
+    },
+    {
+      "role": "fit",
+      "house_id": "0001",
+      "floor_uid": "floor_de0ec07d012c66d596b514d9",
+      "observations": 28,
+      "input_manifest": "inputs/sample_362b0530a9fee601ddfc2d09/manifest.json",
+      "dataset_index": 1
+    },
+    {
+      "role": "fit",
+      "house_id": "0958",
+      "floor_uid": "floor_7d40ca686628986aca2a0562",
+      "observations": 40,
+      "input_manifest": "inputs/sample_5f42f471400e4bb0218181e8/manifest.json",
+      "dataset_index": 1306
+    },
+    {
+      "role": "fit",
+      "house_id": "1191",
+      "floor_uid": "floor_571ddcb8a0af482a7f5a2898",
+      "observations": 22,
+      "input_manifest": "inputs/sample_529c67eb50fa7a6b8c9ef9d4/manifest.json",
+      "dataset_index": 1609
+    },
+    {
+      "role": "fit",
+      "house_id": "0153",
+      "floor_uid": "floor_ecf7e2c5b26534ee1e1cd9be",
+      "observations": 3,
+      "input_manifest": "inputs/sample_9c3944508d496b505e66d293/manifest.json",
+      "dataset_index": 196
+    },
+    {
+      "role": "fit",
+      "house_id": "1281",
+      "floor_uid": "floor_e651f3e20323423fc1833ffe",
+      "observations": 21,
+      "input_manifest": "inputs/sample_7e5faa853076b7dcbf8493d6/manifest.json",
+      "dataset_index": 1735
+    },
+    {
+      "role": "fit",
+      "house_id": "0079",
+      "floor_uid": "floor_fdcb5d02a7783dc607dbf84a",
+      "observations": 16,
+      "input_manifest": "inputs/sample_60cda578420e6ebc095c29ac/manifest.json",
+      "dataset_index": 99
+    },
+    {
+      "role": "fit",
+      "house_id": "0024",
+      "floor_uid": "floor_b691a520939d33acba2c137c",
+      "observations": 27,
+      "input_manifest": "inputs/sample_3b700f022f838f7f1d34c55f/manifest.json",
+      "dataset_index": 30
+    },
+    {
+      "role": "fit",
+      "house_id": "1067",
+      "floor_uid": "floor_3e84ba0422fd2bcdeb74aca4",
+      "observations": 16,
+      "input_manifest": "inputs/sample_e95fbe1ace5b523f6d3af280/manifest.json",
+      "dataset_index": 1444
+    },
+    {
+      "role": "fit",
+      "house_id": "1018",
+      "floor_uid": "floor_59dd5be7235e061ab6ff1942",
+      "observations": 15,
+      "input_manifest": "inputs/sample_51e18fb01583f2ff2d1db349/manifest.json",
+      "dataset_index": 1381
+    },
+    {
+      "role": "fit",
+      "house_id": "0061",
+      "floor_uid": "floor_bac6ca60a8bb1d19c3941336",
+      "observations": 9,
+      "input_manifest": "inputs/sample_b96b034f24ab7f4b80213c68/manifest.json",
+      "dataset_index": 78
+    },
+    {
+      "role": "fit",
+      "house_id": "0033",
+      "floor_uid": "floor_9a74cebc916665856bfac4d7",
+      "observations": 20,
+      "input_manifest": "inputs/sample_4263c6424430bf2081fa8b40/manifest.json",
+      "dataset_index": 42
+    },
+    {
+      "role": "fit",
+      "house_id": "0937",
+      "floor_uid": "floor_a743e35b599d0e7260baf443",
+      "observations": 16,
+      "input_manifest": "inputs/sample_eeb1652be0178de73f6c73d7/manifest.json",
+      "dataset_index": 1276
+    },
+    {
+      "role": "fit",
+      "house_id": "1472",
+      "floor_uid": "floor_c95b9166f6abbaed6669f01a",
+      "observations": 47,
+      "input_manifest": "inputs/sample_2f51eb59c815ffd73cd7ac75/manifest.json",
+      "dataset_index": 2028
+    },
+    {
+      "role": "fit",
+      "house_id": "0549",
+      "floor_uid": "floor_ee27bdc77df8abd445e976ce",
+      "observations": 30,
+      "input_manifest": "inputs/sample_ff0f6cb710977f4e9582d5f0/manifest.json",
+      "dataset_index": 730
+    },
+    {
+      "role": "fit",
+      "house_id": "0998",
+      "floor_uid": "floor_68ac90c9e0f4dd844712fda0",
+      "observations": 25,
+      "input_manifest": "inputs/sample_17ca224ed8d7bd27a904a275/manifest.json",
+      "dataset_index": 1350
+    },
+    {
+      "role": "fit",
+      "house_id": "0002",
+      "floor_uid": "floor_bccec70fb516f1ac8c9599fa",
+      "observations": 53,
+      "input_manifest": "inputs/sample_39de828e463d3f9d97d1a7ca/manifest.json",
+      "dataset_index": 3
+    },
+    {
+      "role": "fit",
+      "house_id": "0993",
+      "floor_uid": "floor_083e38e3ba82b90eca5940a5",
+      "observations": 45,
+      "input_manifest": "inputs/sample_44673bf3dad7b46fde313a20/manifest.json",
+      "dataset_index": 1343
+    },
+    {
+      "role": "fit",
+      "house_id": "0951",
+      "floor_uid": "floor_d2d21cf1c94d9eb78b194bd1",
+      "observations": 21,
+      "input_manifest": "inputs/sample_e8098235cc757e145cac6b1b/manifest.json",
+      "dataset_index": 1295
+    },
+    {
+      "role": "fit",
+      "house_id": "0786",
+      "floor_uid": "floor_ec1e9b863c1e5fddbe9ead53",
+      "observations": 28,
+      "input_manifest": "inputs/sample_231133a9392cc327eaeab334/manifest.json",
+      "dataset_index": 1052
+    },
+    {
+      "role": "fit",
+      "house_id": "0401",
+      "floor_uid": "floor_6c82181a725f97b1ca468e74",
+      "observations": 6,
+      "input_manifest": "inputs/sample_a7cff2ea28a4af031e500781/manifest.json",
+      "dataset_index": 530
+    },
+    {
+      "role": "fit",
+      "house_id": "1484",
+      "floor_uid": "floor_da1d64e8cf609e5a92e55d8c",
+      "observations": 37,
+      "input_manifest": "inputs/sample_a1afff53bf709a2033355b50/manifest.json",
+      "dataset_index": 2042
+    },
+    {
+      "role": "fit",
+      "house_id": "1011",
+      "floor_uid": "floor_42690e7292f35ad9411bfd5f",
+      "observations": 23,
+      "input_manifest": "inputs/sample_2f6169f7e3ca0369503c916f/manifest.json",
+      "dataset_index": 1366
+    },
+    {
+      "role": "fit",
+      "house_id": "0419",
+      "floor_uid": "floor_c08f83e68e92eb52846bdd8a",
+      "observations": 21,
+      "input_manifest": "inputs/sample_2603083c6cbf057b1d882a76/manifest.json",
+      "dataset_index": 555
+    },
+    {
+      "role": "fit",
+      "house_id": "0818",
+      "floor_uid": "floor_a58aa086e0db6d72844be49b",
+      "observations": 18,
+      "input_manifest": "inputs/sample_538ba48d4e52c4caacd6bae8/manifest.json",
+      "dataset_index": 1095
+    },
+    {
+      "role": "fit",
+      "house_id": "0676",
+      "floor_uid": "floor_a33d790f917708b1b27a4f16",
+      "observations": 12,
+      "input_manifest": "inputs/sample_81d707cc1a368e9e4f4eabe9/manifest.json",
+      "dataset_index": 895
+    },
+    {
+      "role": "fit",
+      "house_id": "0216",
+      "floor_uid": "floor_31cda5935e09bced60a2e3df",
+      "observations": 28,
+      "input_manifest": "inputs/sample_44e72d5b3f0686104385fa10/manifest.json",
+      "dataset_index": 281
+    },
+    {
+      "role": "fit",
+      "house_id": "0012",
+      "floor_uid": "floor_89175659cd57ff1c1a094a09",
+      "observations": 17,
+      "input_manifest": "inputs/sample_9d2d8e9c65dda10b9843a7a2/manifest.json",
+      "dataset_index": 13
+    },
+    {
+      "role": "fit",
+      "house_id": "1156",
+      "floor_uid": "floor_5d2e09fda497acf68358305d",
+      "observations": 13,
+      "input_manifest": "inputs/sample_1e1fec9e3c7dca0574db1b84/manifest.json",
+      "dataset_index": 1567
+    },
+    {
+      "role": "fit",
+      "house_id": "1150",
+      "floor_uid": "floor_260ea8c19f28accd4daaf3b1",
+      "observations": 3,
+      "input_manifest": "inputs/sample_d219c42a6172a90cf1ae6edd/manifest.json",
+      "dataset_index": 1559
+    },
+    {
+      "role": "fit",
+      "house_id": "1242",
+      "floor_uid": "floor_44ff3a78e2f7680f227f22f0",
+      "observations": 21,
+      "input_manifest": "inputs/sample_220e5fc31d4e65c6fae11524/manifest.json",
+      "dataset_index": 1677
+    },
+    {
+      "role": "fit",
+      "house_id": "0858",
+      "floor_uid": "floor_fec4c27da71f75619aff52ec",
+      "observations": 8,
+      "input_manifest": "inputs/sample_57228c14dbd636dfac152ac5/manifest.json",
+      "dataset_index": 1165
+    },
+    {
+      "role": "fit",
+      "house_id": "0652",
+      "floor_uid": "floor_7673123794d57dd359578de2",
+      "observations": 58,
+      "input_manifest": "inputs/sample_ee59506ddb9810168f3684f0/manifest.json",
+      "dataset_index": 869
+    },
+    {
+      "role": "fit",
+      "house_id": "0694",
+      "floor_uid": "floor_a75d8d17ef45834e93edf62f",
+      "observations": 3,
+      "input_manifest": "inputs/sample_8a3dbab6effdd8aead7df7e9/manifest.json",
+      "dataset_index": 918
+    },
+    {
+      "role": "fit",
+      "house_id": "0236",
+      "floor_uid": "floor_6e06b3d320f25724e5728f28",
+      "observations": 30,
+      "input_manifest": "inputs/sample_3fc262683bb66706ae385b95/manifest.json",
+      "dataset_index": 307
+    },
+    {
+      "role": "selection",
+      "house_id": "0830",
+      "floor_uid": "floor_182694debae2cc874400dcff",
+      "observations": 15,
+      "input_manifest": "inputs/sample_c0fe7c862a9a2c95e4d2ccce/manifest.json",
+      "dataset_index": 1115
+    },
+    {
+      "role": "selection",
+      "house_id": "0674",
+      "floor_uid": "floor_183777d9c8c7effbac7539d0",
+      "observations": 29,
+      "input_manifest": "inputs/sample_27aa7fe7464dd44f4b702b16/manifest.json",
+      "dataset_index": 893
+    },
+    {
+      "role": "selection",
+      "house_id": "0361",
+      "floor_uid": "floor_8fa4824a9386165d9626163d",
+      "observations": 50,
+      "input_manifest": "inputs/sample_e3cad63fb5062ad3e7e5f496/manifest.json",
+      "dataset_index": 474
+    },
+    {
+      "role": "selection",
+      "house_id": "0476",
+      "floor_uid": "floor_068fa1bfa1df099540cce729",
+      "observations": 55,
+      "input_manifest": "inputs/sample_1e204f659d1f1dbf72cf7058/manifest.json",
+      "dataset_index": 636
+    },
+    {
+      "role": "selection",
+      "house_id": "0423",
+      "floor_uid": "floor_182df23771bd55bf0db88e1f",
+      "observations": 18,
+      "input_manifest": "inputs/sample_dd121b02143d0b7ed7e972e8/manifest.json",
+      "dataset_index": 562
+    },
+    {
+      "role": "selection",
+      "house_id": "1053",
+      "floor_uid": "floor_3e79ae330fc854cd567c6465",
+      "observations": 25,
+      "input_manifest": "inputs/sample_d9c2f8b268c8d335e5e014fd/manifest.json",
+      "dataset_index": 1421
+    },
+    {
+      "role": "selection",
+      "house_id": "0530",
+      "floor_uid": "floor_9bf954e7101cc521821500a9",
+      "observations": 17,
+      "input_manifest": "inputs/sample_513632f5a4cb6352b08bfb36/manifest.json",
+      "dataset_index": 709
+    },
+    {
+      "role": "selection",
+      "house_id": "1195",
+      "floor_uid": "floor_b0f6ba0022f4f60e9e4cf85c",
+      "observations": 37,
+      "input_manifest": "inputs/sample_8b644c67340c0a2818bcac67/manifest.json",
+      "dataset_index": 1616
+    },
+    {
+      "role": "selection",
+      "house_id": "0451",
+      "floor_uid": "floor_427711a3d766604832c9b379",
+      "observations": 3,
+      "input_manifest": "inputs/sample_bae84b610f777a0cf19f778b/manifest.json",
+      "dataset_index": 596
+    },
+    {
+      "role": "selection",
+      "house_id": "0081",
+      "floor_uid": "floor_544e43e4808e28328ed44b83",
+      "observations": 29,
+      "input_manifest": "inputs/sample_964f387f9c84e29a8f7b3fc7/manifest.json",
+      "dataset_index": 101
+    },
+    {
+      "role": "calibration",
+      "house_id": "0380",
+      "floor_uid": "floor_73f294cc080c9f03bbd23eb0",
+      "observations": 54,
+      "input_manifest": "inputs/sample_82dc68a6e529f0ac2dae6226/manifest.json",
+      "dataset_index": 500
+    },
+    {
+      "role": "calibration",
+      "house_id": "1264",
+      "floor_uid": "floor_9477157c886aed7e6c8cacee",
+      "observations": 27,
+      "input_manifest": "inputs/sample_3d9479146280ffe8fadd6fa8/manifest.json",
+      "dataset_index": 1710
+    },
+    {
+      "role": "calibration",
+      "house_id": "1254",
+      "floor_uid": "floor_e29573b71bc220a492fc87d4",
+      "observations": 25,
+      "input_manifest": "inputs/sample_44bf93386cf235aa23d43532/manifest.json",
+      "dataset_index": 1694
+    },
+    {
+      "role": "calibration",
+      "house_id": "0486",
+      "floor_uid": "floor_c8c761f8ef82f6c93cd2d17d",
+      "observations": 30,
+      "input_manifest": "inputs/sample_2f738536071403876b4e028b/manifest.json",
+      "dataset_index": 653
+    },
+    {
+      "role": "calibration",
+      "house_id": "0469",
+      "floor_uid": "floor_4ce11278717c163075ebfdbd",
+      "observations": 38,
+      "input_manifest": "inputs/sample_f3693285de442a34aef1ffde/manifest.json",
+      "dataset_index": 625
+    },
+    {
+      "role": "calibration",
+      "house_id": "0511",
+      "floor_uid": "floor_7bda4e56e731a867c0f95512",
+      "observations": 29,
+      "input_manifest": "inputs/sample_9c9176019d9c3cb279f09fcb/manifest.json",
+      "dataset_index": 684
+    },
+    {
+      "role": "calibration",
+      "house_id": "0686",
+      "floor_uid": "floor_acda201943eecd0cab2c5363",
+      "observations": 19,
+      "input_manifest": "inputs/sample_b35bffcdd9766a92facda9fd/manifest.json",
+      "dataset_index": 906
+    },
+    {
+      "role": "calibration",
+      "house_id": "0633",
+      "floor_uid": "floor_9f7fb6fb68d038533e101156",
+      "observations": 42,
+      "input_manifest": "inputs/sample_9662c94c73eedf4451604396/manifest.json",
+      "dataset_index": 843
+    },
+    {
+      "role": "calibration",
+      "house_id": "1377",
+      "floor_uid": "floor_c0c0337df849a4d95919a01f",
+      "observations": 9,
+      "input_manifest": "inputs/sample_f74575764aefc386c8564cdd/manifest.json",
+      "dataset_index": 1875
+    },
+    {
+      "role": "calibration",
+      "house_id": "0351",
+      "floor_uid": "floor_0c329d3c9116f32396ee4463",
+      "observations": 26,
+      "input_manifest": "inputs/sample_17b3fc105e2337a7337ae4b6/manifest.json",
+      "dataset_index": 461
+    },
+    {
+      "role": "audit",
+      "house_id": "0005",
+      "floor_uid": "floor_c045cd091b021b34a53ab848",
+      "observations": 27,
+      "input_manifest": "inputs/sample_b89c4f2f0b3efcef844cfa2a/manifest.json",
+      "dataset_index": 5
+    },
+    {
+      "role": "audit",
+      "house_id": "1140",
+      "floor_uid": "floor_fc0aeb9cb7276cbd17aafab1",
+      "observations": 20,
+      "input_manifest": "inputs/sample_602ce09128c8b5c9fb0199be/manifest.json",
+      "dataset_index": 1548
+    },
+    {
+      "role": "audit",
+      "house_id": "0359",
+      "floor_uid": "floor_c790ef1715c90e876d952f7b",
+      "observations": 15,
+      "input_manifest": "inputs/sample_2821eebd7002a3d0fa0a4b8a/manifest.json",
+      "dataset_index": 471
+    },
+    {
+      "role": "audit",
+      "house_id": "0313",
+      "floor_uid": "floor_ea2021be6534e91cbaab9385",
+      "observations": 39,
+      "input_manifest": "inputs/sample_7ff9a554245d75b234c35d7d/manifest.json",
+      "dataset_index": 408
+    },
+    {
+      "role": "audit",
+      "house_id": "0798",
+      "floor_uid": "floor_b2a8a696855e65d01261b3d1",
+      "observations": 11,
+      "input_manifest": "inputs/sample_4d88feb3aefe530433abcff3/manifest.json",
+      "dataset_index": 1069
+    },
+    {
+      "role": "audit",
+      "house_id": "0273",
+      "floor_uid": "floor_0749823a2e688df5d8f6f9e6",
+      "observations": 33,
+      "input_manifest": "inputs/sample_8b542ff36573e4a966a27397/manifest.json",
+      "dataset_index": 364
+    },
+    {
+      "role": "audit",
+      "house_id": "0242",
+      "floor_uid": "floor_560d1fa33b97ddec7f39bcd0",
+      "observations": 68,
+      "input_manifest": "inputs/sample_301ceee430b73392931025c6/manifest.json",
+      "dataset_index": 317
+    },
+    {
+      "role": "audit",
+      "house_id": "0317",
+      "floor_uid": "floor_49a57f3e2a71b572db881296",
+      "observations": 42,
+      "input_manifest": "inputs/sample_f05a7a62cf247e7975ece564/manifest.json",
+      "dataset_index": 412
+    },
+    {
+      "role": "audit",
+      "house_id": "0910",
+      "floor_uid": "floor_299b8a32fdf0d0fb68dec6c8",
+      "observations": 35,
+      "input_manifest": "inputs/sample_36c0fbc9b775e3a522d459f1/manifest.json",
+      "dataset_index": 1233
+    },
+    {
+      "role": "audit",
+      "house_id": "1087",
+      "floor_uid": "floor_20b85510ddd1625873318064",
+      "observations": 28,
+      "input_manifest": "inputs/sample_77bb4a01a312a9808f3822f4/manifest.json",
+      "dataset_index": 1467
+    }
+  ],
+  "input_manifest_sha256": {
+    "floor_ac1c867472a93630371dc745": "0b695b1e7f47c6cf17cba6e864c24041a0237f5c57b2a9670cc15e5eaa0d6bdc",
+    "floor_1c85c58549352fa1394b1fb2": "deefc32bd8b9dfd1d87a6e08d8ff8437918ed21d04dc5a428db7e1d586e0e1d4",
+    "floor_d574a714c7eaa3e0b57e4945": "fc5d370ae9128525fe6386148d03ecca4ee74c38fb786f504c26d89226d909f5",
+    "floor_f8a738c2cc8fae616dab08e9": "e99a30ad84aea80519c7c83badbb6a10b5f9e006a09a03847ae163edf3ed4251",
+    "floor_5bb178202dbb3d9516e4c672": "abd210b6b940fa67d2570d08c99d8eb4fc85d22bdc6cca1243a3fab34b41ee4f",
+    "floor_360b06cb229899878bcbb69b": "cee445d78e65775306c43873d9c319728bf5ba96c2cd31dbd9a3a262378175de",
+    "floor_de0ec07d012c66d596b514d9": "54fabde815b17db70ef71d91ed9aebaad18f1f623cfc01d372217f36b27a7c53",
+    "floor_7d40ca686628986aca2a0562": "110609bd1681cc280e0b406bc01139d159957258acf824ae789a8b9059ebcda2",
+    "floor_571ddcb8a0af482a7f5a2898": "fa35f6cde7c81d686f51319985f3c549d9595750d785ca7bbe575e0e32aed7ed",
+    "floor_ecf7e2c5b26534ee1e1cd9be": "62924630ede53e5591fc7ea3415adede02728d873caaebd989c587ce852ab844",
+    "floor_e651f3e20323423fc1833ffe": "2de6b8dd0c4c1bc73658d0d04ca1e4c80263c3ecc9c69d6707b04636e81d7b88",
+    "floor_fdcb5d02a7783dc607dbf84a": "1b40a77e1da7a3061f3fc8a7ea79189d9b711cb266e432ff4359e306c96738e9",
+    "floor_b691a520939d33acba2c137c": "957b0ee557afbba96ba5809efa268a771cfdd29466417f9c56422835279415d9",
+    "floor_3e84ba0422fd2bcdeb74aca4": "55c1a61aaa884b7e41b0ba34f304104bda18d63dca2ecba0a1ac3a1658bc7912",
+    "floor_59dd5be7235e061ab6ff1942": "fb4160ede4d95365f4cc836f5db7320f21e541dbada43155763d37c980c94707",
+    "floor_bac6ca60a8bb1d19c3941336": "51df04b56c6a1de4ce21b76ff8e8510e1a8fa351bebfc04e8e77f8336f76eed9",
+    "floor_9a74cebc916665856bfac4d7": "12f95f520183d7e4174fce33ae5db4e07ffcbe94d54232d472bc7f30b5dfc61a",
+    "floor_a743e35b599d0e7260baf443": "ab09413f8762eabb19188359de083ce338df6b616b79392be3abe77462785f76",
+    "floor_c95b9166f6abbaed6669f01a": "2aa4010828dc40b21ab524a8e0b6bbbb3bf220e48bb0bdedac9bd5f6238ef090",
+    "floor_ee27bdc77df8abd445e976ce": "a372ff3918be55310cd8a17019392b9646e2e20189c0c1e5e7d601742da3385e",
+    "floor_68ac90c9e0f4dd844712fda0": "f94d4621bcdcbeffe48906cb47a060dd357d65e4b348572d1ab0c36ff273ef8e",
+    "floor_bccec70fb516f1ac8c9599fa": "1c3acd1d648d1ef711426199fb9831f96ce4d6a40213c7edced686429e375d2e",
+    "floor_083e38e3ba82b90eca5940a5": "c67cac739e8008d8ba93432ae7898329a57e558c17cecc573763418335fca436",
+    "floor_d2d21cf1c94d9eb78b194bd1": "1c99c1bfe76fefc984cd32964417d3bb4c931dac8644e6e5bc41d106b98fb1cf",
+    "floor_ec1e9b863c1e5fddbe9ead53": "a8e2a2609c5f0fbcd3f05393a6864699337834a50eb859283056dd9bcdf87ae1",
+    "floor_6c82181a725f97b1ca468e74": "3d9a70078614b7fbf93dc5139ddaa73ddadd51913d6889d2b3d8a99d9813ddcd",
+    "floor_da1d64e8cf609e5a92e55d8c": "83134445bd5e15ef5ddfd5214959dc64b722d96c733ad595d5391881a2b8fad2",
+    "floor_42690e7292f35ad9411bfd5f": "61a5214c5da8e9c6fa4a155e1646b48f206f6bebcd601ce2d34e395c654719ce",
+    "floor_c08f83e68e92eb52846bdd8a": "401426fcb4fa2721948de8dd7b296db6d443c4d1ec6f5ebbf235d247e81c9e5e",
+    "floor_a58aa086e0db6d72844be49b": "30cea74307c0dd1c6828e59415dab0e676cd65441234367f7d954ba9be68f2b6",
+    "floor_a33d790f917708b1b27a4f16": "920099bf29d8c7c293ba0e9974718ff8e23151d627d49b57632afc9e4d641871",
+    "floor_31cda5935e09bced60a2e3df": "b5d627118a1b3ba640366786d2a08e2ef2b57b728e5178158813a93762e2f6a4",
+    "floor_89175659cd57ff1c1a094a09": "b0ce10fb6e76db325ac59161e89d816b55c9492ae7e3ad12a75a121888037a72",
+    "floor_5d2e09fda497acf68358305d": "534483e7f597709283c148ebc5a4dbc53c67c08acb7f488bf2fb6ef1a34f9033",
+    "floor_260ea8c19f28accd4daaf3b1": "e56f288653a4b306c834068c7addddc43e1f696cb7980269d9acf55c1e888921",
+    "floor_44ff3a78e2f7680f227f22f0": "2d5ea587b2b129e695d64d8b71bb88dd2d413c495e4075386addb8ca7f2e161d",
+    "floor_fec4c27da71f75619aff52ec": "57424eb2a31e61be452f2f459d9e91f0f72e55aa4abbed8e9f0016a98c44914d",
+    "floor_7673123794d57dd359578de2": "6dd5aab32f16a9d2182e5ce8a809217e20ebe55087041a7d86c5c583a0708f8b",
+    "floor_a75d8d17ef45834e93edf62f": "64995bf435e4ba163e20d232270419df56c33095fe85a67fad0a28d488dd2bac",
+    "floor_6e06b3d320f25724e5728f28": "37f3cdec6f82ff18ad605590e4d6841657a70b1d393839a3d9b65f6d3746a938",
+    "floor_182694debae2cc874400dcff": "c210d91050afa3175bb47c6cfb509d5807c32db17a03423dba951cc69536283d",
+    "floor_183777d9c8c7effbac7539d0": "0bb77e7a0377ae552fbcba76beb69d68561d963456d50778c9e9bed217300f08",
+    "floor_8fa4824a9386165d9626163d": "fdd2486db5dcf27b6a60a17af969c89b9bada2cee393e98547ddd163e3b3bf3d",
+    "floor_068fa1bfa1df099540cce729": "c7f60da764455b6159a4968ba031b28547864eb3fba3e481ea532deea247b883",
+    "floor_182df23771bd55bf0db88e1f": "bfed9d9b85b52da6e283860febab2b5fb648f53aa78981f4e18322cefd44a110",
+    "floor_3e79ae330fc854cd567c6465": "1c9c11eca73346d5fcb0d869efbd32960f5d9ea5d86978732a45c554575d6e80",
+    "floor_9bf954e7101cc521821500a9": "bd938aa32a623c87dea8cb8f959e099ea209530120aefbdfb88024dcf08ecd6b",
+    "floor_b0f6ba0022f4f60e9e4cf85c": "87edcaed5a47af0a7632b692b784e35e8f2285c72adc899f1b2f03ee0f5fa920",
+    "floor_427711a3d766604832c9b379": "f02ad4c4ed5e2a433f449dba8f98f8afc536917cc25647f0f897165e9f1747ba",
+    "floor_544e43e4808e28328ed44b83": "ab313f249f768ed2b6df0754d9b326ad24113eabce7111470d45a36bdf017df3",
+    "floor_73f294cc080c9f03bbd23eb0": "a67b8677bee2b769b1812699c7c7ce58b0c3f724bdc742538145d5e80168b3fa",
+    "floor_9477157c886aed7e6c8cacee": "8fab9776a6b857fafc494d69b615292f0c1247c8f2cc7c523371c1f44c967cc3",
+    "floor_e29573b71bc220a492fc87d4": "af74dfeac9d65176efa655a09b2b274563f251a54a65bcec71cd332746780cbf",
+    "floor_c8c761f8ef82f6c93cd2d17d": "c16bc6e6d8d1d3cea676d70a98452951f9beceb4d83a3bc527d4ad6f9a3e35ab",
+    "floor_4ce11278717c163075ebfdbd": "e7309234ef33969aec111ad0f48a95d12018588d545121c7198153e1fd19ab68",
+    "floor_7bda4e56e731a867c0f95512": "fe53efb4d2c4daf08e351c4b2a15aabac0c8c19819fb0d0f121bfc37339bafca",
+    "floor_acda201943eecd0cab2c5363": "829731f8aad024f4715f45a578c068937f8161318a27669fadf3448bd29a3027",
+    "floor_9f7fb6fb68d038533e101156": "0a1c5ec6d6a858332694aa3b2ef68025081885250a44037a49c3d01d04ad132b",
+    "floor_c0c0337df849a4d95919a01f": "7aad0d64156cde71bda7156c7f723cd14ef3264a4a7d4357597ec3760607f85c",
+    "floor_0c329d3c9116f32396ee4463": "7bb9cd9aafaf42f49c2a6b816a61136794ece5f07fa47b7990881a655c836ce7",
+    "floor_c045cd091b021b34a53ab848": "29a38022197de60771d6f4994f6152d039a79b9b6e469ba9e5ce9403035b32e5",
+    "floor_fc0aeb9cb7276cbd17aafab1": "cfff4ff22a6211dc866cd40133079e1c5e93f4d646e5c9c5daf0312ece5c26d4",
+    "floor_c790ef1715c90e876d952f7b": "f28906cb76cbfed79c83f5ba6de7cf17d50745a7a7dceb61dd82b451e1930abe",
+    "floor_ea2021be6534e91cbaab9385": "ab9cdcfc6abc50ade6ad0ac06a6619c7f85c20cdf2b656b0278b074870fecd75",
+    "floor_b2a8a696855e65d01261b3d1": "7c1b72d0f88ad1a8f3478a1131899a3996df308b230afda91b3ca11f167ce497",
+    "floor_0749823a2e688df5d8f6f9e6": "e693fc98c87d2ff1733743cbffc312a0e4adb2767821b0ae27dcc1a69381645b",
+    "floor_560d1fa33b97ddec7f39bcd0": "e748e243fcb1e431db7b2b089a871fc41e2aa9a3467b47fa69f7e0300c7d95b2",
+    "floor_49a57f3e2a71b572db881296": "2aac0e4ca96ba9ab016f1e512bc153cae0f81f2ef3f468e7b9ad0442a3a54dd6",
+    "floor_299b8a32fdf0d0fb68dec6c8": "675356f2f96ca0e9e4f7aff482c0b3946925090f60967c151a67b452fe723cc8",
+    "floor_20b85510ddd1625873318064": "608c956dfe647889774ecdd7df151d7cc987cf3f1550f7eb164a8b9e0758989b"
+  },
+  "selection_uses": [
+    "official_train_membership",
+    "house_id",
+    "observation_count",
+    "floor_uid"
+  ],
+  "historical_60_houses_excluded": [
+    "0056",
+    "0060",
+    "0067",
+    "0088",
+    "0108",
+    "0163",
+    "0176",
+    "0178",
+    "0180",
+    "0191",
+    "0198",
+    "0202",
+    "0282",
+    "0358",
+    "0364",
+    "0414",
+    "0418",
+    "0430",
+    "0443",
+    "0480",
+    "0487",
+    "0543",
+    "0553",
+    "0561",
+    "0641",
+    "0661",
+    "0685",
+    "0693",
+    "0703",
+    "0705",
+    "0706",
+    "0716",
+    "0726",
+    "0771",
+    "0791",
+    "0799",
+    "0821",
+    "0884",
+    "0893",
+    "0895",
+    "0912",
+    "0923",
+    "0956",
+    "0959",
+    "0988",
+    "1017",
+    "1022",
+    "1039",
+    "1076",
+    "1119",
+    "1144",
+    "1236",
+    "1252",
+    "1289",
+    "1312",
+    "1324",
+    "1374",
+    "1416",
+    "1461",
+    "1515"
+  ],
+  "missing_rgb": [],
+  "warning": "audit is in historical selection/calibration pools: exclude it from all supervision; old pretrained model exposure is unknown."
+}

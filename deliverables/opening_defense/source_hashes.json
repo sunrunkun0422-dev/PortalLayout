@@ -1,0 +1,20 @@
+{
+  "/home/feixia/Downloads/cross_scene_stitching_midterm_defense_zh.pptx": "3f571be3e7a61ae6ce3a2383a978d450e862a47288688e0a31cb0b7147e24bea",
+  "/home/feixia/pythonProject/AAAsrk/Bi_Layout/项目总览与学习手册.md": "1a249d2b3a02656dec5dc42f29c37a36a8bb148b5589477f479d94b68b75131a",
+  "/home/feixia/pythonProject/AAAsrk/Bi_Layout/ZInD-ObservablePairs-v1构建报告.md": "082913f658aafecfdddd36e5dd660459aed9836d3fa7519fccf48ee2c07d6be2",
+  "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/zind_observable_v1/README.md": "273ede769bd595feeeebc1fce0283e9afa4e433ffa04aa705ffb54df3d351f6e",
+  "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/zind_observable_v1/results/训练结果摘要.md": "58f8fa16be5dc09448f880520915b0097215bcba89b0c4ff365e53a27761e28b",
+  "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/zind_observable_v1/results/best_metrics.json": "5e6749702fdfdf9f98ae477465b9c3430f0d69df4b264a706eacff450640c385",
+  "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/ppt_real_outputs_audit/README.md": "67874fcf7c2324ca473e667a73fb62e11a05a5e9d3d6e01b90c251c239d6864d",
+  "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/zind_e2e_v3/g0_seed123/T5_bev_verifier/preflight/REPORT.md": "94ebe41d238fbb2ba04ccfa865b1beba9dd0a567f717ecae985bdb8fe0ced2cd",
+  "/home/feixia/pythonProject/AAAsrk/Bi_Layout/models/cross_scene_matcher.py": "78437906c073961ab233066c17e0b766a274d9bd9e57f3cdcaf853a6726a14d3",
+  "/home/feixia/pythonProject/AAAsrk/Bi_Layout/utils/candidate_bev_rasterizer.py": "d8dc32410b2a73c20e5241dbb60255e3de0b9f1311817e4e385aaad5fe1160a1",
+  "/home/feixia/pythonProject/AAAsrk/Bi_Layout/dataset/zind_observable_pairs.py": "96ab8557aa2627f6ab1a664853e9aee71e729e34ebbb80f63b1482cbc0b6cd14",
+  "/home/feixia/pythonProject/AAAsrk/Bi_Layout/dataset/zind_pair_mining.py": "f7ac8bcb7e5a0b6a01ba582fcbc1ad8722edaa92a7001f426b72685109d9ef7c",
+  "/home/feixia/pythonProject/AAAsrk/Bi_Layout/dataset/zind_bipair_builder.py": "14267347bec23c420a92b4e846f6ad120ad09c1aea0100a82f5016dfae675d8b",
+  "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/matcher_progress_ppt_20260910/case_selection_revised.json": "494e42a193c9f262319627337c249e7c8036f48cde8332c177cef84bcd8c29d8",
+  "/home/feixia/pythonProject/AAAsrk/Bi_Layout/deliverables/opening_defense/assets/salve_page4.png": "60c29b1438910806d111a03bb67a52976c97462f3966123224f90ab03e950cfa",
+  "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_room_group_debug/t3_best_0665_floor03_candidate_local_m2/pairs/0665_floor_03_pano_34_pano_37_3_pre_manhattan_joint.svg": "9bc87c025d2eea73f078f9a96cc52475f28507edc0271d434400fc12f0627314",
+  "/home/feixia/pythonProject/AAAsrk/zind/data/0769/panos/floor_02_partial_room_01_pano_46.jpg": "4ed41c93ac7336df94787b4bfc9ca5e32b51f40f346c9f3ac55f68dcf9fb4543",
+  "/home/feixia/pythonProject/AAAsrk/zind/data/0769/panos/floor_02_partial_room_05_pano_71.jpg": "35b2d2fa14a69c6763f570691805d67100bb5237e4ef02ab9e4ebc1e1f272382"
+}

@@ -7,20 +7,20 @@ import numpy as np
 import torch
 from PIL import Image
 
-from dataset.panorama_pair_dataset import PanoramaPairDataset, build_pair_dataloader
-from models.geometry_consistency_selector import (
+from portallayout.datasets.panorama_pair_dataset import PanoramaPairDataset, build_pair_dataloader
+from portallayout.models.geometry_consistency_selector import (
     GEOMETRY_METRIC_NAMES,
     GeometryConsistencySelector,
     geometry_selector_loss,
 )
-from utils.cross_scene_estimator import (
+from portallayout.engine.cross_scene_estimator import (
     OpeningCandidate,
     estimate_wall_pair_candidates,
     polygon_overlap_ratio,
     polygon_validity,
 )
-from utils.cross_scene_logger import CrossSceneExperimentLogger
-from utils.cross_scene_pipeline import (
+from portallayout.utils.cross_scene_logger import CrossSceneExperimentLogger
+from portallayout.engine.cross_scene_pipeline import (
     CrossScenePipeline,
     CrossScenePipelineConfig,
     atomic_write_json,
@@ -164,7 +164,7 @@ class CrossSceneEngineeringTest(unittest.TestCase):
         pipeline = CrossScenePipeline(CrossScenePipelineConfig(top_k=2))
 
         with patch(
-            "utils.cross_scene_pipeline.extract_opening_candidates",
+            'portallayout.engine.cross_scene_pipeline.extract_opening_candidates',
             side_effect=AssertionError("legacy extractor must not be called"),
         ):
             result = pipeline.run(

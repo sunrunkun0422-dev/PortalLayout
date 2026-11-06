@@ -2,7 +2,7 @@ import unittest
 
 import torch
 
-from models.cross_scene_matcher import (
+from portallayout.models.cross_scene_matcher import (
     DualPanoramaCrossAttentionModel,
     OpeningGuidedCrossAttentionMatcher,
     OpeningSignalHead,

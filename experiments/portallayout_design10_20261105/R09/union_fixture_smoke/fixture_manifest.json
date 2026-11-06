@@ -1,0 +1,14 @@
+{
+  "schema": "salve-unlabeled-bev.v1",
+  "candidates": [
+    {
+      "candidate_id": "02cb173f9db3ed0c34d7756818e011d56c074f87c4aaaa4b461c6d4c2f7fe8a0",
+      "images": {
+        "ceiling_a": "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R09/salve_verifier_smoke/inputs/ceiling_a.jpg",
+        "ceiling_b": "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R09/salve_verifier_smoke/inputs/ceiling_b.jpg",
+        "floor_a": "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R09/salve_verifier_smoke/inputs/floor_a.jpg",
+        "floor_b": "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R09/salve_verifier_smoke/inputs/floor_b.jpg"
+      }
+    }
+  ]
+}

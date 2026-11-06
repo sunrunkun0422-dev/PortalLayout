@@ -1,0 +1,38 @@
+{
+  "A_pano_34.jpg": {
+    "source": "/home/feixia/pythonProject/AAAsrk/zind/data/0665/panos/floor_03_partial_room_01_pano_34.jpg",
+    "sha256": "50d62a15790fa79fdc90f1f4b6f93d5c5f6307a9b320b4dcb484b952c088c627"
+  },
+  "A_room_original_with_GT.json": {
+    "source": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_room_group_debug/t3_best_0665_floor03_candidate_local_m2/rooms/complete_room_01.json",
+    "sha256": "35b63d91d4f8804ac4df3deb0373084737936a5546fe89fdb9ea595414eaf882"
+  },
+  "B_pano_37.jpg": {
+    "source": "/home/feixia/pythonProject/AAAsrk/zind/data/0665/panos/floor_03_partial_room_04_pano_37.jpg",
+    "sha256": "6e606543fbee881a00bbcab4ef33532aec959a540301c47eb715e9dcdd7d4e80"
+  },
+  "B_room_original_with_GT.json": {
+    "source": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_room_group_debug/t3_best_0665_floor03_candidate_local_m2/rooms/complete_room_04.json",
+    "sha256": "d2b7bb616244bbf99bef39f5e82e65b5bbaf6ec749932536776aa2321f977b5a"
+  },
+  "pair_original_with_GT.json": {
+    "source": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_room_group_debug/t3_best_0665_floor03_candidate_local_m2/pairs/0665_floor_03_pano_34_pano_37_3.json",
+    "sha256": "ef4dac48ae0f466125bb8cb058907bd094446e77d5ab96ecce23637ce694a740"
+  },
+  "joint_layout_original.png": {
+    "source": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_room_group_debug/t3_best_0665_floor03_candidate_local_m2/pairs/0665_floor_03_pano_34_pano_37_3_pre_manhattan_joint.png",
+    "sha256": "ba6daf0cbbfbecdf07a661e527e2b4d81681f09087a66bec888a246d718ac565"
+  },
+  "joint_layout_original.svg": {
+    "source": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_room_group_debug/t3_best_0665_floor03_candidate_local_m2/pairs/0665_floor_03_pano_34_pano_37_3_pre_manhattan_joint.svg",
+    "sha256": "9bc87c025d2eea73f078f9a96cc52475f28507edc0271d434400fc12f0627314"
+  },
+  "joint_layout_manhattan_original.png": {
+    "source": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_room_group_debug/t3_best_0665_floor03_candidate_local_m2/pairs/0665_floor_03_pano_34_pano_37_3_frame_preserving_joint.png",
+    "sha256": "94e356fb36caa7841e41ae5660e2fe9bcc5cf900c0f131b3373fbf87043922e6"
+  },
+  "before_alignment.svg": {
+    "source": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_room_group_debug/t3_best_0665_floor03_candidate_local_m2/pairs/0665_floor_03_pano_34_pano_37_3_independent.svg",
+    "sha256": "e5a276d5206fcf45c60f873e85a3262feb26a47ce26bd26fb7635e24af33ee63"
+  }
+}

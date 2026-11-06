@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+<rect width="100%" height="100%" fill="white"/>
+<polygon points="599.06,50.00 658.46,531.79 200.94,588.20 141.54,106.41" fill="none" stroke="#289128" stroke-width="4"/>
+<text x="400.00" y="319.10" fill="#289128" font-size="20">complete_room_01</text>
+<polygon points="394.92,574.53 413.66,726.54 223.37,750.00 204.63,597.99" fill="none" stroke="#e18a00" stroke-width="4"/>
+<text x="309.15" y="662.27" fill="#e18a00" font-size="20">complete_room_04</text>
+</svg>

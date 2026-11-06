@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "floors": [
+    {
+      "floor_uid": "floor_1c68d80c249a3a23bdadf67f",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_pretraining_20261023/smoke20/floor_1c68d80c249a3a23bdadf67f/floor_result.json",
+      "status": "isolated_observations_only",
+      "runtime": {
+        "encoding_seconds": 0.28073243601829745,
+        "pair_seconds": 2.701812820014311,
+        "graph_seconds": 0.002039933984633535,
+        "room_and_assembly_seconds": 0.055368740984704345,
+        "total_seconds": 3.039971104997676,
+        "peak_allocated_MiB": null,
+        "observations_encoded": 20,
+        "unordered_pairs": 190,
+        "export_render_seconds": 2.1703552399994805
+      },
+      "components": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "model_load_seconds": 0.05739980499492958,
+  "cache_audit_seconds": 0.07163702699472196,
+  "total_including_load_export_seconds": 5.458537010999862,
+  "source_files_verified": 42,
+  "ground_truth_read": false
+}

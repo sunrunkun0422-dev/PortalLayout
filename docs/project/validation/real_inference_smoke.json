@@ -1,0 +1,27 @@
+{
+  "type": "post-refactor compatibility smoke, not an accuracy evaluation",
+  "command": "python -m portallayout floor run infer --prediction-cache outputs/research1_floor_frontend/main60_20261024 --bundle experiments/research1_main_20261024/legacy_pose_calibration/bundle.json --floor-uids floor_a71328a43f233a1478b275ac --device cpu --torch-threads 1 --output /tmp/portallayout_refactor_real_smoke_20261105",
+  "floor_uid": "floor_a71328a43f233a1478b275ac",
+  "run_status": "complete",
+  "floor_status": "isolated_observations_only",
+  "observations": 13,
+  "pairs": 78,
+  "component_sizes": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "source_files_verified": 3163,
+  "ground_truth_read": false,
+  "result_file": "/tmp/portallayout_refactor_real_smoke_20261105/floor_a71328a43f233a1478b275ac/floor_result.json"
+}

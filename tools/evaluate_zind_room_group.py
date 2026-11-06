@@ -32,13 +32,13 @@ if str(REPO_ROOT) not in sys.path:
 DISCLAIMER = "debug/qualitative only, not a scientific evaluation"
 DEFAULT_GROUP = (
     REPO_ROOT
-    / "src/dataset/ZInD_matching_groups/debug_train_0665_floor_03.json"
+    / "data/ZInD_matching_groups/debug_train_0665_floor_03.json"
 )
-DEFAULT_MANIFEST = REPO_ROOT / "src/dataset/ZInD_matching/train.json"
+DEFAULT_MANIFEST = REPO_ROOT / "data/ZInD_matching/train.json"
 DEFAULT_CACHE = (
     REPO_ROOT / "checkpoints/Cross_Scene_Matcher/zind_matching_feature_cache/train"
 )
-DEFAULT_CONFIG = REPO_ROOT / "src/config/zind_all.yaml"
+DEFAULT_CONFIG = REPO_ROOT / "configs/layout/zind_all.yaml"
 DEFAULT_BI_LAYOUT = (
     REPO_ROOT / "checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl"
 )
@@ -46,7 +46,7 @@ DEFAULT_OPENING = REPO_ROOT / "checkpoints/Opening_Head/zind_matching_v1/best.pt
 DEFAULT_MATCHER = (
     REPO_ROOT / "checkpoints/Cross_Scene_Matcher/zind_matching_v1/best.pt"
 )
-DEFAULT_OUTPUT = REPO_ROOT / "src/output/zind_room_group_debug"
+DEFAULT_OUTPUT = REPO_ROOT / "outputs/zind_room_group_debug"
 _PASSABLE_TYPES = frozenset(("door", "opening"))
 _BI_TO_ZIND = np.diag([-1.0, 1.0, 1.0])
 
@@ -57,7 +57,7 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument("--pair_manifest", default=str(DEFAULT_MANIFEST))
     parser.add_argument("--data_root")
     parser.add_argument("--feature_cache", default=str(DEFAULT_CACHE))
-    parser.add_argument("--config", "--bi_layout_config", dest="config", default=str(DEFAULT_CONFIG))
+    parser.add_argument("--config", "--bi_layout_config", dest='config', default=str(DEFAULT_CONFIG))
     parser.add_argument("--bi_layout_checkpoint", default=str(DEFAULT_BI_LAYOUT))
     parser.add_argument("--opening_checkpoint", default=str(DEFAULT_OPENING))
     parser.add_argument("--matcher_checkpoint", default=str(DEFAULT_MATCHER))
@@ -680,7 +680,7 @@ def strict_ground_truth_payload(
     pano_b = annotations[room_b]["panorama"]
     polygon_a = np.asarray(pano_a["layout_complete"]["vertices"], dtype=np.float64)
     polygon_b = np.asarray(pano_b["layout_complete"]["vertices"], dtype=np.float64)
-    from dataset.zind_pair_mining import transform_points
+    from portallayout.datasets.zind_pair_mining import transform_points
 
     polygon_b_in_a = transform_points(polygon_b, transform)
     physical = _physical_candidate_pairs(record, endpoint_tolerance)
@@ -735,7 +735,7 @@ def attach_post_inference_evaluation(
     return {
         "prediction": copy.deepcopy(dict(prediction)),
         "ground_truth": copy.deepcopy(dict(ground_truth)),
-        "evaluation": copy.deepcopy(dict(metrics or {})),
+        'portallayout.evaluation': copy.deepcopy(dict(metrics or {})),
         "ground_truth_usage": "post-inference evaluation only",
     }
 
@@ -857,11 +857,11 @@ def _candidate_local_pair_fusion(
     shared_details: Sequence[Mapping[str, Any]],
 ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
     """Fuse a matcher-frozen pair using only predicted M2 geometry inputs."""
-    from utils.candidate_local_portal_geometry import (
+    from portallayout.geometry.candidate_local_portal_geometry import (
         CandidateLocalPortalConfig,
         estimate_candidate_local_portal_geometry,
     )
-    from utils.joint_layout import build_joint_layout_from_endpoints
+    from portallayout.geometry.joint_layout import build_joint_layout_from_endpoints
 
     def estimate(state: Mapping[str, Any], candidate_index: int):
         intervals = state["opening_prediction"]["intervals"]
@@ -1016,8 +1016,8 @@ def _load_models(args: argparse.Namespace, audit: Mapping[str, Any], device: tor
     import torch
 
     from tools.debug_cross_scene_flow import load_bi_layout
-    from utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint
-    from utils.opening_checkpoint import (
+    from portallayout.utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint
+    from portallayout.utils.opening_checkpoint import (
         load_opening_head_checkpoint,
         resolve_opening_probability_threshold,
     )
@@ -1166,14 +1166,14 @@ def _run_room_forward(
 ) -> Dict[str, Dict[str, Any]]:
     import torch
 
-    from models.cross_scene_matcher import (
+    from portallayout.models.cross_scene_matcher import (
         opening_probabilities_to_intervals,
         resolve_enclosed_extended_depth,
     )
     from tools.debug_cross_scene_flow import prediction_to_layout
     from tools.train_zind_cross_scene_matcher import predicted_candidate_masks
-    from utils.cross_scene_estimator import opening_candidates_from_intervals
-    from utils.joint_layout import layout_xz
+    from portallayout.engine.cross_scene_estimator import opening_candidates_from_intervals
+    from portallayout.geometry.joint_layout import layout_xz
 
     images = _load_image_batch(room_inputs, room_order, image_shape).to(
         device=device, dtype=torch.float32
@@ -1307,7 +1307,7 @@ def _run_pair_prediction(
 ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
     import torch
 
-    from utils.cross_scene_pipeline import CrossScenePipeline, CrossScenePipelineConfig
+    from portallayout.engine.cross_scene_pipeline import CrossScenePipeline, CrossScenePipelineConfig
 
     room_a, room_b = str(pair_input["room_a"]), str(pair_input["room_b"])
     state_a, state_b = rooms[room_a], rooms[room_b]
@@ -1480,7 +1480,7 @@ def _candidate_rank_after_inference(
 ) -> Dict[str, Any]:
     if not record["supervision"]["is_match"]:
         return {"gt_candidate_rank": None, "gt_candidate_recalled": None}
-    from models.cross_scene_matcher import candidate_intervals_to_mask
+    from portallayout.models.cross_scene_matcher import candidate_intervals_to_mask
     from tools.train_zind_cross_scene_matcher import candidate_targets_from_affinity
     import torch
 
@@ -1551,7 +1551,7 @@ def _pair_metrics(
     floor_scale: float,
     tolerance: float,
 ) -> Dict[str, Any]:
-    from utils.cross_scene_estimator import polygon_overlap_ratio
+    from portallayout.engine.cross_scene_estimator import polygon_overlap_ratio
 
     gt_match = bool(ground_truth["is_match"])
     pred_match = bool(prediction["is_match"])
@@ -1746,8 +1746,8 @@ def _render_outputs(
     pair_results: Sequence[Mapping[str, Any]],
     pair_artifacts: Mapping[str, Mapping[str, Any]],
 ) -> Dict[str, Any]:
-    from utils.cross_scene_pipeline import atomic_write_json
-    from utils.joint_layout import render_joint_boundary, render_joint_boundary_svg
+    from portallayout.engine.cross_scene_pipeline import atomic_write_json
+    from portallayout.geometry.joint_layout import render_joint_boundary, render_joint_boundary_svg
 
     room_links = []
     for room_id, state in rooms.items():
@@ -1928,7 +1928,7 @@ def _summary(
 def run(args: argparse.Namespace, audit: Mapping[str, Any]) -> Dict[str, Any]:
     import torch
 
-    from utils.cross_scene_pipeline import atomic_write_json
+    from portallayout.engine.cross_scene_pipeline import atomic_write_json
 
     torch.set_num_threads(args.torch_threads)
     torch.manual_seed(args.seed)
@@ -2019,8 +2019,8 @@ def run(args: argparse.Namespace, audit: Mapping[str, Any]) -> Dict[str, Any]:
             "entered_joint_layout": bool(prediction.get("joint_bev_generated")),
             "pose_valid": bool(prediction.get("pose_valid")),
             "posthoc_gt_portal": copy.deepcopy(gt_interfaces[0]) if gt_interfaces else None,
-            "posthoc_endpoint_metrics_A": result["evaluation"].get("portal_endpoint_A"),
-            "posthoc_endpoint_metrics_B": result["evaluation"].get("portal_endpoint_B"),
+            "posthoc_endpoint_metrics_A": result['portallayout.evaluation'].get("portal_endpoint_A"),
+            "posthoc_endpoint_metrics_B": result['portallayout.evaluation'].get("portal_endpoint_B"),
         }
     visualization = _render_outputs(
         output_dir, audit, rooms, public_rooms, pair_results, pair_artifacts

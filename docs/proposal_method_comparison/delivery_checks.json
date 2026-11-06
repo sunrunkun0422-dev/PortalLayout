@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-10-26T20:09:54.600894+08:00",
+  "status": "passed",
+  "scope": "documentation/figure validation only; no project tests or model execution",
+  "source_files_checked": 27,
+  "source_files_changed": [],
+  "evidence_symbols_checked": 16,
+  "figures": [
+    {
+      "name": "SALVe_技术路线",
+      "png_size": [
+        3840,
+        2160
+      ],
+      "svg_viewBox": "0 0 1152 648",
+      "nodes": 9,
+      "edges": 11
+    },
+    {
+      "name": "现有项目_真实流程",
+      "png_size": [
+        3840,
+        2160
+      ],
+      "svg_viewBox": "0 0 1152 648",
+      "nodes": 12,
+      "edges": 12
+    },
+    {
+      "name": "我的论文_完整技术路线",
+      "png_size": [
+        3840,
+        2160
+      ],
+      "svg_viewBox": "0 0 1152 648",
+      "nodes": 5,
+      "edges": 4
+    },
+    {
+      "name": "SALVe_vs_我的方法",
+      "png_size": [
+        3840,
+        2160
+      ],
+      "svg_viewBox": "0 0 1152 648",
+      "nodes": 10,
+      "edges": 8
+    }
+  ],
+  "canvas_or_node_text_issues": 0,
+  "visual_inspection": "four-figure contact sheet and enlarged current-system figure inspected",
+  "markdown_local_links_checked": 62,
+  "broken_links": [],
+  "pdf_pages": 4,
+  "mermaid": "basic node/edge syntax checked; no Mermaid renderer installed; SVG/PNG rendered by Matplotlib",
+  "project_tests_run": false,
+  "training_inference_evaluation_run": false,
+  "original_ppt_modified": false
+}

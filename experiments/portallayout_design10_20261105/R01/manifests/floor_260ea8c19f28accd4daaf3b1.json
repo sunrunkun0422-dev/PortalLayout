@@ -1,0 +1,51 @@
+{
+  "schema_version": "zind-floorset.input.v1",
+  "sample_id": "sample_d219c42a6172a90cf1ae6edd",
+  "floor_uid": "floor_260ea8c19f28accd4daaf3b1",
+  "task": "unposed_floor_layout_from_panoramas",
+  "input_mode": "panorama_only",
+  "selection_policy": "all_panoramas",
+  "projection": "equirectangular",
+  "pose_prior": "none",
+  "calibration_mode": "scale_unknown",
+  "observations": [
+    {
+      "observation_id": "view_b1d6f624eb665dd05f1c6dc8",
+      "rgb": {
+        "root_key": "zind_raw",
+        "relative_path": "1150/panos/floor_01_partial_room_03_pano_9.jpg"
+      },
+      "image_size_wh": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "observation_id": "view_b3d031d2ce65f680fc15e5bf",
+      "rgb": {
+        "root_key": "zind_raw",
+        "relative_path": "1150/panos/floor_01_partial_room_02_pano_11.jpg"
+      },
+      "image_size_wh": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "observation_id": "view_d12a77bc3f35c251a5bd14b9",
+      "rgb": {
+        "root_key": "zind_raw",
+        "relative_path": "1150/panos/floor_01_partial_room_01_pano_3.jpg"
+      },
+      "image_size_wh": [
+        2048,
+        1024
+      ]
+    }
+  ],
+  "observation_order": [
+    "view_b1d6f624eb665dd05f1c6dc8",
+    "view_b3d031d2ce65f680fc15e5bf",
+    "view_d12a77bc3f35c251a5bd14b9"
+  ]
+}

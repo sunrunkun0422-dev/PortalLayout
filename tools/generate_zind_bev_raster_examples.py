@@ -36,21 +36,21 @@ from tools.run_zind_bev_verifier_phase_b import (  # noqa: E402
     _model_predictions,
     _phase_b_groups,
 )
-from utils.candidate_bev_rasterizer import (  # noqa: E402
+from portallayout.utils.candidate_bev_rasterizer import (  # noqa: E402
     CandidateBEVRasterConfig,
     normalize_portal_frame,
     raster_preview_rgb,
     rasterize_candidate_bev,
 )
-from utils.joint_layout import build_joint_layout_from_endpoints  # noqa: E402
+from portallayout.geometry.joint_layout import build_joint_layout_from_endpoints  # noqa: E402
 
 
 def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output_dir", default=str(DEFAULT_OUTPUT))
     parser.add_argument("--audit_root", default=str(AUDIT_ROOT))
-    parser.add_argument("--train_manifest", default=str(REPO_ROOT / "src/dataset/ZInD_matching/train.json"))
-    parser.add_argument("--val_manifest", default=str(REPO_ROOT / "src/dataset/ZInD_matching/val.json"))
+    parser.add_argument("--train_manifest", default=str(REPO_ROOT / "data/ZInD_matching/train.json"))
+    parser.add_argument("--val_manifest", default=str(REPO_ROOT / "data/ZInD_matching/val.json"))
     parser.add_argument("--count", type=int, default=8)
     parser.add_argument("--seed", type=int, default=123)
     parser.add_argument("--bootstrap_replicates", type=int, default=2000)
@@ -155,7 +155,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         })
     summary: Dict[str, Any] = {
         "schema_version": "zind-salve-bev-raster-prototype-v1",
-        "config": config.__dict__, "example_count": len(examples),
+        'portallayout.config': config.__dict__, "example_count": len(examples),
         "examples": examples,
         "mean_clipping_rate": float(np.mean([value["metadata"]["clipping_rate"] for value in examples])),
         "max_clipping_rate": float(max(value["metadata"]["clipping_rate"] for value in examples)),

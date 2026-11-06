@@ -138,7 +138,7 @@ class ZInDMatchingFeatureCacheTest(unittest.TestCase):
             _write_image(image_path, 64)
             manifest = root / "test.json"
             manifest.write_text("{}", encoding="utf-8")
-            config = root / "config.yaml"
+            config = root / 'portallayout.config.yaml'
             config.write_text("model: fake\n", encoding="utf-8")
             checkpoint = root / "model.pt"
             checkpoint.write_bytes(b"fake checkpoint")
@@ -204,7 +204,7 @@ class ZInDMatchingFeatureCacheTest(unittest.TestCase):
             _write_image(image_path, 128)
             manifest = root / "train.json"
             manifest.write_text("{}", encoding="utf-8")
-            config = root / "config.yaml"
+            config = root / 'portallayout.config.yaml'
             config.write_text("model: fake\n", encoding="utf-8")
             checkpoint = root / "model.pt"
             checkpoint.write_bytes(b"fake checkpoint")

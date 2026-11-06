@@ -1,0 +1,110 @@
+{
+  "schema_version": "research10.candidate-union.v1",
+  "coordinate_contract": {
+    "frame_id": "common_xy_v1",
+    "units": "height_unit",
+    "transform_direction": "B_to_A",
+    "equation": "p_A=T_B_to_A*p_B"
+  },
+  "deduplication": {
+    "algorithm": "sorted_representative_allclose",
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "pair_denominator": 2,
+  "frozen_pairs": [
+    [
+      "floor1",
+      "A",
+      "B"
+    ],
+    [
+      "floor1",
+      "A",
+      "C"
+    ]
+  ],
+  "methods": {
+    "portallayout": {
+      "reported_pairs": 2,
+      "missing_pairs": 0,
+      "missing_pair_ids": [],
+      "input_candidates": 2,
+      "converted_candidates": 1,
+      "failed_or_unsupported_conversions": 1
+    },
+    "salve_dav2": {
+      "reported_pairs": 1,
+      "missing_pairs": 1,
+      "missing_pair_ids": [
+        [
+          "floor1",
+          "A",
+          "C"
+        ]
+      ],
+      "input_candidates": 1,
+      "converted_candidates": 1,
+      "failed_or_unsupported_conversions": 0
+    }
+  },
+  "union_candidate_denominator": 1,
+  "candidates": [
+    {
+      "candidate_id": "02cb173f9db3ed0c34d7756818e011d56c074f87c4aaaa4b461c6d4c2f7fe8a0",
+      "floor_uid": "floor1",
+      "observation_a": "A",
+      "observation_b": "B",
+      "T_B_to_A": [
+        [
+          1.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "method": "portallayout",
+          "source_candidate_id": "p1",
+          "source_opening_a": "a1",
+          "source_opening_b": "b1"
+        },
+        {
+          "method": "salve_dav2",
+          "source_candidate_id": "s1",
+          "source_opening_a": "a2",
+          "source_opening_b": "b2"
+        }
+      ]
+    }
+  ],
+  "conversion_failures": [
+    {
+      "pair": [
+        "floor1",
+        "A",
+        "B"
+      ],
+      "source": {
+        "method": "portallayout",
+        "source_candidate_id": "p2",
+        "source_opening_a": "a1",
+        "source_opening_b": "b1"
+      },
+      "status": "unsupported",
+      "reason": "no_conversion"
+    }
+  ],
+  "claim_boundary": "Declared common frame is not an independently verified coordinate conversion; union construction is not a comparison result.",
+  "union_fingerprint": "210337890fe1bfd2ae9f6645fb95d2193ccfdcd788a024604e51cb7685b31f02"
+}

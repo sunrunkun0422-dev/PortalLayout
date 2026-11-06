@@ -1,0 +1,29 @@
+{
+  "scope": "fixture_traceability_only_not_verifier_input",
+  "inputs": [
+    {
+      "role": "ceiling_a",
+      "fixture_source_offline_only": "/home/feixia/pythonProject/AAAsrk/salve/tests/test_data/Renderings/gt_alignment_approx/1208/pair_58___door_0_0_rotated_ceiling_rgb_floor_01_partial_room_04_pano_5.jpg",
+      "source_sha256": "9a17880a171a81b18cec7058f96581194867617b4e9c0c8d15da8fea4b3713e2",
+      "copied_input_sha256": "9a17880a171a81b18cec7058f96581194867617b4e9c0c8d15da8fea4b3713e2"
+    },
+    {
+      "role": "ceiling_b",
+      "fixture_source_offline_only": "/home/feixia/pythonProject/AAAsrk/salve/tests/test_data/Renderings/gt_alignment_approx/1208/pair_58___door_0_0_rotated_ceiling_rgb_floor_01_partial_room_07_pano_8.jpg",
+      "source_sha256": "e219a039800d0867efc04095e2cf86b3c80768d603dece420f515d8ed0c91246",
+      "copied_input_sha256": "e219a039800d0867efc04095e2cf86b3c80768d603dece420f515d8ed0c91246"
+    },
+    {
+      "role": "floor_a",
+      "fixture_source_offline_only": "/home/feixia/pythonProject/AAAsrk/salve/tests/test_data/Renderings/gt_alignment_approx/1208/pair_58___door_0_0_rotated_floor_rgb_floor_01_partial_room_04_pano_5.jpg",
+      "source_sha256": "60377b855ee41556e49d816aefc27e98866a2acbf021b6e573023617119fd1c6",
+      "copied_input_sha256": "60377b855ee41556e49d816aefc27e98866a2acbf021b6e573023617119fd1c6"
+    },
+    {
+      "role": "floor_b",
+      "fixture_source_offline_only": "/home/feixia/pythonProject/AAAsrk/salve/tests/test_data/Renderings/gt_alignment_approx/1208/pair_58___door_0_0_rotated_floor_rgb_floor_01_partial_room_07_pano_8.jpg",
+      "source_sha256": "66d9316cf144cb8f1683dc831b4d82a28fdd6c1a903639d12a2c6e99b8f173bf",
+      "copied_input_sha256": "66d9316cf144cb8f1683dc831b4d82a28fdd6c1a903639d12a2c6e99b8f173bf"
+    }
+  ]
+}

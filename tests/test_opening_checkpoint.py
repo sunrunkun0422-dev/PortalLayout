@@ -7,11 +7,11 @@ from unittest.mock import patch
 
 import torch
 
-from models.cross_scene_matcher import (
+from portallayout.models.cross_scene_matcher import (
     OpeningGuidedCrossAttentionMatcher,
     OpeningSignalHead,
 )
-from utils.opening_checkpoint import (
+from portallayout.utils.opening_checkpoint import (
     load_opening_head_checkpoint,
     resolve_opening_probability_threshold,
 )

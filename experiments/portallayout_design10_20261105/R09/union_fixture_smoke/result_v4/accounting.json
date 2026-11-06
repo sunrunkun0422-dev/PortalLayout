@@ -1,0 +1,18 @@
+{
+  "method": "salve_dav2",
+  "candidate_denominator": 1,
+  "counts": {
+    "scored": 1,
+    "unsupported": 0,
+    "failed": 0,
+    "not_reported": 0
+  },
+  "scores": [
+    {
+      "candidate_id": "02cb173f9db3ed0c34d7756818e011d56c074f87c4aaaa4b461c6d4c2f7fe8a0",
+      "status": "scored",
+      "score": 0.9624085426330566,
+      "reason": null
+    }
+  ]
+}

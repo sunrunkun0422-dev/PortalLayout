@@ -3,7 +3,7 @@ import unittest
 
 import torch
 
-from models.cross_scene_matcher import (
+from portallayout.models.cross_scene_matcher import (
     circular_interval_iou,
     opening_probabilities_to_intervals,
     recall_topk_opening_intervals,
@@ -14,7 +14,7 @@ from tools.audit_zind_candidate_failures import (
     _physical_matches,
     _target_pairs,
 )
-from utils.candidate_failure_trace import (
+from portallayout.utils.candidate_failure_trace import (
     assign_side_reason,
     combine_side_reason,
     finite_tree,

@@ -83,9 +83,11 @@ class ReviewTests(unittest.TestCase):
         r['quality']['negative_certificate']={'clearance_m':1};self.assertTrue(consensus(r,reviews,POLICY)[1])
     def test_unfrozen_val_and_test_fail_before_output_creation(self):
         with tempfile.TemporaryDirectory() as tmp:
+            partition=Path(tmp)/'partition.json'
+            partition.write_text(json.dumps({'train':['0001'],'val':['0002'],'test':['0003']}))
             for split in ['val','test']:
                 out=Path(tmp)/split
-                p=subprocess.run([sys.executable,'-B',str(ROOT/'tools/build_zind_observable_pairs.py'),'--split',split,'--output',str(out)],capture_output=True,text=True)
+                p=subprocess.run([sys.executable,'-B',str(ROOT/'tools/build_zind_observable_pairs.py'),'--partition',str(partition),'--split',split,'--output',str(out)],capture_output=True,text=True)
                 self.assertNotEqual(p.returncode,0);self.assertIn('train-only calibration freeze record',p.stderr);self.assertFalse(out.exists())
 
 if __name__=='__main__':unittest.main()

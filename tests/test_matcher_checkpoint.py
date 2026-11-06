@@ -5,9 +5,9 @@ from tempfile import TemporaryDirectory
 
 import torch
 
-from models.cross_scene_matcher import OpeningGuidedCrossAttentionMatcher
-from utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint
-from utils.opening_checkpoint import resolve_opening_probability_threshold
+from portallayout.models.cross_scene_matcher import OpeningGuidedCrossAttentionMatcher
+from portallayout.utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint
+from portallayout.utils.opening_checkpoint import resolve_opening_probability_threshold
 
 
 def _identity(path: Path, with_hash: bool):
@@ -20,7 +20,7 @@ def _identity(path: Path, with_hash: bool):
 
 class MatcherCheckpointTest(unittest.TestCase):
     def _write_checkpoint(self, root: Path):
-        config = root / "config.yaml"
+        config = root / 'portallayout.config.yaml'
         backbone = root / "bilayout.pt"
         config.write_bytes(b"MODEL: synthetic\n")
         backbone.write_bytes(b"synthetic-backbone")

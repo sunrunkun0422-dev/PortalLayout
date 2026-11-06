@@ -1,0 +1,33 @@
+flowchart LR
+    c_input["单图感知｜已实现<br/>Bi-Layout + Opening Head<br/>布局、开口、1D / 2D 特征<br/>C01–C03 · 冻结前端"]:::done
+    c_repr["开口增强｜已实现<br/>结构 + 上下文 + 几何<br/>融合、图内交互 → 描述子<br/>C04 · 每张图编码一次"]:::done
+    c_pair["双图检索｜已实现<br/>具体候选对条件化查询<br/>双向检索二维视觉记忆<br/>C05 · 枚举全层无序图像对"]:::done
+    c_assign["分配与拒绝｜已实现<br/>Sinkhorn + 无匹配节点<br/>互选、阈值、数值检查<br/>C06 · 不是位姿验证"]:::done
+    c_pose["位姿多假设｜已实现<br/>两种端点映射<br/>Sim(2) / 尺度先验对照<br/>C07 · 可替换端点几何"]:::done
+    c_verify["位姿评分｜已训练<br/>几何 BEV + 视觉特征<br/>或几何规则策略<br/>C08 · 学习工作点未通过"]:::done
+    c_strict["严格模式<br/>仅正式校准通过的边<br/>C09 · 当前不承诺可靠接边"]:::done
+    c_explore["实验模式<br/>排序展示 / 工作点过滤<br/>tentative；未校准<br/>C10 · 过滤无工作点则不接边"]:::partial
+    c_graph["全局定位｜已实现<br/>森林 / 鲁棒 PGO<br/>保留独立分量<br/>C11 · 节点是全景"]:::done
+    c_out["组装导出｜已实现<br/>相机、区域、开口<br/>墙图、连通分量<br/>C12 · 可选房间融合"]:::done
+    c_eval["独立评估｜已实现<br/>七项整层指标<br/>主分量单锚点规范<br/>C13 · GT 只在评价读取"]:::eval
+    c_gt["GT｜仅离线评价<br/>不回流到选边或组装"]:::base
+    c_input --> c_repr
+    c_repr --> c_pair
+    c_pair --> c_assign
+    c_assign --> c_pose
+    c_pose --> c_verify
+    c_verify --> c_strict
+    c_verify --> c_explore
+    c_strict --> c_graph
+    c_explore --> c_graph
+    c_graph --> c_out
+    c_out --> c_eval
+    c_gt -.-> c_eval
+    note_0["当前实验边界<br/>R3 第 5000 步固定；V0 / V1 已训练。<br/>两组工作点均失败；排序结果仅供诊断。<br/>最新整层对照关闭房间融合。"]:::partial
+    note_1["尚未完成的研究目标<br/>端点拟合只改变位姿输入，不修正房间多边形。<br/>PGO 优化相机变换，不优化局部墙段与端点。<br/>学习房间关联有代码，本轮未训练。"]:::plan
+    classDef base fill:#EDF2F7,stroke:#71859A,color:#142B42;
+    classDef done fill:#EAF3FF,stroke:#3574B8,color:#142B42;
+    classDef partial fill:#FFF4DF,stroke:#BB7A21,color:#142B42,stroke-dasharray: 5 3;
+    classDef plan fill:#F2ECFA,stroke:#8560A9,color:#142B42,stroke-dasharray: 5 3;
+    classDef unknown fill:#F2F2F2,stroke:#8A8A8A,color:#142B42,stroke-dasharray: 5 3;
+    classDef eval fill:#E7F5F0,stroke:#2E8169,color:#142B42;

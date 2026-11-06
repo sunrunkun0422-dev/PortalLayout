@@ -35,7 +35,7 @@ from tools import evaluate_zind_portal_geometry_val as smoke
 
 
 PURPOSE = "full validation diagnostic; frozen protocol; not test evaluation"
-DEFAULT_OUTPUT = REPO_ROOT / "src/output/zind_geometry_val_full/t3_frozen_m2"
+DEFAULT_OUTPUT = REPO_ROOT / "outputs/zind_geometry_val_full/t3_frozen_m2"
 DEFAULT_FULL_MANIFEST = DEFAULT_OUTPUT / "full_val_manifest.json"
 DEFAULT_ORIGINAL_METRICS = (
     REPO_ROOT
@@ -312,7 +312,7 @@ def metadata_report(context: Mapping[str, Any]) -> Dict[str, Any]:
 
 def dry_run_report(context: Mapping[str, Any]) -> Dict[str, Any]:
     import torch
-    from dataset.zind_bipair_dataset import collate_zind_bipair
+    from portallayout.datasets.zind_bipair_dataset import collate_zind_bipair
     from tools.train_zind_end_to_end import JointZInDMatchingDataset
     from torch.utils.data import DataLoader, Subset
 
@@ -597,7 +597,7 @@ def _validate_resume_metadata(
 
 def run(context: Mapping[str, Any]) -> Dict[str, Any]:
     import torch
-    from dataset.zind_bipair_dataset import collate_zind_bipair
+    from portallayout.datasets.zind_bipair_dataset import collate_zind_bipair
     from tools.train_zind_end_to_end import JointZInDMatchingDataset
     from torch.utils.data import DataLoader, Subset
 
@@ -789,10 +789,10 @@ def matching_summary(records: Sequence[Mapping[str, Any]]) -> Dict[str, Any]:
     positives = [value for value in records if value["ground_truth"]["is_match"]]
     negatives = [value for value in records if not value["ground_truth"]["is_match"]]
     target_available = [
-        value for value in positives if value["evaluation"]["gt_candidate_recalled"]
+        value for value in positives if value['portallayout.evaluation']["gt_candidate_recalled"]
     ]
     correct = [
-        value for value in positives if value["evaluation"]["selected_candidate_correct"]
+        value for value in positives if value['portallayout.evaluation']["selected_candidate_correct"]
     ]
     tp = sum(bool(value["prediction"]["is_match"]) for value in positives)
     fp = sum(bool(value["prediction"]["is_match"]) for value in negatives)
@@ -1249,7 +1249,7 @@ def paired_rows(records: Sequence[Mapping[str, Any]]) -> List[Dict[str, Any]]:
     for record in records:
         if not (
             record["ground_truth"]["is_match"]
-            and record["evaluation"]["selected_candidate_correct"]
+            and record['portallayout.evaluation']["selected_candidate_correct"]
         ):
             continue
         geometries = record["prediction"]["geometry_modes"]
@@ -1347,8 +1347,8 @@ def paired_summary(rows: Sequence[Mapping[str, Any]]) -> Dict[str, Any]:
 
 def failure_decomposition(records: Sequence[Mapping[str, Any]]) -> Dict[str, Any]:
     positives = [value for value in records if value["ground_truth"]["is_match"]]
-    recalled = [value for value in positives if value["evaluation"]["gt_candidate_recalled"]]
-    selected = [value for value in positives if value["evaluation"]["selected_candidate_correct"]]
+    recalled = [value for value in positives if value['portallayout.evaluation']["gt_candidate_recalled"]]
+    selected = [value for value in positives if value['portallayout.evaluation']["selected_candidate_correct"]]
     output = {
         "positive_denominator": len(positives),
         "candidate_not_recalled": len(positives) - len(recalled),
@@ -1358,7 +1358,7 @@ def failure_decomposition(records: Sequence[Mapping[str, Any]]) -> Dict[str, Any
         ),
         "candidate_recalled_matcher_selected_wrong": sum(
             value["prediction"]["is_match"]
-            and not value["evaluation"]["selected_candidate_correct"]
+            and not value['portallayout.evaluation']["selected_candidate_correct"]
             for value in recalled
         ),
         "candidate_selected_correct": len(selected),
@@ -1533,7 +1533,7 @@ def _render_visualizations(
 
     by_id = {value["pair_id"]: value for value in records}
     selected: List[Tuple[str, str]] = []
-    s3 = [value for value in records if value["evaluation"]["selected_candidate_correct"]]
+    s3 = [value for value in records if value['portallayout.evaluation']["selected_candidate_correct"]]
     selected.extend(("fixed_pair_id", value["pair_id"]) for value in records[:2])
     comparable = [value for value in rows if value.get("delta_m2_minus_g1_yaw") is not None]
     comparable.sort(key=lambda value: value["delta_m2_minus_g1_yaw"])
@@ -1698,7 +1698,7 @@ def _report_markdown(summary: Mapping[str, Any]) -> str:
         f"current source after report-only formatting: `{smoke.sha256_file(Path(__file__))}`。",
         f"- T3: `{checkpoint['sha256']}` (`{checkpoint['path']}`)。",
         f"- M2 config: `{metadata['m2']['sha256']}`。",
-        f"- Bi-Layout config: `{metadata['model']['bi_layout']['config']}` / "
+        f"- Bi-Layout config: `{metadata['model']['bi_layout']['portallayout.config']}` / "
         f"`{metadata['model']['opening_head']['backboneContract']['biLayoutConfig']['sha256']}`。",
         f"- full manifest: `{full_manifest['sha256']}`。",
         f"- val manifest: `{val_manifest['sha256']}`。",
@@ -1913,7 +1913,7 @@ def analyze(context: Mapping[str, Any]) -> Dict[str, Any]:
         value for value in positives if value["prediction"]["is_match"]
     ]
     s3 = [
-        value for value in positives if value["evaluation"]["selected_candidate_correct"]
+        value for value in positives if value['portallayout.evaluation']["selected_candidate_correct"]
     ]
     s5 = [
         value
@@ -1978,10 +1978,10 @@ def analyze(context: Mapping[str, Any]) -> Dict[str, Any]:
         "house_clustered_bootstrap": bootstrap,
         "smoke_reference": (
             smoke.load_json(
-                REPO_ROOT / "src/output/zind_geometry_val_smoke/t3_seed123_64/summary.json"
+                REPO_ROOT / "outputs/zind_geometry_val_smoke/t3_seed123_64/summary.json"
             )["matching"]
             if (
-                REPO_ROOT / "src/output/zind_geometry_val_smoke/t3_seed123_64/summary.json"
+                REPO_ROOT / "outputs/zind_geometry_val_smoke/t3_seed123_64/summary.json"
             ).is_file()
             else None
         ),

@@ -27,12 +27,12 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from dataset.zind_bipair_dataset import collate_zind_bipair
-from dataset.zind_matching_feature_dataset import (
+from portallayout.datasets.zind_bipair_dataset import collate_zind_bipair
+from portallayout.datasets.zind_matching_feature_dataset import (
     ZInDMatchingFeatureDataset,
     validate_disjoint_house_splits,
 )
-from models.cross_scene_matcher import OpeningGuidedCrossAttentionMatcher
+from portallayout.models.cross_scene_matcher import OpeningGuidedCrossAttentionMatcher
 from tools.train_zind_cross_scene_matcher import (
     _append_jsonl,
     _atomic_json,
@@ -43,17 +43,17 @@ from tools.train_zind_cross_scene_matcher import (
     train_one_epoch,
 )
 from tools.train_zind_opening_head import _restore_rng_state, _rng_state
-from utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint
-from utils.opening_checkpoint import load_opening_head_checkpoint
+from portallayout.utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint
+from portallayout.utils.opening_checkpoint import load_opening_head_checkpoint
 
 
-DEFAULT_MANIFEST_ROOT = REPO_ROOT / "src/dataset/ZInD_matching"
+DEFAULT_MANIFEST_ROOT = REPO_ROOT / "data/ZInD_matching"
 DEFAULT_CACHE_ROOT = (
     REPO_ROOT / "checkpoints/Cross_Scene_Matcher/zind_matching_feature_cache"
 )
 DEFAULT_OPENING_CHECKPOINT = REPO_ROOT / "checkpoints/Opening_Head/zind_matching_v1/best.pt"
 DEFAULT_INITIALIZER = REPO_ROOT / "checkpoints/Cross_Scene_Matcher/zind_bipair_v1/best.pt"
-DEFAULT_CONFIG = REPO_ROOT / "src/config/zind_all.yaml"
+DEFAULT_CONFIG = REPO_ROOT / "configs/layout/zind_all.yaml"
 DEFAULT_BACKBONE = REPO_ROOT / "checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl"
 DEFAULT_OUTPUT_DIR = REPO_ROOT / "checkpoints/Cross_Scene_Matcher/zind_matching_v1"
 
@@ -323,7 +323,7 @@ def _data_contract(
     cache_validation: Mapping[str, Any],
 ) -> Dict[str, Any]:
     return {
-        "dataset": "ZInD_matching formatVersion=2 complete-room pairs",
+        'portallayout.datasets': "ZInD_matching formatVersion=2 complete-room pairs",
         "manifests": {name: str(dataset.manifest_path) for name, dataset in datasets.items()},
         "feature_caches": {name: str(dataset.cache_dir) for name, dataset in datasets.items()},
         "pair_counts": {name: len(dataset) for name, dataset in datasets.items()},

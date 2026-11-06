@@ -1,0 +1,37 @@
+{
+  "floors": [
+    {
+      "floor_uid": "floor_a71328a43f233a1478b275ac",
+      "house_id": "0430",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_a71328a43f233a1478b275ac/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        13
+      ]
+    },
+    {
+      "floor_uid": "floor_613a83e984e35bcd8b75a433",
+      "house_id": "1236",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_613a83e984e35bcd8b75a433/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        14
+      ]
+    },
+    {
+      "floor_uid": "floor_70fdcbd54a8bf40ef0801e8b",
+      "house_id": "0641",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_70fdcbd54a8bf40ef0801e8b/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        18
+      ]
+    }
+  ],
+  "ground_truth_read": false,
+  "evaluation_reads_gt_separately": true,
+  "source": "frozen_frontend_and_R3",
+  "config": {
+    "threshold": 0.5
+  }
+}

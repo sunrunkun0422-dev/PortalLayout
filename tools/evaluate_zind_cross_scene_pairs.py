@@ -18,9 +18,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from dataset.panorama_pair_dataset import build_pair_dataloader
-from dataset.zind_pair_mining import ZindAdjacentPair, mine_zind_adjacent_pairs
-from models.cross_scene_matcher import (
+from portallayout.datasets.panorama_pair_dataset import build_pair_dataloader
+from portallayout.datasets.zind_pair_mining import ZindAdjacentPair, mine_zind_adjacent_pairs
+from portallayout.models.cross_scene_matcher import (
     OpeningGuidedCrossAttentionMatcher,
     candidate_intervals_to_mask,
     resolve_enclosed_extended_depth,
@@ -33,22 +33,22 @@ from tools.debug_cross_scene_flow import (
     load_module_checkpoint,
     prediction_to_layout,
 )
-from utils.cross_scene_estimator import (
+from portallayout.engine.cross_scene_estimator import (
     opening_candidates_from_intervals,
     wall_token_assignment,
 )
-from utils.cross_scene_pipeline import (
+from portallayout.engine.cross_scene_pipeline import (
     CrossScenePipeline,
     CrossScenePipelineConfig,
     atomic_write_json,
 )
-from utils.joint_layout import render_joint_boundary, render_joint_boundary_svg
-from utils.opening_checkpoint import (
+from portallayout.geometry.joint_layout import render_joint_boundary, render_joint_boundary_svg
+from portallayout.utils.opening_checkpoint import (
     DEFAULT_OPENING_PROBABILITY_THRESHOLD,
     load_opening_head_checkpoint,
     resolve_opening_probability_threshold,
 )
-from utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint
+from portallayout.utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint
 
 
 DEFAULT_ZIND_ROOT = REPO_ROOT.parent / "zind/data"
@@ -106,7 +106,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--min_opening_width_tokens", type=int, default=2)
     parser.add_argument("--max_openings_per_view", type=int, default=12)
     parser.add_argument(
-        "--output_dir", default="src/output/zind_cross_scene_ground_truth_eval"
+        "--output_dir", default="outputs/zind_cross_scene_ground_truth_eval"
     )
     return parser.parse_args()
 

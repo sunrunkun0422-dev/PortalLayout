@@ -4,14 +4,12 @@
 from __future__ import annotations
 
 import argparse
-import gc
 import json
 import sys
 from collections import OrderedDict
 from pathlib import Path
 from typing import Any, Dict, Mapping, Sequence, Tuple
 
-import cv2
 import numpy as np
 import torch
 
@@ -19,46 +17,44 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from config.defaults import merge_from_file
-from dataset.panorama_pair_dataset import build_pair_dataloader
-from models.bi_layout import Bi_Layout
-from models.cross_scene_matcher import (
+from portallayout.datasets.panorama_pair_dataset import build_pair_dataloader
+from portallayout.models.cross_scene_matcher import (
     OpeningGuidedCrossAttentionMatcher,
     candidate_intervals_to_mask,
     opening_probabilities_to_intervals,
     resolve_enclosed_extended_depth,
 )
-from models.geometry_consistency_selector import (
+from portallayout.models.geometry_consistency_selector import (
     GeometryConsistencySelector,
     candidate_metrics_to_tensor,
 )
-from postprocessing.post_process import frame_preserving_manhattan, post_process
-from utils.conversion import depth2xyz
-from utils.cross_scene_estimator import (
+from portallayout.engine.cross_scene_estimator import (
     estimate_wall_pair_candidates,
     extract_opening_candidates,
     opening_candidates_from_intervals,
     polygon_validity,
 )
-from utils.cross_scene_pipeline import (
+from portallayout.engine.cross_scene_pipeline import (
     CrossScenePipeline,
     CrossScenePipelineConfig,
     atomic_write_json,
 )
-from utils.opening_checkpoint import (
+from portallayout.utils.opening_checkpoint import (
     DEFAULT_OPENING_PROBABILITY_THRESHOLD,
     load_opening_head_checkpoint,
     resolve_opening_probability_threshold,
 )
-from utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint
-from utils.writer import xyz2json
+from portallayout.utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint
+from portallayout.engine.single_view_prediction import (
+    LAYOUT_FRAME_MODES, load_bi_layout, prediction_to_layout,
+)
 
 
 DEFAULT_ZIND_PANO_DIR = REPO_ROOT.parent / "zind/data/0000/panos"
 DEFAULT_IMAGE_A = DEFAULT_ZIND_PANO_DIR / "floor_01_partial_room_04_pano_32.jpg"
 DEFAULT_IMAGE_B = DEFAULT_ZIND_PANO_DIR / "floor_01_partial_room_08_pano_31.jpg"
 DEFAULT_CHECKPOINT = REPO_ROOT / "checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl"
-DEFAULT_CONFIG = REPO_ROOT / "src/config/zind_all.yaml"
+DEFAULT_CONFIG = REPO_ROOT / "configs/layout/zind_all.yaml"
 
 
 def parse_args() -> argparse.Namespace:
@@ -84,7 +80,7 @@ def parse_args() -> argparse.Namespace:
         "--selector_checkpoint",
         help="optional trained GeometryConsistencySelector checkpoint",
     )
-    parser.add_argument("--output_dir", default="src/output/cross_scene_format_smoke")
+    parser.add_argument("--output_dir", default="outputs/cross_scene_format_smoke")
     parser.add_argument("--device", default="cpu")
     parser.add_argument("--top_k", type=int, default=4)
     parser.add_argument("--torch_threads", type=int, default=4)
@@ -195,40 +191,6 @@ class FlowReporter:
         }
 
 
-def load_bi_layout(
-    config_path: str,
-    checkpoint_path: str,
-    device: torch.device,
-    load_checkpoint: bool,
-) -> Tuple[Bi_Layout, Dict[str, Any]]:
-    config = merge_from_file(config_path)
-    model_args = dict(config.MODEL.ARGS[0])
-
-    # torchvision resolves pretrained ResNet weights from <hub_dir>/checkpoints.
-    torch.hub.set_dir(str(REPO_ROOT))
-    model = Bi_Layout(**model_args)
-    checkpoint_report = {
-        "config": str(Path(config_path).resolve()),
-        "checkpoint": str(Path(checkpoint_path).resolve()),
-        "loaded": False,
-        "modelArgs": model_args,
-    }
-    if load_checkpoint:
-        checkpoint = torch.load(checkpoint_path, map_location="cpu")
-        state_dict = checkpoint.get("net", checkpoint)
-        incompatible = model.load_state_dict(state_dict, strict=False)
-        checkpoint_report.update(
-            loaded=True,
-            epoch=checkpoint.get("epoch"),
-            missingKeys=list(incompatible.missing_keys),
-            unexpectedKeys=list(incompatible.unexpected_keys),
-        )
-        del checkpoint, state_dict
-        gc.collect()
-
-    model.to(device).eval()
-    return model, checkpoint_report
-
 
 def load_module_checkpoint(
     module: torch.nn.Module,
@@ -285,94 +247,6 @@ def _top_intervals(
     end = (start + width - 1) % token_count
     return [(start, end)]
 
-
-def _convex_layout(depth: np.ndarray, ratio: float) -> Dict[str, Any]:
-    xyz = depth2xyz(np.maximum(np.abs(depth), 1e-3))
-    hull = cv2.convexHull(xyz[..., ::2].astype(np.float32))[:, 0, :]
-    if len(hull) < 3:
-        extent = max(float(np.max(np.abs(xyz[..., ::2]))), 1.0)
-        hull = np.asarray(
-            [[-extent, -extent], [extent, -extent], [extent, extent], [-extent, extent]],
-            dtype=np.float32,
-        )
-    hull_xyz = np.insert(hull, 1, 1.0, axis=1)
-    return xyz2json(hull_xyz, max(abs(float(ratio)), 1e-3))
-
-
-LAYOUT_FRAME_MODES = ("legacy_fixed_axis", "panorama_preserving")
-
-
-def prediction_to_layout(
-    depth: torch.Tensor,
-    ratio: torch.Tensor,
-    layout_frame_mode: str = "legacy_fixed_axis",
-) -> Tuple[Dict, Dict]:
-    """Serialize one predicted layout with an explicit horizontal frame.
-
-    ``legacy_fixed_axis`` deliberately preserves the historical fixed-axis
-    Manhattan behavior.  ``panorama_preserving`` estimates a Manhattan family
-    only from the predicted pre-fit depth geometry, fits in that canonical
-    frame, and inverse-rotates the fitted polygon before serialization.
-    """
-    if layout_frame_mode not in LAYOUT_FRAME_MODES:
-        raise ValueError(
-            "layout_frame_mode must be one of {}".format(
-                ", ".join(LAYOUT_FRAME_MODES)
-            )
-        )
-    depth_np = depth.detach().cpu().numpy().reshape(1, -1)
-    ratio_value = float(ratio.detach().cpu().reshape(-1)[0])
-    safe_depth = np.maximum(np.abs(depth_np), 1e-3)
-    pre_local = np.asarray(depth2xyz(safe_depth, plan_y=1)[0][..., ::2])
-    report = {
-        "postProcessing": "manhattan",
-        "fallbackUsed": False,
-        "layoutFrameMode": layout_frame_mode,
-        "layoutPolygonPreManhattanLocalBiXZ": pre_local.tolist(),
-    }
-    try:
-        if layout_frame_mode == "legacy_fixed_axis":
-            processed_xyz = post_process(
-                safe_depth, type_name="manhattan"
-            )[0]
-            canonical = np.asarray(processed_xyz[..., ::2], dtype=np.float64)
-            report.update(
-                layoutFrame="manhattan_canonical",
-                notValidForCrossScenePose=True,
-                headingSource="legacy_fixed_axis_no_heading_estimation",
-                manhattanHeadingRadians=0.0,
-                manhattanHeadingDegrees=0.0,
-                layoutPolygonManhattanCanonicalBiXZ=canonical.tolist(),
-                layoutPolygonPanoramaLocalBiXZ=None,
-            )
-        else:
-            processed_batch, frame_reports = frame_preserving_manhattan(safe_depth)
-            processed_xyz = processed_batch[0]
-            report.update(frame_reports[0])
-            report.update(
-                layoutFrame="panorama_local",
-                notValidForCrossScenePose=False,
-            )
-        layout = xyz2json(processed_xyz, max(abs(ratio_value), 1e-3))
-        validity = polygon_validity(layout)
-        if not validity["valid"]:
-            raise ValueError("Manhattan output failed polygon validation: {}".format(validity))
-    except Exception as exc:
-        layout = _convex_layout(depth_np[0], ratio_value)
-        report.update(
-            postProcessing="convex_hull_fallback",
-            fallbackUsed=True,
-            fallbackReason=str(exc),
-            layoutFrame="panorama_local_fallback",
-            notValidForCrossScenePose=False,
-            headingSource="none_convex_hull_fallback",
-            manhattanHeadingRadians=None,
-            manhattanHeadingDegrees=None,
-            layoutPolygonManhattanCanonicalBiXZ=None,
-            layoutPolygonPanoramaLocalBiXZ=None,
-        )
-    report["validity"] = polygon_validity(layout)
-    return layout, report
 
 
 def candidate_formats(candidates: Sequence[Any]) -> Dict[str, Any]:

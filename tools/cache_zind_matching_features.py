@@ -34,15 +34,15 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from models.cross_scene_matcher import resolve_enclosed_extended_depth
+from portallayout.models.cross_scene_matcher import resolve_enclosed_extended_depth
 from tools.debug_cross_scene_flow import load_bi_layout
 
 
-DEFAULT_MANIFEST_ROOT = REPO_ROOT / "src/dataset/ZInD_matching"
+DEFAULT_MANIFEST_ROOT = REPO_ROOT / "data/ZInD_matching"
 DEFAULT_OUTPUT_DIR = (
     REPO_ROOT / "checkpoints/Cross_Scene_Matcher/zind_matching_feature_cache"
 )
-DEFAULT_CONFIG = REPO_ROOT / "src/config/zind_all.yaml"
+DEFAULT_CONFIG = REPO_ROOT / "configs/layout/zind_all.yaml"
 DEFAULT_BACKBONE_CHECKPOINT = (
     REPO_ROOT / "checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl"
 )

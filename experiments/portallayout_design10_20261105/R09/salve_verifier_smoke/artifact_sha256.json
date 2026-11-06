@@ -1,0 +1,14 @@
+{
+  "environment.json": "5ec12ee01b76271c214496111aa2ab21465578b3129f5247d6cbba6d55db93c7",
+  "input_sources_offline.json": "6dd935e479b3b7de79179d1e1ec6c6b92bf677ef1c1ef7d442752c28c6f89756",
+  "inputs/ceiling_a.jpg": "9a17880a171a81b18cec7058f96581194867617b4e9c0c8d15da8fea4b3713e2",
+  "inputs/ceiling_b.jpg": "e219a039800d0867efc04095e2cf86b3c80768d603dece420f515d8ed0c91246",
+  "inputs/floor_a.jpg": "60377b855ee41556e49d816aefc27e98866a2acbf021b6e573023617119fd1c6",
+  "inputs/floor_b.jpg": "66d9316cf144cb8f1683dc831b4d82a28fdd6c1a903639d12a2c6e99b8f173bf",
+  "manifest.json": "8ccd350f10bd79e30113d70cbb997f34759f899b8d14f3532abc4dd77395e65e",
+  "run_command.json": "52a37a465587e18d2c3597608c6cad5ff622d14e1c79351094c567b12f245dde",
+  "scores.json": "eefc9246b601c458bc8666c953a6b50bda6d722b1b5e5b30ec312aec41f27456",
+  "scoring_stderr.log": "b6bac69757739ec47d499c7eaa95516edeeee985fe4f1c27296e662f2be170fb",
+  "scoring_stdout.log": "5ae1559293629724a707d46f5ca24dbf333337f4395a15a068eec0d03836dedf",
+  "validation.json": "7f1b504f127a92521817f2321f3b6f1cfe71cf8b552b3030db63d0dd480a78b3"
+}

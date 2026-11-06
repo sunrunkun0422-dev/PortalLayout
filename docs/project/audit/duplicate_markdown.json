@@ -1,0 +1,27 @@
+[
+  {
+    "sha256": "f1079280aecbd8b7f7b5f31da3312c76aa37211462788fe243247a53053188d1",
+    "paths": [
+      "data/ZInD-FloorSet-v1/preflight_train25_20261021/README.md",
+      "data/ZInD-FloorSet-v1/smoke_train_0665_20261021/README.md"
+    ],
+    "decision": "文本相同不等于上下文重复；需保留实验、数据和交付包完整性"
+  },
+  {
+    "sha256": "58f8fa16be5dc09448f880520915b0097215bcba89b0c4ff365e53a27761e28b",
+    "paths": [
+      "experiments/zind_observable_v1/results/训练结果摘要.md",
+      "outputs/zind_observable_training_20260910/训练结果摘要.md"
+    ],
+    "decision": "文本相同不等于上下文重复；需保留实验、数据和交付包完整性"
+  },
+  {
+    "sha256": "531be3914691044f159043375749d80e30c010a83a14c077183c54526be60785",
+    "paths": [
+      "outputs/zind_observable_pairs_v1/review_pilot/README.md",
+      "outputs/zind_observable_pairs_v1/review_pilot_final/README.md",
+      "outputs/zind_observable_pairs_v1/review_pilot_v2/README.md"
+    ],
+    "decision": "文本相同不等于上下文重复；需保留实验、数据和交付包完整性"
+  }
+]

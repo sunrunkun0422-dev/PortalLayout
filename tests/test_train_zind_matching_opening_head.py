@@ -6,10 +6,10 @@ from tempfile import TemporaryDirectory
 import numpy as np
 import torch
 
-from models.cross_scene_matcher import OpeningSignalHead
+from portallayout.models.cross_scene_matcher import OpeningSignalHead
 from tools.cache_zind_matching_features import _file_identity
 from tools.train_zind_matching_opening_head import main
-from utils.opening_checkpoint import load_opening_head_checkpoint
+from portallayout.utils.opening_checkpoint import load_opening_head_checkpoint
 
 
 class TrainZInDMatchingOpeningHeadTest(unittest.TestCase):
@@ -115,7 +115,7 @@ class TrainZInDMatchingOpeningHeadTest(unittest.TestCase):
     def test_smoke_warm_start_resume_and_loader_contract(self):
         with TemporaryDirectory() as directory:
             root = Path(directory)
-            config = root / "config.yaml"
+            config = root / 'portallayout.config.yaml'
             config.write_text("model: fake\n", encoding="utf-8")
             backbone = root / "backbone.pt"
             backbone.write_bytes(b"frozen backbone identity")

@@ -21,7 +21,7 @@ def main():
     if a.output.exists():p.error('choose a new immutable build directory')
     old=json.loads((a.parent/'build_identity.json').read_text());hashes=json.loads((a.parent/'source_hashes.json').read_text())
     assert old['split']=='train' and old['core_source_sha256']==BEFORE
-    assert sha(ROOT/'dataset/zind_observable_pairs.py')==AFTER
+    assert sha(ROOT/'portallayout/datasets/zind_observable_pairs.py')==AFTER
     assert old['builder_source_sha256']==sha(ROOT/'tools/build_zind_observable_pairs.py')==BUILDER
     assert old['config_sha256']==sha(ROOT/'configs/zind_observable_pairs_v1.json')
     assert old['partition_sha256']==sha(a.partition)

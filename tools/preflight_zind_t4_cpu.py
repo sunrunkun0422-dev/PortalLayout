@@ -16,7 +16,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from models.cross_scene_matcher import (  # noqa: E402
+from portallayout.models.cross_scene_matcher import (  # noqa: E402
     candidate_assignment_loss,
     positive_to_dustbin_margin_loss,
     recall_topk_opening_intervals,

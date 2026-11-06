@@ -2,7 +2,7 @@ import unittest
 
 import torch
 
-from dataset.zind_bipair_adapter import (
+from portallayout.datasets.zind_bipair_adapter import (
     adapt_zind_bipair_batch,
     canonicalize_zind_bipair_batch,
     opening_mask_to_candidate_masks,

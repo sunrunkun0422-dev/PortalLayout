@@ -39,13 +39,13 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from dataset.zind_bipair_adapter import adapt_zind_bipair_batch
-from dataset.zind_bipair_dataset import collate_zind_bipair
-from dataset.zind_matching_feature_dataset import (
+from portallayout.datasets.zind_bipair_adapter import adapt_zind_bipair_batch
+from portallayout.datasets.zind_bipair_dataset import collate_zind_bipair
+from portallayout.datasets.zind_matching_feature_dataset import (
     ZInDMatchingFeatureDataset,
     validate_disjoint_house_splits,
 )
-from models.cross_scene_matcher import (
+from portallayout.models.cross_scene_matcher import (
     OpeningGuidedCrossAttentionMatcher,
     candidate_assignment_loss,
     candidate_listwise_ranking_loss,
@@ -66,18 +66,18 @@ from tools.train_zind_cross_scene_matcher import (
     resolve_device,
     set_seed,
 )
-from utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint
-from utils.opening_checkpoint import (
+from portallayout.utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint
+from portallayout.utils.opening_checkpoint import (
     load_opening_head_checkpoint,
     resolve_opening_probability_threshold,
 )
 
 
-DEFAULT_MANIFEST_ROOT = REPO_ROOT / "src/dataset/ZInD_matching"
+DEFAULT_MANIFEST_ROOT = REPO_ROOT / "data/ZInD_matching"
 DEFAULT_CACHE_ROOT = (
     REPO_ROOT / "checkpoints/Cross_Scene_Matcher/zind_matching_feature_cache"
 )
-DEFAULT_CONFIG = REPO_ROOT / "src/config/zind_all.yaml"
+DEFAULT_CONFIG = REPO_ROOT / "configs/layout/zind_all.yaml"
 DEFAULT_BI_LAYOUT = (
     REPO_ROOT / "checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl"
 )
@@ -1793,8 +1793,8 @@ def _data_contract(
         for split in active_splits
     }
     return {
-        "dataset": "ZInD_matching formatVersion=2 complete-room pairs",
-        **({"dataset": "ZInD-ObservablePairs-v1 exploratory internal monitor",
+        'portallayout.datasets': "ZInD_matching formatVersion=2 complete-room pairs",
+        **({'portallayout.datasets': "ZInD-ObservablePairs-v1 exploratory internal monitor",
             "manifest_dataset_contracts": manifest_contracts,
             "manifest_sha256": {s: _sha256_file(manifests[s]) for s in active_splits}}
            if any(manifest_contracts.values()) else {}),

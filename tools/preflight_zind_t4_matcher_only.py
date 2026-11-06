@@ -29,11 +29,11 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from dataset.zind_bipair_adapter import adapt_zind_bipair_batch
-from dataset.zind_bipair_dataset import collate_zind_bipair
-from dataset.zind_bipair_adapter import opening_mask_to_candidate_masks
-from models.cross_scene_contracts import PairBatch
-from models.cross_scene_matcher import (
+from portallayout.datasets.zind_bipair_adapter import adapt_zind_bipair_batch
+from portallayout.datasets.zind_bipair_dataset import collate_zind_bipair
+from portallayout.datasets.zind_bipair_adapter import opening_mask_to_candidate_masks
+from portallayout.models.cross_scene_contracts import PairBatch
+from portallayout.models.cross_scene_matcher import (
     candidate_assignment_loss,
     opening_detection_loss,
 )
@@ -61,8 +61,8 @@ from tools.train_zind_end_to_end import (
     configure_training_stage,
     matcher_without_opening_parameters,
 )
-from utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint
-from utils.opening_checkpoint import load_opening_head_checkpoint
+from portallayout.utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint
+from portallayout.utils.opening_checkpoint import load_opening_head_checkpoint
 
 
 DEFAULT_T3 = (

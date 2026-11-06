@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+<rect width="100%" height="100%" fill="white"/>
+<polygon points="89,750 176,70 767,146 753,255 786,259 712,830" fill="none" stroke="#1e6ecd" stroke-width="4"/>
+<text x="547" y="385" fill="#1e6ecd" font-size="24">Room complete_room_01</text>
+<circle cx="702" cy="234" r="7" fill="#1e6ecd"/>
+<polygon points="717,425 673,348 601,389 588,366 625,345 614,326 630,317 623,307 643,296 635,281 616,292 583,233 568,241 553,215 567,207 536,152 594,119 625,174 668,149 716,234 728,228 742,253 800,220 811,239 754,272 766,294 755,301 767,321 724,346 756,403" fill="none" stroke="#289128" stroke-width="4"/>
+<text x="666" y="276" fill="#289128" font-size="24">Room complete_room_05</text>
+<circle cx="694" cy="303" r="7" fill="#289128"/>
+<line x1="693" y1="253" x2="726" y2="263" stroke="#dc1e1e" stroke-width="8"/>
+<text x="709" y="258" fill="#dc1e1e" font-size="20">shared opening</text>
+</svg>

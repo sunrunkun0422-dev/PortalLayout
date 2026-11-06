@@ -7,7 +7,7 @@ from unittest.mock import patch
 import numpy as np
 import torch
 
-from evaluation.opening_recall import (
+from portallayout.evaluation.opening_recall import (
     UniqueViewReference,
     binary_average_precision,
     circular_components,
@@ -19,7 +19,7 @@ from evaluation.opening_recall import (
     resolve_depth_branches,
     scan_opening_thresholds,
 )
-from models.cross_scene_matcher import OpeningSignalHead
+from portallayout.models.cross_scene_matcher import OpeningSignalHead
 from tools.evaluate_zind_opening_recall import (
     _learned_opening_probability,
     _load_opening_head,
@@ -337,7 +337,7 @@ class OpeningRecallTest(unittest.TestCase):
 
         with TemporaryDirectory() as directory:
             root = Path(directory)
-            config_path = root / "config.yaml"
+            config_path = root / 'portallayout.config.yaml'
             backbone_path = root / "backbone.pt"
             opening_path = root / "best.pt"
             config_path.touch()

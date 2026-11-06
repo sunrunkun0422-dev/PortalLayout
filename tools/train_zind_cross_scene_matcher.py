@@ -31,10 +31,10 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from dataset.zind_bipair_adapter import adapt_zind_bipair_batch
-from dataset.zind_bipair_dataset import collate_zind_bipair
-from dataset.zind_bipair_feature_dataset import ZInDBiPairFeatureDataset
-from models.cross_scene_matcher import (
+from portallayout.datasets.zind_bipair_adapter import adapt_zind_bipair_batch
+from portallayout.datasets.zind_bipair_dataset import collate_zind_bipair
+from portallayout.datasets.zind_bipair_feature_dataset import ZInDBiPairFeatureDataset
+from portallayout.models.cross_scene_matcher import (
     OpeningGuidedCrossAttentionMatcher,
     candidate_assignment_loss,
     candidate_intervals_to_mask,
@@ -42,12 +42,12 @@ from models.cross_scene_matcher import (
     opening_probabilities_to_intervals,
     recall_topk_opening_intervals,
 )
-from utils.opening_checkpoint import load_opening_head_checkpoint
+from portallayout.utils.opening_checkpoint import load_opening_head_checkpoint
 
 
 DEFAULT_DATASET_ROOT = REPO_ROOT.parent / "zind/ZInD-BiPair-v1"
 DEFAULT_OPENING_DIR = REPO_ROOT / "checkpoints/Opening_Head/zind_bipair_v1"
-DEFAULT_CONFIG = REPO_ROOT / "src/config/zind_all.yaml"
+DEFAULT_CONFIG = REPO_ROOT / "configs/layout/zind_all.yaml"
 DEFAULT_BACKBONE = REPO_ROOT / "checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl"
 DEFAULT_OUTPUT_DIR = REPO_ROOT / "checkpoints/Cross_Scene_Matcher/zind_bipair_v1"
 

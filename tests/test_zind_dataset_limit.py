@@ -1,12 +1,12 @@
 import unittest
 from unittest.mock import patch
 
-from dataset.zind_new_dataset import ZindNewDataset
+from portallayout.datasets.zind_new_dataset import ZindNewDataset
 
 
 class ZindDatasetLimitTest(unittest.TestCase):
-    @patch("dataset.zind_new_dataset.invalid_filter")
-    @patch("dataset.zind_new_dataset.read_zind_subset")
+    @patch('portallayout.datasets.zind_new_dataset.invalid_filter')
+    @patch('portallayout.datasets.zind_new_dataset.read_zind_subset')
     def test_for_test_index_limits_two_head_dataset(self, read_subset, invalid_filter):
         read_subset.return_value = [{"id": str(index)} for index in range(5)]
         invalid_filter.side_effect = lambda pano_list, **_: pano_list

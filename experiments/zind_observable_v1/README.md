@@ -1,3 +1,5 @@
+> 修改记录：2026-11-05 19:42 CST - 仅将说明链接指向合并档案，保留原实验正文与结果。
+
 # ZInD-ObservablePairs-v1：数据与端到端训练结果
 
 本目录发布本次**实际使用的数据索引与结果证据**。数据集构建日期为 2026-09-10，训练于北京时间 2026-09-12 04:25 正常完成。原 BiPair 数据与旧实验保留。
@@ -16,7 +18,7 @@
 - [压缩分片及校验清单](release_manifest.json)：按顺序恢复后与实际本地主索引逐字节一致，保留完整记录，不是抽样索引。
 - [构建统计](dataset/summary.json)、[数据来源哈希](dataset/source_hashes.json)、[300 对人工审核试点及抽样权重](dataset/pilot_sampling.json)。
 - [完整索引与源图像审计](audit/audit.json)、[官方坐标对照](audit/coordinate_contract.json)。
-- [详细构建报告](../../ZInD-ObservablePairs-v1构建报告.md)、[构建实现](../../dataset/zind_observable_pairs.py)、[全部阈值](../../configs/zind_observable_pairs_v1.json)。
+- [详细构建报告](../../docs/archive/datasets.md#source-943ea1aae3)、[构建实现](../../dataset/zind_observable_pairs.py)、[全部阈值](../../configs/zind_observable_pairs_v1.json)。
 
 ![数据组成与视点重选的代理结果](figures/build_summary.png)
 

@@ -1,0 +1,112 @@
+{
+  "floors": [
+    {
+      "floor_uid": "floor_5db4c426bc22afcf521d22d9",
+      "house_id": "0088",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_5db4c426bc22afcf521d22d9/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        37
+      ]
+    },
+    {
+      "floor_uid": "floor_e24ec4b67d8d47236b6239f3",
+      "house_id": "0198",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_e24ec4b67d8d47236b6239f3/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        20,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "floor_uid": "floor_187a051a13889606c4d6c2b8",
+      "house_id": "0443",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_187a051a13889606c4d6c2b8/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        20,
+        1,
+        1
+      ]
+    },
+    {
+      "floor_uid": "floor_5654d0f63b638b1c4604eb5e",
+      "house_id": "0480",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_5654d0f63b638b1c4604eb5e/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        18,
+        1,
+        1
+      ]
+    },
+    {
+      "floor_uid": "floor_00b1200525a3dd38093a16c8",
+      "house_id": "0716",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_00b1200525a3dd38093a16c8/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        31,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "floor_uid": "floor_bb6687a3575f62badc29712d",
+      "house_id": "0893",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_bb6687a3575f62badc29712d/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        27
+      ]
+    },
+    {
+      "floor_uid": "floor_51fe53ed945b4afb9f30425c",
+      "house_id": "0895",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_51fe53ed945b4afb9f30425c/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        24
+      ]
+    },
+    {
+      "floor_uid": "floor_1e0bac41462149f8544fc9e1",
+      "house_id": "0959",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_1e0bac41462149f8544fc9e1/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        49
+      ]
+    },
+    {
+      "floor_uid": "floor_d08a1bc47177fa0b6bdccb41",
+      "house_id": "1252",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_d08a1bc47177fa0b6bdccb41/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        33
+      ]
+    },
+    {
+      "floor_uid": "floor_45bcf94c0ef6efe44e259b71",
+      "house_id": "1416",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_45bcf94c0ef6efe44e259b71/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        29
+      ]
+    }
+  ],
+  "ground_truth_read": false,
+  "evaluation_reads_gt_separately": true,
+  "source": "frozen_frontend_and_R3",
+  "config": {
+    "threshold": 0.7,
+    "opt": "robust",
+    "room": true
+  }
+}

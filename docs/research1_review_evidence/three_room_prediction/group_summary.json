@@ -1,0 +1,187 @@
+{
+    "schema_version": "zind-room-group-evaluation-v1",
+    "purpose": "debug/qualitative only, not a scientific evaluation",
+    "split": "train",
+    "group_id": "debug_train_0665_floor_03_rooms_04_01_05",
+    "house_id": "0665",
+    "floor_id": "floor_03",
+    "room_ids": [
+        "complete_room_04",
+        "complete_room_01",
+        "complete_room_05"
+    ],
+    "room_count": 3,
+    "pair_count": 3,
+    "single_room_forward_count": {
+        "complete_room_04": 1,
+        "complete_room_01": 1,
+        "complete_room_05": 1
+    },
+    "gt_adjacency_matrix": [
+        [
+            0,
+            1,
+            0
+        ],
+        [
+            1,
+            0,
+            1
+        ],
+        [
+            0,
+            1,
+            0
+        ]
+    ],
+    "predicted_adjacency_matrix": [
+        [
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            1,
+            0
+        ]
+    ],
+    "classification": {
+        "true_positive": 1,
+        "true_negative": 1,
+        "false_positive": 0,
+        "false_negative": 1
+    },
+    "predicted_joint_bev_count": 1,
+    "portal_geometry_mode": "candidate_local_m2",
+    "inference_contract": {
+        "candidate_source": "predicted",
+        "opening_guidance_mode": "predicted",
+        "decision": "learned bidirectional dustbin",
+        "gt_available_to_inference": false,
+        "negative_fusion_called": false,
+        "coordinate_convention": "ZInD panorama-A local xy; no GT post-alignment",
+        "layout_frame_mode": "panorama_preserving",
+        "portal_geometry_mode": "candidate_local_m2",
+        "portal_geometry_runs_after_frozen_matcher_decision": true,
+        "portal_geometry_gt_inputs": false,
+        "candidate_local_hard_failure_fallback": "none",
+        "layout_frame_for_cross_scene_pose": "panorama_local",
+        "heading_source": "predicted pre-Manhattan geometry only"
+    },
+    "test_data_accessed": false,
+    "seed": 17,
+    "runtime_seconds": 16.284990584000298,
+    "model": {
+        "bi_layout": {
+            "config": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+            "checkpoint": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+            "loaded": true,
+            "modelArgs": {
+                "decoder_name": "Share_Feature_Guidance_Module",
+                "win_size": 16,
+                "rpe": "lr_parameter_mirror",
+                "dropout": 0.0,
+                "depth": 8,
+                "output_name": "Bi_Layout",
+                "output_number": 2,
+                "feature_channel": 512,
+                "height_compression_scale": 16,
+                "use_same_head": false,
+                "share_TF": true,
+                "two_conv_out": false
+            },
+            "epoch": 0,
+            "missingKeys": [],
+            "unexpectedKeys": []
+        },
+        "matcher": {
+            "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Cross_Scene_Matcher/zind_matching_v1/best.pt",
+            "loaded": true,
+            "formatVersion": 2,
+            "task": "ZInD_matching complete-room cross-scene opening matcher",
+            "completedEpoch": 5,
+            "model": {
+                "feature_dim": 512,
+                "heads": 8,
+                "hidden_dim": 128,
+                "dropout": 0.1,
+                "opening_bias_strength": 1.0,
+                "candidate_temperature": 0.2,
+                "shift_temperature": 0.05,
+                "has_dustbin": true
+            },
+            "openingProbabilityThreshold": 0.47000000000000003,
+            "openingHeadDependency": {
+                "branchOrder": "extended_first",
+                "backboneContractValidated": true,
+                "biLayoutConfig": {
+                    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+                    "size": 1380,
+                    "sha256": "867506b93ae973b3517d20a9b2e9899964684366b3644d1facc22110e1382cbd"
+                },
+                "biLayoutCheckpoint": {
+                    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+                    "size": 1228718862,
+                    "mtimeNs": 1778459017793688163
+                }
+            }
+        },
+        "opening_head": {
+            "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Opening_Head/zind_matching_v1/best.pt",
+            "loaded": true,
+            "formatVersion": 1,
+            "task": "ZInD_matching single-view Opening Head (doors+openings)",
+            "completedEpoch": 20,
+            "operatingThreshold": 0.47000000000000003,
+            "thresholdPolicy": "max_recall_at_precision>=0.80",
+            "thresholdFallback": false,
+            "branchOrder": "extended_first",
+            "model": {
+                "feature_dim": 512,
+                "hidden_dim": 128,
+                "kernel_size": 5,
+                "prior_strength": 4.0,
+                "prior_relative_scale": 0.1,
+                "branch_order": "extended_first"
+            },
+            "backboneContract": {
+                "validated": true,
+                "tokenCount": 256,
+                "featureDim": 512,
+                "biLayoutConfig": {
+                    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+                    "savedPath": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+                    "size": 1380,
+                    "sha256": "867506b93ae973b3517d20a9b2e9899964684366b3644d1facc22110e1382cbd"
+                },
+                "biLayoutCheckpoint": {
+                    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+                    "savedPath": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+                    "size": 1228718862,
+                    "mtimeNs": 1778459017793688163
+                }
+            },
+            "loadOrder": "matcher_checkpoint_then_opening_override"
+        },
+        "end_to_end": {
+            "loaded": true,
+            "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_observable_v1/best1_balanced_seed123_20260910/best.pt",
+            "completedEpoch": 14,
+            "task": "ZInD_matching full end-to-end joint fine-tuning"
+        },
+        "feature_cache_used_for_inference": false,
+        "feature_cache_role": "train-only identity/coverage validation"
+    },
+    "opening_probability_threshold": {
+        "value": 0.47000000000000003,
+        "source": "end_to_end_checkpoint"
+    },
+    "overview_html": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/docs/research1_review_evidence/three_room_prediction/overview.html",
+    "portal_geometry_json": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/docs/research1_review_evidence/three_room_prediction/portal_geometry.json"
+}

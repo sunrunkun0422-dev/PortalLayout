@@ -33,13 +33,13 @@ if str(REPO_ROOT) not in sys.path:
 
 
 PURPOSE = "validation smoke test / engineering preflight; not a scientific final result"
-DEFAULT_MANIFEST_ROOT = REPO_ROOT / "src/dataset/ZInD_matching"
+DEFAULT_MANIFEST_ROOT = REPO_ROOT / "data/ZInD_matching"
 DEFAULT_VAL_MANIFEST = DEFAULT_MANIFEST_ROOT / "val.json"
 DEFAULT_TRAIN_MANIFEST = DEFAULT_MANIFEST_ROOT / "train.json"
 DEFAULT_VAL_CACHE = (
     REPO_ROOT / "checkpoints/Cross_Scene_Matcher/zind_matching_feature_cache/val"
 )
-DEFAULT_CONFIG = REPO_ROOT / "src/config/zind_all.yaml"
+DEFAULT_CONFIG = REPO_ROOT / "configs/layout/zind_all.yaml"
 DEFAULT_BI_LAYOUT = (
     REPO_ROOT / "checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl"
 )
@@ -50,7 +50,7 @@ DEFAULT_MATCHER = (
 DEFAULT_CHECKPOINT = (
     REPO_ROOT / "checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T3/best.pt"
 )
-DEFAULT_OUTPUT = REPO_ROOT / "src/output/zind_geometry_val_smoke/t3_seed123_64"
+DEFAULT_OUTPUT = REPO_ROOT / "outputs/zind_geometry_val_smoke/t3_seed123_64"
 GEOMETRY_MODES = (
     "legacy_polygon",
     "frame_polygon",
@@ -502,21 +502,21 @@ def metadata_report(context: Mapping[str, Any]) -> Dict[str, Any]:
 
 
 def _m2_contract() -> Dict[str, Any]:
-    from utils.candidate_local_portal_geometry import CandidateLocalPortalConfig
+    from portallayout.geometry.candidate_local_portal_geometry import CandidateLocalPortalConfig
 
     config = CandidateLocalPortalConfig().to_json()
     encoded = json.dumps(config, sort_keys=True, separators=(",", ":"))
     return {
-        "config": config,
+        'portallayout.config': config,
         "sha256": hashlib.sha256(encoded.encode("utf-8")).hexdigest(),
-        "source": "utils.candidate_local_portal_geometry.CandidateLocalPortalConfig",
+        "source": 'portallayout.geometry.candidate_local_portal_geometry.CandidateLocalPortalConfig',
         "tuned_on_val": False,
     }
 
 
 def dry_run_report(context: Mapping[str, Any]) -> Dict[str, Any]:
     import torch
-    from dataset.zind_bipair_dataset import collate_zind_bipair
+    from portallayout.datasets.zind_bipair_dataset import collate_zind_bipair
     from tools.train_zind_end_to_end import JointZInDMatchingDataset
     from torch.utils.data import DataLoader, Subset
 
@@ -587,7 +587,7 @@ class AnnotationResolver:
         self._houses: Dict[str, Mapping[str, Any]] = {}
 
     def pair_ground_truth(self, record: Mapping[str, Any]) -> Dict[str, Any]:
-        from dataset.zind_pair_mining import transform_points
+        from portallayout.datasets.zind_pair_mining import transform_points
 
         house = str(record["scene_id"])
         annotation_path = (self.data_root / house / "zind_data.json").resolve()
@@ -728,8 +728,8 @@ def _layout_state(
     intervals: Sequence[Sequence[int]],
 ) -> Dict[str, Any]:
     from tools.debug_cross_scene_flow import prediction_to_layout
-    from utils.cross_scene_estimator import opening_candidates_from_intervals
-    from utils.joint_layout import layout_xz
+    from portallayout.engine.cross_scene_estimator import opening_candidates_from_intervals
+    from portallayout.geometry.joint_layout import layout_xz
     from tools.evaluate_zind_room_group import _bi_points_to_zind
 
     legacy_layout, legacy_report = prediction_to_layout(
@@ -777,7 +777,7 @@ def infer_frozen_prediction(
 ) -> Dict[str, Any]:
     """One live forward and one matcher decision; accepts no GT argument."""
     import torch
-    from models.cross_scene_matcher import (
+    from portallayout.models.cross_scene_matcher import (
         opening_probabilities_to_intervals,
         resolve_enclosed_extended_depth,
     )
@@ -876,7 +876,7 @@ def infer_frozen_prediction(
 
 
 def _opening_candidate_from_json(value: Mapping[str, Any]):
-    from utils.cross_scene_estimator import OpeningCandidate
+    from portallayout.engine.cross_scene_estimator import OpeningCandidate
 
     return OpeningCandidate(
         wall_index=int(value["wallIndex"]),
@@ -915,7 +915,7 @@ def _polygon_geometry(
         _pose,
         _standardize_joint,
     )
-    from utils.cross_scene_pipeline import CrossScenePipeline, CrossScenePipelineConfig
+    from portallayout.engine.cross_scene_pipeline import CrossScenePipeline, CrossScenePipelineConfig
 
     if not frozen["is_match"]:
         return _empty_geometry(mode)
@@ -993,7 +993,7 @@ def _polygon_geometry(
 
 def _candidate_local_geometry(frozen: Mapping[str, Any]) -> Dict[str, Any]:
     from tools.evaluate_zind_room_group import _candidate_local_pair_fusion
-    from utils.cross_scene_estimator import opening_candidates_from_intervals
+    from portallayout.engine.cross_scene_estimator import opening_candidates_from_intervals
 
     mode = "candidate_local_m2"
     if not frozen["is_match"]:
@@ -1099,7 +1099,7 @@ def geometry_fanout(frozen: Mapping[str, Any]) -> Dict[str, Any]:
 
 def _candidate_evaluation(frozen: Mapping[str, Any], batch: Mapping[str, Any]) -> Dict[str, Any]:
     import torch
-    from models.cross_scene_matcher import candidate_intervals_to_mask
+    from portallayout.models.cross_scene_matcher import candidate_intervals_to_mask
     from tools.train_zind_cross_scene_matcher import candidate_targets_from_affinity
 
     count = int(batch["affinity_gt"].shape[-1])
@@ -1145,7 +1145,7 @@ def _wrapped_angle_error(first: float, second: float) -> float:
 
 
 def _safe_overlap(predicted: Any, target: Any) -> Optional[float]:
-    from utils.cross_scene_estimator import polygon_overlap_ratio
+    from portallayout.engine.cross_scene_estimator import polygon_overlap_ratio
 
     try:
         return float(
@@ -1159,7 +1159,7 @@ def _safe_overlap(predicted: Any, target: Any) -> Optional[float]:
 
 
 def _polygon_valid(points: Any) -> bool:
-    from utils.cross_scene_estimator import polygon_validity
+    from portallayout.engine.cross_scene_estimator import polygon_validity
 
     try:
         return bool(polygon_validity(np.asarray(points, dtype=np.float64))["valid"])
@@ -1300,7 +1300,7 @@ def attach_posthoc_evaluation(
             "gt_available_to_geometry": False,
         },
         "ground_truth": copy.deepcopy(dict(ground_truth)),
-        "evaluation": candidate,
+        'portallayout.evaluation': candidate,
         "ground_truth_usage": "post-frozen-prediction evaluation only",
         "test_data_accessed": False,
     }
@@ -1554,14 +1554,14 @@ def _matching_summary(records: Sequence[Mapping[str, Any]]) -> Dict[str, Any]:
     f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0.0
     negative_rejection = tn / len(negatives) if negatives else 0.0
     candidate_recall = sum(
-        value["evaluation"]["gt_candidate_recalled"] for value in positives
+        value['portallayout.evaluation']["gt_candidate_recalled"] for value in positives
     ) / len(positives)
     end_to_end_top1 = sum(
-        value["evaluation"]["selected_candidate_correct"] for value in positives
+        value['portallayout.evaluation']["selected_candidate_correct"] for value in positives
     ) / len(positives)
     conditional = [value for value in positives if value["prediction"]["is_match"]]
     conditional_top1 = (
-        sum(value["evaluation"]["selected_candidate_correct"] for value in conditional)
+        sum(value['portallayout.evaluation']["selected_candidate_correct"] for value in conditional)
         / len(conditional)
         if conditional
         else 0.0
@@ -1828,7 +1828,7 @@ def paired_rows(records: Sequence[Mapping[str, Any]]) -> List[Dict[str, Any]]:
     for record in records:
         if not (
             record["ground_truth"]["is_match"]
-            and record["evaluation"]["selected_candidate_correct"]
+            and record['portallayout.evaluation']["selected_candidate_correct"]
         ):
             continue
         g1 = record["prediction"]["geometry_modes"]["frame_polygon"]
@@ -1960,7 +1960,7 @@ def build_summary(
     correct_candidate = [
         value
         for value in positives
-        if value["evaluation"]["selected_candidate_correct"]
+        if value['portallayout.evaluation']["selected_candidate_correct"]
     ]
     m2_valid = [
         value
@@ -2250,7 +2250,7 @@ def _run_metadata(
 
 def run(context: Mapping[str, Any]) -> Dict[str, Any]:
     import torch
-    from dataset.zind_bipair_dataset import collate_zind_bipair
+    from portallayout.datasets.zind_bipair_dataset import collate_zind_bipair
     from tools.train_zind_end_to_end import JointZInDMatchingDataset
     from torch.utils.data import DataLoader, Subset
 

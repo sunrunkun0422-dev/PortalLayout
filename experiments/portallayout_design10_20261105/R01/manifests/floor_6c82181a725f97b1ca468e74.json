@@ -1,0 +1,87 @@
+{
+  "schema_version": "zind-floorset.input.v1",
+  "sample_id": "sample_a7cff2ea28a4af031e500781",
+  "floor_uid": "floor_6c82181a725f97b1ca468e74",
+  "task": "unposed_floor_layout_from_panoramas",
+  "input_mode": "panorama_only",
+  "selection_policy": "all_panoramas",
+  "projection": "equirectangular",
+  "pose_prior": "none",
+  "calibration_mode": "scale_unknown",
+  "observations": [
+    {
+      "observation_id": "view_12f4fce935bc3af594f920f6",
+      "rgb": {
+        "root_key": "zind_raw",
+        "relative_path": "0401/panos/floor_02_partial_room_01_pano_48.jpg"
+      },
+      "image_size_wh": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "observation_id": "view_198b39aa3a6765654f81256e",
+      "rgb": {
+        "root_key": "zind_raw",
+        "relative_path": "0401/panos/floor_02_partial_room_02_pano_51.jpg"
+      },
+      "image_size_wh": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "observation_id": "view_65ccc37dae6fc0b8b72258d3",
+      "rgb": {
+        "root_key": "zind_raw",
+        "relative_path": "0401/panos/floor_02_partial_room_01_pano_49.jpg"
+      },
+      "image_size_wh": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "observation_id": "view_705ff371587ebd4fc1df1e7a",
+      "rgb": {
+        "root_key": "zind_raw",
+        "relative_path": "0401/panos/floor_02_partial_room_03_pano_50.jpg"
+      },
+      "image_size_wh": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "observation_id": "view_8323a73848d0c39dd05e3cc9",
+      "rgb": {
+        "root_key": "zind_raw",
+        "relative_path": "0401/panos/floor_02_partial_room_03_pano_53.jpg"
+      },
+      "image_size_wh": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "observation_id": "view_ee2f75a205a8968a014aa28c",
+      "rgb": {
+        "root_key": "zind_raw",
+        "relative_path": "0401/panos/floor_02_partial_room_02_pano_52.jpg"
+      },
+      "image_size_wh": [
+        2048,
+        1024
+      ]
+    }
+  ],
+  "observation_order": [
+    "view_12f4fce935bc3af594f920f6",
+    "view_198b39aa3a6765654f81256e",
+    "view_65ccc37dae6fc0b8b72258d3",
+    "view_705ff371587ebd4fc1df1e7a",
+    "view_8323a73848d0c39dd05e3cc9",
+    "view_ee2f75a205a8968a014aa28c"
+  ]
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+<rect width="100%" height="100%" fill="white"/>
+<polygon points="50.00,670.23 128.50,57.75 661.09,126.02 648.46,224.55 677.76,228.30 611.88,742.25" fill="none" stroke="#1e6ecd" stroke-width="4"/>
+<text x="462.95" y="341.52" fill="#1e6ecd" font-size="20">complete_room_01</text>
+<polygon points="669.36,317.76 668.88,311.45 562.29,319.57 562.77,325.88 550.15,326.84 536.85,152.23 548.77,151.32 549.25,157.64 559.77,156.83 560.41,165.25 656.48,157.93 655.89,150.22 737.24,144.02 750.00,311.62" fill="none" stroke="#8b5cf6" stroke-width="4"/>
+<text x="612.01" y="224.90" fill="#8b5cf6" font-size="20">complete_room_04</text>
+</svg>

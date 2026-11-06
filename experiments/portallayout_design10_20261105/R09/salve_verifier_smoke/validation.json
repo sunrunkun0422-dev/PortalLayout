@@ -1,0 +1,24 @@
+{
+  "scope": "official_fixture_verifier_scoring_only",
+  "end_to_end_reproduced": false,
+  "fair_system_comparison": false,
+  "candidate_count": 1,
+  "scored_count": 1,
+  "historical_score": 0.9624085426330566,
+  "new_score": 0.9624085426330566,
+  "absolute_difference": 0.0,
+  "tolerance": 1e-06,
+  "historical_evidence": "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/salve_reproduction_20261028/verifier_smoke.json",
+  "historical_evidence_sha256": "c48ace1e2cb2a2dcaba020b0d9c5072358e844470ba5686354550750b071ac3b",
+  "input_manifest_contains_gt_labels_or_label_directories": false,
+  "score_output_contains_gt_labels_or_label_directories": false,
+  "source_hashes_and_paths": "input_sources_offline.json",
+  "model_checkpoint_md5": "1200ffbe47d836557d88fef052952337",
+  "model_checkpoint_sha256": "e4b7dec606aa98af25af2cd84ce450494d0c6fb3fb95254ec11dab6219d15a18",
+  "limitations": [
+    "one official fixture, not a benchmark",
+    "neutral manifest prevents verifier access to GT path text; upstream render/hypothesis and SALVe backend remain unaudited",
+    "original HoHoNet depth remains missing"
+  ],
+  "status": "passed_fixture_smoke"
+}

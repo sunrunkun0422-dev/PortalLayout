@@ -56,7 +56,7 @@ class MatcherParityDefinitionTest(unittest.TestCase):
                 "matcher_probability_max_abs_diff": 0.0,
                 "best_candidate_identical": True,
             },
-            "evaluation": {
+            'portallayout.evaluation': {
                 "gt_candidate_recalled": recalled,
                 "selected_candidate_correct": correct,
             },

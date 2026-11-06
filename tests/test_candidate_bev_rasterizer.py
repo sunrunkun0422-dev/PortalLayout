@@ -3,7 +3,7 @@ import unittest
 import numpy as np
 import torch
 
-from utils.candidate_bev_rasterizer import (
+from portallayout.utils.candidate_bev_rasterizer import (
     CandidateBEVRasterConfig,
     normalize_portal_frame,
     rasterize_candidate_bev,

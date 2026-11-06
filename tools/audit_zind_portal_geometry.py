@@ -27,25 +27,25 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from postprocessing.dula.layout import fit_layout
-from postprocessing.post_process import estimate_manhattan_heading, rotate_floor_xz
-from utils.candidate_local_portal_geometry import (
+from portallayout.postprocessing.dula.layout import fit_layout
+from portallayout.postprocessing.post_process import estimate_manhattan_heading, rotate_floor_xz
+from portallayout.geometry.candidate_local_portal_geometry import (
     CandidateLocalPortalConfig,
     estimate_candidate_local_portal_geometry,
 )
-from utils.cross_scene_estimator import (
+from portallayout.engine.cross_scene_estimator import (
     opening_candidates_from_intervals,
     polygon_overlap_ratio,
     polygon_validity,
     wall_endpoints,
 )
-from utils.joint_layout import door_endpoints, layout_xz
-from utils.writer import xyz2json
+from portallayout.geometry.joint_layout import door_endpoints, layout_xz
+from portallayout.utils.writer import xyz2json
 
 
-DEFAULT_BASE = REPO_ROOT / "src/output/zind_room_group_debug/t3_best_0665_floor03_frame_fixed"
-DEFAULT_GROUP = REPO_ROOT / "src/dataset/ZInD_matching_groups/debug_train_0665_floor_03.json"
-DEFAULT_OUTPUT = REPO_ROOT / "src/output/zind_room_group_debug/t3_portal_geometry_audit_0665_floor03"
+DEFAULT_BASE = REPO_ROOT / "outputs/zind_room_group_debug/t3_best_0665_floor03_frame_fixed"
+DEFAULT_GROUP = REPO_ROOT / "data/ZInD_matching_groups/debug_train_0665_floor_03.json"
+DEFAULT_OUTPUT = REPO_ROOT / "outputs/zind_room_group_debug/t3_portal_geometry_audit_0665_floor03"
 TOKEN_COUNT = 256
 METHODS = ("M0", "M1", "M2", "M3", "M4")
 COLORS = {
@@ -962,7 +962,7 @@ def _candidate_by_index(room: Mapping[str, Any], index: int) -> Mapping[str, Any
 
 
 def _candidate_object(layout: Mapping[str, Any], candidate: Mapping[str, Any]):
-    from utils.cross_scene_estimator import OpeningCandidate
+    from portallayout.engine.cross_scene_estimator import OpeningCandidate
 
     return OpeningCandidate(
         wall_index=int(candidate["wallIndex"]),

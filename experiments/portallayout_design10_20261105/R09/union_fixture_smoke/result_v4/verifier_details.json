@@ -1,0 +1,15 @@
+{
+  "schema": "salve-unlabeled-bev-scores.v1",
+  "candidate_count": 1,
+  "scored_count": 1,
+  "incomplete_count": 0,
+  "scoring_failed_count": 0,
+  "rows": [
+    {
+      "candidate_id": "02cb173f9db3ed0c34d7756818e011d56c074f87c4aaaa4b461c6d4c2f7fe8a0",
+      "positive_probability": 0.9624085426330566,
+      "status": "scored",
+      "reason": null
+    }
+  ]
+}

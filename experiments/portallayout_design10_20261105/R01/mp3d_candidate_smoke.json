@@ -1,0 +1,12 @@
+{
+  "status": "architecture_load_only",
+  "checkpoint_sha256": "cd6be3bd050e1916c09e588c3cb1edb9d07f1f9ddd558dfd6dd82cb2dc38e11e",
+  "config_sha256": "1c5a7fe05307ca04fef681b576cd3a28269641e00a7f9984c4fc5ac6ef7cac16",
+  "loaded": true,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "parameter_count": 102326614,
+  "weights_house_exposure": "unknown_logs_suggest_matterport_only_but_full_lineage_not_verified",
+  "image_inference_run": false,
+  "independent_generalization_proven": false
+}

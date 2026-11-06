@@ -4,8 +4,8 @@ import argparse,json,subprocess,sys
 from pathlib import Path
 import numpy as np
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
-from dataset.zind_observable_pairs import projection
-from dataset.zind_pair_mining import transform_points,zind_transform_matrix
+from portallayout.datasets.zind_observable_pairs import projection
+from portallayout.datasets.zind_pair_mining import transform_points,zind_transform_matrix
 from tools.build_zind_observable_pairs import sha,write
 
 def main():

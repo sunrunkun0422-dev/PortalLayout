@@ -1,0 +1,294 @@
+{
+  "adapted_baseline": true,
+  "building": "0007",
+  "floor": "floor_02",
+  "threshold": 0.93,
+  "scored_hypotheses": 63,
+  "accepted_hypotheses": 4,
+  "accepted_unique_edges": 2,
+  "panorama_count": 8,
+  "components": [
+    {
+      "id": 0,
+      "nodes": [
+        12,
+        13
+      ],
+      "localized_relative_to_anchor": true,
+      "anchor": 12,
+      "poses": {
+        "12": {
+          "rotation": [
+            [
+              1.0,
+              1.9660603499705733e-16
+            ],
+            [
+              -1.9660603499705733e-16,
+              1.0
+            ]
+          ],
+          "translation": [
+            9.049563636160437e-15,
+            2.6690287688855598e-15
+          ],
+          "scale": 1.0
+        },
+        "13": {
+          "rotation": [
+            [
+              0.9854354858398438,
+              0.17004956305027008
+            ],
+            [
+              -0.17004956305027008,
+              0.9854354858398438
+            ]
+          ],
+          "translation": [
+            -0.3069395124912262,
+            0.10500206053256989
+          ],
+          "scale": 1.0
+        }
+      },
+      "room_groups": [
+        [
+          12,
+          13
+        ]
+      ],
+      "stitched_area_internal_units": 0.2705234970829231
+    },
+    {
+      "id": 1,
+      "nodes": [
+        15,
+        16
+      ],
+      "localized_relative_to_anchor": true,
+      "anchor": 15,
+      "poses": {
+        "15": {
+          "rotation": [
+            [
+              1.0,
+              -1.3407514122882134e-17
+            ],
+            [
+              1.3407514122882134e-17,
+              1.0
+            ]
+          ],
+          "translation": [
+            -2.362070818299069e-17,
+            8.163612224897321e-17
+          ],
+          "scale": 1.0
+        },
+        "16": {
+          "rotation": [
+            [
+              0.2804715931415558,
+              0.9598623514175415
+            ],
+            [
+              -0.9598623514175415,
+              0.2804715931415558
+            ]
+          ],
+          "translation": [
+            -2.962573289871216,
+            0.1741873025894165
+          ],
+          "scale": 1.0
+        }
+      },
+      "room_groups": [
+        [
+          15
+        ],
+        [
+          16
+        ]
+      ],
+      "stitched_area_internal_units": 1.9712205566023981
+    },
+    {
+      "id": 2,
+      "nodes": [
+        10
+      ],
+      "localized_relative_to_anchor": false,
+      "anchor": 10,
+      "poses": {
+        "10": {
+          "rotation": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "translation": [
+            0.0,
+            0.0
+          ],
+          "scale": 1.0
+        }
+      },
+      "room_groups": [
+        [
+          10
+        ]
+      ],
+      "stitched_area_internal_units": 0.47971764847085585
+    },
+    {
+      "id": 3,
+      "nodes": [
+        11
+      ],
+      "localized_relative_to_anchor": false,
+      "anchor": 11,
+      "poses": {
+        "11": {
+          "rotation": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "translation": [
+            0.0,
+            0.0
+          ],
+          "scale": 1.0
+        }
+      },
+      "room_groups": [
+        [
+          11
+        ]
+      ],
+      "stitched_area_internal_units": 2.120205418978039
+    },
+    {
+      "id": 4,
+      "nodes": [
+        14
+      ],
+      "localized_relative_to_anchor": false,
+      "anchor": 14,
+      "poses": {
+        "14": {
+          "rotation": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "translation": [
+            0.0,
+            0.0
+          ],
+          "scale": 1.0
+        }
+      },
+      "room_groups": [
+        [
+          14
+        ]
+      ],
+      "stitched_area_internal_units": 0.9499820880685138
+    },
+    {
+      "id": 5,
+      "nodes": [
+        17
+      ],
+      "localized_relative_to_anchor": false,
+      "anchor": 17,
+      "poses": {
+        "17": {
+          "rotation": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "translation": [
+            0.0,
+            0.0
+          ],
+          "scale": 1.0
+        }
+      },
+      "room_groups": [
+        [
+          17
+        ]
+      ],
+      "stitched_area_internal_units": 0.3278138368697757
+    }
+  ],
+  "gt_poses_used_for_reconstruction": false,
+  "coordinate_units": "camera-height normalized; stitching internal coordinates use DEFAULT_CAMERA_HEIGHT",
+  "original_paper_metrics_reproduced": false,
+  "accepted_edge_diagnostics": [
+    {
+      "i1": 12,
+      "i2": 13,
+      "confidence": 0.9930344820022583,
+      "candidate_label": 0,
+      "raw_rotation_error_deg": 179.70411491394043,
+      "raw_translation_error_normalized": 1.992762804031372
+    },
+    {
+      "i1": 15,
+      "i2": 16,
+      "confidence": 0.9977951049804688,
+      "candidate_label": 0,
+      "raw_rotation_error_deg": 178.6049041748047,
+      "raw_translation_error_normalized": 3.7771012783050537
+    },
+    {
+      "i1": 15,
+      "i2": 16,
+      "confidence": 0.9915229082107544,
+      "candidate_label": 0,
+      "raw_rotation_error_deg": 178.8709945678711,
+      "raw_translation_error_normalized": 3.904487133026123
+    },
+    {
+      "i1": 15,
+      "i2": 16,
+      "confidence": 0.999116837978363,
+      "candidate_label": 0,
+      "raw_rotation_error_deg": 89.82231330871582,
+      "raw_translation_error_normalized": 2.6987996101379395
+    }
+  ],
+  "connected_panos": 4,
+  "unlocalized_singletons": [
+    10,
+    11,
+    14,
+    17
+  ]
+}

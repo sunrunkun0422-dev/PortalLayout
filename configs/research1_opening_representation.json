@@ -1,0 +1,9 @@
+{
+  "feature_1d_dim": 512,
+  "feature_2d_dim": 1024,
+  "descriptor_dim": 256,
+  "context_hidden_dim": 64,
+  "attention_heads": 4,
+  "attention_layers": 2,
+  "dropout": 0.1
+}

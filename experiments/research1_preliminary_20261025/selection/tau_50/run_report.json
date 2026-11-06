@@ -1,0 +1,103 @@
+{
+  "floors": [
+    {
+      "floor_uid": "floor_a71328a43f233a1478b275ac",
+      "house_id": "0430",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_a71328a43f233a1478b275ac/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        13
+      ]
+    },
+    {
+      "floor_uid": "floor_613a83e984e35bcd8b75a433",
+      "house_id": "1236",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_613a83e984e35bcd8b75a433/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        14
+      ]
+    },
+    {
+      "floor_uid": "floor_70fdcbd54a8bf40ef0801e8b",
+      "house_id": "0641",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_70fdcbd54a8bf40ef0801e8b/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        18
+      ]
+    },
+    {
+      "floor_uid": "floor_78f86eb0eda006494ab42afd",
+      "house_id": "0060",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_78f86eb0eda006494ab42afd/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        23,
+        1
+      ]
+    },
+    {
+      "floor_uid": "floor_af7630c78438e7fa37939592",
+      "house_id": "0180",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_af7630c78438e7fa37939592/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        25
+      ]
+    },
+    {
+      "floor_uid": "floor_3112bf984b4be345641f2983",
+      "house_id": "0726",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_3112bf984b4be345641f2983/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        25,
+        1
+      ]
+    },
+    {
+      "floor_uid": "floor_a8f682266b33021442689cd4",
+      "house_id": "0799",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_a8f682266b33021442689cd4/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        30
+      ]
+    },
+    {
+      "floor_uid": "floor_f2b872e9b0b5efa5ed21dba8",
+      "house_id": "0561",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_f2b872e9b0b5efa5ed21dba8/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        38
+      ]
+    },
+    {
+      "floor_uid": "floor_19064ab4515c8179fa9ebef8",
+      "house_id": "0988",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_19064ab4515c8179fa9ebef8/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        48,
+        1
+      ]
+    },
+    {
+      "floor_uid": "floor_56d52dddb42e1ebd0b131b40",
+      "house_id": "1289",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_56d52dddb42e1ebd0b131b40/floor_result.json",
+      "status": "exploratory_multi_observation_reconstruction",
+      "components": [
+        50
+      ]
+    }
+  ],
+  "ground_truth_read": false,
+  "evaluation_reads_gt_separately": true,
+  "source": "frozen_frontend_and_R3",
+  "config": {
+    "threshold": 0.5
+  }
+}

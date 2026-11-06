@@ -1,0 +1,94 @@
+{
+  "pair_id": "0665_floor_03_pano_34_pano_37_3",
+  "model": "T3 best.pt, completed epoch 8",
+  "split": "ZInD official train; qualitative/debug only",
+  "selected_predicted_candidates": [
+    1,
+    0
+  ],
+  "correct_match_evidence": {
+    "classification_correct": true,
+    "gt_candidate_rank": 1,
+    "gt_candidate_recalled": true
+  },
+  "candidate_score": 0.8816207647323608,
+  "score_is_calibrated_probability": false,
+  "estimated_B_to_A": {
+    "T_B_to_A": [
+      [
+        -0.7750698223447615,
+        0.09272680733440851,
+        -1.0420965748701563
+      ],
+      [
+        -0.09272680733440851,
+        -0.7750698223447615,
+        -0.6736233827998435
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "relative_yaw_radians": -3.0225218710404276,
+    "relative_yaw_degrees": -173.1777466966014,
+    "translation": [
+      -1.0420965748701563,
+      -0.6736233827998435
+    ],
+    "relative_scale": 0.7805968807956978,
+    "coordinate_system": "ZInD panorama-A local xy"
+  },
+  "evaluation": {
+    "classification_correct": true,
+    "false_positive": false,
+    "false_negative": false,
+    "gt_candidate_rank": 1,
+    "gt_candidate_recalled": true,
+    "yaw_error_degrees": 4.356262604660249,
+    "translation_error": 0.4108970923602736,
+    "translation_error_meters": 0.600936067521022,
+    "absolute_log_scale_error": 0.2476964201497071,
+    "joint_bev_instance_overlap_A": 0.4634609411118579,
+    "joint_bev_instance_overlap_B": 0.3364498049886437,
+    "joint_bev_frame_preserving_instance_overlap_A": 0.4634609411118579,
+    "joint_bev_frame_preserving_instance_overlap_B": 0.3364498049886437,
+    "joint_bev_pre_manhattan_instance_overlap_A": 0.9998318832097914,
+    "joint_bev_pre_manhattan_instance_overlap_B": 0.4700099824836235,
+    "portal_endpoint_A": {
+      "endpoint_order": "reversed",
+      "endpoint_rmse": 0.2472700485415575,
+      "midpoint_error": 0.34534999052061977,
+      "width_error": 0.10962616137707076,
+      "aligned_target_endpoints": [
+        [
+          -1.5706880555034906,
+          -0.6353621608920267
+        ],
+        [
+          -1.1174791763544827,
+          -0.5794878095434555
+        ]
+      ]
+    },
+    "portal_endpoint_B": {
+      "endpoint_order": "same",
+      "endpoint_rmse": 0.011504552381482663,
+      "midpoint_error": 0.010071659876455683,
+      "width_error": 0.0013691573606002816,
+      "aligned_target_endpoints": [
+        [
+          -0.25999650324981943,
+          -0.2536537379653398
+        ],
+        [
+          0.18475289416233845,
+          -0.2859255364555001
+        ]
+      ]
+    }
+  },
+  "gt_usage": "post-inference evaluation only",
+  "not_latest_ObservablePairs_model": true
+}

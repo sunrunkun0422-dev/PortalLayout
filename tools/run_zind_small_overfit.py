@@ -24,9 +24,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from dataset.zind_bipair_adapter import adapt_zind_bipair_batch
-from dataset.zind_bipair_dataset import collate_zind_bipair
-from models.cross_scene_matcher import candidate_assignment_loss
+from portallayout.datasets.zind_bipair_adapter import adapt_zind_bipair_batch
+from portallayout.datasets.zind_bipair_dataset import collate_zind_bipair
+from portallayout.models.cross_scene_matcher import candidate_assignment_loss
 from tools.analyze_zind_candidate_recall import (
     DEFAULT_CHECKPOINT,
     DEFAULT_OUTPUT,

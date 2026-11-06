@@ -8,7 +8,7 @@ import numpy as np
 import torch
 from PIL import Image
 
-from dataset.zind_opening_dataset import (
+from portallayout.datasets.zind_opening_dataset import (
     OpeningFeatureCacheDataset,
     ZInDOpeningViewDataset,
     synchronize_opening_augmentation,
@@ -202,7 +202,7 @@ class ZInDOpeningDatasetTest(unittest.TestCase):
         )
 
         self.assertEqual(result["policy"], "max_recall_at_precision>=0.80")
-        selected = result["evaluation"]["metricsAtSelectedThreshold"]
+        selected = result['portallayout.evaluation']["metricsAtSelectedThreshold"]
         self.assertEqual(selected["precision"], 1.0)
         self.assertEqual(selected["recall"], 1.0)
 

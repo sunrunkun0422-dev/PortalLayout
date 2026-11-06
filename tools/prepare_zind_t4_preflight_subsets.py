@@ -18,27 +18,27 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from dataset.zind_matching_feature_dataset import ZInDMatchingFeatureDataset  # noqa: E402
+from portallayout.datasets.zind_matching_feature_dataset import ZInDMatchingFeatureDataset  # noqa: E402
 from tools.train_zind_cross_scene_matcher import (  # noqa: E402
     candidate_targets_from_affinity,
     predicted_candidate_masks,
 )
-from utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint  # noqa: E402
-from utils.opening_checkpoint import load_opening_head_checkpoint  # noqa: E402
+from portallayout.utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint  # noqa: E402
+from portallayout.utils.opening_checkpoint import load_opening_head_checkpoint  # noqa: E402
 
 
 DEFAULT_OUTPUT = REPO_ROOT / "experiments/zind_e2e_v3/g0_seed123/T4_recall/preflight/subsets"
-DEFAULT_FROZEN = REPO_ROOT / "src/output/zind_geometry_val_full/t3_frozen_m2"
+DEFAULT_FROZEN = REPO_ROOT / "outputs/zind_geometry_val_full/t3_frozen_m2"
 
 
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--train_manifest", default=str(REPO_ROOT / "src/dataset/ZInD_matching/train.json"))
-    parser.add_argument("--val_manifest", default=str(REPO_ROOT / "src/dataset/ZInD_matching/val.json"))
+    parser.add_argument("--train_manifest", default=str(REPO_ROOT / "data/ZInD_matching/train.json"))
+    parser.add_argument("--val_manifest", default=str(REPO_ROOT / "data/ZInD_matching/val.json"))
     parser.add_argument("--train_cache", default=str(REPO_ROOT / "checkpoints/Cross_Scene_Matcher/zind_matching_feature_cache/train"))
     parser.add_argument("--matcher_checkpoint", default=str(REPO_ROOT / "checkpoints/Cross_Scene_Matcher/zind_matching_v1/best.pt"))
     parser.add_argument("--opening_checkpoint", default=str(REPO_ROOT / "checkpoints/Opening_Head/zind_matching_v1/best.pt"))
-    parser.add_argument("--bi_layout_config", default=str(REPO_ROOT / "src/config/zind_all.yaml"))
+    parser.add_argument("--bi_layout_config", default=str(REPO_ROOT / "configs/layout/zind_all.yaml"))
     parser.add_argument("--bi_layout_checkpoint", default=str(REPO_ROOT / "checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl"))
     parser.add_argument("--frozen_val_root", default=str(DEFAULT_FROZEN))
     parser.add_argument("--output_dir", default=str(DEFAULT_OUTPUT))
@@ -207,9 +207,9 @@ def _baseline(records, reports, artifacts):
         products.append(count_a * count_b)
         if is_match:
             positive += 1
-            recalled += int(report["evaluation"]["gt_candidate_recalled"])
+            recalled += int(report['portallayout.evaluation']["gt_candidate_recalled"])
             accepted_positive += int(accepted)
-            correct += int(report["evaluation"]["selected_candidate_correct"])
+            correct += int(report['portallayout.evaluation']["selected_candidate_correct"])
         else:
             negative += 1
             rejected_negative += int(not accepted)

@@ -5,9 +5,9 @@ import tempfile
 from pathlib import Path
 import numpy as np
 from shapely.geometry import Polygon
-from dataset.zind_observable_pairs import (geometry_relation,projection,circular_iou,ray_clear_fraction,
+from portallayout.datasets.zind_observable_pairs import (geometry_relation,projection,circular_iou,ray_clear_fraction,
     parse_interfaces,select_combinations,public_input,finite_positive,load_house,build_floor)
-from dataset.zind_pair_mining import zind_transform_matrix,transform_points
+from portallayout.datasets.zind_pair_mining import zind_transform_matrix,transform_points
 from tools.build_zind_observable_pairs import pilot_sample,make_views
 
 CFG=json.loads((Path(__file__).resolve().parents[1]/'configs/zind_observable_pairs_v1.json').read_text())

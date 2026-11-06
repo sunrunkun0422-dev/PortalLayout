@@ -5,7 +5,7 @@ import unittest
 import numpy as np
 import torch
 
-from postprocessing.post_process import (
+from portallayout.postprocessing.post_process import (
     estimate_manhattan_heading,
     frame_preserving_manhattan,
     post_process,
@@ -13,14 +13,14 @@ from postprocessing.post_process import (
 )
 from tools.debug_cross_scene_flow import prediction_to_layout
 from tools.evaluate_zind_room_group import parse_args
-from utils.cross_scene_estimator import (
+from portallayout.engine.cross_scene_estimator import (
     opening_candidates_from_intervals,
     polygon_area,
     polygon_validity,
     wall_endpoints,
 )
-from utils.joint_layout import build_joint_layout, door_endpoints
-from utils.writer import xyz2json
+from portallayout.geometry.joint_layout import build_joint_layout, door_endpoints
+from portallayout.utils.writer import xyz2json
 
 
 def _rectangle(half_width=2.0, half_depth=1.25):

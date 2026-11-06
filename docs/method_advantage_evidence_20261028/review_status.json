@@ -1,0 +1,13 @@
+{
+  "total": 96,
+  "completed": 0,
+  "counts": {
+    "待审核": 96
+  },
+  "reviewer": "",
+  "reviewed_at": "",
+  "status": "pending",
+  "population": "diagnostic sample; not a random precision estimate",
+  "checkpoint_sha256": "effa09e93ab9db3a6548f55458804f3d0fb13e1a048669347387400e0b6b1916",
+  "note": "旧审核包绑定历史模型；完成后仍需核查 A0–A3 新输出，不自动当作新模型通过。"
+}

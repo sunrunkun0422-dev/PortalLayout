@@ -18,11 +18,11 @@ def digest(path):
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--build',type=Path,required=True)
     p.add_argument('--output',type=Path,required=True);p.add_argument('--partition',type=Path,default=ROOT.parent/'zind/zind_partition.json');a=p.parse_args()
-    b=a.build;identity=json.loads((b/'build_identity.json').read_text());cfg=json.loads((b/'config.json').read_text());parts=json.loads(a.partition.read_text())
+    b=a.build;identity=json.loads((b/'build_identity.json').read_text());cfg=json.loads((b/'portallayout.config.json').read_text());parts=json.loads(a.partition.read_text())
     assert identity['split']=='train' and set(identity['houses'])<=set(parts['train'])
     assert not set(parts['train'])&(set(parts['val'])|set(parts['test']))
     assert digest(a.partition)==identity['partition_sha256']
-    for field,file in [('config_sha256',ROOT/'configs/zind_observable_pairs_v1.json'),('core_source_sha256',ROOT/'dataset/zind_observable_pairs.py'),('builder_source_sha256',ROOT/'tools/build_zind_observable_pairs.py')]:
+    for field,file in [('config_sha256',ROOT/'configs/zind_observable_pairs_v1.json'),('core_source_sha256',ROOT/'portallayout/datasets/zind_observable_pairs.py'),('builder_source_sha256',ROOT/'tools/build_zind_observable_pairs.py')]:
         assert digest(file)==identity[field],('build implementation changed',field)
     source_hashes=json.loads((b/'source_hashes.json').read_text())
     assert set(source_hashes)==set(identity['houses'])

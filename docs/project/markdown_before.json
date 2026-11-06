@@ -1,0 +1,4263 @@
+[
+  {
+    "path": "ZInD-ObservablePairs-v1构建报告.md",
+    "bytes": 21119,
+    "sha256": "082913f658aafecfdddd36e5dd660459aed9836d3fa7519fccf48ee2c07d6be2",
+    "title": "ZInD-ObservablePairs-v1：构建报告与数据契约",
+    "headings": [
+      "# ZInD-ObservablePairs-v1：构建报告与数据契约",
+      "## 1. 交付入口",
+      "## 2. 实际环境与契约核对",
+      "### 坐标、尺度和投影",
+      "### 审计发现的真实编号冲突",
+      "## 3. 三个标签维度与推理输入隔离",
+      "## 4. 自动构建流程与边界",
+      "## 5. 实际训练数据统计",
+      "## 6. 300 对双阶段审核与加权分析",
+      "## 7. 复现、加载与后续操作",
+      "# 完整从原始训练房屋复现，不需要任何旧分片",
+      "# 中断后用相同参数增加 --resume；代码、配置和注释哈希不一致时拒绝续建",
+      "## 8. 当前研究判断与未完成事项"
+    ]
+  },
+  {
+    "path": "ZInD-BiPair-v1数据集说明.md",
+    "bytes": 7070,
+    "sha256": "31b746203e664511517f6c4213602bcce983f8b8ca9ed9b44a4e48c9fb18cbeb",
+    "title": "ZInD-BiPair-v1 数据集说明",
+    "headings": [
+      "# ZInD-BiPair-v1 数据集说明",
+      "## 命名与位置",
+      "## v1 样本定义",
+      "## 处理流程",
+      "## 每个 NPZ 的训练标签",
+      "## 全量规模",
+      "## 开口召回评估",
+      "## 代码与命令"
+    ]
+  },
+  {
+    "path": "学习索引.md",
+    "bytes": 66002,
+    "sha256": "2b3e6763c3d436fb50d8b49f215ceb54e5633f32bf20361cf550e408eea9394e",
+    "title": "Bi-Layout 项目学习索引",
+    "headings": [
+      "# Bi-Layout 项目学习索引",
+      "## 索引范围",
+      "## 项目总览：先区分三条数据与任务线",
+      "### 当前代码的数据流",
+      "### 必须先记住的接口约定",
+      "## 当前进展与结果口径",
+      "### T0–T3：先看训练改动，再看指标",
+      "### 用 T3 漏斗理解当前瓶颈",
+      "## 最短源码阅读路线",
+      "## 第一阶段：项目目标与设计文档",
+      "## 第二阶段：环境、配置与程序入口",
+      "## 第三阶段：基础数据管线、预处理与几何工具",
+      "## 第四阶段：单图 Bi-Layout 模型、损失、后处理与评估",
+      "## 第五阶段：跨场景数据、模型与工程管线",
+      "## 第六阶段：数据构建、训练、评估与推理工具",
+      "## 第七阶段：测试——用行为契约反向巩固实现",
+      "## 第八阶段：可视化实现",
+      "## 第九阶段：论文图片、实验报告与样例产物",
+      "## 建议的学习节奏",
+      "### 按阅读主题运行小范围检查",
+      "# 查看实际参数，尤其是训练阶段与候选来源开关",
+      "# 候选监督、padding 和有限梯度",
+      "# 局部门洞几何与 frame-preserving 后处理",
+      "# Verifier 的预测特征与七通道 BEV 栅格",
+      "### 读完后应能回答的问题"
+    ]
+  },
+  {
+    "path": "README.md",
+    "bytes": 3469,
+    "sha256": "808edf8a46152ede6b1f3a4a0f737ca4ab5eea91fb1b08eedc7a0f67f621723f",
+    "title": "PortalLayout",
+    "headings": [
+      "# PortalLayout",
+      "## 从这里开始",
+      "## 主线结构",
+      "## 运行",
+      "## 实现与证据边界"
+    ]
+  },
+  {
+    "path": "README_文档总索引.md",
+    "bytes": 7059,
+    "sha256": "c64e77e210827a30def33bea8385f55d56476599ff2caeb5cdc22773af56d110",
+    "title": "Bi-Layout 文档总索引",
+    "headings": [
+      "# Bi-Layout 文档总索引",
+      "## 入口文档",
+      "## 读法建议",
+      "## 按问题找文档",
+      "## 关键代码位置",
+      "## 保持原则"
+    ]
+  },
+  {
+    "path": "Matcher阶段汇报_五类案例与下一步.md",
+    "bytes": 14163,
+    "sha256": "c3cf91a5778d11fb53c62aadb7fbf3a96ce3797bbd4fcc6f0aadf64115105963",
+    "title": "Matcher 阶段汇报：五类案例与下一步",
+    "headings": [
+      "# Matcher 阶段汇报：五类案例与下一步",
+      "## 第 1 页：Matcher 做到了什么，目前效果如何（约 1 分钟）",
+      "## 第 2 页：Correct Match——证明已经学到了有效对应（约 45 秒）",
+      "## 第 3 页：Dustbin Reject——排在第一仍可能被拒绝（约 1 分钟）",
+      "## 第 4 页：Wrong Selection——接受了房间对，却选错开口（约 1 分钟）",
+      "## 第 5 页：Negative Correct Reject——拒绝能力确实存在（约 45 秒）",
+      "## 第 6 页：Negative False Accept——最高分也可能建立错误连接（约 1 分钟）",
+      "## 第 7 页：下一阶段任务——围绕五类行为做受控改进（约 2 分钟）",
+      "## 汇报时最容易混淆的三个口径",
+      "## 结束时可以直接使用的 30 秒总结",
+      "## 素材与数据来源"
+    ]
+  },
+  {
+    "path": "ZInD端到端训练结果.md",
+    "bytes": 7375,
+    "sha256": "87acf6b7cbff563f116a0f475377aaaf82025085c62286d8e535ae0507cb0be6",
+    "title": "ZInD 端到端联合训练结果",
+    "headings": [
+      "# ZInD 端到端联合训练结果",
+      "## 1. 结论",
+      "## 2. 数据与训练配置",
+      "## 3. 最佳验证结果",
+      "## 4. 最佳模型测试结果",
+      "### 4.1 完全预测门洞候选",
+      "### 4.2 Teacher-forced manifest 候选",
+      "## 5. 与模块化 Matcher 基线对比",
+      "## 6. 为什么 Top-1 仍然低",
+      "## 7. 下一步优先级",
+      "## 8. 模型产物",
+      "## 9. 复现实验",
+      "## 10. 范围说明"
+    ]
+  },
+  {
+    "path": "项目总览与学习手册.md",
+    "bytes": 115223,
+    "sha256": "26a7957cfa1e4341bb447cdc25ed3c9a4f387077365145f7516475c4aa3e47b0",
+    "title": "Bi-Layout 项目总览与学习手册",
+    "headings": [
+      "# Bi-Layout 项目总览与学习手册",
+      "## 阅读目录",
+      "## 1. 项目目标、范围与术语",
+      "### 1.1 从单图布局到跨空间连接",
+      "### 1.2 三条任务线",
+      "### 1.3 术语表",
+      "## 2. 目录、运行入口与环境",
+      "## 3. 两套跨场景数据及标签契约",
+      "### 3.1 共同的生成逻辑",
+      "### 3.2 BiPair-v1：严格 partial-opening 数据",
+      "### 3.3 ZInD_matching：complete-room 数据",
+      "### 3.4 一个真实样本如何成为监督",
+      "### 3.5 Batch、候选身份与 feature cache",
+      "## 4. 单图 Bi-Layout 与跨图网络",
+      "### 4.1 单图结构与分支语义",
+      "### 4.2 整体数据流：按实际实现排列",
+      "### 4.3 保留 M0–M9 名称，但分清其职责和状态",
+      "### 4.4 Opening Head：深度差异与可学习响应",
+      "### 4.5 Matcher：token attention、池化与双向拒绝",
+      "## 5. 几何对齐、候选选择和工程输出",
+      "### 5.1 坐标、单位与变换方向",
+      "### 5.2 从深度到门洞：为什么要保留朝向",
+      "### 5.3 从双侧端点求相对位姿",
+      "### 5.4 两条推理路线与 selector 的边界",
+      "### 5.5 输出如何阅读",
+      "## 6. 训练阶段、监督与损失",
+      "### 6.1 从模块化训练到 live 联合微调",
+      "### 6.2 guidance 与 candidates 的独立来源",
+      "### 6.3 实际训练损失与旧设计损失分开看",
+      "### 6.4 missing target、padding 与 T0–T3 因子",
+      "### 6.5 训练稳定性与参数身份",
+      "## 7. 评估指标与证据口径",
+      "### 7.1 从开口到最终布局逐层评估",
+      "### 7.2 比较实验前固定口径",
+      "## 8. 实验演进：BiPair、首次端到端、T0–T5",
+      "### 8.1 BiPair：数据、Opening 和模块化 Matcher",
+      "### 8.2 首次 matching 端到端：2026-08-04 报告",
+      "### 8.3 v2 preflight 与完整 T0–T3 消融",
+      "### 8.4 冻结 T3 + candidate-local M2：从个例到完整 val",
+      "### 8.5 T4：召回增强与 Matcher-only 泛化失败",
+      "### 8.6 T5 候选失败审计：原因还不能一概而论",
+      "### 8.7 T5 verifier：有整体收益，BEV 独立归因仍不足",
+      "### 8.8 三房间与汇报图的实际范围",
+      "## 9. 构建、运行与复现命令",
+      "### 9.1 环境与单图入口",
+      "# 单图训练与评估",
+      "# 单图推理；将图片路径替换为实际路径",
+      "### 9.2 构建并检查两套 pair 数据",
+      "# complete-room matching；输出目录用于一次新构建",
+      "# 小规模格式检查",
+      "# partial-opening BiPair-v1",
+      "### 9.3 开口评估与模块化训练入口",
+      "# 默认数据位置符合本机设置时，先在 val 检查预测深度开口先验",
+      "# 查看各阶段实际参数和输入要求",
+      "### 9.4 联合训练与 T3 协议",
+      "### 9.5 几何融合与诊断",
+      "# 已有两个预测布局 JSON：通用候选排序融合",
+      "# 已知共享接口：WALL:START_RATIO:END_RATIO",
+      "# T3/M2 完整 val 和独立 verifier 的参数说明",
+      "### 9.6 按主题运行测试",
+      "## 10. 当前瓶颈与尚未完成的工作",
+      "## 11. 学习路线、文档合并说明",
+      "### 11.1 按一次实际数据流读代码",
+      "### 11.2 六份原文合并到哪里",
+      "### 11.3 本次统一的关键冲突",
+      "## 12. 完整文件索引",
+      "### 12.1 项目目标与设计文档",
+      "### 12.2 环境、配置与程序入口",
+      "### 12.3 基础数据管线、预处理与几何工具",
+      "### 12.4 单图 Bi-Layout 模型、损失、后处理与评估",
+      "### 12.5 跨场景数据、模型与工程管线",
+      "### 12.6 数据构建、训练、评估与推理工具",
+      "### 12.7 测试——用行为契约反向巩固实现",
+      "### 12.8 可视化实现",
+      "### 12.9 论文图片、实验报告与样例产物"
+    ]
+  },
+  {
+    "path": "ZInD匹配数据格式.md",
+    "bytes": 8028,
+    "sha256": "cd35a66010ced80512eb7a50f9014bc77ecd22c516465e28d0203c8ef516ba7c",
+    "title": "ZInD 匹配数据格式",
+    "headings": [
+      "# ZInD 匹配数据格式",
+      "## 目的",
+      "## 处理流程图",
+      "## 样本构造规则",
+      "## Manifest 关键字段",
+      "## 真实 A/B 数据点与标签示例",
+      "## DataLoader 输出",
+      "## 转换命令",
+      "## 2026-07-16 全量转换结果"
+    ]
+  },
+  {
+    "path": "README_BiLayout_历史说明.md",
+    "bytes": 8816,
+    "sha256": "5f365cba57941457f47f48b91c7aecf03eee646c497f0b193fba36c773fdf7d6",
+    "title": "News  ✨ ✨",
+    "headings": [
+      "# News  ✨ ✨ ",
+      "# Bi-Layout",
+      "# Installation",
+      "# Preparing Model Weights",
+      "# Preparing Dataset",
+      "### MatterportLayout",
+      "### ZInd",
+      "# Evaluation",
+      "# Training",
+      "# Acknowledgements",
+      "# Citation"
+    ]
+  },
+  {
+    "path": "跨场景共享开口融合网络架构_可编辑.md",
+    "bytes": 59159,
+    "sha256": "14bd67ee2bdc1fc0f5c2cfe28ec756fcec3c95cbb1b5c50a36656c73bdc20e7f",
+    "title": "跨场景共享开口融合网络架构 可编辑版",
+    "headings": [
+      "# 跨场景共享开口融合网络架构 可编辑版",
+      "## 0. 目标定义",
+      "## 1. 当前实现状态",
+      "## 2. 统一符号与张量约定",
+      "### 2.1 对截图架构的判断和修正",
+      "### 2.2 推荐执行顺序",
+      "### 2.3 全链路数据接口总表",
+      "## 3. 总体网络图",
+      "### 3.1 图中主边的数据名称",
+      "### 3.2 模块拆分与完成状态",
+      "#### 3.2-0 M0 Pair Input Loader 拆分",
+      "#### 3.2-1 M1 Shared Bi-Layout Encoder 拆分",
+      "#### 3.2-2 M2 Bi-Layout Dual Branch Decoder 拆分",
+      "#### 3.2-3 M3 Layout Geometry Converter 拆分",
+      "#### 3.2-4 M4 1D Opening Response and Expansion Depth Proposal 拆分",
+      "#### 3.2-5 M5 Opening-guided Cross Attention Matcher 拆分",
+      "#### 3.2-6 M6 Opening Segment Pair Refiner 拆分",
+      "#### 3.2-7 M7 Two-side Opening Relative Pose Estimator 拆分",
+      "#### 3.2-8 M8 Geometry Consistency Selector 拆分",
+      "#### 3.2-9 M9 Joint Layout Fusion Output 拆分",
+      "## 4. 模块输入输出详解",
+      "### M0. Pair Input Loader",
+      "### M1. Shared Bi-Layout Encoder",
+      "### M2. Bi-Layout Dual Branch Decoder",
+      "### M3. Layout Geometry Converter",
+      "### M4. 1D Opening Response / Expansion Depth Proposal Head",
+      "### M5. Cross-Scene Shared Opening Matcher",
+      "#### M5 正式训练结果与适用边界",
+      "### M6. Opening Segment Refiner",
+      "### M7. Two-side Opening Relative Pose Estimator",
+      "### M8. Geometry Consistency Selector",
+      "### M9. Joint Layout Fusion Output",
+      "## 5. 工程版流程",
+      "## 6. 工程训练损失",
+      "### 6.1 单图布局损失",
+      "### 6.2 开口/可通行性损失",
+      "### 6.3 跨图匹配损失",
+      "### 6.4 位姿与几何一致性损失",
+      "## 7. 推理时完整数据流",
+      "## 8. 评估指标",
+      "## 9. 下一步训练与验收顺序",
+      "## 10. 当前代码对应关系",
+      "## 11. 一句话版本"
+    ]
+  },
+  {
+    "path": "docs/research1_frontend_implementation.md",
+    "bytes": 7451,
+    "sha256": "dd24b5a360fa730b0970350f189a051dd9c91fb604922f5aa6e13941fd965f34",
+    "title": "研究点一第一阶段：整层 RGB 前端与预测缓存",
+    "headings": [
+      "# 研究点一第一阶段：整层 RGB 前端与预测缓存",
+      "## 已修改的模块",
+      "## 运行方式",
+      "# 只查看选择结果，不加载权重、不读取原图、不生成预测。",
+      "# 复现实测：使用一个新的输出目录。",
+      "## 输出及坐标约定",
+      "## 实测与验证证据"
+    ]
+  },
+  {
+    "path": "docs/research1_execution_plan_20261024.md",
+    "bytes": 20900,
+    "sha256": "bb7237c9f3e3db745d0084cded168925809ed80bcd2e0b7b8a20306390ff0b95",
+    "title": "研究点一实验执行计划",
+    "headings": [
+      "# 研究点一实验执行计划",
+      "# E1：同一固定清单，执行冻结前端；不训练 Bi-Layout/Opening Head。",
+      "# E2：预检通过后做200步检查；此权重不用于正式校准。",
+      "# E3：smoke通过后从固定初始化正式训练，勿传smoke的checkpoint。",
+      "# E4：当前正式calibrate入口还要求辅助checkpoint；先导出预测对应，离线检查开口工作点。",
+      "# E5：开口工作点可行且pose样本支持充足后执行。",
+      "# E6：先检查calibration.json中的opening/pose状态，均通过才作为正式定位结果。"
+    ]
+  },
+  {
+    "path": "docs/research1_pose_verifier_implementation.md",
+    "bytes": 4998,
+    "sha256": "55acaeb0981092be2408f8e2a639f6653152db42f06c0efb7c1eb23a9a0952ae",
+    "title": "冻结 R3 的位姿验证器实验",
+    "headings": [
+      "# 冻结 R3 的位姿验证器实验",
+      "## 实现与接口",
+      "## 诊断、工作点与对照",
+      "## 运行与验收",
+      "## 2026-10-26 完成结论"
+    ]
+  },
+  {
+    "path": "docs/ZInD_FloorSet_v1_构建提示词.md",
+    "bytes": 16490,
+    "sha256": "f0527a6de6cd32cdf7e88a9caeddd769feb3632867d3c3109ef55e2826a2ef94",
+    "title": "ZInD-FloorSet-v1 数据集构建提示词",
+    "headings": [
+      "# ZInD-FloorSet-v1 数据集构建提示词",
+      "## 一、任务定义和不允许改变的边界",
+      "## 二、先审计真实工程和数据版本",
+      "## 三、文件组织与稳定身份",
+      "## 四、RGB 推理输入 schema",
+      "## 五、GT 单图、房间和整层结构",
+      "## 六、观测对监督：禁止单一 is_match 混合全部任务",
+      "## 七、坐标、米制与数据隔离",
+      "## 八、划分、派生样本与预算",
+      "## 九、拟新增工程接口与验证",
+      "## 十、交付与停止范围"
+    ]
+  },
+  {
+    "path": "docs/research1_pose_geometry_experiment.md",
+    "bytes": 5029,
+    "sha256": "858ed2a1e45637b2f810f7d67cd06b1beb12e12d00802e024c3b06f1ce0615ae",
+    "title": "固定匹配结果的几何对照与受控位姿重训",
+    "headings": [
+      "# 固定匹配结果的几何对照与受控位姿重训",
+      "## 实现与协议",
+      "## 决策与训练",
+      "## 后台与检查",
+      "## 2026-10-26完成结果"
+    ]
+  },
+  {
+    "path": "docs/research1_metrics_protocol.md",
+    "bytes": 19160,
+    "sha256": "d705c101a03a766ab82a5abcef9714b1055c155e18944b26df4a54251b6bc9f1",
+    "title": "七项最终指标：楼层评估协议 v1（待实现并冻结）",
+    "headings": [
+      "# 七项最终指标：楼层评估协议 v1（待实现并冻结）",
+      "## 1. 主表之前先固定五个条件",
+      "## 2. 七项的精确定义",
+      "### 2.1 整体 IoU",
+      "### 2.2 定位覆盖率",
+      "### 2.3 平移与旋转误差",
+      "### 2.4 Wall 与 Junction 的几何目标",
+      "### 2.5 Junction F1",
+      "### 2.6 Wall F1",
+      "### 2.7 墙体距离",
+      "## 3. 汇总、缺失与统计",
+      "## 4. 结果表模板",
+      "## 5. evaluator 必须通过的人工可核算案例",
+      "## 6. MvFFN 外部比较补充（2026-10-21）",
+      "## 7. 整层全部全景任务的协议适用范围",
+      "## 8. 整层实现状态更新（2026-10-23）"
+    ]
+  },
+  {
+    "path": "docs/zind_floorset_build_audit.md",
+    "bytes": 2572,
+    "sha256": "a4aba6a00e80aeee77accdaa09ec26a26e71c9e011ff42e3aa1c82c16de41d97",
+    "title": "ZInD-FloorSet-v1 构建前审计",
+    "headings": [
+      "# ZInD-FloorSet-v1 构建前审计"
+    ]
+  },
+  {
+    "path": "docs/research1_floor_layout_implementation.md",
+    "bytes": 13548,
+    "sha256": "2f79f87af27c815a4014405830f165dcc143c673264964d7a3b7051c00b25a76",
+    "title": "整层布局估计实施状态",
+    "headings": [
+      "# 整层布局估计实施状态",
+      "## 本次继续执行：恢复、失败记录与数据隔离",
+      "## 本轮工程试点最终结果",
+      "## 训练前代码补齐与健全性检查",
+      "## 2026-10-26：开口几何对照与受控位姿重训"
+    ]
+  },
+  {
+    "path": "docs/research1_completion_audit.md",
+    "bytes": 6124,
+    "sha256": "3dd16ece8d6cc13a09c9bc751fcd2de24431c947c357dec1fd9e1e027ec4f966",
+    "title": "整层代码完成度复核",
+    "headings": [
+      "# 整层代码完成度复核",
+      "## 已实现的主体",
+      "## 问题与处理顺序",
+      "### P0：开口匹配没有形成可接受的连接",
+      "### P1：有效监督不足，尤其是房间关联",
+      "### P1：同房间模型还缺少最终定位分布上的验证",
+      "### P1：真实后端有效性尚未验收",
+      "### P2：原计划中的对照集成和正式实验不完整",
+      "### P2：文档状态应以最终报告为准",
+      "## 判定依据",
+      "## 后续修复状态"
+    ]
+  },
+  {
+    "path": "docs/ZInD_FloorSet_v1_数据格式设计.md",
+    "bytes": 23147,
+    "sha256": "b7473adabab42259e2f6d9de1e587a211bfc0879303abff680fcf03d2de62bfe",
+    "title": "ZInD-FloorSet-v1：整层全景布局估计的数据格式设计",
+    "headings": [
+      "# ZInD-FloorSet-v1：整层全景布局估计的数据格式设计",
+      "## 1. 原始 ZInD 能否使用",
+      "## 2. 参考项目实际如何组织数据",
+      "## 3. 主数据单元和任务假设",
+      "### 3.1 样本、观测、房间各自独立",
+      "### 3.2 “全部全景”的可核算定义",
+      "## 4. 建议目录：输入、标签、中间预测物理分离",
+      "### 4.1 推理 manifest 示例",
+      "### 4.2 observation_id 与来源映射",
+      "## 5. 我们需要哪些原始数据和派生标签",
+      "### 5.1 单图标签",
+      "### 5.2 整层 GT 及房间粒度",
+      "### 5.3 Pair 标签必须拆成多个维度",
+      "## 6. 中间预测缓存格式",
+      "## 7. 坐标与尺度契约",
+      "## 8. 构建后的审计与划分要求",
+      "## 9. 对当前项目方案的必要修订"
+    ]
+  },
+  {
+    "path": "docs/research1_architecture_audit.md",
+    "bytes": 19979,
+    "sha256": "279685256361d43c342d1153b6363928078e49b51077fdb4d741634693ffa9ed",
+    "title": "研究点一：当前架构与实验基础审查",
+    "headings": [
+      "# 研究点一：当前架构与实验基础审查",
+      "## 1. 结论与研究边界",
+      "## 2. 工作区、环境与证据",
+      "## 3. 真实目录与调用关系",
+      "## 4. 输入、输出和张量核实",
+      "## 5. 坐标、变换和尺度",
+      "## 6. 已实现/部分实现/缺失清单",
+      "## 7. GT 依赖与“无匹配”的真实行为",
+      "## 8. 已有成绩应怎样使用",
+      "## 9. 本轮验证及边界",
+      "## 10. 改造优先级"
+    ]
+  },
+  {
+    "path": "docs/MvFFN_论文借鉴与实验补充.md",
+    "bytes": 11622,
+    "sha256": "928a42539ee0e135693c3933294a21632fc152be8092a81bdfbb5b6452e973ce",
+    "title": "MvFFN 阅读判断与本项目实验补充",
+    "headings": [
+      "# MvFFN 阅读判断与本项目实验补充",
+      "## 1. 一句话结论",
+      "## 2. 基本信息与紧凑事实索引",
+      "## 3. 它改变了我们对问题的哪几个判断",
+      "## 4. 最值得迁移的模块设计",
+      "### 4.1 开口与邻近结构的局部表示：优先级最高",
+      "### 4.2 先做一维候选对条件化检索",
+      "### 4.3 分阶段训练与梯度隔离",
+      "### 4.4 从稀疏对应扩展到局部结构约束：放到研究点二",
+      "## 5. 怎么证明迁移思路有效",
+      "## 6. 实验结论应该怎样解读",
+      "## 7. 局限与直接复现前的检查",
+      "## 8. 是否值得深读",
+      "## 9. 下一步阅读与方案落点"
+    ]
+  },
+  {
+    "path": "docs/research1_round2_implementation.md",
+    "bytes": 6622,
+    "sha256": "0814998f5e3b4975fa6cdd102411902e0f4f7a3e4866a965b13186a79e6fcad6",
+    "title": "研究点一第二轮：监督利用与无匹配判别",
+    "headings": [
+      "# 研究点一第二轮：监督利用与无匹配判别",
+      "## 代码改动",
+      "## 实验与门槛",
+      "## 训练前验收",
+      "## 机器托管与产物"
+    ]
+  },
+  {
+    "path": "docs/ZInD_FloorSet_v1_使用说明.md",
+    "bytes": 7416,
+    "sha256": "06abee4736c28e27b3677a0682b9b37779e22bc45b72068afb69479bc4833ffd",
+    "title": "ZInD-FloorSet-v1 使用说明",
+    "headings": [
+      "# ZInD-FloorSet-v1 使用说明",
+      "## 1. 已实现的目录与格式",
+      "## 2. RGB 推理与训练读取",
+      "# 默认只读 RGB manifest，不读取标签；选择 dev 可用于内部开发。",
+      "# 当前返回 uint8 HWC，模型调用方需转换为自己的 float CHW 表示。",
+      "# 不把文件名、标签、source_map 或 GT membership 作为模型特征。",
+      "# 明确需要监督时，才调用独立 accessor。",
+      "# 训练包装：输入和监督仍为两个不同对象。",
+      "## 3. 实际构建与验证入口",
+      "# 只审计 train 标注数量，不解码图像，不构建数据。",
+      "# 小样本构建；把 output 改为尚不存在的新目录。",
+      "# 全 train：本次使用的参数。已有目录不重复运行，恢复时加 --resume。",
+      "# 检查全部 schema、引用、输入白名单、全无序 pair 与原图内容哈希。",
+      "## 4. 标签的实际边界"
+    ]
+  },
+  {
+    "path": "docs/research1_opening_pair_implementation.md",
+    "bytes": 8570,
+    "sha256": "bfd860bb4f3ede9ee2d75f70eba71dcb4ff380edf006cdda88b15f82925b45ee",
+    "title": "双图开口匹配：实现、修复与验证",
+    "headings": [
+      "# 双图开口匹配：实现、修复与验证",
+      "## 已修复的问题",
+      "## 模块与接口",
+      "## 命令与人工审核覆盖",
+      "## 真实结果"
+    ]
+  },
+  {
+    "path": "docs/research1_code_cleanup_audit.md",
+    "bytes": 3929,
+    "sha256": "3938dbe7b15d540eea0d1ddfe8e5fdc2bfce0c4108ea92df2613766dcb2f69fa",
+    "title": "代码清理候选审计",
+    "headings": [
+      "# 代码清理候选审计"
+    ]
+  },
+  {
+    "path": "docs/research1_opening_representation.md",
+    "bytes": 10094,
+    "sha256": "0808f3bbe7091f0677fafd456314906ad80e2b82a895e88b6f5838f3fa0070cf",
+    "title": "单图开口增强模块：几何与上下文联合表征",
+    "headings": [
+      "# 单图开口增强模块：几何与上下文联合表征",
+      "## 1. 独立模块与输入输出",
+      "# records/arrays 来自 ObservationFeatureCache.load；不调用 dataset.supervision。",
+      "## 2. 已实现的增强流程",
+      "### 结构分支",
+      "### 上下文分支",
+      "### 几何分支",
+      "### 融合和图内关系",
+      "## 3. 缓存入口与运行命令",
+      "# 输出目录使用一个尚不存在的新目录。",
+      "## 4. 真实结果与验证"
+    ]
+  },
+  {
+    "path": "docs/research1_preliminary_implementation.md",
+    "bytes": 8251,
+    "sha256": "680ed524ab34b80ac3a67c6e8d0f188d4b62e9d31ff54878ea47abde9805e332",
+    "title": "研究点一：整层布局初步实验",
+    "headings": [
+      "# 研究点一：整层布局初步实验",
+      "## 已实现的数据流",
+      "## 几何规则与实现边界",
+      "## 调用与复用",
+      "## 实验与评价",
+      "## 验收、产物和后台运行",
+      "## 完成核查与结果解释"
+    ]
+  },
+  {
+    "path": "docs/research1_full_experiment_plan.md",
+    "bytes": 41858,
+    "sha256": "0abbe60e860d3f873fc9f2e67113259a98789e63c6141c000d04011157d05c87",
+    "title": "开口引导多房间布局：全流程实验方案与模块设计",
+    "headings": [
+      "# 开口引导多房间布局：全流程实验方案与模块设计",
+      "## 1. 实验最终要回答什么",
+      "## 2. 目标系统与研究边界",
+      "## 3. 数据体系：先解决“pair 可用不等于 floor 可用”",
+      "### 3.1 两种数据单元",
+      "### 3.2 划分和标注冻结",
+      "### 3.3 可见性与 unknown",
+      "### 3.4 规模和采样",
+      "## 4. 模块与文件设计",
+      "### 4.1 数据契约",
+      "### 4.2 二维特征与开口联合表示",
+      "### 4.3 候选对条件化双向检索",
+      "### 4.4 Sinkhorn 的矩形边际与拒绝",
+      "### 4.5 位姿、两类图与鲁棒优化",
+      "## 5. 学习目标与训练安排",
+      "### 5.1 监督使用",
+      "### 5.2 逐级训练，而非一次跑全矩阵",
+      "## 6. 实验矩阵与验收证据",
+      "### E0：基础冻结与评价器",
+      "### E1：只扩展楼层组装，先不改匹配网络",
+      "### E2：固定输入的匹配架构消融",
+      "### E3：候选机制与表征解耦",
+      "### E4：端到端楼层主比较",
+      "### E5：Oracle 与误差归因",
+      "### E6：可选验证器贡献",
+      "### E7：研究点二独立扩展",
+      "## 7. 对外方法比较",
+      "## 8. 显存、效率与计算预算",
+      "## 9. 排期与逐阶段退出条件",
+      "## 10. 最终输出与可复现档案",
+      "## 11. 当前真实可执行命令与未来接口的区分",
+      "# 将 output_dir 换成新目录，避免覆盖本轮证据。",
+      "## 12. 最终验收单",
+      "## 13. MvFFN 阅读后的实验补充（2026-10-21）",
+      "## 14. 整层全部全景任务的数据接口更新",
+      "## 整层续作记录（2026-10-23 07:05）"
+    ]
+  },
+  {
+    "path": "docs/ZInD_FloorSet_v1_构建交付.md",
+    "bytes": 7612,
+    "sha256": "14773eaec5afb54aeab7b54f13563c77fb101b07e6040716830d25a90c42e1e5",
+    "title": "ZInD-FloorSet-v1 构建交付",
+    "headings": [
+      "# ZInD-FloorSet-v1 构建交付",
+      "## 交付范围",
+      "## 全量 train 实际数量",
+      "## 实现入口",
+      "## 验证范围",
+      "## 与最终七项指标的对应",
+      "## 后续使用边界"
+    ]
+  },
+  {
+    "path": "docs/research1_review_evidence/validation_summary.md",
+    "bytes": 4008,
+    "sha256": "3f71814872e8d777ddb07c01051f0c60b387e5c8ae965bfef570d38d8825320d",
+    "title": "本轮实际验证摘要",
+    "headings": [
+      "# 本轮实际验证摘要",
+      "## 1. 回归与环境",
+      "## 2. 当前权重的真实三房间样例",
+      "## 3. 没有验证的项目"
+    ]
+  },
+  {
+    "path": "docs/project/code_map.md",
+    "bytes": 3723,
+    "sha256": "7e82d14742108ea051866f42fdd9ae77b0165211c8893548f4b12755197db9b2",
+    "title": "PortalLayout 代码地图",
+    "headings": [
+      "# PortalLayout 代码地图",
+      "## 主线模块",
+      "## 两代匹配器与历史入口",
+      "## 配置与产物",
+      "## 修改代码时的落点"
+    ]
+  },
+  {
+    "path": "docs/project/renaming.md",
+    "bytes": 1654,
+    "sha256": "cddedd9baf177b27683be0f619c4279c9cf45f72ef38d65fc50b09be67f45430",
+    "title": "项目更名与整理记录",
+    "headings": [
+      "# 项目更名与整理记录"
+    ]
+  },
+  {
+    "path": "docs/project/workflows.md",
+    "bytes": 3124,
+    "sha256": "441a14d1ec73be1515caaed5af29fb7babaf8e1c752b791c3f0699de8f16d6bd",
+    "title": "PortalLayout 运行入口",
+    "headings": [
+      "# PortalLayout 运行入口",
+      "## 查阅参数",
+      "## 楼层研究流程"
+    ]
+  },
+  {
+    "path": "docs/proposal_method_comparison/开题预演讲稿.md",
+    "bytes": 5470,
+    "sha256": "18a6c45748eaa5fabbe7cc5097a366d606225634f057de77740595ca0ff1767a",
+    "title": "开题预演讲稿",
+    "headings": [
+      "# 开题预演讲稿",
+      "## 一分钟版本",
+      "## 逐图讲解，约四至五分钟",
+      "### 图 1：先把已有工作讲准确",
+      "### 图 2：说明现在代码做到了哪里",
+      "### 图 3：讲两个研究问题之间的衔接",
+      "### 图 4：明确差异和验证目标",
+      "## 汇报中建议替换的表达"
+    ]
+  },
+  {
+    "path": "docs/proposal_method_comparison/技术对比分析.md",
+    "bytes": 10747,
+    "sha256": "28a8911f30d41279187273df50686d3ebe7988245b1d36484ae4e705b94fb16e",
+    "title": "技术对比分析：SALVe 与开口引导的多房间布局估计",
+    "headings": [
+      "# 技术对比分析：SALVe 与开口引导的多房间布局估计",
+      "## 1. 先修正核心说法",
+      "## 2. SALVe 的流程与边界",
+      "## 3. 当前项目实际上有什么",
+      "## 4. 五项实质区别与可验证假设",
+      "## 5. 创新边界：目前可以说到什么程度",
+      "## 6. 未核实事项与使用限制"
+    ]
+  },
+  {
+    "path": "docs/proposal_method_comparison/README.md",
+    "bytes": 3100,
+    "sha256": "aba11ec82588d167b4dbbdd00a4e88ce2a4b0fdc101e26aea2b72e3aa25112a3",
+    "title": "开题预演材料",
+    "headings": [
+      "# 开题预演材料",
+      "## 明天预演怎么用",
+      "## 制作与核查"
+    ]
+  },
+  {
+    "path": "docs/proposal_method_comparison/实验验证设计.md",
+    "bytes": 7319,
+    "sha256": "b4637a57463367207812ec5dd2fbb050e89079d0cddbea81d6a5be0cfd4e4148",
+    "title": "实验验证设计（本轮不执行）",
+    "headings": [
+      "# 实验验证设计（本轮不执行）",
+      "## 1. 共同条件与比较轨道",
+      "## 2. 研究一：可靠对应是否真的改善",
+      "## 3. 研究二：局部修正的增益与代价",
+      "## 4. 七项整层指标与口径",
+      "## 5. 结论与统计纪律"
+    ]
+  },
+  {
+    "path": "docs/proposal_method_comparison/优化后的Codex提示词.md",
+    "bytes": 3660,
+    "sha256": "3703b795e0699f2f2fc38ee1f658c5fe5efadf5f9d7062e23fd1c70708388661",
+    "title": "可复用提示词：开题技术路线与论文对比",
+    "headings": [
+      "# 可复用提示词：开题技术路线与论文对比"
+    ]
+  },
+  {
+    "path": "docs/proposal_method_comparison/代码证据清单.md",
+    "bytes": 10477,
+    "sha256": "6fdfeabddf99a537f74235d3b184b7283f10f2337464b9bc67fc757ff0f7b512",
+    "title": "代码证据清单",
+    "headings": [
+      "# 代码证据清单",
+      "## 当前调用链与模块",
+      "## 核对关键细节",
+      "## 可审计但不宣称已验证的能力",
+      "## 证据优先级"
+    ]
+  },
+  {
+    "path": "docs/proposal_method_comparison/导师可能追问.md",
+    "bytes": 6250,
+    "sha256": "95728430138d8f514311c20986b05eac6129887d9f52d0dd4d60c3b0d846bbd7",
+    "title": "导师可能追问与回答",
+    "headings": [
+      "# 导师可能追问与回答",
+      "## 1. SALVe 已经用视觉了，你的区别是什么？",
+      "## 2. 不就是加了一个 Attention 吗？",
+      "## 3. CoVisPose 已经做跨图对应，你是不是重复？",
+      "## 4. 为什么匹配精度高一点就能改善 Floorplan？",
+      "## 5. PGO 已经优化了，为什么还需要研究二？",
+      "## 6. SALVe 也会修整轮廓，你的第二点还成立吗？",
+      "## 7. 两个不同房间看不到同一片墙，怎么约束？",
+      "## 8. 单个开口足够恢复位姿吗？",
+      "## 9. 你怎么知道门后上下文是共同可见空间？",
+      "## 10. 尺度怎么解决？单位尺度是否用了 GT？",
+      "## 11. 一张图是不是一个房间？没有连上的怎么办？",
+      "## 12. 目前到底有什么结果，为什么效果还差？",
+      "## 13. 你的标签可靠吗，unknown 怎么处理？",
+      "## 14. 你是否已证明比 SALVe 更好？",
+      "## 15. 你的第二点现在是代码还是设想？",
+      "## 16. 明天最应该向老师争取什么建议？"
+    ]
+  },
+  {
+    "path": "docs/method_advantage_evidence_20261028/优势证据清单.md",
+    "bytes": 2643,
+    "sha256": "3848550ea77ace20bc478bcaecda6a4fdbd056b172b29b57482943fcec49c86b",
+    "title": "优势证据清单",
+    "headings": [
+      "# 优势证据清单",
+      "## 统计与来源"
+    ]
+  },
+  {
+    "path": "docs/method_advantage_evidence_20261028/README.md",
+    "bytes": 1879,
+    "sha256": "27ca69a45fbb180204355a5042d8768c555511f60a6f6629b5a4f394a6277ef1",
+    "title": "方法优势证据包",
+    "headings": [
+      "# 方法优势证据包"
+    ]
+  },
+  {
+    "path": "docs/method_advantage_evidence_20261028/因素归因.md",
+    "bytes": 1405,
+    "sha256": "d4c50614d49668bc3d4ec195b41e5179e65fc87220ccb3eddad7bda6be36a9ee",
+    "title": "几何与尺度贡献分解",
+    "headings": [
+      "# 几何与尺度贡献分解"
+    ]
+  },
+  {
+    "path": "docs/method_advantage_evidence_20261028/开题结论.md",
+    "bytes": 1335,
+    "sha256": "b6d52429036e70834609aa84207aa4af095c0d93064308d1c88e02c251ad5c1b",
+    "title": "开题可用结论",
+    "headings": [
+      "# 开题可用结论"
+    ]
+  },
+  {
+    "path": "docs/method_advantage_evidence_20261028/核心消融执行表.md",
+    "bytes": 2655,
+    "sha256": "4848ed0b61fd1eeeda55df3bc2e05911160f0949a5035f0251f3ea382fc3a7a6",
+    "title": "四组核心消融执行表",
+    "headings": [
+      "# 四组核心消融执行表",
+      "## 必须先补的接口",
+      "## 工作点与整层传播"
+    ]
+  },
+  {
+    "path": "experiments/research1_floor_layout_followup_20261023_0656/final_report.md",
+    "bytes": 2500,
+    "sha256": "3706fdd573bd2fe7e36d293875f9d0d3b2c8fd2ac81430b402e4f6e354d07b9b",
+    "title": "整层布局工程试点续作报告",
+    "headings": [
+      "# 整层布局工程试点续作报告",
+      "## 完整性和隔离",
+      "## 尚未完成的正式实验"
+    ]
+  },
+  {
+    "path": "experiments/research1_floor_layout_followup_20261023_0656/pilot_inference/floor_3112bf984b4be345641f2983/floor_report.md",
+    "bytes": 1512,
+    "sha256": "b068af05aab9c2bcd963ace0c21b7541c5e91ae198dacb5e36d0eed442a58132",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_floor_layout_followup_20261023_0656/pilot_inference/floor_e24ec4b67d8d47236b6239f3/floor_report.md",
+    "bytes": 1500,
+    "sha256": "c36ae0b3a05668715bc4552d9d85ed4e282d3ffb57246d93380a5fe4f2f67810",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_floor_layout_followup_20261023_0656/pilot_inference/floor_8aa2aee37af9a8ab4889d637/floor_report.md",
+    "bytes": 1483,
+    "sha256": "5455937868d22d4d820d12fb05d0feea5e051987ddc6e4e21c68bd5d7c088d64",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_floor_layout_followup_20261023_0656/pilot_inference/floor_75df3de0498c85721f092a14/floor_report.md",
+    "bytes": 1486,
+    "sha256": "2719576bcd1410cf8b3c9a4ed3c0e0ed86040409c50b7eef81e84070c4105885",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_floor_layout_followup_20261023_0656/pilot_inference/floor_0720962ddfcd23840d5e269c/floor_report.md",
+    "bytes": 1479,
+    "sha256": "5afee17c08718b54f46e430b0f1ca6e5756355ed4d20a0e79e39ec3d1090475d",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_floor_layout_followup_20261023_0656/pilot_inference/floor_204b7bd1fc36a3b6cc48f29f/floor_report.md",
+    "bytes": 1487,
+    "sha256": "c91dc215bf77f05affa30de11f6420bf691620dc3ffb7bc23148141c345168ac",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_floor_layout_followup_20261023_0656/pilot_inference/floor_45d4c65d7782d1687c10579f/floor_report.md",
+    "bytes": 1469,
+    "sha256": "7a75516bf1ac21188c9a1d1acf05e40ad4af2609a2257d37ac3b0486de83e1a3",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_floor_layout_followup_20261023_0656/pilot_inference/floor_1ee821022ab13bef2c2de3d8/floor_report.md",
+    "bytes": 1465,
+    "sha256": "3442c1c9b091e142f5dd93d7a18dbae86899cad624073783c76cb186f6065169",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_floor_layout_followup_20261023_0656/pilot_inference/floor_1c68d80c249a3a23bdadf67f/floor_report.md",
+    "bytes": 1490,
+    "sha256": "e6429aac7bb62916fede3ee6c7feab678d1ada8dd6a7c57904cfb07b96c69382",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_floor_layout_followup_20261023_0656/pilot_inference/floor_5654d0f63b638b1c4604eb5e/floor_report.md",
+    "bytes": 1493,
+    "sha256": "ee6a61b89d5e8fa52e8a371a51864b592527f0689539a7137f015cac91e95aa0",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_floor_layout_followup_20261023_0656/pilot_inference/floor_187a051a13889606c4d6c2b8/floor_report.md",
+    "bytes": 1500,
+    "sha256": "ade8a801066438f0cbc717e421c369fde010535d8548f74941add3180993705d",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_floor_layout_followup_20261023_0656/pilot_inference/floor_7520f46f0ff781a58da7e59c/floor_report.md",
+    "bytes": 1486,
+    "sha256": "d319adf43106f5dfb090b9acf13d3365c8bfa65e6d8b9c69762edd8f5faf956e",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_floor_layout_followup_20261023_0656/real20/floor_1c68d80c249a3a23bdadf67f/floor_report.md",
+    "bytes": 1504,
+    "sha256": "7b79db8cf33035f36966401d784c60d8dffbd77e8a7f8ae97ff205dff0a39636",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/type_prior_probe_20260923/验证报告.md",
+    "bytes": 16354,
+    "sha256": "01be052f7598cfac19ac1900712ad7a0b9edc5ea67900654a8906a128e033f9b",
+    "title": "开口类型条件几何先验：小规模验证报告",
+    "headings": [
+      "# 开口类型条件几何先验：小规模验证报告",
+      "## 1. 创新点应该怎样定位",
+      "## 2. 可复现身份与实际资源",
+      "## 3. 标注覆盖、拆分及口径",
+      "## 4. 实验配置与对照",
+      "## 5. 固定阈值 0.47：实例与匹配结果",
+      "## 6. 校准集相同 FP 上限",
+      "## 7. 类型是否真的代表几何可靠性差异",
+      "## 8. 标签实例与二值连通分量的结构限制",
+      "## 9. 不确定性、转移与可视化",
+      "## 10. 交付、复现与未完成范围",
+      "# 从仓库根目录运行，完整复现时使用新的输出目录",
+      "## 附表：IoU 敏感性与端点误差（固定 0.47）"
+    ]
+  },
+  {
+    "path": "experiments/type_prior_probe_20260923/案例图册.md",
+    "bytes": 977,
+    "sha256": "d1f637ee3ceccba75343c7af4583fade1b368072d92a21e00dda78d245b27df0",
+    "title": "固定规则抽样案例",
+    "headings": [
+      "# 固定规则抽样案例",
+      "## 01 1205/panos/floor_00_partial_room_07_pano_30.jpg",
+      "## 02 1540/panos/floor_01_partial_room_12_pano_4.jpg",
+      "## 03 0507/panos/floor_01_partial_room_18_pano_31.jpg",
+      "## 04 0037/panos/floor_01_partial_room_10_pano_0.jpg",
+      "## 05 0305/panos/floor_01_partial_room_09_pano_14.jpg",
+      "## 06 0037/panos/floor_01_partial_room_01_pano_4.jpg",
+      "## 07 0522/panos/floor_01_partial_room_14_pano_37.jpg",
+      "## 08 0507/panos/floor_01_partial_room_08_pano_34.jpg",
+      "## 09 1235/panos/floor_01_partial_room_10_pano_31.jpg",
+      "## 10 1235/panos/floor_01_partial_room_13_pano_27.jpg",
+      "## 11 0648/panos/floor_01_partial_room_08_pano_15.jpg",
+      "## 12 0820/panos/floor_01_partial_room_07_pano_13.jpg"
+    ]
+  },
+  {
+    "path": "experiments/zind_observable_v1/README.md",
+    "bytes": 5426,
+    "sha256": "273ede769bd595feeeebc1fce0283e9afa4e433ffa04aa705ffb54df3d351f6e",
+    "title": "ZInD-ObservablePairs-v1：数据与端到端训练结果",
+    "headings": [
+      "# ZInD-ObservablePairs-v1：数据与端到端训练结果",
+      "## 数据集",
+      "## 本轮实际训练视图",
+      "## 联合训练结果",
+      "## 恢复与复现",
+      "# 只需 Python 标准库；输出必须为新目录",
+      "# 从自己的 ZInD 原始数据完整重建；只有 train，无伪造冻结记录"
+    ]
+  },
+  {
+    "path": "experiments/zind_observable_v1/results/训练结果摘要.md",
+    "bytes": 2158,
+    "sha256": "58f8fa16be5dc09448f880520915b0097215bcba89b0c4ff365e53a27761e28b",
+    "title": "ObservablePairs 端到端训练结果摘要",
+    "headings": [
+      "# ObservablePairs 端到端训练结果摘要",
+      "## 最佳内部监控指标",
+      "## 判断",
+      "## 结论适用范围"
+    ]
+  },
+  {
+    "path": "experiments/research1_floor_layout_20261023/scheduled_followup/README.md",
+    "bytes": 561,
+    "sha256": "2631779e24178ab771cca790211f14b655ba6bd2106ea24e967b21502c6a5ed7",
+    "title": "五小时后：继续整层实现或测试与代码清理审计",
+    "headings": [
+      "# 五小时后：继续整层实现或测试与代码清理审计"
+    ]
+  },
+  {
+    "path": "experiments/research1_floor_layout_20261023/scheduled_followup/prompt.md",
+    "bytes": 6350,
+    "sha256": "47e19838fc11a538f19ca6bea451b771e246f60959fd05452b88646ec45f66b3",
+    "title": "prompt.md",
+    "headings": []
+  },
+  {
+    "path": "experiments/salve_reproduction_20261028/README.md",
+    "bytes": 8255,
+    "sha256": "357fab5e5af613632de28150d12afcd6ecd5bdcacdbd492d134f41357e36011b",
+    "title": "SALVe 复现记录",
+    "headings": [
+      "# SALVe 复现记录",
+      "## 2026-10-29 续跑结果（当前状态）",
+      "## 实际环境和代码",
+      "## 已验证结果",
+      "## 可重复执行",
+      "# 官方验证器权重 + 四张官方 RGB BEV 样例",
+      "# 单房屋候选；输出必须是一个新目录。fixture_predictions 已准备好官方消失角。",
+      "# 官方拼接样例",
+      "# 官方预测归档断点续传（如代理不稳定可使用 --direct）",
+      "## 端到端阻塞项",
+      "## 后续验收"
+    ]
+  },
+  {
+    "path": "experiments/portal_geometry_hypothesis_20260927/验证报告.md",
+    "bytes": 13139,
+    "sha256": "4975f35105506831f9ed218bb059dc3b0147500ebd7a57e3625a3ebbc88eca91",
+    "title": "开口—墙面几何增强命题：验证性实验报告",
+    "headings": [
+      "# 开口—墙面几何增强命题：验证性实验报告",
+      "## 1. 本轮检验了什么",
+      "## 2. 数据、模型与冻结合同",
+      "## 3. 坐标、求解器及 GT 使用边界",
+      "## 4. 候选和匹配漏斗",
+      "## 5. 对照与干预定义",
+      "## 6. 主结果：固定正确匹配的 54 对",
+      "## 7. 配对房屋 bootstrap 与转移",
+      "## 8. 类型/连接范围与标注限制",
+      "## 9. 独立的 GT 对应诊断（不与主表混算）",
+      "## 10. 对研究选题的具体建议",
+      "## 11. 交付、复现与风险测试",
+      "## 附表：联合阈值敏感性"
+    ]
+  },
+  {
+    "path": "experiments/portal_geometry_hypothesis_20260927/案例图册.md",
+    "bytes": 1249,
+    "sha256": "e41fa7acbb6c473fd23babb0d5f27a80e14e161ea549808b3a3aaab561c9e3ff",
+    "title": "几何归因固定规则案例",
+    "headings": [
+      "# 几何归因固定规则案例",
+      "## 01 房屋 0939：radial_recovered",
+      "## 02 房屋 0049：radial_recovered",
+      "## 03 房屋 0923：radial_not_recovered, opening",
+      "## 04 房屋 0313：radial_not_recovered",
+      "## 05 房屋 0443：full_gt_scale_failure, M2_broke_success, angle_broke_success",
+      "## 06 房屋 0073：full_gt_scale_failure",
+      "## 07 房屋 0812：M2_broke_success",
+      "## 08 房屋 0904：angle_broke_success",
+      "## 09 房屋 0180：opening",
+      "## 10 房屋 0486：hash_fill",
+      "## 11 房屋 1498：hash_fill",
+      "## 12 房屋 0549：hash_fill"
+    ]
+  },
+  {
+    "path": "experiments/zind_e2e_v3/g0_seed123/T5_bev_verifier/preflight/REPORT.md",
+    "bytes": 4679,
+    "sha256": "94ebe41d238fbb2ba04ccfa865b1beba9dd0a567f717ecae985bdb8fe0ced2cd",
+    "title": "SALVe-style candidate-conditioned verifier preflight",
+    "headings": [
+      "# SALVe-style candidate-conditioned verifier preflight",
+      "## 1. 一句话结论",
+      "## 2. branch、HEAD和worktree",
+      "## 3. Top-N覆盖率及固定N",
+      "## 4. predicted-only feature schema",
+      "## 5. M2 geometry valid/hard/soft failure统计",
+      "## 6. Phase A V0/V1/V2结果",
+      "## 7. wrong-selection恢复情况",
+      "## 8. Phase A门禁",
+      "## 9. Phase B端到端结果",
+      "## 10. dustbin恢复和negative false positive",
+      "## 11. A0-A4消融",
+      "## 12. house-bootstrap",
+      "## 13. 是否支持SALVe风格verifier",
+      "## 14. 是否允许进入栅格BEV CNN",
+      "## 15. 测试、安全和GT隔离",
+      "## 16. 下一阶段最小建议"
+    ]
+  },
+  {
+    "path": "experiments/zind_e2e_v3/g0_seed123/T4_recall/preflight/REPORT.md",
+    "bytes": 8603,
+    "sha256": "d81d94b754b8611f7bcb8b72525fdd8318c4a9f82ab880d20f09722d6a4bafc9",
+    "title": "T4 recall-only 预检报告",
+    "headings": [
+      "# T4 recall-only 预检报告",
+      "## 1. 一句话结论",
+      "## 2. branch / HEAD / worktree",
+      "## 3. full-val recall decomposition",
+      "## 4. candidate proposal audit",
+      "## 5. dustbin score / margin audit",
+      "## 6. wrong-candidate audit",
+      "## 7. 最终 T4 设计",
+      "## 8. 修改文件",
+      "## 9. CPU 测试",
+      "## 10. learnability / overfit",
+      "## 11. GPU preflight",
+      "## 12. 完整训练启动门槛",
+      "## 13. 是否启动",
+      "## 14. 后台训练状态与命令",
+      "## 15. 未访问 test 的证据",
+      "## 16. T0–T3 / M2 未被破坏的证据"
+    ]
+  },
+  {
+    "path": "experiments/zind_e2e_v3/g0_seed123/T4_recall/medium_diagnostic/REPORT.md",
+    "bytes": 7781,
+    "sha256": "57e384667adc04cf00e5c66564f3633f59f43e5f7c52ea3bdbbc2e75987e6663",
+    "title": "T4 matcher-only 中等规模泛化诊断",
+    "headings": [
+      "# T4 matcher-only 中等规模泛化诊断",
+      "## 状态与隔离",
+      "## 32-pair epoch-0 parity",
+      "## Medium sample 与 cache",
+      "## Recall-TopK 独立影响（medium val）",
+      "## 2×2 因子实验",
+      "## 原因判定",
+      "## 门禁与启动决定",
+      "## 验证"
+    ]
+  },
+  {
+    "path": "experiments/zind_e2e_v3/g0_seed123/T5_candidate_recall/audit/REPORT.md",
+    "bytes": 6317,
+    "sha256": "9150dc406b23ea1e4c96fb1e7e0ae7e9e2e32917fb51ab953e9dc622de363817",
+    "title": "ZInD candidate failure audit",
+    "headings": [
+      "# ZInD candidate failure audit",
+      "## 1. 一句话结论",
+      "## 2. branch、HEAD、worktree",
+      "## 3. 授权范围内实际执行内容",
+      "## 4. room-level 去重前后工作量",
+      "## 5. Phase 0 时间、显存、磁盘预测",
+      "## 6. GPU 实际运行时间和缓存完成率",
+      "## 7. train-4096 house 覆盖",
+      "## 8. legacy / Recall-TopK parity",
+      "## 9. train-4096 与 full-val stage funnel",
+      "## 10. 747 个 missing candidate 原因分解",
+      "## 11. O0–O5 结果",
+      "## 12. train/val house-bootstrap 及一致性",
+      "## 13. 推荐情形 A/B/C/D",
+      "## 14. 是否需要补跑完整 train",
+      "## 15. 下一阶段最小方案",
+      "## 16. test 隔离、无训练及 checkpoint 保护证据",
+      "## 17. PID、状态文件和 GPU 最终状态"
+    ]
+  },
+  {
+    "path": "experiments/zind_e2e_v3/g0_seed123/T5_candidate_recall/audit/BLOCKED_PRECHECK.md",
+    "bytes": 6045,
+    "sha256": "87f398b3827d8d10b02c27a26ba92a50b039555165c0155774e5ae7bb96448b2",
+    "title": "T5 candidate failure audit — artifact precheck",
+    "headings": [
+      "# T5 candidate failure audit — artifact precheck",
+      "## 状态（2026-08-19，Asia/Shanghai）",
+      "## Checkpoint 不变证据",
+      "## 可直接复用",
+      "## 缺失字段和受影响范围",
+      "### Full train",
+      "### Full val Oracle / Recall-TopK Matcher",
+      "## 预计需要的前向量（等待授权，不在本轮执行）",
+      "## 为什么现在停止"
+    ]
+  },
+  {
+    "path": "experiments/zind_e2e_v3/g0_seed123/T5_candidate_recall/audit/visual_audit/REPORT.md",
+    "bytes": 8768,
+    "sha256": "afad40d243188849552563fa87b013932eb0cc6594a06029dd7fb12eb7be0670",
+    "title": "Full-val Opening Proposal 与 Matcher 失败样本视觉审计",
+    "headings": [
+      "# Full-val Opening Proposal 与 Matcher 失败样本视觉审计",
+      "## 结论摘要",
+      "## 可复现性与安全边界",
+      "## 冻结统计门禁",
+      "## Artifact 限制与直接证据边界",
+      "## 责任域解释",
+      "## 重点问题的逐类回答",
+      "## 代表性图片",
+      "## 逐例观察",
+      "## 实际执行命令"
+    ]
+  },
+  {
+    "path": "experiments/research1_round2_20261024/README.md",
+    "bytes": 1227,
+    "sha256": "0cbbe3ef0b1f588000ea61ce12f5c80d4f4757f2aabd8973d7014a2718286bbc",
+    "title": "研究点一第二轮",
+    "headings": [
+      "# 研究点一第二轮"
+    ]
+  },
+  {
+    "path": "experiments/research1_round2_20261024/final_report.md",
+    "bytes": 814,
+    "sha256": "f944ede87653680d247b871ff369a1cae856540db387fe25ad97c20cd7fa27d3",
+    "title": "研究点一第二轮实验结果",
+    "headings": [
+      "# 研究点一第二轮实验结果"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/README.md",
+    "bytes": 2011,
+    "sha256": "ed0cc97960112b6df66e252ff5dcf82b830eb0c564b56d393c4122ea69cf0535",
+    "title": "整层布局初步实验（2026-10-25）",
+    "headings": [
+      "# 整层布局初步实验（2026-10-25）"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/final_report.md",
+    "bytes": 4186,
+    "sha256": "0d9be6e8ce422d0ac95aade625a1871d875e4b4a86587bc4fa512994efe4344c",
+    "title": "整层布局初步实验结果",
+    "headings": [
+      "# 整层布局初步实验结果",
+      "## 完成核查与结果解释"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t30_robust_rooms/floor_3112bf984b4be345641f2983/floor_report.md",
+    "bytes": 1556,
+    "sha256": "6a9b5f632e4fe058892305614652bf9e71cb97cf6854660d83004c3cd70524e2",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t30_robust_rooms/floor_70fdcbd54a8bf40ef0801e8b/floor_report.md",
+    "bytes": 1514,
+    "sha256": "5eaf423861ba3bbb222c3744fd785e0a70be1f3b4c29bdaef1cab86e36cf2a1c",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t30_robust_rooms/floor_78f86eb0eda006494ab42afd/floor_report.md",
+    "bytes": 1555,
+    "sha256": "052f1a7080a8f4a565b86eae194078313ba6eb16a2fff50f2083a1e375c0f861",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t30_robust_rooms/floor_f2b872e9b0b5efa5ed21dba8/floor_report.md",
+    "bytes": 1548,
+    "sha256": "1c33b80b9a080721d057836a31bc9dbfe43c4850bbfd3c14f9b139e45708725e",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t30_robust_rooms/floor_a71328a43f233a1478b275ac/floor_report.md",
+    "bytes": 1513,
+    "sha256": "7196fadecbed9596464b7c1373d364b116dd2445a4afe9ed1749b5b61d3223ef",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t30_robust_rooms/floor_19064ab4515c8179fa9ebef8/floor_report.md",
+    "bytes": 1553,
+    "sha256": "7c33094f328beefcf7b50ba4623f3a41acbfb9dea4106aa19236cd46f93d3185",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t30_robust_rooms/floor_af7630c78438e7fa37939592/floor_report.md",
+    "bytes": 1550,
+    "sha256": "5d0b794213b2aa426aa7e39b7a15b3cc0b2c27e48eef1982cc7401c20757432f",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t30_robust_rooms/floor_613a83e984e35bcd8b75a433/floor_report.md",
+    "bytes": 1512,
+    "sha256": "098ee0baf8bf7a8f708e7d5085f1679eb2e76e7edb2d6f2f145559a9998e2377",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t30_robust_rooms/floor_56d52dddb42e1ebd0b131b40/floor_report.md",
+    "bytes": 1553,
+    "sha256": "a4479984986b37772b9dd54bba5bb3faedc631f6231be322d593218c9f655443",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t30_robust_rooms/floor_a8f682266b33021442689cd4/floor_report.md",
+    "bytes": 1549,
+    "sha256": "196d92b08efa8972d76ff499e168273c745a6cb3af79189df7f1752a7c20a720",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_3112bf984b4be345641f2983/floor_report.md",
+    "bytes": 1514,
+    "sha256": "8b81aed87fd5dc3a98b02e2e7df09b3f2e810d0016356171442e6ce9cafc18bd",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_e24ec4b67d8d47236b6239f3/floor_report.md",
+    "bytes": 1520,
+    "sha256": "a92a27f0a7f643706e06fd6afb5e732aff2d5d095176e767f0ce8c8979fc1eac",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_70fdcbd54a8bf40ef0801e8b/floor_report.md",
+    "bytes": 1511,
+    "sha256": "e4e6ebf0ef3b676ba0d8e060a7d222c76dd7daf4d8d562acd2c5552eb1fad472",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_78f86eb0eda006494ab42afd/floor_report.md",
+    "bytes": 1519,
+    "sha256": "e969ef3475e90a91bb659f94ad05d274dcc6b6660f7fc6f7c2c9e9b3a8d2c6e3",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_1e0bac41462149f8544fc9e1/floor_report.md",
+    "bytes": 1510,
+    "sha256": "246ff56a244b03970b8cd973142aeb87ea6c2debb36fcbca0aed15a7708d488b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_f2b872e9b0b5efa5ed21dba8/floor_report.md",
+    "bytes": 1511,
+    "sha256": "1988ca1e04dacaa81ee236e5a9788d8f81a5d361b8b0f2dad788f08411166278",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_bb6687a3575f62badc29712d/floor_report.md",
+    "bytes": 1509,
+    "sha256": "337f7a539852c9b7bf8bf9510990f92aa9b15cd9a4204008bb4d504925845e96",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_a71328a43f233a1478b275ac/floor_report.md",
+    "bytes": 1508,
+    "sha256": "127aff3e8d2e465fae4df6e5543697b0f1ba0c122b7174a9f9bfa06c043dbcaa",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_51fe53ed945b4afb9f30425c/floor_report.md",
+    "bytes": 1510,
+    "sha256": "abf219ce631bc0ae325c97c390d14b03e429fc755d5393dd7fa35aee4ef31c34",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_45bcf94c0ef6efe44e259b71/floor_report.md",
+    "bytes": 1509,
+    "sha256": "901b6984f02002f3d31b92ad7f3b17897db3b1a6c90a49dd593ffa70e2df44be",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_19064ab4515c8179fa9ebef8/floor_report.md",
+    "bytes": 1515,
+    "sha256": "7450c9687b50b8f6902b90f6634dca1b087631522f30f2c7b89b25eabe67bdc4",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_af7630c78438e7fa37939592/floor_report.md",
+    "bytes": 1512,
+    "sha256": "637855df6807127f240eb4d834402c076e6e53b6371dfaa69d5fb7b89062dde1",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_d08a1bc47177fa0b6bdccb41/floor_report.md",
+    "bytes": 1507,
+    "sha256": "01fbd7b85b9e683bc4ea14d2ea689a2e62d4ae7457ef0130451bb9d664519b70",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_00b1200525a3dd38093a16c8/floor_report.md",
+    "bytes": 1519,
+    "sha256": "22baf59733b2b0d4ea1c34eb986e36d5a3cdebe2cb5d162e334dfc214dfd6da3",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_613a83e984e35bcd8b75a433/floor_report.md",
+    "bytes": 1507,
+    "sha256": "e45f6cff91852d8e47f8b740aa93f266fa1b56b1d313400af2e57c1a11378b8e",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_56d52dddb42e1ebd0b131b40/floor_report.md",
+    "bytes": 1516,
+    "sha256": "4acb4949d281fb51ff6ba360256c34d66777c44759f9416b4b652d0e55145ae8",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_5654d0f63b638b1c4604eb5e/floor_report.md",
+    "bytes": 1517,
+    "sha256": "391c8cfe2000bffc74d71cfd89be72c2bc38a567bbe5e5b748b7b15265ec0a2a",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_187a051a13889606c4d6c2b8/floor_report.md",
+    "bytes": 1517,
+    "sha256": "ec0a65a4f571281bf805174d0f444b4070d0f27ea6d6af6cc0a48a4b3f81bdb7",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_5db4c426bc22afcf521d22d9/floor_report.md",
+    "bytes": 1509,
+    "sha256": "3ee13477728c4a924b608dd721fa55ac5a6ebb53c77517bc7e29f7887a911f55",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_observations/floor_a8f682266b33021442689cd4/floor_report.md",
+    "bytes": 1510,
+    "sha256": "bd250649a672ce85ad2217dd5278a4e43df102384e4f322580b4e13935743694",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_3112bf984b4be345641f2983/floor_report.md",
+    "bytes": 1519,
+    "sha256": "8a8c02af633c10ad602339ec6a1903a0bb6489c36112f940db98121bfd4f130f",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_e24ec4b67d8d47236b6239f3/floor_report.md",
+    "bytes": 1523,
+    "sha256": "ff72f5fbc26ffc52e6ad3853f29a592c87d773a1770c4d11b530aed58e63a807",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_70fdcbd54a8bf40ef0801e8b/floor_report.md",
+    "bytes": 1513,
+    "sha256": "1b1860efb740c9c24cdafd159ae86cdc38b5b24c5aaa409371088a36d24fce97",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_78f86eb0eda006494ab42afd/floor_report.md",
+    "bytes": 1522,
+    "sha256": "c12d58fb755ca2c1616b71be614c6bf7d0c9f76f3372bf14e6ceed8c5f958c62",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_1e0bac41462149f8544fc9e1/floor_report.md",
+    "bytes": 1513,
+    "sha256": "d87f5a699428f5f76ce64a7ed36c2c9224048808b115fba52242db51e3284de9",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_f2b872e9b0b5efa5ed21dba8/floor_report.md",
+    "bytes": 1517,
+    "sha256": "94a7cbcc1f3f7e9e6ae48c42e22badd6339051d5dfd2c3df2f08ec5ec1c03f6e",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_bb6687a3575f62badc29712d/floor_report.md",
+    "bytes": 1511,
+    "sha256": "4a7cfb7f577dcdb7821da928191e53820cf24d55e1a95837ca85a56a67147685",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_a71328a43f233a1478b275ac/floor_report.md",
+    "bytes": 1514,
+    "sha256": "528f1d413b40ab661039c9ccfb9beccd3c7df83340f0c5cec562cc27b352db2c",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_51fe53ed945b4afb9f30425c/floor_report.md",
+    "bytes": 1514,
+    "sha256": "8017a6cf649ee6ecb3ee128f60fc41784d3b0e8afaea85a3679ef24310a9149c",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_45bcf94c0ef6efe44e259b71/floor_report.md",
+    "bytes": 1513,
+    "sha256": "c64d958cfad1babff808b076232db0591941adff645542bc939f5d89c2b75842",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_19064ab4515c8179fa9ebef8/floor_report.md",
+    "bytes": 1520,
+    "sha256": "fc588f24da2d7399ce6943a22ec6b3fa37a5a57858fba73392c5a2f021a21220",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_af7630c78438e7fa37939592/floor_report.md",
+    "bytes": 1515,
+    "sha256": "2b825866d300916e733b425bf2eef0976e51ba485d7e4c4aa3d6898621b4635e",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_d08a1bc47177fa0b6bdccb41/floor_report.md",
+    "bytes": 1512,
+    "sha256": "339dfd6dada44397e39e90388bee0928e5e7065097b7561b1c0638de8d8b830c",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_00b1200525a3dd38093a16c8/floor_report.md",
+    "bytes": 1523,
+    "sha256": "34fc412481aa2a11045419955697c94783d75fa3cf56e8a7c7118c97ef36600c",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_613a83e984e35bcd8b75a433/floor_report.md",
+    "bytes": 1511,
+    "sha256": "90649f3ad431c773225ea393e621a59dc6cc2e47e6609465ed8c0fa0ecd3eb79",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_56d52dddb42e1ebd0b131b40/floor_report.md",
+    "bytes": 1520,
+    "sha256": "60a2749de84028d2e44548b7aa41e652ab7952cb81c880ca0434b431432fb623",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_5654d0f63b638b1c4604eb5e/floor_report.md",
+    "bytes": 1519,
+    "sha256": "ab4291a9443b06723fe2048326d42b7fd0d9b25bafbb140acc7fba7df3a026cd",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_187a051a13889606c4d6c2b8/floor_report.md",
+    "bytes": 1520,
+    "sha256": "ae4c72d22d2e770ad45c7ee6624191cbb1f5a3dc019fafdbe2ba7c890620a9da",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_5db4c426bc22afcf521d22d9/floor_report.md",
+    "bytes": 1514,
+    "sha256": "24a4839fd700318fd8903ee6086e2695f97131bb30215aa145c06ddab2787343",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_robust_rooms/floor_a8f682266b33021442689cd4/floor_report.md",
+    "bytes": 1513,
+    "sha256": "d14a441e0ec6cc78522e5ca93f267d1590cde1d59de5031c4da9609515fcfae2",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_3112bf984b4be345641f2983/floor_report.md",
+    "bytes": 1523,
+    "sha256": "ed95a34b07f431b21ffb34e64579847e6f0bad9d0eff664ef04785efb6e46530",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_e24ec4b67d8d47236b6239f3/floor_report.md",
+    "bytes": 1550,
+    "sha256": "21d82028d473f988a62be0521241dd5b51ff8e7792c43dba6fc3bf46adf2a1e1",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_70fdcbd54a8bf40ef0801e8b/floor_report.md",
+    "bytes": 1501,
+    "sha256": "c68efd72312938afa478bfeebd97daf5d2fa08c6f93f11c7287123c23f242f4e",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_78f86eb0eda006494ab42afd/floor_report.md",
+    "bytes": 1518,
+    "sha256": "6bdf5727026137c344c380ce5370b777c64b0efdfb8c23a9486aab8aec1d7c4a",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_1e0bac41462149f8544fc9e1/floor_report.md",
+    "bytes": 1631,
+    "sha256": "950440ff3a690bf03452ab4dbdc82e95fa41fcaecc03a8947f3066fd791d1790",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_f2b872e9b0b5efa5ed21dba8/floor_report.md",
+    "bytes": 1559,
+    "sha256": "0250f4fc47f5b540410c98b2c2083082c4c5648de08d5b03e217a8f88a0e5d71",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_bb6687a3575f62badc29712d/floor_report.md",
+    "bytes": 1562,
+    "sha256": "20ea717bc4d31ff5818598a4c9d85d45c22f3d1fa52cc58344dff1f4745b243b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_a71328a43f233a1478b275ac/floor_report.md",
+    "bytes": 1484,
+    "sha256": "4be87cd346bf65bba96408646e4599ccb9bf8c62be0035e5ab47b31330eb522b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_51fe53ed945b4afb9f30425c/floor_report.md",
+    "bytes": 1553,
+    "sha256": "aae9b8be3fa40c477f5c8fc5443bbab33bc73bfdd790a1c7ad5f65c3a9148e8d",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_45bcf94c0ef6efe44e259b71/floor_report.md",
+    "bytes": 1570,
+    "sha256": "334b6aca243ad04f36868581ecf41c16a64cd3d1f7a2334c87e417221129bab2",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_19064ab4515c8179fa9ebef8/floor_report.md",
+    "bytes": 1592,
+    "sha256": "43c3b75e2e8f53bc1d20b72a1066712e5258ed959f9dce7feb0f5e30db1b3819",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_af7630c78438e7fa37939592/floor_report.md",
+    "bytes": 1519,
+    "sha256": "0ecd0524708576db51171cfd3ab18cc1cb951843b2d6cba0af6ab3508c1273b6",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_d08a1bc47177fa0b6bdccb41/floor_report.md",
+    "bytes": 1581,
+    "sha256": "d00420270708ea289d7353b036a97ea299ecc1070e6eb91a1e6aa147f16c57a0",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_00b1200525a3dd38093a16c8/floor_report.md",
+    "bytes": 1583,
+    "sha256": "43bab29316614cacb79549446a603084b43ec1388aed09e7a1469e80b66c53b8",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_613a83e984e35bcd8b75a433/floor_report.md",
+    "bytes": 1488,
+    "sha256": "ecbff09b9b133807c9282d16c91c8d741aa5e894bc8c2bd91f866610f201e01f",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_56d52dddb42e1ebd0b131b40/floor_report.md",
+    "bytes": 1597,
+    "sha256": "753b66cecc449b92c0094708e7619b7967dc96eb8be1be28b97a7b769b0e92bf",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_5654d0f63b638b1c4604eb5e/floor_report.md",
+    "bytes": 1539,
+    "sha256": "099f45ba218f415a15cd1fcc7bffd6bda443c8f5e17611e2b50285ec100cea71",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_187a051a13889606c4d6c2b8/floor_report.md",
+    "bytes": 1549,
+    "sha256": "0368a9fc0f0dc57e9caf5516d5d23750c550d0ee5699cbcfafa68fb42a12b338",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_5db4c426bc22afcf521d22d9/floor_report.md",
+    "bytes": 1591,
+    "sha256": "faf0e192341615389bbcf1dd38b9b627d47b4661f16b7ad64a0a9681ff096b77",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/strict_t70_none_observations/floor_a8f682266b33021442689cd4/floor_report.md",
+    "bytes": 1534,
+    "sha256": "210b51d89b7a814b11d3b98bef2945e26f0d0d7f5d0a7aeb9efcca74caa9a336",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_3112bf984b4be345641f2983/floor_report.md",
+    "bytes": 1516,
+    "sha256": "8b7a6e162d567e8364a7eb5aed55b6d595e382bd8052592b297b708d704f0585",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_70fdcbd54a8bf40ef0801e8b/floor_report.md",
+    "bytes": 1550,
+    "sha256": "c700e543145d17a7d1efbdcd38afcf78c17b01824fcd0ffca620153523859cda",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_78f86eb0eda006494ab42afd/floor_report.md",
+    "bytes": 1517,
+    "sha256": "dc0b75374a027e37b2b28eb388c8959db7b5fbcdb8860cd543dbdbbcf70f6144",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_f2b872e9b0b5efa5ed21dba8/floor_report.md",
+    "bytes": 1512,
+    "sha256": "217a04335429254eb2459754f06c39730c203726ba1b30d14015505f84b7c4ba",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_a71328a43f233a1478b275ac/floor_report.md",
+    "bytes": 1548,
+    "sha256": "170b56cad855e7a534ec613fe3ac089eaa6402ef4775608f4c11e28d9618c89b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_19064ab4515c8179fa9ebef8/floor_report.md",
+    "bytes": 1519,
+    "sha256": "6de9d35faa7e118ba0b41db5f45b6aa8dd7158c29ab0ac63f56ac09371a36ff6",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_af7630c78438e7fa37939592/floor_report.md",
+    "bytes": 1513,
+    "sha256": "36c23c76baaab80499b007b792cb59a11faa195a7b872449ac4402e1a9d93dce",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_613a83e984e35bcd8b75a433/floor_report.md",
+    "bytes": 1548,
+    "sha256": "f7e430ced14ac09ec809c3f2016cf8c348509354cb46358876dea696990c2591",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_56d52dddb42e1ebd0b131b40/floor_report.md",
+    "bytes": 1515,
+    "sha256": "c90c4d7592f2e8c874c9f2aed8ac6caa69c4e639753e125328a4668aa8aea349",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t50_robust_rooms/floor_a8f682266b33021442689cd4/floor_report.md",
+    "bytes": 1513,
+    "sha256": "def7b0de660c5a517178e51d6920987bee539967f10a0d0cd106d39874333d05",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_3112bf984b4be345641f2983/floor_report.md",
+    "bytes": 1517,
+    "sha256": "8fac1b8533e9598619754b7bbd4f2a2653b877b77db150cae6df61d6db9190df",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_e24ec4b67d8d47236b6239f3/floor_report.md",
+    "bytes": 1518,
+    "sha256": "7eec420104c2b0af0422137752b71976d827b6483b4176db5252b69bf4ec206f",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_70fdcbd54a8bf40ef0801e8b/floor_report.md",
+    "bytes": 1510,
+    "sha256": "e1854062d84871981a4c761eb0510c19d5593b53c0f6612d82c9b3125582fcc8",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_78f86eb0eda006494ab42afd/floor_report.md",
+    "bytes": 1521,
+    "sha256": "3fb71b5dea01417ddadde6b34a95c4a95342db5e50be1e0ec44e3044f95b565e",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_1e0bac41462149f8544fc9e1/floor_report.md",
+    "bytes": 1511,
+    "sha256": "4ed401d29e8e35140c7cf839167c7c02f4c570d843d861373076585d2821f98a",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_f2b872e9b0b5efa5ed21dba8/floor_report.md",
+    "bytes": 1511,
+    "sha256": "6a46f88e1169d581ed81bc737ccacfdbde41a08e61179c216384b7b33824cd5b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_bb6687a3575f62badc29712d/floor_report.md",
+    "bytes": 1511,
+    "sha256": "291eedcba58f0ad34bf5c56c3562e62d387d0468dac89c1f19a794c027c5f5d0",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_a71328a43f233a1478b275ac/floor_report.md",
+    "bytes": 1507,
+    "sha256": "a339f2c89932b116e03b3b4cfa0bab90c77c6f37bd8e0cd64f957b01d89388d2",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_51fe53ed945b4afb9f30425c/floor_report.md",
+    "bytes": 1508,
+    "sha256": "269fdbcc35217d807981dd132d57f4b5af01e6b14a02a6ad868f27bc1cea43c9",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_45bcf94c0ef6efe44e259b71/floor_report.md",
+    "bytes": 1510,
+    "sha256": "e01745742cf371ca7fc8f38f5d3b5d433dec739c42f02103adad82cc175564d3",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_19064ab4515c8179fa9ebef8/floor_report.md",
+    "bytes": 1515,
+    "sha256": "ffb5883b3bc8e5d63a7d701a295cb7d8efa9f7f194e9e025bf146e5bfd8c7459",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_af7630c78438e7fa37939592/floor_report.md",
+    "bytes": 1512,
+    "sha256": "de48985da6c6358cca8772aba1a8b7a8752bfc0bb89f17c5138bf84474511aba",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_d08a1bc47177fa0b6bdccb41/floor_report.md",
+    "bytes": 1507,
+    "sha256": "acdaba55c69658b192228d2f7158d6d61bf84f136c3436653f0093367ca20f33",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_00b1200525a3dd38093a16c8/floor_report.md",
+    "bytes": 1518,
+    "sha256": "81cd41f34be08e9e5a0248a01ad43648f63b0f878033c03f7179f63580fc3213",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_613a83e984e35bcd8b75a433/floor_report.md",
+    "bytes": 1509,
+    "sha256": "313c5baca5ce18da436e73446df4c833da4006885c2b98c4adbe713e5e832c3c",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_56d52dddb42e1ebd0b131b40/floor_report.md",
+    "bytes": 1515,
+    "sha256": "7b200d912e778b397242b8f0e8ca61e848c43237989ac03a56525af4d295f1bd",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_5654d0f63b638b1c4604eb5e/floor_report.md",
+    "bytes": 1517,
+    "sha256": "c9e2eca73b2844347daca7fbf762ee797577eb7309680bd3a990311d950eaec1",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_187a051a13889606c4d6c2b8/floor_report.md",
+    "bytes": 1518,
+    "sha256": "56c6db4aecc92b96af635dfde5a426b1eba4618792122f04d1a2172b523f9462",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_5db4c426bc22afcf521d22d9/floor_report.md",
+    "bytes": 1510,
+    "sha256": "207328f34e008ee4cf22ebe7ec0c6c54a00097eb83855790aece65c0ac80780f",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/predictions/exploratory_t70_none_observations/floor_a8f682266b33021442689cd4/floor_report.md",
+    "bytes": 1509,
+    "sha256": "7286c4ba303668b4e7cd9a1c7b67764a2b54ee3eb061b7c64008d4ae209420c7",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/rgb_verified/floor_a71328a43f233a1478b275ac/floor_report.md",
+    "bytes": 1595,
+    "sha256": "bc452618620a77ebd830f912660ce14d206a34dd8e14077c097a11e029e62bdf",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_preliminary_20261025/rgb_first/floor_a71328a43f233a1478b275ac/floor_report.md",
+    "bytes": 1565,
+    "sha256": "f7063d54b848be0d0f7584aeac953ddb626d917886e25ce545babe0dd37496e9",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/texture_ambiguity_20261029/README.md",
+    "bytes": 3309,
+    "sha256": "1fb8797caa38d1b394d8eb3b6b7e10fd1d37777381a69b2d3d1e79521d787bed",
+    "title": "纹理相似房间对探索实验",
+    "headings": [
+      "# 纹理相似房间对探索实验"
+    ]
+  },
+  {
+    "path": "experiments/research1_pretraining_20261023/smoke20/floor_1c68d80c249a3a23bdadf67f/floor_report.md",
+    "bytes": 1528,
+    "sha256": "a62c59ded82ab4f7b7a67f905c4a5191e91bb2609f216170fc49a78ae49e86a3",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pretraining_20261023/legacy20/floor_report.md",
+    "bytes": 1500,
+    "sha256": "0af13d1ba7654bd2d0100309aedb4a620582d3b164b6cf61deb88cfe3920222a",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/ppt_real_outputs_audit/README.md",
+    "bytes": 8893,
+    "sha256": "67874fcf7c2324ca473e667a73fb62e11a05a5e9d3d6e01b90c251c239d6864d",
+    "title": "PPT 真实实验输出图审计摘录",
+    "headings": [
+      "# PPT 真实实验输出图审计摘录",
+      "## 统一模型与数据口径",
+      "## 收录图片",
+      "### `positive_match_01_from_04.png`",
+      "### `positive_match_01_from_04_frame_preserving.png`",
+      "### `positive_match_01_from_05.png`",
+      "### `positive_match_01_from_05_frame_preserving.png`",
+      "### `before_alignment_01_04.svg` / `before_alignment_01_05.svg`",
+      "### `negative_pair_04_05_independent_only.svg`",
+      "### `single_room_pred_vs_gt_01.svg` / `single_room_pred_vs_gt_04.svg` / `single_room_pred_vs_gt_05.svg`",
+      "### `relative_pose_pred_vs_gt_val_example.svg`",
+      "### `candidate_recall_predicted_vs_recall_topk_val_example.png`",
+      "## 未收录，因为当前没有合格现成图片",
+      "## 严禁误用"
+    ]
+  },
+  {
+    "path": "experiments/research1_main_20261024/README.md",
+    "bytes": 2376,
+    "sha256": "dceb7a16e674c8a746a6867f6d7d282baade16fa120399524beb0f9736e1200a",
+    "title": "研究点一扩大数据实验（2026-10-24）",
+    "headings": [
+      "# 研究点一扩大数据实验（2026-10-24）",
+      "## 机器托管"
+    ]
+  },
+  {
+    "path": "experiments/research1_main_20261024/controller_report.md",
+    "bytes": 682,
+    "sha256": "1329c47f670cd7161cd2b37fd81da4b7a7d0f29e8cb49d0d3ddcae2596a31488",
+    "title": "本机自动执行结果",
+    "headings": [
+      "# 本机自动执行结果"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/README.md",
+    "bytes": 2120,
+    "sha256": "f2a118a50491b917369b9af8d00848662c87964b1364c0b717fc446a45d504d0",
+    "title": "冻结 R3：位姿验证器实验",
+    "headings": [
+      "# 冻结 R3：位姿验证器实验"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/final_report.md",
+    "bytes": 4635,
+    "sha256": "f19a75460d64b976c2701995b15877e591af91ec2fcd8a492fa74afdbc9d7353",
+    "title": "冻结 R3 的位姿验证器实验",
+    "headings": [
+      "# 冻结 R3 的位姿验证器实验",
+      "## 本轮结论与失败原因",
+      "### 候选上限诊断（selection，跨房间）",
+      "## 交付与恢复记录"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_3112bf984b4be345641f2983/floor_report.md",
+    "bytes": 1678,
+    "sha256": "b44c9a08e9bf6cf1bec2daae454b7e03b8c2f59ff4bfdc99ced405d0c4d7c041",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_e24ec4b67d8d47236b6239f3/floor_report.md",
+    "bytes": 1679,
+    "sha256": "dc23037c5066c2023ba8f3c2c074532d659bf4972a5b22c64f26e773c34e13e0",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_70fdcbd54a8bf40ef0801e8b/floor_report.md",
+    "bytes": 1670,
+    "sha256": "0ca9b894bd49ebcf010ed42ef2e8e8499c8e993f46bc543534c796a15b4ac0ce",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_78f86eb0eda006494ab42afd/floor_report.md",
+    "bytes": 1681,
+    "sha256": "70f8b545398556f8e8805950262a09352abee75409a6e2d986592bac533d5138",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_1e0bac41462149f8544fc9e1/floor_report.md",
+    "bytes": 1670,
+    "sha256": "a9b5e4b98593bf294f39955eb5a580ba4b39082efee636dd6a4de46826053f1d",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_f2b872e9b0b5efa5ed21dba8/floor_report.md",
+    "bytes": 1666,
+    "sha256": "6858afbd62d90e0b919e37b71baa41b9b9e713d5ae6fa78a71ed66478f6f9bd4",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_bb6687a3575f62badc29712d/floor_report.md",
+    "bytes": 1667,
+    "sha256": "34d3650f365e6a7c2bf38c904caa381bedfaee8bf7b4b535e3bb01214e07604b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_a71328a43f233a1478b275ac/floor_report.md",
+    "bytes": 1671,
+    "sha256": "2fcf44b66d4cd6788246fb28357197d874a9ede339c75dbdfebe884f85fd1ea7",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_51fe53ed945b4afb9f30425c/floor_report.md",
+    "bytes": 1666,
+    "sha256": "85160f04e0aa30931948467835b6f8dca4f2be77e366ec8fcd4a0281d9fac836",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_45bcf94c0ef6efe44e259b71/floor_report.md",
+    "bytes": 1667,
+    "sha256": "26a852a5fbcaa59e05b1dd787de0ac7c23d90ed0c91bdb4f410f61fab21031f4",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_19064ab4515c8179fa9ebef8/floor_report.md",
+    "bytes": 1673,
+    "sha256": "2c5df426f5c99962e527fbed9a563b8757382a03fffc939a3f7a5165faf039bd",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_af7630c78438e7fa37939592/floor_report.md",
+    "bytes": 1670,
+    "sha256": "223606fd0e421d62b6d2ed168f3e4a3dce5bac0347b44c237229b263e72f2d62",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_d08a1bc47177fa0b6bdccb41/floor_report.md",
+    "bytes": 1669,
+    "sha256": "5a2efdfb448bba1dcfaec62dc3d4da6543c0ba69b524382c162265ae857cb49d",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_00b1200525a3dd38093a16c8/floor_report.md",
+    "bytes": 1677,
+    "sha256": "cba6531599cfb0a633ccbb514b93052462609f1f7d0538f5c0ff55eec02dcebe",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_613a83e984e35bcd8b75a433/floor_report.md",
+    "bytes": 1668,
+    "sha256": "c36c83b3674c480634ca5654e3c5d1abaeb6b32b1414c190809c169d6930180a",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_56d52dddb42e1ebd0b131b40/floor_report.md",
+    "bytes": 1671,
+    "sha256": "38a3b3d4bebe4f737b77bafd59299a2b800d667ba5b65f9a7539742449590831",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_5654d0f63b638b1c4604eb5e/floor_report.md",
+    "bytes": 1678,
+    "sha256": "91a7b2d74dc27fe32d359e0cd1933898aaa058dbcf3ca31a336fafeccc32750b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_187a051a13889606c4d6c2b8/floor_report.md",
+    "bytes": 1676,
+    "sha256": "913621e8331b109397c02b6aa25b24a909123696d03393a09f0d2e014937d99f",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_5db4c426bc22afcf521d22d9/floor_report.md",
+    "bytes": 1670,
+    "sha256": "f31a53188045f1b8f465c54091313f604536ef227dbff618f412b60cb6c9d53f",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_rank/floor_a8f682266b33021442689cd4/floor_report.md",
+    "bytes": 1666,
+    "sha256": "2f79e1923837065771f3db612ddd412828872514b64292129353d456a7c90475",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_3112bf984b4be345641f2983/floor_report.md",
+    "bytes": 1720,
+    "sha256": "9735ed388f9ba0de96caaead9d066e35ef1794ba19c49d114008d5de9fd400a8",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_e24ec4b67d8d47236b6239f3/floor_report.md",
+    "bytes": 1712,
+    "sha256": "9742a84a5ba9bf3635f7e188e661c22ec159c0b72eea86c7a40c6807f47203ae",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_70fdcbd54a8bf40ef0801e8b/floor_report.md",
+    "bytes": 1698,
+    "sha256": "dc8be28acd69fd5fab1a13edbf5ee11d194e2e604f6117d40c7a5362dc5969c8",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_78f86eb0eda006494ab42afd/floor_report.md",
+    "bytes": 1715,
+    "sha256": "3ab46171ddcc1243de045c1e6b83fec4009a297fb7f04f9cff2ad668cbc6d5d3",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_1e0bac41462149f8544fc9e1/floor_report.md",
+    "bytes": 1791,
+    "sha256": "fe9e89430c4f231ed10960269d40ff9ff5ec923bb375d298c4fdf57197be617a",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_f2b872e9b0b5efa5ed21dba8/floor_report.md",
+    "bytes": 1756,
+    "sha256": "6f2e552597a0e255b3afc1b78ea4625422a7ef1a8df30725da58667ada3d5b5f",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_bb6687a3575f62badc29712d/floor_report.md",
+    "bytes": 1723,
+    "sha256": "cc54df2db945c34518b528186bd918aa918c14cd33fa38ba678448ebefb299d7",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_a71328a43f233a1478b275ac/floor_report.md",
+    "bytes": 1680,
+    "sha256": "1b41ffd380df66eb02413c2defd5633a08f8a0566146b86e95ac78dc652cd054",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_51fe53ed945b4afb9f30425c/floor_report.md",
+    "bytes": 1713,
+    "sha256": "2007f62e17786f4e246d265e1b40513b69d0bb0f8b26e0a21a38fa33ae92c13c",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_45bcf94c0ef6efe44e259b71/floor_report.md",
+    "bytes": 1729,
+    "sha256": "7c37630d86ff9e680cdecb6740a83a58322fb44f10a7ff541e9bf8b196c6f52f",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_19064ab4515c8179fa9ebef8/floor_report.md",
+    "bytes": 1789,
+    "sha256": "9841f9e06600225ddd264a4404461f5df726afa7fc2b7c819f047fe2d8a27822",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_af7630c78438e7fa37939592/floor_report.md",
+    "bytes": 1717,
+    "sha256": "7c45f909791359afef11999740d24229b962a4397d439baa44171df2ec073625",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_d08a1bc47177fa0b6bdccb41/floor_report.md",
+    "bytes": 1741,
+    "sha256": "680b2d2a0cd867bf11c8f0078cfd53b7ad74c4f0d20f9e375d23278b3ba58480",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_00b1200525a3dd38093a16c8/floor_report.md",
+    "bytes": 1742,
+    "sha256": "ff830880af09fa584c090000d85e81c982c322bef0f56605b70a379c42a9bbc5",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_613a83e984e35bcd8b75a433/floor_report.md",
+    "bytes": 1684,
+    "sha256": "6a921c19449f752adf96aebf796fb2645ef25395b2df74f3387cabf456407772",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_56d52dddb42e1ebd0b131b40/floor_report.md",
+    "bytes": 1793,
+    "sha256": "793007d982b92dd1942d0763decbb024afdba9293b493c4a7ceafb2cbe4c28f2",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_5654d0f63b638b1c4604eb5e/floor_report.md",
+    "bytes": 1701,
+    "sha256": "9471fe76f3912fccc7a82eb82d5ecbbff4bad3ff0257f90102be92dd60c526b4",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_187a051a13889606c4d6c2b8/floor_report.md",
+    "bytes": 1708,
+    "sha256": "646def3a36f4948eb13da4edc153246a3294b9f42e2ce3239ea962075a423c3d",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_5db4c426bc22afcf521d22d9/floor_report.md",
+    "bytes": 1751,
+    "sha256": "6a31d637a5fd755a6243e3a3d9cfbd9149e621928853b2ac7f3b95018a5c018e",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter/floor_a8f682266b33021442689cd4/floor_report.md",
+    "bytes": 1732,
+    "sha256": "1c1457dff6a7fdfe23737b7d369801f26f977ce43ca6bdb8bbbe2f889e2477af",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_3112bf984b4be345641f2983/floor_report.md",
+    "bytes": 1570,
+    "sha256": "47d4c82c1bcbc22033b4e8d0e0656aefe6c2e30168239b344f00f5154ce2c243",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_e24ec4b67d8d47236b6239f3/floor_report.md",
+    "bytes": 1574,
+    "sha256": "953ea1875b97665785cf6f59ea8321699061bf1f5f1624a1603673f38514e4ce",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_70fdcbd54a8bf40ef0801e8b/floor_report.md",
+    "bytes": 1565,
+    "sha256": "cf7e380ec50a2d173713f1143b6ac6c9157a7e29f282f031c550361a6aeb0f4c",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_78f86eb0eda006494ab42afd/floor_report.md",
+    "bytes": 1574,
+    "sha256": "b606509e44044c8fdbf139e51d9f5df6eba547513b3785b1b60ff0ebd0495269",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_1e0bac41462149f8544fc9e1/floor_report.md",
+    "bytes": 1564,
+    "sha256": "c4670920245ace5b71510e6b058cc14f6d95dda3c50207733e84a4834e8c4d47",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_f2b872e9b0b5efa5ed21dba8/floor_report.md",
+    "bytes": 1565,
+    "sha256": "d7f0ef9e4ddcebe81762a68f678031c08ac565ad915a4eea0962a653648571e7",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_bb6687a3575f62badc29712d/floor_report.md",
+    "bytes": 1564,
+    "sha256": "5e67067bd19a3895da9d642e9ceb11b0cac1455253234198991251222f606a8b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_a71328a43f233a1478b275ac/floor_report.md",
+    "bytes": 1561,
+    "sha256": "a3de1643fa9813e06d6befca912cb4526ad7bba88650f6038718eb7808258170",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_51fe53ed945b4afb9f30425c/floor_report.md",
+    "bytes": 1564,
+    "sha256": "5d0fef0dd587a89a4905a907ee283fe95c32f3b3e29ea8cb6fa7706def985c0d",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_45bcf94c0ef6efe44e259b71/floor_report.md",
+    "bytes": 1562,
+    "sha256": "697800adba652abd3016f6e602a2a2167a605fd8b9d4f3f1d361b72b636a754c",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_19064ab4515c8179fa9ebef8/floor_report.md",
+    "bytes": 1569,
+    "sha256": "68df910814d9541343b78ef3d9fe59200143cbe84acd94c2f1c7a20abf8691ea",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_af7630c78438e7fa37939592/floor_report.md",
+    "bytes": 1566,
+    "sha256": "2d6ae7a04da6b38398a74de33e941ad491cae9ea18df09a2de7e1bc57af2f377",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_d08a1bc47177fa0b6bdccb41/floor_report.md",
+    "bytes": 1563,
+    "sha256": "9e028e07606462f6909dfb8113e4816799359e64ee9875f60f84338bfe917c25",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_00b1200525a3dd38093a16c8/floor_report.md",
+    "bytes": 1571,
+    "sha256": "bcc2f37234db692618774567043d84798d11bea88d053add2f6ef553f0437a6b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_613a83e984e35bcd8b75a433/floor_report.md",
+    "bytes": 1562,
+    "sha256": "4375ab0cca816ef82456346bf1b7752f95c49c50728ceb6699c820e5b21739e8",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_56d52dddb42e1ebd0b131b40/floor_report.md",
+    "bytes": 1568,
+    "sha256": "f546669a8e2a139dc6e4d48642d06bd8ee22087ce2dde1576827b3ffc263f381",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_5654d0f63b638b1c4604eb5e/floor_report.md",
+    "bytes": 1571,
+    "sha256": "dea4c0c99ad3952d79774ec785f3e1c9ef1448b0e6e3805e6c1cd5466631a7d5",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_187a051a13889606c4d6c2b8/floor_report.md",
+    "bytes": 1569,
+    "sha256": "992cac11e6a65e1caa3b4cb1ebfc15dd8463a7684f8659b871ef09ae5c23fbb2",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_5db4c426bc22afcf521d22d9/floor_report.md",
+    "bytes": 1561,
+    "sha256": "70fa90a309a58b35a68ddf700b1b2682648730cc2239ba9e05cbcc7347134d8c",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/geometry_forest/floor_a8f682266b33021442689cd4/floor_report.md",
+    "bytes": 1563,
+    "sha256": "3fec99309d518138e1b419341f222d434bef7598c2f7e5b7aa521e3e1e75cd5e",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_3112bf984b4be345641f2983/floor_report.md",
+    "bytes": 1720,
+    "sha256": "8391bede8f7c0ee7d025917a56ea5c2e086797fd20f40aed3fc38e87d959d962",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_e24ec4b67d8d47236b6239f3/floor_report.md",
+    "bytes": 1712,
+    "sha256": "a464d3d9906caacc41033a6f99c6bc03385a9f39e0571104286f3725cbc69ce6",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_70fdcbd54a8bf40ef0801e8b/floor_report.md",
+    "bytes": 1698,
+    "sha256": "8c54281d5cd805c922f79b79023c1d0b408a0a9b97db029d4ea50b02217b1e2c",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_78f86eb0eda006494ab42afd/floor_report.md",
+    "bytes": 1714,
+    "sha256": "742d009bd84e813de85b295c07165a816a6ba33b66eeb7b357cd48e1e5f68a8b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_1e0bac41462149f8544fc9e1/floor_report.md",
+    "bytes": 1791,
+    "sha256": "e461ebd15eddd425427f6e20ec0de05215f8e4eb99d2da3ef08f97e93d76dbd2",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_f2b872e9b0b5efa5ed21dba8/floor_report.md",
+    "bytes": 1754,
+    "sha256": "3d7df1b4e5010b6f15cfd1689d5fc9667d928ad8acc2cd571e4749080b0a27ed",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_bb6687a3575f62badc29712d/floor_report.md",
+    "bytes": 1720,
+    "sha256": "1d47626c597528ddeefee29af3f5bc3f1badd93e0ff5f4c667a1b79cae75ab5d",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_a71328a43f233a1478b275ac/floor_report.md",
+    "bytes": 1679,
+    "sha256": "53150ad020b357853b277117a361bb6f23dac3c0e480a2167bb51d07b9bd5e85",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_51fe53ed945b4afb9f30425c/floor_report.md",
+    "bytes": 1715,
+    "sha256": "289b106dd712657313d4d6dfe142cc46098a7163c2ad1493d6915b06ecc142f0",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_45bcf94c0ef6efe44e259b71/floor_report.md",
+    "bytes": 1727,
+    "sha256": "96620258ec5614775c79522499f89356d9de58cdd99331853b87df9fa6fd45f3",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_19064ab4515c8179fa9ebef8/floor_report.md",
+    "bytes": 1789,
+    "sha256": "c25a78399e15514def439f0ca98ac3ee2be27f0790f4e187adc07703f3ead709",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_af7630c78438e7fa37939592/floor_report.md",
+    "bytes": 1716,
+    "sha256": "04f596642fe5083a954aa6abf6a2a5694c5818c5a1d6ebe896528c2c511de617",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_d08a1bc47177fa0b6bdccb41/floor_report.md",
+    "bytes": 1739,
+    "sha256": "b1eb5ecd28ef4d44b7755fd71f8311b75fd86a45a7a318ced92ed6449472209a",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_00b1200525a3dd38093a16c8/floor_report.md",
+    "bytes": 1743,
+    "sha256": "1011b3759c309f780feb395b33cde617019bbae17f25ed60430f1808bfbe93dc",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_613a83e984e35bcd8b75a433/floor_report.md",
+    "bytes": 1682,
+    "sha256": "a3a2f9449d9c127c3b8ebce12f9b768677e2ce99a2092deccbdec2649b0c4b4e",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_56d52dddb42e1ebd0b131b40/floor_report.md",
+    "bytes": 1794,
+    "sha256": "324125a0ef04ecddf5a411bcaa5a87f748d28d378c6fac1d5dc2a56affafd01f",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_5654d0f63b638b1c4604eb5e/floor_report.md",
+    "bytes": 1703,
+    "sha256": "e6cfca462bd9b8faea8530cf099eb924cb03ef358aff78d2e1dd744d9ab210d0",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_187a051a13889606c4d6c2b8/floor_report.md",
+    "bytes": 1709,
+    "sha256": "ce61b7f97d57f912b9c2b6234816a645dda827214819cf7a05baa6c2bad94ff7",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_5db4c426bc22afcf521d22d9/floor_report.md",
+    "bytes": 1753,
+    "sha256": "2dfc5a351fb95927308b8aa2aaae43a0deaa6ffe6c21fe1f2cf73d42bd944d6d",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_verifier_20261025/predictions/verifier_filter_pgo/floor_a8f682266b33021442689cd4/floor_report.md",
+    "bytes": 1733,
+    "sha256": "1ae4ae1da63a2122365171110c060b263d116449068c76b98c1c05b3cea1589f",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_opening_pairs_20261023/scheduled_followup/README.md",
+    "bytes": 1304,
+    "sha256": "5f1f50b681d25354483631147ce760cebaadd76c34e196b0e1ca3f64b7de7ba2",
+    "title": "五小时后项目续做任务",
+    "headings": [
+      "# 五小时后项目续做任务"
+    ]
+  },
+  {
+    "path": "experiments/research1_opening_pairs_20261023/scheduled_followup/prompt.md",
+    "bytes": 4107,
+    "sha256": "9c9b17bf95b2cdd19b5db807a66b2f350359cf29694e21a654eb98d8ca557e06",
+    "title": "prompt.md",
+    "headings": []
+  },
+  {
+    "path": "experiments/salve_dav2_20261029/README.md",
+    "bytes": 6347,
+    "sha256": "632b29d1fcb98b222faa33568f17c6860a19d807daad7710fb3a19f4efed2e18",
+    "title": "SALVe + Depth Anything V2 适配实验",
+    "headings": [
+      "# SALVe + Depth Anything V2 适配实验",
+      "## 实际运行结果",
+      "## 替换细节与可比性",
+      "## 复跑命令",
+      "# 1. 替代深度",
+      "# 2. 官方候选生成；此目录已存在时脚本会拒绝覆盖，复跑需选新目录",
+      "# 3. 预计算深度 -> 官方 RGB BEV；缺深度会明确报错，不回退到 HoHoNet",
+      "# 4. 冻结官方验证器",
+      "# 5. PGO、预测布局融合、分量可视化、事后错误诊断",
+      "# 几何单测"
+    ]
+  },
+  {
+    "path": "experiments/zind_e2e_v2/preflight/ZInD_v2_preflight.md",
+    "bytes": 15023,
+    "sha256": "f264da4dab528a3f261726eaa4a96384be00f26faf7ebdd2d2179c2bf761171a",
+    "title": "ZInD v2 训练前预检报告",
+    "headings": [
+      "# ZInD v2 训练前预检报告",
+      "## 1. 基线、checkpoint 和数据契约",
+      "## 2. 关卡 A：真实数据兼容性",
+      "## 3. 关卡 B：G0、有限扫描与 G1",
+      "### G0 完整 validation",
+      "### G0 → G1",
+      "### 失败分类迁移",
+      "## 4. 关卡 C：四种 source 的误差隔离",
+      "## 5. 关卡 D：固定 train 子集 T0–T3",
+      "## 6. 是否可以启动正式 T0–T3",
+      "## 7. 产物与复现命令",
+      "## 8. 工作区变更与校验"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/final_report.controller.md",
+    "bytes": 2068,
+    "sha256": "1a26975e7dd6ec73d44c45989fbba34735607d3f336d750bf22c3143648f5afa",
+    "title": "固定 R3 的开口几何对照",
+    "headings": [
+      "# 固定 R3 的开口几何对照",
+      "## 后续阶段"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/geometry_report.md",
+    "bytes": 1379,
+    "sha256": "4b03d4db2aeeda804608c8f2483fbf4cc94075ab9799070b99623927a5b57dc2",
+    "title": "固定 R3 的开口几何对照",
+    "headings": [
+      "# 固定 R3 的开口几何对照"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/final_report.md",
+    "bytes": 5240,
+    "sha256": "8322640228dec489222b3b2c0279220326f0e55a05759a5876e162140af41dee",
+    "title": "开口几何对照与位姿验证器受控重训：最终结果",
+    "headings": [
+      "# 开口几何对照与位姿验证器受控重训：最终结果",
+      "## 几何结果",
+      "## 训练与工作点",
+      "## 七项指标",
+      "## 接边诊断",
+      "## 交付与验证"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_3112bf984b4be345641f2983/floor_report.md",
+    "bytes": 1761,
+    "sha256": "41423a1b5fc78456078c652eed0f16f890954bc6c27f4822cf65b4315db2afa6",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_e24ec4b67d8d47236b6239f3/floor_report.md",
+    "bytes": 1770,
+    "sha256": "e97bbb21d7aa53242e1ecf33d4f07b7c6218a663248da059acab34f774944f29",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_70fdcbd54a8bf40ef0801e8b/floor_report.md",
+    "bytes": 1757,
+    "sha256": "bfae054b711352c1f4cb7195703c37a4ea65d8a35884b34236d5cfe2d0ab74b8",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_78f86eb0eda006494ab42afd/floor_report.md",
+    "bytes": 1770,
+    "sha256": "bc644db56832061fd158a5f9ee64782165d7dff5a03250fc181d262c2bfff40b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_1e0bac41462149f8544fc9e1/floor_report.md",
+    "bytes": 1759,
+    "sha256": "8b8fbbaf9199f75a5d9ed8d739ebe6b9df915b526a7fc11d7a9607f95263faf2",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_f2b872e9b0b5efa5ed21dba8/floor_report.md",
+    "bytes": 1754,
+    "sha256": "47c8d080f5ecba53a8b68348058fc0ab0f016946f05d14c644474c7abc5f759c",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_bb6687a3575f62badc29712d/floor_report.md",
+    "bytes": 1754,
+    "sha256": "2ad0459cdd93fe5da664f40df20e6f4c8c85e8dc637bc07f8099b1daeb30a8b4",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_a71328a43f233a1478b275ac/floor_report.md",
+    "bytes": 1758,
+    "sha256": "b1897184a57fae554a08e98c3f81d36fcd23286ef2a3877231050393a67faf9b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_51fe53ed945b4afb9f30425c/floor_report.md",
+    "bytes": 1755,
+    "sha256": "99ff6f586c36155832a4cef0a6c0ec072f9fa22580ecd1b576dd91b5c6109a5a",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_45bcf94c0ef6efe44e259b71/floor_report.md",
+    "bytes": 1755,
+    "sha256": "94e52f6f1886e267d74aebeba0416d13b3f4c429fb586b134fb3c503496ed44a",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_19064ab4515c8179fa9ebef8/floor_report.md",
+    "bytes": 1758,
+    "sha256": "b94f3be0e9513e5e971a308fe2326b7a51118c18c43bb694fe038503d5af8dd0",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_af7630c78438e7fa37939592/floor_report.md",
+    "bytes": 1758,
+    "sha256": "244fd43be13c49fd0f2b3380559d05f59daed514331755aac57f15b029190cd9",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_d08a1bc47177fa0b6bdccb41/floor_report.md",
+    "bytes": 1755,
+    "sha256": "e0c30081ee66137a03fc841edd80db21e099f9fd48a6f03b585336ad2a1d7fb4",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_00b1200525a3dd38093a16c8/floor_report.md",
+    "bytes": 1767,
+    "sha256": "2c4b385a7de0f467e621f9ad479a9a04a64d5e76c11b11c9e6f30303f5e73a22",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_613a83e984e35bcd8b75a433/floor_report.md",
+    "bytes": 1751,
+    "sha256": "f169407b799cba33eb08b27f546aebd71e9ad7c6e43c80465c4c4c418c6209a0",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_56d52dddb42e1ebd0b131b40/floor_report.md",
+    "bytes": 1763,
+    "sha256": "0941c858c4b3e57fa678e4c87059e908e0820af420a31f30646dc158bba2cde7",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_5654d0f63b638b1c4604eb5e/floor_report.md",
+    "bytes": 1761,
+    "sha256": "a7fcec172eb0d212c0633b0a2f304555b0966b84689891278fbac27819a19de7",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_187a051a13889606c4d6c2b8/floor_report.md",
+    "bytes": 1763,
+    "sha256": "d3dfb34a20fdb690470d62482e84d11d1682ad85071bf6687f3239772212b537",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_5db4c426bc22afcf521d22d9/floor_report.md",
+    "bytes": 1756,
+    "sha256": "76fbb74f4fc167d05f2b13d63ad54f70510a7b0102845f698d8f8de897628573",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/B_V1_rank/floor_a8f682266b33021442689cd4/floor_report.md",
+    "bytes": 1751,
+    "sha256": "084363a0316660a4df20ac1d267bb849b9be6743742f4e8cd9dccb1723c23a92",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_3112bf984b4be345641f2983/floor_report.md",
+    "bytes": 1808,
+    "sha256": "6aa56210c03ffc2b0ca23db745b0f9dc0caccbd6ff18dd0b1d842b09347548b9",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_e24ec4b67d8d47236b6239f3/floor_report.md",
+    "bytes": 1800,
+    "sha256": "b0ef84d3d76a0f30f5e1f180904bbdaa830798628f03342d40e2d2a489cc0793",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_70fdcbd54a8bf40ef0801e8b/floor_report.md",
+    "bytes": 1785,
+    "sha256": "e7757177a25fe8d683db3bc8eba99a7cda51a9f3f8433f8a48f20d339066fd91",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_78f86eb0eda006494ab42afd/floor_report.md",
+    "bytes": 1805,
+    "sha256": "a550162e8fa9f68025779281202ce9b89e4eb672b6f1e80e7ec2588bd2b6378f",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_1e0bac41462149f8544fc9e1/floor_report.md",
+    "bytes": 1879,
+    "sha256": "48075cf216f79f3e07353d1cb4633071caa83ad16f6ac3b1d24404aebe97cd6d",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_f2b872e9b0b5efa5ed21dba8/floor_report.md",
+    "bytes": 1843,
+    "sha256": "c7a3c49e06b1bf5b9d60d1913292b6a099d5e22ad93999702853a8729097e85e",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_bb6687a3575f62badc29712d/floor_report.md",
+    "bytes": 1811,
+    "sha256": "927d4fd946084022be2c8b69e9e8c0bcc5b87f76e00866487a96d421d5b8cf57",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_a71328a43f233a1478b275ac/floor_report.md",
+    "bytes": 1770,
+    "sha256": "bc83b72e0ae76cb6c980b9d7fe245b54cc1537cb8101f54078314d73da2c78d9",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_51fe53ed945b4afb9f30425c/floor_report.md",
+    "bytes": 1805,
+    "sha256": "467535802dec1c9c2d44ad33186606d55cab6f3770b0aecf972356a0ac67ee15",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_45bcf94c0ef6efe44e259b71/floor_report.md",
+    "bytes": 1817,
+    "sha256": "f941157b32ede20b8e5411f7140ab9cdc148b07e8ac6d74f4d93b7d6061256fc",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_19064ab4515c8179fa9ebef8/floor_report.md",
+    "bytes": 1881,
+    "sha256": "a3ddb6b3f8ad6ba6f237e3b905f17b6f1fdde65615931e5613f7e073759e350b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_af7630c78438e7fa37939592/floor_report.md",
+    "bytes": 1806,
+    "sha256": "834b049106add59152133ea1a289b260bd0156c55f34ddc62966e97cdff47053",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_d08a1bc47177fa0b6bdccb41/floor_report.md",
+    "bytes": 1829,
+    "sha256": "e382e4ae43daa3c074048f50752098cbbb9227b02c13ca2acc1d1324e0449527",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_00b1200525a3dd38093a16c8/floor_report.md",
+    "bytes": 1832,
+    "sha256": "d26600afaff190893ff179ad7823fc8626c8834cc7a4324f75be849dbe0dffc9",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_613a83e984e35bcd8b75a433/floor_report.md",
+    "bytes": 1772,
+    "sha256": "764479cad35c01a77fa0dd039db36dfba370a87410b23e52e0e442ef160323a5",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_56d52dddb42e1ebd0b131b40/floor_report.md",
+    "bytes": 1883,
+    "sha256": "a591747545fcae7f3923ad806100291933254bcd155601deab562da17eae8f3e",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_5654d0f63b638b1c4604eb5e/floor_report.md",
+    "bytes": 1792,
+    "sha256": "443069bc57d9e6819a557dc8d2fdf14c9059b9e725fca3e34775f19bde2d7eb8",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_187a051a13889606c4d6c2b8/floor_report.md",
+    "bytes": 1798,
+    "sha256": "332c5b195098bcb79bc95194e0887664dd4c6708acce7094bd9acc5dacc61ebd",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_5db4c426bc22afcf521d22d9/floor_report.md",
+    "bytes": 1840,
+    "sha256": "bfccc076154714550acab3d59b7af66a1e1cceb18ea040b0fe7b2a7bdec3d2ab",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/C_V0_filter/floor_a8f682266b33021442689cd4/floor_report.md",
+    "bytes": 1820,
+    "sha256": "58e95f2a9ca082b0680d58a32af571eae6105cee93afa7947ee9574e673061f0",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_3112bf984b4be345641f2983/floor_report.md",
+    "bytes": 1801,
+    "sha256": "fe32d409576c7f9116678aa599b08338f3d95e20849682b97e6753f01d8e8b98",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_e24ec4b67d8d47236b6239f3/floor_report.md",
+    "bytes": 1795,
+    "sha256": "f64d0b2de852000b58077e25b4fe127d9bb9b3211a623e0c7bc74bbaa5624dff",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_70fdcbd54a8bf40ef0801e8b/floor_report.md",
+    "bytes": 1779,
+    "sha256": "b2caca3bbfefa7510b2a5658fb202d44540451f5b19741b506cfe797f50d9714",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_78f86eb0eda006494ab42afd/floor_report.md",
+    "bytes": 1798,
+    "sha256": "bbb0659cc6a89e7b02a5d9d554c40c51457e328e345298dbdb615b85d5e23a37",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_1e0bac41462149f8544fc9e1/floor_report.md",
+    "bytes": 1873,
+    "sha256": "df014076b4480444e4f77141952feed4e7e1edc265ab5c32936b522e28f34e26",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_f2b872e9b0b5efa5ed21dba8/floor_report.md",
+    "bytes": 1839,
+    "sha256": "0b5d5414b31eee4230106b039e52390ce7bd4949396855aed405cf66097126b7",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_bb6687a3575f62badc29712d/floor_report.md",
+    "bytes": 1808,
+    "sha256": "19cced189a7c7132a661272cc09eee190c70931be6c3ff9378ccd837ba5f9335",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_a71328a43f233a1478b275ac/floor_report.md",
+    "bytes": 1763,
+    "sha256": "da68cb72ea494e1e258e94d963dd48ff087b9ab3f704f01b2e12bdec23db5481",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_51fe53ed945b4afb9f30425c/floor_report.md",
+    "bytes": 1799,
+    "sha256": "1ad322e6b1d673ecd6c82f73c009f7ba5ee6b14d66478d4df7cbec87f66c918b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_45bcf94c0ef6efe44e259b71/floor_report.md",
+    "bytes": 1813,
+    "sha256": "823dd215cedd82aff2b9676bcc15893343e7ca2ad59a0bb78959b4f51f0a6b8a",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_19064ab4515c8179fa9ebef8/floor_report.md",
+    "bytes": 1875,
+    "sha256": "0a3d71d261704d52c0367315812dd59a1dd1726ab854885779ba20ad751983f3",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_af7630c78438e7fa37939592/floor_report.md",
+    "bytes": 1801,
+    "sha256": "56559043125f724df61221d889c0993a3c47cbb5d3a60ad221947c4f0d207cc7",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_d08a1bc47177fa0b6bdccb41/floor_report.md",
+    "bytes": 1823,
+    "sha256": "c6c015b31322415cdee94f6e2d171d9e3e6da9013db700387750acec19788e0b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_00b1200525a3dd38093a16c8/floor_report.md",
+    "bytes": 1828,
+    "sha256": "ad5c3871deebe43b5d9782184cc4b047d067eb4ab80fc776a694f2f1d3ffd21c",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_613a83e984e35bcd8b75a433/floor_report.md",
+    "bytes": 1762,
+    "sha256": "3f0e911f5afe75a078785dbfaa069c36c18b74e1778f0f29ba7602a28e0c52aa",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_56d52dddb42e1ebd0b131b40/floor_report.md",
+    "bytes": 1876,
+    "sha256": "508ab9e4b570b08bb9a46b7b972ee5e0eb53444d0c0f3b37f5c8e80a4373e20f",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_5654d0f63b638b1c4604eb5e/floor_report.md",
+    "bytes": 1784,
+    "sha256": "843c000363311091daaa5a46c4a51c9da2c9b628eb0920f7a8a6b6990eb4eb7f",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_187a051a13889606c4d6c2b8/floor_report.md",
+    "bytes": 1791,
+    "sha256": "78a492ec3a687280fe30bb56350a1f5a1c672e35a8a29d9aa16f14bc5ec29b7f",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_5db4c426bc22afcf521d22d9/floor_report.md",
+    "bytes": 1835,
+    "sha256": "1c61086f88b9c6e6a787c8fe9a781620e405f4ac3b7e4fecc573209cf99900ec",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/D_V1_filter/floor_a8f682266b33021442689cd4/floor_report.md",
+    "bytes": 1816,
+    "sha256": "8bb63c2ac26c8991c523d4351e8e14228b6f9b2f6a491023ed05b7b1ec082b76",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_3112bf984b4be345641f2983/floor_report.md",
+    "bytes": 1766,
+    "sha256": "604f0a74df1fa08a41289be7759e455cae762368fe8576ef124a587efb0fbe05",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_e24ec4b67d8d47236b6239f3/floor_report.md",
+    "bytes": 1769,
+    "sha256": "1c14e0802d988dfb397f8beaabaf3a8ccb9ea3b60b4c27f5f10ff44ba4a42126",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_70fdcbd54a8bf40ef0801e8b/floor_report.md",
+    "bytes": 1760,
+    "sha256": "844037c8cc6406406b99f0db9dcb5d901a26f8db6080c55ca5710e1e9201e2e4",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_78f86eb0eda006494ab42afd/floor_report.md",
+    "bytes": 1770,
+    "sha256": "c53298191172cdf76c5ca5fec45f47ccc5604d88d422649308594bcf9e62910d",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_1e0bac41462149f8544fc9e1/floor_report.md",
+    "bytes": 1761,
+    "sha256": "6cc4a9fbdc8c9d0cc41db11ad6570041a79eeafd02945627114a76203f2c3dd4",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_f2b872e9b0b5efa5ed21dba8/floor_report.md",
+    "bytes": 1761,
+    "sha256": "9eb45ec52d1cd42b8e10e46f4641395c75fd6fc7477dbc3eb1353ccd459fcc24",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_bb6687a3575f62badc29712d/floor_report.md",
+    "bytes": 1760,
+    "sha256": "9cbd51451a059b506d9dd01ffae48acfadd07a8764a3b51e50764243be088170",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_a71328a43f233a1478b275ac/floor_report.md",
+    "bytes": 1762,
+    "sha256": "5df36b4bfc2fdcd31360ade864c90de35cb2d5a38a7db6d51506647251d9e1a5",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_51fe53ed945b4afb9f30425c/floor_report.md",
+    "bytes": 1758,
+    "sha256": "233b1c1ce116585ccec6953179f8f08a7131a3b929da87c51ca938a810a680a7",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_45bcf94c0ef6efe44e259b71/floor_report.md",
+    "bytes": 1760,
+    "sha256": "ac82106249c9c82d77b5a61f97ab943b53f65ed001e2fc33fb2fd27e78211f3e",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_19064ab4515c8179fa9ebef8/floor_report.md",
+    "bytes": 1763,
+    "sha256": "09f9d9ec262dd5650239137d410bee938f53fd5b6f99a4a3d71a01b40bbfba59",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_af7630c78438e7fa37939592/floor_report.md",
+    "bytes": 1763,
+    "sha256": "fbd2a8d9ccd8ebdacf822b1e5c864510f533a962873543f2cea8cf43bf04dc2d",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_d08a1bc47177fa0b6bdccb41/floor_report.md",
+    "bytes": 1759,
+    "sha256": "c6858fdc91880ec8035697d3bf641f579969311ea0753016196bbacaad250a0e",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_00b1200525a3dd38093a16c8/floor_report.md",
+    "bytes": 1766,
+    "sha256": "9cdbc21be31495feeea1eacb60c03fd08c02dd1646a47bd64ed7138dcf9aba56",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_613a83e984e35bcd8b75a433/floor_report.md",
+    "bytes": 1758,
+    "sha256": "2227646ab85298fc9ac03a6b1cd06fb4ab975d4dd6bb3ab6c02cfd803988b57e",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_56d52dddb42e1ebd0b131b40/floor_report.md",
+    "bytes": 1763,
+    "sha256": "b6f89c73bc8025cda07a4699c0416926c0360c6c8ae114a9d238a0857aef3d4b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_5654d0f63b638b1c4604eb5e/floor_report.md",
+    "bytes": 1768,
+    "sha256": "cd89fafa33750c42773f7051a2531ffd4396db8ba79f467e0a27c27909b80678",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_187a051a13889606c4d6c2b8/floor_report.md",
+    "bytes": 1766,
+    "sha256": "7ffd0b6ba78baf504684898fcebebb730237db259ec8a76fdc560d96c5568546",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_5db4c426bc22afcf521d22d9/floor_report.md",
+    "bytes": 1760,
+    "sha256": "4f5fee9fba783ca8394a45862d758c8416a6c691f0c7a862fcf1dc1146827182",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "experiments/research1_pose_geometry_20261026_0245/predictions/A_V0_rank/floor_a8f682266b33021442689cd4/floor_report.md",
+    "bytes": 1758,
+    "sha256": "e94b2754f3fecb6faf2d67cf029ef9b252d9851dd4e78eb3e042649738026885",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "visualization/visualizer/README.md",
+    "bytes": 756,
+    "sha256": "2c4c7ec96a9197ebdb22bbe3584395a3885ed6b8758caba0743185b9aaceefd5",
+    "title": "360LayoutVisualizer",
+    "headings": [
+      "# 360LayoutVisualizer"
+    ]
+  },
+  {
+    "path": "src/output/zind_bipair_v1_smoke/README.md",
+    "bytes": 1112,
+    "sha256": "471470ea512829ed84f8450d5fbfbf3c0e07944a3763b24f0cf0c24fc7d9d1b5",
+    "title": "ZInD-BiPair-v1",
+    "headings": [
+      "# ZInD-BiPair-v1",
+      "## Files",
+      "## Scope"
+    ]
+  },
+  {
+    "path": "src/output/zind_geometry_val_full/t3_frozen_m2/report.md",
+    "bytes": 6310,
+    "sha256": "e0b2fcb41f9d77725fa497a706f0c22121078593825bd0b9783ea159f1d9a868",
+    "title": "Frozen T3/M2 full ZInD val diagnostic",
+    "headings": [
+      "# Frozen T3/M2 full ZInD val diagnostic",
+      "## 1. 一句话结论",
+      "## 2. 数据规模和 house 分布",
+      "## 3. 代码、配置、checkpoint 和 manifest hashes",
+      "## 4. test 未访问证据",
+      "## 5. 运行命令、时间和恢复次数",
+      "## 6. 完成率和 forward 唯一性",
+      "## 7. T3 matcher evaluator parity",
+      "## 8. S0–S5 样本量",
+      "## 9. Matcher/candidate 指标",
+      "## 10. G0/G1/G2 geometry（共同 S3）",
+      "## 11. End-to-end 与 conditional pose",
+      "## 12. D0/D1/D2 scale 诊断",
+      "## 13. 双 polygon BEV",
+      "## 14. M2 hard/soft quality",
+      "## 15. House-clustered bootstrap",
+      "## 16. 成功和失败类型",
+      "## 17. M2 得到支持的部分",
+      "## 18. 当前系统第一瓶颈",
+      "## 19. 下一阶段唯一优先方向",
+      "## 20. 尚未执行的内容"
+    ]
+  },
+  {
+    "path": "src/output/matcher_progress_ppt_20260910/README.md",
+    "bytes": 2303,
+    "sha256": "ad664bf626292957933a42f5e15611bbdcbf102c6dc916ba7815877f00c8d9d6",
+    "title": "Matcher 阶段汇报 · 收紧主线与 Oracle Pose",
+    "headings": [
+      "# Matcher 阶段汇报 · 收紧主线与 Oracle Pose",
+      "## 复现"
+    ]
+  },
+  {
+    "path": "src/output/matcher_progress_ppt_20260910/CHANGELOG.md",
+    "bytes": 13710,
+    "sha256": "17a725a5c3f69f2d6b2316c2404c55385e3fcd230fdd4c42c47d92129bf65aaf",
+    "title": "Matcher 汇报定向修改记录",
+    "headings": [
+      "# Matcher 汇报定向修改记录",
+      "## P1 · Matcher 任务定义",
+      "## P2 · T3 全量结果",
+      "## P3 · Correct Match",
+      "## P4 · Recalled → Dustbin Reject",
+      "## P5 · Recalled → Wrong Selection",
+      "## P6 · Negative Correct Reject",
+      "## P7 · Negative False Accept",
+      "## P8 · 性能损失分解",
+      "## P9 · Oracle Pose",
+      "## P10 · 下一步",
+      "## A1 · Physics / BEV Verifier",
+      "## A2 · Opening Type",
+      "## A3 · Long Corridor Idea",
+      "## A4 · 详细实验计划",
+      "## A5 · 原阶段总结",
+      "## A6 · E1 预检结果",
+      "## 全局 score 表达核对",
+      "## 输出与复现"
+    ]
+  },
+  {
+    "path": "src/output/progress_report_20260716/进度汇报结果.md",
+    "bytes": 25380,
+    "sha256": "103afa943fc6112d9a9e4064831ed275c067d0efe86e20867d5d71a47d0e2737",
+    "title": "Bi-Layout 跨场景项目进度实验结果",
+    "headings": [
+      "# Bi-Layout 跨场景项目进度实验结果",
+      "## 一、当前结论",
+      "## 二、100 张 ZInD 双头定量评估",
+      "## 三、正式权重的相邻双全景 M0-M9 工程流程",
+      "## 四、独立相邻完整房间评估",
+      "## 五、回归测试",
+      "## 六、汇报边界",
+      "## 七、本轮代码整改",
+      "## 八、ZInD 匹配训练数据转换",
+      "### 8.1 数据处理流程图",
+      "### 8.2 真实 A 数据点和标签",
+      "## 九、ZInD-BiPair-v1 数据集",
+      "## 十、ZInD-BiPair-v1 开口召回率",
+      "## 十一、Cross-Scene Matcher 正式训练",
+      "### 11.1 训练数据与接口",
+      "### 11.2 训练设置",
+      "### 11.3 最优 checkpoint 指标",
+      "## 十二、复现命令"
+    ]
+  },
+  {
+    "path": "src/output/zind_observable_pairs_v1/README.md",
+    "bytes": 1221,
+    "sha256": "67cca52c6d14f66221125f1b325a560e8898d86fc33aaecd1e77ec5b6b4556c5",
+    "title": "ZInD-ObservablePairs-v1 交付入口",
+    "headings": [
+      "# ZInD-ObservablePairs-v1 交付入口"
+    ]
+  },
+  {
+    "path": "src/output/zind_observable_pairs_v1/review_pilot_final/README.md",
+    "bytes": 1108,
+    "sha256": "531be3914691044f159043375749d80e30c010a83a14c077183c54526be60785",
+    "title": "双阶段人工核验材料",
+    "headings": [
+      "# 双阶段人工核验材料"
+    ]
+  },
+  {
+    "path": "src/output/zind_observable_pairs_v1/review_pilot_v2/README.md",
+    "bytes": 1108,
+    "sha256": "531be3914691044f159043375749d80e30c010a83a14c077183c54526be60785",
+    "title": "双阶段人工核验材料",
+    "headings": [
+      "# 双阶段人工核验材料"
+    ]
+  },
+  {
+    "path": "src/output/zind_observable_pairs_v1/review_pilot/README.md",
+    "bytes": 1108,
+    "sha256": "531be3914691044f159043375749d80e30c010a83a14c077183c54526be60785",
+    "title": "双阶段人工核验材料",
+    "headings": [
+      "# 双阶段人工核验材料"
+    ]
+  },
+  {
+    "path": "src/output/zind_matcher_visual_report/README.md",
+    "bytes": 1880,
+    "sha256": "e833b0f9865511b98b01e4bd8545716c86f7e15779eb42b072310127f5346344",
+    "title": "T3 Matcher five validation cases",
+    "headings": [
+      "# T3 Matcher five validation cases"
+    ]
+  },
+  {
+    "path": "src/output/zind_observable_training_20260910/README.md",
+    "bytes": 3172,
+    "sha256": "474f5963f2cd2c009446aa84ff7bb867ba000cd16b561f7ed8e81de32791797b",
+    "title": "ObservablePairs 端到端联合训练",
+    "headings": [
+      "# ObservablePairs 端到端联合训练",
+      "## 实验设置",
+      "## 当前最佳内部监控结果（第 5 轮）",
+      "## 持续运行与产物"
+    ]
+  },
+  {
+    "path": "src/output/zind_observable_training_20260910/训练完成报告.md",
+    "bytes": 12733,
+    "sha256": "b1826b55379dae03552ef81285ae962dc06a7a86e2ef7299a60f858da6234b60",
+    "title": "ObservablePairs 端到端探索性训练完成",
+    "headings": [
+      "# ObservablePairs 端到端探索性训练完成"
+    ]
+  },
+  {
+    "path": "src/output/zind_observable_training_20260910/训练结果摘要.md",
+    "bytes": 2158,
+    "sha256": "58f8fa16be5dc09448f880520915b0097215bcba89b0c4ff365e53a27761e28b",
+    "title": "ObservablePairs 端到端训练结果摘要",
+    "headings": [
+      "# ObservablePairs 端到端训练结果摘要",
+      "## 最佳内部监控指标",
+      "## 判断",
+      "## 结论适用范围"
+    ]
+  },
+  {
+    "path": "src/output/zind_pose_oracle_gt_opening_0665_floor03/REPORT.md",
+    "bytes": 7448,
+    "sha256": "3043610c2664b21c42034a77e09a0518a31ba102be405e7494f946716e895570",
+    "title": "Pose Oracle Bottleneck Experiment — 0665 / floor_03",
+    "headings": [
+      "# Pose Oracle Bottleneck Experiment — 0665 / floor_03",
+      "## 实验与输入隔离",
+      "## 当前 M2 对照",
+      "## 历史对照识别",
+      "## 十项坐标/求解诊断",
+      "## 研究结论",
+      "## 执行与验证"
+    ]
+  },
+  {
+    "path": "src/output/matcher_progress_ppt_20260909/README.md",
+    "bytes": 1248,
+    "sha256": "ae78ee1dc981b2e09f33b3156c75bd3245d697e7a1fcf9faf632f500204e2115",
+    "title": "Matcher 学术阶段汇报",
+    "headings": [
+      "# Matcher 学术阶段汇报"
+    ]
+  },
+  {
+    "path": "src/output/matcher_progress_ppt_20260909/逐页说明与讲稿.md",
+    "bytes": 17435,
+    "sha256": "66be3b4196c52c9d875b73efd26cf7cd668850b625cf5697edb3f85a1047cbee",
+    "title": "Matcher PPT 逐页说明",
+    "headings": [
+      "# Matcher PPT 逐页说明",
+      "## 01 · Matcher 的目标：找到共享开口，并拒绝不存在的连接",
+      "## 02 · T3 已有匹配收益，但全量正确开口选择率仍为 27.42%",
+      "## 03 · 正确匹配：GT、Raw Rank-1 与最终选择一致",
+      "## 04 · 召回后拒绝：GT 排名第一，最终仍为 No Match",
+      "## 05 · 召回后错选：接受了房间对，却选错共享开口",
+      "## 06 · 负样本正确拒绝：存在候选不代表存在共享开口",
+      "## 07 · 负样本误接：较高 real-real 分数仍可能建立错误连接",
+      "## 08 · E1 净增加正确匹配，但收益伴随额外误接",
+      "## 09 · 物理特征值得验证，先作为带质量权重的辅助证据",
+      "## 10 · 开口类型可补充匹配特征，但应使用软标签而非硬筛选",
+      "## 11 · 下一步先区分决策与排序收益，再逐项加入新特征",
+      "## 12 · 阶段成果是可复现的 Matcher 基线与明确的失败边界",
+      "## 13 · 长走廊设想：分割观测范围，保留完整空间的连通关系",
+      "## 引用与数据来源"
+    ]
+  },
+  {
+    "path": "src/output/zind_room_group_debug/t3_geometry_oracle_0665_floor03/diagnosis.md",
+    "bytes": 5578,
+    "sha256": "54df75506068db2653971b97148b6577bfd7874e404a1dd1042704459e6b3c0c",
+    "title": "T3 three-room geometry oracle diagnosis",
+    "headings": [
+      "# T3 three-room geometry oracle diagnosis",
+      "## Executive conclusion",
+      "## Key numeric chain",
+      "## Required questions",
+      "## Important wall-association evidence"
+    ]
+  },
+  {
+    "path": "src/output/zind_room_group_debug/t3_geometry_oracle_0665_floor03/coordinate_contract.md",
+    "bytes": 5235,
+    "sha256": "5e3837db2a6bb232bf46a0d0b0709b466d201aaf16ebe30524ecbd0083d73839",
+    "title": "ZInD geometry oracle coordinate contract",
+    "headings": [
+      "# ZInD geometry oracle coordinate contract",
+      "## Observed fixed-frame transformations"
+    ]
+  },
+  {
+    "path": "src/output/zind_room_group_debug/t3_portal_geometry_audit_0665_floor03/diagnosis.md",
+    "bytes": 4490,
+    "sha256": "4fad6b9117306752180831c6d528cb6d77d2b8c2dbff172cd9306dee07c1dccf",
+    "title": "Candidate-local portal geometry audit",
+    "headings": [
+      "# Candidate-local portal geometry audit",
+      "## Global heading",
+      "## Uniform-method pair results",
+      "## Interpretation",
+      "## Required findings"
+    ]
+  },
+  {
+    "path": "src/output/zind_geometry_val_smoke/t3_seed123_64/report.md",
+    "bytes": 1364,
+    "sha256": "858c5d7bbdb721336818af6b099ac85c4b33028dce8b08f61050fc487d5dc80e",
+    "title": "ZInD val geometry smoke preflight",
+    "headings": [
+      "# ZInD val geometry smoke preflight",
+      "## Completion and safety",
+      "## Matching",
+      "## Evaluation strata",
+      "## Geometry on S3 (correct selected candidate)",
+      "## M2 quality",
+      "## Paired S3 comparison (M2 - G1)"
+    ]
+  },
+  {
+    "path": "src/output/research1_floor_layout/smoke20_uncalibrated_20261023/floor_1c68d80c249a3a23bdadf67f/floor_report.md",
+    "bytes": 1515,
+    "sha256": "de94cf8e3e34f6cdd6014cab2e925e76a69cd6a853cc54a013ad942eec0dbd4b",
+    "title": "Floor reconstruction",
+    "headings": [
+      "# Floor reconstruction"
+    ]
+  },
+  {
+    "path": "src/dataset/ZInD-FloorSet-v1/preflight_train25_20261021/README.md",
+    "bytes": 1105,
+    "sha256": "f1079280aecbd8b7f7b5f31da3312c76aa37211462788fe243247a53053188d1",
+    "title": "ZInD-FloorSet-v1",
+    "headings": [
+      "# ZInD-FloorSet-v1"
+    ]
+  },
+  {
+    "path": "src/dataset/ZInD-FloorSet-v1/smoke_train_0665_20261021/README.md",
+    "bytes": 1105,
+    "sha256": "f1079280aecbd8b7f7b5f31da3312c76aa37211462788fe243247a53053188d1",
+    "title": "ZInD-FloorSet-v1",
+    "headings": [
+      "# ZInD-FloorSet-v1"
+    ]
+  },
+  {
+    "path": "src/dataset/ZInD-FloorSet-v1/train_20261021/README.md",
+    "bytes": 1194,
+    "sha256": "c0147a59a6cb758d9275d5b38040f1d78c8f241b4644c4ea6a5a9adad2fc1f3d",
+    "title": "ZInD-FloorSet-v1",
+    "headings": [
+      "# ZInD-FloorSet-v1"
+    ]
+  },
+  {
+    "path": "checkpoints/Bi_Layout_Net/README.md",
+    "bytes": 31,
+    "sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+    "title": "README.md",
+    "headings": []
+  },
+  {
+    "path": "atlanta_subset_report/README.md",
+    "bytes": 1834,
+    "sha256": "b97910d46a7cd9e5890f51447993b8c1c5db6caddb646851af84724b1562d0fb",
+    "title": "MP3D Atlanta / Non-Manhattan Candidate Subset",
+    "headings": [
+      "# MP3D Atlanta / Non-Manhattan Candidate Subset",
+      "## Heuristic",
+      "## Counts",
+      "## Important Finding",
+      "## Files",
+      "## Recommended Use"
+    ]
+  },
+  {
+    "path": "deliverables/texture_ambiguity_ppt_20261029/README.md",
+    "bytes": 1304,
+    "sha256": "64758a98a2f7d607ea4241b73eecafd6217d81f9bcd881c5247cb2be32405aec",
+    "title": "PPT 图片使用说明",
+    "headings": [
+      "# PPT 图片使用说明"
+    ]
+  },
+  {
+    "path": "deliverables/matching_framework/三页讲解备注.md",
+    "bytes": 4319,
+    "sha256": "ed5745f1488ea6afa783186dafc33f6545212bedd4fc7866f59608489335f934",
+    "title": "第1页",
+    "headings": [
+      "## 第1页",
+      "## 第2页",
+      "## 第3页"
+    ]
+  },
+  {
+    "path": "deliverables/matching_framework/说明.md",
+    "bytes": 2190,
+    "sha256": "2b34ec8042dc22087a85ba9addf5db6d33fbefb99b870e7174d545bc4195b5a5",
+    "title": "说明.md",
+    "headings": []
+  },
+  {
+    "path": "deliverables/matching_framework/代码对应表.md",
+    "bytes": 1306,
+    "sha256": "e1f1bfeb2cb0f6084a7de6923699aeb05f21e756680b2044319ea94cd879f8ed",
+    "title": "代码对应表.md",
+    "headings": []
+  },
+  {
+    "path": "deliverables/correct_match_0665_34_37/README.md",
+    "bytes": 2057,
+    "sha256": "eac7e2d459204ed2600123e600f612faf33829ebae47cd828a80eabb36989ccd",
+    "title": "正确匹配全景图对：0665 / floor_03 / pano 34 与 37",
+    "headings": [
+      "# 正确匹配全景图对：0665 / floor_03 / pano 34 与 37",
+      "## 文件",
+      "## 对齐结果与边界"
+    ]
+  },
+  {
+    "path": "deliverables/opening_defense/交付说明.md",
+    "bytes": 2042,
+    "sha256": "29046337ea4bb46e72c918d1b75d7afafddfcb589f47c2b2049409a230e1d1e7",
+    "title": "交付说明.md",
+    "headings": []
+  },
+  {
+    "path": "deliverables/opening_defense/演讲者备注.md",
+    "bytes": 13509,
+    "sha256": "48e0975c8aeaf075d1d5301cc3580d354009f685998bb021ef5d854ed23025f3",
+    "title": "第1页 封面",
+    "headings": [
+      "## 第1页 封面",
+      "## 第2页 研究任务：判断连接，并恢复双房间布局",
+      "## 第3页 研究背景与意义",
+      "## 第4页 关键挑战：从看见开口到可靠对齐",
+      "## 第5页 单图布局研究：为开口提供结构线索",
+      "## 第6页 SALVe：候选对齐后的视觉验证",
+      "## 第7页 研究目标：由可靠候选建立可靠连接",
+      "## 第8页 总体框架：视觉主线，几何辅助",
+      "## 第9页 研究内容一：布局与视觉融合的开口表示",
+      "## 第10页 研究内容二：开口上下文驱动的视觉匹配",
+      "## 第11页 拟研究：候选对齐后的视觉验证",
+      "## 第12页 几何辅助与布局输出",
+      "## 第13页 数据基础：ZInD 与 ObservablePairs",
+      "## 第14页 为什么重新组织数据集",
+      "## 第15页 新旧数据组织方式的区别",
+      "## 第16页 数据构建的科学依据与待完成环节",
+      "## 第17页 已有研究基础：联合训练与双房间输出",
+      "## 第18页 最新匹配结果：ObservablePairs 内部监控",
+      "## 第19页 误差分析：候选遗漏与决策失败同时存在",
+      "## 第20页 实验设计：用控制变量验证各模块贡献",
+      "## 第21页 拟创新点",
+      "## 第22页 研究计划与预期成果",
+      "## 第23页 恳请老师批评指正",
+      "## 第24页 参考文献与项目证据"
+    ]
+  }
+]

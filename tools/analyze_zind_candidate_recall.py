@@ -28,9 +28,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from dataset.zind_bipair_adapter import adapt_zind_bipair_batch
-from dataset.zind_bipair_dataset import collate_zind_bipair
-from models.cross_scene_matcher import (
+from portallayout.datasets.zind_bipair_adapter import adapt_zind_bipair_batch
+from portallayout.datasets.zind_bipair_dataset import collate_zind_bipair
+from portallayout.models.cross_scene_matcher import (
     bidirectional_candidate_consistency_loss,
     candidate_assignment_loss,
     candidate_intervals_to_mask,
@@ -58,7 +58,7 @@ from tools.train_zind_end_to_end import (
     _teacher_anchor_losses,
     parse_args as parse_training_args,
 )
-from utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint
+from portallayout.utils.matcher_checkpoint import load_cross_scene_matcher_checkpoint
 
 
 DEFAULT_CHECKPOINT = (
@@ -199,7 +199,7 @@ def load_historical_model(
     if checkpoint.get("task") != "ZInD_matching full end-to-end joint fine-tuning":
         raise ValueError("checkpoint is not the historical full end-to-end checkpoint")
     initialization = checkpoint["initialization"]
-    config_path = initialization["bi_layout"]["config"]
+    config_path = initialization["bi_layout"]['portallayout.config']
     backbone_path = initialization["bi_layout"]["checkpoint"]
     matcher_path = initialization["matcher"]["path"]
     bi_layout, _ = load_bi_layout(config_path, backbone_path, device, True)
@@ -893,7 +893,7 @@ class DiagnosticAccumulator:
                     failure = "correct_rank1_rejected_by_dustbin"
             self.failure_rows.append(
                 {
-                    "config": self.name,
+                    'portallayout.config': self.name,
                     "pair_id": pair_ids[index],
                     "failure_class": failure,
                     "side_a_recalled": bool(side_a[index]),
@@ -1176,7 +1176,7 @@ def _select_g1(
 def _failure_summary(
     rows: Sequence[Mapping[str, Any]], config: str
 ) -> List[Dict[str, Any]]:
-    selected = [row for row in rows if row["config"] == config]
+    selected = [row for row in rows if row['portallayout.config'] == config]
     total = len(selected)
     grouped: Dict[str, List[Mapping[str, Any]]] = {}
     for row in selected:
@@ -1185,7 +1185,7 @@ def _failure_summary(
     for name, items in sorted(grouped.items()):
         output.append(
             {
-                "config": config,
+                'portallayout.config': config,
                 "failure_class": name,
                 "count": len(items),
                 "proportion_of_positive": len(items) / max(total, 1),

@@ -33,8 +33,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from dataset.zind_pair_mining import segment_endpoint_error  # noqa: E402
-from models.cross_scene_matcher import (  # noqa: E402
+from portallayout.datasets.zind_pair_mining import segment_endpoint_error  # noqa: E402
+from portallayout.models.cross_scene_matcher import (  # noqa: E402
     candidate_intervals_to_mask,
     circular_interval_iou,
     resolve_enclosed_extended_depth,
@@ -57,7 +57,7 @@ from tools.train_zind_end_to_end import (  # noqa: E402
     DEFAULT_MATCHER,
     DEFAULT_OPENING,
 )
-from utils.candidate_failure_trace import (  # noqa: E402
+from portallayout.utils.candidate_failure_trace import (  # noqa: E402
     assign_side_reason,
     combine_side_reason,
     finite_tree,
@@ -72,7 +72,7 @@ DEFAULT_OUTPUT = (
     / "experiments/zind_e2e_v3/g0_seed123/T5_candidate_recall/audit"
 )
 DEFAULT_T3 = REPO_ROOT / "checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T3/best.pt"
-DEFAULT_FROZEN_VAL = REPO_ROOT / "src/output/zind_geometry_val_full/t3_frozen_m2"
+DEFAULT_FROZEN_VAL = REPO_ROOT / "outputs/zind_geometry_val_full/t3_frozen_m2"
 DEFAULT_MEDIUM = REPO_ROOT / "experiments/zind_e2e_v3/g0_seed123/T4_recall/medium_diagnostic"
 PROTOCOL_VERSION = "zind-t5-candidate-failure-audit-v1"
 PASSABLE_TYPES = frozenset(("door", "opening"))
@@ -93,8 +93,8 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--phase", choices=("prepare", "smoke", "cache", "assemble", "oracle", "report", "all"), default="all")
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--output_dir", default=str(DEFAULT_OUTPUT))
-    parser.add_argument("--train_manifest", default=str(REPO_ROOT / "src/dataset/ZInD_matching/train.json"))
-    parser.add_argument("--val_manifest", default=str(REPO_ROOT / "src/dataset/ZInD_matching/val.json"))
+    parser.add_argument("--train_manifest", default=str(REPO_ROOT / "data/ZInD_matching/train.json"))
+    parser.add_argument("--val_manifest", default=str(REPO_ROOT / "data/ZInD_matching/val.json"))
     parser.add_argument("--train_cache_dir", default=str(DEFAULT_CACHE_ROOT / "train"))
     parser.add_argument("--val_cache_dir", default=str(DEFAULT_CACHE_ROOT / "val"))
     parser.add_argument("--t3_checkpoint", default=str(DEFAULT_T3))

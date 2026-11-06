@@ -3,7 +3,7 @@ from tempfile import TemporaryDirectory
 
 import numpy as np
 
-from utils.joint_layout import DoorSpec, build_joint_layout, render_joint_boundary_svg
+from portallayout.geometry.joint_layout import DoorSpec, build_joint_layout, render_joint_boundary_svg
 
 
 def make_layout(points):

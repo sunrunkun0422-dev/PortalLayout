@@ -1,0 +1,46 @@
+[
+  {
+    "name": "SALVe_技术路线",
+    "nodes": 9,
+    "edges": 11,
+    "canvas_overflow": [],
+    "node_issues": [],
+    "png_size": [
+      3840,
+      2160
+    ]
+  },
+  {
+    "name": "现有项目_真实流程",
+    "nodes": 12,
+    "edges": 12,
+    "canvas_overflow": [],
+    "node_issues": [],
+    "png_size": [
+      3840,
+      2160
+    ]
+  },
+  {
+    "name": "我的论文_完整技术路线",
+    "nodes": 5,
+    "edges": 4,
+    "canvas_overflow": [],
+    "node_issues": [],
+    "png_size": [
+      3840,
+      2160
+    ]
+  },
+  {
+    "name": "SALVe_vs_我的方法",
+    "nodes": 10,
+    "edges": 8,
+    "canvas_overflow": [],
+    "node_issues": [],
+    "png_size": [
+      3840,
+      2160
+    ]
+  }
+]

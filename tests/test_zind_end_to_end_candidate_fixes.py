@@ -4,7 +4,7 @@ from unittest.mock import patch
 
 import torch
 
-from models.cross_scene_matcher import (
+from portallayout.models.cross_scene_matcher import (
     OpeningGuidedCrossAttentionMatcher,
     candidate_assignment_loss,
     candidate_listwise_ranking_loss,

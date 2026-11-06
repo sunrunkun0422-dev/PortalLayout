@@ -1,0 +1,66 @@
+[
+  {
+    "command": "data build --help",
+    "returncode": 0
+  },
+  {
+    "command": "data validate --help",
+    "returncode": 0
+  },
+  {
+    "command": "openings predict --help",
+    "returncode": 0
+  },
+  {
+    "command": "openings encode --help",
+    "returncode": 0
+  },
+  {
+    "command": "openings pairs --help",
+    "returncode": 0
+  },
+  {
+    "command": "openings report --help",
+    "returncode": 0
+  },
+  {
+    "command": "floor run --help",
+    "returncode": 0
+  },
+  {
+    "command": "floor preflight --help",
+    "returncode": 0
+  },
+  {
+    "command": "evidence build --help",
+    "returncode": 0
+  },
+  {
+    "command": "legacy layout --help",
+    "returncode": 0
+  },
+  {
+    "command": "legacy cross-scene --help",
+    "returncode": 0
+  },
+  {
+    "command": "legacy train-pairs --help",
+    "returncode": 0
+  },
+  {
+    "command": "floor run infer --help",
+    "returncode": 0
+  },
+  {
+    "command": "openings pairs train --help",
+    "returncode": 0
+  },
+  {
+    "command": "portallayout --help",
+    "returncode": 0
+  },
+  {
+    "command": "parser error / exit status equivalence",
+    "returncode": 2
+  }
+]
