@@ -1,0 +1,3881 @@
+{
+  "active_splits": [
+    "val"
+  ],
+  "artifact_hashes": {
+    "per_pair_val.jsonl": "4a7193a3b3b6ffe6faa98736cdc315b9ba3a7113e73d2bdf6b7d80d598c92e8e",
+    "reason_counts_val.json": "e561e222659e0f9882d6f14c57dbcff1c6d1ea33358ba48d301e01732d6d15cf",
+    "stage_funnel_val.json": "28a793b897a219c9c100afdd4f588f8c24a5bda0b89f83ac11777827b5940462",
+    "val_manifest": "acae7ecbd55d4f8b8aea7c7a8db4b8cbb434fe92992858ac0a4d4a26da7da1ec"
+  },
+  "backward_executed": false,
+  "checkpoint_before": {
+    "mtime_ns": 1786733650604347717,
+    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T3/best.pt",
+    "sha256": "ca083dbbc5a05d738dad36404ad708c623c272aef7a64398b4de3a793278cc5d",
+    "size": 418836277
+  },
+  "created_by": "artifact-only CPU renderer",
+  "dustbin_recovery_evidence": {
+    "best_pair_reproduced": 1827,
+    "cause": "per-sample dustbin was cropped at local K rather than padded batch K",
+    "direct_modes": {
+      "both_direct": 263,
+      "column_only": 528,
+      "neither_direct": 573,
+      "row_only": 463
+    },
+    "pair_count": 1827,
+    "pair_no_match_max_abs_error": 1.2105330304823525e-07,
+    "recovery": "exact_from_unique_shared_serialized_dustbin_constant_and_real_logits",
+    "serialized_padding_issue": true,
+    "shared_dustbin_logit": 1.3945990800857544,
+    "trusted_serialized_value_count": 4020
+  },
+  "formal_defaults_modified": false,
+  "git_at_render": {
+    "branch": "agent/zind-bipair-opening-matcher",
+    "head": "50a6ae5ca403928627fb4de18ae918d59c03d479",
+    "status_short": [
+      " M .gitignore",
+      " M models/cross_scene_matcher.py",
+      " M postprocessing/post_process.py",
+      " M tests/test_zind_end_to_end_candidate_fixes.py",
+      " M tools/debug_cross_scene_flow.py",
+      " M tools/train_zind_cross_scene_matcher.py",
+      " M tools/train_zind_end_to_end.py",
+      " M utils/joint_layout.py",
+      "?? experiments/ppt_real_outputs_audit/",
+      "?? experiments/zind_e2e_v2/full_ablation_g0_seed123/",
+      "?? experiments/zind_e2e_v3/",
+      "?? src/dataset/",
+      "?? src/output/cross_scene_flow_zind_bipair_v1/",
+      "?? src/output/cross_scene_format_smoke/",
+      "?? src/output/progress_report_20260716/cross_scene_pair/",
+      "?? src/output/progress_report_20260716/zind_adjacent_pairs_eval/",
+      "?? src/output/zind_bipair_v1_smoke/",
+      "?? src/output/zind_cross_scene_eval_zind_bipair_v1/",
+      "?? src/output/zind_geometry_val_full/",
+      "?? src/output/zind_geometry_val_smoke/",
+      "?? src/output/zind_matching_dataset_smoke/",
+      "?? src/output/zind_opening_recall/",
+      "?? src/output/zind_room_group_debug/",
+      "?? tests/test_audit_zind_candidate_failures.py",
+      "?? tests/test_audit_zind_joint_geometry.py",
+      "?? tests/test_audit_zind_portal_geometry.py",
+      "?? tests/test_candidate_bev_rasterizer.py",
+      "?? tests/test_candidate_conditioned_verifier.py",
+      "?? tests/test_candidate_local_portal_geometry.py",
+      "?? tests/test_evaluate_zind_portal_geometry_val.py",
+      "?? tests/test_evaluate_zind_portal_geometry_val_full.py",
+      "?? tests/test_evaluate_zind_room_group.py",
+      "?? tests/test_frame_preserving_manhattan.py",
+      "?? tests/test_visual_audit_zind_candidate_failures.py",
+      "?? tests/test_zind_t4_matcher_only.py",
+      "?? tests/test_zind_t4_medium.py",
+      "?? tests/test_zind_t4_recall.py",
+      "?? tools/audit_zind_candidate_failures.py",
+      "?? tools/audit_zind_joint_geometry.py",
+      "?? tools/audit_zind_portal_geometry.py",
+      "?? tools/audit_zind_t4_recall.py",
+      "?? tools/diagnose_zind_t4_medium.py",
+      "?? tools/evaluate_zind_portal_geometry_val.py",
+      "?? tools/evaluate_zind_portal_geometry_val_full.py",
+      "?? tools/evaluate_zind_room_group.py",
+      "?? tools/generate_zind_bev_raster_examples.py",
+      "?? tools/preflight_zind_bev_verifier.py",
+      "?? tools/preflight_zind_t4_cpu.py",
+      "?? tools/preflight_zind_t4_matcher_only.py",
+      "?? tools/prepare_zind_t4_preflight_subsets.py",
+      "?? tools/run_zind_bev_verifier_phase_b.py",
+      "?? tools/summarize_zind_t4_preflight.py",
+      "?? tools/visual_audit_zind_candidate_failures.py",
+      "?? utils/candidate_bev_rasterizer.py",
+      "?? utils/candidate_conditioned_verifier.py",
+      "?? utils/candidate_failure_trace.py",
+      "?? utils/candidate_local_portal_geometry.py"
+    ]
+  },
+  "gpu_used": false,
+  "model_forward_executed": false,
+  "montages": [
+    {
+      "audit_category": "interval_merge",
+      "path": "montages/interval_merge.png",
+      "sha256": "d3786d37db19f3b7fa9b13061668c2b48db4127207dde01d5934e4d4eb09ceb6"
+    },
+    {
+      "audit_category": "no_opening_signal",
+      "path": "montages/no_opening_signal.png",
+      "sha256": "392f88bf953d905c9ccdc0af533af44f912dce9a79c1846315620fe74fe62fac"
+    },
+    {
+      "audit_category": "interval_split",
+      "path": "montages/interval_split.png",
+      "sha256": "a1bcd88c98fd8d3462674d10286818f73995c809f683698f9add955046a2365c"
+    },
+    {
+      "audit_category": "below_threshold",
+      "path": "montages/below_threshold.png",
+      "sha256": "d0b3e6b1583c12e9f6b0fbc09ce9707272047a993d2f59d218d8572570645181"
+    },
+    {
+      "audit_category": "dedup_removed",
+      "path": "montages/dedup_removed.png",
+      "sha256": "d254ffee6cc4eaf37b232d3f847dfb137717cc3b8f336584d589b145dd1f8786"
+    },
+    {
+      "audit_category": "candidate_cap_removed",
+      "path": "montages/candidate_cap_removed.png",
+      "sha256": "75ebade6109faa6c65c83bd82b75d1a4d9fdae1f4e1e5891db8dde8d92a1df33"
+    },
+    {
+      "audit_category": "interval_expansion_failure",
+      "path": "montages/interval_expansion_failure.png",
+      "sha256": "5eea5f89ad758431da1136cb82fd2c57181f8c52dfe0c1a0a6f5e29bc8e943f2"
+    },
+    {
+      "audit_category": "target_present_dustbin_reject",
+      "path": "montages/target_present_dustbin_reject.png",
+      "sha256": "d629e2101506e902f4e29309c85e66f501a18c5719de07bdcee1a1c579d9f8b1"
+    },
+    {
+      "audit_category": "target_present_wrong_selection",
+      "path": "montages/target_present_wrong_selection.png",
+      "sha256": "801cce13178b04ded221b24a6aa4381eef93fc843d19223cbd9bcfd70baa7948"
+    },
+    {
+      "audit_category": "target_present_correct",
+      "path": "montages/target_present_correct.png",
+      "sha256": "8324f8c72fa3bdaafdec35bdd5ccc826903c363c8c55552e0c38cc0ed79ecdc7"
+    }
+  ],
+  "optimizer_created": false,
+  "pair_list": [
+    "0059_floor_01_pano_17_pano_14_6",
+    "0064_floor_01_pano_11_pano_40_3",
+    "0244_floor_01_pano_15_pano_4_1",
+    "0527_floor_01_pano_15_pano_36_0",
+    "0832_floor_02_pano_48_pano_28_8",
+    "0950_floor_02_pano_25_pano_39_6",
+    "1274_floor_01_pano_7_pano_22_3",
+    "1467_floor_02_pano_53_pano_39_3",
+    "0184_floor_01_pano_34_pano_50_10",
+    "0185_floor_01_pano_18_pano_24_0",
+    "0224_floor_02_pano_21_pano_19_11",
+    "0266_floor_01_pano_40_pano_21_1",
+    "0542_floor_01_pano_8_pano_14_0",
+    "1125_floor_00_pano_34_pano_43_9",
+    "1261_floor_02_pano_56_pano_55_6",
+    "1334_floor_02_pano_49_pano_53_6",
+    "0547_floor_01_pano_16_pano_17_9",
+    "0618_floor_03_pano_49_pano_48_5",
+    "1359_floor_01_pano_6_pano_15_11",
+    "1525_floor_00_pano_55_pano_52_1",
+    "0761_floor_01_pano_8_pano_5_2",
+    "0991_floor_02_pano_38_pano_46_7",
+    "1284_floor_01_pano_22_pano_18_3",
+    "1327_floor_01_pano_4_pano_25_0",
+    "0161_floor_01_pano_25_pano_32_8",
+    "0664_floor_02_pano_29_pano_31_5",
+    "0751_floor_02_pano_21_pano_27_8",
+    "0924_floor_02_pano_87_pano_93_7",
+    "1037_floor_01_pano_12_pano_20_1",
+    "0492_floor_02_pano_46_pano_90_11",
+    "0139_floor_01_pano_4_pano_12_4",
+    "0286_floor_02_pano_33_pano_34_8",
+    "0417_floor_01_pano_45_pano_43_14",
+    "0590_floor_01_pano_21_pano_25_7",
+    "0654_floor_02_pano_37_pano_31_9",
+    "0780_floor_02_pano_26_pano_29_2",
+    "0888_floor_01_pano_21_pano_4_1",
+    "1084_floor_00_pano_36_pano_27_10",
+    "0062_floor_01_pano_21_pano_7_4",
+    "0220_floor_01_pano_40_pano_37_13",
+    "0424_floor_02_pano_26_pano_28_6",
+    "0769_floor_02_pano_46_pano_71_6",
+    "0805_floor_02_pano_11_pano_22_1",
+    "0979_floor_02_pano_9_pano_7_21",
+    "1088_floor_02_pano_62_pano_99_8",
+    "1095_floor_02_pano_42_pano_39_7",
+    "0461_floor_02_pano_76_pano_83_0",
+    "0712_floor_01_pano_34_pano_36_2",
+    "0713_floor_02_pano_22_pano_24_4",
+    "0728_floor_00_pano_46_pano_47_12",
+    "0865_floor_01_pano_41_pano_44_10",
+    "1077_floor_02_pano_13_pano_44_6"
+  ],
+  "pair_list_sha256": "a75af0cf7e3c2e9e3ece66e81ed25508ec92501e8bac9966d7594a2134a89997",
+  "proposal_stage_semantics": {
+    "explicit_merge_lineage_available": false,
+    "legacy_candidates": "formal O0 threshold/min-width/cap candidates",
+    "raw_hypotheses": "already peak-expanded intervals, not unexpanded raw intervals",
+    "raw_peak": "local peak point before expansion",
+    "threshold_components": "circular p>=threshold connected components; broad component is the automatic merge heuristic input"
+  },
+  "schema_version": "zind-full-val-visual-audit-manifest-v1",
+  "selected": [
+    {
+      "audit_category": "interval_merge",
+      "automatic_reason": "interval_merge",
+      "figure_path": "figures/interval_merge/0059_floor_01_pano_17_pano_14_6.png",
+      "figure_sha256": "e0a54a5ce91e789a44ca6f721cb3e321df7fbb1aca7971812b5cd9c5c9198e23",
+      "house_id": "0059",
+      "matcher_metrics": {
+        "candidate_count_A": 1,
+        "candidate_count_B": 2,
+        "candidate_product": 2,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.14747366309165955,
+        "pair_no_match_probability": 0.8627921342849731,
+        "recovered_pair_no_match_probability": 0.8627920840510129,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0059_floor_01_pano_17_pano_14_6",
+      "reason_A": "present",
+      "reason_B": "interval_merge",
+      "selection_index": 0,
+      "severity_name": "widest_overlapping_threshold_component_fraction",
+      "severity_stratum": "median",
+      "severity_value": 0.12109375,
+      "source_images": {
+        "A": {
+          "relative_path": "0059/panos/floor_01_partial_room_01_pano_17.jpg",
+          "sha256": "0e525f25b29727c7f19c2d89152bcfa4153bfcfa89f9b2747f4994a496c7a819",
+          "size": 391640
+        },
+        "B": {
+          "relative_path": "0059/panos/floor_01_partial_room_03_pano_14.jpg",
+          "sha256": "a5ea362ccfc50e408ca56a8ee2366aafe3c663d520ff27507635c558fa7b63b2",
+          "size": 418712
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "interval_merge",
+      "automatic_reason": "interval_merge",
+      "figure_path": "figures/interval_merge/0064_floor_01_pano_11_pano_40_3.png",
+      "figure_sha256": "a503ff188d5da5ad66a3115b96987adeaed4516a14247ff1b584a1b71760179d",
+      "house_id": "0064",
+      "matcher_metrics": {
+        "candidate_count_A": 5,
+        "candidate_count_B": 2,
+        "candidate_product": 10,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.6872690916061401,
+        "pair_no_match_probability": 0.6499778032302856,
+        "recovered_pair_no_match_probability": 0.649977831752935,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": [
+          1,
+          0
+        ],
+        "selected_pair_score": 0.6872690916061401,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0064_floor_01_pano_11_pano_40_3",
+      "reason_A": "interval_merge",
+      "reason_B": "present",
+      "selection_index": 1,
+      "severity_name": "widest_overlapping_threshold_component_fraction",
+      "severity_stratum": "severe",
+      "severity_value": 0.20703125,
+      "source_images": {
+        "A": {
+          "relative_path": "0064/panos/floor_01_partial_room_04_pano_11.jpg",
+          "sha256": "109f689626c24c4102755f6379675306457482f4c490701fc5d7f10666c99561",
+          "size": 506832
+        },
+        "B": {
+          "relative_path": "0064/panos/floor_01_partial_room_05_pano_40.jpg",
+          "sha256": "6e9729e5a7a3e93e7a976eedddfb71e77beee24d8b53d946b82967b6bc6087c9",
+          "size": 355369
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "interval_merge",
+      "automatic_reason": "interval_merge",
+      "figure_path": "figures/interval_merge/0244_floor_01_pano_15_pano_4_1.png",
+      "figure_sha256": "8132ba86a8c4812ea52098fe4283cbd146b46b7fbf0995a9868d5e3f1d6c0682",
+      "house_id": "0244",
+      "matcher_metrics": {
+        "candidate_count_A": 5,
+        "candidate_count_B": 1,
+        "candidate_product": 5,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.013911419548094273,
+        "pair_no_match_probability": 0.9766128659248352,
+        "recovered_pair_no_match_probability": 0.9766128961875729,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0244_floor_01_pano_15_pano_4_1",
+      "reason_A": "interval_merge",
+      "reason_B": "present",
+      "selection_index": 2,
+      "severity_name": "widest_overlapping_threshold_component_fraction",
+      "severity_stratum": "boundary",
+      "severity_value": 0.06640625,
+      "source_images": {
+        "A": {
+          "relative_path": "0244/panos/floor_01_partial_room_06_pano_15.jpg",
+          "sha256": "52f642277eaca596751aeabe87fa0744edf747d8e48be001c5781138df825955",
+          "size": 477317
+        },
+        "B": {
+          "relative_path": "0244/panos/floor_01_partial_room_03_pano_4.jpg",
+          "sha256": "f1bfc8f2aaa3767f1dab490fef5521f5c15f1cbd359c09f7fcb45b2bc61f8696",
+          "size": 338981
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "interval_merge",
+      "automatic_reason": "interval_merge",
+      "figure_path": "figures/interval_merge/0527_floor_01_pano_15_pano_36_0.png",
+      "figure_sha256": "b41670653b0dd72e809908eb3cf2957fec70c67af813170aa77b032687627c2f",
+      "house_id": "0527",
+      "matcher_metrics": {
+        "candidate_count_A": 1,
+        "candidate_count_B": 4,
+        "candidate_product": 4,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.0046739657409489155,
+        "pair_no_match_probability": 0.9880052804946899,
+        "recovered_pair_no_match_probability": 0.9880052200457297,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0527_floor_01_pano_15_pano_36_0",
+      "reason_A": "present",
+      "reason_B": "interval_merge",
+      "selection_index": 3,
+      "severity_name": "widest_overlapping_threshold_component_fraction",
+      "severity_stratum": "severe",
+      "severity_value": 0.28125,
+      "source_images": {
+        "A": {
+          "relative_path": "0527/panos/floor_01_partial_room_01_pano_15.jpg",
+          "sha256": "371f42cda7cdf838b04dd9624aca7cc877022bc2fc24f84c247a40831283805b",
+          "size": 362845
+        },
+        "B": {
+          "relative_path": "0527/panos/floor_01_partial_room_11_pano_36.jpg",
+          "sha256": "b88387df49d8847ee13b8c0548aec8200b5ab8549e74e89dcab77b008aa609e7",
+          "size": 398499
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "interval_merge",
+      "automatic_reason": "interval_merge",
+      "figure_path": "figures/interval_merge/0832_floor_02_pano_48_pano_28_8.png",
+      "figure_sha256": "06cb878516453679c273b8d0632d9b95be9e4cb36a800bef2c8367e5ebdf6f0e",
+      "house_id": "0832",
+      "matcher_metrics": {
+        "candidate_count_A": 3,
+        "candidate_count_B": 1,
+        "candidate_product": 3,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.011751948855817318,
+        "pair_no_match_probability": 0.9816688299179077,
+        "recovered_pair_no_match_probability": 0.9816688019961884,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0832_floor_02_pano_48_pano_28_8",
+      "reason_A": "present",
+      "reason_B": "interval_merge",
+      "selection_index": 4,
+      "severity_name": "widest_overlapping_threshold_component_fraction",
+      "severity_stratum": "severe",
+      "severity_value": 0.734375,
+      "source_images": {
+        "A": {
+          "relative_path": "0832/panos/floor_02_partial_room_08_pano_48.jpg",
+          "sha256": "9e5d12ca4993e731467d6761d6b89c32d9a46e85d7357dcb59078fadb0752428",
+          "size": 442484
+        },
+        "B": {
+          "relative_path": "0832/panos/floor_02_partial_room_12_pano_28.jpg",
+          "sha256": "7664ffecc3b2928ed86cf35883d5ffac6b8bc3e35a72f738a02d331831913bd1",
+          "size": 452323
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "interval_merge",
+      "automatic_reason": "interval_merge",
+      "figure_path": "figures/interval_merge/0950_floor_02_pano_25_pano_39_6.png",
+      "figure_sha256": "f255bd07a5fd45c6e545111c6b0136083056fb7270c0f6fe95fbbe4fd414857b",
+      "house_id": "0950",
+      "matcher_metrics": {
+        "candidate_count_A": 6,
+        "candidate_count_B": 1,
+        "candidate_product": 6,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.6885882019996643,
+        "pair_no_match_probability": 0.49860885739326477,
+        "recovered_pair_no_match_probability": 0.49860887527377795,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": [
+          1,
+          0
+        ],
+        "selected_pair_score": 0.6885882019996643,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0950_floor_02_pano_25_pano_39_6",
+      "reason_A": "interval_merge",
+      "reason_B": "present",
+      "selection_index": 5,
+      "severity_name": "widest_overlapping_threshold_component_fraction",
+      "severity_stratum": "median",
+      "severity_value": 0.1328125,
+      "source_images": {
+        "A": {
+          "relative_path": "0950/panos/floor_02_partial_room_04_pano_25.jpg",
+          "sha256": "d3620d1e778be2ec88cb28de95daf5ec05b917218e8cf9d433800942305b7f1b",
+          "size": 402774
+        },
+        "B": {
+          "relative_path": "0950/panos/floor_02_partial_room_13_pano_39.jpg",
+          "sha256": "fe1fcaae1646b1513238a99f952696b18eea30d9493a3907d6922daf80981f21",
+          "size": 333028
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "interval_merge",
+      "automatic_reason": "interval_merge",
+      "figure_path": "figures/interval_merge/1274_floor_01_pano_7_pano_22_3.png",
+      "figure_sha256": "37149ca9b257b999b65a8a8199a3c1e36d3c8c69d865a4d62fa1f8ac5bf20856",
+      "house_id": "1274",
+      "matcher_metrics": {
+        "candidate_count_A": 7,
+        "candidate_count_B": 2,
+        "candidate_product": 14,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.14893652498722076,
+        "pair_no_match_probability": 0.8092733025550842,
+        "recovered_pair_no_match_probability": 0.8092732878981709,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "1274_floor_01_pano_7_pano_22_3",
+      "reason_A": "interval_merge",
+      "reason_B": "present",
+      "selection_index": 6,
+      "severity_name": "widest_overlapping_threshold_component_fraction",
+      "severity_stratum": "median",
+      "severity_value": 0.11328125,
+      "source_images": {
+        "A": {
+          "relative_path": "1274/panos/floor_01_partial_room_19_pano_7.jpg",
+          "sha256": "d833ac107ce159b74233c3bd5c316b8d15db08b18793a2eea81f87f8c2966d99",
+          "size": 464042
+        },
+        "B": {
+          "relative_path": "1274/panos/floor_01_partial_room_17_pano_22.jpg",
+          "sha256": "5bdbd7f729ded098138d6da816b0283daf7d98138a7ed503e001490fc3679a14",
+          "size": 447969
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "interval_merge",
+      "automatic_reason": "interval_merge",
+      "figure_path": "figures/interval_merge/1467_floor_02_pano_53_pano_39_3.png",
+      "figure_sha256": "7fc16ab37981bf25ce250d5dc956707e488bc66f83211ab624f382d403320556",
+      "house_id": "1467",
+      "matcher_metrics": {
+        "candidate_count_A": 5,
+        "candidate_count_B": 2,
+        "candidate_product": 10,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.25026533007621765,
+        "pair_no_match_probability": 0.781139612197876,
+        "recovered_pair_no_match_probability": 0.7811396730808907,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "1467_floor_02_pano_53_pano_39_3",
+      "reason_A": "interval_merge",
+      "reason_B": "present",
+      "selection_index": 7,
+      "severity_name": "widest_overlapping_threshold_component_fraction",
+      "severity_stratum": "boundary",
+      "severity_value": 0.015625,
+      "source_images": {
+        "A": {
+          "relative_path": "1467/panos/floor_02_partial_room_03_pano_53.jpg",
+          "sha256": "1117c2040126d15ead2b9ae8496e66849fd01f45edbdbb5f9f553947b8e4cec6",
+          "size": 360814
+        },
+        "B": {
+          "relative_path": "1467/panos/floor_02_partial_room_04_pano_39.jpg",
+          "sha256": "4fe8b86109c352edab5371fecd89e4667270f717ceeeff92612998e45c261bcc",
+          "size": 323844
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "no_opening_signal",
+      "automatic_reason": "no_opening_signal_A",
+      "figure_path": "figures/no_opening_signal/0184_floor_01_pano_34_pano_50_10.png",
+      "figure_sha256": "57ccbdff6c1e9b85909b7635faa95470fdc985e9c54f48c45fd0a247cbb4acba",
+      "house_id": "0184",
+      "matcher_metrics": {
+        "candidate_count_A": 1,
+        "candidate_count_B": 1,
+        "candidate_product": 1,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.008461752906441689,
+        "pair_no_match_probability": 0.9910227060317993,
+        "recovered_pair_no_match_probability": 0.9910227656759113,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0184_floor_01_pano_34_pano_50_10",
+      "reason_A": "no_opening_signal",
+      "reason_B": "present",
+      "selection_index": 8,
+      "severity_name": "mean_one_minus_GT_interval_probability_max",
+      "severity_stratum": "median",
+      "severity_value": 0.7412504851818085,
+      "source_images": {
+        "A": {
+          "relative_path": "0184/panos/floor_01_partial_room_17_pano_34.jpg",
+          "sha256": "70a777381d09bf3f0171c4450b0b55dc5ed4daf6ee600758ac3e1ab65d25b37b",
+          "size": 347992
+        },
+        "B": {
+          "relative_path": "0184/panos/floor_01_partial_room_21_pano_50.jpg",
+          "sha256": "c4493e080458dea36899c6b3464e418152f537e075c37dd544a1c7566f2951ab",
+          "size": 344410
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "no_opening_signal",
+      "automatic_reason": "no_opening_signal_B",
+      "figure_path": "figures/no_opening_signal/0185_floor_01_pano_18_pano_24_0.png",
+      "figure_sha256": "46724122603e6eb0d4fccb4481feb142bb762c7ebcb2a940a21aa20bd5d7d8cd",
+      "house_id": "0185",
+      "matcher_metrics": {
+        "candidate_count_A": 8,
+        "candidate_count_B": 1,
+        "candidate_product": 8,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.1695600152015686,
+        "pair_no_match_probability": 0.8733502626419067,
+        "recovered_pair_no_match_probability": 0.873350313392458,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0185_floor_01_pano_18_pano_24_0",
+      "reason_A": "present",
+      "reason_B": "no_opening_signal",
+      "selection_index": 9,
+      "severity_name": "mean_one_minus_GT_interval_probability_max",
+      "severity_stratum": "severe",
+      "severity_value": 0.9999896732388152,
+      "source_images": {
+        "A": {
+          "relative_path": "0185/panos/floor_01_partial_room_08_pano_18.jpg",
+          "sha256": "59907eec43a40c0c6ddd2dba571bf07872392d24919e7dcfde7d969e28cba183",
+          "size": 437176
+        },
+        "B": {
+          "relative_path": "0185/panos/floor_01_partial_room_05_pano_24.jpg",
+          "sha256": "3ee7933b26d21f3e66663450fec7c54922dc3e76f9711dbbc737282938817ddd",
+          "size": 487324
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "no_opening_signal",
+      "automatic_reason": "no_opening_signal_both",
+      "figure_path": "figures/no_opening_signal/0224_floor_02_pano_21_pano_19_11.png",
+      "figure_sha256": "2b892f98a5394de0d1a692b8077c010ea1c50cc3ab2529254d9816f6833547b3",
+      "house_id": "0224",
+      "matcher_metrics": {
+        "candidate_count_A": 3,
+        "candidate_count_B": 2,
+        "candidate_product": 6,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.009835125878453255,
+        "pair_no_match_probability": 0.972629189491272,
+        "recovered_pair_no_match_probability": 0.972629135769586,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0224_floor_02_pano_21_pano_19_11",
+      "reason_A": "no_opening_signal",
+      "reason_B": "no_opening_signal",
+      "selection_index": 10,
+      "severity_name": "mean_one_minus_GT_interval_probability_max",
+      "severity_stratum": "boundary",
+      "severity_value": 0.4515739530324936,
+      "source_images": {
+        "A": {
+          "relative_path": "0224/panos/floor_02_partial_room_07_pano_21.jpg",
+          "sha256": "881fafd1b489cf52c0d93b8bad182da863c485420b391a827eb3fb64a804ba54",
+          "size": 615403
+        },
+        "B": {
+          "relative_path": "0224/panos/floor_02_partial_room_15_pano_19.jpg",
+          "sha256": "d4cad0cd0c7585ae9c2e941d52d5d72ab14feabab2c688f40e7b1d06976c5d58",
+          "size": 653489
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "no_opening_signal",
+      "automatic_reason": "no_opening_signal_both",
+      "figure_path": "figures/no_opening_signal/0266_floor_01_pano_40_pano_21_1.png",
+      "figure_sha256": "941a46427e9669166c0b97518068356fd9387cf405480a8533e32a4fc70bf906",
+      "house_id": "0266",
+      "matcher_metrics": {
+        "candidate_count_A": 2,
+        "candidate_count_B": 4,
+        "candidate_product": 8,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.09929466247558594,
+        "pair_no_match_probability": 0.8994749188423157,
+        "recovered_pair_no_match_probability": 0.8994749521029001,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0266_floor_01_pano_40_pano_21_1",
+      "reason_A": "no_opening_signal",
+      "reason_B": "no_opening_signal",
+      "selection_index": 11,
+      "severity_name": "mean_one_minus_GT_interval_probability_max",
+      "severity_stratum": "severe",
+      "severity_value": 0.9044917300343513,
+      "source_images": {
+        "A": {
+          "relative_path": "0266/panos/floor_01_partial_room_01_pano_40.jpg",
+          "sha256": "43e0f20091e57bff3d4ee06340429c98baa7cd62c65764a2c684e7cf93c5ece1",
+          "size": 382111
+        },
+        "B": {
+          "relative_path": "0266/panos/floor_01_partial_room_03_pano_21.jpg",
+          "sha256": "5b1f8364eee8521a709b7f9e47068777e5657c3f4d320dcd1f263bb3028dd443",
+          "size": 415981
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "no_opening_signal",
+      "automatic_reason": "no_opening_signal_B",
+      "figure_path": "figures/no_opening_signal/0542_floor_01_pano_8_pano_14_0.png",
+      "figure_sha256": "4e7e45799f5a9a1fed8cbbb9d36d52c14696016ce2328c40e6ff1b0211819f80",
+      "house_id": "0542",
+      "matcher_metrics": {
+        "candidate_count_A": 3,
+        "candidate_count_B": 2,
+        "candidate_product": 6,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.14475391805171967,
+        "pair_no_match_probability": 0.9033259153366089,
+        "recovered_pair_no_match_probability": 0.9033259417739556,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0542_floor_01_pano_8_pano_14_0",
+      "reason_A": "present",
+      "reason_B": "no_opening_signal",
+      "selection_index": 12,
+      "severity_name": "mean_one_minus_GT_interval_probability_max",
+      "severity_stratum": "median",
+      "severity_value": 0.811159759759903,
+      "source_images": {
+        "A": {
+          "relative_path": "0542/panos/floor_01_partial_room_01_pano_8.jpg",
+          "sha256": "f911917ab80d51bd396fd1a427b3c0dd2b1f537d35b733f89b4196628b2da995",
+          "size": 370752
+        },
+        "B": {
+          "relative_path": "0542/panos/floor_01_partial_room_06_pano_14.jpg",
+          "sha256": "7a5b4a8da0252c15c7d4bde08af3fa71551cb0e5d3487e84054e13db474e6837",
+          "size": 345895
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "no_opening_signal",
+      "automatic_reason": "no_opening_signal_A",
+      "figure_path": "figures/no_opening_signal/1125_floor_00_pano_34_pano_43_9.png",
+      "figure_sha256": "bc26178a6a33b5a69aaa2eaba95c6023bbe445ac2c33c94b998c2b0cb8737dc9",
+      "house_id": "1125",
+      "matcher_metrics": {
+        "candidate_count_A": 2,
+        "candidate_count_B": 2,
+        "candidate_product": 4,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.15445451438426971,
+        "pair_no_match_probability": 0.8465396761894226,
+        "recovered_pair_no_match_probability": 0.8465396913991666,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "1125_floor_00_pano_34_pano_43_9",
+      "reason_A": "no_opening_signal",
+      "reason_B": "present",
+      "selection_index": 13,
+      "severity_name": "mean_one_minus_GT_interval_probability_max",
+      "severity_stratum": "severe",
+      "severity_value": 0.9999907780074864,
+      "source_images": {
+        "A": {
+          "relative_path": "1125/panos/floor_00_partial_room_03_pano_34.jpg",
+          "sha256": "cfcdfbd674f1706e9d7f59bbcf8dd88ab9febcb6fdcb6d96a5359fecf19313a1",
+          "size": 347179
+        },
+        "B": {
+          "relative_path": "1125/panos/floor_00_partial_room_02_pano_43.jpg",
+          "sha256": "bdbdf3a74602648fd3db03a08994eff6d812937dbc1ae8686268353c3854d619",
+          "size": 555396
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "no_opening_signal",
+      "automatic_reason": "no_opening_signal_B",
+      "figure_path": "figures/no_opening_signal/1261_floor_02_pano_56_pano_55_6.png",
+      "figure_sha256": "eb8e5ee6f6cba8c776dabcb9f156d22d8c5ee27b5c076be2009fe56b29d6445b",
+      "house_id": "1261",
+      "matcher_metrics": {
+        "candidate_count_A": 3,
+        "candidate_count_B": 5,
+        "candidate_product": 15,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.13107453286647797,
+        "pair_no_match_probability": 0.8846427202224731,
+        "recovered_pair_no_match_probability": 0.8846427444869713,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "1261_floor_02_pano_56_pano_55_6",
+      "reason_A": "present",
+      "reason_B": "no_opening_signal",
+      "selection_index": 14,
+      "severity_name": "mean_one_minus_GT_interval_probability_max",
+      "severity_stratum": "boundary",
+      "severity_value": 0.15927588939666748,
+      "source_images": {
+        "A": {
+          "relative_path": "1261/panos/floor_02_partial_room_02_pano_56.jpg",
+          "sha256": "41503a882b351e7d742d45a8bd36f2cbc9cd304bdbb7d941f6a7e95b6d9c4b36",
+          "size": 392695
+        },
+        "B": {
+          "relative_path": "1261/panos/floor_02_partial_room_03_pano_55.jpg",
+          "sha256": "999d6fca9c5ca70be8e7e25dd81205569af40cd34b02c4ec2541050349a953d0",
+          "size": 357551
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "no_opening_signal",
+      "automatic_reason": "no_opening_signal_A",
+      "figure_path": "figures/no_opening_signal/1334_floor_02_pano_49_pano_53_6.png",
+      "figure_sha256": "80af76b9237067002fe7791c1ed26a0b47de161b2b95d440ae82e0c1a4d09b4a",
+      "house_id": "1334",
+      "matcher_metrics": {
+        "candidate_count_A": 2,
+        "candidate_count_B": 1,
+        "candidate_product": 2,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.0031646601855754852,
+        "pair_no_match_probability": 0.9957523941993713,
+        "recovered_pair_no_match_probability": 0.9957524989463872,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "1334_floor_02_pano_49_pano_53_6",
+      "reason_A": "no_opening_signal",
+      "reason_B": "present",
+      "selection_index": 15,
+      "severity_name": "mean_one_minus_GT_interval_probability_max",
+      "severity_stratum": "boundary",
+      "severity_value": 0.005468904972076416,
+      "source_images": {
+        "A": {
+          "relative_path": "1334/panos/floor_02_partial_room_07_pano_49.jpg",
+          "sha256": "807ae640adb3371169c327430ce9dc8243689786a04ce62912dcce638f0a1ad8",
+          "size": 364866
+        },
+        "B": {
+          "relative_path": "1334/panos/floor_02_partial_room_13_pano_53.jpg",
+          "sha256": "8d98f981ea3d4053e13f34dd79bfa75770040e3d86d3f9c4650c7d432ee9193a",
+          "size": 345476
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "interval_split",
+      "automatic_reason": "interval_split",
+      "figure_path": "figures/interval_split/0547_floor_01_pano_16_pano_17_9.png",
+      "figure_sha256": "ae9eeb2108b06d0b44d900d5ba98a5aa959dda9bf254b35cc2630f61e4decfcb",
+      "house_id": "0547",
+      "matcher_metrics": {
+        "candidate_count_A": 2,
+        "candidate_count_B": 4,
+        "candidate_product": 8,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.14055870473384857,
+        "pair_no_match_probability": 0.8859893679618835,
+        "recovered_pair_no_match_probability": 0.8859893895633707,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0547_floor_01_pano_16_pano_17_9",
+      "reason_A": "present",
+      "reason_B": "interval_split",
+      "selection_index": 16,
+      "severity_name": "mean_one_minus_best_final_IoU",
+      "severity_stratum": "severe",
+      "severity_value": 0.9705882352941176,
+      "source_images": {
+        "A": {
+          "relative_path": "0547/panos/floor_01_partial_room_09_pano_16.jpg",
+          "sha256": "d6a034467e36404187f7b081f64c9c01459c78b17d79e962f10aabb219ba7e90",
+          "size": 339464
+        },
+        "B": {
+          "relative_path": "0547/panos/floor_01_partial_room_13_pano_17.jpg",
+          "sha256": "ecb0066cf6015c08d7edb53938c8bc7ee67691d6ba8f412772660b5f3cef040b",
+          "size": 382822
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "interval_split",
+      "automatic_reason": "interval_split",
+      "figure_path": "figures/interval_split/0618_floor_03_pano_49_pano_48_5.png",
+      "figure_sha256": "f4a0f69f5fbc7b80694b2648b8c20109abb010342a140ec3608c66a0d5137406",
+      "house_id": "0618",
+      "matcher_metrics": {
+        "candidate_count_A": 5,
+        "candidate_count_B": 3,
+        "candidate_product": 15,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.07308518886566162,
+        "pair_no_match_probability": 0.9003516435623169,
+        "recovered_pair_no_match_probability": 0.9003516673336509,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0618_floor_03_pano_49_pano_48_5",
+      "reason_A": "interval_split",
+      "reason_B": "present",
+      "selection_index": 17,
+      "severity_name": "mean_one_minus_best_final_IoU",
+      "severity_stratum": "severe",
+      "severity_value": 0.889763779527559,
+      "source_images": {
+        "A": {
+          "relative_path": "0618/panos/floor_03_partial_room_01_pano_49.jpg",
+          "sha256": "566b9b47726768e3685fcc5e6a612d97822ab5863fcb197c4919e835d162a9b2",
+          "size": 375648
+        },
+        "B": {
+          "relative_path": "0618/panos/floor_03_partial_room_09_pano_48.jpg",
+          "sha256": "9576691e9f6a4ccc5f06d6d1cdf49ba58b071c3cd2de67cfaede4de262599471",
+          "size": 375048
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "interval_split",
+      "automatic_reason": "interval_split",
+      "figure_path": "figures/interval_split/1359_floor_01_pano_6_pano_15_11.png",
+      "figure_sha256": "6373dd9460bfbe29b995808f932b44f300c752a91cea6e136376381930515e7c",
+      "house_id": "1359",
+      "matcher_metrics": {
+        "candidate_count_A": 7,
+        "candidate_count_B": 2,
+        "candidate_product": 14,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.1797911375761032,
+        "pair_no_match_probability": 0.7098250985145569,
+        "recovered_pair_no_match_probability": 0.7098250672763738,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "1359_floor_01_pano_6_pano_15_11",
+      "reason_A": "interval_split",
+      "reason_B": "present",
+      "selection_index": 18,
+      "severity_name": "mean_one_minus_best_final_IoU",
+      "severity_stratum": "boundary",
+      "severity_value": 0.75,
+      "source_images": {
+        "A": {
+          "relative_path": "1359/panos/floor_01_partial_room_09_pano_6.jpg",
+          "sha256": "8ccc9c775b79f43b46f08b9668c846186fbcd08b536cdadc6380ecd84affade8",
+          "size": 463211
+        },
+        "B": {
+          "relative_path": "1359/panos/floor_01_partial_room_04_pano_15.jpg",
+          "sha256": "6f961cc22536a21bbe91354d2f537c04cf08e7e2b0db975d69e11a2123befafc",
+          "size": 406154
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "interval_split",
+      "automatic_reason": "interval_split",
+      "figure_path": "figures/interval_split/1525_floor_00_pano_55_pano_52_1.png",
+      "figure_sha256": "9a6a9b755eca1c2213657f43cc5c0f049b128cb2859e28c4c33524b9903bcf6a",
+      "house_id": "1525",
+      "matcher_metrics": {
+        "candidate_count_A": 2,
+        "candidate_count_B": 3,
+        "candidate_product": 6,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.035714779049158096,
+        "pair_no_match_probability": 0.9517236351966858,
+        "recovered_pair_no_match_probability": 0.9517236116681156,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "1525_floor_00_pano_55_pano_52_1",
+      "reason_A": "interval_split",
+      "reason_B": "interval_merge",
+      "selection_index": 19,
+      "severity_name": "mean_one_minus_best_final_IoU",
+      "severity_stratum": "median",
+      "severity_value": 0.8309859154929577,
+      "source_images": {
+        "A": {
+          "relative_path": "1525/panos/floor_00_partial_room_01_pano_55.jpg",
+          "sha256": "b57bcd9643f10be487267418c0abde860a80927fba10041410eff39ee6db5c73",
+          "size": 569388
+        },
+        "B": {
+          "relative_path": "1525/panos/floor_00_partial_room_04_pano_52.jpg",
+          "sha256": "b35b21cc8c96374eda08751dffff10deadf462518f42920822334d60b1c7cb3d",
+          "size": 537735
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "below_threshold",
+      "automatic_reason": "below_threshold_A",
+      "figure_path": "figures/below_threshold/0761_floor_01_pano_8_pano_5_2.png",
+      "figure_sha256": "28e6b0d1076cd99e6f3fb5b711cdce645a77cc262c3ddda0ed40bfb045f7a4b2",
+      "house_id": "0761",
+      "matcher_metrics": {
+        "candidate_count_A": 4,
+        "candidate_count_B": 1,
+        "candidate_product": 4,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.14076285064220428,
+        "pair_no_match_probability": 0.8782737851142883,
+        "recovered_pair_no_match_probability": 0.8782737890888843,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0761_floor_01_pano_8_pano_5_2",
+      "reason_A": "below_threshold",
+      "reason_B": "present",
+      "selection_index": 20,
+      "severity_name": "mean_threshold_minus_GT_interval_probability_max",
+      "severity_stratum": "boundary",
+      "severity_value": 0.006954611539840672,
+      "source_images": {
+        "A": {
+          "relative_path": "0761/panos/floor_01_partial_room_10_pano_8.jpg",
+          "sha256": "70b32989496f829366011283df84fbc5aacc0eb0e44b3cba37c34a6e49b87a45",
+          "size": 482153
+        },
+        "B": {
+          "relative_path": "0761/panos/floor_01_partial_room_04_pano_5.jpg",
+          "sha256": "d61826b845feaabfa8df0f101b80bdd146ac57f0a9b3ca19a60c225c09115e91",
+          "size": 372249
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "below_threshold",
+      "automatic_reason": "below_threshold_A",
+      "figure_path": "figures/below_threshold/0991_floor_02_pano_38_pano_46_7.png",
+      "figure_sha256": "78d787178e07a28754f9df2566a73b7ebe76801bfdb2c9322f6ab6e9ff9fb8dc",
+      "house_id": "0991",
+      "matcher_metrics": {
+        "candidate_count_A": 4,
+        "candidate_count_B": 2,
+        "candidate_product": 8,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.2887943387031555,
+        "pair_no_match_probability": 0.7709166407585144,
+        "recovered_pair_no_match_probability": 0.7709165813947133,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0991_floor_02_pano_38_pano_46_7",
+      "reason_A": "below_threshold",
+      "reason_B": "interval_merge",
+      "selection_index": 21,
+      "severity_name": "mean_threshold_minus_GT_interval_probability_max",
+      "severity_stratum": "severe",
+      "severity_value": 0.30466990292072293,
+      "source_images": {
+        "A": {
+          "relative_path": "0991/panos/floor_02_partial_room_10_pano_38.jpg",
+          "sha256": "b73681772b7bb960071c78f9fd0ce87263f8c325033e461167a59459f244979d",
+          "size": 588978
+        },
+        "B": {
+          "relative_path": "0991/panos/floor_02_partial_room_11_pano_46.jpg",
+          "sha256": "132b779da9718496d5a98aaa3e422aec58ff13b8952e628f53fd998412a04b65",
+          "size": 449388
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "below_threshold",
+      "automatic_reason": "below_threshold_B",
+      "figure_path": "figures/below_threshold/1284_floor_01_pano_22_pano_18_3.png",
+      "figure_sha256": "db0e0049e3b529872365de19739ecb32ec090962abcad485dbcafcc05d976a85",
+      "house_id": "1284",
+      "matcher_metrics": {
+        "candidate_count_A": 1,
+        "candidate_count_B": 1,
+        "candidate_product": 1,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.0025545216631144285,
+        "pair_no_match_probability": 0.9974095225334167,
+        "recovered_pair_no_match_probability": 0.9974095014860469,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "1284_floor_01_pano_22_pano_18_3",
+      "reason_A": "present",
+      "reason_B": "below_threshold",
+      "selection_index": 22,
+      "severity_name": "mean_threshold_minus_GT_interval_probability_max",
+      "severity_stratum": "severe",
+      "severity_value": 0.24366358041763303,
+      "source_images": {
+        "A": {
+          "relative_path": "1284/panos/floor_01_partial_room_04_pano_22.jpg",
+          "sha256": "a691d69cf3b077ffdd715823be23338cb543a47a76cea2e6ce0f8ae503b57e16",
+          "size": 542551
+        },
+        "B": {
+          "relative_path": "1284/panos/floor_01_partial_room_09_pano_18.jpg",
+          "sha256": "bfa6a9bed1339f51aaabfc73fa587a18b00c94f378e83124f202ff8bd03134f9",
+          "size": 474680
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "below_threshold",
+      "automatic_reason": "below_threshold_B",
+      "figure_path": "figures/below_threshold/1327_floor_01_pano_4_pano_25_0.png",
+      "figure_sha256": "a8aee58884fbcbdcc909b2a6774d9fabf74d8a3d507d9ace0ad0159b2b57ad9b",
+      "house_id": "1327",
+      "matcher_metrics": {
+        "candidate_count_A": 5,
+        "candidate_count_B": 4,
+        "candidate_product": 20,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.25757959485054016,
+        "pair_no_match_probability": 0.6380658149719238,
+        "recovered_pair_no_match_probability": 0.6380658261101115,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": [
+          3,
+          2
+        ],
+        "selected_pair_score": 0.25757959485054016,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "1327_floor_01_pano_4_pano_25_0",
+      "reason_A": "present",
+      "reason_B": "below_threshold",
+      "selection_index": 23,
+      "severity_name": "mean_threshold_minus_GT_interval_probability_max",
+      "severity_stratum": "boundary",
+      "severity_value": 0.005913258790969822,
+      "source_images": {
+        "A": {
+          "relative_path": "1327/panos/floor_01_partial_room_10_pano_4.jpg",
+          "sha256": "42399464d82058ca6d745cb44f709282504ebc221df00cec7b2853a9ada06649",
+          "size": 422939
+        },
+        "B": {
+          "relative_path": "1327/panos/floor_01_partial_room_04_pano_25.jpg",
+          "sha256": "3815bdf937f7d79695fcfb33fead92b03fcdc5be598299d4831a98be12057dd9",
+          "size": 379816
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "dedup_removed",
+      "automatic_reason": "dedup_removed",
+      "figure_path": "figures/dedup_removed/0161_floor_01_pano_25_pano_32_8.png",
+      "figure_sha256": "f31c03ee140af9c5bb565f78c36429676d2127b21049b2ee01ed77015b4b6f6b",
+      "house_id": "0161",
+      "matcher_metrics": {
+        "candidate_count_A": 3,
+        "candidate_count_B": 1,
+        "candidate_product": 3,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.0206631887704134,
+        "pair_no_match_probability": 0.9810397624969482,
+        "recovered_pair_no_match_probability": 0.9810397343996714,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0161_floor_01_pano_25_pano_32_8",
+      "reason_A": "dedup_removed",
+      "reason_B": "present",
+      "selection_index": 24,
+      "severity_name": "exhaustive_category",
+      "severity_stratum": "all",
+      "severity_value": 0.06296247243881226,
+      "source_images": {
+        "A": {
+          "relative_path": "0161/panos/floor_01_partial_room_14_pano_25.jpg",
+          "sha256": "4205e40d8bd0480de3cb85beeb680c48879ef1437f2c1f4a2a8c0d8959e8af88",
+          "size": 449857
+        },
+        "B": {
+          "relative_path": "0161/panos/floor_01_partial_room_18_pano_32.jpg",
+          "sha256": "36bc625015c8011414061071f8148a1c3a79d2d2c4b73c04f8395b4863ec3d75",
+          "size": 469569
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "dedup_removed",
+      "automatic_reason": "dedup_removed",
+      "figure_path": "figures/dedup_removed/0664_floor_02_pano_29_pano_31_5.png",
+      "figure_sha256": "dad5ddf83e184aa255adf77cae45602a6a4ca85b15d880810760c0cdd96f9a25",
+      "house_id": "0664",
+      "matcher_metrics": {
+        "candidate_count_A": 2,
+        "candidate_count_B": 2,
+        "candidate_product": 4,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.05272265151143074,
+        "pair_no_match_probability": 0.9515253901481628,
+        "recovered_pair_no_match_probability": 0.9515253924754723,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0664_floor_02_pano_29_pano_31_5",
+      "reason_A": "present",
+      "reason_B": "dedup_removed",
+      "selection_index": 25,
+      "severity_name": "exhaustive_category",
+      "severity_stratum": "all",
+      "severity_value": 0.0872848629951477,
+      "source_images": {
+        "A": {
+          "relative_path": "0664/panos/floor_02_partial_room_09_pano_29.jpg",
+          "sha256": "99e6294b63dc983f0bbeeb8298fd8b61835bc3dbdcafd12bf6a85b7e2c2aeb5d",
+          "size": 471698
+        },
+        "B": {
+          "relative_path": "0664/panos/floor_02_partial_room_03_pano_31.jpg",
+          "sha256": "440f05a13dd696051d005e72dc54a20114c918a52a385d98e34daf286296a09f",
+          "size": 483041
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "dedup_removed",
+      "automatic_reason": "dedup_removed",
+      "figure_path": "figures/dedup_removed/0751_floor_02_pano_21_pano_27_8.png",
+      "figure_sha256": "18b6af52508c90d2bea3cf202abb05e6e89633648ea6a72c1e357e538beff340",
+      "house_id": "0751",
+      "matcher_metrics": {
+        "candidate_count_A": 4,
+        "candidate_count_B": 1,
+        "candidate_product": 4,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.1766066998243332,
+        "pair_no_match_probability": 0.7966774702072144,
+        "recovered_pair_no_match_probability": 0.796677457236206,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0751_floor_02_pano_21_pano_27_8",
+      "reason_A": "present",
+      "reason_B": "dedup_removed",
+      "selection_index": 26,
+      "severity_name": "exhaustive_category",
+      "severity_stratum": "all",
+      "severity_value": 0.16540813446044922,
+      "source_images": {
+        "A": {
+          "relative_path": "0751/panos/floor_02_partial_room_03_pano_21.jpg",
+          "sha256": "4449f6d28358990b3488758ba939482fae9cfef19a67e9818fdffb9a46877450",
+          "size": 385433
+        },
+        "B": {
+          "relative_path": "0751/panos/floor_02_partial_room_08_pano_27.jpg",
+          "sha256": "f1bb278545c01f8722b2d5bcc94c4627e2401da61dc2085581cdecb0076984d0",
+          "size": 591959
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "dedup_removed",
+      "automatic_reason": "dedup_removed",
+      "figure_path": "figures/dedup_removed/0924_floor_02_pano_87_pano_93_7.png",
+      "figure_sha256": "8703d47bd3ada75dd7cfd109ddbe17b4d7d4b1747ab7d3277aeb114057ce969f",
+      "house_id": "0924",
+      "matcher_metrics": {
+        "candidate_count_A": 2,
+        "candidate_count_B": 1,
+        "candidate_product": 2,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.09167097508907318,
+        "pair_no_match_probability": 0.8948547840118408,
+        "recovered_pair_no_match_probability": 0.894854744471983,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0924_floor_02_pano_87_pano_93_7",
+      "reason_A": "dedup_removed",
+      "reason_B": "present",
+      "selection_index": 27,
+      "severity_name": "exhaustive_category",
+      "severity_stratum": "all",
+      "severity_value": 0.4362596869468689,
+      "source_images": {
+        "A": {
+          "relative_path": "0924/panos/floor_02_partial_room_14_pano_87.jpg",
+          "sha256": "e2e018b9d9c3c2fc3831727e2b44964fc152fdfa49e7199bf0375aca259441bf",
+          "size": 348623
+        },
+        "B": {
+          "relative_path": "0924/panos/floor_02_partial_room_20_pano_93.jpg",
+          "sha256": "039cee07eba76dddd8120cd80711240b3da4a7254509dd2daaad9c183e3161a1",
+          "size": 469198
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "candidate_cap_removed",
+      "automatic_reason": "candidate_cap_removed",
+      "figure_path": "figures/candidate_cap_removed/1037_floor_01_pano_12_pano_20_1.png",
+      "figure_sha256": "a405bc40c529626f36e769a91bb28adfb6dc72e27fb29ef5bc74d525575bb871",
+      "house_id": "1037",
+      "matcher_metrics": {
+        "candidate_count_A": 7,
+        "candidate_count_B": 2,
+        "candidate_product": 14,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.7031090259552002,
+        "pair_no_match_probability": 0.6690043807029724,
+        "recovered_pair_no_match_probability": 0.6690043990762097,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": [
+          0,
+          1
+        ],
+        "selected_pair_score": 0.7031090259552002,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "1037_floor_01_pano_12_pano_20_1",
+      "reason_A": "candidate_cap_removed",
+      "reason_B": "present",
+      "selection_index": 28,
+      "severity_name": "exhaustive_category",
+      "severity_stratum": "all",
+      "severity_value": 0.41740453243255615,
+      "source_images": {
+        "A": {
+          "relative_path": "1037/panos/floor_01_partial_room_01_pano_12.jpg",
+          "sha256": "5cf7326ac6797c59f494e2d97e94b5087e28e301055d1ca83f72e146bea71f38",
+          "size": 478542
+        },
+        "B": {
+          "relative_path": "1037/panos/floor_01_partial_room_09_pano_20.jpg",
+          "sha256": "a047c05a5ad937c73428a0cae3fc26378dc2a005719e083663a2fc01b37e1a89",
+          "size": 429583
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "interval_expansion_failure",
+      "automatic_reason": "interval_expansion_failure",
+      "figure_path": "figures/interval_expansion_failure/0492_floor_02_pano_46_pano_90_11.png",
+      "figure_sha256": "5bac3c7bab3ac978132ab8276af59fc4ad4ec39ec98589e9a895b8503a5c0678",
+      "house_id": "0492",
+      "matcher_metrics": {
+        "candidate_count_A": 3,
+        "candidate_count_B": 1,
+        "candidate_product": 3,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.01070321910083294,
+        "pair_no_match_probability": 0.9891141057014465,
+        "recovered_pair_no_match_probability": 0.9891141376200219,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [],
+        "true_pair": null,
+        "true_pair_raw_logit": null,
+        "true_pair_score": null,
+        "true_real_real_rank": null,
+        "true_to_dustbin_logit_margin": null
+      },
+      "pair_id": "0492_floor_02_pano_46_pano_90_11",
+      "reason_A": "interval_expansion_failure",
+      "reason_B": "present",
+      "selection_index": 29,
+      "severity_name": "exhaustive_category",
+      "severity_stratum": "all",
+      "severity_value": 0.48934006690979004,
+      "source_images": {
+        "A": {
+          "relative_path": "0492/panos/floor_02_partial_room_19_pano_46.jpg",
+          "sha256": "c7e580b3272e2ba22ec99e7ded0d57ae1845ab3dc16ed29d18bed97bb789326f",
+          "size": 389896
+        },
+        "B": {
+          "relative_path": "0492/panos/floor_02_partial_room_18_pano_90.jpg",
+          "sha256": "3c8e2e9f6cc9fdfd63c7af8efcbe998964d849cf8a5f2e090b36f85922998dc5",
+          "size": 404440
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "target_present_dustbin_reject",
+      "automatic_reason": "target_present_dustbin_reject",
+      "figure_path": "figures/target_present_dustbin_reject/0139_floor_01_pano_4_pano_12_4.png",
+      "figure_sha256": "cc76d818541f7833d85c885901e98c7cb7bf53069b534bfc01d7ba35ec6a6fe6",
+      "house_id": "0139",
+      "matcher_metrics": {
+        "candidate_count_A": 10,
+        "candidate_count_B": 2,
+        "candidate_product": 20,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.08647270500659943,
+        "pair_no_match_probability": 0.8199647068977356,
+        "recovered_pair_no_match_probability": 0.8199646990260604,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            0,
+            1
+          ]
+        ],
+        "true_pair": [
+          0,
+          1
+        ],
+        "true_pair_raw_logit": -1.100431203842163,
+        "true_pair_score": 0.04656534641981125,
+        "true_real_real_rank": 4,
+        "true_to_dustbin_logit_margin": -2.4950302839279175
+      },
+      "pair_id": "0139_floor_01_pano_4_pano_12_4",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 30,
+      "severity_name": "negative_true_to_dustbin_logit_margin",
+      "severity_stratum": "median",
+      "severity_value": 2.4950302839279175,
+      "source_images": {
+        "A": {
+          "relative_path": "0139/panos/floor_01_partial_room_06_pano_4.jpg",
+          "sha256": "cf7e9ef7a72fe770c2f6bcbd78a1506cc52c9748b6ec1d61805ae36ccd5a06d4",
+          "size": 506228
+        },
+        "B": {
+          "relative_path": "0139/panos/floor_01_partial_room_13_pano_12.jpg",
+          "sha256": "8db36700cdb083d5352377a631cfac208755019aba9c0b1c620178a871d363d5",
+          "size": 357896
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "target_present_dustbin_reject",
+      "automatic_reason": "target_present_dustbin_reject",
+      "figure_path": "figures/target_present_dustbin_reject/0286_floor_02_pano_33_pano_34_8.png",
+      "figure_sha256": "5b7269ad1657ba14c4cbb694c727b59ca6d9f48a5dd0b612d0d5d9186484281c",
+      "house_id": "0286",
+      "matcher_metrics": {
+        "candidate_count_A": 2,
+        "candidate_count_B": 2,
+        "candidate_product": 4,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.09672194719314575,
+        "pair_no_match_probability": 0.9378336071968079,
+        "recovered_pair_no_match_probability": 0.9378336283120595,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            0,
+            0
+          ]
+        ],
+        "true_pair": [
+          0,
+          0
+        ],
+        "true_pair_raw_logit": -0.8130034804344177,
+        "true_pair_score": 0.09672194719314575,
+        "true_real_real_rank": 1,
+        "true_to_dustbin_logit_margin": -2.207602560520172
+      },
+      "pair_id": "0286_floor_02_pano_33_pano_34_8",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 31,
+      "severity_name": "negative_true_to_dustbin_logit_margin",
+      "severity_stratum": "median",
+      "severity_value": 2.207602560520172,
+      "source_images": {
+        "A": {
+          "relative_path": "0286/panos/floor_02_partial_room_06_pano_33.jpg",
+          "sha256": "2ef39c6b5b132f24560629766b3f24fcfd230881dd76dad84998da244d63258d",
+          "size": 469490
+        },
+        "B": {
+          "relative_path": "0286/panos/floor_02_partial_room_07_pano_34.jpg",
+          "sha256": "fb771d2e079791ce0029837c4f00b42a0c9b017c8c701605b56493475cb33c91",
+          "size": 475452
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "target_present_dustbin_reject",
+      "automatic_reason": "target_present_dustbin_reject",
+      "figure_path": "figures/target_present_dustbin_reject/0417_floor_01_pano_45_pano_43_14.png",
+      "figure_sha256": "c85a787fb7f4d8ef938343b343c1ba8685b474401f5c0dabffbbf16939af4b2c",
+      "house_id": "0417",
+      "matcher_metrics": {
+        "candidate_count_A": 1,
+        "candidate_count_B": 2,
+        "candidate_product": 2,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.056936830282211304,
+        "pair_no_match_probability": 0.9252728819847107,
+        "recovered_pair_no_match_probability": 0.9252728179325113,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            0,
+            0
+          ]
+        ],
+        "true_pair": [
+          0,
+          0
+        ],
+        "true_pair_raw_logit": -1.3770644664764404,
+        "true_pair_score": 0.056936830282211304,
+        "true_real_real_rank": 1,
+        "true_to_dustbin_logit_margin": -2.771663546562195
+      },
+      "pair_id": "0417_floor_01_pano_45_pano_43_14",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 32,
+      "severity_name": "negative_true_to_dustbin_logit_margin",
+      "severity_stratum": "median",
+      "severity_value": 2.771663546562195,
+      "source_images": {
+        "A": {
+          "relative_path": "0417/panos/floor_01_partial_room_11_pano_45.jpg",
+          "sha256": "fb62b1fb9b4c85bc7d9fe744fc321f9ae7079d52f8d9027b8d2f1f3921d33a20",
+          "size": 400124
+        },
+        "B": {
+          "relative_path": "0417/panos/floor_01_partial_room_19_pano_43.jpg",
+          "sha256": "e5a7b984976aac4e06e110e12e32aaac40c22cbc63d0a31124e855371ef63822",
+          "size": 513536
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "target_present_dustbin_reject",
+      "automatic_reason": "target_present_dustbin_reject",
+      "figure_path": "figures/target_present_dustbin_reject/0590_floor_01_pano_21_pano_25_7.png",
+      "figure_sha256": "1b54a4fc049c48ad4c98db339b7b7095cfd931552e3bb53c4c5e0cb16a370546",
+      "house_id": "0590",
+      "matcher_metrics": {
+        "candidate_count_A": 3,
+        "candidate_count_B": 1,
+        "candidate_product": 3,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.0028032681439071894,
+        "pair_no_match_probability": 0.9944381713867188,
+        "recovered_pair_no_match_probability": 0.9944382128889301,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            1,
+            0
+          ]
+        ],
+        "true_pair": [
+          1,
+          0
+        ],
+        "true_pair_raw_logit": -4.458654880523682,
+        "true_pair_score": 0.002763607306405902,
+        "true_real_real_rank": 2,
+        "true_to_dustbin_logit_margin": -5.853253960609436
+      },
+      "pair_id": "0590_floor_01_pano_21_pano_25_7",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 33,
+      "severity_name": "negative_true_to_dustbin_logit_margin",
+      "severity_stratum": "severe",
+      "severity_value": 5.853253960609436,
+      "source_images": {
+        "A": {
+          "relative_path": "0590/panos/floor_01_partial_room_07_pano_21.jpg",
+          "sha256": "25685de0c1d132a7479e8555be14f7f2d7f58ade8f55dd798bdda9dd324ffc88",
+          "size": 403478
+        },
+        "B": {
+          "relative_path": "0590/panos/floor_01_partial_room_16_pano_25.jpg",
+          "sha256": "4b0a80985b18128ceccdb54fce480a7c5773e05e2f54688c9d964550be113368",
+          "size": 513406
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "target_present_dustbin_reject",
+      "automatic_reason": "target_present_dustbin_reject",
+      "figure_path": "figures/target_present_dustbin_reject/0654_floor_02_pano_37_pano_31_9.png",
+      "figure_sha256": "7509dce2718f85e46d3648498bbd8641dfdfeb78cae8c233188d904031705d8a",
+      "house_id": "0654",
+      "matcher_metrics": {
+        "candidate_count_A": 2,
+        "candidate_count_B": 2,
+        "candidate_product": 4,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.2238433063030243,
+        "pair_no_match_probability": 0.7025148272514343,
+        "recovered_pair_no_match_probability": 0.702514874826757,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            1,
+            0
+          ]
+        ],
+        "true_pair": [
+          1,
+          0
+        ],
+        "true_pair_raw_logit": 0.31413882970809937,
+        "true_pair_score": 0.20353277027606964,
+        "true_real_real_rank": 2,
+        "true_to_dustbin_logit_margin": -1.080460250377655
+      },
+      "pair_id": "0654_floor_02_pano_37_pano_31_9",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 34,
+      "severity_name": "negative_true_to_dustbin_logit_margin",
+      "severity_stratum": "boundary",
+      "severity_value": 1.080460250377655,
+      "source_images": {
+        "A": {
+          "relative_path": "0654/panos/floor_02_partial_room_05_pano_37.jpg",
+          "sha256": "eefe098d5f83a597b69eb8f57e407efd3745d0bd61884f77160c6b79dc1609a2",
+          "size": 493370
+        },
+        "B": {
+          "relative_path": "0654/panos/floor_02_partial_room_08_pano_31.jpg",
+          "sha256": "34f90183c347a0de5405b95b90f381d2b51fb2414efdf5d9e1b4c1400ac07976",
+          "size": 487073
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "target_present_dustbin_reject",
+      "automatic_reason": "target_present_dustbin_reject",
+      "figure_path": "figures/target_present_dustbin_reject/0780_floor_02_pano_26_pano_29_2.png",
+      "figure_sha256": "e7d8e1bf797bdef7f26530ac41872e2694ea03be3a8753890f484560161a0c8d",
+      "house_id": "0780",
+      "matcher_metrics": {
+        "candidate_count_A": 2,
+        "candidate_count_B": 1,
+        "candidate_product": 2,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.411479651927948,
+        "pair_no_match_probability": 0.6128637194633484,
+        "recovered_pair_no_match_probability": 0.6128637726533235,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            1,
+            0
+          ]
+        ],
+        "true_pair": [
+          1,
+          0
+        ],
+        "true_pair_raw_logit": 1.3846495151519775,
+        "true_pair_score": 0.411479651927948,
+        "true_real_real_rank": 1,
+        "true_to_dustbin_logit_margin": -0.009949564933776855
+      },
+      "pair_id": "0780_floor_02_pano_26_pano_29_2",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 35,
+      "severity_name": "negative_true_to_dustbin_logit_margin",
+      "severity_stratum": "boundary",
+      "severity_value": 0.009949564933776855,
+      "source_images": {
+        "A": {
+          "relative_path": "0780/panos/floor_02_partial_room_05_pano_26.jpg",
+          "sha256": "4ace4a5f177fd4ee676babeff525cb2e627e4c03de3baa39ff134a16bd2968d4",
+          "size": 475264
+        },
+        "B": {
+          "relative_path": "0780/panos/floor_02_partial_room_11_pano_29.jpg",
+          "sha256": "1cd6c8f19d5234e4bc9d564a0529d502c2282d78fc0a3126178ae0d54c9a2f26",
+          "size": 463263
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "target_present_dustbin_reject",
+      "automatic_reason": "target_present_dustbin_reject",
+      "figure_path": "figures/target_present_dustbin_reject/0888_floor_01_pano_21_pano_4_1.png",
+      "figure_sha256": "05acee303f3e6dbd68bdcfa3c53b985c0270f9d5f6e8b1ef4ca3834b77f83ec4",
+      "house_id": "0888",
+      "matcher_metrics": {
+        "candidate_count_A": 6,
+        "candidate_count_B": 8,
+        "candidate_product": 48,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.10480164736509323,
+        "pair_no_match_probability": 0.8807494044303894,
+        "recovered_pair_no_match_probability": 0.8807494185840423,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            0,
+            5
+          ]
+        ],
+        "true_pair": [
+          0,
+          5
+        ],
+        "true_pair_raw_logit": -2.7358789443969727,
+        "true_pair_score": 0.011156907305121422,
+        "true_real_real_rank": 12,
+        "true_to_dustbin_logit_margin": -4.130478024482727
+      },
+      "pair_id": "0888_floor_01_pano_21_pano_4_1",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 36,
+      "severity_name": "negative_true_to_dustbin_logit_margin",
+      "severity_stratum": "severe",
+      "severity_value": 4.130478024482727,
+      "source_images": {
+        "A": {
+          "relative_path": "0888/panos/floor_01_partial_room_01_pano_21.jpg",
+          "sha256": "de10c545a20d4eb5b0023c1ce2244f747745002f310471fcf1bf723deebe61d4",
+          "size": 468776
+        },
+        "B": {
+          "relative_path": "0888/panos/floor_01_partial_room_08_pano_4.jpg",
+          "sha256": "108fe49f76baa107da62b1103bf559e7b146cc5b21a39e78ddda4d182c85d7a0",
+          "size": 396110
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "target_present_dustbin_reject",
+      "automatic_reason": "target_present_dustbin_reject",
+      "figure_path": "figures/target_present_dustbin_reject/1084_floor_00_pano_36_pano_27_10.png",
+      "figure_sha256": "b03320791d92f4ddb07094c15dc7f94d892cdfaaffded2bcb8e833111807d1fb",
+      "house_id": "1084",
+      "matcher_metrics": {
+        "candidate_count_A": 3,
+        "candidate_count_B": 3,
+        "candidate_product": 9,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.008403735235333443,
+        "pair_no_match_probability": 0.9791760444641113,
+        "recovered_pair_no_match_probability": 0.9791760642116807,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": null,
+        "selected_pair_score": null,
+        "selected_vs_true_score_gap": null,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            2,
+            0
+          ]
+        ],
+        "true_pair": [
+          2,
+          0
+        ],
+        "true_pair_raw_logit": -3.298257350921631,
+        "true_pair_score": 0.007722917012870312,
+        "true_real_real_rank": 2,
+        "true_to_dustbin_logit_margin": -4.692856431007385
+      },
+      "pair_id": "1084_floor_00_pano_36_pano_27_10",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 37,
+      "severity_name": "negative_true_to_dustbin_logit_margin",
+      "severity_stratum": "severe",
+      "severity_value": 4.692856431007385,
+      "source_images": {
+        "A": {
+          "relative_path": "1084/panos/floor_00_partial_room_07_pano_36.jpg",
+          "sha256": "8c2a8b031e1aede38807d093f7c42b0ca2ae0f615d27db64185c21fe47fd5ab3",
+          "size": 582432
+        },
+        "B": {
+          "relative_path": "1084/panos/floor_00_partial_room_06_pano_27.jpg",
+          "sha256": "e99ff5971539504a50200bf2c71017a50cb6c30df64f213aa184923e2c408dbd",
+          "size": 506961
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "target_present_wrong_selection",
+      "automatic_reason": "target_present_wrong_selection",
+      "figure_path": "figures/target_present_wrong_selection/0062_floor_01_pano_21_pano_7_4.png",
+      "figure_sha256": "df9bc77914979845c2a3eb8f08d3759c5de41efc5e6aeaa92bda6150ad6acfaa",
+      "house_id": "0062",
+      "matcher_metrics": {
+        "candidate_count_A": 6,
+        "candidate_count_B": 1,
+        "candidate_product": 6,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.5111151337623596,
+        "pair_no_match_probability": 0.3935096263885498,
+        "recovered_pair_no_match_probability": 0.393509631545685,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": [
+          1,
+          0
+        ],
+        "selected_pair_score": 0.5111151337623596,
+        "selected_vs_true_score_gap": 0.39967501908540726,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            4,
+            0
+          ]
+        ],
+        "true_pair": [
+          4,
+          0
+        ],
+        "true_pair_raw_logit": 0.49264252185821533,
+        "true_pair_score": 0.11144011467695236,
+        "true_real_real_rank": 2,
+        "true_to_dustbin_logit_margin": -0.9019565582275391
+      },
+      "pair_id": "0062_floor_01_pano_21_pano_7_4",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 38,
+      "severity_name": "selected_minus_true_candidate_pair_score",
+      "severity_stratum": "median",
+      "severity_value": 0.39967501908540726,
+      "source_images": {
+        "A": {
+          "relative_path": "0062/panos/floor_01_partial_room_09_pano_21.jpg",
+          "sha256": "d99237fb3d93a67f7eceafbfc5d855a95d51854cd94519b3abcf08cc6fa1047a",
+          "size": 488428
+        },
+        "B": {
+          "relative_path": "0062/panos/floor_01_partial_room_06_pano_7.jpg",
+          "sha256": "be7f518c021bf8b1f0f2a73e084c2d5d67e5b65fbead2272bebc5e60253b03dc",
+          "size": 385779
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "target_present_wrong_selection",
+      "automatic_reason": "target_present_wrong_selection",
+      "figure_path": "figures/target_present_wrong_selection/0220_floor_01_pano_40_pano_37_13.png",
+      "figure_sha256": "ca540e13f60ae341a967728e962cf71cbf355e46300ef1e10900208e3c283c56",
+      "house_id": "0220",
+      "matcher_metrics": {
+        "candidate_count_A": 3,
+        "candidate_count_B": 2,
+        "candidate_product": 6,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.675295352935791,
+        "pair_no_match_probability": 0.6286561489105225,
+        "recovered_pair_no_match_probability": 0.6286561701868207,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": [
+          2,
+          0
+        ],
+        "selected_pair_score": 0.675295352935791,
+        "selected_vs_true_score_gap": 0.6653848206624389,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            0,
+            1
+          ]
+        ],
+        "true_pair": [
+          0,
+          1
+        ],
+        "true_pair_raw_logit": -3.0398049354553223,
+        "true_pair_score": 0.009910532273352146,
+        "true_real_real_rank": 5,
+        "true_to_dustbin_logit_margin": -4.434404015541077
+      },
+      "pair_id": "0220_floor_01_pano_40_pano_37_13",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 39,
+      "severity_name": "selected_minus_true_candidate_pair_score",
+      "severity_stratum": "severe",
+      "severity_value": 0.6653848206624389,
+      "source_images": {
+        "A": {
+          "relative_path": "0220/panos/floor_01_partial_room_03_pano_40.jpg",
+          "sha256": "c6cecb1d48364f822e136c47a409019dd578d0c5b6e9bc893ef9b5bb7c32ab79",
+          "size": 333614
+        },
+        "B": {
+          "relative_path": "0220/panos/floor_01_partial_room_06_pano_37.jpg",
+          "sha256": "07fc51caf2e4638a6cea2b7535fbf016fa7e37110f19488fd38e5d05996abac5",
+          "size": 365685
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "target_present_wrong_selection",
+      "automatic_reason": "target_present_wrong_selection",
+      "figure_path": "figures/target_present_wrong_selection/0424_floor_02_pano_26_pano_28_6.png",
+      "figure_sha256": "e93edcce4211ec794aee2c865d3b0156ad0711196cc5496e80ba64467def91a4",
+      "house_id": "0424",
+      "matcher_metrics": {
+        "candidate_count_A": 5,
+        "candidate_count_B": 3,
+        "candidate_product": 15,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.5971440672874451,
+        "pair_no_match_probability": 0.453052818775177,
+        "recovered_pair_no_match_probability": 0.4530528112000771,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": [
+          0,
+          2
+        ],
+        "selected_pair_score": 0.5971440672874451,
+        "selected_vs_true_score_gap": 0.1633903682231903,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            0,
+            0
+          ]
+        ],
+        "true_pair": [
+          0,
+          0
+        ],
+        "true_pair_raw_logit": 2.418280839920044,
+        "true_pair_score": 0.43375369906425476,
+        "true_real_real_rank": 2,
+        "true_to_dustbin_logit_margin": 1.0236817598342896
+      },
+      "pair_id": "0424_floor_02_pano_26_pano_28_6",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 40,
+      "severity_name": "selected_minus_true_candidate_pair_score",
+      "severity_stratum": "boundary",
+      "severity_value": 0.1633903682231903,
+      "source_images": {
+        "A": {
+          "relative_path": "0424/panos/floor_02_partial_room_06_pano_26.jpg",
+          "sha256": "0b801f76776e718728f2d770f07ec05865aab8b44fd01b94c966d9c14ebdfd96",
+          "size": 394071
+        },
+        "B": {
+          "relative_path": "0424/panos/floor_02_partial_room_09_pano_28.jpg",
+          "sha256": "c493912e2a46e25ae71c61b5d41806c7d563bbf5302faa5a82700da60d7bcd0e",
+          "size": 446828
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "target_present_wrong_selection",
+      "automatic_reason": "target_present_wrong_selection",
+      "figure_path": "figures/target_present_wrong_selection/0769_floor_02_pano_46_pano_71_6.png",
+      "figure_sha256": "0a2fcdcbbdf32b85b78797ec3452b1301d9b4a4130dd04dd2d69777c471a0574",
+      "house_id": "0769",
+      "matcher_metrics": {
+        "candidate_count_A": 5,
+        "candidate_count_B": 2,
+        "candidate_product": 10,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.5535287857055664,
+        "pair_no_match_probability": 0.7166897654533386,
+        "recovered_pair_no_match_probability": 0.7166897936475528,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": [
+          0,
+          1
+        ],
+        "selected_pair_score": 0.5535287857055664,
+        "selected_vs_true_score_gap": 0.4733765795826912,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            1,
+            1
+          ]
+        ],
+        "true_pair": [
+          1,
+          1
+        ],
+        "true_pair_raw_logit": -0.4505650997161865,
+        "true_pair_score": 0.08015220612287521,
+        "true_real_real_rank": 3,
+        "true_to_dustbin_logit_margin": -1.845164179801941
+      },
+      "pair_id": "0769_floor_02_pano_46_pano_71_6",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 41,
+      "severity_name": "selected_minus_true_candidate_pair_score",
+      "severity_stratum": "median",
+      "severity_value": 0.4733765795826912,
+      "source_images": {
+        "A": {
+          "relative_path": "0769/panos/floor_02_partial_room_01_pano_46.jpg",
+          "sha256": "4ed41c93ac7336df94787b4bfc9ca5e32b51f40f346c9f3ac55f68dcf9fb4543",
+          "size": 390444
+        },
+        "B": {
+          "relative_path": "0769/panos/floor_02_partial_room_05_pano_71.jpg",
+          "sha256": "35b2d2fa14a69c6763f570691805d67100bb5237e4ef02ab9e4ebc1e1f272382",
+          "size": 367181
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "target_present_wrong_selection",
+      "automatic_reason": "target_present_wrong_selection",
+      "figure_path": "figures/target_present_wrong_selection/0805_floor_02_pano_11_pano_22_1.png",
+      "figure_sha256": "a6fe2e2dcc07766527ba91c384e080e696417900837f592b0363f5c2a3a4e3a0",
+      "house_id": "0805",
+      "matcher_metrics": {
+        "candidate_count_A": 1,
+        "candidate_count_B": 7,
+        "candidate_product": 7,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.9269130229949951,
+        "pair_no_match_probability": 0.2149282991886139,
+        "recovered_pair_no_match_probability": 0.21492829558188364,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": [
+          0,
+          0
+        ],
+        "selected_pair_score": 0.9269130229949951,
+        "selected_vs_true_score_gap": 0.9233272764831781,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            0,
+            6
+          ]
+        ],
+        "true_pair": [
+          0,
+          6
+        ],
+        "true_pair_raw_logit": -2.4442455768585205,
+        "true_pair_score": 0.0035857465118169785,
+        "true_real_real_rank": 5,
+        "true_to_dustbin_logit_margin": -3.838844656944275
+      },
+      "pair_id": "0805_floor_02_pano_11_pano_22_1",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 42,
+      "severity_name": "selected_minus_true_candidate_pair_score",
+      "severity_stratum": "severe",
+      "severity_value": 0.9233272764831781,
+      "source_images": {
+        "A": {
+          "relative_path": "0805/panos/floor_02_partial_room_01_pano_11.jpg",
+          "sha256": "3344b4e8cc0d86a43c3a29bb9f63e200d84a8a9dcc4a8669b3c780eaa60b6a33",
+          "size": 455921
+        },
+        "B": {
+          "relative_path": "0805/panos/floor_02_partial_room_04_pano_22.jpg",
+          "sha256": "7a204431da639bcdb57fb1d2b455427b5139aaff3948531e39ebcc2f117a8ee5",
+          "size": 485245
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "target_present_wrong_selection",
+      "automatic_reason": "target_present_wrong_selection",
+      "figure_path": "figures/target_present_wrong_selection/0979_floor_02_pano_9_pano_7_21.png",
+      "figure_sha256": "612882a040bfba6e70f49d08b6e415fbe009612c2abc10c4c1d0d730d1eb13cd",
+      "house_id": "0979",
+      "matcher_metrics": {
+        "candidate_count_A": 5,
+        "candidate_count_B": 5,
+        "candidate_product": 25,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.48024076223373413,
+        "pair_no_match_probability": 0.7355009913444519,
+        "recovered_pair_no_match_probability": 0.7355010305582441,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": [
+          4,
+          0
+        ],
+        "selected_pair_score": 0.48024076223373413,
+        "selected_vs_true_score_gap": 0.4328184835612774,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            1,
+            0
+          ]
+        ],
+        "true_pair": [
+          1,
+          0
+        ],
+        "true_pair_raw_logit": -0.6768984198570251,
+        "true_pair_score": 0.04742227867245674,
+        "true_real_real_rank": 4,
+        "true_to_dustbin_logit_margin": -2.0714974999427795
+      },
+      "pair_id": "0979_floor_02_pano_9_pano_7_21",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 43,
+      "severity_name": "selected_minus_true_candidate_pair_score",
+      "severity_stratum": "median",
+      "severity_value": 0.4328184835612774,
+      "source_images": {
+        "A": {
+          "relative_path": "0979/panos/floor_02_partial_room_03_pano_9.jpg",
+          "sha256": "3689d6cfb0df6e16ab2ecb7417a87c5231cb43062f07806f4a3a4fe64fac7e5e",
+          "size": 405922
+        },
+        "B": {
+          "relative_path": "0979/panos/floor_02_partial_room_06_pano_7.jpg",
+          "sha256": "f78848bad42c6187ce19abb00b1f03dcf159d638346aad39bc67e9a3e6764ef8",
+          "size": 413726
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "target_present_wrong_selection",
+      "automatic_reason": "target_present_wrong_selection",
+      "figure_path": "figures/target_present_wrong_selection/1088_floor_02_pano_62_pano_99_8.png",
+      "figure_sha256": "2e99212d3a48d416dc96f137dcde4249252531f902a6cb364923cdde5cf6f3d3",
+      "house_id": "1088",
+      "matcher_metrics": {
+        "candidate_count_A": 4,
+        "candidate_count_B": 3,
+        "candidate_product": 12,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.7498864531517029,
+        "pair_no_match_probability": 0.6340522170066833,
+        "recovered_pair_no_match_probability": 0.6340521123585147,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": [
+          0,
+          2
+        ],
+        "selected_pair_score": 0.7498864531517029,
+        "selected_vs_true_score_gap": 0.7446930529549718,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            1,
+            2
+          ]
+        ],
+        "true_pair": [
+          1,
+          2
+        ],
+        "true_pair_raw_logit": -2.773078441619873,
+        "true_pair_score": 0.0051934001967310905,
+        "true_real_real_rank": 10,
+        "true_to_dustbin_logit_margin": -4.167677521705627
+      },
+      "pair_id": "1088_floor_02_pano_62_pano_99_8",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 44,
+      "severity_name": "selected_minus_true_candidate_pair_score",
+      "severity_stratum": "severe",
+      "severity_value": 0.7446930529549718,
+      "source_images": {
+        "A": {
+          "relative_path": "1088/panos/floor_02_partial_room_10_pano_62.jpg",
+          "sha256": "a944a481eb91ff7a8b9d5bc5d5d5a7033b31dac23a0a7883ab8221b90089e451",
+          "size": 377583
+        },
+        "B": {
+          "relative_path": "1088/panos/floor_02_partial_room_09_pano_99.jpg",
+          "sha256": "affb14442fd0b5f2e0ceed69172aa5cfe8170bdbd37dff13c07661adbb060c73",
+          "size": 392275
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "target_present_wrong_selection",
+      "automatic_reason": "target_present_wrong_selection",
+      "figure_path": "figures/target_present_wrong_selection/1095_floor_02_pano_42_pano_39_7.png",
+      "figure_sha256": "e6a0e9262fd8c5e787cd7fe173bc0c1d5fcf425decd12ab3eeecb57cbc19ad7f",
+      "house_id": "1095",
+      "matcher_metrics": {
+        "candidate_count_A": 2,
+        "candidate_count_B": 4,
+        "candidate_product": 8,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.43452808260917664,
+        "pair_no_match_probability": 0.587359607219696,
+        "recovered_pair_no_match_probability": 0.58735957751526,
+        "row_dustbin_provenance": "direct",
+        "selected_pair": [
+          0,
+          3
+        ],
+        "selected_pair_score": 0.43452808260917664,
+        "selected_vs_true_score_gap": 0.005535900592803955,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            0,
+            0
+          ]
+        ],
+        "true_pair": [
+          0,
+          0
+        ],
+        "true_pair_raw_logit": 1.708853840827942,
+        "true_pair_score": 0.4289921820163727,
+        "true_real_real_rank": 2,
+        "true_to_dustbin_logit_margin": 0.3142547607421875
+      },
+      "pair_id": "1095_floor_02_pano_42_pano_39_7",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 45,
+      "severity_name": "selected_minus_true_candidate_pair_score",
+      "severity_stratum": "boundary",
+      "severity_value": 0.005535900592803955,
+      "source_images": {
+        "A": {
+          "relative_path": "1095/panos/floor_02_partial_room_05_pano_42.jpg",
+          "sha256": "e32f7cfe03c0d1de464c066bbd29ba8a2966ecaf6682a3b60ad40a6765fd2f8d",
+          "size": 342706
+        },
+        "B": {
+          "relative_path": "1095/panos/floor_02_partial_room_06_pano_39.jpg",
+          "sha256": "05f1a864205c5797a0e98672952b81d4e31dea56cd8a64aa4b8b67397b504f04",
+          "size": 370135
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "target_present_correct",
+      "automatic_reason": "target_present_correct",
+      "figure_path": "figures/target_present_correct/0461_floor_02_pano_76_pano_83_0.png",
+      "figure_sha256": "5aeca454e5a8846eb70d5ff309697e5d2b1ebbd9c95c6993b244cccef7943e96",
+      "house_id": "0461",
+      "matcher_metrics": {
+        "candidate_count_A": 4,
+        "candidate_count_B": 1,
+        "candidate_product": 4,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.6027982831001282,
+        "pair_no_match_probability": 0.5288706421852112,
+        "recovered_pair_no_match_probability": 0.5288706738450005,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": [
+          1,
+          0
+        ],
+        "selected_pair_score": 0.6027982831001282,
+        "selected_vs_true_score_gap": 0.0,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            1,
+            0
+          ]
+        ],
+        "true_pair": [
+          1,
+          0
+        ],
+        "true_pair_raw_logit": 1.9584262371063232,
+        "true_pair_score": 0.6027982831001282,
+        "true_real_real_rank": 1,
+        "true_to_dustbin_logit_margin": 0.5638271570205688
+      },
+      "pair_id": "0461_floor_02_pano_76_pano_83_0",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 46,
+      "severity_name": "true_candidate_pair_score",
+      "severity_stratum": "boundary",
+      "severity_value": 0.6027982831001282,
+      "source_images": {
+        "A": {
+          "relative_path": "0461/panos/floor_02_partial_room_02_pano_76.jpg",
+          "sha256": "bf290df696376ae12c5f1e49d6f5c71930fceec6b2219ea85215735089b27e5f",
+          "size": 364560
+        },
+        "B": {
+          "relative_path": "0461/panos/floor_02_partial_room_03_pano_83.jpg",
+          "sha256": "a22c579a11c968d7dd59b07cda62b8949a819f71d33a4b0a1ded70ba9a5b8443",
+          "size": 388445
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "target_present_correct",
+      "automatic_reason": "target_present_correct",
+      "figure_path": "figures/target_present_correct/0712_floor_01_pano_34_pano_36_2.png",
+      "figure_sha256": "b68c27b1ae29d8adc7b60bc91d5cbf3fefb7b1cdb5184c3c303f73c9b37e045c",
+      "house_id": "0712",
+      "matcher_metrics": {
+        "candidate_count_A": 2,
+        "candidate_count_B": 1,
+        "candidate_product": 2,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.9582753777503967,
+        "pair_no_match_probability": 0.13617226481437683,
+        "recovered_pair_no_match_probability": 0.1361722890810074,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": [
+          0,
+          0
+        ],
+        "selected_pair_score": 0.9582753777503967,
+        "selected_vs_true_score_gap": 0.0,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            0,
+            0
+          ]
+        ],
+        "true_pair": [
+          0,
+          0
+        ],
+        "true_pair_raw_logit": 4.6830267906188965,
+        "true_pair_score": 0.9582753777503967,
+        "true_real_real_rank": 1,
+        "true_to_dustbin_logit_margin": 3.288427710533142
+      },
+      "pair_id": "0712_floor_01_pano_34_pano_36_2",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 47,
+      "severity_name": "true_candidate_pair_score",
+      "severity_stratum": "severe",
+      "severity_value": 0.9582753777503967,
+      "source_images": {
+        "A": {
+          "relative_path": "0712/panos/floor_01_partial_room_02_pano_34.jpg",
+          "sha256": "94a782292beb2fc76dfa958745ea20a18d3a93ea0f58fc993ecf0f19dc47b2e2",
+          "size": 446350
+        },
+        "B": {
+          "relative_path": "0712/panos/floor_01_partial_room_03_pano_36.jpg",
+          "sha256": "8ba611740e669989f3bebd6afa5369e3c246d14a207c30d4516e675ad213637b",
+          "size": 417155
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "target_present_correct",
+      "automatic_reason": "target_present_correct",
+      "figure_path": "figures/target_present_correct/0713_floor_02_pano_22_pano_24_4.png",
+      "figure_sha256": "33fb98bb0ea707ef1f57fe98753e42357cb4394b8ea145723df4ac554aedc798",
+      "house_id": "0713",
+      "matcher_metrics": {
+        "candidate_count_A": 2,
+        "candidate_count_B": 1,
+        "candidate_product": 2,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.9207087159156799,
+        "pair_no_match_probability": 0.17148977518081665,
+        "recovered_pair_no_match_probability": 0.1714897821863549,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": [
+          0,
+          0
+        ],
+        "selected_pair_score": 0.9207087159156799,
+        "selected_vs_true_score_gap": 0.0,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            0,
+            0
+          ]
+        ],
+        "true_pair": [
+          0,
+          0
+        ],
+        "true_pair_raw_logit": 4.205679416656494,
+        "true_pair_score": 0.9207087159156799,
+        "true_real_real_rank": 1,
+        "true_to_dustbin_logit_margin": 2.8110803365707397
+      },
+      "pair_id": "0713_floor_02_pano_22_pano_24_4",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 48,
+      "severity_name": "true_candidate_pair_score",
+      "severity_stratum": "severe",
+      "severity_value": 0.9207087159156799,
+      "source_images": {
+        "A": {
+          "relative_path": "0713/panos/floor_02_partial_room_03_pano_22.jpg",
+          "sha256": "9e7cfebfaf4f71f8d7a3650b2b7aa4e7c3c665b2725c42a9cbca5a8e34922653",
+          "size": 593173
+        },
+        "B": {
+          "relative_path": "0713/panos/floor_02_partial_room_06_pano_24.jpg",
+          "sha256": "d705d0575a564deae46a97b27c0342303d5453fc78f4cfd8f51351777a499a69",
+          "size": 478346
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": true
+    },
+    {
+      "audit_category": "target_present_correct",
+      "automatic_reason": "target_present_correct",
+      "figure_path": "figures/target_present_correct/0728_floor_00_pano_46_pano_47_12.png",
+      "figure_sha256": "a4c904d57525e2cd1c790e30078e3f80b390d574d13ba79c172003d2cd80132d",
+      "house_id": "0728",
+      "matcher_metrics": {
+        "candidate_count_A": 2,
+        "candidate_count_B": 1,
+        "candidate_product": 2,
+        "column_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "pair_match_probability": 0.7754759788513184,
+        "pair_no_match_probability": 0.3281882405281067,
+        "recovered_pair_no_match_probability": 0.32818826152070313,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": [
+          0,
+          0
+        ],
+        "selected_pair_score": 0.7754759788513184,
+        "selected_vs_true_score_gap": 0.0,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            0,
+            0
+          ]
+        ],
+        "true_pair": [
+          0,
+          0
+        ],
+        "true_pair_raw_logit": 2.8908605575561523,
+        "true_pair_score": 0.7754759788513184,
+        "true_real_real_rank": 1,
+        "true_to_dustbin_logit_margin": 1.496261477470398
+      },
+      "pair_id": "0728_floor_00_pano_46_pano_47_12",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 49,
+      "severity_name": "true_candidate_pair_score",
+      "severity_stratum": "median",
+      "severity_value": 0.7754759788513184,
+      "source_images": {
+        "A": {
+          "relative_path": "0728/panos/floor_00_partial_room_01_pano_46.jpg",
+          "sha256": "618ca3fe7fcab8b65e2ff80252614acc4f8b097b6df6ced9bffdfddf35edd71c",
+          "size": 389795
+        },
+        "B": {
+          "relative_path": "0728/panos/floor_00_partial_room_06_pano_47.jpg",
+          "sha256": "b7b8887ab6238b95e00b8780f64ee9cea6a4a6f1157224bd190c3ad24cd217dd",
+          "size": 407131
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "target_present_correct",
+      "automatic_reason": "target_present_correct",
+      "figure_path": "figures/target_present_correct/0865_floor_01_pano_41_pano_44_10.png",
+      "figure_sha256": "5510d5fc658058b7a3b3c1c9ebf164b9e00eb5c8f4cff898a074ba82ee06d16f",
+      "house_id": "0865",
+      "matcher_metrics": {
+        "candidate_count_A": 5,
+        "candidate_count_B": 1,
+        "candidate_product": 5,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.8538027405738831,
+        "pair_no_match_probability": 0.285591185092926,
+        "recovered_pair_no_match_probability": 0.2855912217788852,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": [
+          1,
+          0
+        ],
+        "selected_pair_score": 0.8538027405738831,
+        "selected_vs_true_score_gap": 0.0,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            1,
+            0
+          ]
+        ],
+        "true_pair": [
+          1,
+          0
+        ],
+        "true_pair_raw_logit": 3.5067615509033203,
+        "true_pair_score": 0.8538027405738831,
+        "true_real_real_rank": 1,
+        "true_to_dustbin_logit_margin": 2.112162470817566
+      },
+      "pair_id": "0865_floor_01_pano_41_pano_44_10",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 50,
+      "severity_name": "true_candidate_pair_score",
+      "severity_stratum": "median",
+      "severity_value": 0.8538027405738831,
+      "source_images": {
+        "A": {
+          "relative_path": "0865/panos/floor_01_partial_room_07_pano_41.jpg",
+          "sha256": "5292eb80949913ffe3ed114c37156239206f51b0f89ec601c61365250a034c6c",
+          "size": 381423
+        },
+        "B": {
+          "relative_path": "0865/panos/floor_01_partial_room_16_pano_44.jpg",
+          "sha256": "9aa172a62ef6f66e4b069b259e9722f457c35f8b317e2c69918c610b5913bdc2",
+          "size": 380784
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    },
+    {
+      "audit_category": "target_present_correct",
+      "automatic_reason": "target_present_correct",
+      "figure_path": "figures/target_present_correct/1077_floor_02_pano_13_pano_44_6.png",
+      "figure_sha256": "cac549ebfb8d4406de7c796805ebb8b5633492eb9d11e63d164bd5b5cbb83c10",
+      "house_id": "1077",
+      "matcher_metrics": {
+        "candidate_count_A": 5,
+        "candidate_count_B": 2,
+        "candidate_product": 10,
+        "column_dustbin_provenance": "direct",
+        "pair_match_probability": 0.3945241868495941,
+        "pair_no_match_probability": 0.7242134809494019,
+        "recovered_pair_no_match_probability": 0.7242135009946891,
+        "row_dustbin_provenance": "recovered_exact_from_shared_dustbin_constant",
+        "selected_pair": [
+          3,
+          1
+        ],
+        "selected_pair_score": 0.3945241868495941,
+        "selected_vs_true_score_gap": 0.0,
+        "shared_dustbin_logit": 1.3945990800857544,
+        "target_pairs": [
+          [
+            3,
+            1
+          ]
+        ],
+        "true_pair": [
+          3,
+          1
+        ],
+        "true_pair_raw_logit": 1.6251403093338013,
+        "true_pair_score": 0.3945241868495941,
+        "true_real_real_rank": 1,
+        "true_to_dustbin_logit_margin": 0.23054122924804688
+      },
+      "pair_id": "1077_floor_02_pano_13_pano_44_6",
+      "reason_A": "present",
+      "reason_B": "present",
+      "selection_index": 51,
+      "severity_name": "true_candidate_pair_score",
+      "severity_stratum": "boundary",
+      "severity_value": 0.3945241868495941,
+      "source_images": {
+        "A": {
+          "relative_path": "1077/panos/floor_02_partial_room_01_pano_13.jpg",
+          "sha256": "35f7ebf04ae9c2743955726f67152a636d3ff5322b5ac12cd17d8314048d3067",
+          "size": 365500
+        },
+        "B": {
+          "relative_path": "1077/panos/floor_02_partial_room_14_pano_44.jpg",
+          "sha256": "73ab58d3deed5c17278d53b412666c7a7d2723baa018a611b9109b6015eaa105",
+          "size": 352619
+        }
+      },
+      "trace_config_A": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "trace_config_B": {
+        "dedup_iou": 0.5,
+        "expansion_threshold": 0.12,
+        "max_candidates": 12,
+        "min_width_tokens": 2,
+        "peak_min_probability": 0.2,
+        "peak_top_k": 4,
+        "threshold": 0.47
+      },
+      "wrap": false
+    }
+  ],
+  "selection_protocol": {
+    "house_rule": "prefer a previously unused house globally; if exhausted, allow reuse; ties by house_id then pair_id",
+    "manual_cherry_picking": false,
+    "name": "deterministic_house_first_severity_stratified_v1",
+    "quotas": {
+      "below_threshold": 4,
+      "candidate_cap_removed": 1,
+      "dedup_removed": 4,
+      "interval_expansion_failure": 1,
+      "interval_merge": 8,
+      "interval_split": 4,
+      "no_opening_signal": 8,
+      "target_present_correct": 6,
+      "target_present_dustbin_reject": 8,
+      "target_present_wrong_selection": 8
+    },
+    "severity_rule": "stable descending frozen metric with deterministic severe/median/boundary quantile anchors",
+    "subcategory_quotas": {
+      "below_threshold_A/B": [
+        2,
+        2
+      ],
+      "no_opening_signal_A/B/both": [
+        3,
+        3,
+        2
+      ]
+    }
+  },
+  "selection_sha256": "100d56316b575306b8b9dd04c17c70921444b0a6fb4ab971f9973743665f7fec",
+  "statistics_gate": {
+    "exact_match": true,
+    "funnel": {
+      "correct_candidate_exists": 1080,
+      "correct_candidate_missing": 747,
+      "dustbin_rejection": 437,
+      "gt_positives": 1827,
+      "matcher_correct": 501,
+      "wrong_selection": 142
+    },
+    "missing_reasons": {
+      "below_threshold": 19,
+      "candidate_cap_removed": 1,
+      "dedup_removed": 4,
+      "interval_expansion_failure": 1,
+      "interval_merge": 413,
+      "interval_split": 16,
+      "no_opening_signal": 293
+    }
+  },
+  "test_data_accessed": false,
+  "training_started": false
+}

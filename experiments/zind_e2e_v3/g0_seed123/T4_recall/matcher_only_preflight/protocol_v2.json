@@ -1,0 +1,43 @@
+{
+  "protocol_version": "zind-t4-matcher-only-gates-v2",
+  "revision_scope": "gate predicates only; optimizer and inputs unchanged",
+  "immutable_training_protocol": {
+    "batch_composition": "same frozen 2-positive plus 2-negative Gate A batch",
+    "seed": 123,
+    "optimizer": "AdamW",
+    "lr": 0.0003,
+    "weight_decay": 0.0,
+    "grad_clip": 1.0,
+    "steps": 200,
+    "frozen_input_cache": true,
+    "augmentation": false,
+    "shuffle": false,
+    "dynamic_candidates": false
+  },
+  "gate_A": {
+    "all_finite": true,
+    "matcher_updated": true,
+    "upstream_hash_unchanged": true,
+    "matching_optim_loss_relative_drop_min": 0.2,
+    "candidate_assignment_relative_drop_min": 0.5,
+    "ranking_relative_drop_min": 0.5,
+    "negative_no_match_relative_drop_min": 0.5,
+    "margin_epsilon": 1e-08,
+    "margin_rule": "decline when initial>epsilon; otherwise final<=epsilon and true-to-dustbin margin nondecreasing",
+    "acceptance_rejection_top1_nondecreasing": true,
+    "frozen_artifact_identity_required": true
+  },
+  "gate_B": {
+    "matching_optim_loss_relative_drop_min": 0.2,
+    "positive_acceptance_absolute_gain_min": 0.15,
+    "negative_rejection_absolute_drop_max": 0.05,
+    "target_present_top1_nondecreasing": true,
+    "assignment_ranking_negative_no_match_decline": true,
+    "margin_rule": "same conditional rule as Gate A",
+    "all_finite": true,
+    "upstream_hash_unchanged": true,
+    "fixed_seed_short_rerun_exact": true
+  },
+  "test_data_accessed": false,
+  "protocol_sha256": "d3d9314769a7157e56108a48681c92d6a637872773cd0591b14c3841cfc6e79a"
+}

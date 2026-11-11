@@ -1,0 +1,67 @@
+{
+  "captured_at": "2026-08-04T13:41:39+08:00",
+  "branch": "agent/zind-bipair-opening-matcher",
+  "git_head": "50a6ae5ca403928627fb4de18ae918d59c03d479",
+  "pr": 1,
+  "pr_head": "50a6ae5ca403928627fb4de18ae918d59c03d479",
+  "git_status_short": [
+    " M tests/test_zind_end_to_end_candidate_fixes.py",
+    " M tools/train_zind_end_to_end.py",
+    "?? src/output/cross_scene_flow_zind_bipair_v1/",
+    "?? src/output/cross_scene_format_smoke/",
+    "?? src/output/progress_report_20260716/cross_scene_pair/",
+    "?? src/output/progress_report_20260716/zind_adjacent_pairs_eval/",
+    "?? src/output/zind_bipair_v1_smoke/",
+    "?? src/output/zind_cross_scene_eval_zind_bipair_v1/",
+    "?? src/output/zind_matching_dataset_smoke/",
+    "?? src/output/zind_opening_recall/"
+  ],
+  "git_diff_stat": "tests/test_zind_end_to_end_candidate_fixes.py | 163 ++++++++++++++++++; tools/train_zind_end_to_end.py | 239 ++++++++++++++++++--------; 2 files changed, 326 insertions(+), 76 deletions(-)",
+  "modified_file_sha256": {
+    "tools/train_zind_end_to_end.py": "111623e4fd5392f55c5dd0318baddaac2dbff8189b125a41e85dba65c10caf61",
+    "tests/test_zind_end_to_end_candidate_fixes.py": "c2a024f2294e77b314fe7f9fcf8b19a4af6208edce8850cfc8f195048360238f"
+  },
+  "initialization_checkpoints": {
+    "bi_layout": {
+      "path": "checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+      "size_bytes": 1228718862,
+      "sha256": "377b84d120b28aaf4538cd867cd59f1caee165ca1e5e427e3d3b6d7b8d400f98"
+    },
+    "opening_head": {
+      "path": "checkpoints/Opening_Head/zind_matching_v1/best.pt",
+      "size_bytes": 1850495,
+      "sha256": "93a86b10acf8fc98593c0a3e654af8ab8849865bb620a1532e3c271e68ee5bfc"
+    },
+    "matcher": {
+      "path": "checkpoints/Cross_Scene_Matcher/zind_matching_v1/best.pt",
+      "size_bytes": 25855903,
+      "sha256": "5da0995960670eb88031533e21d9543e1c3853c9533ff570de370e0738d18810"
+    }
+  },
+  "data": {
+    "active_splits": ["train", "val"],
+    "test_split_accessed": false,
+    "train": {
+      "manifest": "src/dataset/ZInD_matching/train.json",
+      "manifest_size_bytes": 140404786,
+      "manifest_sha256": "52d212b3f068d910492d6339f029622ddca9a52f153c80d2ba51fa23b744db3f",
+      "pair_count": 29325,
+      "house_count": 1260,
+      "cache": "checkpoints/Cross_Scene_Matcher/zind_matching_feature_cache/train",
+      "cache_metadata_sha256": "f1a385d8672a534960791dafa41613951571602a8e6e7aabd0624c2e4bf9b680",
+      "cached_view_count": 21840,
+      "cache_complete": true
+    },
+    "val": {
+      "manifest": "src/dataset/ZInD_matching/val.json",
+      "manifest_size_bytes": 17241110,
+      "manifest_sha256": "acae7ecbd55d4f8b8aea7c7a8db4b8cbb434fe92992858ac0a4d4a26da7da1ec",
+      "pair_count": 3630,
+      "house_count": 157,
+      "cache": "checkpoints/Cross_Scene_Matcher/zind_matching_feature_cache/val",
+      "cache_metadata_sha256": "6aaeffe6e996cb1a8b39ba5cce7a0f4710cd99eebef672df425bd89df7573903",
+      "cached_view_count": 2687,
+      "cache_complete": true
+    }
+  }
+}

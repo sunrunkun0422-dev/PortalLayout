@@ -1,0 +1,8 @@
+{
+  "prediction_sha256": "b1a4fceda0358527ac7f20c5f7779cea890f49611a6014a82249e59eafefc8e3",
+  "prediction_fingerprint": "ad7e8af1f02e27a9c5357cb6d1373645b4b38d85f2cb04536fc7e67d406f4bba",
+  "code_sha256": "2bda23cc374c0bc897a76b72d08dade6058ef9a1b07e977cde0bd8d3758dc332",
+  "pair_denominator": 3,
+  "candidate_denominator": 2,
+  "scope": "portal_native_frame_only_common_salve_frame_not_verified"
+}

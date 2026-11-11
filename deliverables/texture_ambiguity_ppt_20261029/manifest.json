@@ -1,0 +1,1414 @@
+{
+  "source_report_sha256": "c746ee01158f6d070b6277525beb8ff05e0f9f9c2ac2137f271efaa0c8974974",
+  "reference_outline": "dataset annotation projection, display only",
+  "prediction_marker": "frozen R3 detected opening horizontal angular interval",
+  "human_verified": false,
+  "slides": [
+    {
+      "slide": 1,
+      "role": "主展示 01",
+      "case": {
+        "building": "0561",
+        "panos": [
+          33,
+          34
+        ],
+        "pair_id": "42bfe7af587e93bf84318d15",
+        "hypothesis_count": 4,
+        "correct_hypothesis_count": 1,
+        "salve_max_correct_score": 0.15459956228733063,
+        "salve_correct_accepted": 0,
+        "salve_wrong_accepted": 0,
+        "r3_weak_positive_scores": [
+          0.8599829077720642
+        ],
+        "r3_unknown_matches": 0,
+        "r3_known_wrong_matches": 0,
+        "visual_texture_assessment": "pale textured ceilings and warm wood-toned floors; dark/light finish differences",
+        "human_correspondence_verified": false,
+        "salve_rows": [
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0561/bev/gt_alignment_approx/0561/pair_0___door_1_0_rotated_ceiling_rgb_floor_01_partial_room_05_pano_33.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0561/bev/gt_alignment_approx/0561/pair_0___door_1_0_rotated_ceiling_rgb_floor_01_partial_room_08_pano_34.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0561/bev/gt_alignment_approx/0561/pair_0___door_1_0_rotated_floor_rgb_floor_01_partial_room_05_pano_33.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0561/bev/gt_alignment_approx/0561/pair_0___door_1_0_rotated_floor_rgb_floor_01_partial_room_08_pano_34.jpg"
+            ],
+            "positive_probability": 0.15459956228733063,
+            "label_for_evaluation_only": 1
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0561/bev/incorrect_alignment/0561/pair_0___door_0_0_identity_ceiling_rgb_floor_01_partial_room_05_pano_33.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0561/bev/incorrect_alignment/0561/pair_0___door_0_0_identity_ceiling_rgb_floor_01_partial_room_08_pano_34.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0561/bev/incorrect_alignment/0561/pair_0___door_0_0_identity_floor_rgb_floor_01_partial_room_05_pano_33.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0561/bev/incorrect_alignment/0561/pair_0___door_0_0_identity_floor_rgb_floor_01_partial_room_08_pano_34.jpg"
+            ],
+            "positive_probability": 0.8199476599693298,
+            "label_for_evaluation_only": 0
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0561/bev/incorrect_alignment/0561/pair_1___door_0_0_rotated_ceiling_rgb_floor_01_partial_room_05_pano_33.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0561/bev/incorrect_alignment/0561/pair_1___door_0_0_rotated_ceiling_rgb_floor_01_partial_room_08_pano_34.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0561/bev/incorrect_alignment/0561/pair_1___door_0_0_rotated_floor_rgb_floor_01_partial_room_05_pano_33.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0561/bev/incorrect_alignment/0561/pair_1___door_0_0_rotated_floor_rgb_floor_01_partial_room_08_pano_34.jpg"
+            ],
+            "positive_probability": 0.6051982641220093,
+            "label_for_evaluation_only": 0
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0561/bev/incorrect_alignment/0561/pair_2___door_1_0_identity_ceiling_rgb_floor_01_partial_room_05_pano_33.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0561/bev/incorrect_alignment/0561/pair_2___door_1_0_identity_ceiling_rgb_floor_01_partial_room_08_pano_34.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0561/bev/incorrect_alignment/0561/pair_2___door_1_0_identity_floor_rgb_floor_01_partial_room_05_pano_33.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0561/bev/incorrect_alignment/0561/pair_2___door_1_0_identity_floor_rgb_floor_01_partial_room_08_pano_34.jpg"
+            ],
+            "positive_probability": 0.14153750240802765,
+            "label_for_evaluation_only": 0
+          }
+        ]
+      },
+      "pair_id": "42bfe7af587e93bf84318d15",
+      "sides": [
+        {
+          "observation_id": "view_0915d3dac14349c9cd0daad8",
+          "image": "/home/feixia/pythonProject/AAAsrk/zind/data/0561/panos/floor_01_partial_room_08_pano_34.jpg",
+          "copied_image": "originals/0561_floor_01_partial_room_08_pano_34.jpg",
+          "sha256": "1db4116af226b710f1f52242769c77c3b2194806a39da86c54a66f396ae505a9",
+          "candidate_id": "opening_386bf67c60c283d7bbf9d7a3",
+          "candidate_index": 0,
+          "token_count": 256,
+          "token_interval_inclusive": [
+            16,
+            43
+          ],
+          "reference_interface_id": "interface_ccc9c72f471b59e245487c35",
+          "reference_projection": {
+            "start_u": 0.0636052760136786,
+            "length_u": 0.10395701025891535,
+            "wraps_seam": false,
+            "endpoint_u": [
+              0.0636052760136786,
+              0.167562286272594
+            ],
+            "angle_deg": 37.42452369320952,
+            "top_v": [
+              0.2537634408602151,
+              0.25732406414455816,
+              0.2613770622300793,
+              0.26583780287681136,
+              0.2706228095966646,
+              0.27565288519873354,
+              0.2808553120483086,
+              0.2861651881947175,
+              0.29152603231332824,
+              0.2968898209440328,
+              0.30221662089414764,
+              0.3074739605327216,
+              0.3126360562709648,
+              0.317682981776224,
+              0.3225998414209346,
+              0.3273759879343925,
+              0.3320043075969268
+            ],
+            "bottom_v": [
+              0.8905180428588252,
+              0.8882363416007923,
+              0.8855882392948258,
+              0.8826085607569176,
+              0.8793329342614339,
+              0.875796681248029,
+              0.8720339671094828,
+              0.8680772018220637,
+              0.8639566579446442,
+              0.8597002643747805,
+              0.855333533644909,
+              0.8508795849152404,
+              0.8463592313956,
+              0.8417911078826124,
+              0.8371918204226056,
+              0.8325761053722085,
+              0.827956989247312
+            ],
+            "sample_u": [
+              0.0636052760136786,
+              0.0735152327293811,
+              0.08296116613203702,
+              0.09191321767400085,
+              0.10035698538658822,
+              0.10829105325081895,
+              0.11572428458057366,
+              0.1226731987672795,
+              0.12915963069871766,
+              0.13520876895129125,
+              0.1408475937369894,
+              0.14610368868890078,
+              0.15100437645910697,
+              0.15557611985637732,
+              0.15984413166907752,
+              0.16383214274701885,
+              0.167562286272594
+            ]
+          }
+        },
+        {
+          "observation_id": "view_4fbd3c310546c70f56de802b",
+          "image": "/home/feixia/pythonProject/AAAsrk/zind/data/0561/panos/floor_01_partial_room_05_pano_33.jpg",
+          "copied_image": "originals/0561_floor_01_partial_room_05_pano_33.jpg",
+          "sha256": "2e1a988273a9d0c0130c092264f4014a46f55d5ef4dce60097af43982a3811c4",
+          "candidate_id": "opening_6db5db619ee803175c844d0e",
+          "candidate_index": 0,
+          "token_count": 256,
+          "token_interval_inclusive": [
+            175,
+            224
+          ],
+          "reference_interface_id": "interface_bd961f1d66313accfadb6314",
+          "reference_projection": {
+            "start_u": 0.7039244523188283,
+            "length_u": 0.18288114569563052,
+            "wraps_seam": false,
+            "endpoint_u": [
+              0.7039244523188283,
+              0.8868055980144588
+            ],
+            "angle_deg": 65.83721245042699,
+            "top_v": [
+              0.2414982226625254,
+              0.2369567512832908,
+              0.2332031185382475,
+              0.23036109275049882,
+              0.22853193669459415,
+              0.22778446186530732,
+              0.22814763741208466,
+              0.22960732561713942,
+              0.23210788638653318,
+              0.23555828227066594,
+              0.23984134600439888,
+              0.2448243871870448,
+              0.25036939998559904,
+              0.2563416262073829,
+              0.2626158596029746,
+              0.2690804262381394,
+              0.27563913575939575
+            ],
+            "bottom_v": [
+              0.9018858205080175,
+              0.904487038016804,
+              0.9065955466244235,
+              0.9081679237386018,
+              0.9091692542791375,
+              0.9095760805927231,
+              0.9093785858497819,
+              0.9085815567583515,
+              0.9072039105050511,
+              0.9052768927135046,
+              0.9028413334626185,
+              0.8999444867046039,
+              0.8966369510455088,
+              0.892970026709893,
+              0.8889936837327168,
+              0.8847551633766629,
+              0.8802981369719078
+            ],
+            "sample_u": [
+              0.7039244523188283,
+              0.7155165504947936,
+              0.7277321293994752,
+              0.7404685012529202,
+              0.7535878922245376,
+              0.7669237925410817,
+              0.7802923108698758,
+              0.7935068646842867,
+              0.8063934071472219,
+              0.8188032003073378,
+              0.8306209971631273,
+              0.8417679425208104,
+              0.8521998678596309,
+              0.8619024589489022,
+              0.8708849253782149,
+              0.8791734975996058,
+              0.8868055980144588
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slide": 2,
+      "role": "主展示 02",
+      "case": {
+        "building": "0988",
+        "panos": [
+          9,
+          11
+        ],
+        "pair_id": "bdbd8bdb58cfea74866963a1",
+        "hypothesis_count": 4,
+        "correct_hypothesis_count": 1,
+        "salve_max_correct_score": 0.623589038848877,
+        "salve_correct_accepted": 0,
+        "salve_wrong_accepted": 2,
+        "r3_weak_positive_scores": [
+          0.6612793803215027
+        ],
+        "r3_unknown_matches": 1,
+        "r3_known_wrong_matches": 0,
+        "visual_texture_assessment": "pale ceilings and wood floors; no semantic masks",
+        "human_correspondence_verified": false,
+        "salve_rows": [
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/gt_alignment_approx/0988/pair_1___door_0_0_rotated_ceiling_rgb_floor_01_partial_room_10_pano_11.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/gt_alignment_approx/0988/pair_1___door_0_0_rotated_ceiling_rgb_floor_01_partial_room_17_pano_9.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/gt_alignment_approx/0988/pair_1___door_0_0_rotated_floor_rgb_floor_01_partial_room_10_pano_11.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/gt_alignment_approx/0988/pair_1___door_0_0_rotated_floor_rgb_floor_01_partial_room_17_pano_9.jpg"
+            ],
+            "positive_probability": 0.623589038848877,
+            "label_for_evaluation_only": 1
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_3___door_0_0_identity_ceiling_rgb_floor_01_partial_room_10_pano_11.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_3___door_0_0_identity_ceiling_rgb_floor_01_partial_room_17_pano_9.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_3___door_0_0_identity_floor_rgb_floor_01_partial_room_10_pano_11.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_3___door_0_0_identity_floor_rgb_floor_01_partial_room_17_pano_9.jpg"
+            ],
+            "positive_probability": 0.9950723052024841,
+            "label_for_evaluation_only": 0
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_4___door_0_1_identity_ceiling_rgb_floor_01_partial_room_10_pano_11.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_4___door_0_1_identity_ceiling_rgb_floor_01_partial_room_17_pano_9.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_4___door_0_1_identity_floor_rgb_floor_01_partial_room_10_pano_11.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_4___door_0_1_identity_floor_rgb_floor_01_partial_room_17_pano_9.jpg"
+            ],
+            "positive_probability": 0.9940542578697205,
+            "label_for_evaluation_only": 0
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_5___door_0_1_rotated_ceiling_rgb_floor_01_partial_room_10_pano_11.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_5___door_0_1_rotated_ceiling_rgb_floor_01_partial_room_17_pano_9.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_5___door_0_1_rotated_floor_rgb_floor_01_partial_room_10_pano_11.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_5___door_0_1_rotated_floor_rgb_floor_01_partial_room_17_pano_9.jpg"
+            ],
+            "positive_probability": 0.1936003714799881,
+            "label_for_evaluation_only": 0
+          }
+        ]
+      },
+      "pair_id": "bdbd8bdb58cfea74866963a1",
+      "sides": [
+        {
+          "observation_id": "view_16427f9dffde032bd33547bc",
+          "image": "/home/feixia/pythonProject/AAAsrk/zind/data/0988/panos/floor_01_partial_room_17_pano_9.jpg",
+          "copied_image": "originals/0988_floor_01_partial_room_17_pano_9.jpg",
+          "sha256": "1e6ca62ff7897b07554535b313a30a1a63c009a4c551ac1f95bbb3ba7123e060",
+          "candidate_id": "opening_1fec4d6b8e37f13fe31a1caa",
+          "candidate_index": 0,
+          "token_count": 256,
+          "token_interval_inclusive": [
+            80,
+            166
+          ],
+          "reference_interface_id": "interface_0b473a80f5eead4a01292ec1",
+          "reference_projection": {
+            "start_u": 0.3120193025807959,
+            "length_u": 0.34515172574763886,
+            "wraps_seam": false,
+            "endpoint_u": [
+              0.3120193025807959,
+              0.6571710283284348
+            ],
+            "angle_deg": 124.25462126915,
+            "top_v": [
+              0.21682893309415785,
+              0.2008447559085268,
+              0.18437154279899853,
+              0.16785720224765494,
+              0.1520093840840271,
+              0.13786948114399045,
+              0.12682092244232102,
+              0.12038794641464057,
+              0.11970464025689925,
+              0.1249043195138354,
+              0.13503582313974688,
+              0.14860596545337584,
+              0.16417056464687646,
+              0.18060666035407102,
+              0.19713653263980513,
+              0.2132603412500344,
+              0.2286787993626846
+            ],
+            "bottom_v": [
+              0.909515636408303,
+              0.9180387115981896,
+              0.9263061104159029,
+              0.9341435078694268,
+              0.9413016687563355,
+              0.9474305995166622,
+              0.9520722027095196,
+              0.9547214083226081,
+              0.9550006439152466,
+              0.9528654110693144,
+              0.9486326657279798,
+              0.9427976939973475,
+              0.9358383718470786,
+              0.9281300313170858,
+              0.9199426566978749,
+              0.9114652960981737,
+              0.902830770127113
+            ],
+            "sample_u": [
+              0.3120193025807959,
+              0.3218640705553414,
+              0.33406975448432147,
+              0.34939147355146355,
+              0.3687740668011776,
+              0.3932195083353585,
+              0.4233346338375502,
+              0.4584576409827679,
+              0.49594262727973104,
+              0.5319044950812558,
+              0.5632799513235931,
+              0.5889880367147633,
+              0.6094355907437718,
+              0.6255903168135912,
+              0.6384296464730861,
+              0.6487542385447845,
+              0.6571710283284348
+            ]
+          }
+        },
+        {
+          "observation_id": "view_d4f7108c3ba1d3afba652803",
+          "image": "/home/feixia/pythonProject/AAAsrk/zind/data/0988/panos/floor_01_partial_room_10_pano_11.jpg",
+          "copied_image": "originals/0988_floor_01_partial_room_10_pano_11.jpg",
+          "sha256": "5be394308e816467e9f21127d5efec8ffbf16be921bc8b98e931e879a7814b10",
+          "candidate_id": "opening_fab793bb8994774ac6d4f302",
+          "candidate_index": 0,
+          "token_count": 256,
+          "token_interval_inclusive": [
+            5,
+            84
+          ],
+          "reference_interface_id": "interface_0f4a0dec74992e4b4d1a8a11",
+          "reference_projection": {
+            "start_u": 0.023595505617977575,
+            "length_u": 0.30273571079628714,
+            "wraps_seam": false,
+            "endpoint_u": [
+              0.023595505617977575,
+              0.32633121641426477
+            ],
+            "angle_deg": 108.98485588666337,
+            "top_v": [
+              0.22023460410557189,
+              0.20717407839625718,
+              0.19403601733842246,
+              0.18118015326566983,
+              0.1691017557565926,
+              0.15843923940808663,
+              0.14994286751256997,
+              0.14437493727761985,
+              0.14233404953908602,
+              0.14406244672233381,
+              0.14935413788655832,
+              0.1576335366210077,
+              0.16814445384571441,
+              0.18013065816157425,
+              0.19294240614186992,
+              0.20607237997291028,
+              0.21915027079301103
+            ],
+            "bottom_v": [
+              0.8996439913181065,
+              0.9072854290913572,
+              0.9146075146316318,
+              0.9214581025291761,
+              0.9276425701335291,
+              0.9329206366684312,
+              0.9370161284608068,
+              0.9396510361752566,
+              0.9406076291208973,
+              0.9397978192366642,
+              0.9372965125702843,
+              0.9333130539269718,
+              0.9281231136767201,
+              0.9220047356729815,
+              0.9152018434083011,
+              0.9079128715299611,
+              0.9002932551319648
+            ],
+            "sample_u": [
+              0.023595505617977575,
+              0.03376476932318917,
+              0.045833733292498624,
+              0.06020450624888529,
+              0.07729230243081464,
+              0.09742805372550367,
+              0.1206800480938966,
+              0.14662225105124382,
+              0.17418950249209203,
+              0.20182630318770123,
+              0.22795434110875867,
+              0.2514564747602669,
+              0.2718559231159112,
+              0.2891885520112857,
+              0.3037712996215307,
+              0.31601708090903513,
+              0.32633121641426477
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slide": 3,
+      "role": "补充：相关视角",
+      "case": {
+        "building": "0988",
+        "panos": [
+          9,
+          10
+        ],
+        "pair_id": "cb1405f283f603f95c33755f",
+        "hypothesis_count": 4,
+        "correct_hypothesis_count": 1,
+        "salve_max_correct_score": 0.4548051059246063,
+        "salve_correct_accepted": 0,
+        "salve_wrong_accepted": 2,
+        "r3_weak_positive_scores": [
+          0.6142387390136719
+        ],
+        "r3_unknown_matches": 1,
+        "r3_known_wrong_matches": 0,
+        "visual_texture_assessment": "pale ceilings and wood floors; no semantic masks",
+        "human_correspondence_verified": false,
+        "salve_rows": [
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/gt_alignment_approx/0988/pair_0___door_0_0_rotated_ceiling_rgb_floor_01_partial_room_10_pano_10.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/gt_alignment_approx/0988/pair_0___door_0_0_rotated_ceiling_rgb_floor_01_partial_room_17_pano_9.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/gt_alignment_approx/0988/pair_0___door_0_0_rotated_floor_rgb_floor_01_partial_room_10_pano_10.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/gt_alignment_approx/0988/pair_0___door_0_0_rotated_floor_rgb_floor_01_partial_room_17_pano_9.jpg"
+            ],
+            "positive_probability": 0.4548051059246063,
+            "label_for_evaluation_only": 1
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_0___door_0_0_identity_ceiling_rgb_floor_01_partial_room_10_pano_10.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_0___door_0_0_identity_ceiling_rgb_floor_01_partial_room_17_pano_9.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_0___door_0_0_identity_floor_rgb_floor_01_partial_room_10_pano_10.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_0___door_0_0_identity_floor_rgb_floor_01_partial_room_17_pano_9.jpg"
+            ],
+            "positive_probability": 0.9938235282897949,
+            "label_for_evaluation_only": 0
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_1___door_0_1_identity_ceiling_rgb_floor_01_partial_room_10_pano_10.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_1___door_0_1_identity_ceiling_rgb_floor_01_partial_room_17_pano_9.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_1___door_0_1_identity_floor_rgb_floor_01_partial_room_10_pano_10.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_1___door_0_1_identity_floor_rgb_floor_01_partial_room_17_pano_9.jpg"
+            ],
+            "positive_probability": 0.9597426056861877,
+            "label_for_evaluation_only": 0
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_2___door_0_1_rotated_ceiling_rgb_floor_01_partial_room_10_pano_10.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_2___door_0_1_rotated_ceiling_rgb_floor_01_partial_room_17_pano_9.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_2___door_0_1_rotated_floor_rgb_floor_01_partial_room_10_pano_10.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0988/bev/incorrect_alignment/0988/pair_2___door_0_1_rotated_floor_rgb_floor_01_partial_room_17_pano_9.jpg"
+            ],
+            "positive_probability": 0.059790972620248795,
+            "label_for_evaluation_only": 0
+          }
+        ]
+      },
+      "pair_id": "cb1405f283f603f95c33755f",
+      "sides": [
+        {
+          "observation_id": "view_16427f9dffde032bd33547bc",
+          "image": "/home/feixia/pythonProject/AAAsrk/zind/data/0988/panos/floor_01_partial_room_17_pano_9.jpg",
+          "copied_image": "originals/0988_floor_01_partial_room_17_pano_9.jpg",
+          "sha256": "1e6ca62ff7897b07554535b313a30a1a63c009a4c551ac1f95bbb3ba7123e060",
+          "candidate_id": "opening_1fec4d6b8e37f13fe31a1caa",
+          "candidate_index": 0,
+          "token_count": 256,
+          "token_interval_inclusive": [
+            80,
+            166
+          ],
+          "reference_interface_id": "interface_0b473a80f5eead4a01292ec1",
+          "reference_projection": {
+            "start_u": 0.3120193025807959,
+            "length_u": 0.34515172574763886,
+            "wraps_seam": false,
+            "endpoint_u": [
+              0.3120193025807959,
+              0.6571710283284348
+            ],
+            "angle_deg": 124.25462126915,
+            "top_v": [
+              0.21682893309415785,
+              0.2008447559085268,
+              0.18437154279899853,
+              0.16785720224765494,
+              0.1520093840840271,
+              0.13786948114399045,
+              0.12682092244232102,
+              0.12038794641464057,
+              0.11970464025689925,
+              0.1249043195138354,
+              0.13503582313974688,
+              0.14860596545337584,
+              0.16417056464687646,
+              0.18060666035407102,
+              0.19713653263980513,
+              0.2132603412500344,
+              0.2286787993626846
+            ],
+            "bottom_v": [
+              0.909515636408303,
+              0.9180387115981896,
+              0.9263061104159029,
+              0.9341435078694268,
+              0.9413016687563355,
+              0.9474305995166622,
+              0.9520722027095196,
+              0.9547214083226081,
+              0.9550006439152466,
+              0.9528654110693144,
+              0.9486326657279798,
+              0.9427976939973475,
+              0.9358383718470786,
+              0.9281300313170858,
+              0.9199426566978749,
+              0.9114652960981737,
+              0.902830770127113
+            ],
+            "sample_u": [
+              0.3120193025807959,
+              0.3218640705553414,
+              0.33406975448432147,
+              0.34939147355146355,
+              0.3687740668011776,
+              0.3932195083353585,
+              0.4233346338375502,
+              0.4584576409827679,
+              0.49594262727973104,
+              0.5319044950812558,
+              0.5632799513235931,
+              0.5889880367147633,
+              0.6094355907437718,
+              0.6255903168135912,
+              0.6384296464730861,
+              0.6487542385447845,
+              0.6571710283284348
+            ]
+          }
+        },
+        {
+          "observation_id": "view_ef8a96325694f86015723e2c",
+          "image": "/home/feixia/pythonProject/AAAsrk/zind/data/0988/panos/floor_01_partial_room_10_pano_10.jpg",
+          "copied_image": "originals/0988_floor_01_partial_room_10_pano_10.jpg",
+          "sha256": "87f22bf8e2f7a09d7bdbd8b6a88add0e7aa910a057743f8707f4dd10e8c6c4c8",
+          "candidate_id": "opening_8d0dc4c9262e8ce3e6d05def",
+          "candidate_index": 0,
+          "token_count": 256,
+          "token_interval_inclusive": [
+            5,
+            84
+          ],
+          "reference_interface_id": "interface_0934f1837a7a8fcf2cdfcf99",
+          "reference_projection": {
+            "start_u": 0.027320321287366722,
+            "length_u": 0.3031470481570038,
+            "wraps_seam": false,
+            "endpoint_u": [
+              0.027320321287366722,
+              0.3304673694443705
+            ],
+            "angle_deg": 109.13293733652137,
+            "top_v": [
+              0.21527426675612665,
+              0.20211758760319443,
+              0.1889960864911035,
+              0.17631753465464595,
+              0.16463193527138215,
+              0.15462878238644823,
+              0.14708407416417396,
+              0.14273004308647086,
+              0.14205962950610762,
+              0.14515388501242477,
+              0.15165040163817045,
+              0.16087747137962705,
+              0.17205535685130813,
+              0.18445448464694664,
+              0.1974735028121895,
+              0.21065610415424402,
+              0.22367670336784262
+            ],
+            "bottom_v": [
+              0.902591563478188,
+              0.9101444396243108,
+              0.9173281740751207,
+              0.9239756427792253,
+              0.9298748285196354,
+              0.9347689303588802,
+              0.9383736611729676,
+              0.9404223987434076,
+              0.9407358863596089,
+              0.9392846494579388,
+              0.936200472674765,
+              0.931727748859027,
+              0.9261512781896853,
+              0.919740775897367,
+              0.9127246723817499,
+              0.9052853156859033,
+              0.8975642524143445
+            ],
+            "sample_u": [
+              0.027320321287366722,
+              0.03813148924810267,
+              0.05098996237056641,
+              0.06631374614292335,
+              0.08450823505165023,
+              0.10583979171890434,
+              0.1302270189085558,
+              0.15701326726977943,
+              0.18490493686194048,
+              0.21225602803221044,
+              0.23759764100937558,
+              0.2600401882484915,
+              0.27932204092614743,
+              0.29561437976108096,
+              0.309292433593056,
+              0.3207792035035396,
+              0.3304673694443705
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slide": 4,
+      "role": "补充：混合材质",
+      "case": {
+        "building": "0060",
+        "panos": [
+          26,
+          29
+        ],
+        "pair_id": "8603d3ce7e6003c6ae917db2",
+        "hypothesis_count": 8,
+        "correct_hypothesis_count": 1,
+        "salve_max_correct_score": 0.8737272620201111,
+        "salve_correct_accepted": 0,
+        "salve_wrong_accepted": 3,
+        "r3_weak_positive_scores": [
+          0.5857294201850891
+        ],
+        "r3_unknown_matches": 0,
+        "r3_known_wrong_matches": 0,
+        "visual_texture_assessment": "pale ceilings; mixed wood-toned flooring and carpet, not a clean same-material example",
+        "human_correspondence_verified": false,
+        "salve_rows": [
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/gt_alignment_approx/0060/pair_0___door_0_0_rotated_ceiling_rgb_floor_02_partial_room_01_pano_29.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/gt_alignment_approx/0060/pair_0___door_0_0_rotated_ceiling_rgb_floor_02_partial_room_04_pano_26.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/gt_alignment_approx/0060/pair_0___door_0_0_rotated_floor_rgb_floor_02_partial_room_01_pano_29.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/gt_alignment_approx/0060/pair_0___door_0_0_rotated_floor_rgb_floor_02_partial_room_04_pano_26.jpg"
+            ],
+            "positive_probability": 0.8737272620201111,
+            "label_for_evaluation_only": 1
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_0___door_0_0_identity_ceiling_rgb_floor_02_partial_room_01_pano_29.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_0___door_0_0_identity_ceiling_rgb_floor_02_partial_room_04_pano_26.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_0___door_0_0_identity_floor_rgb_floor_02_partial_room_01_pano_29.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_0___door_0_0_identity_floor_rgb_floor_02_partial_room_04_pano_26.jpg"
+            ],
+            "positive_probability": 0.7609903216362,
+            "label_for_evaluation_only": 0
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_1___door_1_0_identity_ceiling_rgb_floor_02_partial_room_01_pano_29.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_1___door_1_0_identity_ceiling_rgb_floor_02_partial_room_04_pano_26.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_1___door_1_0_identity_floor_rgb_floor_02_partial_room_01_pano_29.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_1___door_1_0_identity_floor_rgb_floor_02_partial_room_04_pano_26.jpg"
+            ],
+            "positive_probability": 0.3570050001144409,
+            "label_for_evaluation_only": 0
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_2___door_1_0_rotated_ceiling_rgb_floor_02_partial_room_01_pano_29.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_2___door_1_0_rotated_ceiling_rgb_floor_02_partial_room_04_pano_26.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_2___door_1_0_rotated_floor_rgb_floor_02_partial_room_01_pano_29.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_2___door_1_0_rotated_floor_rgb_floor_02_partial_room_04_pano_26.jpg"
+            ],
+            "positive_probability": 0.5202792286872864,
+            "label_for_evaluation_only": 0
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_3___opening_0_0_identity_ceiling_rgb_floor_02_partial_room_01_pano_29.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_3___opening_0_0_identity_ceiling_rgb_floor_02_partial_room_04_pano_26.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_3___opening_0_0_identity_floor_rgb_floor_02_partial_room_01_pano_29.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_3___opening_0_0_identity_floor_rgb_floor_02_partial_room_04_pano_26.jpg"
+            ],
+            "positive_probability": 0.9920517206192017,
+            "label_for_evaluation_only": 0
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_4___opening_0_0_rotated_ceiling_rgb_floor_02_partial_room_01_pano_29.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_4___opening_0_0_rotated_ceiling_rgb_floor_02_partial_room_04_pano_26.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_4___opening_0_0_rotated_floor_rgb_floor_02_partial_room_01_pano_29.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_4___opening_0_0_rotated_floor_rgb_floor_02_partial_room_04_pano_26.jpg"
+            ],
+            "positive_probability": 0.7426057457923889,
+            "label_for_evaluation_only": 0
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_5___opening_1_0_identity_ceiling_rgb_floor_02_partial_room_01_pano_29.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_5___opening_1_0_identity_ceiling_rgb_floor_02_partial_room_04_pano_26.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_5___opening_1_0_identity_floor_rgb_floor_02_partial_room_01_pano_29.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_5___opening_1_0_identity_floor_rgb_floor_02_partial_room_04_pano_26.jpg"
+            ],
+            "positive_probability": 0.953612208366394,
+            "label_for_evaluation_only": 0
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_6___opening_1_0_rotated_ceiling_rgb_floor_02_partial_room_01_pano_29.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_6___opening_1_0_rotated_ceiling_rgb_floor_02_partial_room_04_pano_26.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_6___opening_1_0_rotated_floor_rgb_floor_02_partial_room_01_pano_29.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0060/bev/incorrect_alignment/0060/pair_6___opening_1_0_rotated_floor_rgb_floor_02_partial_room_04_pano_26.jpg"
+            ],
+            "positive_probability": 0.9885683059692383,
+            "label_for_evaluation_only": 0
+          }
+        ]
+      },
+      "pair_id": "8603d3ce7e6003c6ae917db2",
+      "sides": [
+        {
+          "observation_id": "view_b640c36253812ceb984fd061",
+          "image": "/home/feixia/pythonProject/AAAsrk/zind/data/0060/panos/floor_02_partial_room_01_pano_29.jpg",
+          "copied_image": "originals/0060_floor_02_partial_room_01_pano_29.jpg",
+          "sha256": "8bfb28e5b73bccd05f5e9cc02e6422cecbba85e59c5158d9299d4ce91c959952",
+          "candidate_id": "opening_e8fa82bfa98c0011452e0e3e",
+          "candidate_index": 0,
+          "token_count": 256,
+          "token_interval_inclusive": [
+            217,
+            45
+          ],
+          "reference_interface_id": "interface_7cf610289b6bf5bc1ae767f8",
+          "reference_projection": {
+            "start_u": 0.8529316218722467,
+            "length_u": 0.34400179823981913,
+            "wraps_seam": true,
+            "endpoint_u": [
+              0.8529316218722467,
+              0.19693342011206577
+            ],
+            "angle_deg": 123.84064736633489,
+            "top_v": [
+              0.19413480276037914,
+              0.17724711612218885,
+              0.16050657872903057,
+              0.1447620580635402,
+              0.1312412042598622,
+              0.12150853926423671,
+              0.11712085799896194,
+              0.11893671195602734,
+              0.12658736398280712,
+              0.13871670334916392,
+              0.15369779930698113,
+              0.170143386035275,
+              0.1870509090754059,
+              0.20375958718962706,
+              0.21986316415089935,
+              0.23513177340233132,
+              0.24945323857157942
+            ],
+            "bottom_v": [
+              0.9291496206994306,
+              0.936662257694379,
+              0.9436993622118239,
+              0.9500012234305881,
+              0.9552033457399436,
+              0.9588432607649306,
+              0.9604582617027319,
+              0.9597917578821316,
+              0.9569540751441601,
+              0.9523493554467306,
+              0.9464593817232779,
+              0.9396944195943522,
+              0.9323560370626383,
+              0.9246540418753755,
+              0.9167332229911842,
+              0.9086949095850192,
+              0.9006116464880607
+            ],
+            "sample_u": [
+              0.8529316218722467,
+              0.866172566113836,
+              0.8829507678523656,
+              0.9043375058379808,
+              0.9313693877527844,
+              0.9643747712375088,
+              0.0019003237878169599,
+              0.04033851494823082,
+              0.07555857540505412,
+              0.1051419018083824,
+              0.12879717382980882,
+              0.1473772342225821,
+              0.1619868965956654,
+              0.17359426759623942,
+              0.1829460841406752,
+              0.1905923916454526,
+              0.19693342011206577
+            ]
+          }
+        },
+        {
+          "observation_id": "view_e873999547bd160020eab3f3",
+          "image": "/home/feixia/pythonProject/AAAsrk/zind/data/0060/panos/floor_02_partial_room_04_pano_26.jpg",
+          "copied_image": "originals/0060_floor_02_partial_room_04_pano_26.jpg",
+          "sha256": "4e866b20dd4112d242803f49c68ec397fb65e590e7797d458d7c15ca4d04e9a6",
+          "candidate_id": "opening_107398ba19f17950a326187b",
+          "candidate_index": 2,
+          "token_count": 256,
+          "token_interval_inclusive": [
+            176,
+            195
+          ],
+          "reference_interface_id": "interface_75856c26ef29c0eaac5a7615",
+          "reference_projection": {
+            "start_u": 0.6876404494382022,
+            "length_u": 0.05295554469956032,
+            "wraps_seam": false,
+            "endpoint_u": [
+              0.6876404494382022,
+              0.7405959941377626
+            ],
+            "angle_deg": 19.063996091841716,
+            "top_v": [
+              0.4346041055718475,
+              0.4342087369548342,
+              0.4338335717138895,
+              0.4334798197510911,
+              0.43314865709863937,
+              0.43284121623270044,
+              0.4325585762924396,
+              0.432301753350596,
+              0.4320716908916683,
+              0.4318692506598929,
+              0.43169520404117384,
+              0.43155022414057015,
+              0.4314348787096386,
+              0.43134962406583616,
+              0.43129480012948984,
+              0.4312706266829407,
+              0.4312772009319689
+            ],
+            "bottom_v": [
+              0.6797598061701837,
+              0.6806534344413847,
+              0.6814988792660622,
+              0.682293822800837,
+              0.683036029488432,
+              0.6837233621071418,
+              0.6843537977328622,
+              0.6849254434002121,
+              0.6854365512410475,
+              0.6858855328751305,
+              0.6862709728293515,
+              0.686591640768988,
+              0.6868465023371757,
+              0.6870347284169431,
+              0.6871557026535539,
+              0.6872090271029595,
+              0.6871945259042033
+            ],
+            "sample_u": [
+              0.6876404494382022,
+              0.6907469245311958,
+              0.6938910765466154,
+              0.6970710976558502,
+              0.7002850241338243,
+              0.7035307396980128,
+              0.7068059803776787,
+              0.71010834094466,
+              0.7134352829098177,
+              0.7167841440597943,
+              0.7201521494778352,
+              0.7235364239609768,
+              0.7269340057149117,
+              0.7303418611783613,
+              0.7337569008018692,
+              0.7371759955825881,
+              0.7405959941377626
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slide": 5,
+      "role": "反例 01",
+      "case": {
+        "building": "0726",
+        "panos": [
+          7,
+          27
+        ],
+        "pair_id": "01c4f6129e63e2b5398f5c70",
+        "hypothesis_count": 2,
+        "correct_hypothesis_count": 1,
+        "salve_max_correct_score": 0.9403156042098999,
+        "salve_correct_accepted": 1,
+        "salve_wrong_accepted": 0,
+        "r3_weak_positive_scores": [
+          0.7758166790008545
+        ],
+        "r3_unknown_matches": 1,
+        "r3_known_wrong_matches": 0,
+        "visual_texture_assessment": "pale ceilings and warm-colored flooring; visible texture/lighting differences",
+        "human_correspondence_verified": false,
+        "salve_rows": [
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0726/bev/gt_alignment_approx/0726/pair_0___door_0_0_rotated_ceiling_rgb_floor_01_partial_room_01_pano_27.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0726/bev/gt_alignment_approx/0726/pair_0___door_0_0_rotated_ceiling_rgb_floor_01_partial_room_07_pano_7.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0726/bev/gt_alignment_approx/0726/pair_0___door_0_0_rotated_floor_rgb_floor_01_partial_room_01_pano_27.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0726/bev/gt_alignment_approx/0726/pair_0___door_0_0_rotated_floor_rgb_floor_01_partial_room_07_pano_7.jpg"
+            ],
+            "positive_probability": 0.9403156042098999,
+            "label_for_evaluation_only": 1
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0726/bev/incorrect_alignment/0726/pair_0___door_0_0_identity_ceiling_rgb_floor_01_partial_room_01_pano_27.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0726/bev/incorrect_alignment/0726/pair_0___door_0_0_identity_ceiling_rgb_floor_01_partial_room_07_pano_7.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0726/bev/incorrect_alignment/0726/pair_0___door_0_0_identity_floor_rgb_floor_01_partial_room_01_pano_27.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0726/bev/incorrect_alignment/0726/pair_0___door_0_0_identity_floor_rgb_floor_01_partial_room_07_pano_7.jpg"
+            ],
+            "positive_probability": 0.8385021686553955,
+            "label_for_evaluation_only": 0
+          }
+        ]
+      },
+      "pair_id": "01c4f6129e63e2b5398f5c70",
+      "sides": [
+        {
+          "observation_id": "view_666e23a605bf4520acbac865",
+          "image": "/home/feixia/pythonProject/AAAsrk/zind/data/0726/panos/floor_01_partial_room_07_pano_7.jpg",
+          "copied_image": "originals/0726_floor_01_partial_room_07_pano_7.jpg",
+          "sha256": "dd0b1644b57e4fffb1f8a3fa9566599850187df268347ac56f422e652d0dc2e9",
+          "candidate_id": "opening_6226e3740c9c2fe50c4c9f90",
+          "candidate_index": 0,
+          "token_count": 256,
+          "token_interval_inclusive": [
+            253,
+            67
+          ],
+          "reference_interface_id": "interface_b0f54f73f5bf8207a7415407",
+          "reference_projection": {
+            "start_u": 0.8168523029424011,
+            "length_u": 0.4442701454805742,
+            "wraps_seam": true,
+            "endpoint_u": [
+              0.2611224484229754,
+              0.8168523029424011
+            ],
+            "angle_deg": 159.93725237300671,
+            "top_v": [
+              0.06351197574764844,
+              0.054723964154735294,
+              0.04593679534081324,
+              0.03722767191034326,
+              0.028750715468972232,
+              0.020881482577563282,
+              0.014725371178410052,
+              0.01305743590205255,
+              0.01724334796200422,
+              0.02442294738594386,
+              0.03264824756676121,
+              0.0412608772468363,
+              0.05001914161636839,
+              0.05881380473518527,
+              0.06758555701521957,
+              0.07629719451885242,
+              0.08492275291555162
+            ],
+            "bottom_v": [
+              0.9350092738889335,
+              0.9439927641391197,
+              0.9529794366567388,
+              0.9618896653908517,
+              0.9705649982531372,
+              0.9786201970544639,
+              0.9849226933130472,
+              0.9866303934896901,
+              0.9823447632775552,
+              0.9749948558998687,
+              0.9665759718003362,
+              0.957762949991642,
+              0.9488039415414674,
+              0.939811409313841,
+              0.930846623843894,
+              0.9219481417481676,
+              0.9131429266698382
+            ],
+            "sample_u": [
+              0.2611224484229754,
+              0.2557502061161697,
+              0.2482734094835109,
+              0.23721891784910798,
+              0.2194586415849596,
+              0.18754847842453065,
+              0.12385014294991209,
+              0.01667659704259339,
+              0.927315767875486,
+              0.8814420158962755,
+              0.8575181701121148,
+              0.843443719268804,
+              0.8343076639096323,
+              0.827937430043825,
+              0.8232559422697565,
+              0.8196759674602985,
+              0.8168523029424011
+            ]
+          }
+        },
+        {
+          "observation_id": "view_a507a7e45df3cc727f85bf33",
+          "image": "/home/feixia/pythonProject/AAAsrk/zind/data/0726/panos/floor_01_partial_room_01_pano_27.jpg",
+          "copied_image": "originals/0726_floor_01_partial_room_01_pano_27.jpg",
+          "sha256": "10f12d839f47524014c104acf914571c2421c33c486b7642599803599226a31f",
+          "candidate_id": "opening_64c84151b415e5e6cf5a7670",
+          "candidate_index": 0,
+          "token_count": 256,
+          "token_interval_inclusive": [
+            254,
+            53
+          ],
+          "reference_interface_id": "interface_db0a3e5b6c0e8495ddd13712",
+          "reference_projection": {
+            "start_u": 0.018075232046897927,
+            "length_u": 0.1875915974596971,
+            "wraps_seam": false,
+            "endpoint_u": [
+              0.018075232046897927,
+              0.20566682950659504
+            ],
+            "angle_deg": 67.53297508549096,
+            "top_v": [
+              0.22248289345063527,
+              0.21700719409409902,
+              0.21210240175809214,
+              0.2078927979834343,
+              0.20449718938261863,
+              0.20202034044857398,
+              0.20054407880194552,
+              0.20011946560185517,
+              0.2007615145049642,
+              0.2024475807683806,
+              0.20511978079163634,
+              0.20869090408338697,
+              0.21305258444501107,
+              0.21808423108741032,
+              0.2236613907036396,
+              0.22966265148256937,
+              0.2359746971388189
+            ],
+            "bottom_v": [
+              0.8961346358879647,
+              0.8994740322875258,
+              0.9024058471987264,
+              0.9048792753280321,
+              0.9068466604350826,
+              0.90826655568025,
+              0.9091068954139014,
+              0.9093477877329823,
+              0.9089833994306232,
+              0.9080225312525754,
+              0.9064877539233709,
+              0.9044132983121356,
+              0.9018421413915292,
+              0.8988228210547649,
+              0.8954064466122216,
+              0.8916442109061784,
+              0.8875855327468231
+            ],
+            "sample_u": [
+              0.018075232046897927,
+              0.02845258361245867,
+              0.03954613770381177,
+              0.05131401819112413,
+              0.0636799795306775,
+              0.07653143692422637,
+              0.08972200509254397,
+              0.10307929598712723,
+              0.11641739331266387,
+              0.12955196352665727,
+              0.14231505141037748,
+              0.15456672042495512,
+              0.16620177329380653,
+              0.17715127339809172,
+              0.18737982621573324,
+              0.19688019565724668,
+              0.20566682950659504
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slide": 6,
+      "role": "反例 02",
+      "case": {
+        "building": "0430",
+        "panos": [
+          5,
+          6
+        ],
+        "pair_id": "2669006eeb1ea88dec5fe636",
+        "hypothesis_count": 4,
+        "correct_hypothesis_count": 1,
+        "salve_max_correct_score": 0.9470970630645752,
+        "salve_correct_accepted": 1,
+        "salve_wrong_accepted": 0,
+        "r3_weak_positive_scores": [
+          0.9797782897949219
+        ],
+        "r3_unknown_matches": 0,
+        "r3_known_wrong_matches": 0,
+        "visual_texture_assessment": "pale ceilings and light square-tile floors; wood floor visible in adjacent area",
+        "human_correspondence_verified": false,
+        "salve_rows": [
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0430/bev/gt_alignment_approx/0430/pair_0___door_0_0_rotated_ceiling_rgb_floor_01_partial_room_03_pano_5.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0430/bev/gt_alignment_approx/0430/pair_0___door_0_0_rotated_ceiling_rgb_floor_01_partial_room_06_pano_6.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0430/bev/gt_alignment_approx/0430/pair_0___door_0_0_rotated_floor_rgb_floor_01_partial_room_03_pano_5.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0430/bev/gt_alignment_approx/0430/pair_0___door_0_0_rotated_floor_rgb_floor_01_partial_room_06_pano_6.jpg"
+            ],
+            "positive_probability": 0.9470970630645752,
+            "label_for_evaluation_only": 1
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0430/bev/incorrect_alignment/0430/pair_0___door_0_0_identity_ceiling_rgb_floor_01_partial_room_03_pano_5.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0430/bev/incorrect_alignment/0430/pair_0___door_0_0_identity_ceiling_rgb_floor_01_partial_room_06_pano_6.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0430/bev/incorrect_alignment/0430/pair_0___door_0_0_identity_floor_rgb_floor_01_partial_room_03_pano_5.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0430/bev/incorrect_alignment/0430/pair_0___door_0_0_identity_floor_rgb_floor_01_partial_room_06_pano_6.jpg"
+            ],
+            "positive_probability": 0.799394965171814,
+            "label_for_evaluation_only": 0
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0430/bev/incorrect_alignment/0430/pair_1___door_1_0_identity_ceiling_rgb_floor_01_partial_room_03_pano_5.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0430/bev/incorrect_alignment/0430/pair_1___door_1_0_identity_ceiling_rgb_floor_01_partial_room_06_pano_6.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0430/bev/incorrect_alignment/0430/pair_1___door_1_0_identity_floor_rgb_floor_01_partial_room_03_pano_5.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0430/bev/incorrect_alignment/0430/pair_1___door_1_0_identity_floor_rgb_floor_01_partial_room_06_pano_6.jpg"
+            ],
+            "positive_probability": 0.9289568066596985,
+            "label_for_evaluation_only": 0
+          },
+          {
+            "files": [
+              "experiments/texture_ambiguity_20261029/probe_0430/bev/incorrect_alignment/0430/pair_2___door_1_0_rotated_ceiling_rgb_floor_01_partial_room_03_pano_5.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0430/bev/incorrect_alignment/0430/pair_2___door_1_0_rotated_ceiling_rgb_floor_01_partial_room_06_pano_6.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0430/bev/incorrect_alignment/0430/pair_2___door_1_0_rotated_floor_rgb_floor_01_partial_room_03_pano_5.jpg",
+              "experiments/texture_ambiguity_20261029/probe_0430/bev/incorrect_alignment/0430/pair_2___door_1_0_rotated_floor_rgb_floor_01_partial_room_06_pano_6.jpg"
+            ],
+            "positive_probability": 0.19193141162395477,
+            "label_for_evaluation_only": 0
+          }
+        ]
+      },
+      "pair_id": "2669006eeb1ea88dec5fe636",
+      "sides": [
+        {
+          "observation_id": "view_62603dda4dff267abcc27c6f",
+          "image": "/home/feixia/pythonProject/AAAsrk/zind/data/0430/panos/floor_01_partial_room_03_pano_5.jpg",
+          "copied_image": "originals/0430_floor_01_partial_room_03_pano_5.jpg",
+          "sha256": "b0042e40333f2212365f858e39ace53b68e16e2fcea16feaa1fd09087762a178",
+          "candidate_id": "opening_ce2874e5fa70e296877ff4c6",
+          "candidate_index": 1,
+          "token_count": 256,
+          "token_interval_inclusive": [
+            83,
+            104
+          ],
+          "reference_interface_id": "interface_d476ecb3534a42ef5407c953",
+          "reference_projection": {
+            "start_u": 0.32808988764044944,
+            "length_u": 0.07640449438202235,
+            "wraps_seam": false,
+            "endpoint_u": [
+              0.32808988764044944,
+              0.40449438202247184
+            ],
+            "angle_deg": 27.505617977528047,
+            "top_v": [
+              0.2943304007820138,
+              0.3009241952756816,
+              0.30752188921365153,
+              0.3140444991215634,
+              0.32043195220763043,
+              0.326640429081335,
+              0.3326395938805773,
+              0.33840997515931737,
+              0.3439406360144871,
+              0.3492271871777417,
+              0.3542701445430674,
+              0.3590736038656657,
+              0.3636441922569944,
+              0.3679902525820308,
+              0.37212121872424975,
+              0.3760471441792338,
+              0.3797783518980624
+            ],
+            "bottom_v": [
+              0.8551190300844218,
+              0.8495972587064666,
+              0.8438507253563206,
+              0.8379372462256938,
+              0.8319076218626698,
+              0.8258059672689768,
+              0.8196702116146006,
+              0.813532675478657,
+              0.8074206664724164,
+              0.801357057761612,
+              0.7953608299804734,
+              0.789447567283361,
+              0.7836299045547979,
+              0.7779179264411962,
+              0.7723195208366368,
+              0.7668406903980545,
+              0.761485826001955
+            ],
+            "sample_u": [
+              0.32808988764044944,
+              0.3364554524371465,
+              0.3441207467795947,
+              0.3511387951293424,
+              0.3575641865705669,
+              0.36345047031218014,
+              0.36884853656398,
+              0.37380571547507224,
+              0.37836537190673425,
+              0.38256682553496746,
+              0.386445472553649,
+              0.39003302299046755,
+              0.3933577960835934,
+              0.3964450366157009,
+              0.3993172293012225,
+              0.401994397900446,
+              0.40449438202247184
+            ]
+          }
+        },
+        {
+          "observation_id": "view_9a5d44af944239dc61226e6e",
+          "image": "/home/feixia/pythonProject/AAAsrk/zind/data/0430/panos/floor_01_partial_room_06_pano_6.jpg",
+          "copied_image": "originals/0430_floor_01_partial_room_06_pano_6.jpg",
+          "sha256": "d6350ffb2717cecf5cde0d14d84d61e6b302456e65e635c87f9938b4b87ea565",
+          "candidate_id": "opening_f8738f926b736c0213b1c4cf",
+          "candidate_index": 0,
+          "token_count": 256,
+          "token_interval_inclusive": [
+            193,
+            48
+          ],
+          "reference_interface_id": "interface_09193c1e7f4f86464f32f2ed",
+          "reference_projection": {
+            "start_u": 0.7553492916463118,
+            "length_u": 0.4190522716170002,
+            "wraps_seam": true,
+            "endpoint_u": [
+              0.17440156326331213,
+              0.7553492916463118
+            ],
+            "angle_deg": 150.85881778212007,
+            "top_v": [
+              0.1914696057020246,
+              0.1716041299311536,
+              0.15050787986150194,
+              0.128514929655061,
+              0.10630557927487078,
+              0.08524757041036174,
+              0.06813036696730185,
+              0.05987641641296465,
+              0.06453722019859348,
+              0.07964947144159373,
+              0.09993296720424827,
+              0.12199180782362351,
+              0.14414022639034124,
+              0.16554507039590566,
+              0.18579226762452228,
+              0.20469326359271245,
+              0.22218963831867056
+            ],
+            "bottom_v": [
+              0.9198435972629522,
+              0.9297842547272364,
+              0.9396974518244018,
+              0.9494561179104806,
+              0.9588325942159561,
+              0.9673738395622598,
+              0.9741217816831722,
+              0.9773257138384681,
+              0.9755200996740484,
+              0.9695976902018986,
+              0.9614492941091723,
+              0.9522550096058795,
+              0.9425779612130103,
+              0.9326937408800484,
+              0.9227514263986959,
+              0.9128404679639319,
+              0.9030194373786902
+            ],
+            "sample_u": [
+              0.17440156326331213,
+              0.16760655452811996,
+              0.15848692912659879,
+              0.1457100310655985,
+              0.12684894732243018,
+              0.09738555361508289,
+              0.04992341447194265,
+              0.980317405664332,
+              0.9064149945247255,
+              0.8522921879511356,
+              0.8184262128036794,
+              0.79705569184726,
+              0.7828184492115191,
+              0.7728014200920109,
+              0.7654241122015142,
+              0.7597868711371827,
+              0.7553492916463118
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

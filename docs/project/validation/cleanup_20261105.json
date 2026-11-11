@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-11-05T20:06:50.261231+08:00",
+  "deleted": {
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/enclosed_results": {
+      "count": 93782,
+      "logical_bytes": 56088746526,
+      "reason": "unreferenced batch training visualizations; 10 examples retained"
+    },
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/extended_results": {
+      "count": 93710,
+      "logical_bytes": 56056214588,
+      "reason": "unreferenced batch training visualizations; 10 examples retained"
+    },
+    "python_and_finder_cache": {
+      "count": 483,
+      "logical_bytes": 5716462
+    },
+    ".pytest_cache": {
+      "count": 6,
+      "logical_bytes": 50902
+    },
+    "mp3d.zip": {
+      "count": 1,
+      "logical_bytes": 1347229753,
+      "reason": "all 6890 extracted files match archive size and CRC32"
+    }
+  },
+  "preserved_examples": [
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/enclosed_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.52090.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/enclosed_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.56049.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/enclosed_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.60771.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/enclosed_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.72858.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/enclosed_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.73485.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/enclosed_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.74147.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/enclosed_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.75481.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/enclosed_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.75954.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/enclosed_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.76006.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/enclosed_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.76049.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/extended_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.50828.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/extended_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.53292.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/extended_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.56841.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/extended_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.70001.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/extended_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.71135.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/extended_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.73279.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/extended_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.73705.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/extended_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.74401.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/extended_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.74987.png",
+    "checkpoints/Bi_Layout_Net/mp3d/results/train_best/extended_results/2t7WUuJeko7_073656b4030d4389ba7f304298be1d73_0.75661.png"
+  ],
+  "archive_verification": {
+    "files_checked": 6890,
+    "size_or_crc_mismatches": 0
+  }
+}

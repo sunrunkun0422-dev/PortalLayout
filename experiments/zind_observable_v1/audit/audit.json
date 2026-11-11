@@ -1,0 +1,70 @@
+{
+  "all_views_and_rgb_whitelist_verified": true,
+  "annotation_issue_occurrences_in_connections": {
+    "camera_membership_unconfirmed": 29407,
+    "invalid_geometry": 12,
+    "polygon_disagreement": 127
+  },
+  "checks_do_not_establish_pixel_observability": true,
+  "conflict_reason_occurrences_in_selected_pairs": {
+    "absence_of_match_not_proof_of_nonadjacency": 29366,
+    "annotation_inventory_or_polygon_inconsistent": 50059,
+    "missing_metric_scale": 28273,
+    "near_or_incompatible_geometry": 6413
+  },
+  "connection_counts": {
+    "negative": 43180,
+    "positive": 15591,
+    "raw_combinations": 850243,
+    "unknown": 47633
+  },
+  "counts": {
+    "multiple_gt_pairs_positive": 517,
+    "multiple_gt_pairs_unknown": 154,
+    "negative": 98299,
+    "negative_hard_proxy": 84749,
+    "negative_ordinary": 13550,
+    "pairs_missing_metric": 28273,
+    "positive": 41169,
+    "seam_target_sides": 25946,
+    "unknown": 112182
+  },
+  "human_verified": false,
+  "master_sha256": "0eba445d9c0d3db169a5b12deef1a0028501cd0700730c821e13ccef686f6854",
+  "negative_difficulty_proxy_occurrences": {
+    "door_type_width_similar_proxy": 67623,
+    "repeated_door_inventory_proxy": 2165,
+    "spatially_close": 55727
+  },
+  "opening_kind_occurrences_in_selected_pairs": {
+    "door": 35819,
+    "opening": 18371
+  },
+  "pilot_sampling_reproduced": true,
+  "pilot_unique_houses": 261,
+  "proxy_failure_reason_occurrences": {
+    "angle_failed": 2931,
+    "distance_failed": 25,
+    "endpoints_failed": 5610,
+    "incidence_failed": 3058,
+    "pixel_width_failed": 2938,
+    "rays_failed": 3831,
+    "visible_support_failed": 2634,
+    "visible_support_unknown": 3497
+  },
+  "proxy_visibility_target_sides": {
+    "clear": 96151,
+    "not_visible": 1828,
+    "partial": 6904,
+    "uncertain": 3497
+  },
+  "selected_pairs": 251650,
+  "selection_reason_counts": {
+    "maximin_quality_with_view_complementarity": 251650,
+    "outside_configured_connection_budget": 598593
+  },
+  "status": "passed",
+  "test_annotations_read": false,
+  "verified_selected_image_hashes": 53581,
+  "verified_source_annotations": 1260
+}

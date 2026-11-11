@@ -1,0 +1,33 @@
+{
+  "pair_checkpoint_sha256": "752c8ea1f187741918777116ce73fcc54c6ae545f5f82c7c80950ceda50d3925",
+  "pair_checkpoint": "experiments/research1_round2_20261024/R3/checkpoint.pt",
+  "pair_selected_step": 5000,
+  "verifiers": {
+    "V0": {
+      "checkpoint": "experiments/research1_pose_geometry_20261026_0245/V0/train/checkpoint.pt",
+      "sha256": "3edb66bf3edfe9ead18d4bd9bdd2824ba012718a823b8fab7882ea6837824a61",
+      "geometry": {
+        "pose_geometry": "dominant_wall",
+        "scale_shrinkage": 1.0
+      },
+      "selected_step": 3500,
+      "steps": 5000,
+      "workpoint_status": "selection_workpoint_infeasible",
+      "workpoint_count": 28,
+      "feature_version": "floor-auxiliary.pose-geometry.v4"
+    },
+    "V1": {
+      "checkpoint": "experiments/research1_pose_geometry_20261026_0245/V1/train/checkpoint.pt",
+      "sha256": "77e9f45e5e0f2deb547c2f70ebb9877a55f452d357cb808e9b7e1d7544b4c506",
+      "geometry": {
+        "pose_geometry": "local_m2",
+        "scale_shrinkage": 0.0
+      },
+      "selected_step": 4500,
+      "steps": 5000,
+      "workpoint_status": "selection_workpoint_infeasible",
+      "workpoint_count": 28,
+      "feature_version": "floor-auxiliary.pose-geometry.v4"
+    }
+  }
+}

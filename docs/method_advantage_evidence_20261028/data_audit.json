@@ -1,0 +1,96 @@
+{
+  "houses": {
+    "fit": [
+      "0056",
+      "0067",
+      "0108",
+      "0163",
+      "0176",
+      "0178",
+      "0191",
+      "0202",
+      "0282",
+      "0358",
+      "0364",
+      "0414",
+      "0418",
+      "0487",
+      "0543",
+      "0553",
+      "0661",
+      "0685",
+      "0693",
+      "0703",
+      "0705",
+      "0706",
+      "0771",
+      "0791",
+      "0821",
+      "0884",
+      "0912",
+      "0923",
+      "0956",
+      "1017",
+      "1022",
+      "1039",
+      "1076",
+      "1119",
+      "1144",
+      "1312",
+      "1324",
+      "1374",
+      "1461",
+      "1515"
+    ],
+    "selection": [
+      "0060",
+      "0180",
+      "0430",
+      "0561",
+      "0641",
+      "0726",
+      "0799",
+      "0988",
+      "1236",
+      "1289"
+    ],
+    "calibration": [
+      "0088",
+      "0198",
+      "0443",
+      "0480",
+      "0716",
+      "0893",
+      "0895",
+      "0959",
+      "1252",
+      "1416"
+    ]
+  },
+  "human_review": {
+    "total": 96,
+    "completed": 0,
+    "counts": {
+      "待审核": 96
+    },
+    "reviewer": "",
+    "reviewed_at": "",
+    "status": "pending",
+    "population": "diagnostic sample; not a random precision estimate",
+    "checkpoint_sha256": "effa09e93ab9db3a6548f55458804f3d0fb13e1a048669347387400e0b6b1916",
+    "note": "旧审核包绑定历史模型；完成后仍需核查 A0–A3 新输出，不自动当作新模型通过。"
+  },
+  "historical_code_drift": [
+    "utils/floor_training.py"
+  ],
+  "pretraining_exposure": "unknown",
+  "cache_snapshot": "3f7e296e0a309780633430ba98ccaba7c455257eb410e722018d87670800d4ed",
+  "cache_verification": "contract and weak-label snapshot binding; feature tensor contents not rehashed",
+  "bootstrap": {
+    "unit": "house",
+    "samples": 2000,
+    "seed": 123,
+    "interpretation": "exploratory, development data"
+  },
+  "note": "原始缓存/标注/匹配权重重新校验；历史源码漂移单列，不能把现代码当成旧运行源码。"
+}

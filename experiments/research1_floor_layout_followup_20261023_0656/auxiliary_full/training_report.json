@@ -1,0 +1,50 @@
+{
+  "training_status": "trained",
+  "stages": {
+    "pose": {
+      "status": "passed",
+      "steps": 3000,
+      "fit": 374,
+      "selection": 215,
+      "initial_fit_loss": 0.7581496852255422,
+      "final_fit_loss": 0.18074377960863441,
+      "selection_loss": 0.1187006537573646,
+      "parameters_changed": true,
+      "gradient_norm_first_step": 0.9529457137687132,
+      "fit_houses": [
+        "0108",
+        "0553",
+        "0665",
+        "0912"
+      ],
+      "selection_houses": [
+        "0060",
+        "0430",
+        "0726"
+      ]
+    },
+    "room": {
+      "status": "passed",
+      "steps": 5000,
+      "fit": 17,
+      "selection": 4,
+      "initial_fit_loss": 0.6976170245562331,
+      "final_fit_loss": 1.0676398713069915e-07,
+      "selection_loss": 0.0026669825507428485,
+      "parameters_changed": true,
+      "gradient_norm_first_step": 0.777082971209893,
+      "fit_houses": [
+        "0108",
+        "0553",
+        "0665",
+        "0912"
+      ],
+      "selection_houses": [
+        "0060"
+      ]
+    }
+  },
+  "elapsed_seconds": 506.1611464610032,
+  "peak_allocated_MiB": null,
+  "final_benchmark_evaluated": false
+}

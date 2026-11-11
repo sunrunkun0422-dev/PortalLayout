@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "purpose": "debug/qualitative only, not a scientific evaluation",
+  "mode": "dry-run",
+  "split": "train",
+  "group_id": "debug_train_0665_floor_03_rooms_04_01_05",
+  "house_id": "0665",
+  "floor_id": "floor_03",
+  "room_ids": [
+    "complete_room_04",
+    "complete_room_01",
+    "complete_room_05"
+  ],
+  "room_to_pano": {
+    "complete_room_04": {
+      "partial_room_id": "partial_room_04",
+      "pano_id": "pano_37"
+    },
+    "complete_room_01": {
+      "partial_room_id": "partial_room_01",
+      "pano_id": "pano_34"
+    },
+    "complete_room_05": {
+      "partial_room_id": "partial_room_05",
+      "pano_id": "pano_30"
+    }
+  },
+  "cache_indices": {
+    "complete_room_05": 4094,
+    "complete_room_01": 4098,
+    "complete_room_04": 4099
+  },
+  "pairs": [
+    {
+      "pair_id": "0665_floor_03_pano_34_pano_37_3",
+      "group_pair": [
+        "complete_room_04",
+        "complete_room_01"
+      ],
+      "manifest_orientation": [
+        "complete_room_01",
+        "complete_room_04"
+      ],
+      "is_match": true,
+      "shared_interface_types": [
+        "door",
+        "door"
+      ],
+      "pose_valid": true
+    },
+    {
+      "pair_id": "0665_floor_03_pano_34_pano_30_4",
+      "group_pair": [
+        "complete_room_01",
+        "complete_room_05"
+      ],
+      "manifest_orientation": [
+        "complete_room_01",
+        "complete_room_05"
+      ],
+      "is_match": true,
+      "shared_interface_types": [
+        "door",
+        "door"
+      ],
+      "pose_valid": true
+    },
+    {
+      "pair_id": "0665_floor_03_pano_37_pano_30_negative",
+      "group_pair": [
+        "complete_room_04",
+        "complete_room_05"
+      ],
+      "manifest_orientation": [
+        "complete_room_04",
+        "complete_room_05"
+      ],
+      "is_match": false,
+      "shared_interface_types": null,
+      "pose_valid": false
+    }
+  ],
+  "adjacency_matrix": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0
+    ]
+  ],
+  "test_data_accessed": false,
+  "model_loaded": false,
+  "gpu_used": false,
+  "checkpoints": [
+    {
+      "name": "Bi-Layout checkpoint",
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+      "exists": true
+    },
+    {
+      "name": "Opening Head checkpoint",
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Opening_Head/zind_matching_v1/best.pt",
+      "exists": true
+    },
+    {
+      "name": "matcher checkpoint",
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Cross_Scene_Matcher/zind_matching_v1/best.pt",
+      "exists": true
+    },
+    {
+      "name": "end-to-end checkpoint",
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_observable_v1/best1_balanced_seed123_20260910/best.pt",
+      "exists": true
+    }
+  ],
+  "planned_model_forwards": {
+    "bi_layout_batch_size": 3,
+    "forward_count_per_room": 1,
+    "pair_count": 3,
+    "opening_guidance": "predicted",
+    "candidate_source": "predicted",
+    "match_decision": "learned bidirectional dustbin",
+    "layout_frame_mode": "panorama_preserving",
+    "portal_geometry_mode": "candidate_local_m2"
+  }
+}

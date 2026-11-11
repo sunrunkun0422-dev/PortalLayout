@@ -1,0 +1,216 @@
+{
+  "merged_sources": {
+    "README_BiLayout_历史说明.md": {
+      "archive": "docs/archive/upstream.md",
+      "anchor": "source-58b63fab30",
+      "sha256": "5f365cba57941457f47f48b91c7aecf03eee646c497f0b193fba36c773fdf7d6",
+      "bytes": 8816
+    },
+    "README_文档总索引.md": {
+      "archive": "docs/archive/legacy_handbook.md",
+      "anchor": "source-91902ecd8f",
+      "sha256": "c64e77e210827a30def33bea8385f55d56476599ff2caeb5cdc22773af56d110",
+      "bytes": 7059
+    },
+    "项目总览与学习手册.md": {
+      "archive": "docs/archive/legacy_handbook.md",
+      "anchor": "source-5de1910be5",
+      "sha256": "26a7957cfa1e4341bb447cdc25ed3c9a4f387077365145f7516475c4aa3e47b0",
+      "bytes": 115223
+    },
+    "学习索引.md": {
+      "archive": "docs/archive/legacy_handbook.md",
+      "anchor": "source-978e500a5f",
+      "sha256": "2b3e6763c3d436fb50d8b49f215ceb54e5633f32bf20361cf550e408eea9394e",
+      "bytes": 66002
+    },
+    "跨场景共享开口融合网络架构_可编辑.md": {
+      "archive": "docs/archive/legacy_handbook.md",
+      "anchor": "source-927d1962ec",
+      "sha256": "14bd67ee2bdc1fc0f5c2cfe28ec756fcec3c95cbb1b5c50a36656c73bdc20e7f",
+      "bytes": 59159
+    },
+    "Matcher阶段汇报_五类案例与下一步.md": {
+      "archive": "docs/archive/legacy_handbook.md",
+      "anchor": "source-92cd0ef78d",
+      "sha256": "c3cf91a5778d11fb53c62aadb7fbf3a96ce3797bbd4fcc6f0aadf64115105963",
+      "bytes": 14163
+    },
+    "ZInD匹配数据格式.md": {
+      "archive": "docs/archive/datasets.md",
+      "anchor": "source-faed420bd5",
+      "sha256": "cd35a66010ced80512eb7a50f9014bc77ecd22c516465e28d0203c8ef516ba7c",
+      "bytes": 8028
+    },
+    "ZInD-BiPair-v1数据集说明.md": {
+      "archive": "docs/archive/datasets.md",
+      "anchor": "source-4660a67882",
+      "sha256": "31b746203e664511517f6c4213602bcce983f8b8ca9ed9b44a4e48c9fb18cbeb",
+      "bytes": 7070
+    },
+    "ZInD-ObservablePairs-v1构建报告.md": {
+      "archive": "docs/archive/datasets.md",
+      "anchor": "source-943ea1aae3",
+      "sha256": "082913f658aafecfdddd36e5dd660459aed9836d3fa7519fccf48ee2c07d6be2",
+      "bytes": 21119
+    },
+    "docs/ZInD_FloorSet_v1_使用说明.md": {
+      "archive": "docs/archive/datasets.md",
+      "anchor": "source-4ba12f040e",
+      "sha256": "06abee4736c28e27b3677a0682b9b37779e22bc45b72068afb69479bc4833ffd",
+      "bytes": 7416
+    },
+    "docs/ZInD_FloorSet_v1_数据格式设计.md": {
+      "archive": "docs/archive/datasets.md",
+      "anchor": "source-96d4b12958",
+      "sha256": "b7473adabab42259e2f6d9de1e587a211bfc0879303abff680fcf03d2de62bfe",
+      "bytes": 23147
+    },
+    "docs/ZInD_FloorSet_v1_构建交付.md": {
+      "archive": "docs/archive/datasets.md",
+      "anchor": "source-86623bf261",
+      "sha256": "14773eaec5afb54aeab7b54f13563c77fb101b07e6040716830d25a90c42e1e5",
+      "bytes": 7612
+    },
+    "docs/ZInD_FloorSet_v1_构建提示词.md": {
+      "archive": "docs/archive/datasets.md",
+      "anchor": "source-6d6ed12171",
+      "sha256": "f0527a6de6cd32cdf7e88a9caeddd769feb3632867d3c3109ef55e2826a2ef94",
+      "bytes": 16490
+    },
+    "docs/zind_floorset_build_audit.md": {
+      "archive": "docs/archive/datasets.md",
+      "anchor": "source-3c37ab514b",
+      "sha256": "a4aba6a00e80aeee77accdaa09ec26a26e71c9e011ff42e3aa1c82c16de41d97",
+      "bytes": 2572
+    },
+    "docs/MvFFN_论文借鉴与实验补充.md": {
+      "archive": "docs/archive/research_design.md",
+      "anchor": "source-88431da526",
+      "sha256": "928a42539ee0e135693c3933294a21632fc152be8092a81bdfbb5b6452e973ce",
+      "bytes": 11622
+    },
+    "docs/research1_architecture_audit.md": {
+      "archive": "docs/archive/research_design.md",
+      "anchor": "source-ec7ad2c752",
+      "sha256": "279685256361d43c342d1153b6363928078e49b51077fdb4d741634693ffa9ed",
+      "bytes": 19979
+    },
+    "docs/research1_full_experiment_plan.md": {
+      "archive": "docs/archive/research_design.md",
+      "anchor": "source-aa6a483b47",
+      "sha256": "0abbe60e860d3f873fc9f2e67113259a98789e63c6141c000d04011157d05c87",
+      "bytes": 41858
+    },
+    "docs/research1_metrics_protocol.md": {
+      "archive": "docs/archive/research_design.md",
+      "anchor": "source-b2de1d74eb",
+      "sha256": "d705c101a03a766ab82a5abcef9714b1055c155e18944b26df4a54251b6bc9f1",
+      "bytes": 19160
+    },
+    "docs/research1_execution_plan_20261024.md": {
+      "archive": "docs/archive/research_design.md",
+      "anchor": "source-65178ac196",
+      "sha256": "bb7237c9f3e3db745d0084cded168925809ed80bcd2e0b7b8a20306390ff0b95",
+      "bytes": 20900
+    },
+    "docs/research1_frontend_implementation.md": {
+      "archive": "docs/archive/implementation.md",
+      "anchor": "source-282bee59fc",
+      "sha256": "dd24b5a360fa730b0970350f189a051dd9c91fb604922f5aa6e13941fd965f34",
+      "bytes": 7451
+    },
+    "docs/research1_opening_representation.md": {
+      "archive": "docs/archive/implementation.md",
+      "anchor": "source-53a8886b20",
+      "sha256": "0808f3bbe7091f0677fafd456314906ad80e2b82a895e88b6f5838f3fa0070cf",
+      "bytes": 10094
+    },
+    "docs/research1_opening_pair_implementation.md": {
+      "archive": "docs/archive/implementation.md",
+      "anchor": "source-250b91c6d5",
+      "sha256": "bfd860bb4f3ede9ee2d75f70eba71dcb4ff380edf006cdda88b15f82925b45ee",
+      "bytes": 8570
+    },
+    "docs/research1_floor_layout_implementation.md": {
+      "archive": "docs/archive/implementation.md",
+      "anchor": "source-dc38012538",
+      "sha256": "2f79f87af27c815a4014405830f165dcc143c673264964d7a3b7051c00b25a76",
+      "bytes": 13548
+    },
+    "docs/research1_round2_implementation.md": {
+      "archive": "docs/archive/implementation.md",
+      "anchor": "source-0c8ca3bd96",
+      "sha256": "0814998f5e3b4975fa6cdd102411902e0f4f7a3e4866a965b13186a79e6fcad6",
+      "bytes": 6622
+    },
+    "docs/research1_preliminary_implementation.md": {
+      "archive": "docs/archive/implementation.md",
+      "anchor": "source-c292b6f473",
+      "sha256": "680ed524ab34b80ac3a67c6e8d0f188d4b62e9d31ff54878ea47abde9805e332",
+      "bytes": 8251
+    },
+    "docs/research1_pose_verifier_implementation.md": {
+      "archive": "docs/archive/implementation.md",
+      "anchor": "source-96a8707835",
+      "sha256": "55acaeb0981092be2408f8e2a639f6653152db42f06c0efb7c1eb23a9a0952ae",
+      "bytes": 4998
+    },
+    "docs/research1_pose_geometry_experiment.md": {
+      "archive": "docs/archive/implementation.md",
+      "anchor": "source-c79f6c184e",
+      "sha256": "858ed2a1e45637b2f810f7d67cd06b1beb12e12d00802e024c3b06f1ce0615ae",
+      "bytes": 5029
+    },
+    "docs/research1_completion_audit.md": {
+      "archive": "docs/archive/implementation.md",
+      "anchor": "source-c50135df8c",
+      "sha256": "3dd16ece8d6cc13a09c9bc751fcd2de24431c947c357dec1fd9e1e027ec4f966",
+      "bytes": 6124
+    },
+    "docs/research1_code_cleanup_audit.md": {
+      "archive": "docs/archive/project_history.md",
+      "anchor": "source-1811e05f4f",
+      "sha256": "3938dbe7b15d540eea0d1ddfe8e5fdc2bfce0c4108ea92df2613766dcb2f69fa",
+      "bytes": 3929
+    },
+    "docs/project/code_map.md": {
+      "archive": "docs/archive/project_history.md",
+      "anchor": "source-9861032b1d",
+      "sha256": "7e82d14742108ea051866f42fdd9ae77b0165211c8893548f4b12755197db9b2",
+      "bytes": 3723
+    },
+    "docs/project/workflows.md": {
+      "archive": "docs/archive/project_history.md",
+      "anchor": "source-28e482e7ae",
+      "sha256": "441a14d1ec73be1515caaed5af29fb7babaf8e1c752b791c3f0699de8f16d6bd",
+      "bytes": 3124
+    },
+    "docs/project/renaming.md": {
+      "archive": "docs/archive/project_history.md",
+      "anchor": "source-99e1e5b372",
+      "sha256": "cddedd9baf177b27683be0f619c4279c9cf45f72ef38d65fc50b09be67f45430",
+      "bytes": 1654
+    },
+    "ZInD端到端训练结果.md": {
+      "archive": "docs/archive/project_history.md",
+      "anchor": "source-4242817bc1",
+      "sha256": "87acf6b7cbff563f116a0f475377aaaf82025085c62286d8e535ae0507cb0be6",
+      "bytes": 7375
+    }
+  },
+  "updated_links": [],
+  "preserved_snapshot_roots": [
+    "experiments",
+    "outputs",
+    "data",
+    "checkpoints"
+  ],
+  "navigation_only_updates": [
+    "experiments/research1_pose_verifier_20261025/README.md",
+    "experiments/research1_preliminary_20261025/README.md",
+    "experiments/research1_round2_20261024/README.md",
+    "experiments/zind_observable_v1/README.md"
+  ],
+  "snapshot_note": "Snapshot result bodies and non-Markdown artifacts preserved; four README links redirected with dated modification records."
+}

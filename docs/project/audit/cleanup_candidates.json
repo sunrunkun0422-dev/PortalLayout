@@ -1,0 +1,1999 @@
+{
+  "regenerable_caches": [
+    {
+      "path": ".pytest_cache/.gitignore",
+      "bytes": 37
+    },
+    {
+      "path": ".pytest_cache/CACHEDIR.TAG",
+      "bytes": 191
+    },
+    {
+      "path": ".pytest_cache/README.md",
+      "bytes": 302
+    },
+    {
+      "path": ".pytest_cache/v/cache/lastfailed",
+      "bytes": 2
+    },
+    {
+      "path": ".pytest_cache/v/cache/nodeids",
+      "bytes": 50368
+    },
+    {
+      "path": ".pytest_cache/v/cache/stepwise",
+      "bytes": 2
+    },
+    {
+      "path": "experiments/research1_main_20261024/__pycache__/control.cpython-38.pyc",
+      "bytes": 7934
+    },
+    {
+      "path": "experiments/research1_preliminary_20261025/__pycache__/control.cpython-312.pyc",
+      "bytes": 23465
+    },
+    {
+      "path": "experiments/research1_round2_20261024/__pycache__/control.cpython-312.pyc",
+      "bytes": 18041
+    },
+    {
+      "path": "experiments/research1_round2_20261024/__pycache__/control.cpython-38.pyc",
+      "bytes": 10253
+    },
+    {
+      "path": "models/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 300
+    },
+    {
+      "path": "portallayout/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 350
+    },
+    {
+      "path": "portallayout/__pycache__/__main__.cpython-38.pyc",
+      "bytes": 2591
+    },
+    {
+      "path": "portallayout/__pycache__/_compat.cpython-38.pyc",
+      "bytes": 2290
+    },
+    {
+      "path": "portallayout/config/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 199
+    },
+    {
+      "path": "portallayout/config/__pycache__/defaults.cpython-38.pyc",
+      "bytes": 5767
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/__init__.cpython-310.pyc",
+      "bytes": 1009
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 922
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 1108
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/build.cpython-38.pyc",
+      "bytes": 2730
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/floor_auxiliary_supervision.cpython-38.pyc",
+      "bytes": 8668
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/floor_room_supervision.cpython-38.pyc",
+      "bytes": 6544
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/mp3d_dataset.cpython-38.pyc",
+      "bytes": 4221
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/opening_pair_supervision.cpython-38.pyc",
+      "bytes": 10347
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/panorama_pair_dataset.cpython-310.pyc",
+      "bytes": 13612
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/panorama_pair_dataset.cpython-312.pyc",
+      "bytes": 21702
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/panorama_pair_dataset.cpython-38.pyc",
+      "bytes": 13154
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/pose_verifier_supervision.cpython-38.pyc",
+      "bytes": 8247
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_bipair_adapter.cpython-312.pyc",
+      "bytes": 10312
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_bipair_adapter.cpython-38.pyc",
+      "bytes": 6221
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_bipair_builder.cpython-312.pyc",
+      "bytes": 31633
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_bipair_builder.cpython-38.pyc",
+      "bytes": 16982
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_bipair_dataset.cpython-312.pyc",
+      "bytes": 10115
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_bipair_dataset.cpython-38.pyc",
+      "bytes": 6634
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_bipair_feature_dataset.cpython-38.pyc",
+      "bytes": 8423
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_dataset.cpython-38.pyc",
+      "bytes": 3980
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_dataset_dop.cpython-38.pyc",
+      "bytes": 4023
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_floor_builder.cpython-38.pyc",
+      "bytes": 35340
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_floor_dataset.cpython-38.pyc",
+      "bytes": 8178
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_floor_schemas.cpython-38.pyc",
+      "bytes": 2996
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_matching_feature_dataset.cpython-312.pyc",
+      "bytes": 33772
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_matching_feature_dataset.cpython-38.pyc",
+      "bytes": 19630
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_new_dataset.cpython-312.pyc",
+      "bytes": 2792
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_new_dataset.cpython-38.pyc",
+      "bytes": 2289
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_observable_pairs.cpython-38.pyc",
+      "bytes": 29096
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_opening_dataset.cpython-312.pyc",
+      "bytes": 26670
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_opening_dataset.cpython-38.pyc",
+      "bytes": 14622
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_pair_mining.cpython-310.pyc",
+      "bytes": 15525
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_pair_mining.cpython-312.pyc",
+      "bytes": 25932
+    },
+    {
+      "path": "portallayout/datasets/__pycache__/zind_pair_mining.cpython-38.pyc",
+      "bytes": 14786
+    },
+    {
+      "path": "portallayout/datasets/communal/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 209
+    },
+    {
+      "path": "portallayout/datasets/communal/__pycache__/base_dataset.cpython-38.pyc",
+      "bytes": 5356
+    },
+    {
+      "path": "portallayout/datasets/communal/__pycache__/data_augmentation.cpython-38.pyc",
+      "bytes": 7700
+    },
+    {
+      "path": "portallayout/datasets/communal/__pycache__/read.cpython-38.pyc",
+      "bytes": 5805
+    },
+    {
+      "path": "portallayout/datasets/zind/__pycache__/zind_two_head_preprocess.cpython-38.pyc",
+      "bytes": 4104
+    },
+    {
+      "path": "portallayout/engine/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 212
+    },
+    {
+      "path": "portallayout/engine/__pycache__/cross_scene_estimator.cpython-38.pyc",
+      "bytes": 30951
+    },
+    {
+      "path": "portallayout/engine/__pycache__/cross_scene_pipeline.cpython-38.pyc",
+      "bytes": 10708
+    },
+    {
+      "path": "portallayout/engine/__pycache__/floor_calibration.cpython-38.pyc",
+      "bytes": 15608
+    },
+    {
+      "path": "portallayout/engine/__pycache__/floor_layout_pipeline.cpython-38.pyc",
+      "bytes": 22544
+    },
+    {
+      "path": "portallayout/engine/__pycache__/floor_observation_pipeline.cpython-38.pyc",
+      "bytes": 13578
+    },
+    {
+      "path": "portallayout/engine/__pycache__/floor_training.cpython-38.pyc",
+      "bytes": 25148
+    },
+    {
+      "path": "portallayout/engine/__pycache__/opening_pair_pipeline.cpython-38.pyc",
+      "bytes": 10007
+    },
+    {
+      "path": "portallayout/engine/__pycache__/opening_pair_training.cpython-38.pyc",
+      "bytes": 16349
+    },
+    {
+      "path": "portallayout/engine/__pycache__/pose_verifier_policy.cpython-38.pyc",
+      "bytes": 7918
+    },
+    {
+      "path": "portallayout/engine/__pycache__/single_view_prediction.cpython-38.pyc",
+      "bytes": 5978
+    },
+    {
+      "path": "portallayout/evaluation/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 201
+    },
+    {
+      "path": "portallayout/evaluation/__pycache__/accuracy.cpython-38.pyc",
+      "bytes": 10837
+    },
+    {
+      "path": "portallayout/evaluation/__pycache__/analyse_layout_type.cpython-38.pyc",
+      "bytes": 2483
+    },
+    {
+      "path": "portallayout/evaluation/__pycache__/eval_visible_iou.cpython-38.pyc",
+      "bytes": 2002
+    },
+    {
+      "path": "portallayout/evaluation/__pycache__/f1_score.cpython-38.pyc",
+      "bytes": 1944
+    },
+    {
+      "path": "portallayout/evaluation/__pycache__/floor_metrics.cpython-38.pyc",
+      "bytes": 15831
+    },
+    {
+      "path": "portallayout/evaluation/__pycache__/iou.cpython-38.pyc",
+      "bytes": 4206
+    },
+    {
+      "path": "portallayout/evaluation/__pycache__/opening_matching.cpython-38.pyc",
+      "bytes": 14163
+    },
+    {
+      "path": "portallayout/evaluation/__pycache__/opening_recall.cpython-312.pyc",
+      "bytes": 22996
+    },
+    {
+      "path": "portallayout/evaluation/__pycache__/opening_recall.cpython-38.pyc",
+      "bytes": 14349
+    },
+    {
+      "path": "portallayout/evaluation/__pycache__/pose_candidate_audit.cpython-38.pyc",
+      "bytes": 7061
+    },
+    {
+      "path": "portallayout/evaluation/__pycache__/pose_geometry.cpython-38.pyc",
+      "bytes": 12077
+    },
+    {
+      "path": "portallayout/evaluation/__pycache__/pose_verifier.cpython-38.pyc",
+      "bytes": 8669
+    },
+    {
+      "path": "portallayout/evaluation/__pycache__/subset_selection.cpython-38.pyc",
+      "bytes": 1189
+    },
+    {
+      "path": "portallayout/geometry/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 216
+    },
+    {
+      "path": "portallayout/geometry/__pycache__/boundary.cpython-38.pyc",
+      "bytes": 11493
+    },
+    {
+      "path": "portallayout/geometry/__pycache__/candidate_local_portal_geometry.cpython-38.pyc",
+      "bytes": 19104
+    },
+    {
+      "path": "portallayout/geometry/__pycache__/conversion.cpython-38.pyc",
+      "bytes": 8979
+    },
+    {
+      "path": "portallayout/geometry/__pycache__/exploratory_floor_pose.cpython-38.pyc",
+      "bytes": 12470
+    },
+    {
+      "path": "portallayout/geometry/__pycache__/floor_assembly.cpython-38.pyc",
+      "bytes": 9640
+    },
+    {
+      "path": "portallayout/geometry/__pycache__/floor_auxiliary_features.cpython-38.pyc",
+      "bytes": 9226
+    },
+    {
+      "path": "portallayout/geometry/__pycache__/floor_geometry.cpython-38.pyc",
+      "bytes": 10083
+    },
+    {
+      "path": "portallayout/geometry/__pycache__/floor_pose_graph.cpython-38.pyc",
+      "bytes": 14958
+    },
+    {
+      "path": "portallayout/geometry/__pycache__/height.cpython-38.pyc",
+      "bytes": 4065
+    },
+    {
+      "path": "portallayout/geometry/__pycache__/joint_layout.cpython-38.pyc",
+      "bytes": 17309
+    },
+    {
+      "path": "portallayout/geometry/__pycache__/pose_geometry.cpython-38.pyc",
+      "bytes": 6606
+    },
+    {
+      "path": "portallayout/geometry/__pycache__/visibility_polygon.cpython-38.pyc",
+      "bytes": 8077
+    },
+    {
+      "path": "portallayout/losses/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 577
+    },
+    {
+      "path": "portallayout/losses/__pycache__/boundary_loss.cpython-38.pyc",
+      "bytes": 3067
+    },
+    {
+      "path": "portallayout/losses/__pycache__/grad_loss.cpython-38.pyc",
+      "bytes": 3700
+    },
+    {
+      "path": "portallayout/losses/__pycache__/led_loss.cpython-38.pyc",
+      "bytes": 2923
+    },
+    {
+      "path": "portallayout/losses/__pycache__/object_loss.cpython-38.pyc",
+      "bytes": 4493
+    },
+    {
+      "path": "portallayout/models/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 435
+    },
+    {
+      "path": "portallayout/models/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 1183
+    },
+    {
+      "path": "portallayout/models/__pycache__/base_model.cpython-38.pyc",
+      "bytes": 8023
+    },
+    {
+      "path": "portallayout/models/__pycache__/bi_layout.cpython-312.pyc",
+      "bytes": 10154
+    },
+    {
+      "path": "portallayout/models/__pycache__/bi_layout.cpython-38.pyc",
+      "bytes": 6379
+    },
+    {
+      "path": "portallayout/models/__pycache__/build.cpython-38.pyc",
+      "bytes": 3008
+    },
+    {
+      "path": "portallayout/models/__pycache__/cross_scene_contracts.cpython-312.pyc",
+      "bytes": 17468
+    },
+    {
+      "path": "portallayout/models/__pycache__/cross_scene_contracts.cpython-38.pyc",
+      "bytes": 10217
+    },
+    {
+      "path": "portallayout/models/__pycache__/cross_scene_matcher.cpython-310.pyc",
+      "bytes": 35759
+    },
+    {
+      "path": "portallayout/models/__pycache__/cross_scene_matcher.cpython-312.pyc",
+      "bytes": 61295
+    },
+    {
+      "path": "portallayout/models/__pycache__/cross_scene_matcher.cpython-38.pyc",
+      "bytes": 40131
+    },
+    {
+      "path": "portallayout/models/__pycache__/floor_auxiliary.cpython-38.pyc",
+      "bytes": 3019
+    },
+    {
+      "path": "portallayout/models/__pycache__/geometry_consistency_selector.cpython-312.pyc",
+      "bytes": 7022
+    },
+    {
+      "path": "portallayout/models/__pycache__/geometry_consistency_selector.cpython-38.pyc",
+      "bytes": 4233
+    },
+    {
+      "path": "portallayout/models/__pycache__/legacy_floor_matcher.cpython-38.pyc",
+      "bytes": 3783
+    },
+    {
+      "path": "portallayout/models/__pycache__/opening_pair_matcher.cpython-38.pyc",
+      "bytes": 10620
+    },
+    {
+      "path": "portallayout/models/__pycache__/opening_representation.cpython-38.pyc",
+      "bytes": 15636
+    },
+    {
+      "path": "portallayout/models/modules/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 673
+    },
+    {
+      "path": "portallayout/models/modules/__pycache__/conv_transformer.cpython-38.pyc",
+      "bytes": 5261
+    },
+    {
+      "path": "portallayout/models/modules/__pycache__/horizon_net_feature_extractor.cpython-312.pyc",
+      "bytes": 14409
+    },
+    {
+      "path": "portallayout/models/modules/__pycache__/horizon_net_feature_extractor.cpython-38.pyc",
+      "bytes": 9154
+    },
+    {
+      "path": "portallayout/models/modules/__pycache__/patch_feature_extractor.cpython-38.pyc",
+      "bytes": 1969
+    },
+    {
+      "path": "portallayout/models/modules/__pycache__/position_encoding.cpython-38.pyc",
+      "bytes": 2186
+    },
+    {
+      "path": "portallayout/models/modules/__pycache__/share_feature_guidance_module.cpython-38.pyc",
+      "bytes": 2197
+    },
+    {
+      "path": "portallayout/models/modules/__pycache__/swg_transformer.cpython-38.pyc",
+      "bytes": 1736
+    },
+    {
+      "path": "portallayout/models/modules/__pycache__/swin_transformer.cpython-38.pyc",
+      "bytes": 1627
+    },
+    {
+      "path": "portallayout/models/modules/__pycache__/transformer.cpython-38.pyc",
+      "bytes": 1994
+    },
+    {
+      "path": "portallayout/models/modules/__pycache__/transformer_modules.cpython-38.pyc",
+      "bytes": 10741
+    },
+    {
+      "path": "portallayout/models/other/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 205
+    },
+    {
+      "path": "portallayout/models/other/__pycache__/criterion.cpython-38.pyc",
+      "bytes": 2168
+    },
+    {
+      "path": "portallayout/models/other/__pycache__/init_env.cpython-38.pyc",
+      "bytes": 824
+    },
+    {
+      "path": "portallayout/models/other/__pycache__/optimizer.cpython-38.pyc",
+      "bytes": 850
+    },
+    {
+      "path": "portallayout/models/other/__pycache__/scheduler.cpython-38.pyc",
+      "bytes": 1423
+    },
+    {
+      "path": "portallayout/postprocessing/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 207
+    },
+    {
+      "path": "portallayout/postprocessing/__pycache__/post_process.cpython-38.pyc",
+      "bytes": 6151
+    },
+    {
+      "path": "portallayout/postprocessing/dula/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 212
+    },
+    {
+      "path": "portallayout/postprocessing/dula/__pycache__/layout.cpython-38.pyc",
+      "bytes": 6554
+    },
+    {
+      "path": "portallayout/postprocessing/dula/__pycache__/layout_old.cpython-38.pyc",
+      "bytes": 3854
+    },
+    {
+      "path": "portallayout/preprocessing/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 203
+    },
+    {
+      "path": "portallayout/preprocessing/__pycache__/filter.cpython-38.pyc",
+      "bytes": 2687
+    },
+    {
+      "path": "portallayout/preprocessing/__pycache__/pano_lsd_align.cpython-38.pyc",
+      "bytes": 24406
+    },
+    {
+      "path": "portallayout/utils/__pycache__/__init__.cpython-310.pyc",
+      "bytes": 199
+    },
+    {
+      "path": "portallayout/utils/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 208
+    },
+    {
+      "path": "portallayout/utils/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 197
+    },
+    {
+      "path": "portallayout/utils/__pycache__/boundary.cpython-38.pyc",
+      "bytes": 11442
+    },
+    {
+      "path": "portallayout/utils/__pycache__/candidate_bev_rasterizer.cpython-38.pyc",
+      "bytes": 6021
+    },
+    {
+      "path": "portallayout/utils/__pycache__/candidate_conditioned_verifier.cpython-38.pyc",
+      "bytes": 12851
+    },
+    {
+      "path": "portallayout/utils/__pycache__/candidate_failure_trace.cpython-38.pyc",
+      "bytes": 12572
+    },
+    {
+      "path": "portallayout/utils/__pycache__/candidate_local_portal_geometry.cpython-38.pyc",
+      "bytes": 19069
+    },
+    {
+      "path": "portallayout/utils/__pycache__/conversion.cpython-38.pyc",
+      "bytes": 8944
+    },
+    {
+      "path": "portallayout/utils/__pycache__/cross_scene_estimator.cpython-310.pyc",
+      "bytes": 31799
+    },
+    {
+      "path": "portallayout/utils/__pycache__/cross_scene_estimator.cpython-312.pyc",
+      "bytes": 55103
+    },
+    {
+      "path": "portallayout/utils/__pycache__/cross_scene_estimator.cpython-38.pyc",
+      "bytes": 30918
+    },
+    {
+      "path": "portallayout/utils/__pycache__/cross_scene_logger.cpython-312.pyc",
+      "bytes": 8564
+    },
+    {
+      "path": "portallayout/utils/__pycache__/cross_scene_logger.cpython-38.pyc",
+      "bytes": 5146
+    },
+    {
+      "path": "portallayout/utils/__pycache__/cross_scene_pipeline.cpython-312.pyc",
+      "bytes": 16193
+    },
+    {
+      "path": "portallayout/utils/__pycache__/cross_scene_pipeline.cpython-38.pyc",
+      "bytes": 10632
+    },
+    {
+      "path": "portallayout/utils/__pycache__/exploratory_floor_pose.cpython-312.pyc",
+      "bytes": 19813
+    },
+    {
+      "path": "portallayout/utils/__pycache__/exploratory_floor_pose.cpython-38.pyc",
+      "bytes": 12345
+    },
+    {
+      "path": "portallayout/utils/__pycache__/floor_assembly.cpython-38.pyc",
+      "bytes": 9576
+    },
+    {
+      "path": "portallayout/utils/__pycache__/floor_auxiliary_features.cpython-38.pyc",
+      "bytes": 9178
+    },
+    {
+      "path": "portallayout/utils/__pycache__/floor_calibration.cpython-38.pyc",
+      "bytes": 15524
+    },
+    {
+      "path": "portallayout/utils/__pycache__/floor_geometry.cpython-38.pyc",
+      "bytes": 10064
+    },
+    {
+      "path": "portallayout/utils/__pycache__/floor_layout_pipeline.cpython-38.pyc",
+      "bytes": 22314
+    },
+    {
+      "path": "portallayout/utils/__pycache__/floor_observation_pipeline.cpython-38.pyc",
+      "bytes": 13294
+    },
+    {
+      "path": "portallayout/utils/__pycache__/floor_pose_graph.cpython-38.pyc",
+      "bytes": 14923
+    },
+    {
+      "path": "portallayout/utils/__pycache__/floor_training.cpython-38.pyc",
+      "bytes": 24967
+    },
+    {
+      "path": "portallayout/utils/__pycache__/frozen_opening_cache.cpython-38.pyc",
+      "bytes": 3724
+    },
+    {
+      "path": "portallayout/utils/__pycache__/height.cpython-38.pyc",
+      "bytes": 4023
+    },
+    {
+      "path": "portallayout/utils/__pycache__/joint_layout.cpython-310.pyc",
+      "bytes": 11587
+    },
+    {
+      "path": "portallayout/utils/__pycache__/joint_layout.cpython-312.pyc",
+      "bytes": 20053
+    },
+    {
+      "path": "portallayout/utils/__pycache__/joint_layout.cpython-38.pyc",
+      "bytes": 17290
+    },
+    {
+      "path": "portallayout/utils/__pycache__/logger.cpython-38.pyc",
+      "bytes": 1454
+    },
+    {
+      "path": "portallayout/utils/__pycache__/matcher_checkpoint.cpython-38.pyc",
+      "bytes": 6038
+    },
+    {
+      "path": "portallayout/utils/__pycache__/misc.cpython-38.pyc",
+      "bytes": 685
+    },
+    {
+      "path": "portallayout/utils/__pycache__/opening_checkpoint.cpython-312.pyc",
+      "bytes": 13616
+    },
+    {
+      "path": "portallayout/utils/__pycache__/opening_checkpoint.cpython-38.pyc",
+      "bytes": 8554
+    },
+    {
+      "path": "portallayout/utils/__pycache__/opening_pair_checkpoint.cpython-38.pyc",
+      "bytes": 2859
+    },
+    {
+      "path": "portallayout/utils/__pycache__/opening_pair_pipeline.cpython-38.pyc",
+      "bytes": 9866
+    },
+    {
+      "path": "portallayout/utils/__pycache__/opening_pair_training.cpython-38.pyc",
+      "bytes": 16141
+    },
+    {
+      "path": "portallayout/utils/__pycache__/opening_representation_adapter.cpython-38.pyc",
+      "bytes": 6328
+    },
+    {
+      "path": "portallayout/utils/__pycache__/pose_geometry.cpython-38.pyc",
+      "bytes": 6528
+    },
+    {
+      "path": "portallayout/utils/__pycache__/pose_inference_guard.cpython-38.pyc",
+      "bytes": 1238
+    },
+    {
+      "path": "portallayout/utils/__pycache__/pose_verifier_policy.cpython-38.pyc",
+      "bytes": 7813
+    },
+    {
+      "path": "portallayout/utils/__pycache__/room_feature_cache.cpython-38.pyc",
+      "bytes": 6192
+    },
+    {
+      "path": "portallayout/utils/__pycache__/single_view_prediction.cpython-38.pyc",
+      "bytes": 5863
+    },
+    {
+      "path": "portallayout/utils/__pycache__/time_watch.cpython-38.pyc",
+      "bytes": 883
+    },
+    {
+      "path": "portallayout/utils/__pycache__/visibility_polygon.cpython-38.pyc",
+      "bytes": 7993
+    },
+    {
+      "path": "portallayout/utils/__pycache__/writer.cpython-38.pyc",
+      "bytes": 1352
+    },
+    {
+      "path": "portallayout/visualization/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 205
+    },
+    {
+      "path": "portallayout/visualization/__pycache__/boundary.cpython-38.pyc",
+      "bytes": 4714
+    },
+    {
+      "path": "portallayout/visualization/__pycache__/floor_layout.cpython-312.pyc",
+      "bytes": 14544
+    },
+    {
+      "path": "portallayout/visualization/__pycache__/floor_layout.cpython-38.pyc",
+      "bytes": 9386
+    },
+    {
+      "path": "portallayout/visualization/__pycache__/floorplan.cpython-38.pyc",
+      "bytes": 4046
+    },
+    {
+      "path": "portallayout/visualization/__pycache__/grad.cpython-38.pyc",
+      "bytes": 3050
+    },
+    {
+      "path": "portallayout/visualization/__pycache__/obj3d.cpython-38.pyc",
+      "bytes": 2349
+    },
+    {
+      "path": "portallayout/visualization/__pycache__/opening_representation.cpython-38.pyc",
+      "bytes": 6950
+    },
+    {
+      "path": "portallayout/visualization/visualizer/Viewer/__pycache__/LayoutView.cpython-38.pyc",
+      "bytes": 9157
+    },
+    {
+      "path": "portallayout/visualization/visualizer/Viewer/__pycache__/Utils.cpython-38.pyc",
+      "bytes": 6225
+    },
+    {
+      "path": "portallayout/visualization/visualizer/Viewer/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 147
+    },
+    {
+      "path": "portallayout/visualization/visualizer/__pycache__/ArcBall.cpython-38.pyc",
+      "bytes": 7477
+    },
+    {
+      "path": "portallayout/visualization/visualizer/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 186
+    },
+    {
+      "path": "portallayout/visualization/visualizer/__pycache__/visualizer.cpython-38.pyc",
+      "bytes": 2690
+    },
+    {
+      "path": "portallayout/visualization/visualizer/earcut/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 170
+    },
+    {
+      "path": "portallayout/visualization/visualizer/earcut/__pycache__/earcut.cpython-38.pyc",
+      "bytes": 11438
+    },
+    {
+      "path": "portallayout/visualization/visualizer/shader/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 301
+    },
+    {
+      "path": "portallayout/visualization/visualizer/shader/__pycache__/fragment_line.cpython-38.pyc",
+      "bytes": 306
+    },
+    {
+      "path": "portallayout/visualization/visualizer/shader/__pycache__/fragment_pano.cpython-38.pyc",
+      "bytes": 306
+    },
+    {
+      "path": "portallayout/visualization/visualizer/shader/__pycache__/geometry_line.cpython-38.pyc",
+      "bytes": 306
+    },
+    {
+      "path": "portallayout/visualization/visualizer/shader/__pycache__/vertex_line.cpython-38.pyc",
+      "bytes": 302
+    },
+    {
+      "path": "portallayout/visualization/visualizer/shader/__pycache__/vertex_pano.cpython-38.pyc",
+      "bytes": 302
+    },
+    {
+      "path": "tests/__pycache__/test_audit_zind_candidate_failures.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 6967
+    },
+    {
+      "path": "tests/__pycache__/test_audit_zind_candidate_failures.cpython-38.pyc",
+      "bytes": 6807
+    },
+    {
+      "path": "tests/__pycache__/test_audit_zind_joint_geometry.cpython-310.pyc",
+      "bytes": 6417
+    },
+    {
+      "path": "tests/__pycache__/test_audit_zind_joint_geometry.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 6473
+    },
+    {
+      "path": "tests/__pycache__/test_audit_zind_joint_geometry.cpython-38.pyc",
+      "bytes": 6357
+    },
+    {
+      "path": "tests/__pycache__/test_audit_zind_portal_geometry.cpython-310.pyc",
+      "bytes": 9717
+    },
+    {
+      "path": "tests/__pycache__/test_audit_zind_portal_geometry.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 10130
+    },
+    {
+      "path": "tests/__pycache__/test_audit_zind_portal_geometry.cpython-38.pyc",
+      "bytes": 10014
+    },
+    {
+      "path": "tests/__pycache__/test_bi_layout_config.cpython-310.pyc",
+      "bytes": 6731
+    },
+    {
+      "path": "tests/__pycache__/test_bi_layout_config.cpython-312.pyc",
+      "bytes": 10570
+    },
+    {
+      "path": "tests/__pycache__/test_bi_layout_config.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 8382
+    },
+    {
+      "path": "tests/__pycache__/test_bi_layout_config.cpython-38.pyc",
+      "bytes": 8222
+    },
+    {
+      "path": "tests/__pycache__/test_candidate_bev_rasterizer.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 3015
+    },
+    {
+      "path": "tests/__pycache__/test_candidate_bev_rasterizer.cpython-38.pyc",
+      "bytes": 2855
+    },
+    {
+      "path": "tests/__pycache__/test_candidate_conditioned_verifier.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 5775
+    },
+    {
+      "path": "tests/__pycache__/test_candidate_conditioned_verifier.cpython-38.pyc",
+      "bytes": 5615
+    },
+    {
+      "path": "tests/__pycache__/test_candidate_local_portal_geometry.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 8870
+    },
+    {
+      "path": "tests/__pycache__/test_candidate_local_portal_geometry.cpython-38.pyc",
+      "bytes": 8710
+    },
+    {
+      "path": "tests/__pycache__/test_cross_scene_engineering.cpython-310.pyc",
+      "bytes": 11243
+    },
+    {
+      "path": "tests/__pycache__/test_cross_scene_engineering.cpython-312-pytest-7.4.4.pyc",
+      "bytes": 18230
+    },
+    {
+      "path": "tests/__pycache__/test_cross_scene_engineering.cpython-312.pyc",
+      "bytes": 18073
+    },
+    {
+      "path": "tests/__pycache__/test_cross_scene_engineering.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 11235
+    },
+    {
+      "path": "tests/__pycache__/test_cross_scene_engineering.cpython-38.pyc",
+      "bytes": 11075
+    },
+    {
+      "path": "tests/__pycache__/test_cross_scene_estimator.cpython-310.pyc",
+      "bytes": 4417
+    },
+    {
+      "path": "tests/__pycache__/test_cross_scene_estimator.cpython-312-pytest-7.4.4.pyc",
+      "bytes": 6702
+    },
+    {
+      "path": "tests/__pycache__/test_cross_scene_estimator.cpython-312.pyc",
+      "bytes": 6545
+    },
+    {
+      "path": "tests/__pycache__/test_cross_scene_estimator.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 4555
+    },
+    {
+      "path": "tests/__pycache__/test_cross_scene_estimator.cpython-38.pyc",
+      "bytes": 4395
+    },
+    {
+      "path": "tests/__pycache__/test_cross_scene_matcher.cpython-310.pyc",
+      "bytes": 12404
+    },
+    {
+      "path": "tests/__pycache__/test_cross_scene_matcher.cpython-312-pytest-7.4.4.pyc",
+      "bytes": 14832
+    },
+    {
+      "path": "tests/__pycache__/test_cross_scene_matcher.cpython-312.pyc",
+      "bytes": 23298
+    },
+    {
+      "path": "tests/__pycache__/test_cross_scene_matcher.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 12516
+    },
+    {
+      "path": "tests/__pycache__/test_cross_scene_matcher.cpython-38.pyc",
+      "bytes": 12356
+    },
+    {
+      "path": "tests/__pycache__/test_evaluate_zind_portal_geometry_val.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 12047
+    },
+    {
+      "path": "tests/__pycache__/test_evaluate_zind_portal_geometry_val.cpython-38.pyc",
+      "bytes": 11885
+    },
+    {
+      "path": "tests/__pycache__/test_evaluate_zind_portal_geometry_val_full.cpython-310.pyc",
+      "bytes": 7791
+    },
+    {
+      "path": "tests/__pycache__/test_evaluate_zind_portal_geometry_val_full.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 7960
+    },
+    {
+      "path": "tests/__pycache__/test_evaluate_zind_portal_geometry_val_full.cpython-38.pyc",
+      "bytes": 7800
+    },
+    {
+      "path": "tests/__pycache__/test_evaluate_zind_room_group.cpython-310.pyc",
+      "bytes": 7357
+    },
+    {
+      "path": "tests/__pycache__/test_evaluate_zind_room_group.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 12262
+    },
+    {
+      "path": "tests/__pycache__/test_evaluate_zind_room_group.cpython-38.pyc",
+      "bytes": 12146
+    },
+    {
+      "path": "tests/__pycache__/test_exploratory_floor.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 10326
+    },
+    {
+      "path": "tests/__pycache__/test_exploratory_floor.cpython-38.pyc",
+      "bytes": 10176
+    },
+    {
+      "path": "tests/__pycache__/test_floor_backend.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 13426
+    },
+    {
+      "path": "tests/__pycache__/test_floor_backend.cpython-38.pyc",
+      "bytes": 13266
+    },
+    {
+      "path": "tests/__pycache__/test_floor_followup.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 19248
+    },
+    {
+      "path": "tests/__pycache__/test_floor_followup.cpython-38.pyc",
+      "bytes": 19088
+    },
+    {
+      "path": "tests/__pycache__/test_floor_observation_pipeline.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 13454
+    },
+    {
+      "path": "tests/__pycache__/test_floor_observation_pipeline.cpython-38.pyc",
+      "bytes": 11589
+    },
+    {
+      "path": "tests/__pycache__/test_floor_pretraining.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 11067
+    },
+    {
+      "path": "tests/__pycache__/test_floor_pretraining.cpython-38.pyc",
+      "bytes": 10907
+    },
+    {
+      "path": "tests/__pycache__/test_frame_preserving_manhattan.cpython-310.pyc",
+      "bytes": 10654
+    },
+    {
+      "path": "tests/__pycache__/test_frame_preserving_manhattan.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 10861
+    },
+    {
+      "path": "tests/__pycache__/test_frame_preserving_manhattan.cpython-38.pyc",
+      "bytes": 10701
+    },
+    {
+      "path": "tests/__pycache__/test_joint_layout.cpython-310.pyc",
+      "bytes": 4038
+    },
+    {
+      "path": "tests/__pycache__/test_joint_layout.cpython-312.pyc",
+      "bytes": 6205
+    },
+    {
+      "path": "tests/__pycache__/test_joint_layout.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 4040
+    },
+    {
+      "path": "tests/__pycache__/test_joint_layout.cpython-38.pyc",
+      "bytes": 3880
+    },
+    {
+      "path": "tests/__pycache__/test_matcher_checkpoint.cpython-310.pyc",
+      "bytes": 3792
+    },
+    {
+      "path": "tests/__pycache__/test_matcher_checkpoint.cpython-312.pyc",
+      "bytes": 5625
+    },
+    {
+      "path": "tests/__pycache__/test_matcher_checkpoint.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 3842
+    },
+    {
+      "path": "tests/__pycache__/test_matcher_checkpoint.cpython-38.pyc",
+      "bytes": 3682
+    },
+    {
+      "path": "tests/__pycache__/test_method_advantage_evidence.cpython-312-pytest-7.4.4.pyc",
+      "bytes": 12672
+    },
+    {
+      "path": "tests/__pycache__/test_method_advantage_evidence.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 7003
+    },
+    {
+      "path": "tests/__pycache__/test_method_advantage_evidence.cpython-38.pyc",
+      "bytes": 3177
+    },
+    {
+      "path": "tests/__pycache__/test_opening_checkpoint.cpython-310.pyc",
+      "bytes": 5884
+    },
+    {
+      "path": "tests/__pycache__/test_opening_checkpoint.cpython-312.pyc",
+      "bytes": 9919
+    },
+    {
+      "path": "tests/__pycache__/test_opening_checkpoint.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 5780
+    },
+    {
+      "path": "tests/__pycache__/test_opening_checkpoint.cpython-38.pyc",
+      "bytes": 5620
+    },
+    {
+      "path": "tests/__pycache__/test_opening_match_report.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 3628
+    },
+    {
+      "path": "tests/__pycache__/test_opening_match_report.cpython-38.pyc",
+      "bytes": 3468
+    },
+    {
+      "path": "tests/__pycache__/test_opening_pair_matcher.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 7902
+    },
+    {
+      "path": "tests/__pycache__/test_opening_pair_matcher.cpython-38.pyc",
+      "bytes": 7742
+    },
+    {
+      "path": "tests/__pycache__/test_opening_pair_pipeline.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 8627
+    },
+    {
+      "path": "tests/__pycache__/test_opening_pair_pipeline.cpython-38.pyc",
+      "bytes": 8477
+    },
+    {
+      "path": "tests/__pycache__/test_opening_pair_supervision.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 4914
+    },
+    {
+      "path": "tests/__pycache__/test_opening_pair_supervision.cpython-38.pyc",
+      "bytes": 4754
+    },
+    {
+      "path": "tests/__pycache__/test_opening_pose_hypotheses.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 4469
+    },
+    {
+      "path": "tests/__pycache__/test_opening_pose_hypotheses.cpython-38.pyc",
+      "bytes": 4309
+    },
+    {
+      "path": "tests/__pycache__/test_opening_recall.cpython-310.pyc",
+      "bytes": 13794
+    },
+    {
+      "path": "tests/__pycache__/test_opening_recall.cpython-312.pyc",
+      "bytes": 21706
+    },
+    {
+      "path": "tests/__pycache__/test_opening_recall.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 13595
+    },
+    {
+      "path": "tests/__pycache__/test_opening_recall.cpython-38.pyc",
+      "bytes": 13435
+    },
+    {
+      "path": "tests/__pycache__/test_opening_representation.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 21423
+    },
+    {
+      "path": "tests/__pycache__/test_opening_representation.cpython-38.pyc",
+      "bytes": 21261
+    },
+    {
+      "path": "tests/__pycache__/test_opening_round2.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 12797
+    },
+    {
+      "path": "tests/__pycache__/test_opening_round2.cpython-38.pyc",
+      "bytes": 12637
+    },
+    {
+      "path": "tests/__pycache__/test_portal_geometry_hypothesis.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 3992
+    },
+    {
+      "path": "tests/__pycache__/test_portal_geometry_hypothesis.cpython-38.pyc",
+      "bytes": 3832
+    },
+    {
+      "path": "tests/__pycache__/test_pose_geometry.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 7450
+    },
+    {
+      "path": "tests/__pycache__/test_pose_geometry.cpython-38.pyc",
+      "bytes": 7290
+    },
+    {
+      "path": "tests/__pycache__/test_pose_verifier_policy.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 11346
+    },
+    {
+      "path": "tests/__pycache__/test_pose_verifier_policy.cpython-38.pyc",
+      "bytes": 11186
+    },
+    {
+      "path": "tests/__pycache__/test_project_structure.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 5373
+    },
+    {
+      "path": "tests/__pycache__/test_project_structure.cpython-38.pyc",
+      "bytes": 2468
+    },
+    {
+      "path": "tests/__pycache__/test_salve_dav2_geometry.cpython-310-pytest-8.4.2.pyc",
+      "bytes": 1380
+    },
+    {
+      "path": "tests/__pycache__/test_salve_dav2_geometry.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 1383
+    },
+    {
+      "path": "tests/__pycache__/test_salve_dav2_geometry.cpython-38.pyc",
+      "bytes": 1270
+    },
+    {
+      "path": "tests/__pycache__/test_train_zind_matching_matcher.cpython-310.pyc",
+      "bytes": 5970
+    },
+    {
+      "path": "tests/__pycache__/test_train_zind_matching_matcher.cpython-312.pyc",
+      "bytes": 8815
+    },
+    {
+      "path": "tests/__pycache__/test_train_zind_matching_matcher.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 5828
+    },
+    {
+      "path": "tests/__pycache__/test_train_zind_matching_matcher.cpython-38.pyc",
+      "bytes": 5668
+    },
+    {
+      "path": "tests/__pycache__/test_train_zind_matching_opening_head.cpython-310.pyc",
+      "bytes": 5811
+    },
+    {
+      "path": "tests/__pycache__/test_train_zind_matching_opening_head.cpython-312.pyc",
+      "bytes": 8906
+    },
+    {
+      "path": "tests/__pycache__/test_train_zind_matching_opening_head.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 5793
+    },
+    {
+      "path": "tests/__pycache__/test_train_zind_matching_opening_head.cpython-38.pyc",
+      "bytes": 5633
+    },
+    {
+      "path": "tests/__pycache__/test_type_prior_probe.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 6936
+    },
+    {
+      "path": "tests/__pycache__/test_type_prior_probe.cpython-38.pyc",
+      "bytes": 6820
+    },
+    {
+      "path": "tests/__pycache__/test_visual_audit_zind_candidate_failures.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 9533
+    },
+    {
+      "path": "tests/__pycache__/test_visual_audit_zind_candidate_failures.cpython-38.pyc",
+      "bytes": 9373
+    },
+    {
+      "path": "tests/__pycache__/test_zind_bipair_adapter.cpython-310.pyc",
+      "bytes": 3927
+    },
+    {
+      "path": "tests/__pycache__/test_zind_bipair_adapter.cpython-312-pytest-7.4.4.pyc",
+      "bytes": 7433
+    },
+    {
+      "path": "tests/__pycache__/test_zind_bipair_adapter.cpython-312.pyc",
+      "bytes": 7276
+    },
+    {
+      "path": "tests/__pycache__/test_zind_bipair_adapter.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 3737
+    },
+    {
+      "path": "tests/__pycache__/test_zind_bipair_adapter.cpython-38.pyc",
+      "bytes": 3577
+    },
+    {
+      "path": "tests/__pycache__/test_zind_bipair_builder.cpython-310.pyc",
+      "bytes": 5750
+    },
+    {
+      "path": "tests/__pycache__/test_zind_bipair_builder.cpython-312-pytest-7.4.4.pyc",
+      "bytes": 9355
+    },
+    {
+      "path": "tests/__pycache__/test_zind_bipair_builder.cpython-312.pyc",
+      "bytes": 9198
+    },
+    {
+      "path": "tests/__pycache__/test_zind_bipair_builder.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 5906
+    },
+    {
+      "path": "tests/__pycache__/test_zind_bipair_builder.cpython-38.pyc",
+      "bytes": 5746
+    },
+    {
+      "path": "tests/__pycache__/test_zind_bipair_feature_dataset.cpython-310.pyc",
+      "bytes": 6008
+    },
+    {
+      "path": "tests/__pycache__/test_zind_bipair_feature_dataset.cpython-312.pyc",
+      "bytes": 11356
+    },
+    {
+      "path": "tests/__pycache__/test_zind_bipair_feature_dataset.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 6020
+    },
+    {
+      "path": "tests/__pycache__/test_zind_bipair_feature_dataset.cpython-38.pyc",
+      "bytes": 5860
+    },
+    {
+      "path": "tests/__pycache__/test_zind_dataset_limit.cpython-310.pyc",
+      "bytes": 1680
+    },
+    {
+      "path": "tests/__pycache__/test_zind_dataset_limit.cpython-312.pyc",
+      "bytes": 1885
+    },
+    {
+      "path": "tests/__pycache__/test_zind_dataset_limit.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 1830
+    },
+    {
+      "path": "tests/__pycache__/test_zind_dataset_limit.cpython-38.pyc",
+      "bytes": 1670
+    },
+    {
+      "path": "tests/__pycache__/test_zind_end_to_end_candidate_fixes.cpython-310.pyc",
+      "bytes": 23293
+    },
+    {
+      "path": "tests/__pycache__/test_zind_end_to_end_candidate_fixes.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 23435
+    },
+    {
+      "path": "tests/__pycache__/test_zind_end_to_end_candidate_fixes.cpython-38.pyc",
+      "bytes": 23275
+    },
+    {
+      "path": "tests/__pycache__/test_zind_floor_dataset.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 15394
+    },
+    {
+      "path": "tests/__pycache__/test_zind_floor_dataset.cpython-38.pyc",
+      "bytes": 15234
+    },
+    {
+      "path": "tests/__pycache__/test_zind_gt_opening_pose_oracle.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 2654
+    },
+    {
+      "path": "tests/__pycache__/test_zind_gt_opening_pose_oracle.cpython-38.pyc",
+      "bytes": 2538
+    },
+    {
+      "path": "tests/__pycache__/test_zind_matcher_training.cpython-310.pyc",
+      "bytes": 5827
+    },
+    {
+      "path": "tests/__pycache__/test_zind_matcher_training.cpython-312.pyc",
+      "bytes": 11008
+    },
+    {
+      "path": "tests/__pycache__/test_zind_matcher_training.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 5838
+    },
+    {
+      "path": "tests/__pycache__/test_zind_matcher_training.cpython-38.pyc",
+      "bytes": 5678
+    },
+    {
+      "path": "tests/__pycache__/test_zind_matching_feature_cache.cpython-310.pyc",
+      "bytes": 7308
+    },
+    {
+      "path": "tests/__pycache__/test_zind_matching_feature_cache.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 7308
+    },
+    {
+      "path": "tests/__pycache__/test_zind_matching_feature_cache.cpython-38.pyc",
+      "bytes": 7148
+    },
+    {
+      "path": "tests/__pycache__/test_zind_matching_feature_dataset.cpython-310.pyc",
+      "bytes": 3608
+    },
+    {
+      "path": "tests/__pycache__/test_zind_matching_feature_dataset.cpython-312.pyc",
+      "bytes": 5752
+    },
+    {
+      "path": "tests/__pycache__/test_zind_matching_feature_dataset.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 3745
+    },
+    {
+      "path": "tests/__pycache__/test_zind_matching_feature_dataset.cpython-38.pyc",
+      "bytes": 3585
+    },
+    {
+      "path": "tests/__pycache__/test_zind_observable_pairs.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 9439
+    },
+    {
+      "path": "tests/__pycache__/test_zind_observable_pairs.cpython-38.pyc",
+      "bytes": 9279
+    },
+    {
+      "path": "tests/__pycache__/test_zind_observable_reviews.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 8228
+    },
+    {
+      "path": "tests/__pycache__/test_zind_observable_reviews.cpython-38.pyc",
+      "bytes": 8112
+    },
+    {
+      "path": "tests/__pycache__/test_zind_observable_training.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 3278
+    },
+    {
+      "path": "tests/__pycache__/test_zind_observable_training.cpython-38.pyc",
+      "bytes": 3118
+    },
+    {
+      "path": "tests/__pycache__/test_zind_opening_training.cpython-310.pyc",
+      "bytes": 6849
+    },
+    {
+      "path": "tests/__pycache__/test_zind_opening_training.cpython-312-pytest-7.4.4.pyc",
+      "bytes": 11500
+    },
+    {
+      "path": "tests/__pycache__/test_zind_opening_training.cpython-312.pyc",
+      "bytes": 11387
+    },
+    {
+      "path": "tests/__pycache__/test_zind_opening_training.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 6759
+    },
+    {
+      "path": "tests/__pycache__/test_zind_opening_training.cpython-38.pyc",
+      "bytes": 6599
+    },
+    {
+      "path": "tests/__pycache__/test_zind_pair_mining.cpython-310.pyc",
+      "bytes": 5270
+    },
+    {
+      "path": "tests/__pycache__/test_zind_pair_mining.cpython-312.pyc",
+      "bytes": 7847
+    },
+    {
+      "path": "tests/__pycache__/test_zind_pair_mining.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 5341
+    },
+    {
+      "path": "tests/__pycache__/test_zind_pair_mining.cpython-38.pyc",
+      "bytes": 5181
+    },
+    {
+      "path": "tests/__pycache__/test_zind_t4_matcher_only.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 5720
+    },
+    {
+      "path": "tests/__pycache__/test_zind_t4_matcher_only.cpython-38.pyc",
+      "bytes": 5604
+    },
+    {
+      "path": "tests/__pycache__/test_zind_t4_medium.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 2495
+    },
+    {
+      "path": "tests/__pycache__/test_zind_t4_medium.cpython-38.pyc",
+      "bytes": 2379
+    },
+    {
+      "path": "tests/__pycache__/test_zind_t4_recall.cpython-38-pytest-8.3.5.pyc",
+      "bytes": 9683
+    },
+    {
+      "path": "tests/__pycache__/test_zind_t4_recall.cpython-38.pyc",
+      "bytes": 9523
+    },
+    {
+      "path": "tools/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 226
+    },
+    {
+      "path": "tools/__pycache__/analyze_zind_candidate_recall.cpython-310.pyc",
+      "bytes": 38798
+    },
+    {
+      "path": "tools/__pycache__/analyze_zind_candidate_recall.cpython-38.pyc",
+      "bytes": 38262
+    },
+    {
+      "path": "tools/__pycache__/audit_project.cpython-38.pyc",
+      "bytes": 8739
+    },
+    {
+      "path": "tools/__pycache__/audit_zind_candidate_failures.cpython-38.pyc",
+      "bytes": 85194
+    },
+    {
+      "path": "tools/__pycache__/audit_zind_joint_geometry.cpython-310.pyc",
+      "bytes": 49964
+    },
+    {
+      "path": "tools/__pycache__/audit_zind_joint_geometry.cpython-38.pyc",
+      "bytes": 49176
+    },
+    {
+      "path": "tools/__pycache__/audit_zind_observable_build.cpython-38.pyc",
+      "bytes": 7793
+    },
+    {
+      "path": "tools/__pycache__/audit_zind_portal_geometry.cpython-310.pyc",
+      "bytes": 58049
+    },
+    {
+      "path": "tools/__pycache__/audit_zind_portal_geometry.cpython-38.pyc",
+      "bytes": 57179
+    },
+    {
+      "path": "tools/__pycache__/audit_zind_t4_recall.cpython-38.pyc",
+      "bytes": 19403
+    },
+    {
+      "path": "tools/__pycache__/build_atlanta_subset.cpython-38.pyc",
+      "bytes": 14784
+    },
+    {
+      "path": "tools/__pycache__/build_method_advantage_evidence.cpython-312.pyc",
+      "bytes": 62574
+    },
+    {
+      "path": "tools/__pycache__/build_method_advantage_evidence.cpython-38.pyc",
+      "bytes": 43484
+    },
+    {
+      "path": "tools/__pycache__/build_zind_bipair_v1.cpython-312.pyc",
+      "bytes": 21696
+    },
+    {
+      "path": "tools/__pycache__/build_zind_bipair_v1.cpython-38.pyc",
+      "bytes": 12933
+    },
+    {
+      "path": "tools/__pycache__/build_zind_floor_dataset.cpython-38.pyc",
+      "bytes": 3507
+    },
+    {
+      "path": "tools/__pycache__/build_zind_matching_dataset.cpython-312.pyc",
+      "bytes": 11733
+    },
+    {
+      "path": "tools/__pycache__/build_zind_matching_dataset.cpython-38.pyc",
+      "bytes": 7339
+    },
+    {
+      "path": "tools/__pycache__/build_zind_observable_pairs.cpython-38.pyc",
+      "bytes": 11166
+    },
+    {
+      "path": "tools/__pycache__/cache_zind_matching_features.cpython-312.pyc",
+      "bytes": 52700
+    },
+    {
+      "path": "tools/__pycache__/cache_zind_matching_features.cpython-38.pyc",
+      "bytes": 28587
+    },
+    {
+      "path": "tools/__pycache__/debug_cross_scene_flow.cpython-312.pyc",
+      "bytes": 31371
+    },
+    {
+      "path": "tools/__pycache__/debug_cross_scene_flow.cpython-38.pyc",
+      "bytes": 17788
+    },
+    {
+      "path": "tools/__pycache__/diagnose_zind_t4_medium.cpython-38.pyc",
+      "bytes": 48239
+    },
+    {
+      "path": "tools/__pycache__/download_salve_predictions.cpython-310.pyc",
+      "bytes": 2419
+    },
+    {
+      "path": "tools/__pycache__/download_salve_predictions.cpython-38.pyc",
+      "bytes": 2365
+    },
+    {
+      "path": "tools/__pycache__/download_zind.cpython-38.pyc",
+      "bytes": 10623
+    },
+    {
+      "path": "tools/__pycache__/encode_floor_openings.cpython-38.pyc",
+      "bytes": 12261
+    },
+    {
+      "path": "tools/__pycache__/estimate_cross_scene_layout.cpython-312.pyc",
+      "bytes": 12455
+    },
+    {
+      "path": "tools/__pycache__/estimate_cross_scene_layout.cpython-38.pyc",
+      "bytes": 7841
+    },
+    {
+      "path": "tools/__pycache__/eval_zind_gt_opening_pose_oracle.cpython-38.pyc",
+      "bytes": 9580
+    },
+    {
+      "path": "tools/__pycache__/evaluate_zind_cross_scene_pairs.cpython-312.pyc",
+      "bytes": 32891
+    },
+    {
+      "path": "tools/__pycache__/evaluate_zind_cross_scene_pairs.cpython-38.pyc",
+      "bytes": 20782
+    },
+    {
+      "path": "tools/__pycache__/evaluate_zind_opening_recall.cpython-312.pyc",
+      "bytes": 22427
+    },
+    {
+      "path": "tools/__pycache__/evaluate_zind_opening_recall.cpython-38.pyc",
+      "bytes": 18330
+    },
+    {
+      "path": "tools/__pycache__/evaluate_zind_portal_geometry_val.cpython-310.pyc",
+      "bytes": 76238
+    },
+    {
+      "path": "tools/__pycache__/evaluate_zind_portal_geometry_val.cpython-38.pyc",
+      "bytes": 76333
+    },
+    {
+      "path": "tools/__pycache__/evaluate_zind_portal_geometry_val_full.cpython-310.pyc",
+      "bytes": 70073
+    },
+    {
+      "path": "tools/__pycache__/evaluate_zind_portal_geometry_val_full.cpython-38.pyc",
+      "bytes": 70485
+    },
+    {
+      "path": "tools/__pycache__/evaluate_zind_room_group.cpython-310.pyc",
+      "bytes": 50128
+    },
+    {
+      "path": "tools/__pycache__/evaluate_zind_room_group.cpython-38.pyc",
+      "bytes": 61251
+    },
+    {
+      "path": "tools/__pycache__/export_texture_ppt.cpython-38.pyc",
+      "bytes": 11984
+    },
+    {
+      "path": "tools/__pycache__/export_zind_observable_release.cpython-38.pyc",
+      "bytes": 5006
+    },
+    {
+      "path": "tools/__pycache__/generate_zind_bev_raster_examples.cpython-38.pyc",
+      "bytes": 7726
+    },
+    {
+      "path": "tools/__pycache__/import_zind_observable_reviews.cpython-38.pyc",
+      "bytes": 12727
+    },
+    {
+      "path": "tools/__pycache__/join_room_layouts.cpython-312.pyc",
+      "bytes": 5046
+    },
+    {
+      "path": "tools/__pycache__/join_room_layouts.cpython-38.pyc",
+      "bytes": 3309
+    },
+    {
+      "path": "tools/__pycache__/mine_texture_ambiguity.cpython-38.pyc",
+      "bytes": 8337
+    },
+    {
+      "path": "tools/__pycache__/pose_geometry_experiment.cpython-38.pyc",
+      "bytes": 26007
+    },
+    {
+      "path": "tools/__pycache__/predict_floor_observations.cpython-38.pyc",
+      "bytes": 5154
+    },
+    {
+      "path": "tools/__pycache__/preflight_floor_training.cpython-38.pyc",
+      "bytes": 4221
+    },
+    {
+      "path": "tools/__pycache__/preflight_zind_bev_verifier.cpython-38.pyc",
+      "bytes": 67166
+    },
+    {
+      "path": "tools/__pycache__/preflight_zind_t4_cpu.cpython-38.pyc",
+      "bytes": 6790
+    },
+    {
+      "path": "tools/__pycache__/preflight_zind_t4_matcher_only.cpython-38.pyc",
+      "bytes": 40617
+    },
+    {
+      "path": "tools/__pycache__/prepare_floor_training_cohort.cpython-38.pyc",
+      "bytes": 5414
+    },
+    {
+      "path": "tools/__pycache__/prepare_zind_observable_review.cpython-38.pyc",
+      "bytes": 4773
+    },
+    {
+      "path": "tools/__pycache__/prepare_zind_observable_training.cpython-38.pyc",
+      "bytes": 9345
+    },
+    {
+      "path": "tools/__pycache__/prepare_zind_t4_preflight_subsets.cpython-38.pyc",
+      "bytes": 12401
+    },
+    {
+      "path": "tools/__pycache__/rebuild_zind_observable_collision_fix.cpython-38.pyc",
+      "bytes": 4021
+    },
+    {
+      "path": "tools/__pycache__/report_opening_matches.cpython-38.pyc",
+      "bytes": 14824
+    },
+    {
+      "path": "tools/__pycache__/report_portal_geometry_hypothesis.cpython-38.pyc",
+      "bytes": 23994
+    },
+    {
+      "path": "tools/__pycache__/report_texture_pair_probe.cpython-312.pyc",
+      "bytes": 13930
+    },
+    {
+      "path": "tools/__pycache__/report_texture_pair_probe.cpython-38.pyc",
+      "bytes": 10540
+    },
+    {
+      "path": "tools/__pycache__/report_type_prior_probe.cpython-38.pyc",
+      "bytes": 26658
+    },
+    {
+      "path": "tools/__pycache__/reproduce_salve_hypotheses.cpython-310.pyc",
+      "bytes": 2009
+    },
+    {
+      "path": "tools/__pycache__/reproduce_salve_hypotheses.cpython-38.pyc",
+      "bytes": 2013
+    },
+    {
+      "path": "tools/__pycache__/reproduce_salve_smoke.cpython-310.pyc",
+      "bytes": 3600
+    },
+    {
+      "path": "tools/__pycache__/reproduce_salve_smoke.cpython-38.pyc",
+      "bytes": 3608
+    },
+    {
+      "path": "tools/__pycache__/restore_zind_observable_release.cpython-38.pyc",
+      "bytes": 2379
+    },
+    {
+      "path": "tools/__pycache__/review_floor_opening_matches.cpython-38.pyc",
+      "bytes": 13616
+    },
+    {
+      "path": "tools/__pycache__/run_floor_layout.cpython-38.pyc",
+      "bytes": 10484
+    },
+    {
+      "path": "tools/__pycache__/run_opening_pairs.cpython-38.pyc",
+      "bytes": 2550
+    },
+    {
+      "path": "tools/__pycache__/run_pose_verifier_experiment.cpython-38.pyc",
+      "bytes": 17424
+    },
+    {
+      "path": "tools/__pycache__/run_zind_bev_verifier_phase_b.cpython-38.pyc",
+      "bytes": 42801
+    },
+    {
+      "path": "tools/__pycache__/run_zind_observable_training_job.cpython-38.pyc",
+      "bytes": 4063
+    },
+    {
+      "path": "tools/__pycache__/run_zind_small_overfit.cpython-310.pyc",
+      "bytes": 17703
+    },
+    {
+      "path": "tools/__pycache__/run_zind_small_overfit.cpython-38.pyc",
+      "bytes": 17831
+    },
+    {
+      "path": "tools/__pycache__/salve_adapted_backend.cpython-312.pyc",
+      "bytes": 12697
+    },
+    {
+      "path": "tools/__pycache__/salve_adapted_backend.cpython-38.pyc",
+      "bytes": 7338
+    },
+    {
+      "path": "tools/__pycache__/salve_adapted_render.cpython-312.pyc",
+      "bytes": 2819
+    },
+    {
+      "path": "tools/__pycache__/salve_adapted_render.cpython-38.pyc",
+      "bytes": 1445
+    },
+    {
+      "path": "tools/__pycache__/salve_adapted_verifier.cpython-312.pyc",
+      "bytes": 5907
+    },
+    {
+      "path": "tools/__pycache__/salve_adapted_verifier.cpython-38.pyc",
+      "bytes": 3368
+    },
+    {
+      "path": "tools/__pycache__/salve_dav2_depth.cpython-310.pyc",
+      "bytes": 5155
+    },
+    {
+      "path": "tools/__pycache__/salve_dav2_depth.cpython-312.pyc",
+      "bytes": 10135
+    },
+    {
+      "path": "tools/__pycache__/salve_dav2_depth.cpython-38.pyc",
+      "bytes": 5146
+    },
+    {
+      "path": "tools/__pycache__/summarize_zind_observable_review.cpython-38.pyc",
+      "bytes": 3667
+    },
+    {
+      "path": "tools/__pycache__/summarize_zind_t4_preflight.cpython-38.pyc",
+      "bytes": 6123
+    },
+    {
+      "path": "tools/__pycache__/train_zind_cross_scene_matcher.cpython-312.pyc",
+      "bytes": 62743
+    },
+    {
+      "path": "tools/__pycache__/train_zind_cross_scene_matcher.cpython-38.pyc",
+      "bytes": 32816
+    },
+    {
+      "path": "tools/__pycache__/train_zind_end_to_end.cpython-310.pyc",
+      "bytes": 42659
+    },
+    {
+      "path": "tools/__pycache__/train_zind_end_to_end.cpython-38.pyc",
+      "bytes": 57336
+    },
+    {
+      "path": "tools/__pycache__/train_zind_matching_matcher.cpython-312.pyc",
+      "bytes": 38130
+    },
+    {
+      "path": "tools/__pycache__/train_zind_matching_matcher.cpython-38.pyc",
+      "bytes": 21253
+    },
+    {
+      "path": "tools/__pycache__/train_zind_matching_opening_head.cpython-312.pyc",
+      "bytes": 24841
+    },
+    {
+      "path": "tools/__pycache__/train_zind_matching_opening_head.cpython-38.pyc",
+      "bytes": 14833
+    },
+    {
+      "path": "tools/__pycache__/train_zind_opening_head.cpython-312.pyc",
+      "bytes": 41301
+    },
+    {
+      "path": "tools/__pycache__/train_zind_opening_head.cpython-38.pyc",
+      "bytes": 21444
+    },
+    {
+      "path": "tools/__pycache__/type_prior_probe_evaluation.cpython-38.pyc",
+      "bytes": 22489
+    },
+    {
+      "path": "tools/__pycache__/validate_portal_geometry_hypothesis.cpython-38.pyc",
+      "bytes": 22990
+    },
+    {
+      "path": "tools/__pycache__/validate_type_conditioned_prior.cpython-38.pyc",
+      "bytes": 13582
+    },
+    {
+      "path": "tools/__pycache__/validate_zind_bipair_v1.cpython-312.pyc",
+      "bytes": 9245
+    },
+    {
+      "path": "tools/__pycache__/validate_zind_bipair_v1.cpython-38.pyc",
+      "bytes": 5381
+    },
+    {
+      "path": "tools/__pycache__/validate_zind_floor_dataset.cpython-38.pyc",
+      "bytes": 8414
+    },
+    {
+      "path": "tools/__pycache__/verify_zind_coordinate_contract.cpython-38.pyc",
+      "bytes": 3563
+    },
+    {
+      "path": "tools/__pycache__/visual_audit_zind_candidate_failures.cpython-38.pyc",
+      "bytes": 66603
+    },
+    {
+      "path": "tools/__pycache__/visualize_zind_matcher_five_cases.cpython-38.pyc",
+      "bytes": 23908
+    },
+    {
+      "path": "tools/__pycache__/visualize_zind_observable_build.cpython-38.pyc",
+      "bytes": 7928
+    },
+    {
+      "path": "utils/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 299
+    }
+  ],
+  "finder_metadata": [
+    {
+      "path": "portallayout/datasets/.DS_Store",
+      "bytes": 6148
+    },
+    {
+      "path": "portallayout/models/.DS_Store",
+      "bytes": 6148
+    },
+    {
+      "path": "src/.DS_Store",
+      "bytes": 6148
+    }
+  ],
+  "static_python_review_only": [
+    {
+      "path": "portallayout/models/modules/conv_transformer.py",
+      "module": "portallayout.models.modules.conv_transformer",
+      "decision": "仅静态无直接引用；检查命令行/动态注册/第三方组件后再决定，未批准删除"
+    },
+    {
+      "path": "portallayout/models/other/scheduler.py",
+      "module": "portallayout.models.other.scheduler",
+      "decision": "仅静态无直接引用；检查命令行/动态注册/第三方组件后再决定，未批准删除"
+    },
+    {
+      "path": "portallayout/visualization/visualizer/visualizer.py",
+      "module": "portallayout.visualization.visualizer.visualizer",
+      "decision": "仅静态无直接引用；检查命令行/动态注册/第三方组件后再决定，未批准删除"
+    },
+    {
+      "path": "portallayout/evaluation/analyse_layout_type.py",
+      "module": "portallayout.evaluation.analyse_layout_type",
+      "decision": "仅静态无直接引用；检查命令行/动态注册/第三方组件后再决定，未批准删除"
+    },
+    {
+      "path": "portallayout/evaluation/subset_selection.py",
+      "module": "portallayout.evaluation.subset_selection",
+      "decision": "仅静态无直接引用；检查命令行/动态注册/第三方组件后再决定，未批准删除"
+    },
+    {
+      "path": "portallayout/evaluation/eval_visible_iou.py",
+      "module": "portallayout.evaluation.eval_visible_iou",
+      "decision": "仅静态无直接引用；检查命令行/动态注册/第三方组件后再决定，未批准删除"
+    },
+    {
+      "path": "portallayout/datasets/zind_dataset_dop.py",
+      "module": "portallayout.datasets.zind_dataset_dop",
+      "decision": "仅静态无直接引用；检查命令行/动态注册/第三方组件后再决定，未批准删除"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "floors": [
+    {
+      "floor_uid": "floor_1c68d80c249a3a23bdadf67f",
+      "result_file": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/research1_floor_layout_followup_20261023_0656/real20/floor_1c68d80c249a3a23bdadf67f/floor_result.json",
+      "status": "isolated_observations_only",
+      "runtime": {
+        "encoding_seconds": 0.2812361250107642,
+        "pair_seconds": 2.6693144110031426,
+        "graph_seconds": 0.0019723869918379933,
+        "room_and_assembly_seconds": 0.051403852994553745,
+        "total_seconds": 3.003947876015445,
+        "peak_allocated_MiB": null,
+        "observations_encoded": 20,
+        "unordered_pairs": 190,
+        "export_render_seconds": 2.1253338029782753
+      },
+      "components": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "model_load_seconds": 0.05842038997798227,
+  "cache_audit_seconds": 0.07512366201262921,
+  "total_including_load_export_seconds": 5.3804663719784,
+  "source_files_verified": 42,
+  "ground_truth_read": false
+}

@@ -1,0 +1,36 @@
+{
+  "legacy_missing_val": 747,
+  "parity": {
+    "gates": {
+      "all_finite": true,
+      "legacy_interval_pairwise_exact": true,
+      "legacy_recall_exact": true,
+      "recall_topk_recall_exact": true,
+      "train_pair_count": true,
+      "val_pair_count": true
+    },
+    "legacy": {
+      "exact": true,
+      "expected": 1080,
+      "positive": 1827,
+      "recalled": 1080
+    },
+    "legacy_interval_exact_pairs": 1827,
+    "passed": true,
+    "recall_topk": {
+      "exact": true,
+      "expected": 1107,
+      "positive": 1827,
+      "recalled": 1107
+    },
+    "schema_version": "zind-t5-proposal-parity-v1",
+    "test_data_accessed": false
+  },
+  "recall_topk_added_val": 27,
+  "schema_version": "zind-t5-phase2-summary-v1",
+  "test_data_accessed": false,
+  "train_positive_count": 4096,
+  "train_unique_room_side_count": 8190,
+  "val_positive_count": 1827,
+  "val_unique_room_side_count": 3654
+}

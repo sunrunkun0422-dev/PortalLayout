@@ -1,0 +1,18 @@
+{
+  "weights": {
+    "frontend_layout": {
+      "current_weight_sha256": "377b84d120b28aaf4538cd867cd59f1caee165ca1e5e427e3d3b6d7b8d400f98",
+      "historic_cache_weight_sha256": "377b84d120b28aaf4538cd867cd59f1caee165ca1e5e427e3d3b6d7b8d400f98",
+      "hash_matches": true
+    },
+    "frontend_opening": {
+      "current_weight_sha256": "93a86b10acf8fc98593c0a3e654af8ab8849865bb620a1532e3c271e68ee5bfc",
+      "historic_cache_weight_sha256": "93a86b10acf8fc98593c0a3e654af8ab8849865bb620a1532e3c271e68ee5bfc",
+      "hash_matches": true
+    }
+  },
+  "limitations": [
+    "weight hash equality does not establish training-data provenance",
+    "historic code contract predates the package migration"
+  ]
+}

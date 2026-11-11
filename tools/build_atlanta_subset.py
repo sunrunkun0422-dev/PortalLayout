@@ -24,7 +24,7 @@ from typing import Iterable, List, Sequence, Tuple
 from PIL import Image, ImageDraw, ImageFont
 
 
-ROOT = Path("src/dataset/mp3d")
+ROOT = Path("data/mp3d")
 OUT = Path("atlanta_subset_report")
 SPLITS = ("train", "val", "test")
 

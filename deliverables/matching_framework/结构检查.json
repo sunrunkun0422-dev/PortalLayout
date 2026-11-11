@@ -1,0 +1,28 @@
+{
+  "pages": 3,
+  "page_details": [
+    {
+      "page": 1,
+      "shapes": 97,
+      "pictures": 2,
+      "notes_present": true
+    },
+    {
+      "page": 2,
+      "shapes": 38,
+      "pictures": 0,
+      "notes_present": true
+    },
+    {
+      "page": 3,
+      "shapes": 44,
+      "pictures": 0,
+      "notes_present": true
+    }
+  ],
+  "out_of_bounds": [],
+  "rendered": false,
+  "render_blocker": "Automatic approval review rejected LibreOffice rendering because the account usage limit was reached.",
+  "font": "Microsoft YaHei; not installed locally; font-faithful rendering not checked",
+  "input_images": "Previous verified pair 0665 / floor03 / pano34,37; newly pasted temporary links inaccessible"
+}

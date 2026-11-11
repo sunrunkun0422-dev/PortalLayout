@@ -14,13 +14,13 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from utils.cross_scene_logger import CrossSceneExperimentLogger
-from utils.cross_scene_pipeline import (
+from portallayout.utils.cross_scene_logger import CrossSceneExperimentLogger
+from portallayout.engine.cross_scene_pipeline import (
     CrossScenePipeline,
     CrossScenePipelineConfig,
     atomic_write_json,
 )
-from utils.joint_layout import render_joint_boundary, render_joint_boundary_svg
+from portallayout.geometry.joint_layout import render_joint_boundary, render_joint_boundary_svg
 
 
 def parse_option() -> argparse.Namespace:
@@ -37,7 +37,7 @@ def parse_option() -> argparse.Namespace:
         "--layout_b_extended",
         help="optional extended/new-branch layout JSON for room B; used to infer passable openings.",
     )
-    parser.add_argument("--output_dir", default="src/output/cross_scene_estimation")
+    parser.add_argument("--output_dir", default="outputs/cross_scene_estimation")
     parser.add_argument("--name", default="a_b_cross_scene")
     parser.add_argument("--top_k", type=int, default=8)
     parser.add_argument(
@@ -112,7 +112,10 @@ def parse_option() -> argparse.Namespace:
         "--confidence_temperature",
         type=float,
         default=1.0,
-        help="temperature used to calibrate candidate confidence.",
+        help=(
+            "temperature used to normalize relative candidate scores; the output "
+            "is not a calibrated probability."
+        ),
     )
     parser.add_argument(
         "--allow_invalid_polygon",
@@ -158,7 +161,7 @@ def load_match_evidence(path: str):
 def load_selector(path: str, hidden_dim: int):
     import torch
 
-    from models.geometry_consistency_selector import GeometryConsistencySelector
+    from portallayout.models.geometry_consistency_selector import GeometryConsistencySelector
 
     payload = torch.load(path, map_location="cpu")
     state_dict = payload.get("state_dict", payload) if isinstance(payload, dict) else payload

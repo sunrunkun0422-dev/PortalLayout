@@ -1,0 +1,9 @@
+{
+  "error": "operands could not be broadcast together with shapes (3,2) (3,3) ",
+  "optimizer_created": false,
+  "pid": 700695,
+  "task_type": "frozen_inference_audit",
+  "test_data_accessed": false,
+  "traceback": "Traceback (most recent call last):\n  File \"tools/audit_zind_candidate_failures.py\", line 2000, in main\n    elif phase == \"smoke\": smoke(args, output, log)\n  File \"tools/audit_zind_candidate_failures.py\", line 832, in smoke\n    delta = float(np.max(np.abs(left - right))) if left.size else 0.0\nValueError: operands could not be broadcast together with shapes (3,2) (3,3) \n",
+  "training_started": false
+}

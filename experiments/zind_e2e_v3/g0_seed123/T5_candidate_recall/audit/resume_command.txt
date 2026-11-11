@@ -1,0 +1,1 @@
+/home/feixia/anaconda3/envs/bi_layout/bin/python /home/feixia/pythonProject/AAAsrk/Bi_Layout/tools/audit_zind_candidate_failures.py --phase report --resume

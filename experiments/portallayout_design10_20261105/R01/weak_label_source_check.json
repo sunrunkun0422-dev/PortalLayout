@@ -1,0 +1,8 @@
+{
+  "supervision_file": "experiments/research1_main_20261024/weak/opening_weak.json",
+  "supervision_sha256": "844b22cc2f8cbe2e74f7d5ebfdeee7c854e23cc35a1d499fb8137e7492b84b82",
+  "source_files_checked": 180,
+  "errors": [],
+  "label_source": "geometry_weak",
+  "note": "hashes prove source identity, not human verification or correctness of weak labels"
+}

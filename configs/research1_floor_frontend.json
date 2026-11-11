@@ -1,0 +1,16 @@
+{
+  "bi_layout_config": "src/config/zind_all.yaml",
+  "bi_layout_checkpoint": "checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+  "opening_checkpoint": "checkpoints/Opening_Head/zind_matching_v1/best.pt",
+  "prediction": {
+    "branch_order": "extended_first",
+    "image_height": 512,
+    "image_width": 1024,
+    "opening_threshold": null,
+    "minimum_opening_tokens": 2,
+    "maximum_openings": 12,
+    "feature_pyramid_level": 2,
+    "spatial_height": 16,
+    "spatial_width": 64
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "loss_total": 1.7104417085647583,
+  "gradient_norms": {
+    "bi_layout_feature_extractor": 7.974378350217113,
+    "bi_layout_transformer": 2.187826983036635,
+    "bi_layout_depth_heads": 87.79714247061594,
+    "opening_head": 9.309402279161366,
+    "matcher": 0.7528171131932535
+  },
+  "peak_memory_bytes": 11759374336,
+  "peak_memory_gib": 10.951770782470703,
+  "runtime_seconds": 2.4875059160403907,
+  "amp": false,
+  "activation_checkpointing": false,
+  "batch_size": 4,
+  "candidate_source": "predicted",
+  "active_splits": [
+    "train",
+    "val"
+  ],
+  "test_data_accessed": false,
+  "candidate_proposal_mode": "recall_topk",
+  "proposal_peak_top_k": 4,
+  "proposal_peak_min_probability": 0.2,
+  "proposal_expansion_threshold": 0.12,
+  "proposal_dedup_iou": 0.5,
+  "max_openings_per_view": 12,
+  "train_gt_candidate_injection": true,
+  "validation_candidate_inference_uses_gt": false,
+  "positive_dustbin_margin": 0.2,
+  "positive_dustbin_margin_loss_weight": 0.2
+}

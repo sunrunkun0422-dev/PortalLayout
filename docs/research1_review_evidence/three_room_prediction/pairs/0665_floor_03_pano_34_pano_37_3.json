@@ -1,0 +1,242 @@
+{
+    "prediction": {
+        "pair_id": "0665_floor_03_pano_34_pano_37_3",
+        "room_a": "complete_room_01",
+        "room_b": "complete_room_04",
+        "pano_a": "pano_34",
+        "pano_b": "pano_37",
+        "decision_source": "predicted openings + matcher learned dustbin",
+        "opening_guidance_mode": "predicted",
+        "candidate_source": "predicted",
+        "portal_geometry_mode": "candidate_local_m2",
+        "candidate_count_a": 3,
+        "candidate_count_b": 1,
+        "best_candidate_pair": [
+            -1,
+            -1
+        ],
+        "pair_match_probability": 0.00967618077993393,
+        "pair_no_match_probability": 0.9858512282371521,
+        "candidate_pair_scores": [
+            [
+                0.00967618077993393,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.003500115592032671,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.007239751052111387,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        ],
+        "is_match": false,
+        "shared_candidate_pairs": [],
+        "shared_opening_details": [],
+        "relative_pose": null,
+        "pose_valid": false,
+        "joint_bev": null,
+        "joint_bev_frame_preserving_polygon": null,
+        "joint_bev_pre_manhattan_polygon": null,
+        "joint_bev_generated": false,
+        "predicted_relative_pose": null,
+        "portal_geometry_source_A": null,
+        "portal_geometry_source_B": null,
+        "portal_geometry_quality_A": null,
+        "portal_geometry_quality_B": null,
+        "portal_geometry_valid_A": false,
+        "portal_geometry_valid_B": false,
+        "portal_geometry_failure_reason_A": null,
+        "portal_geometry_failure_reason_B": null,
+        "portal_geometry_A": null,
+        "portal_geometry_B": null,
+        "failure_stage": null,
+        "failure_reason": null,
+        "group_pair": [
+            "complete_room_04",
+            "complete_room_01"
+        ]
+    },
+    "ground_truth": {
+        "is_match": true,
+        "shared_candidate_pairs": [
+            [
+                2,
+                0
+            ]
+        ],
+        "shared_interface_details": [
+            {
+                "candidate_a": 2,
+                "candidate_b": 0,
+                "type_a": "door",
+                "type_b": "door",
+                "local_endpoints_a": [
+                    [
+                        -1.1174791763544827,
+                        -0.5794878095434555
+                    ],
+                    [
+                        -1.5706880555034906,
+                        -0.6353621608920267
+                    ]
+                ],
+                "local_endpoints_b": [
+                    [
+                        -0.25999650324981943,
+                        -0.2536537379653398
+                    ],
+                    [
+                        0.18475289416233845,
+                        -0.2859255364555001
+                    ]
+                ],
+                "global_endpoints_a": [
+                    [
+                        0.29382227673887185,
+                        0.5203363188723187
+                    ],
+                    [
+                        0.2938222767388719,
+                        0.7049221612746538
+                    ]
+                ],
+                "global_endpoints_b": [
+                    [
+                        0.2712356709080961,
+                        0.5363212952158521
+                    ],
+                    [
+                        0.2712356709080961,
+                        0.7165732500864836
+                    ]
+                ],
+                "endpoint_error": 0.026542716850198315
+            }
+        ],
+        "relative_pose_gt": {
+            "T_B_to_A": [
+                [
+                    -0.9810279180794246,
+                    0.1938665106426331,
+                    -1.3557785493970043
+                ],
+                [
+                    -0.1938665106426331,
+                    -0.9810279180794246,
+                    -0.9390288073244095
+                ],
+                [
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            ],
+            "relative_yaw_radians": -2.946490745507602,
+            "relative_yaw_degrees": -168.82148409194113,
+            "translation": [
+                -1.3557785493970043,
+                -0.9390288073244095
+            ],
+            "translation_meters": [
+                -1.9828230597203462,
+                -1.3733275052423892
+            ],
+            "relative_scale": 1.0000000000000002,
+            "coordinate_system": "ZInD panorama-A local xy"
+        },
+        "pose_valid": true,
+        "joint_bev_target": {
+            "coordinate_system": "ZInD panorama-A local xy",
+            "anchor_room": "complete_room_01",
+            "instances": [
+                {
+                    "room_id": "complete_room_01",
+                    "polygon": [
+                        [
+                            0.055010450926695216,
+                            2.251635885624629
+                        ],
+                        [
+                            0.38126847044206735,
+                            -0.39471307000790934
+                        ],
+                        [
+                            -2.1317803763500844,
+                            -0.7045370401062978
+                        ],
+                        [
+                            -2.4580383958654566,
+                            1.9418119155262403
+                        ]
+                    ]
+                },
+                {
+                    "room_id": "complete_room_04",
+                    "polygon": [
+                        [
+                            -1.0662994271475714,
+                            -0.6294772776642816
+                        ],
+                        [
+                            -0.9633646807878766,
+                            -1.4644031407339682
+                        ],
+                        [
+                            -2.008540670249,
+                            -1.5932588034162538
+                        ],
+                        [
+                            -2.1114754166086946,
+                            -0.7583329403465674
+                        ]
+                    ]
+                }
+            ]
+        }
+    },
+    "evaluation": {
+        "classification_correct": false,
+        "false_positive": false,
+        "false_negative": true,
+        "gt_candidate_rank": 2,
+        "gt_candidate_recalled": true,
+        "yaw_error_degrees": null,
+        "translation_error": null,
+        "translation_error_meters": null,
+        "absolute_log_scale_error": null,
+        "joint_bev_instance_overlap_A": null,
+        "joint_bev_instance_overlap_B": null,
+        "joint_bev_frame_preserving_instance_overlap_A": null,
+        "joint_bev_frame_preserving_instance_overlap_B": null,
+        "joint_bev_pre_manhattan_instance_overlap_A": null,
+        "joint_bev_pre_manhattan_instance_overlap_B": null,
+        "portal_endpoint_A": null,
+        "portal_endpoint_B": null
+    },
+    "ground_truth_usage": "post-inference evaluation only"
+}

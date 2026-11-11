@@ -1,0 +1,1039 @@
+{
+  "status": "completed_gt_oracle_only",
+  "cohort_sha256": "41d39e371aa516144384452c207707bff025b36401550cc72177ab25e15383f6",
+  "cohort_roles": [
+    "fit",
+    "selection"
+  ],
+  "official_val_or_test_used": false,
+  "human_reviewed_correspondences": 0,
+  "label_semantics": "raw annotation geometry proxy, not visually verified",
+  "pose_success_semantics": "pose_target normalized forward and inverse <=0.25, angle<=10deg, relative scale<=0.1",
+  "floors": [
+    {
+      "floor_uid": "floor_ac1c867472a93630371dc745",
+      "house_id": "1482",
+      "role": "fit",
+      "links": 419,
+      "coordinate": {
+        "checks": 171,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_1c85c58549352fa1394b1fb2",
+      "house_id": "0449",
+      "role": "fit",
+      "links": 60,
+      "coordinate": {
+        "checks": 39,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_d574a714c7eaa3e0b57e4945",
+      "house_id": "0732",
+      "role": "fit",
+      "links": 191,
+      "coordinate": {
+        "checks": 116,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_f8a738c2cc8fae616dab08e9",
+      "house_id": "0839",
+      "role": "fit",
+      "links": 65,
+      "coordinate": {
+        "checks": 79,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_5bb178202dbb3d9516e4c672",
+      "house_id": "1505",
+      "role": "fit",
+      "links": 127,
+      "coordinate": {
+        "checks": 107,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_360b06cb229899878bcbb69b",
+      "house_id": "1487",
+      "role": "fit",
+      "links": 194,
+      "coordinate": {
+        "checks": 112,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_de0ec07d012c66d596b514d9",
+      "house_id": "0001",
+      "role": "fit",
+      "links": 185,
+      "coordinate": {
+        "checks": 111,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_7d40ca686628986aca2a0562",
+      "house_id": "0958",
+      "role": "fit",
+      "links": 239,
+      "coordinate": {
+        "checks": 130,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_571ddcb8a0af482a7f5a2898",
+      "house_id": "1191",
+      "role": "fit",
+      "links": 0,
+      "coordinate": {
+        "checks": 133,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_ecf7e2c5b26534ee1e1cd9be",
+      "house_id": "0153",
+      "role": "fit",
+      "links": 2,
+      "coordinate": {
+        "checks": 7,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_e651f3e20323423fc1833ffe",
+      "house_id": "1281",
+      "role": "fit",
+      "links": 50,
+      "coordinate": {
+        "checks": 57,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_fdcb5d02a7783dc607dbf84a",
+      "house_id": "0079",
+      "role": "fit",
+      "links": 52,
+      "coordinate": {
+        "checks": 48,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_b691a520939d33acba2c137c",
+      "house_id": "0024",
+      "role": "fit",
+      "links": 162,
+      "coordinate": {
+        "checks": 100,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_3e84ba0422fd2bcdeb74aca4",
+      "house_id": "1067",
+      "role": "fit",
+      "links": 107,
+      "coordinate": {
+        "checks": 80,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_59dd5be7235e061ab6ff1942",
+      "house_id": "1018",
+      "role": "fit",
+      "links": 0,
+      "coordinate": {
+        "checks": 54,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_bac6ca60a8bb1d19c3941336",
+      "house_id": "0061",
+      "role": "fit",
+      "links": 12,
+      "coordinate": {
+        "checks": 32,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_9a74cebc916665856bfac4d7",
+      "house_id": "0033",
+      "role": "fit",
+      "links": 120,
+      "coordinate": {
+        "checks": 87,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_a743e35b599d0e7260baf443",
+      "house_id": "0937",
+      "role": "fit",
+      "links": 84,
+      "coordinate": {
+        "checks": 46,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_c95b9166f6abbaed6669f01a",
+      "house_id": "1472",
+      "role": "fit",
+      "links": 0,
+      "coordinate": {
+        "checks": 141,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_ee27bdc77df8abd445e976ce",
+      "house_id": "0549",
+      "role": "fit",
+      "links": 0,
+      "coordinate": {
+        "checks": 107,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_68ac90c9e0f4dd844712fda0",
+      "house_id": "0998",
+      "role": "fit",
+      "links": 0,
+      "coordinate": {
+        "checks": 97,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_bccec70fb516f1ac8c9599fa",
+      "house_id": "0002",
+      "role": "fit",
+      "links": 257,
+      "coordinate": {
+        "checks": 155,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_083e38e3ba82b90eca5940a5",
+      "house_id": "0993",
+      "role": "fit",
+      "links": 314,
+      "coordinate": {
+        "checks": 213,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_d2d21cf1c94d9eb78b194bd1",
+      "house_id": "0951",
+      "role": "fit",
+      "links": 66,
+      "coordinate": {
+        "checks": 83,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_ec1e9b863c1e5fddbe9ead53",
+      "house_id": "0786",
+      "role": "fit",
+      "links": 124,
+      "coordinate": {
+        "checks": 83,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_6c82181a725f97b1ca468e74",
+      "house_id": "0401",
+      "role": "fit",
+      "links": 10,
+      "coordinate": {
+        "checks": 16,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_da1d64e8cf609e5a92e55d8c",
+      "house_id": "1484",
+      "role": "fit",
+      "links": 0,
+      "coordinate": {
+        "checks": 123,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_42690e7292f35ad9411bfd5f",
+      "house_id": "1011",
+      "role": "fit",
+      "links": 0,
+      "coordinate": {
+        "checks": 57,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_c08f83e68e92eb52846bdd8a",
+      "house_id": "0419",
+      "role": "fit",
+      "links": 172,
+      "coordinate": {
+        "checks": 77,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_a58aa086e0db6d72844be49b",
+      "house_id": "0818",
+      "role": "fit",
+      "links": 14,
+      "coordinate": {
+        "checks": 44,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_a33d790f917708b1b27a4f16",
+      "house_id": "0676",
+      "role": "fit",
+      "links": 19,
+      "coordinate": {
+        "checks": 29,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_31cda5935e09bced60a2e3df",
+      "house_id": "0216",
+      "role": "fit",
+      "links": 99,
+      "coordinate": {
+        "checks": 101,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_89175659cd57ff1c1a094a09",
+      "house_id": "0012",
+      "role": "fit",
+      "links": 62,
+      "coordinate": {
+        "checks": 54,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_5d2e09fda497acf68358305d",
+      "house_id": "1156",
+      "role": "fit",
+      "links": 19,
+      "coordinate": {
+        "checks": 50,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_260ea8c19f28accd4daaf3b1",
+      "house_id": "1150",
+      "role": "fit",
+      "links": 1,
+      "coordinate": {
+        "checks": 8,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_44ff3a78e2f7680f227f22f0",
+      "house_id": "1242",
+      "role": "fit",
+      "links": 64,
+      "coordinate": {
+        "checks": 57,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_fec4c27da71f75619aff52ec",
+      "house_id": "0858",
+      "role": "fit",
+      "links": 7,
+      "coordinate": {
+        "checks": 18,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_7673123794d57dd359578de2",
+      "house_id": "0652",
+      "role": "fit",
+      "links": 490,
+      "coordinate": {
+        "checks": 214,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_a75d8d17ef45834e93edf62f",
+      "house_id": "0694",
+      "role": "fit",
+      "links": 5,
+      "coordinate": {
+        "checks": 11,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_6e06b3d320f25724e5728f28",
+      "house_id": "0236",
+      "role": "fit",
+      "links": 0,
+      "coordinate": {
+        "checks": 111,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_182694debae2cc874400dcff",
+      "house_id": "0830",
+      "role": "selection",
+      "links": 53,
+      "coordinate": {
+        "checks": 44,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_183777d9c8c7effbac7539d0",
+      "house_id": "0674",
+      "role": "selection",
+      "links": 55,
+      "coordinate": {
+        "checks": 100,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_8fa4824a9386165d9626163d",
+      "house_id": "0361",
+      "role": "selection",
+      "links": 353,
+      "coordinate": {
+        "checks": 165,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_068fa1bfa1df099540cce729",
+      "house_id": "0476",
+      "role": "selection",
+      "links": 248,
+      "coordinate": {
+        "checks": 164,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_182df23771bd55bf0db88e1f",
+      "house_id": "0423",
+      "role": "selection",
+      "links": 64,
+      "coordinate": {
+        "checks": 62,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_3e79ae330fc854cd567c6465",
+      "house_id": "1053",
+      "role": "selection",
+      "links": 80,
+      "coordinate": {
+        "checks": 75,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_9bf954e7101cc521821500a9",
+      "house_id": "0530",
+      "role": "selection",
+      "links": 31,
+      "coordinate": {
+        "checks": 55,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_b0f6ba0022f4f60e9e4cf85c",
+      "house_id": "1195",
+      "role": "selection",
+      "links": 0,
+      "coordinate": {
+        "checks": 144,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_427711a3d766604832c9b379",
+      "house_id": "0451",
+      "role": "selection",
+      "links": 2,
+      "coordinate": {
+        "checks": 10,
+        "max_error": 0.0
+      }
+    },
+    {
+      "floor_uid": "floor_544e43e4808e28328ed44b83",
+      "house_id": "0081",
+      "role": "selection",
+      "links": 79,
+      "coordinate": {
+        "checks": 74,
+        "max_error": 0.0
+      }
+    }
+  ],
+  "summary": {
+    "fit": {
+      "cross_room": {
+        "links": 816,
+        "success": 662,
+        "failure": 154,
+        "unknown": 0,
+        "success_including_unknown": 0.8112745098039216,
+        "houses": 28,
+        "by_house": {
+          "0001": {
+            "success": 5,
+            "failure": 3
+          },
+          "0002": {
+            "success": 58,
+            "failure": 12
+          },
+          "0012": {
+            "success": 3
+          },
+          "0024": {
+            "success": 12,
+            "failure": 3
+          },
+          "0033": {
+            "success": 6
+          },
+          "0061": {
+            "success": 1
+          },
+          "0079": {
+            "success": 19,
+            "failure": 2
+          },
+          "0216": {
+            "success": 17
+          },
+          "0419": {
+            "success": 28,
+            "failure": 12
+          },
+          "0449": {
+            "success": 20
+          },
+          "0652": {
+            "success": 62,
+            "failure": 9
+          },
+          "0676": {
+            "success": 9
+          },
+          "0732": {
+            "failure": 12
+          },
+          "0786": {
+            "failure": 9,
+            "success": 50
+          },
+          "0818": {
+            "success": 10,
+            "failure": 2
+          },
+          "0839": {
+            "success": 11,
+            "failure": 6
+          },
+          "0858": {
+            "success": 7
+          },
+          "0937": {
+            "success": 24,
+            "failure": 4
+          },
+          "0951": {
+            "success": 19
+          },
+          "0958": {
+            "success": 62,
+            "failure": 16
+          },
+          "0993": {
+            "success": 71,
+            "failure": 9
+          },
+          "1067": {
+            "success": 5,
+            "failure": 5
+          },
+          "1156": {
+            "failure": 1,
+            "success": 6
+          },
+          "1242": {
+            "success": 5,
+            "failure": 2
+          },
+          "1281": {
+            "success": 15,
+            "failure": 2
+          },
+          "1482": {
+            "success": 82,
+            "failure": 6
+          },
+          "1487": {
+            "success": 46,
+            "failure": 39
+          },
+          "1505": {
+            "success": 9
+          }
+        }
+      },
+      "same_room": {
+        "links": 2784,
+        "success": 2741,
+        "failure": 43,
+        "unknown": 0,
+        "success_including_unknown": 0.9845545977011494,
+        "houses": 31,
+        "by_house": {
+          "0001": {
+            "success": 171,
+            "failure": 6
+          },
+          "0002": {
+            "success": 171
+          },
+          "0012": {
+            "success": 59
+          },
+          "0024": {
+            "success": 147
+          },
+          "0033": {
+            "success": 111
+          },
+          "0061": {
+            "success": 11
+          },
+          "0079": {
+            "success": 31
+          },
+          "0153": {
+            "success": 2
+          },
+          "0216": {
+            "success": 46
+          },
+          "0401": {
+            "success": 10
+          },
+          "0419": {
+            "success": 132
+          },
+          "0449": {
+            "success": 40
+          },
+          "0652": {
+            "success": 353,
+            "failure": 18
+          },
+          "0676": {
+            "success": 9
+          },
+          "0694": {
+            "success": 3,
+            "failure": 2
+          },
+          "0732": {
+            "success": 179
+          },
+          "0786": {
+            "success": 62
+          },
+          "0818": {
+            "success": 2
+          },
+          "0839": {
+            "success": 46
+          },
+          "0937": {
+            "success": 56
+          },
+          "0951": {
+            "failure": 1,
+            "success": 44
+          },
+          "0958": {
+            "failure": 16,
+            "success": 145
+          },
+          "0993": {
+            "success": 234
+          },
+          "1067": {
+            "success": 97
+          },
+          "1150": {
+            "success": 1
+          },
+          "1156": {
+            "success": 12
+          },
+          "1242": {
+            "success": 40
+          },
+          "1281": {
+            "success": 23
+          },
+          "1482": {
+            "success": 287
+          },
+          "1487": {
+            "success": 109
+          },
+          "1505": {
+            "success": 108
+          }
+        }
+      },
+      "unknown_room": {
+        "links": 192,
+        "success": 168,
+        "failure": 20,
+        "unknown": 4,
+        "success_including_unknown": 0.875,
+        "houses": 12,
+        "by_house": {
+          "0002": {
+            "failure": 9,
+            "success": 3,
+            "unknown": 4
+          },
+          "0033": {
+            "success": 3
+          },
+          "0216": {
+            "success": 36
+          },
+          "0652": {
+            "success": 48
+          },
+          "0676": {
+            "success": 1
+          },
+          "0786": {
+            "failure": 3
+          },
+          "0839": {
+            "success": 2
+          },
+          "0951": {
+            "success": 2
+          },
+          "1242": {
+            "failure": 1,
+            "success": 16
+          },
+          "1281": {
+            "success": 7,
+            "failure": 3
+          },
+          "1482": {
+            "success": 40,
+            "failure": 4
+          },
+          "1505": {
+            "success": 10
+          }
+        }
+      }
+    },
+    "selection": {
+      "cross_room": {
+        "links": 265,
+        "success": 213,
+        "failure": 52,
+        "unknown": 0,
+        "success_including_unknown": 0.8037735849056604,
+        "houses": 8,
+        "by_house": {
+          "0081": {
+            "success": 33
+          },
+          "0361": {
+            "success": 73,
+            "failure": 20
+          },
+          "0423": {
+            "success": 24
+          },
+          "0476": {
+            "failure": 22,
+            "success": 45
+          },
+          "0530": {
+            "success": 3,
+            "failure": 2
+          },
+          "0674": {
+            "success": 8,
+            "failure": 8
+          },
+          "0830": {
+            "success": 3
+          },
+          "1053": {
+            "success": 24
+          }
+        }
+      },
+      "same_room": {
+        "links": 692,
+        "success": 690,
+        "failure": 2,
+        "unknown": 0,
+        "success_including_unknown": 0.9971098265895953,
+        "houses": 9,
+        "by_house": {
+          "0081": {
+            "success": 46
+          },
+          "0361": {
+            "success": 258,
+            "failure": 2
+          },
+          "0423": {
+            "success": 40
+          },
+          "0451": {
+            "success": 2
+          },
+          "0476": {
+            "success": 179
+          },
+          "0530": {
+            "success": 26
+          },
+          "0674": {
+            "success": 35
+          },
+          "0830": {
+            "success": 50
+          },
+          "1053": {
+            "success": 54
+          }
+        }
+      },
+      "unknown_room": {
+        "links": 8,
+        "success": 6,
+        "failure": 2,
+        "unknown": 0,
+        "success_including_unknown": 0.75,
+        "houses": 3,
+        "by_house": {
+          "0476": {
+            "failure": 2
+          },
+          "0674": {
+            "success": 4
+          },
+          "1053": {
+            "success": 2
+          }
+        }
+      }
+    }
+  },
+  "links_file_sha256": "5c44f89d5faa0f565698cef44eb6c51b0292eacfc9bcde0ce83e82a1075ee9ec",
+  "sources_sha256": {
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_ac1c867472a93630371dc745/floor_gt.json": "17573435e2ed2056e706f0848f01c886f6657ed47ba34861f7ca1cf45817771e",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_ac1c867472a93630371dc745/observations_gt.jsonl": "4cbc7237b5f2239ed82e186376c1c613ff3b6791b074e08e13c5165bb60df4cd",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_ac1c867472a93630371dc745/portal_links.jsonl": "c8ab00895bd7d822217c111613069a13d64bcd6c9468f240d5dd6fc376e9281d",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_1c85c58549352fa1394b1fb2/floor_gt.json": "ea59a4a909d093af44f5a3ff0f438d87180556c22f576a13a8cb434fb25783c9",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_1c85c58549352fa1394b1fb2/observations_gt.jsonl": "789e6fb54d1860ea3d06e8eb5be8964e3697385845efc4c92994ce4b2aa2b1a7",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_1c85c58549352fa1394b1fb2/portal_links.jsonl": "59e748cfe02f3c061683eea04300d412fdaa34ab6e83ca935cfb2f06cadaee04",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_d574a714c7eaa3e0b57e4945/floor_gt.json": "23ae219ab8e82afa991a13c9c939995086d97e1494bbe1a8fda410db00a701ca",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_d574a714c7eaa3e0b57e4945/observations_gt.jsonl": "4e736d9780f9dfb3780cb86863d4b0eb0c7aa2d7c71dd5b544cab0cdbafbf8e3",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_d574a714c7eaa3e0b57e4945/portal_links.jsonl": "9ac701d0dbd9e5e4df7436272a8216728b99247770af3a2651f6ab3da5859cbe",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_f8a738c2cc8fae616dab08e9/floor_gt.json": "5d0c2cb05d95db4f913d4285bc3618d59d6da71056aa0379cafe852325c1f4eb",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_f8a738c2cc8fae616dab08e9/observations_gt.jsonl": "4ffc74291aeb9bfe7fd2e39f521e0aef8c8014ad2328eb5d2ea2f40656c180f5",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_f8a738c2cc8fae616dab08e9/portal_links.jsonl": "319e8227d7c2864d496bb41f89ee626eb0b5a16509504630d264fa3319430289",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_5bb178202dbb3d9516e4c672/floor_gt.json": "dd7aa002c86684a04343a41f342d1133952d789fa81f2c75c1202a64de10a507",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_5bb178202dbb3d9516e4c672/observations_gt.jsonl": "5b3f9fc4655158c5278911afca95031702c43b1817aace474e062b242961eabc",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_5bb178202dbb3d9516e4c672/portal_links.jsonl": "82bf6a49f748f84f7e2a51f3377e4807674f7b76df678d2098071defa0740264",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_360b06cb229899878bcbb69b/floor_gt.json": "c3924a0f0a92f78b1935376cd0dfa70390c77d205c08202d75242a13e2b60a9f",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_360b06cb229899878bcbb69b/observations_gt.jsonl": "17377f3105f523c3501cd90e9e40059707baf9cc1fae464e8f9bb46148e421c4",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_360b06cb229899878bcbb69b/portal_links.jsonl": "a35289d8c0dfd9a2a9103883445ceeb2e594a2c769591f44ae270904a23ea8de",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_de0ec07d012c66d596b514d9/floor_gt.json": "702ba81fb4f58c9bdb4982fb28955445620e84f773e61a5119ccd79b647385a4",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_de0ec07d012c66d596b514d9/observations_gt.jsonl": "aa7fcaea127217d8e6d255b0ef5a91fd460fbb8ffa619c22ae700dbebbb86f79",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_de0ec07d012c66d596b514d9/portal_links.jsonl": "da354fdacbd0b44e2cff0378e66a713f5f0b02fab62234a11925b3958eb09b08",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_7d40ca686628986aca2a0562/floor_gt.json": "df020a9bbb8c18a82ee93c02d900c83cebf825b0091a73d243573f95d57e43f7",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_7d40ca686628986aca2a0562/observations_gt.jsonl": "48d9a12af5a5e707c6d39a5999300f857e68de8690087ca7bbcb9709732f3d4a",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_7d40ca686628986aca2a0562/portal_links.jsonl": "7b1581adaaf262a30c706114a7f3acba52f779a1c40274140306e74046c29820",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_571ddcb8a0af482a7f5a2898/floor_gt.json": "623a6c97cd1c0c2166f65b6dc07d1a285798f3d21f1957a4fb5bd22c11e2dce8",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_571ddcb8a0af482a7f5a2898/observations_gt.jsonl": "05223c873bd93b27d3954398fedbc6c67733fd6d9730f8f3ee4ccf078dac8461",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_571ddcb8a0af482a7f5a2898/portal_links.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_ecf7e2c5b26534ee1e1cd9be/floor_gt.json": "26773cc9012446f2e1e94e7e03b79b9d840954c379fe267e4d6b3f3705c84c5c",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_ecf7e2c5b26534ee1e1cd9be/observations_gt.jsonl": "ba51bd2ff2466285bc83a49c78fa85faf089add7e0c81f0281e5f1436f557744",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_ecf7e2c5b26534ee1e1cd9be/portal_links.jsonl": "9191a8bbf37bab7fbfc2e4c64d4a297c8b766632cc6a9b691933767e5d2459df",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_e651f3e20323423fc1833ffe/floor_gt.json": "7e65c120686dac174e5197ab6603e09ed3dcf3196514da56f25ad689b2e9d15f",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_e651f3e20323423fc1833ffe/observations_gt.jsonl": "38fa3aaae9dd7302cf18a3e645cfcf930e54fa1f8006af667d844cf88facc24d",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_e651f3e20323423fc1833ffe/portal_links.jsonl": "485fb6d5f21e9c09392e1f96793722c50bad4d215ad5592afcb5cf8461b5a162",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_fdcb5d02a7783dc607dbf84a/floor_gt.json": "01332dd2724994b51328c02e07e90d37f56ed060ece9edf6df1ca43c25b17582",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_fdcb5d02a7783dc607dbf84a/observations_gt.jsonl": "46b5778de8b361e6c70b5561343fa22f354cb377558b9632103de759d0370500",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_fdcb5d02a7783dc607dbf84a/portal_links.jsonl": "6544b5dec313658265bb33c5712e89afb50f66ea53d2a87075b45424b4da6c61",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_b691a520939d33acba2c137c/floor_gt.json": "eb0b5baf682bf6f67262b6aa9248019eb47518a512e16c4ba84647a917d79ede",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_b691a520939d33acba2c137c/observations_gt.jsonl": "76cfeaf327c24f8647a55fc9851085fd2dba0bbd71effe2f905c85c6ddec65e5",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_b691a520939d33acba2c137c/portal_links.jsonl": "a3f9edb3b3a06ec66b47efd4083e734ca953eac7bb97b68456f82c23c1f658d4",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_3e84ba0422fd2bcdeb74aca4/floor_gt.json": "295bcc53f7d5e7b946a02e012e7869402502338d5dd398114f69685d9fc33ae8",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_3e84ba0422fd2bcdeb74aca4/observations_gt.jsonl": "90e61d4d5a6ce65f38194cd84011c8ea65ba1982332c46a43d17fbc2ed143ee9",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_3e84ba0422fd2bcdeb74aca4/portal_links.jsonl": "c0bed13afc9c76042e35a1edf6b56ba78c6b9090b9efebee46b0426bd4b3fa63",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_59dd5be7235e061ab6ff1942/floor_gt.json": "d9fb6a54e4c78072891643825229ea9f8fc615033deeae233663e82012cbfaea",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_59dd5be7235e061ab6ff1942/observations_gt.jsonl": "71491f239c0f06ab23c87811b132208ca5b7888e648c48a916611328aa42ab56",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_59dd5be7235e061ab6ff1942/portal_links.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_bac6ca60a8bb1d19c3941336/floor_gt.json": "78dea96878751f4f0d50c4cbf173b2d3eaef7a611df3402e4b18f2e3293dd712",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_bac6ca60a8bb1d19c3941336/observations_gt.jsonl": "8bee2a0ced40f911a5913bcc59c20e338f87dc3c775ba6e236e9cda3a6d0b707",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_bac6ca60a8bb1d19c3941336/portal_links.jsonl": "888d0f55bf1306800e3d0ab994a53421fa4acd1204d6a1ae6167d4c2eeabbafa",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_9a74cebc916665856bfac4d7/floor_gt.json": "72c8e2b16002a025de8366afec5c7aa6cbf2d71a11c43c4b7eccf9e46e439428",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_9a74cebc916665856bfac4d7/observations_gt.jsonl": "c79348e8694b6385104895cfedabf2ecd58781f72b378231735231292212e741",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_9a74cebc916665856bfac4d7/portal_links.jsonl": "1b5d97eabb01de43ae64f0a6a2a9a3b2c4f1b5aa34689b51020ba9a7637325e5",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_a743e35b599d0e7260baf443/floor_gt.json": "9a6d7d879c3a89995728714bafd86c8177c8fec375449e316b6575893272bd80",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_a743e35b599d0e7260baf443/observations_gt.jsonl": "45e1d9425a8ce3c4b1465d5fb9cd83895ea37d684b164c6c2fe531e6b0fab15c",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_a743e35b599d0e7260baf443/portal_links.jsonl": "0aa39a16d4f5abffd4d80e847f0719dab0eb0a69e087159b5197ed02004efb4e",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_c95b9166f6abbaed6669f01a/floor_gt.json": "55ae0e4c217d165aa34edf9fb21cd38c88738f2ebbb5279423998b226f961855",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_c95b9166f6abbaed6669f01a/observations_gt.jsonl": "45543aab0ec786415041467bf1511f143230de7cc6249475e913ecaa2ea05b59",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_c95b9166f6abbaed6669f01a/portal_links.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_ee27bdc77df8abd445e976ce/floor_gt.json": "94ce16a330c283b59088b9253dd8dab23e5efb8bd77949dc86a90f97fca9e68b",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_ee27bdc77df8abd445e976ce/observations_gt.jsonl": "bb4b1a3568e26b21b4ed54014249564fdceb507da501c72f476cb7afa894bd14",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_ee27bdc77df8abd445e976ce/portal_links.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_68ac90c9e0f4dd844712fda0/floor_gt.json": "ab0e30020993bd4db6b4668d67c86191de8fa9465f45ee0175ca4d969580401e",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_68ac90c9e0f4dd844712fda0/observations_gt.jsonl": "5b88abc5d347a8491c2953f27956e27cda3c4b13ab1cfe0b2557f0bebce47713",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_68ac90c9e0f4dd844712fda0/portal_links.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_bccec70fb516f1ac8c9599fa/floor_gt.json": "8391daa39d2aa34e1f8b1ef9af03e13b48bfd7f1c22d06621045aa3a0a7758db",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_bccec70fb516f1ac8c9599fa/observations_gt.jsonl": "bc615b4e6599024183d7264993a3e6104e6ad98b0d9e75bb1610694fc503de22",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_bccec70fb516f1ac8c9599fa/portal_links.jsonl": "1e616ca2a8834453b91bd560421f1cca4944d2023775b4513453a57bb2ef9976",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_083e38e3ba82b90eca5940a5/floor_gt.json": "061fdcc982cd2217281973ff78f4029b58dca5bad265f5a504179c8a84684b41",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_083e38e3ba82b90eca5940a5/observations_gt.jsonl": "a921c7900765a17b8e1aea31190d99e93156a37b06f84387503274398bbfa24e",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_083e38e3ba82b90eca5940a5/portal_links.jsonl": "4da8e6f36dd3b50b0c3f1584606880e34fc6436618a9ad9144e7c43fe603750d",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_d2d21cf1c94d9eb78b194bd1/floor_gt.json": "9b5d6a1f74ab94bb320b1c51de91f184aa20c376717e119d45f6fed29a5707c8",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_d2d21cf1c94d9eb78b194bd1/observations_gt.jsonl": "f6675afbdd7669772b6b2c39edbbd5f289c034f62f31e871be4c8444aca5a675",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_d2d21cf1c94d9eb78b194bd1/portal_links.jsonl": "11c10f02b67f65a95e6c16e87c58599a3a48fdbb7f16162585ea37d22eda32e9",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_ec1e9b863c1e5fddbe9ead53/floor_gt.json": "3a2c0e54b40ce8da9a426effa311e28848a2fe1047d97354d7650e0550bc9aad",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_ec1e9b863c1e5fddbe9ead53/observations_gt.jsonl": "0bbe7b9de7c7eed412cb7766cc467a546e172f7a4d5889b9e89970242e1f7554",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_ec1e9b863c1e5fddbe9ead53/portal_links.jsonl": "5fb1967ba52b2ff5b78223202bd1a5560c4b65858cc8e5c093a6dfea216ea6c8",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_6c82181a725f97b1ca468e74/floor_gt.json": "cd7af4abac41a06874ca54d411bcdc40d07265b46ca42def4c53275ee91bcfa2",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_6c82181a725f97b1ca468e74/observations_gt.jsonl": "3b3b38cab0893b6952b602598093934f40596f7962800324d37f7b4952076ae5",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_6c82181a725f97b1ca468e74/portal_links.jsonl": "7aca0ac4500c90487ce28452f0bac84f681354179a6e324e3ff56fc6ff10f84c",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_da1d64e8cf609e5a92e55d8c/floor_gt.json": "19ac53731dbf6dbea669939b1984517e77dbcdcf9e9c5989eac3aa7932376f1b",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_da1d64e8cf609e5a92e55d8c/observations_gt.jsonl": "452694722590706ae34972cf5cc2fe6c726877029c63118e07bc925571766f80",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_da1d64e8cf609e5a92e55d8c/portal_links.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_42690e7292f35ad9411bfd5f/floor_gt.json": "f0b5ada6865730e8799a649fd1013eabb09f94cb5d3fb560c0f0d619b443ba08",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_42690e7292f35ad9411bfd5f/observations_gt.jsonl": "f9ba587d72cc0cd962a157fd9988058241514a497c5b2c6360cf3aaef0cba34a",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_42690e7292f35ad9411bfd5f/portal_links.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_c08f83e68e92eb52846bdd8a/floor_gt.json": "76926a451e26cc937009481f3638c54662fc7b12d58c3d3009de50b9762f738d",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_c08f83e68e92eb52846bdd8a/observations_gt.jsonl": "a839dfddf1545b8501e150b1df2e7d011f0fbdc030f9a6b18431f090568ef71d",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_c08f83e68e92eb52846bdd8a/portal_links.jsonl": "a8c8e23a47da1b2bb15a0eb244ca0ebf978c5701f141bd9b7e09f3e4348bf589",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_a58aa086e0db6d72844be49b/floor_gt.json": "95db4ed1eec5b071294e8f6208defd3195e9dd5ea13e65b159cbde168472d456",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_a58aa086e0db6d72844be49b/observations_gt.jsonl": "6abbe4aaca76c024a51df0ac8f2e8ef0284f838b44653f5e55cd794e10e951d3",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_a58aa086e0db6d72844be49b/portal_links.jsonl": "1edc98f810b553b994f391f449a544783d6f42234a99be4dd538f86bb147eae6",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_a33d790f917708b1b27a4f16/floor_gt.json": "781a202f12e032fdc0d7c024d0be4905571b734b8449517c99bacfde40fa025c",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_a33d790f917708b1b27a4f16/observations_gt.jsonl": "57f1272f9330bc36f06e9c29c648e63d242cf3edca7b4e6611f360373483710b",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_a33d790f917708b1b27a4f16/portal_links.jsonl": "8e9114228a39712cd5c942c275db72efd10023c0c14d717482a1aff741cc2cb7",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_31cda5935e09bced60a2e3df/floor_gt.json": "74b0c2b13b6b4f40648de9ccebade6946776e8b83dfd07ad4705009d11674376",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_31cda5935e09bced60a2e3df/observations_gt.jsonl": "f573b35574d33b91eb0eda990b9059c41afe6a29e143bd886ce219ad4e0b0449",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_31cda5935e09bced60a2e3df/portal_links.jsonl": "fa7f3da16b01724be39855e5512b7b4a6fb6bb827782ee90507accf9b13bd85e",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_89175659cd57ff1c1a094a09/floor_gt.json": "5b5ab25d0749977c7f8ceccbe3c7ac369a8b99de9b6ad938b77a9cb2c7089a28",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_89175659cd57ff1c1a094a09/observations_gt.jsonl": "5ae51cfffadfc4b48fd2b69b1c7468abf37b8bfcefdba2c6cad743c290db82dc",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_89175659cd57ff1c1a094a09/portal_links.jsonl": "b6c3bf78a7c0e9ba48a5854d9db573a065d2da9ec4fcb4887a368d2e5f3dbea3",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_5d2e09fda497acf68358305d/floor_gt.json": "ac8fd4b04619b1e59f0a6333b0b8384e82d04b523fc4acfc3723fdb35f3a6aaa",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_5d2e09fda497acf68358305d/observations_gt.jsonl": "91b022293276ecb710a2805d872fdcd62d887098a08a671a9769fe063c9e6c93",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_5d2e09fda497acf68358305d/portal_links.jsonl": "7d0f5080dd10789f7b0eee0e4db67c83e8b98b928b83a5ccbd51d745a2d363ea",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_260ea8c19f28accd4daaf3b1/floor_gt.json": "1f6bfda2dc2d0314766ea0b3a1a0b40018fdee90db9a1ee76a77eb3a6a59dc45",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_260ea8c19f28accd4daaf3b1/observations_gt.jsonl": "946cae7bc611196ea1b9048275c2d9902deef59e17ac2cffc6efefe67c8bfa11",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_260ea8c19f28accd4daaf3b1/portal_links.jsonl": "9d633320ce74c9f8c70812285daffa18b4fce9c85629c95d1ef0d3c733ba5f2a",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_44ff3a78e2f7680f227f22f0/floor_gt.json": "73b4d1d73396c126cc73e7fe3fff44d874157d9702756d3a239507dc4bcf00a9",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_44ff3a78e2f7680f227f22f0/observations_gt.jsonl": "149f9c3b9f32106a9a9ce345b4e5710e0dc7da1a7bae165d9a04fba7ca0e9d55",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_44ff3a78e2f7680f227f22f0/portal_links.jsonl": "19713058e90c94507db1adc32e2013c665e85fbc2a09cad5218443965bc1853f",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_fec4c27da71f75619aff52ec/floor_gt.json": "8328397d020f1d8f1146afadac2335ff62a6b1c18497678c20e3f304883b8bc7",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_fec4c27da71f75619aff52ec/observations_gt.jsonl": "8150b3d0ad22c1a06854029e29acc2d569852719b617b01349024e7541d6c279",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_fec4c27da71f75619aff52ec/portal_links.jsonl": "2a7cd33ff174c6e6ebf6d576a0f3e94dfb7eca9db52250085ff66ea7420079e7",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_7673123794d57dd359578de2/floor_gt.json": "c17f27670d293c28fd8ad48c254938cb32a7797e10ef4ea21cd4a4456d57d3fa",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_7673123794d57dd359578de2/observations_gt.jsonl": "cc93216a79f3d0df21c313093c3b95972b88312bfe9690cd18416cdca57b79b3",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_7673123794d57dd359578de2/portal_links.jsonl": "e00c14cf95556f85faa2fd717cc565eb1031881500bf61e76a391818b0f460f1",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_a75d8d17ef45834e93edf62f/floor_gt.json": "998a3aaafb3afd0751d595ebd279c0afc3e1c5c3f5fae2ebeaf68d2b305d7b81",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_a75d8d17ef45834e93edf62f/observations_gt.jsonl": "fb02ba4c29aa715d055667a52c78478c4ea32ce80bb65c5bc24c5659c19cb9f5",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_a75d8d17ef45834e93edf62f/portal_links.jsonl": "67225f6eca6e055e88e08978de6d87893b04f6ef866b7d88112cf7cf3252c1f7",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_6e06b3d320f25724e5728f28/floor_gt.json": "f1d81db88550f465a6593908982a75efcfa820c7a88487c62b075c7893fa628a",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_6e06b3d320f25724e5728f28/observations_gt.jsonl": "dd73f715a723d3bc9557dea03aa17094d216bc1c811e190a4ffeaef12fa07394",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_6e06b3d320f25724e5728f28/portal_links.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_182694debae2cc874400dcff/floor_gt.json": "9504e7945e815a32134c7700611d735652006cfc5bf485f728a1fb72bb0b6250",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_182694debae2cc874400dcff/observations_gt.jsonl": "3c8b4d0888191d481c60f2edbad0ea94edd14adcf9dbb93554b500e07b9b0739",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_182694debae2cc874400dcff/portal_links.jsonl": "245fb6a7b2f546245daab62ad98ccf94808a53ebb48dc954f28a53f74221e483",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_183777d9c8c7effbac7539d0/floor_gt.json": "049c6ce66918b4e82bee3259051a0826333ac70d2db49a5b9499cf45b7f76a82",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_183777d9c8c7effbac7539d0/observations_gt.jsonl": "92f5bda21c1d800f68ffc1d1d7defd8328400085878092ccbc87ae92743a6e08",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_183777d9c8c7effbac7539d0/portal_links.jsonl": "d46d5a3c7b8efb517b0ca457d8306ee488acf8f88e0bbc4a5e5fa9b986fa719c",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_8fa4824a9386165d9626163d/floor_gt.json": "be7845dd4fbdd2b289fb723a9473c67aed267c6e73d6ea4810653218f04c1e76",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_8fa4824a9386165d9626163d/observations_gt.jsonl": "19be34f35def493c9a731db253a4698df2da6308ce9d2c67dbad64a86ec06a71",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_8fa4824a9386165d9626163d/portal_links.jsonl": "f8a63d3a447b915477895b8d1e6ac97fd89b5bdc00f3e485b1f803f8842c5712",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_068fa1bfa1df099540cce729/floor_gt.json": "38c6c54fa1185f90294d77e6db5ee43e683c4267743ad88da6df4aec3686d7e7",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_068fa1bfa1df099540cce729/observations_gt.jsonl": "3a4d0b32d8834596f189328270028c03e2e2975cc39ca39b6a14e5d9b580aea9",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_068fa1bfa1df099540cce729/portal_links.jsonl": "7546dca908017b77db2db3363633d584ee26df12c0590fb2bb39efc38d5ed3f2",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_182df23771bd55bf0db88e1f/floor_gt.json": "01f924c7c41817897ebde38b1f6abbeba1fc46a04afcf2cc8d7ce6b594522cf7",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_182df23771bd55bf0db88e1f/observations_gt.jsonl": "0c288dcc8af06858348907fb0ef9784c1c508e4f9cafde07dc28a19cbdd1e275",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_182df23771bd55bf0db88e1f/portal_links.jsonl": "93a60d0b9f81dde385cacd267bd395ef2db7033b612b819c9a93db97850568e7",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_3e79ae330fc854cd567c6465/floor_gt.json": "226e6351381729fa0282776ff1a24aeaf8157e7940b39a5c5f01b8c4bc2f5c43",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_3e79ae330fc854cd567c6465/observations_gt.jsonl": "50a9e6e1ce2fdc32e8cbe689f517b331c2bce58511180afb4eeadc7b55942878",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_3e79ae330fc854cd567c6465/portal_links.jsonl": "24585a6c4bfea65b97ab5f858ddffc4b33b4ff9c7a72d1caeb3308b89544e016",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_9bf954e7101cc521821500a9/floor_gt.json": "0c72ddf06ac71ab44e98aa761c83b9fc410fb598cff31a7dbd36fbe245bc5b10",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_9bf954e7101cc521821500a9/observations_gt.jsonl": "d3c7bcbd0cc2ffe6dc0cbbcfaaabe6c79241ff8ec7f629ef02c8c35b9dd743ce",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_9bf954e7101cc521821500a9/portal_links.jsonl": "8dad7601c2d898770ecfbe02b9017dd9694f11f475470e89b8bf53d300e4b5bb",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_b0f6ba0022f4f60e9e4cf85c/floor_gt.json": "170373b6f0c15f37e002b1323d116f731d75fefb5e9d48fed6fb96d6e04c2d36",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_b0f6ba0022f4f60e9e4cf85c/observations_gt.jsonl": "886e874cde928af3b89fa1afd140752dade443740fc43deb8b1e348f077077da",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_b0f6ba0022f4f60e9e4cf85c/portal_links.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_427711a3d766604832c9b379/floor_gt.json": "43d4dae384363b5645a424d2eba1e12534c88a86d4827f7a931b51adb7049392",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_427711a3d766604832c9b379/observations_gt.jsonl": "b4bb994c44988113314387e259f3e20619005544028e9285008d7640d913c8e7",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_427711a3d766604832c9b379/portal_links.jsonl": "a731b7abfca6f0ce4cc86c5bc14131ee04cab118b126800e66fbf1de48f1fece",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_544e43e4808e28328ed44b83/floor_gt.json": "a0db141da1dc15d99fb310b0a270f860e225a0c651b2d452a755285e59c600d6",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_544e43e4808e28328ed44b83/observations_gt.jsonl": "0ffc6864fb8c48fc46e4fb769663314a94c3b8730d41926a3e9337d3140f2d82",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_544e43e4808e28328ed44b83/portal_links.jsonl": "23ac162f354105b738820063870340a6b39d000dbcfa12cb978b5653e31b1508"
+  }
+}

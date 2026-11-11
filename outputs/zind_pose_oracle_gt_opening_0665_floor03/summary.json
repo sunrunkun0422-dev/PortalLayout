@@ -1,0 +1,126 @@
+{
+  "purpose": "two-edge train-only qualitative pose oracle; no generalization claim",
+  "pair_count": 2,
+  "split": "train",
+  "test_data_accessed": false,
+  "training_started": false,
+  "gpu_forward_executed": false,
+  "model_loaded": false,
+  "matcher_executed": false,
+  "proposal_executed": false,
+  "checkpoint_modified": false,
+  "gt_pose_used_for_prediction": false,
+  "gt_room_polygon_used_for_prediction": false,
+  "solver": "utils.joint_layout.build_joint_layout_from_endpoints",
+  "evaluator": "tools.evaluate_zind_portal_geometry_val.evaluate_geometry_mode",
+  "head": "0f0d921d1397cb3bca1e75d10b1ec5be22ca256f",
+  "input_sha256": {
+    "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD_matching/train.json": "52d212b3f068d910492d6339f029622ddca9a52f153c80d2ba51fa23b744db3f",
+    "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD_matching_groups/debug_train_0665_floor_03.json": "bd6176c0dfc28a2feff436bd401f55c4ebd2951ad2259d4e63c1c534c1eedab8",
+    "/home/feixia/pythonProject/AAAsrk/zind/data/0665/zind_data.json": "938a19b06bceafea08aeafc3008e84b071730efefd948f7ae4b5e4b654fb8e79",
+    "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_room_group_debug/t3_best_0665_floor03_candidate_local_m2/rooms/complete_room_01.json": "35b63d91d4f8804ac4df3deb0373084737936a5546fe89fdb9ea595414eaf882",
+    "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_room_group_debug/t3_best_0665_floor03_candidate_local_m2/rooms/complete_room_04.json": "d2b7bb616244bbf99bef39f5e82e65b5bbaf6ec749932536776aa2321f977b5a",
+    "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_room_group_debug/t3_best_0665_floor03_candidate_local_m2/pairs/0665_floor_03_pano_34_pano_37_3.json": "ef4dac48ae0f466125bb8cb058907bd094446e77d5ab96ecce23637ce694a740",
+    "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_room_group_debug/t3_best_0665_floor03_candidate_local_m2/rooms/complete_room_05.json": "25427b4d0ea1a53d30c4262789cd9448a1382624dc3cf31854597860dd7d82a5",
+    "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_room_group_debug/t3_best_0665_floor03_candidate_local_m2/pairs/0665_floor_03_pano_34_pano_30_4.json": "0c3ef06d958daf38a4b9eb4bc77ec51f239156a055b88178904967f6217920fe"
+  },
+  "source_sha256": {
+    "tools/eval_zind_gt_opening_pose_oracle.py": "14a99eb3c227fe385e48e12f2a26882172e8243597223f57bada1c989570166a",
+    "utils/joint_layout.py": "3e10e70f076b2f0814a1ae828af2a9d7d5ec95aa8e216a0364ae840d60123e25",
+    "tools/evaluate_zind_portal_geometry_val.py": "8d1669714c4abd9dcc8c0646fafb2388b25b8bbc852b792613c8b0ae77f79ff7"
+  },
+  "pairs": [
+    {
+      "pair": "04-01",
+      "room_a": "complete_room_01",
+      "room_b": "complete_room_04",
+      "metrics": {
+        "yaw_error_degrees": 2.5444437451708134e-14,
+        "translation_error": 0.059780268487321625,
+        "translation_error_meters": 0.08742850735147999,
+        "absolute_log_scale_error": 0.02375900431350954,
+        "relative_scale_error": 0.02404349808474482,
+        "predicted_scale": 1.024043498084745,
+        "gt_scale": 1.0000000000000002,
+        "bev": {
+          "frame_preserving": null,
+          "pre_manhattan": null
+        }
+      },
+      "baseline_frozen_metrics": {
+        "yaw_error_degrees": 4.356262604660249,
+        "translation_error": 0.4108970923602736,
+        "translation_error_meters": 0.600936067521022,
+        "absolute_log_scale_error": 0.2476964201497071,
+        "relative_scale_error": 0.21940311920430244,
+        "predicted_scale": 0.7805968807956978,
+        "gt_scale": 1.0000000000000002,
+        "bev": {
+          "frame_preserving": null,
+          "pre_manhattan": null
+        }
+      },
+      "improvement_absolute": {
+        "yaw_error_degrees": 4.356262604660223,
+        "translation_error_meters": 0.513507560169542,
+        "absolute_log_scale_error": 0.22393741583619756
+      },
+      "improvement_percent": {
+        "yaw_error_degrees": 99.99999999999942,
+        "translation_error_meters": 85.45127974891913,
+        "absolute_log_scale_error": 90.40801465796329
+      },
+      "endpoint_reversal_transform_max_abs_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "pair": "01-05",
+      "room_a": "complete_room_01",
+      "room_b": "complete_room_05",
+      "metrics": {
+        "yaw_error_degrees": 0.0,
+        "translation_error": 0.03600543574472023,
+        "translation_error_meters": 0.05265786827919867,
+        "absolute_log_scale_error": 0.032773210935459915,
+        "relative_scale_error": 0.03331616785879388,
+        "predicted_scale": 1.033316167858794,
+        "gt_scale": 1.0000000000000002,
+        "bev": {
+          "frame_preserving": null,
+          "pre_manhattan": null
+        }
+      },
+      "baseline_frozen_metrics": {
+        "yaw_error_degrees": 9.334188558173556,
+        "translation_error": 0.29163736484735203,
+        "translation_error_meters": 0.42651898597495486,
+        "absolute_log_scale_error": 0.11911903765032049,
+        "relative_scale_error": 0.12650400669744388,
+        "predicted_scale": 1.126504006697444,
+        "gt_scale": 1.0000000000000002,
+        "bev": {
+          "frame_preserving": null,
+          "pre_manhattan": null
+        }
+      },
+      "improvement_absolute": {
+        "yaw_error_degrees": 9.334188558173556,
+        "translation_error_meters": 0.3738611176957562,
+        "absolute_log_scale_error": 0.08634582671486057
+      },
+      "improvement_percent": {
+        "yaw_error_degrees": 100.0,
+        "translation_error_meters": 87.65403885624666,
+        "absolute_log_scale_error": 72.4870083053666
+      },
+      "endpoint_reversal_transform_max_abs_deltas": [
+        0.0,
+        2.7755575615628914e-17,
+        2.7755575615628914e-17
+      ]
+    }
+  ]
+}

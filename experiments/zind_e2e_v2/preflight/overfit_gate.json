@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "criteria": {
+    "finite": true,
+    "all_module_gradients": true,
+    "t1_masked_assignment_zero": true,
+    "t3_masked_assignment_zero": true,
+    "t0_negative_dustbin_gradient": true,
+    "t2_negative_dustbin_gradient": true,
+    "t2_ranking_loss_declined": true,
+    "t3_ranking_loss_declined": true,
+    "t2_ranking_direction_improved": true,
+    "t3_ranking_direction_improved": true
+  },
+  "note": "small-subset overfit demonstrates learnability only, not validation superiority"
+}

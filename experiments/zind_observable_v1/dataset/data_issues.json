@@ -1,0 +1,14 @@
+[
+  {
+    "house": "0363",
+    "issues": [
+      {
+        "action": "qualified_with_complete_and_partial_room",
+        "duplicate_bare_pano_ids": [
+          "pano_34"
+        ],
+        "floor": "floor_02"
+      }
+    ]
+  }
+]

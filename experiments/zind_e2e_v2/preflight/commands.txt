@@ -1,0 +1,6 @@
+tools/analyze_zind_candidate_recall.py --output_dir experiments/zind_e2e_v2/preflight --device cuda:0 --batch_size 4 --workers 4 --thresholds 0.30,0.35,0.40,0.47,0.55 --min_widths 1,2
+tools/run_zind_small_overfit.py --output_dir experiments/zind_e2e_v2/preflight --device cuda:0 --batch_size 4 --subset_size 24 --steps 10 --seed 123
+tools/run_zind_small_overfit.py --output_dir experiments/zind_e2e_v2/preflight --device cuda:0 --batch_size 4 --subset_size 24 --steps 10 --seed 123
+tools/analyze_zind_candidate_recall.py --output_dir experiments/zind_e2e_v2/preflight --device cuda:0 --batch_size 4 --workers 0 --thresholds 0.30,0.35,0.40,0.47,0.55 --min_widths 1,2 --compatibility_only
+tools/run_zind_small_overfit.py --output_dir experiments/zind_e2e_v2/preflight --device cuda:0 --batch_size 4 --subset_size 24 --steps 10 --seed 123 --workers 0 --selection_scan_limit 256
+tools/run_zind_small_overfit.py --output_dir experiments/zind_e2e_v2/preflight --device cuda:0 --batch_size 4 --subset_size 24 --steps 100 --seed 123 --workers 0 --selection_scan_limit 256

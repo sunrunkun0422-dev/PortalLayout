@@ -1,0 +1,50 @@
+{
+  "formatVersion": 1,
+  "task": "ZInD matching dataset conversion summary",
+  "zindRoot": "/home/feixia/pythonProject/AAAsrk/zind/data",
+  "partition": "/home/feixia/pythonProject/AAAsrk/zind/zind_partition.json",
+  "tokenCount": 256,
+  "endpointTolerance": 0.06,
+  "negativeRatio": 1.0,
+  "splits": [
+    {
+      "split": "train",
+      "manifest": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_matching_dataset_smoke/train.json",
+      "housesRequested": 3,
+      "housesConverted": 3,
+      "pairs": 71,
+      "positivePairs": 36,
+      "negativePairs": 35,
+      "missingHouses": 0,
+      "missingImagePairs": 0,
+      "runtimeSeconds": 0.2127584099998785
+    },
+    {
+      "split": "val",
+      "manifest": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_matching_dataset_smoke/val.json",
+      "housesRequested": 3,
+      "housesConverted": 3,
+      "pairs": 68,
+      "positivePairs": 34,
+      "negativePairs": 34,
+      "missingHouses": 0,
+      "missingImagePairs": 0,
+      "runtimeSeconds": 0.2450601929995173
+    },
+    {
+      "split": "test",
+      "manifest": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_matching_dataset_smoke/test.json",
+      "housesRequested": 3,
+      "housesConverted": 3,
+      "pairs": 63,
+      "positivePairs": 32,
+      "negativePairs": 31,
+      "missingHouses": 0,
+      "missingImagePairs": 0,
+      "runtimeSeconds": 0.10482543299985991
+    }
+  ],
+  "totalPairs": 202,
+  "totalPositivePairs": 102,
+  "totalNegativePairs": 100
+}

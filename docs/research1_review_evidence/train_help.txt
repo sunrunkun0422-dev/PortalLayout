@@ -1,0 +1,177 @@
+usage: train_zind_end_to_end.py [-h] [--manifest_root MANIFEST_ROOT]
+                                [--cache_root CACHE_ROOT]
+                                [--train_manifest TRAIN_MANIFEST]
+                                [--val_manifest VAL_MANIFEST]
+                                [--test_manifest TEST_MANIFEST]
+                                [--train_cache_dir TRAIN_CACHE_DIR]
+                                [--val_cache_dir VAL_CACHE_DIR]
+                                [--test_cache_dir TEST_CACHE_DIR]
+                                [--data_root DATA_ROOT]
+                                [--bi_layout_config BI_LAYOUT_CONFIG]
+                                [--bi_layout_checkpoint BI_LAYOUT_CHECKPOINT]
+                                [--opening_checkpoint OPENING_CHECKPOINT]
+                                [--matcher_checkpoint MATCHER_CHECKPOINT]
+                                [--output_dir OUTPUT_DIR] [--resume [RESUME]]
+                                [--overwrite] [--skip_test] [--device DEVICE]
+                                [--training_stage {joint,matcher_only_finetune}]
+                                [--initial_end_to_end_checkpoint INITIAL_END_TO_END_CHECKPOINT]
+                                [--epochs EPOCHS]
+                                [--early_stop_patience EARLY_STOP_PATIENCE]
+                                [--batch_size BATCH_SIZE]
+                                [--accumulation_steps ACCUMULATION_STEPS]
+                                [--workers WORKERS]
+                                [--bi_layout_lr BI_LAYOUT_LR]
+                                [--opening_lr OPENING_LR]
+                                [--matcher_lr MATCHER_LR]
+                                [--weight_decay WEIGHT_DECAY]
+                                [--grad_clip GRAD_CLIP]
+                                [--minimum_lr_factor MINIMUM_LR_FACTOR]
+                                [--amp] [--amp_dtype {float16,bfloat16}]
+                                [--no_activation_checkpoint]
+                                [--no_rotation_aug]
+                                [--gt_guidance_epochs GT_GUIDANCE_EPOCHS]
+                                [--mix_guidance_epochs MIX_GUIDANCE_EPOCHS]
+                                [--mix_guidance_weight MIX_GUIDANCE_WEIGHT]
+                                [--opening_loss_weight OPENING_LOSS_WEIGHT]
+                                [--feature_anchor_weight FEATURE_ANCHOR_WEIGHT]
+                                [--depth_anchor_weight DEPTH_ANCHOR_WEIGHT]
+                                [--candidate_loss_weight CANDIDATE_LOSS_WEIGHT]
+                                [--candidate_missing_target_policy {legacy_dustbin,mask_positive}]
+                                [--candidate_rank_loss_weight CANDIDATE_RANK_LOSS_WEIGHT]
+                                [--token_affinity_weight TOKEN_AFFINITY_WEIGHT]
+                                [--shared_response_weight SHARED_RESPONSE_WEIGHT]
+                                [--portal_shift_loss_weight PORTAL_SHIFT_LOSS_WEIGHT]
+                                [--consistency_weight CONSISTENCY_WEIGHT]
+                                [--opening_pos_weight OPENING_POS_WEIGHT]
+                                [--opening_tversky_weight OPENING_TVERSKY_WEIGHT]
+                                [--opening_threshold OPENING_THRESHOLD]
+                                [--min_opening_width_tokens MIN_OPENING_WIDTH_TOKENS]
+                                [--max_openings_per_view MAX_OPENINGS_PER_VIEW]
+                                [--candidate_proposal_mode {legacy,recall_topk}]
+                                [--proposal_peak_top_k PROPOSAL_PEAK_TOP_K]
+                                [--proposal_peak_min_probability PROPOSAL_PEAK_MIN_PROBABILITY]
+                                [--proposal_expansion_threshold PROPOSAL_EXPANSION_THRESHOLD]
+                                [--proposal_dedup_iou PROPOSAL_DEDUP_IOU]
+                                [--train_gt_candidate_injection]
+                                [--positive_dustbin_margin_loss_weight POSITIVE_DUSTBIN_MARGIN_LOSS_WEIGHT]
+                                [--positive_dustbin_margin POSITIVE_DUSTBIN_MARGIN]
+                                [--metric_top_k METRIC_TOP_K]
+                                [--opening_guidance_source {predicted,gt}]
+                                [--candidate_source {predicted,gt}]
+                                [--image_height IMAGE_HEIGHT]
+                                [--image_width IMAGE_WIDTH]
+                                [--max_train_pairs MAX_TRAIN_PAIRS]
+                                [--max_val_pairs MAX_VAL_PAIRS]
+                                [--max_test_pairs MAX_TEST_PAIRS]
+                                [--seed SEED] [--torch_threads TORCH_THREADS]
+                                [--progress_every PROGRESS_EVERY]
+                                [--preflight_only]
+                                [--preflight_report PREFLIGHT_REPORT]
+                                [--smoke_test]
+
+Jointly fine-tune Bi-Layout, Opening Head, and Cross-Scene Matcher. The
+complete-room ZInD_matching manifests provide the end-to-end supervision.
+Every training step runs raw panoramas through the live Bi-Layout backbone,
+then through the live Opening Head and Matcher. Matching and opening losses
+therefore backpropagate into the shared panorama model. The frozen feature
+cache is used only as a low-weight teacher regularizer; it is never
+substituted for the live forward pass. M6-M9 remain analytical/discrete
+geometry stages and are evaluated after the learned M1/M2/M4/M5 chain. They
+are not differentiable training modules.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --manifest_root MANIFEST_ROOT
+  --cache_root CACHE_ROOT
+  --train_manifest TRAIN_MANIFEST
+  --val_manifest VAL_MANIFEST
+  --test_manifest TEST_MANIFEST
+  --train_cache_dir TRAIN_CACHE_DIR
+  --val_cache_dir VAL_CACHE_DIR
+  --test_cache_dir TEST_CACHE_DIR
+  --data_root DATA_ROOT
+  --bi_layout_config BI_LAYOUT_CONFIG
+  --bi_layout_checkpoint BI_LAYOUT_CHECKPOINT
+  --opening_checkpoint OPENING_CHECKPOINT
+  --matcher_checkpoint MATCHER_CHECKPOINT
+  --output_dir OUTPUT_DIR
+  --resume [RESUME]
+  --overwrite
+  --skip_test
+  --device DEVICE
+  --training_stage {joint,matcher_only_finetune}
+                        joint training or a T3-initialized matcher-only second
+                        stage
+  --initial_end_to_end_checkpoint INITIAL_END_TO_END_CHECKPOINT
+                        required T3 end-to-end checkpoint for
+                        matcher_only_finetune
+  --epochs EPOCHS
+  --early_stop_patience EARLY_STOP_PATIENCE
+  --batch_size BATCH_SIZE
+  --accumulation_steps ACCUMULATION_STEPS
+  --workers WORKERS
+  --bi_layout_lr BI_LAYOUT_LR
+  --opening_lr OPENING_LR
+  --matcher_lr MATCHER_LR
+  --weight_decay WEIGHT_DECAY
+  --grad_clip GRAD_CLIP
+  --minimum_lr_factor MINIMUM_LR_FACTOR
+  --amp                 experimental autocast; stable full-project default is
+                        GPU FP32
+  --amp_dtype {float16,bfloat16}
+                        bfloat16 is the stable default for the custom Bi-
+                        Layout transformer
+  --no_activation_checkpoint
+  --no_rotation_aug
+  --gt_guidance_epochs GT_GUIDANCE_EPOCHS
+  --mix_guidance_epochs MIX_GUIDANCE_EPOCHS
+  --mix_guidance_weight MIX_GUIDANCE_WEIGHT
+  --opening_loss_weight OPENING_LOSS_WEIGHT
+  --feature_anchor_weight FEATURE_ANCHOR_WEIGHT
+  --depth_anchor_weight DEPTH_ANCHOR_WEIGHT
+  --candidate_loss_weight CANDIDATE_LOSS_WEIGHT
+  --candidate_missing_target_policy {legacy_dustbin,mask_positive}
+  --candidate_rank_loss_weight CANDIDATE_RANK_LOSS_WEIGHT
+  --token_affinity_weight TOKEN_AFFINITY_WEIGHT
+  --shared_response_weight SHARED_RESPONSE_WEIGHT
+  --portal_shift_loss_weight PORTAL_SHIFT_LOSS_WEIGHT
+  --consistency_weight CONSISTENCY_WEIGHT
+  --opening_pos_weight OPENING_POS_WEIGHT
+  --opening_tversky_weight OPENING_TVERSKY_WEIGHT
+  --opening_threshold OPENING_THRESHOLD
+  --min_opening_width_tokens MIN_OPENING_WIDTH_TOKENS
+  --max_openings_per_view MAX_OPENINGS_PER_VIEW
+  --candidate_proposal_mode {legacy,recall_topk}
+  --proposal_peak_top_k PROPOSAL_PEAK_TOP_K
+  --proposal_peak_min_probability PROPOSAL_PEAK_MIN_PROBABILITY
+  --proposal_expansion_threshold PROPOSAL_EXPANSION_THRESHOLD
+  --proposal_dedup_iou PROPOSAL_DEDUP_IOU
+  --train_gt_candidate_injection
+                        training-only target candidate injection; never active
+                        in eval
+  --positive_dustbin_margin_loss_weight POSITIVE_DUSTBIN_MARGIN_LOSS_WEIGHT
+  --positive_dustbin_margin POSITIVE_DUSTBIN_MARGIN
+  --metric_top_k METRIC_TOP_K
+  --opening_guidance_source {predicted,gt}
+                        override the training schedule and configured
+                        evaluation guidance
+  --candidate_source {predicted,gt}
+                        override candidate generation independently of opening
+                        guidance
+  --image_height IMAGE_HEIGHT
+  --image_width IMAGE_WIDTH
+  --max_train_pairs MAX_TRAIN_PAIRS
+  --max_val_pairs MAX_VAL_PAIRS
+  --max_test_pairs MAX_TEST_PAIRS
+  --seed SEED
+  --torch_threads TORCH_THREADS
+  --progress_every PROGRESS_EVERY
+  --preflight_only      run one mixed-precision forward/backward and report
+                        gradient flow
+  --preflight_report PREFLIGHT_REPORT
+                        optional JSON path for the one-batch gradient/memory
+                        preflight
+  --smoke_test          one tiny epoch; intended for code validation, not
+                        model training
+/home/feixia/anaconda3/envs/bi_layout/lib/python3.8/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+  warnings.warn(

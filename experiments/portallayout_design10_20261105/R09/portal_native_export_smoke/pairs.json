@@ -1,0 +1,20 @@
+{
+  "schema_version": "research10.candidate-pairs.v1",
+  "pairs": [
+    {
+      "floor_uid": "floor_427711a3d766604832c9b379",
+      "observation_a": "view_6c789bc691c0911a0a485fc2",
+      "observation_b": "view_c3b971dc3ca04565f1a71455"
+    },
+    {
+      "floor_uid": "floor_427711a3d766604832c9b379",
+      "observation_a": "view_6c789bc691c0911a0a485fc2",
+      "observation_b": "view_c9382004c694be77e3bf08ff"
+    },
+    {
+      "floor_uid": "floor_427711a3d766604832c9b379",
+      "observation_a": "view_c3b971dc3ca04565f1a71455",
+      "observation_b": "view_c9382004c694be77e3bf08ff"
+    }
+  ]
+}

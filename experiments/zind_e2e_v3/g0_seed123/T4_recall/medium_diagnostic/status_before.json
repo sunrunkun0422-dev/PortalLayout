@@ -1,0 +1,55 @@
+{
+  "schema_version": "zind-t4-medium-status-before-v1",
+  "observed_at_local": "2026-08-19T17:20:00+08:00",
+  "branch": "agent/zind-bipair-opening-matcher",
+  "head": "50a6ae5ca403928627fb4de18ae918d59c03d479",
+  "dirty_worktree_preserved": true,
+  "tracked_modified": [
+    ".gitignore",
+    "models/cross_scene_matcher.py",
+    "postprocessing/post_process.py",
+    "tests/test_zind_end_to_end_candidate_fixes.py",
+    "tools/debug_cross_scene_flow.py",
+    "tools/train_zind_cross_scene_matcher.py",
+    "tools/train_zind_end_to_end.py",
+    "utils/joint_layout.py"
+  ],
+  "gpu_before": {
+    "index": 0,
+    "name": "NVIDIA GeForce RTX 4060 Ti",
+    "memory_total_mib": 16380,
+    "memory_used_mib": 871,
+    "memory_free_mib": 15069,
+    "compute_processes": []
+  },
+  "disk_before": {
+    "filesystem": "/dev/sda5",
+    "size": "1.7T",
+    "used": "1.3T",
+    "available": "384G",
+    "use_percent": "77%"
+  },
+  "t3_best": {
+    "path": "checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T3/best.pt",
+    "sha256": "ca083dbbc5a05d738dad36404ad708c623c272aef7a64398b4de3a793278cc5d",
+    "size": 418836277,
+    "mtime": "2026-08-15 02:54:10.604347717 +0800"
+  },
+  "existing_preflight_artifacts": {
+    "frozen_matcher_inputs.pt": "6d1b593fff99c5ac1bc3a6358a2255c085844692217b8f69739110e6e171756f",
+    "frozen_matcher_inputs.schema.json": "e0b85093179a8c506a388189c2cbf4102ba80a5e24f2e024b5b78820d1b64d41",
+    "gate_A_single_batch.json": "9f03fe0ba1c4146c761a9e60b3f89e6090b4050eef2309e6f2a9afbf8c8b025d",
+    "gate_A_single_batch_v2.json": "8228bd5d3e47a2c52d79f06c8d55cfdda3a6091b16d9fe73f5482dbfb8841d83",
+    "gate_B_fixed_24_v2.json": "45290b21069f91b0230d6d482064e093a3ff20da79e40429e6c1ffadb656dd12",
+    "gpu_small_preflight_gate_v2.json": "9ade55f8eea6cd8292b4166a7923ccf3b2caf3bad393cf6e90d68b38f0cd099d",
+    "launch_gate_report.json": "3f4b0d816add1ce0062737ed5cbba60b5468dd6a72056f681833e8958f42b925",
+    "launch_gate_report_v2.json": "694ba93a21cbd6b12a532189c1ca2093230ec4a1ccd4f5ddd39e850c7960df17",
+    "margin_stress_audit_v2.json": "ab82451d6918d69cab72c7dc5b1a8de11098b4b49a940fa19af9054fd36108c9",
+    "protocol_v2.json": "d2cd58583ef895561911d2aa98563fb9aa3a25221919a82b964a8b9d4e0958c7"
+  },
+  "active_splits": [
+    "train",
+    "val"
+  ],
+  "test_data_accessed": false
+}

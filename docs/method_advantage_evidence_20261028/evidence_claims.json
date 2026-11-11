@@ -1,0 +1,72 @@
+[
+  {
+    "id": "E1",
+    "status": "已有初步支持",
+    "claim": "训练目标调整的开发信号",
+    "before": 0.13966077660794743,
+    "after": 0.22511581975088102,
+    "denominator": "9 houses with known positives; 1289 AP N/A",
+    "source": "matching_evidence.json",
+    "limit": "预算不同；不能证明上下文模块有效"
+  },
+  {
+    "id": "E2",
+    "status": "已有初步支持",
+    "claim": "几何与尺度组合提高候选可解上限",
+    "before": 30,
+    "after": 81,
+    "denominator": 711,
+    "source": "geometry_paired_selection.csv",
+    "limit": "选型集；并非最终接边率"
+  },
+  {
+    "id": "E3",
+    "status": "已有初步支持",
+    "claim": "已知弱对应下几何可解上限提高",
+    "before": 47,
+    "after": 182,
+    "denominator": 203,
+    "source": "geometry_paired_selection.csv",
+    "limit": "依赖弱对应；并非纯预测结果"
+  },
+  {
+    "id": "E4",
+    "status": "结果混合",
+    "claim": "整层面积改善",
+    "before": 0.2679847860985319,
+    "after": 0.35615223618308234,
+    "denominator": 10,
+    "source": "all_floor_metrics.csv",
+    "limit": "覆盖率及结构 F1 下降；几何和验证器共同变化"
+  },
+  {
+    "id": "E5",
+    "status": "结果混合",
+    "claim": "正确定位覆盖率下降",
+    "before": 0.07779020496411801,
+    "after": 0.07578119344423692,
+    "denominator": "10 floor macro",
+    "source": "all_floor_metrics.csv",
+    "limit": "不支持可靠整层恢复优势"
+  },
+  {
+    "id": "E6",
+    "status": "尚无证据",
+    "claim": "视觉上下文/条件检索的独立收益",
+    "before": null,
+    "after": null,
+    "denominator": null,
+    "source": "ablation_execution_spec.json",
+    "limit": "四组独立消融尚未执行"
+  },
+  {
+    "id": "E7",
+    "status": "尚无证据",
+    "claim": "完整方法优于 SALVe / 研究二有效",
+    "before": null,
+    "after": null,
+    "denominator": null,
+    "source": "ablation_execution_spec.json",
+    "limit": "已有 SALVe smoke 目录不是同协议系统对照；研究二另行实施"
+  }
+]

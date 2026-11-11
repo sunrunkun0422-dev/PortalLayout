@@ -1,0 +1,18 @@
+{
+  "active_splits": [
+    "train",
+    "val"
+  ],
+  "gates": {
+    "feature_names_predicted_only": true,
+    "rows_declare_input_uses_gt_false": true,
+    "schema_gt_feature_fields_empty": true,
+    "subtrain_dev_houses_disjoint": true,
+    "test_not_accessed": true,
+    "train_val_houses_disjoint": true,
+    "val_not_used_for_model_selection": true
+  },
+  "passed": true,
+  "schema_version": "zind-salve-verifier-leakage-audit-v1",
+  "test_data_accessed": false
+}

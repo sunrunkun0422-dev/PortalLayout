@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "training_status": "trained",
+  "steps": 3000,
+  "initial_fit_probe": {
+    "mean_loss": 0.47928506959578954,
+    "evaluated_pairs": 256,
+    "skipped_pairs": 0
+  },
+  "final_fit_probe": {
+    "mean_loss": 0.22017125495440837,
+    "evaluated_pairs": 256,
+    "skipped_pairs": 0
+  },
+  "selection_loss": 0.714425811840003,
+  "selection_pairs": 273,
+  "fit_houses": [
+    "0108",
+    "0553",
+    "0665",
+    "0912"
+  ],
+  "selection_houses": [
+    "0060",
+    "0430",
+    "0726"
+  ],
+  "parameters_changed": true,
+  "gradient_norms_first_step": {
+    "encoder": 3.9429416218395295,
+    "matcher": 2.1017565793008544
+  },
+  "skipped_batches": 0,
+  "elapsed_seconds": 624.45217184801,
+  "source_files_verified": 457,
+  "peak_allocated_MiB": null,
+  "final_benchmark_evaluated": false
+}

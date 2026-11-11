@@ -1,0 +1,11 @@
+{
+  "schema_version": "zind-salve-negative-sampling-v1",
+  "seed": 123,
+  "selection_uses_model_output": false,
+  "sha256": "c223176888c940750f73c3468dfe97c67cbb0c5aeae00dd02055a092e3a5542a",
+  "test_data_accessed": false,
+  "train_count": 4096,
+  "train_rule": "house-first stable round-robin, pair-ID stable within house",
+  "val_count": 1803,
+  "val_rule": "all negatives in stable pair-ID order"
+}

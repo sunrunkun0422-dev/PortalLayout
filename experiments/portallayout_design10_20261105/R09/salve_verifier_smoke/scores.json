@@ -1,0 +1,24 @@
+{
+  "schema": "salve-unlabeled-bev-scores.v1",
+  "candidate_count": 1,
+  "scored_count": 1,
+  "incomplete_count": 0,
+  "scoring_failed_count": 0,
+  "rows": [
+    {
+      "candidate_id": "fixture-0001",
+      "positive_probability": 0.9624085426330566,
+      "status": "scored",
+      "reason": null
+    }
+  ],
+  "verifier": {
+    "architecture": "official_SALVe_EarlyFusionCEResnet152",
+    "checkpoint_md5": "1200ffbe47d836557d88fef052952337",
+    "checkpoint_sha256": "e4b7dec606aa98af25af2cd84ce450494d0c6fb3fb95254ec11dab6219d15a18",
+    "device": "cpu",
+    "torch_version": "1.12.1+cpu",
+    "strict_state_dict_load": true
+  },
+  "scope": "verifier_scoring_only_upstream_and_full_system_not_audited"
+}

@@ -1,0 +1,78 @@
+{
+  "entries": [
+    {
+      "command": "/home/feixia/anaconda3/envs/bi_layout/bin/python /home/feixia/pythonProject/AAAsrk/Bi_Layout/tools/audit_zind_candidate_failures.py --phase prepare --resume",
+      "completion_artifact": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/zind_e2e_v3/g0_seed123/T5_candidate_recall/audit/room_cache_index.json",
+      "optimizer_created": false,
+      "phase": "prepare",
+      "pid": null,
+      "record_source": "reconstructed_from_completed_artifact",
+      "resume_command": "/home/feixia/anaconda3/envs/bi_layout/bin/python /home/feixia/pythonProject/AAAsrk/Bi_Layout/tools/audit_zind_candidate_failures.py --phase prepare --resume",
+      "task_type": "frozen_inference_audit",
+      "test_data_accessed": false,
+      "training_started": false
+    },
+    {
+      "command": "/home/feixia/anaconda3/envs/bi_layout/bin/python /home/feixia/pythonProject/AAAsrk/Bi_Layout/tools/audit_zind_candidate_failures.py --phase smoke --resume",
+      "completion_artifact": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/zind_e2e_v3/g0_seed123/T5_candidate_recall/audit/.phase0_passed",
+      "optimizer_created": false,
+      "phase": "smoke",
+      "pid": null,
+      "record_source": "reconstructed_from_completed_artifact",
+      "resume_command": "/home/feixia/anaconda3/envs/bi_layout/bin/python /home/feixia/pythonProject/AAAsrk/Bi_Layout/tools/audit_zind_candidate_failures.py --phase smoke --resume",
+      "task_type": "frozen_inference_audit",
+      "test_data_accessed": false,
+      "training_started": false
+    },
+    {
+      "command": "/home/feixia/anaconda3/envs/bi_layout/bin/python /home/feixia/pythonProject/AAAsrk/Bi_Layout/tools/audit_zind_candidate_failures.py --phase cache --resume",
+      "completion_artifact": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/zind_e2e_v3/g0_seed123/T5_candidate_recall/audit/.phase1_completed",
+      "optimizer_created": false,
+      "phase": "cache",
+      "pid": null,
+      "record_source": "reconstructed_from_completed_artifact",
+      "resume_command": "/home/feixia/anaconda3/envs/bi_layout/bin/python /home/feixia/pythonProject/AAAsrk/Bi_Layout/tools/audit_zind_candidate_failures.py --phase cache --resume",
+      "task_type": "frozen_inference_audit",
+      "test_data_accessed": false,
+      "training_started": false
+    },
+    {
+      "command": "/home/feixia/anaconda3/envs/bi_layout/bin/python /home/feixia/pythonProject/AAAsrk/Bi_Layout/tools/audit_zind_candidate_failures.py --phase assemble --resume",
+      "completion_artifact": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/zind_e2e_v3/g0_seed123/T5_candidate_recall/audit/.phase2_completed",
+      "optimizer_created": false,
+      "phase": "assemble",
+      "pid": null,
+      "record_source": "reconstructed_from_completed_artifact",
+      "resume_command": "/home/feixia/anaconda3/envs/bi_layout/bin/python /home/feixia/pythonProject/AAAsrk/Bi_Layout/tools/audit_zind_candidate_failures.py --phase assemble --resume",
+      "task_type": "frozen_inference_audit",
+      "test_data_accessed": false,
+      "training_started": false
+    },
+    {
+      "command": "/home/feixia/anaconda3/envs/bi_layout/bin/python /home/feixia/pythonProject/AAAsrk/Bi_Layout/tools/audit_zind_candidate_failures.py --phase oracle --resume",
+      "completion_artifact": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/experiments/zind_e2e_v3/g0_seed123/T5_candidate_recall/audit/.phase3_completed",
+      "optimizer_created": false,
+      "phase": "oracle",
+      "pid": null,
+      "record_source": "reconstructed_from_completed_artifact",
+      "resume_command": "/home/feixia/anaconda3/envs/bi_layout/bin/python /home/feixia/pythonProject/AAAsrk/Bi_Layout/tools/audit_zind_candidate_failures.py --phase oracle --resume",
+      "task_type": "frozen_inference_audit",
+      "test_data_accessed": false,
+      "training_started": false
+    },
+    {
+      "command": "/home/feixia/anaconda3/envs/bi_layout/bin/python /home/feixia/pythonProject/AAAsrk/Bi_Layout/tools/audit_zind_candidate_failures.py --phase report --resume",
+      "optimizer_created": false,
+      "phase": "report",
+      "pid": 2,
+      "resume_command": "/home/feixia/anaconda3/envs/bi_layout/bin/python /home/feixia/pythonProject/AAAsrk/Bi_Layout/tools/audit_zind_candidate_failures.py --phase report --resume",
+      "started_at": "2026-08-19T19:49:36+0800",
+      "task_type": "frozen_inference_audit",
+      "test_data_accessed": false,
+      "training_started": false
+    }
+  ],
+  "execution_mode": "foreground_phased",
+  "schema_version": "zind-t5-audit-command-ledger-v1",
+  "test_data_accessed": false
+}

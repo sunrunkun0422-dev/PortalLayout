@@ -13,22 +13,22 @@ import glob
 
 from tqdm import tqdm
 from PIL import Image
-from config.defaults import merge_from_file, get_config
+from portallayout.config.defaults import merge_from_file, get_config
 # from dataset.mp3d_dataset import MP3DDataset
 # from dataset.zind_dataset import ZindDataset
-from models.build import build_model
-from loss import GradLoss
-from postprocessing.post_process import post_process
-from preprocessing.pano_lsd_align import panoEdgeDetection, rotatePanorama
-from utils.boundary import corners2boundaries, layout2depth
-from utils.conversion import depth2xyz
-from utils.logger import get_logger
-from utils.misc import tensor2np_d, tensor2np
-from evaluation.accuracy import show_grad
-from utils.writer import xyz2json
-from visualization.boundary import draw_boundaries
-from visualization.floorplan import draw_floorplan, draw_iou_floorplan
-from visualization.obj3d import create_3d_obj
+from portallayout.models.build import build_model
+from portallayout.losses import GradLoss
+from portallayout.postprocessing.post_process import post_process
+from portallayout.preprocessing.pano_lsd_align import panoEdgeDetection, rotatePanorama
+from portallayout.geometry.boundary import corners2boundaries, layout2depth
+from portallayout.geometry.conversion import depth2xyz
+from portallayout.utils.logger import get_logger
+from portallayout.utils.misc import tensor2np_d, tensor2np
+from portallayout.evaluation.accuracy import show_grad
+from portallayout.utils.writer import xyz2json
+from portallayout.visualization.boundary import draw_boundaries
+from portallayout.visualization.floorplan import draw_floorplan, draw_iou_floorplan
+from portallayout.visualization.obj3d import create_3d_obj
 
 
 def parse_option():
@@ -263,11 +263,11 @@ if __name__ == '__main__':
 
     inference()
 
-    # dataset = MP3DDataset(root_dir='./src/dataset/mp3d', mode='test', split_list=[
+    # dataset = MP3DDataset(root_dir='./data/mp3d', mode='test', split_list=[
     #     ['7y3sRwLe3Va', '155fac2d50764bf09feb6c8f33e8fb76'],
     #     ['e9zR4mvMWw7', 'c904c55a5d0e420bbd6e4e030b9fe5b4'],
     # ])
-    # dataset = ZindDataset(root_dir='./src/dataset/zind', mode='test', split_list=[
+    # dataset = ZindDataset(root_dir='./data/zind', mode='test', split_list=[
     #     '1169_pano_21',
     #     '0583_pano_59',
     # ], vp_align=True)

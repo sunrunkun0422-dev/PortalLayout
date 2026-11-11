@@ -1,0 +1,20 @@
+{
+  "schema_version": "zind-t4-medium-val-cache-sanitization-v1",
+  "reason": "strict val predicted-only cache: remove an unused diagnostic recall_injected view; no model inference or factor result changes",
+  "changed_val_shards": 128,
+  "val_shard_count": 128,
+  "predicted_view_signatures_unchanged": true,
+  "train_shard_hashes_unchanged": true,
+  "original_schema_file_sha256": "40c44ad0b60a1d94ebbd1e4069115febd5c5ff0904ed00132ab5f8cc85362f22",
+  "sanitized_schema_file_sha256": "90edf541c263ad1a5b458871e28468711a19095e411779d70c91203f1b8d82a2",
+  "sanitized_schema_content_sha256": "2be48272c7dcc62421be77b5bee717de81fdab47f334c9d80b8deb2191eb4fab",
+  "validation_cached_views": [
+    "legacy_predicted",
+    "recall_predicted"
+  ],
+  "active_splits": [
+    "train",
+    "val"
+  ],
+  "test_data_accessed": false
+}

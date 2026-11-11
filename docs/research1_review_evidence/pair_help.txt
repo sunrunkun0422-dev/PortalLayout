@@ -1,0 +1,90 @@
+usage: estimate_cross_scene_layout.py [-h] --layout_a LAYOUT_A --layout_b
+                                      LAYOUT_B
+                                      [--layout_a_extended LAYOUT_A_EXTENDED]
+                                      [--layout_b_extended LAYOUT_B_EXTENDED]
+                                      [--output_dir OUTPUT_DIR] [--name NAME]
+                                      [--top_k TOP_K]
+                                      [--anchor_ratio ANCHOR_RATIO]
+                                      [--preserve_scale]
+                                      [--simplify_tolerance SIMPLIFY_TOLERANCE]
+                                      [--max_walls MAX_WALLS]
+                                      [--disable_passability]
+                                      [--opening_threshold OPENING_THRESHOLD]
+                                      [--min_opening_width_tokens MIN_OPENING_WIDTH_TOKENS]
+                                      [--max_openings_per_layout MAX_OPENINGS_PER_LAYOUT]
+                                      [--passability_weight PASSABILITY_WEIGHT]
+                                      [--match_evidence MATCH_EVIDENCE]
+                                      [--feature_weight FEATURE_WEIGHT]
+                                      [--nms_overlap_threshold NMS_OVERLAP_THRESHOLD]
+                                      [--confidence_temperature CONFIDENCE_TEMPERATURE]
+                                      [--allow_invalid_polygon]
+                                      [--selector_checkpoint SELECTOR_CHECKPOINT]
+                                      [--selector_hidden_dim SELECTOR_HIDDEN_DIM]
+                                      [--experiment_log EXPERIMENT_LOG]
+                                      [--ground_truth GROUND_TRUTH]
+
+Rank possible cross-scene shared-opening alignments for two predicted room
+layouts.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --layout_a LAYOUT_A   room A prediction JSON from inference.py
+  --layout_b LAYOUT_B   room B prediction JSON from inference.py
+  --layout_a_extended LAYOUT_A_EXTENDED
+                        optional extended/new-branch layout JSON for room A;
+                        used to infer passable openings.
+  --layout_b_extended LAYOUT_B_EXTENDED
+                        optional extended/new-branch layout JSON for room B;
+                        used to infer passable openings.
+  --output_dir OUTPUT_DIR
+  --name NAME
+  --top_k TOP_K
+  --anchor_ratio ANCHOR_RATIO
+                        centered ratio of each wall used as the possible
+                        shared opening/interface.
+  --preserve_scale      keep each room prediction scale instead of calibrating
+                        room B from the shared opening/interface.
+  --simplify_tolerance SIMPLIFY_TOLERANCE
+                        polygon simplification tolerance used when layout JSON
+                        contains dense boundary samples.
+  --max_walls MAX_WALLS
+                        simplify layouts with more than this number of wall
+                        segments before estimation.
+  --disable_passability
+                        disable extended-minus-enclosed opening proposals and
+                        use wall-center fallback only.
+  --opening_threshold OPENING_THRESHOLD
+                        normalized threshold for extended-minus-enclosed
+                        passability heat.
+  --min_opening_width_tokens MIN_OPENING_WIDTH_TOKENS
+                        minimum contiguous token count for a passable opening
+                        candidate.
+  --max_openings_per_layout MAX_OPENINGS_PER_LAYOUT
+                        maximum passable opening candidates kept per layout.
+  --passability_weight PASSABILITY_WEIGHT
+                        reward weight for passable-opening confidence in
+                        candidate ranking.
+  --match_evidence MATCH_EVIDENCE
+                        optional matcher output in JSON, NPZ, PT, or PTH
+                        format containing Aff_AB/S_A/S_B.
+  --feature_weight FEATURE_WEIGHT
+                        reward weight for cross-attention feature evidence.
+  --nms_overlap_threshold NMS_OVERLAP_THRESHOLD
+                        opening-pair interval IoU threshold used by candidate
+                        NMS.
+  --confidence_temperature CONFIDENCE_TEMPERATURE
+                        temperature used to normalize relative candidate
+                        scores; the output is not a calibrated probability.
+  --allow_invalid_polygon
+                        continue with invalid polygon diagnostics instead of
+                        rejecting the pair.
+  --selector_checkpoint SELECTOR_CHECKPOINT
+                        optional GeometryConsistencySelector checkpoint used
+                        to rerank top-k candidates.
+  --selector_hidden_dim SELECTOR_HIDDEN_DIM
+  --experiment_log EXPERIMENT_LOG
+                        JSONL run log path; defaults to
+                        <output_dir>/cross_scene_runs.jsonl.
+  --ground_truth GROUND_TRUTH
+                        optional pair ground-truth JSON for evaluation
+                        logging.

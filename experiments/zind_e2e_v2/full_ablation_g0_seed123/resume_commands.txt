@@ -1,0 +1,1 @@
+2026-08-10 T0 interruption recovery: original T0 command from commands.txt plus --resume auto

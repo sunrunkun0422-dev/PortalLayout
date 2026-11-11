@@ -1,0 +1,316 @@
+{
+  "status": "complete",
+  "floor_samples": 60,
+  "floors": [
+    {
+      "sample_id": "sample_70132b9059ce02fcd309fc1a",
+      "floor_uid": "floor_ac1c867472a93630371dc745",
+      "predictions_file": "floors/2e35cbca2dd1a90f554830d68c6c82cfe90895a6c6733f39127bb7dfc11a9832.json"
+    },
+    {
+      "sample_id": "sample_f918aa0e560ada825d110baf",
+      "floor_uid": "floor_1c85c58549352fa1394b1fb2",
+      "predictions_file": "floors/15be30e58ba55654843daff80db3a15e0ef78feaea4defaee72e9d1c661767b3.json"
+    },
+    {
+      "sample_id": "sample_46bd7216f13766f1a57071e1",
+      "floor_uid": "floor_d574a714c7eaa3e0b57e4945",
+      "predictions_file": "floors/0a94ff1e009cca7c6ff1437ef950eebe8e869ee269e92324a89c6a4622f18cdd.json"
+    },
+    {
+      "sample_id": "sample_bfd841a0cf9cb1acbb5e2d7d",
+      "floor_uid": "floor_f8a738c2cc8fae616dab08e9",
+      "predictions_file": "floors/9599d06d9fcc5741366376b89a26bdeed8e514aa0bc9ac8551dc70f91b9e287f.json"
+    },
+    {
+      "sample_id": "sample_d61b53429ba658eceb386969",
+      "floor_uid": "floor_5bb178202dbb3d9516e4c672",
+      "predictions_file": "floors/1ca0299f0cb15cc2fdf498c676875a8090e7892c4f901db06c93e528b8286962.json"
+    },
+    {
+      "sample_id": "sample_5991406f10b81367a59d5ca5",
+      "floor_uid": "floor_360b06cb229899878bcbb69b",
+      "predictions_file": "floors/fdab542d8b11040a35a977f2658110c100fd6381e713bd81f8b01238444a211f.json"
+    },
+    {
+      "sample_id": "sample_362b0530a9fee601ddfc2d09",
+      "floor_uid": "floor_de0ec07d012c66d596b514d9",
+      "predictions_file": "floors/e27ff6115d351198224243fc6cc3499ff5572133c583e79c83744c466f96899e.json"
+    },
+    {
+      "sample_id": "sample_5f42f471400e4bb0218181e8",
+      "floor_uid": "floor_7d40ca686628986aca2a0562",
+      "predictions_file": "floors/092a0fc00c232def611f3ef868a35eaec8ab479ca733374708d0876fcd31852d.json"
+    },
+    {
+      "sample_id": "sample_529c67eb50fa7a6b8c9ef9d4",
+      "floor_uid": "floor_571ddcb8a0af482a7f5a2898",
+      "predictions_file": "floors/2d30cd700d6cc8bc02fcd579620608621cdbfffa021c43bfe125bc37488f95f4.json"
+    },
+    {
+      "sample_id": "sample_9c3944508d496b505e66d293",
+      "floor_uid": "floor_ecf7e2c5b26534ee1e1cd9be",
+      "predictions_file": "floors/6f4f2799a218a2a65af65d846577cdee9ce2e47b1a130b288eb82938c51ea26d.json"
+    },
+    {
+      "sample_id": "sample_7e5faa853076b7dcbf8493d6",
+      "floor_uid": "floor_e651f3e20323423fc1833ffe",
+      "predictions_file": "floors/87cd94b998b02340cfeea4139a57bbee4e0af06a306733db5b24f4d6db28ff62.json"
+    },
+    {
+      "sample_id": "sample_60cda578420e6ebc095c29ac",
+      "floor_uid": "floor_fdcb5d02a7783dc607dbf84a",
+      "predictions_file": "floors/7706dcf260ab9e28989dadade3bc0811a8fb9e527de85b8723313a688149d365.json"
+    },
+    {
+      "sample_id": "sample_3b700f022f838f7f1d34c55f",
+      "floor_uid": "floor_b691a520939d33acba2c137c",
+      "predictions_file": "floors/390d80515ddfc86df6d72f2c00463f558c581856622ee15054c876eeb09387ef.json"
+    },
+    {
+      "sample_id": "sample_e95fbe1ace5b523f6d3af280",
+      "floor_uid": "floor_3e84ba0422fd2bcdeb74aca4",
+      "predictions_file": "floors/bb7875b2b07d7501d4b4e6e360f1f0822969227ca2c4f3007a1d8ac53fc39b62.json"
+    },
+    {
+      "sample_id": "sample_51e18fb01583f2ff2d1db349",
+      "floor_uid": "floor_59dd5be7235e061ab6ff1942",
+      "predictions_file": "floors/8f4373d867fd48360236a1c5437496084f88510607ef7b7751cee3872181624e.json"
+    },
+    {
+      "sample_id": "sample_b96b034f24ab7f4b80213c68",
+      "floor_uid": "floor_bac6ca60a8bb1d19c3941336",
+      "predictions_file": "floors/5a7686e1374012dc5a3e13b44ab5d3bcf10b399b3bdcacabdf34d799d1df7ce4.json"
+    },
+    {
+      "sample_id": "sample_4263c6424430bf2081fa8b40",
+      "floor_uid": "floor_9a74cebc916665856bfac4d7",
+      "predictions_file": "floors/385c474d244372861f668562aefd5a6d5eb348c0f075cda6cda7379cdbdd4966.json"
+    },
+    {
+      "sample_id": "sample_eeb1652be0178de73f6c73d7",
+      "floor_uid": "floor_a743e35b599d0e7260baf443",
+      "predictions_file": "floors/0f05e481c61ab5b8786b553d5d827ce2a867a0f4d59de5160e759d3633f1038d.json"
+    },
+    {
+      "sample_id": "sample_2f51eb59c815ffd73cd7ac75",
+      "floor_uid": "floor_c95b9166f6abbaed6669f01a",
+      "predictions_file": "floors/fa4fbafa9b6ccabdb0717b7c8c2c3a70facf9abdd7325a92ad11031a479718d3.json"
+    },
+    {
+      "sample_id": "sample_ff0f6cb710977f4e9582d5f0",
+      "floor_uid": "floor_ee27bdc77df8abd445e976ce",
+      "predictions_file": "floors/bad8e6486e830d9a4c8577396c44b7a9f7db76d4b5dd6bd42e733e971d395230.json"
+    },
+    {
+      "sample_id": "sample_17ca224ed8d7bd27a904a275",
+      "floor_uid": "floor_68ac90c9e0f4dd844712fda0",
+      "predictions_file": "floors/5051fbb7d0866e6c8b0607b8f3b50287932e93e32ca6cd48ca96e56e9ccb6b05.json"
+    },
+    {
+      "sample_id": "sample_39de828e463d3f9d97d1a7ca",
+      "floor_uid": "floor_bccec70fb516f1ac8c9599fa",
+      "predictions_file": "floors/192cdb8848e8775051a94ec292a959e06802421f8b72ae12f55a6e6e13bade6e.json"
+    },
+    {
+      "sample_id": "sample_44673bf3dad7b46fde313a20",
+      "floor_uid": "floor_083e38e3ba82b90eca5940a5",
+      "predictions_file": "floors/a8275642c7491e3e57eac3f1e2e69521b0bc9b1c07da0e6f66679a9448dd2db5.json"
+    },
+    {
+      "sample_id": "sample_e8098235cc757e145cac6b1b",
+      "floor_uid": "floor_d2d21cf1c94d9eb78b194bd1",
+      "predictions_file": "floors/473c716934f855d396ffcc8f5bb948a8010cbfdfca7c86818c6c297421d07161.json"
+    },
+    {
+      "sample_id": "sample_231133a9392cc327eaeab334",
+      "floor_uid": "floor_ec1e9b863c1e5fddbe9ead53",
+      "predictions_file": "floors/c9472ccea7e69820089f4789acfe3c0233df1d3379af0a593301f25b9b1a10bc.json"
+    },
+    {
+      "sample_id": "sample_a7cff2ea28a4af031e500781",
+      "floor_uid": "floor_6c82181a725f97b1ca468e74",
+      "predictions_file": "floors/7aa43c20a0aef3de21bf68416778a97b3e317bcc7201752f7157e8aad94b58ff.json"
+    },
+    {
+      "sample_id": "sample_a1afff53bf709a2033355b50",
+      "floor_uid": "floor_da1d64e8cf609e5a92e55d8c",
+      "predictions_file": "floors/c1dd49285ebc9c840bf4c4e96108681edbe42499dc6a1ee93c02f55ec8da7e52.json"
+    },
+    {
+      "sample_id": "sample_2f6169f7e3ca0369503c916f",
+      "floor_uid": "floor_42690e7292f35ad9411bfd5f",
+      "predictions_file": "floors/b0beb7557b66ad3b13cbf1a9b935ef4787a023743abad919e907f466c9bfa48e.json"
+    },
+    {
+      "sample_id": "sample_2603083c6cbf057b1d882a76",
+      "floor_uid": "floor_c08f83e68e92eb52846bdd8a",
+      "predictions_file": "floors/84889cdce3a1993528378099adc76d7b49593535036993d92bc32a0829f27737.json"
+    },
+    {
+      "sample_id": "sample_538ba48d4e52c4caacd6bae8",
+      "floor_uid": "floor_a58aa086e0db6d72844be49b",
+      "predictions_file": "floors/7035fcf59ed0b4f193701baf614e09446cf0fa6f18b6e4ca3ca945e6425e1336.json"
+    },
+    {
+      "sample_id": "sample_81d707cc1a368e9e4f4eabe9",
+      "floor_uid": "floor_a33d790f917708b1b27a4f16",
+      "predictions_file": "floors/9a0ea49eec1eaa9d8912fdd120e0e04cb4cd9d5bac200a9d0af6b32006a48cad.json"
+    },
+    {
+      "sample_id": "sample_44e72d5b3f0686104385fa10",
+      "floor_uid": "floor_31cda5935e09bced60a2e3df",
+      "predictions_file": "floors/d6d1eb3bbe9de192dab59b10c13cf8686410882727965f571aac12e39f0885cb.json"
+    },
+    {
+      "sample_id": "sample_9d2d8e9c65dda10b9843a7a2",
+      "floor_uid": "floor_89175659cd57ff1c1a094a09",
+      "predictions_file": "floors/b8fe2c967217e2c03f4f2cdbd79823ebc0070f6c0834fbf4b5c44c949a7fe82c.json"
+    },
+    {
+      "sample_id": "sample_1e1fec9e3c7dca0574db1b84",
+      "floor_uid": "floor_5d2e09fda497acf68358305d",
+      "predictions_file": "floors/540c6ddd2de430db378ada29078a62dfd2e90009939e0a1edb794a1a2ca48f16.json"
+    },
+    {
+      "sample_id": "sample_d219c42a6172a90cf1ae6edd",
+      "floor_uid": "floor_260ea8c19f28accd4daaf3b1",
+      "predictions_file": "floors/c134c652c759df7e9e8324c28039bc2dbe4bba1d54289fb721d2b418df52fc34.json"
+    },
+    {
+      "sample_id": "sample_220e5fc31d4e65c6fae11524",
+      "floor_uid": "floor_44ff3a78e2f7680f227f22f0",
+      "predictions_file": "floors/9e3c8a9f0060d56062bbda3d1ea6f0fbb2394762fcd6093f0bd51fb349f3604b.json"
+    },
+    {
+      "sample_id": "sample_57228c14dbd636dfac152ac5",
+      "floor_uid": "floor_fec4c27da71f75619aff52ec",
+      "predictions_file": "floors/4455cc27f5f2886ca83966b8f858cb234cdc08ffe80fb044dd9943149bd383eb.json"
+    },
+    {
+      "sample_id": "sample_ee59506ddb9810168f3684f0",
+      "floor_uid": "floor_7673123794d57dd359578de2",
+      "predictions_file": "floors/e1bf698227e6298a6626a0eceacfdfe18a5d5e06fb0d264f84c120e89e8b8199.json"
+    },
+    {
+      "sample_id": "sample_8a3dbab6effdd8aead7df7e9",
+      "floor_uid": "floor_a75d8d17ef45834e93edf62f",
+      "predictions_file": "floors/7cbc522c284693c80e4a1eb5d757c0b04fe3e739a8543b60f1ec6b022dd1fcd4.json"
+    },
+    {
+      "sample_id": "sample_3fc262683bb66706ae385b95",
+      "floor_uid": "floor_6e06b3d320f25724e5728f28",
+      "predictions_file": "floors/8a06a2d963563bdd316c7d42de64747afe63ad7d6f708d14029aa65366a7cfc4.json"
+    },
+    {
+      "sample_id": "sample_c0fe7c862a9a2c95e4d2ccce",
+      "floor_uid": "floor_182694debae2cc874400dcff",
+      "predictions_file": "floors/7a1c120e34a8a26fc7b643c9e5c282c6979a521536d1c7cdc7e2f082c897e2a1.json"
+    },
+    {
+      "sample_id": "sample_27aa7fe7464dd44f4b702b16",
+      "floor_uid": "floor_183777d9c8c7effbac7539d0",
+      "predictions_file": "floors/1788704f86377bdb004683c90ce8c4521fe0cb4373d1f36babc07d635aa13f41.json"
+    },
+    {
+      "sample_id": "sample_e3cad63fb5062ad3e7e5f496",
+      "floor_uid": "floor_8fa4824a9386165d9626163d",
+      "predictions_file": "floors/4081e5597d52b3c9def4ebd5b0cebe1f9a2ba6fb61e6a9d1315e325b8af67618.json"
+    },
+    {
+      "sample_id": "sample_1e204f659d1f1dbf72cf7058",
+      "floor_uid": "floor_068fa1bfa1df099540cce729",
+      "predictions_file": "floors/b6df3b548ed227c2cde784a484ed0edca1870efa7b717939fb714ced76fa9723.json"
+    },
+    {
+      "sample_id": "sample_dd121b02143d0b7ed7e972e8",
+      "floor_uid": "floor_182df23771bd55bf0db88e1f",
+      "predictions_file": "floors/ae9ae0b114b044e7e78156e26e8729d09a6cc415ef4b5f9d8b4b656a84724486.json"
+    },
+    {
+      "sample_id": "sample_d9c2f8b268c8d335e5e014fd",
+      "floor_uid": "floor_3e79ae330fc854cd567c6465",
+      "predictions_file": "floors/96be60259972ffefc0cd1ab27ba433de82ae047e5ba2a80938e1109b2793740a.json"
+    },
+    {
+      "sample_id": "sample_513632f5a4cb6352b08bfb36",
+      "floor_uid": "floor_9bf954e7101cc521821500a9",
+      "predictions_file": "floors/080e03c4c62f7a3155c889b9a2ad79728c45871521295beab0686e6b3e5b2386.json"
+    },
+    {
+      "sample_id": "sample_8b644c67340c0a2818bcac67",
+      "floor_uid": "floor_b0f6ba0022f4f60e9e4cf85c",
+      "predictions_file": "floors/27ef01667a6c3ba3a5573a1ce4163dbfcedab7436763ae5542f8ff69e16421b3.json"
+    },
+    {
+      "sample_id": "sample_bae84b610f777a0cf19f778b",
+      "floor_uid": "floor_427711a3d766604832c9b379",
+      "predictions_file": "floors/7058b38733c7ab2412b90ccc3209d7932ec83b403ffe871d2cfcc2641a9d1f98.json"
+    },
+    {
+      "sample_id": "sample_964f387f9c84e29a8f7b3fc7",
+      "floor_uid": "floor_544e43e4808e28328ed44b83",
+      "predictions_file": "floors/9180bd189cab0fe25bf90186cf13e4f55ccd9b564dd633826b43b0d0150e6512.json"
+    },
+    {
+      "sample_id": "sample_82dc68a6e529f0ac2dae6226",
+      "floor_uid": "floor_73f294cc080c9f03bbd23eb0",
+      "predictions_file": "floors/2204f0072d1d05276f3b686793b166f07dbb5321055ce90728c7e125a1809cdd.json"
+    },
+    {
+      "sample_id": "sample_3d9479146280ffe8fadd6fa8",
+      "floor_uid": "floor_9477157c886aed7e6c8cacee",
+      "predictions_file": "floors/f235356409a36a368f311160424f99d85bace102f34f9a824d743b630a29cb6b.json"
+    },
+    {
+      "sample_id": "sample_44bf93386cf235aa23d43532",
+      "floor_uid": "floor_e29573b71bc220a492fc87d4",
+      "predictions_file": "floors/e982c74d9c44b4abd0265fbb66e0e69465001719935bb0f651bea64e6ede0a0d.json"
+    },
+    {
+      "sample_id": "sample_2f738536071403876b4e028b",
+      "floor_uid": "floor_c8c761f8ef82f6c93cd2d17d",
+      "predictions_file": "floors/1252d7e806527fad27806fc67ffdfea90aa06eac540ff2fa06590bd8664ecaed.json"
+    },
+    {
+      "sample_id": "sample_f3693285de442a34aef1ffde",
+      "floor_uid": "floor_4ce11278717c163075ebfdbd",
+      "predictions_file": "floors/d19339a83c1969d50a26e551953b5b1bbde4c711a4c897fe45cf3735da55f619.json"
+    },
+    {
+      "sample_id": "sample_9c9176019d9c3cb279f09fcb",
+      "floor_uid": "floor_7bda4e56e731a867c0f95512",
+      "predictions_file": "floors/bca01f140513f7ac68147b38460acdc5c69da683d6cbaf2e9620ebc7efa9265c.json"
+    },
+    {
+      "sample_id": "sample_b35bffcdd9766a92facda9fd",
+      "floor_uid": "floor_acda201943eecd0cab2c5363",
+      "predictions_file": "floors/401cfc857831d9c59fb2b49298c097f2d687397c01874ab16804a0067d8a60ed.json"
+    },
+    {
+      "sample_id": "sample_9662c94c73eedf4451604396",
+      "floor_uid": "floor_9f7fb6fb68d038533e101156",
+      "predictions_file": "floors/be8febae34eb3a1fd49f8e76a3060dae4d3eba76720e18255693df7b586ec1ee.json"
+    },
+    {
+      "sample_id": "sample_f74575764aefc386c8564cdd",
+      "floor_uid": "floor_c0c0337df849a4d95919a01f",
+      "predictions_file": "floors/d9780df7bd9c8ee518fbb292a1c7382f6553dcf735eacc7896e2e104c575be0b.json"
+    },
+    {
+      "sample_id": "sample_17b3fc105e2337a7337ae4b6",
+      "floor_uid": "floor_0c329d3c9116f32396ee4463",
+      "predictions_file": "floors/83a284ddd4cbb9e67fd84ecb04c92c9a080bcce7edd997f5a2b82ab84afadb74.json"
+    }
+  ],
+  "unique_observations": 1524,
+  "observations_inferred": 1524,
+  "observations_reused": 0,
+  "input_errors": [],
+  "ground_truth_read": false,
+  "contract_fingerprint": "215e758432793d389ccf69ecaaa62a5d15b75a2a31a4dfabd6b529783c117ee2",
+  "scope": "development",
+  "cohort_sha256": "41d39e371aa516144384452c207707bff025b36401550cc72177ab25e15383f6",
+  "rgb_inventory_sha256": "a02b4117fc7f53b01462b8f42566b73a6a67d2b1688e73f674012eca63c619c0",
+  "pretraining_exposure": "unknown"
+}

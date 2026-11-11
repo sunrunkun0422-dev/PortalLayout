@@ -1,0 +1,88 @@
+{
+  "criteria": {
+    "candidate_budget_respected": true,
+    "finite_loss_and_gradients": true,
+    "initial_margin_nonzero": true,
+    "legacy_weight_zero_exact": true,
+    "margin_declined_80pct": true,
+    "missing_positive_margin_masked": true,
+    "negative_margin_masked": true,
+    "negative_rejection_not_collapsed": true,
+    "nonzero_gradient": true,
+    "positive_acceptance_increased": true,
+    "total_loss_declined": true,
+    "true_margin_increased": true,
+    "wrap_proposal_present": true
+  },
+  "curve": [
+    {
+      "loss_assignment": 1.1414291858673096,
+      "loss_dustbin_margin": 0.20000000298023224,
+      "loss_total": 1.181429147720337,
+      "negative_rejection": 1.0,
+      "positive_acceptance": 0.6666666666666666,
+      "step": 1,
+      "true_to_dustbin_margin_mean": 0.09999997913837433
+    },
+    {
+      "loss_assignment": 0.6393656730651855,
+      "loss_dustbin_margin": 0.0,
+      "loss_total": 0.6393656730651855,
+      "negative_rejection": 1.0,
+      "positive_acceptance": 1.0,
+      "step": 10,
+      "true_to_dustbin_margin_mean": 0.8911887208620707
+    },
+    {
+      "loss_assignment": 0.038937781006097794,
+      "loss_dustbin_margin": 0.0,
+      "loss_total": 0.038937781006097794,
+      "negative_rejection": 1.0,
+      "positive_acceptance": 1.0,
+      "step": 80,
+      "true_to_dustbin_margin_mean": 3.59809676806132
+    }
+  ],
+  "device": "cpu",
+  "final": {
+    "loss_assignment": 0.03829925134778023,
+    "loss_dustbin_margin": 0.0,
+    "loss_total": 0.03829925134778023,
+    "negative_rejection": 1.0,
+    "positive_acceptance": 1.0,
+    "true_to_dustbin_margin_mean": 3.59809676806132
+  },
+  "fixture_roles": [
+    "positive_recalled",
+    "positive_missing",
+    "negative",
+    "positive_hard_negative",
+    "positive_wrap_interval"
+  ],
+  "initial": {
+    "loss_assignment": 1.1414291858673096,
+    "loss_dustbin_margin": 0.20000000298023224,
+    "loss_total": 1.181429147720337,
+    "negative_rejection": 1.0,
+    "positive_acceptance": 0.0,
+    "true_to_dustbin_margin_mean": 0.0
+  },
+  "margin": 0.2,
+  "margin_weight": 0.2,
+  "maximum_absolute_gradient": 0.15000000596046448,
+  "schema_version": "zind-t4-cpu-preflight-v1",
+  "seed": 123,
+  "split_data_accessed": [],
+  "status": "PASS",
+  "test_data_accessed": false,
+  "wrap_proposals": [
+    [
+      15,
+      0
+    ],
+    [
+      6,
+      7
+    ]
+  ]
+}

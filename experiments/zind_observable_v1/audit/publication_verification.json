@@ -1,0 +1,12 @@
+{
+  "master_restored_rows": 251650,
+  "restored_sha256": "0eba445d9c0d3db169a5b12deef1a0028501cd0700730c821e13ccef686f6854",
+  "restoration_matches_original": true,
+  "train_pairs": 27354,
+  "internal_monitor_pairs": 2352,
+  "training_monitor_ids_disjoint": true,
+  "unit_regression_tests_passed": 47,
+  "published_rgb_count": 0,
+  "checkpoint_binaries_uploaded": false,
+  "all_artifacts_below_50_mib": true
+}

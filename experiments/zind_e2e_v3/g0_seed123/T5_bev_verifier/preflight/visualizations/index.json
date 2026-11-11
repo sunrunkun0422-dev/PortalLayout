@@ -1,0 +1,19 @@
+{
+  "files": [
+    "visualizations/0003_floor_01_pano_28_pano_34_10.png",
+    "visualizations/0003_floor_01_pano_34_pano_39_15.png",
+    "visualizations/0003_floor_01_pano_59_pano_56_21.png",
+    "visualizations/0003_floor_01_pano_62_pano_56_22.png",
+    "visualizations/0003_floor_01_pano_75_pano_76_16.png",
+    "visualizations/0018_floor_01_pano_15_pano_20_11.png",
+    "visualizations/0025_floor_01_pano_27_pano_26_12.png",
+    "visualizations/0062_floor_01_pano_29_pano_38_8.png",
+    "visualizations/0069_floor_00_pano_0_pano_5_2.png",
+    "visualizations/0074_floor_01_pano_14_pano_22_12.png",
+    "visualizations/0074_floor_02_pano_51_pano_45_5.png",
+    "visualizations/0074_floor_02_pano_66_pano_64_8.png"
+  ],
+  "schema_version": "zind-salve-verifier-visualizations-v1",
+  "selection": "first 12 stable pair-ID verifier wins; post-hoc only",
+  "test_data_accessed": false
+}

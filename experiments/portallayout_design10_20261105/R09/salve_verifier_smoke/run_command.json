@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/../salve/.venv/bin/python",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/tools/research10_salve_scoring.py",
+    "--salve-root",
+    "/home/feixia/pythonProject/AAAsrk/salve",
+    "--manifest",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R09/salve_verifier_smoke/manifest.json",
+    "--output",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R09/salve_verifier_smoke/scores.json",
+    "--device",
+    "cpu",
+    "--threads",
+    "2"
+  ],
+  "working_directory": "/home/feixia/pythonProject/AAAsrk/PortalLayout",
+  "elapsed_seconds": 7.251458942999307,
+  "exit_code": 0
+}

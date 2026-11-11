@@ -1,0 +1,29 @@
+{
+  "compatibility_shim": "subprocess-only np.float=float for official legacy type annotation; official files unmodified",
+  "longitude_comparison": "circular; u=0 and u=1 represent the same seam",
+  "max_floor_xy_absolute_error": 8.881784197001252e-16,
+  "max_projection_pixel_error": 1.4210854715202004e-13,
+  "official_files_sha256": {
+    "README.md": "78aa6d7f12c42a3bd7dc9c8c5e41e2fadf9fb824fde5600943b9761a664a9dc9",
+    "code/render.py": "cf5d57adb1c85006c2b8410ef31a358f8b9e92ec2ee20bc5098dcaa5339c0402",
+    "code/transformations.py": "cdb4a6555392e50e5f1c801fa42fabfeda731ffd756ef095f46ebd35d6b195c0",
+    "data_organization.md": "02de0b69796136fd9a2785ee8c89dfa2a28fc6e3a248e42896e4ad2da096783a"
+  },
+  "panorama_transforms_compared": 388,
+  "projection_resolution": [
+    1024,
+    512
+  ],
+  "status": "passed",
+  "test_annotations_read": false,
+  "train_houses": [
+    "0000",
+    "0001",
+    "0002",
+    "0004",
+    "0005",
+    "0006",
+    "0007",
+    "0008"
+  ]
+}

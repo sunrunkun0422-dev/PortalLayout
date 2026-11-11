@@ -1,0 +1,106 @@
+{
+  "review_date": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "scope": "architecture review and proposed experiments; no algorithm modifications or new full training",
+  "branch": "agent/zind-bipair-opening-matcher",
+  "head": "8484b620d1850a27776445178c7f0f2e753213ac",
+  "sources": [
+    {
+      "path": "/home/feixia/Downloads/孙润坤_硕士开题汇报(4).pptx",
+      "sha256": "0a10ad650d3168de5365293150d44620c15a36778d1f883b95637b9c69e39d42"
+    },
+    {
+      "path": "/home/feixia/Downloads/研究点一_多房间布局项目改造提示词.md",
+      "sha256": "0f891b890061efbddc50a183ef83df7991e5e7716f4ce893bc2744a138e43755"
+    },
+    {
+      "path": "/home/feixia/.codex/attachments/0fbd0de5-d0a7-4be3-bd49-859fbb76f07c/已粘贴的文本.txt",
+      "sha256": "4aed93a8c98ab6865b700420d2fa374da15ea557a9d25ed21cb194dda357dfef"
+    },
+    {
+      "path": "models/bi_layout.py",
+      "sha256": "6aaf8c31a150c1c6a68a17e086d099eea32b2723b581502ca5912d72a2db451c"
+    },
+    {
+      "path": "models/cross_scene_matcher.py",
+      "sha256": "78437906c073961ab233066c17e0b766a274d9bd9e57f3cdcaf853a6726a14d3"
+    },
+    {
+      "path": "models/cross_scene_contracts.py",
+      "sha256": "0f54296dacb787f6ff7eecffc1c30f3059e1241994f0241e216ab36db808f1f5"
+    },
+    {
+      "path": "models/modules/horizon_net_feature_extractor.py",
+      "sha256": "83aa9a5f08f3f53b7ded2a4226cec6e562f54d832214e013be89601385dde00d"
+    },
+    {
+      "path": "utils/cross_scene_pipeline.py",
+      "sha256": "b3af6250927edec4ffe514910ce7ebc7fd8a4cdb1216a4520c6216249d8a6744"
+    },
+    {
+      "path": "utils/joint_layout.py",
+      "sha256": "3e10e70f076b2f0814a1ae828af2a9d7d5ec95aa8e216a0364ae840d60123e25"
+    },
+    {
+      "path": "utils/candidate_local_portal_geometry.py",
+      "sha256": "fc680c5d6ccc53ffe4f15cdb39181c86ed8ad9452bb7b86ee8c427c6d004ce17"
+    },
+    {
+      "path": "tools/train_zind_end_to_end.py",
+      "sha256": "f2fb0c56c24fb8b4daf6e72ceff7372281c5234a68d039a6465095f50c19e4c4"
+    },
+    {
+      "path": "tools/evaluate_zind_room_group.py",
+      "sha256": "cf85c939c5c2fa2937a9027e4c204d89ba4012ab452f905884845eec34cb9585"
+    },
+    {
+      "path": "experiments/zind_observable_v1/results/best_metrics.json",
+      "sha256": "5e6749702fdfdf9f98ae477465b9c3430f0d69df4b264a706eacff450640c385"
+    }
+  ],
+  "test_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 /home/feixia/anaconda3/envs/bi_layout/bin/python -m unittest discover -s tests",
+  "unittest_result": {
+    "run": 260,
+    "duration_seconds": 23.441,
+    "status": "OK"
+  },
+  "environment": {
+    "python": "3.8.20",
+    "torch": "1.12.0",
+    "torchvision": "0.13.0",
+    "numpy": "1.24.3",
+    "scipy": "1.8.1",
+    "shapely": "1.8.2",
+    "cuda": "11.3",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 4060 Ti",
+    "gpu_memory_mib": 16380
+  },
+  "caveat": "Unit tests do not establish learned model accuracy or arbitrary-N floor reconstruction.",
+  "three_room_smoke": {
+    "status": "success",
+    "split": "train",
+    "group_id": "debug_train_0665_floor_03_rooms_04_01_05",
+    "room_count": 3,
+    "pair_count": 3,
+    "single_room_forward_count": {
+      "complete_room_04": 1,
+      "complete_room_01": 1,
+      "complete_room_05": 1
+    },
+    "classification": {
+      "true_positive": 1,
+      "true_negative": 1,
+      "false_positive": 0,
+      "false_negative": 1
+    },
+    "runtime_seconds": 16.284990584000298,
+    "test_data_accessed": false,
+    "geometry_mode": "candidate_local_m2",
+    "summary": "three_room_prediction/group_summary.json"
+  },
+  "document_checks": {
+    "links": "all local markdown links resolve",
+    "source_hashes_unchanged": true
+  }
+}

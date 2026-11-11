@@ -1,0 +1,50 @@
+{
+  "gpu_peak_allocated_bytes": 476657664,
+  "gpu_peak_reserved_bytes": 497025024,
+  "model_eval": true,
+  "optimizer_created": false,
+  "passed": true,
+  "requires_grad": false,
+  "schema_version": "zind-t5-oracle-matcher-smoke-v1",
+  "state_hash_after": "a6d2de1fdbb05b835b74369025563a5ccc5edde3d5f448499d8743a062cf7c7f",
+  "state_hash_before": "a6d2de1fdbb05b835b74369025563a5ccc5edde3d5f448499d8743a062cf7c7f",
+  "test_data_accessed": false,
+  "views": {
+    "O0": {
+      "all_finite": true,
+      "max_candidate_product": 15,
+      "pair_count": 4,
+      "runtime_seconds": 1.447098156902939
+    },
+    "O1": {
+      "all_finite": true,
+      "max_candidate_product": 4,
+      "pair_count": 4,
+      "runtime_seconds": 0.0050547169521451
+    },
+    "O2": {
+      "all_finite": true,
+      "max_candidate_product": 5,
+      "pair_count": 4,
+      "runtime_seconds": 0.004504502052441239
+    },
+    "O3": {
+      "all_finite": true,
+      "max_candidate_product": 1,
+      "pair_count": 4,
+      "runtime_seconds": 0.004989209119230509
+    },
+    "O4": {
+      "all_finite": true,
+      "max_candidate_product": 342,
+      "pair_count": 4,
+      "runtime_seconds": 0.0050605121068656445
+    },
+    "P1_recall_topk": {
+      "all_finite": true,
+      "max_candidate_product": 27,
+      "pair_count": 4,
+      "runtime_seconds": 0.004890558077022433
+    }
+  }
+}

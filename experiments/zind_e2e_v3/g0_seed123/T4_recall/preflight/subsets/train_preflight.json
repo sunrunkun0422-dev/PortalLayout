@@ -1,0 +1,7622 @@
+{
+  "formatVersion": 2,
+  "task": "ZInD cross-scene shared-interface matching",
+  "split": "train",
+  "dataRoot": "/home/feixia/pythonProject/AAAsrk/zind/data",
+  "tokenCount": 256,
+  "candidateEncoding": "inclusive circular [startToken, endToken]",
+  "coordinateConvention": {
+    "relativeTransform": "B local floor coordinates to A local floor coordinates",
+    "relativeYaw": "atan2(transformBToA[1,0], transformBToA[0,0])"
+  },
+  "counts": {
+    "pairCount": 24,
+    "positiveCount": 16,
+    "negativeCount": 8,
+    "houseCount": 20
+  },
+  "sourceHouseIds": [
+    "0044",
+    "0058",
+    "0154",
+    "0261",
+    "0364",
+    "0400",
+    "0437",
+    "0454",
+    "0495",
+    "0673",
+    "0674",
+    "0902",
+    "0919",
+    "0930",
+    "1011",
+    "1086",
+    "1099",
+    "1151",
+    "1161",
+    "1356"
+  ],
+  "missingHouseIds": [],
+  "missingImagePairIds": [],
+  "pairs": [
+    {
+      "id": "0044_floor_02_pano_41_pano_45_negative",
+      "scene_id": "0044",
+      "floor_id": "floor_02",
+      "image_a": "0044/panos/floor_02_partial_room_03_pano_41.jpg",
+      "image_b": "0044/panos/floor_02_partial_room_05_pano_45.jpg",
+      "room_a": "complete_room_03",
+      "room_b": "complete_room_05",
+      "partial_room_a": "partial_room_03",
+      "partial_room_b": "partial_room_05",
+      "pano_a": "pano_41",
+      "pano_b": "pano_45",
+      "room_label_a": "hallway",
+      "room_label_b": "primary bathroom",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.5387345841063069,
+              0.8467374779395679
+            ],
+            [
+              0.48767813940095195,
+              0.24944091466982213
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.18782833673425933,
+              0.35957692689357307
+            ],
+            [
+              0.18782833673425933,
+              0.11725363198598615
+            ]
+          ],
+          "tokenInterval": [
+            83,
+            104
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              0.2702001119494114,
+              -1.2767318872761955
+            ],
+            [
+              -0.2305621313831711,
+              -1.2339271210018363
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.15277960414073444,
+              -0.5049108144478551
+            ],
+            [
+              -0.05037970436991046,
+              -0.5049108144478552
+            ]
+          ],
+          "tokenInterval": [
+            248,
+            8
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              0.34920319702941915,
+              1.0470644037763217
+            ],
+            [
+              -0.16352227087152021,
+              1.090891777162847
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.1045964543616125,
+              0.4337349908290331
+            ],
+            [
+              -0.10341633594248856,
+              0.4337349908290331
+            ]
+          ],
+          "tokenInterval": [
+            114,
+            134
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -0.41818746269389323,
+              1.1122841608255414
+            ],
+            [
+              -0.47618063034107627,
+              0.4338366126523421
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.20672108650077173,
+              0.4335834741534428
+            ],
+            [
+              -0.20672108650077173,
+              0.15833721391159875
+            ]
+          ],
+          "tokenInterval": [
+            142,
+            161
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -0.4226486785079034,
+              0.8614646936437808
+            ],
+            [
+              -0.5007950515374039,
+              -0.30146666024800783
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.6996693031780568,
+              1.5037943158613079
+            ],
+            [
+              -0.6996693031780568,
+              1.0326470251726696
+            ]
+          ],
+          "tokenInterval": [
+            146,
+            214
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.7875836827812654,
+              0.49250294688215024
+            ],
+            [
+              0.7475425437741272,
+              -0.10336726681749292
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.20156307033172488,
+              1.387785635363805
+            ],
+            [
+              -0.20156307033172494,
+              1.1463761696656516
+            ]
+          ],
+          "tokenInterval": [
+            58,
+            86
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": false,
+        "target_candidate_a": -1,
+        "target_candidate_b": -1,
+        "relative_transform_b_to_a": [
+          [
+            0.9998348381877555,
+            0.018174056951171788,
+            -1.0008318115844737
+          ],
+          [
+            -0.018174056951171746,
+            0.9998348381877558,
+            2.9850781594737033
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": -0.018175057570671675,
+        "pose_valid": false,
+        "minimum_interface_endpoint_error": 0.8606695696717945
+      }
+    },
+    {
+      "id": "0674_floor_00_pano_35_pano_31_negative",
+      "scene_id": "0674",
+      "floor_id": "floor_00",
+      "image_a": "0674/panos/floor_00_partial_room_08_pano_35.jpg",
+      "image_b": "0674/panos/floor_00_partial_room_09_pano_31.jpg",
+      "room_a": "complete_room_03",
+      "room_b": "complete_room_05",
+      "partial_room_a": "partial_room_08",
+      "partial_room_b": "partial_room_09",
+      "pano_a": "pano_35",
+      "pano_b": "pano_31",
+      "room_label_a": "basement",
+      "room_label_b": "closet",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -1.7034357966874085,
+              0.6075314395006919
+            ],
+            [
+              -1.1390552624851318,
+              0.2871873389964589
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.7249156129804208,
+              0.4905426492270545
+            ],
+            [
+              -0.4625901247346451,
+              0.4905426492270545
+            ]
+          ],
+          "tokenInterval": [
+            178,
+            181
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.5572307422756373,
+              0.3229575851086132
+            ],
+            [
+              0.4265701803653122,
+              -0.24124252558985845
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.10643732565895195,
+              0.1807775944434295
+            ],
+            [
+              0.10643732565895192,
+              0.4148778562409653
+            ]
+          ],
+          "tokenInterval": [
+            43,
+            85
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -0.8015919098927593,
+              0.7559974002162845
+            ],
+            [
+              -1.5614444497512596,
+              0.9319682267799105
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.6810396796304214,
+              0.1341684798014642
+            ],
+            [
+              0.99632086291162,
+              0.13416847980146418
+            ]
+          ],
+          "tokenInterval": [
+            161,
+            170
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": false,
+        "target_candidate_a": -1,
+        "target_candidate_b": -1,
+        "relative_transform_b_to_a": [
+          [
+            -0.9586194186790131,
+            -0.28469072716109134,
+            0.3330189808301376
+          ],
+          [
+            0.28469072716109134,
+            -0.9586194186790131,
+            -0.9231815627693429
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": 2.852908864052425,
+        "pose_valid": false,
+        "minimum_interface_endpoint_error": 0.7306119041882717
+      }
+    },
+    {
+      "id": "0919_floor_01_pano_41_pano_35_negative",
+      "scene_id": "0919",
+      "floor_id": "floor_01",
+      "image_a": "0919/panos/floor_01_partial_room_04_pano_41.jpg",
+      "image_b": "0919/panos/floor_01_partial_room_02_pano_35.jpg",
+      "room_a": "complete_room_01",
+      "room_b": "complete_room_02",
+      "partial_room_a": "partial_room_04",
+      "partial_room_b": "partial_room_02",
+      "pano_a": "pano_41",
+      "pano_b": "pano_35",
+      "room_label_a": "kitchen",
+      "room_label_b": "closet",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.21291795433813185,
+              -5.181789894245968
+            ],
+            [
+              -0.9531467623549045,
+              -4.785422590227089
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.8341966804585363,
+              -4.588284371093311
+            ],
+            [
+              0.3363559239656335,
+              -4.588284371093311
+            ]
+          ],
+          "tokenInterval": [
+            247,
+            1
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              -0.3278151190284304,
+              0.8444302706832997
+            ],
+            [
+              -0.4717851664054211,
+              0.416676465219137
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.15672521667683215,
+              -2.352277288883717
+            ],
+            [
+              -0.15617735067602323,
+              -2.5347166671530577
+            ]
+          ],
+          "tokenInterval": [
+            143,
+            162
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              0.5023665956536651,
+              1.9959428633612457
+            ],
+            [
+              1.0023139283603146,
+              1.8260013724821162
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.011197230055889004,
+              -1.8035694353778222
+            ],
+            [
+              0.22464521005064614,
+              -1.8035694353778222
+            ]
+          ],
+          "tokenInterval": [
+            107,
+            117
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              -1.4140753755034754,
+              1.4012971843841862
+            ],
+            [
+              -1.0092357497632867,
+              1.2628303231332187
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.6449032094510118,
+              -2.280468881076871
+            ],
+            [
+              -0.4719494678314674,
+              -2.280795825768023
+            ]
+          ],
+          "tokenInterval": [
+            155,
+            160
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              -1.0128863600710132,
+              2.5110058100135753
+            ],
+            [
+              -0.4373553208920559,
+              2.3153719973161966
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.6357262785255502,
+              -1.8035694353778222
+            ],
+            [
+              -0.39000852047299683,
+              -1.8035694353778222
+            ]
+          ],
+          "tokenInterval": [
+            135,
+            143
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.9894020665043773,
+              -0.15696220367636418
+            ],
+            [
+              -0.6866987533103321,
+              0.13138513486840483
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.04712677385593958,
+              -1.6762063425176037
+            ],
+            [
+              -0.04712677385593957,
+              -0.9887298847116055
+            ]
+          ],
+          "tokenInterval": [
+            57,
+            184
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": false,
+        "target_candidate_a": -1,
+        "target_candidate_b": -1,
+        "relative_transform_b_to_a": [
+          [
+            -0.15665089382488445,
+            0.9876540373348679,
+            0.7771756364052202
+          ],
+          [
+            -0.9876540373348681,
+            -0.15665089382488442,
+            3.2932930181398743
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": -1.728095089875481,
+        "pose_valid": false,
+        "minimum_interface_endpoint_error": 0.4995244094355079
+      }
+    },
+    {
+      "id": "1151_floor_01_pano_19_pano_20_negative",
+      "scene_id": "1151",
+      "floor_id": "floor_01",
+      "image_a": "1151/panos/floor_01_partial_room_05_pano_19.jpg",
+      "image_b": "1151/panos/floor_01_partial_room_08_pano_20.jpg",
+      "room_a": "complete_room_01",
+      "room_b": "complete_room_06",
+      "partial_room_a": "partial_room_05",
+      "partial_room_b": "partial_room_08",
+      "pano_a": "pano_19",
+      "pano_b": "pano_20",
+      "room_label_a": "hallway",
+      "room_label_b": "closet",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.628659269499596,
+              1.39683690737247
+            ],
+            [
+              0.7454052382829268,
+              2.100616143133472
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.13821512727532537,
+              1.8717564047778574
+            ],
+            [
+              -0.15015839194497294,
+              1.8717564047778574
+            ]
+          ],
+          "tokenInterval": [
+            110,
+            114
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              -3.445820876087669,
+              1.9672331496948625
+            ],
+            [
+              -3.3151298129746842,
+              2.755077539329855
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.18028457866449876,
+              0.209216960214073
+            ],
+            [
+              -0.1425346346522236,
+              0.2092169602140732
+            ]
+          ],
+          "tokenInterval": [
+            163,
+            170
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              -0.08766111947353183,
+              2.4484025568386563
+            ],
+            [
+              0.02710245527767675,
+              3.1402313349398026
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.23373946511595534,
+              1.5165426985660728
+            ],
+            [
+              -0.5172162846944415,
+              1.5165426985660728
+            ]
+          ],
+          "tokenInterval": [
+            127,
+            129
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              -0.3308996026511918,
+              0.8767996750018856
+            ],
+            [
+              -0.42285268455319697,
+              0.32247929562359406
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.4090693848097398,
+              1.5235076731976764
+            ],
+            [
+              0.6362021424336562,
+              1.5235076731976764
+            ]
+          ],
+          "tokenInterval": [
+            142,
+            165
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              -0.4863468907643633,
+              -0.4073732633996988
+            ],
+            [
+              0.9587948250254615,
+              4.760329518678054
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.9314504458204881,
+              1.546468000377327
+            ],
+            [
+              -1.2249057001239925,
+              1.7809090106691188
+            ]
+          ],
+          "tokenInterval": [
+            119,
+            220
+          ]
+        },
+        {
+          "type": "door",
+          "index": 5,
+          "localEndpoints": [
+            [
+              4.633958767694993,
+              -1.2637382381145603
+            ],
+            [
+              3.0694187545632925,
+              -1.0042055178349683
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.9342364356731294,
+              3.644975231413961
+            ],
+            [
+              0.9342364356731295,
+              3.003905011347146
+            ]
+          ],
+          "tokenInterval": [
+            51,
+            53
+          ]
+        },
+        {
+          "type": "door",
+          "index": 6,
+          "localEndpoints": [
+            [
+              1.4081422560596317,
+              5.474583772159374
+            ],
+            [
+              1.2907946180825356,
+              4.767177496511837
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.5394582635939582,
+              1.9128497551043189
+            ],
+            [
+              -1.2495985648967938,
+              1.9128497551043189
+            ]
+          ],
+          "tokenInterval": [
+            117,
+            117
+          ]
+        },
+        {
+          "type": "door",
+          "index": 7,
+          "localEndpoints": [
+            [
+              1.304132599955319,
+              5.681131350131186
+            ],
+            [
+              0.8428940667857298,
+              5.757643609457592
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.6149442794937963,
+              1.8577098523512168
+            ],
+            [
+              -1.6149442794937958,
+              1.6687173782179054
+            ]
+          ],
+          "tokenInterval": [
+            118,
+            122
+          ]
+        },
+        {
+          "type": "door",
+          "index": 8,
+          "localEndpoints": [
+            [
+              -0.21436708650912734,
+              6.675296701710867
+            ],
+            [
+              -0.32373738359564036,
+              6.015980196818492
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.910944175701952,
+              1.1864029010280612
+            ],
+            [
+              -1.6407892590252005,
+              1.1864029010280612
+            ]
+          ],
+          "tokenInterval": [
+            129,
+            130
+          ]
+        },
+        {
+          "type": "door",
+          "index": 9,
+          "localEndpoints": [
+            [
+              -0.35208853147870606,
+              5.845071090508176
+            ],
+            [
+              -0.47018441645720066,
+              5.133154160588869
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.570759258210799,
+              1.1864029010280612
+            ],
+            [
+              -1.2790513190708344,
+              1.1864029010280612
+            ]
+          ],
+          "tokenInterval": [
+            130,
+            131
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.28417449937320405,
+              0.0873365669596299
+            ],
+            [
+              -0.13218373611400833,
+              0.19050505477889343
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.0058783427745925,
+              1.5297539680962398
+            ],
+            [
+              1.0058783427745925,
+              1.7031466413555867
+            ]
+          ],
+          "tokenInterval": [
+            76,
+            152
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": false,
+        "target_candidate_a": -1,
+        "target_candidate_b": -1,
+        "relative_transform_b_to_a": [
+          [
+            -0.9969198228482543,
+            0.07842746210483534,
+            -0.28081969738722234
+          ],
+          [
+            -0.07842746210483534,
+            -0.9969198228482542,
+            -0.4728942943219896
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": -3.0630845686508827,
+        "pose_valid": false,
+        "minimum_interface_endpoint_error": 0.4964937069473199
+      }
+    },
+    {
+      "id": "1151_floor_01_pano_23_pano_25_negative",
+      "scene_id": "1151",
+      "floor_id": "floor_01",
+      "image_a": "1151/panos/floor_01_partial_room_07_pano_23.jpg",
+      "image_b": "1151/panos/floor_01_partial_room_12_pano_25.jpg",
+      "room_a": "complete_room_05",
+      "room_b": "complete_room_09",
+      "partial_room_a": "partial_room_07",
+      "partial_room_b": "partial_room_12",
+      "pano_a": "pano_23",
+      "pano_b": "pano_25",
+      "room_label_a": "closet",
+      "room_label_b": "laundry",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.3049290924932516,
+              0.013693419436161215
+            ],
+            [
+              -0.22412907871916618,
+              0.024317344851793002
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.4083602739705495,
+              1.4797741228303851
+            ],
+            [
+              0.6222624782441736,
+              1.4797741228303851
+            ]
+          ],
+          "tokenInterval": [
+            65,
+            187
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.31889750349430895,
+              0.019455284462831374
+            ],
+            [
+              -0.3532331128171626,
+              0.1202593576584723
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.1595383473436359,
+              1.9243606872277232
+            ],
+            [
+              -0.11519296124882619,
+              1.9243606872277232
+            ]
+          ],
+          "tokenInterval": [
+            66,
+            178
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": false,
+        "target_candidate_a": -1,
+        "target_candidate_b": -1,
+        "relative_transform_b_to_a": [
+          [
+            -0.9917181230056233,
+            0.12843350225779598,
+            1.2120328235335789
+          ],
+          [
+            -0.12843350225779598,
+            -0.9917181230056233,
+            -1.038038324763237
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": -3.012803415766696,
+        "pose_valid": false,
+        "minimum_interface_endpoint_error": 0.6642726918490489
+      }
+    },
+    {
+      "id": "1161_floor_01_pano_8_pano_12_negative",
+      "scene_id": "1161",
+      "floor_id": "floor_01",
+      "image_a": "1161/panos/floor_01_partial_room_12_pano_8.jpg",
+      "image_b": "1161/panos/floor_01_partial_room_14_pano_12.jpg",
+      "room_a": "complete_room_07",
+      "room_b": "complete_room_08",
+      "partial_room_a": "partial_room_12",
+      "partial_room_b": "partial_room_14",
+      "pano_a": "pano_8",
+      "pano_b": "pano_12",
+      "room_label_a": "hallway",
+      "room_label_b": "hallway",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.6770824247890859,
+              0.47805772366691474
+            ],
+            [
+              0.6358070903239792,
+              -0.5816453926990491
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.18206298841629298,
+              0.9143170203507203
+            ],
+            [
+              0.18206298841629298,
+              0.48563261625809934
+            ]
+          ],
+          "tokenInterval": [
+            33,
+            89
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.6857947688963095,
+              0.08303832744116255
+            ],
+            [
+              0.6651130746141117,
+              -0.35904690669068673
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.20414397854829044,
+              1.147775837417879
+            ],
+            [
+              0.20414397854829044,
+              0.9688780287841416
+            ]
+          ],
+          "tokenInterval": [
+            43,
+            68
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": false,
+        "target_candidate_a": -1,
+        "target_candidate_b": -1,
+        "relative_transform_b_to_a": [
+          [
+            0.9999694408956835,
+            -0.007817753818974746,
+            0.06902003658813716
+          ],
+          [
+            0.007817753818974746,
+            0.9999694408956835,
+            0.9646421385450417
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": 0.007817833454466341,
+        "pose_valid": false,
+        "minimum_interface_endpoint_error": 0.35912517389267457
+      }
+    },
+    {
+      "id": "1356_floor_02_pano_64_pano_69_negative",
+      "scene_id": "1356",
+      "floor_id": "floor_02",
+      "image_a": "1356/panos/floor_02_partial_room_02_pano_64.jpg",
+      "image_b": "1356/panos/floor_02_partial_room_08_pano_69.jpg",
+      "room_a": "complete_room_02",
+      "room_b": "complete_room_08",
+      "partial_room_a": "partial_room_02",
+      "partial_room_b": "partial_room_08",
+      "pano_a": "pano_64",
+      "pano_b": "pano_69",
+      "room_label_a": "closet",
+      "room_label_b": "closet",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.22581214433517524,
+              0.09733737346765393
+            ],
+            [
+              -0.21193275566589212,
+              0.08268505307480337
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.4127757833560552,
+              -0.5129657057344945
+            ],
+            [
+              -0.23572879725013635,
+              -0.5129657057344945
+            ]
+          ],
+          "tokenInterval": [
+            80,
+            176
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.5819631957911622,
+              0.012314062516907186
+            ],
+            [
+              -0.5512090791798007,
+              -0.010646170566968954
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.0581050574591657,
+              -0.1389081025192847
+            ],
+            [
+              -1.5162568177617128,
+              -0.1389081025192847
+            ]
+          ],
+          "tokenInterval": [
+            64,
+            192
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": false,
+        "target_candidate_a": -1,
+        "target_candidate_b": -1,
+        "relative_transform_b_to_a": [
+          [
+            -0.9999128726532267,
+            0.013200269026505815,
+            2.434081784476311
+          ],
+          [
+            -0.013200269026505815,
+            -0.9999128726532267,
+            -0.7541098890390174
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": -3.1283920011817874,
+        "pose_valid": false,
+        "minimum_interface_endpoint_error": 1.03430318287043
+      }
+    },
+    {
+      "id": "1356_floor_02_pano_65_pano_69_negative",
+      "scene_id": "1356",
+      "floor_id": "floor_02",
+      "image_a": "1356/panos/floor_02_partial_room_05_pano_65.jpg",
+      "image_b": "1356/panos/floor_02_partial_room_08_pano_69.jpg",
+      "room_a": "complete_room_05",
+      "room_b": "complete_room_08",
+      "partial_room_a": "partial_room_05",
+      "partial_room_b": "partial_room_08",
+      "pano_a": "pano_65",
+      "pano_b": "pano_69",
+      "room_label_a": "hallway",
+      "room_label_b": "closet",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -1.3007045338413759,
+              1.598623812502586
+            ],
+            [
+              -1.6463519162051743,
+              1.1850315740617676
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.7364056073009955,
+              -1.1410717329591265
+            ],
+            [
+              -0.5185241513170775,
+              -1.1410717329591265
+            ]
+          ],
+          "tokenInterval": [
+            155,
+            166
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              0.502028705966183,
+              0.17426114414717683
+            ],
+            [
+              0.08236020642150343,
+              0.5249865805697898
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.7619071829780721,
+              -0.21269940274218643
+            ],
+            [
+              -0.7619071829780721,
+              -0.4337818487186601
+            ]
+          ],
+          "tokenInterval": [
+            77,
+            121
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              -0.9801080079757695,
+              -0.5526142138947043
+            ],
+            [
+              -1.2753363502848056,
+              -0.905876402983844
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.1522584335240127,
+              -0.4839970731572212
+            ],
+            [
+              0.033840997144635176,
+              -0.4839970731572213
+            ]
+          ],
+          "tokenInterval": [
+            212,
+            217
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              -1.6006663441591356,
+              -1.4231620819504873
+            ],
+            [
+              -1.1848997444098937,
+              -1.7706266219510032
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.2786185246980033,
+              -0.45081623066496107
+            ],
+            [
+              0.2786185246980033,
+              -0.23178931554597704
+            ]
+          ],
+          "tokenInterval": [
+            221,
+            231
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              -0.5512028431530792,
+              -0.039397981835589936
+            ],
+            [
+              -0.8522010013280708,
+              -0.3995641753556971
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.4226220658232217,
+              -0.4839970731572212
+            ],
+            [
+              -0.2328855878463134,
+              -0.4839970731572212
+            ]
+          ],
+          "tokenInterval": [
+            194,
+            209
+          ]
+        },
+        {
+          "type": "door",
+          "index": 5,
+          "localEndpoints": [
+            [
+              -1.23508445543379,
+              -2.346815423469626
+            ],
+            [
+              -0.8085921605353865,
+              -2.703243643413256
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.4703440486350887,
+              -0.09799786002019684
+            ],
+            [
+              0.4703440486350887,
+              0.126679378916151
+            ]
+          ],
+          "tokenInterval": [
+            236,
+            244
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -0.2039842971720402,
+              -0.9905735335007589
+            ],
+            [
+              0.34572481268976823,
+              -1.4499765329418524
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.21759989048636924,
+              -0.12974027876709135
+            ],
+            [
+              -0.21759989048636919,
+              0.15984789550773298
+            ]
+          ],
+          "tokenInterval": [
+            247,
+            9
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.5819631957911622,
+              0.012314062516907186
+            ],
+            [
+              -0.5512090791798007,
+              -0.010646170566968954
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.0581050574591657,
+              -0.1389081025192847
+            ],
+            [
+              -1.5162568177617128,
+              -0.1389081025192847
+            ]
+          ],
+          "tokenInterval": [
+            64,
+            192
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": false,
+        "target_candidate_a": -1,
+        "target_candidate_b": -1,
+        "relative_transform_b_to_a": [
+          [
+            -0.65667721853276,
+            0.7541717514333707,
+            1.4848663129719515
+          ],
+          [
+            -0.7541717514333706,
+            -0.65667721853276,
+            1.0664410467547103
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": -2.2872007212075345,
+        "pose_valid": false,
+        "minimum_interface_endpoint_error": 0.5575928852314593
+      }
+    },
+    {
+      "id": "0058_floor_01_pano_14_pano_10_2",
+      "scene_id": "0058",
+      "floor_id": "floor_01",
+      "image_a": "0058/panos/floor_01_partial_room_02_pano_14.jpg",
+      "image_b": "0058/panos/floor_01_partial_room_12_pano_10.jpg",
+      "room_a": "complete_room_02",
+      "room_b": "complete_room_05",
+      "partial_room_a": "partial_room_02",
+      "partial_room_b": "partial_room_12",
+      "pano_a": "pano_14",
+      "pano_b": "pano_10",
+      "room_label_a": "hallway",
+      "room_label_b": "kitchen",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -0.29833694741477035,
+              0.9254866598433442
+            ],
+            [
+              -0.3050695875620397,
+              0.4756524004397718
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.20880243378779098,
+              2.5983675456319704
+            ],
+            [
+              -0.208802433787791,
+              2.4165124583400828
+            ]
+          ],
+          "tokenInterval": [
+            140,
+            151
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              0.25052364089148893,
+              -0.7993281181781373
+            ],
+            [
+              -0.24660266085024027,
+              -0.7918876611044419
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.023470467494223574,
+              1.9045508217280336
+            ],
+            [
+              -0.17750343591233733,
+              1.9045508217280336
+            ]
+          ],
+          "tokenInterval": [
+            243,
+            12
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              0.21902725809796028,
+              1.7798453760257789
+            ],
+            [
+              -0.18421800691964244,
+              1.7858807217196648
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.004862081354374659,
+              2.946812628765935
+            ],
+            [
+              -0.16788257465127565,
+              2.946812628765935
+            ]
+          ],
+          "tokenInterval": [
+            123,
+            132
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              0.3501741197485546,
+              1.5016403200632424
+            ],
+            [
+              0.34223828611642865,
+              0.9714159553903124
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.04982791774873707,
+              2.8351608467960867
+            ],
+            [
+              0.0498279177487371,
+              2.6208063459856588
+            ]
+          ],
+          "tokenInterval": [
+            114,
+            118
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              -0.2867775283759028,
+              1.6978170664511452
+            ],
+            [
+              -0.29407435972330537,
+              1.2102869663190479
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.20880243378779098,
+              2.9105985742291782
+            ],
+            [
+              -0.20880243378779098,
+              2.713504139860178
+            ]
+          ],
+          "tokenInterval": [
+            134,
+            137
+          ]
+        },
+        {
+          "type": "door",
+          "index": 5,
+          "localEndpoints": [
+            [
+              0.32951891852680004,
+              0.12158480823135218
+            ],
+            [
+              0.3233454290868027,
+              -0.2908903856646561
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.04982791774873707,
+              2.277243991142193
+            ],
+            [
+              0.04982791774873707,
+              2.1104921023661976
+            ]
+          ],
+          "tokenInterval": [
+            34,
+            78
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -1.19878222887655,
+              5.654636134595966
+            ],
+            [
+              -1.1345549522078833,
+              6.322186969748224
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.1786456079335892,
+              0.7583705676444346
+            ],
+            [
+              -0.09244190795632523,
+              0.7583705676444346
+            ]
+          ],
+          "tokenInterval": [
+            135,
+            136
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              1.5810940082132492,
+              5.781450559978575
+            ],
+            [
+              1.620137972968045,
+              6.187256825347358
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.02000176489747041,
+              1.8719943434667754
+            ],
+            [
+              -0.14479319395580648,
+              1.8719943434667754
+            ]
+          ],
+          "tokenInterval": [
+            117,
+            117
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              1.2325298496627624,
+              2.158623823218668
+            ],
+            [
+              1.3423211374854664,
+              3.299747496523086
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.491205228142041,
+              1.8719943434667754
+            ],
+            [
+              1.0278032434097288,
+              1.8719943434667754
+            ]
+          ],
+          "tokenInterval": [
+            106,
+            112
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              0.45428036496518515,
+              -0.7168672100871122
+            ],
+            [
+              0.49434404322214975,
+              -0.30046247884376776
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              2.6783392150898337,
+              1.6701710074266527
+            ],
+            [
+              2.5092402966953733,
+              1.6701710074266527
+            ]
+          ],
+          "tokenInterval": [
+            23,
+            41
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              -0.18571481661735137,
+              -0.7595094868447227
+            ],
+            [
+              0.3288901840668045,
+              -0.809021338247743
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              2.720273334218769,
+              1.4143082615630866
+            ],
+            [
+              2.720273334218769,
+              1.6232855917587368
+            ]
+          ],
+          "tokenInterval": [
+            246,
+            15
+          ]
+        },
+        {
+          "type": "door",
+          "index": 5,
+          "localEndpoints": [
+            [
+              -3.1838542006115915,
+              6.767437883988412
+            ],
+            [
+              -3.2380794664841526,
+              6.203843669861622
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.19226177543038947,
+              -0.08343888149204037
+            ],
+            [
+              0.03660971634553256,
+              -0.08343888149204037
+            ]
+          ],
+          "tokenInterval": [
+            145,
+            147
+          ]
+        },
+        {
+          "type": "door",
+          "index": 6,
+          "localEndpoints": [
+            [
+              -1.7655332706899909,
+              6.26223353852363
+            ],
+            [
+              -1.3831663940412346,
+              6.225444754984993
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.043891405941205,
+              0.5068060881032184
+            ],
+            [
+              -0.043891405941205,
+              0.6620824824854596
+            ]
+          ],
+          "tokenInterval": [
+            136,
+            139
+          ]
+        },
+        {
+          "type": "door",
+          "index": 7,
+          "localEndpoints": [
+            [
+              -2.926146722057142,
+              6.883828930778475
+            ],
+            [
+              -2.4076049742010333,
+              6.833938311892181
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.24907047440954866,
+              0.015748489228506246
+            ],
+            [
+              -0.24907047440954866,
+              0.22632450368209467
+            ]
+          ],
+          "tokenInterval": [
+            141,
+            144
+          ]
+        },
+        {
+          "type": "door",
+          "index": 8,
+          "localEndpoints": [
+            [
+              -1.2985133559674709,
+              5.658257070227124
+            ],
+            [
+              -1.252938097812736,
+              6.131946804892696
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.18104956600115152,
+              0.7181017785057877
+            ],
+            [
+              -0.011312373661097386,
+              0.7181017785057876
+            ]
+          ],
+          "tokenInterval": [
+            136,
+            137
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": true,
+        "target_candidate_a": 1,
+        "target_candidate_b": 1,
+        "relative_transform_b_to_a": [
+          [
+            -0.08086386208746649,
+            -0.9967251556012315,
+            6.131108776224746
+          ],
+          [
+            0.9967251556012315,
+            -0.08086386208746649,
+            -1.9881367102957461
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": 1.651748576864568,
+        "pose_valid": true,
+        "interface_endpoint_error": 0.03944570517088106
+      }
+    },
+    {
+      "id": "0261_floor_01_pano_10_pano_6_2",
+      "scene_id": "0261",
+      "floor_id": "floor_01",
+      "image_a": "0261/panos/floor_01_partial_room_03_pano_10.jpg",
+      "image_b": "0261/panos/floor_01_partial_room_06_pano_6.jpg",
+      "room_a": "complete_room_03",
+      "room_b": "complete_room_04",
+      "partial_room_a": "partial_room_03",
+      "partial_room_b": "partial_room_06",
+      "pano_a": "pano_10",
+      "pano_b": "pano_6",
+      "room_label_a": "pantry",
+      "room_label_b": "living room",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.17084617368313765,
+              0.1928674279559767
+            ],
+            [
+              -0.25380739869246094,
+              0.1885747664820299
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.056471765492841,
+              -1.010879538056326
+            ],
+            [
+              -1.2281365682020666,
+              -1.010879538056326
+            ]
+          ],
+          "tokenInterval": [
+            98,
+            165
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.2443833444866995,
+              -4.191307814422168
+            ],
+            [
+              0.5909594335131844,
+              -4.539365484875754
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.5617700701275892,
+              -0.8408684506449566
+            ],
+            [
+              -1.7603183666535096,
+              -0.8408684506449564
+            ]
+          ],
+          "tokenInterval": [
+            2,
+            5
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              -0.46498918283432644,
+              -2.7699790118084637
+            ],
+            [
+              -0.7836591489548488,
+              -2.4499467604116973
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.95231697483058,
+              -1.0430681700751632
+            ],
+            [
+              -0.7697556818546891,
+              -1.0430681700751634
+            ]
+          ],
+          "tokenInterval": [
+            243,
+            249
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              0.0361218208232569,
+              -3.2732322196729786
+            ],
+            [
+              -0.2967375902653753,
+              -2.9389498647145325
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.2393960298977753,
+              -1.0430681700751634
+            ],
+            [
+              -1.0487058145401353,
+              -1.0430681700751632
+            ]
+          ],
+          "tokenInterval": [
+            251,
+            0
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              -2.0917868386376335,
+              -1.8483804361664153
+            ],
+            [
+              -2.380573406131088,
+              -1.5583593322224043
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.22433797356780127,
+              -0.839947267412928
+            ],
+            [
+              -0.05889643605015821,
+              -0.839947267412928
+            ]
+          ],
+          "tokenInterval": [
+            215,
+            221
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              2.7491486053933967,
+              -0.6381348549644649
+            ],
+            [
+              1.8584747897011775,
+              0.2563465107137926
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.2584101572136581,
+              -2.5717717436260905
+            ],
+            [
+              -0.7481563501415325,
+              -2.5717717436260905
+            ]
+          ],
+          "tokenInterval": [
+            54,
+            69
+          ]
+        },
+        {
+          "type": "door",
+          "index": 5,
+          "localEndpoints": [
+            [
+              -4.657102304841438,
+              -3.1929798410712857
+            ],
+            [
+              -4.20922435445071,
+              -3.6427724291820325
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.1221960299340259,
+              0.2783691762694016
+            ],
+            [
+              -0.13438659915439966,
+              0.2783691762694016
+            ]
+          ],
+          "tokenInterval": [
+            216,
+            221
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -3.3498243847802405,
+              -3.3092346045242027
+            ],
+            [
+              -3.822930864923061,
+              -2.834105636979007
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.2839666769000132,
+              -0.06292921119707606
+            ],
+            [
+              -0.012930997630884677,
+              -0.06292921119707606
+            ]
+          ],
+          "tokenInterval": [
+            217,
+            223
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": true,
+        "target_candidate_a": 0,
+        "target_candidate_b": 2,
+        "relative_transform_b_to_a": [
+          [
+            -0.6983982064968192,
+            0.7157093999396867,
+            2.0870550481781116
+          ],
+          [
+            -0.7157093999396867,
+            -0.6983982064968192,
+            -2.151499783015701
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": -2.343953322205347,
+        "pose_valid": true,
+        "interface_endpoint_error": 0.033606640699573434
+      }
+    },
+    {
+      "id": "0364_floor_01_pano_18_pano_37_0",
+      "scene_id": "0364",
+      "floor_id": "floor_01",
+      "image_a": "0364/panos/floor_01_partial_room_01_pano_18.jpg",
+      "image_b": "0364/panos/floor_01_partial_room_03_pano_37.jpg",
+      "room_a": "complete_room_01",
+      "room_b": "complete_room_02",
+      "partial_room_a": "partial_room_01",
+      "partial_room_b": "partial_room_03",
+      "pano_a": "pano_18",
+      "pano_b": "pano_37",
+      "room_label_a": "family room",
+      "room_label_b": "primary bedroom",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.9525428332205467,
+              -1.6388386159287012
+            ],
+            [
+              0.9579721673732937,
+              -2.2141716211792555
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.0957626214767684,
+              -0.4533305831894051
+            ],
+            [
+              -0.13681231711038833,
+              -0.4533305831894051
+            ]
+          ],
+          "tokenInterval": [
+            16,
+            21
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              -3.093042276136886,
+              -1.0216616213250036
+            ],
+            [
+              -2.557633425093691,
+              -1.0166090456268895
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.36066222027127065,
+              1.1795732678768227
+            ],
+            [
+              0.3606622202712706,
+              0.9631374306938646
+            ]
+          ],
+          "tokenInterval": [
+            204,
+            207
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              -2.720243492799207,
+              -2.7055053096535144
+            ],
+            [
+              -2.2457475592228393,
+              -2.69865475741952
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.32138296656428034,
+              1.0353079430022694
+            ],
+            [
+              -0.320423860542974,
+              0.84348673874093
+            ]
+          ],
+          "tokenInterval": [
+            223,
+            227
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              -3.235946348596733,
+              -1.0230101863370786
+            ],
+            [
+              -3.754874576723216,
+              -1.027907236786261
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.3606622202712706,
+              1.237341387509955
+            ],
+            [
+              0.36066222027127065,
+              1.4471150310976353
+            ]
+          ],
+          "tokenInterval": [
+            202,
+            204
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              -1.0846855477234891,
+              -1.4906636005014733
+            ],
+            [
+              -1.5778147461366778,
+              -1.4943558558332615
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.1634270659253234,
+              0.36956830908033306
+            ],
+            [
+              0.16381564462438492,
+              0.5689091816988501
+            ]
+          ],
+          "tokenInterval": [
+            222,
+            230
+          ]
+        },
+        {
+          "type": "door",
+          "index": 5,
+          "localEndpoints": [
+            [
+              -5.054351932154078,
+              -1.5887389515802002
+            ],
+            [
+              -5.047374130559616,
+              -2.0761666342673286
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.13892632478437017,
+              1.9745134970918619
+            ],
+            [
+              -0.058122481876023646,
+              1.9735522834008359
+            ]
+          ],
+          "tokenInterval": [
+            204,
+            207
+          ]
+        },
+        {
+          "type": "door",
+          "index": 6,
+          "localEndpoints": [
+            [
+              -5.012032775340125,
+              -2.1380336280373453
+            ],
+            [
+              -4.48647503623358,
+              -2.1316816511342824
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.08326442633833642,
+              1.9595030120601376
+            ],
+            [
+              -0.08270162131846581,
+              1.7470441170589848
+            ]
+          ],
+          "tokenInterval": [
+            208,
+            210
+          ]
+        },
+        {
+          "type": "door",
+          "index": 7,
+          "localEndpoints": [
+            [
+              -2.1271721340555767,
+              -4.916472603272214
+            ],
+            [
+              -2.1178103066446363,
+              -6.538485594620093
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.2173359741135124,
+              0.8040173593575731
+            ],
+            [
+              -1.873002382789681,
+              0.8064203252532451
+            ]
+          ],
+          "tokenInterval": [
+            239,
+            243
+          ]
+        },
+        {
+          "type": "door",
+          "index": 8,
+          "localEndpoints": [
+            [
+              0.6150938242088982,
+              -5.307660757992228
+            ],
+            [
+              0.6102121000509683,
+              -4.790356618742479
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.3859176167331486,
+              -0.3029364307971524
+            ],
+            [
+              -1.1768005013948808,
+              -0.3029364307971524
+            ]
+          ],
+          "tokenInterval": [
+            4,
+            5
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.16565342743216105,
+              -4.594296816271991
+            ],
+            [
+              -0.427419672826203,
+              -4.601131844221931
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.095855804118147,
+              -0.1239901001786563
+            ],
+            [
+              -1.0963563281048732,
+              0.11576088946287906
+            ]
+          ],
+          "tokenInterval": [
+            252,
+            1
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 1,
+          "localEndpoints": [
+            [
+              -2.1517453059559255,
+              -2.0961245230731236
+            ],
+            [
+              -1.0829802533273296,
+              -2.0833327023152863
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.07723486027073412,
+              0.8031919487431595
+            ],
+            [
+              -0.07614105716917219,
+              0.37113972362619757
+            ]
+          ],
+          "tokenInterval": [
+            223,
+            236
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 2,
+          "localEndpoints": [
+            [
+              -2.798595211510811,
+              -2.1690460815711337
+            ],
+            [
+              -2.791038433639895,
+              -2.692457953813535
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.10424296241867237,
+              1.0649320396064466
+            ],
+            [
+              -0.31583907642848985,
+              1.0638740590363978
+            ]
+          ],
+          "tokenInterval": [
+            218,
+            223
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 3,
+          "localEndpoints": [
+            [
+              -1.3266691141390254,
+              -8.121123241981064
+            ],
+            [
+              -0.19515328788862701,
+              -8.10922058539782
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -2.515735021107805,
+              0.4926715878279597
+            ],
+            [
+              -2.5152399851760934,
+              0.03525838692622052
+            ]
+          ],
+          "tokenInterval": [
+            249,
+            255
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.19498239273097268,
+              -0.8821333829547688
+            ],
+            [
+              -0.30257935243970396,
+              -0.8771861794928906
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.1172078391792622,
+              1.9542284727905508
+            ],
+            [
+              -0.11720783917926225,
+              1.753091116429078
+            ]
+          ],
+          "tokenInterval": [
+            242,
+            8
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              1.0959290865734506,
+              -0.8910914000169853
+            ],
+            [
+              2.0488132916497266,
+              -0.9005658262241394
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.11720783917926231,
+              2.3184325901306493
+            ],
+            [
+              -0.11720783917926225,
+              2.703632239798051
+            ]
+          ],
+          "tokenInterval": [
+            36,
+            47
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              -0.5886332427313979,
+              0.32835724087990803
+            ],
+            [
+              -1.044521398713014,
+              0.3328900882810439
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.603346153555393,
+              1.6326213475937388
+            ],
+            [
+              -0.603346153555393,
+              1.448330373899218
+            ]
+          ],
+          "tokenInterval": [
+            171,
+            179
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              -1.4543163431978103,
+              -0.3928255735986419
+            ],
+            [
+              -0.5391651924510711,
+              -0.4019248240636531
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.30836052687013404,
+              1.285605408291877
+            ],
+            [
+              -0.30836052687013404,
+              1.6555516208352423
+            ]
+          ],
+          "tokenInterval": [
+            202,
+            218
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": true,
+        "target_candidate_a": 6,
+        "target_candidate_b": 0,
+        "relative_transform_b_to_a": [
+          [
+            -0.9998122303274976,
+            0.019377927844717126,
+            -4.786152778474163
+          ],
+          [
+            -0.01937792784471713,
+            -0.9998122303274976,
+            -3.10006751424641
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": -3.1222135127915847,
+        "pose_valid": true,
+        "interface_endpoint_error": 0.034691419977550264
+      }
+    },
+    {
+      "id": "0400_floor_02_pano_85_pano_98_3",
+      "scene_id": "0400",
+      "floor_id": "floor_02",
+      "image_a": "0400/panos/floor_02_partial_room_04_pano_85.jpg",
+      "image_b": "0400/panos/floor_02_partial_room_06_pano_98.jpg",
+      "room_a": "complete_room_03",
+      "room_b": "complete_room_05",
+      "partial_room_a": "partial_room_04",
+      "partial_room_b": "partial_room_06",
+      "pano_a": "pano_85",
+      "pano_b": "pano_98",
+      "room_label_a": "hallway",
+      "room_label_b": "closet",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -1.552920930254254,
+              -0.7202850162489325
+            ],
+            [
+              -1.6912151164228395,
+              -0.274203146471696
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.09966719243966682,
+              -0.12027642951045392
+            ],
+            [
+              -0.08911724284970722,
+              -0.12009983041289596
+            ]
+          ],
+          "tokenInterval": [
+            198,
+            209
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              -0.8472736353285698,
+              0.04148792883956864
+            ],
+            [
+              -1.274412787091538,
+              -0.09137174019051125
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.10964661993847773,
+              0.24355059156617764
+            ],
+            [
+              -0.10964661993847771,
+              0.06273022670022388
+            ]
+          ],
+          "tokenInterval": [
+            190,
+            194
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              -0.5378630084101556,
+              -0.4999631380562624
+            ],
+            [
+              -0.8929529776900295,
+              -0.610412240180727
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.13649296467093192,
+              0.297972478696963
+            ],
+            [
+              0.13649296467093192,
+              0.14765261796675838
+            ]
+          ],
+          "tokenInterval": [
+            216,
+            222
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              0.4773280605304935,
+              -0.24745396261226865
+            ],
+            [
+              0.3407812591429225,
+              0.1933564255417521
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.16091090303656408,
+              0.7201371515924071
+            ],
+            [
+              -0.025629029413512243,
+              0.7203553269519977
+            ]
+          ],
+          "tokenInterval": [
+            44,
+            85
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              0.22750615365701746,
+              0.22138235979327794
+            ],
+            [
+              -0.2222620631303206,
+              0.15838703996317224
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.0500463102796855,
+              0.6799975794157509
+            ],
+            [
+              -0.07972973381833841,
+              0.4988305688100056
+            ]
+          ],
+          "tokenInterval": [
+            95,
+            166
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -0.9301224175564062,
+              -0.7365752616523688
+            ],
+            [
+              -1.4937389130979235,
+              -0.9111825919293868
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.1807274972991255,
+              0.1181587703735637
+            ],
+            [
+              0.18045615398374829,
+              -0.120352003843049
+            ]
+          ],
+          "tokenInterval": [
+            214,
+            219
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.13966626607735996,
+              -0.016497098262869544
+            ],
+            [
+              -0.1687068388179726,
+              -0.020209580265039065
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.10227635148125032,
+              0.14676474067927367
+            ],
+            [
+              0.10227635148125032,
+              0.2714262132206213
+            ]
+          ],
+          "tokenInterval": [
+            196,
+            59
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.16156806922203337,
+              -0.016233424003672208
+            ],
+            [
+              -0.20140729537340551,
+              -0.020603258748984596
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.10227635148125032,
+              0.13791081993202686
+            ],
+            [
+              0.10227635148125032,
+              0.2846455472100698
+            ]
+          ],
+          "tokenInterval": [
+            196,
+            59
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 1,
+          "localEndpoints": [
+            [
+              -0.20144784558989043,
+              -0.019691956144623952
+            ],
+            [
+              -0.20246545807806637,
+              0.0648348704839457
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.10264489435481243,
+              0.28465750298979
+            ],
+            [
+              0.13681531489243104,
+              0.28465750298979
+            ]
+          ],
+          "tokenInterval": [
+            179,
+            195
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 2,
+          "localEndpoints": [
+            [
+              0.16243380020548964,
+              -0.016223001529585526
+            ],
+            [
+              0.16143441180434748,
+              0.06679006198870077
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.10227635148125032,
+              0.13756084356408466
+            ],
+            [
+              0.1358348252070004,
+              0.13756084356408466
+            ]
+          ],
+          "tokenInterval": [
+            59,
+            79
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": true,
+        "target_candidate_a": 2,
+        "target_candidate_b": 1,
+        "relative_transform_b_to_a": [
+          [
+            -0.9583807975703242,
+            0.28549298914066007,
+            -0.7816280912043173
+          ],
+          [
+            -0.28549298914066007,
+            -0.9583807975703242,
+            -0.5061738958602573
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": -2.8520718668252654,
+        "pose_valid": true,
+        "interface_endpoint_error": 0.03614836543609135
+      }
+    },
+    {
+      "id": "0437_floor_01_pano_23_pano_44_1",
+      "scene_id": "0437",
+      "floor_id": "floor_01",
+      "image_a": "0437/panos/floor_01_partial_room_11_pano_23.jpg",
+      "image_b": "0437/panos/floor_01_partial_room_03_pano_44.jpg",
+      "room_a": "complete_room_02",
+      "room_b": "complete_room_03",
+      "partial_room_a": "partial_room_11",
+      "partial_room_b": "partial_room_03",
+      "pano_a": "pano_23",
+      "pano_b": "pano_44",
+      "room_label_a": "kitchen",
+      "room_label_b": "garage",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -0.7692776078848029,
+              -0.49340234078120987
+            ],
+            [
+              -0.7601186354028525,
+              -1.4226964846758408
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.1936526322561118,
+              1.188179940701123
+            ],
+            [
+              -1.5693157698106028,
+              1.188179940701123
+            ]
+          ],
+          "tokenInterval": [
+            215,
+            236
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              -1.3338237939126865,
+              0.23291606401246345
+            ],
+            [
+              -0.8604937846941805,
+              0.23758112787603725
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.897821041976427,
+              1.4134796259714228
+            ],
+            [
+              -0.897821041976427,
+              1.222138017364577
+            ]
+          ],
+          "tokenInterval": [
+            181,
+            184
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              -1.404702173672679,
+              -0.9797724215425173
+            ],
+            [
+              -1.400208262570019,
+              -1.4357368082807902
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.387715136866184,
+              1.4469602211780042
+            ],
+            [
+              -1.5720367677088622,
+              1.4469602211780042
+            ]
+          ],
+          "tokenInterval": [
+            216,
+            224
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              -1.3312069003094067,
+              -1.4889080121870897
+            ],
+            [
+              -0.8168413483003533,
+              -1.4838385086639423
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.5938037963116174,
+              1.4192812512895578
+            ],
+            [
+              -1.5938037963116174,
+              1.2113512020288812
+            ]
+          ],
+          "tokenInterval": [
+            226,
+            235
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              0.2879460112436081,
+              2.0999166521032175
+            ],
+            [
+              -0.1967051716940255,
+              2.0951400085861636
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.14962823105379597,
+              0.7505121308997665
+            ],
+            [
+              -0.14962823105379608,
+              0.9464302750073127
+            ]
+          ],
+          "tokenInterval": [
+            122,
+            131
+          ]
+        },
+        {
+          "type": "door",
+          "index": 5,
+          "localEndpoints": [
+            [
+              1.527854880260664,
+              -0.5397139777080306
+            ],
+            [
+              1.0749954851917143,
+              -0.5441772865159892
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.2215233928185607,
+              0.25984875943430585
+            ],
+            [
+              -1.2215233928185607,
+              0.4429152108268157
+            ]
+          ],
+          "tokenInterval": [
+            44,
+            50
+          ]
+        },
+        {
+          "type": "door",
+          "index": 6,
+          "localEndpoints": [
+            [
+              5.529565793000269,
+              1.4444210827829067
+            ],
+            [
+              5.52406250959334,
+              2.002799116162803
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.43546526970236643,
+              -1.365572827162833
+            ],
+            [
+              -0.20974336524497406,
+              -1.3655728271628333
+            ]
+          ],
+          "tokenInterval": [
+            74,
+            78
+          ]
+        },
+        {
+          "type": "door",
+          "index": 7,
+          "localEndpoints": [
+            [
+              3.250330411723956,
+              2.270909070476369
+            ],
+            [
+              3.2457240162962413,
+              2.7382864213609133
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.09231352528794601,
+              -0.447583832208003
+            ],
+            [
+              0.09662174693852155,
+              -0.447583832208003
+            ]
+          ],
+          "tokenInterval": [
+            88,
+            92
+          ]
+        },
+        {
+          "type": "door",
+          "index": 8,
+          "localEndpoints": [
+            [
+              2.5026355084562995,
+              2.2354517064259127
+            ],
+            [
+              2.4972884082457347,
+              2.7779829698714344
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.10366695750406074,
+              -0.14521950449291032
+            ],
+            [
+              0.11564895876029047,
+              -0.14521950449291032
+            ]
+          ],
+          "tokenInterval": [
+            93,
+            98
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -1.413995668566974,
+              -0.03682926950197379
+            ],
+            [
+              -1.4103242312165614,
+              -0.40934324267290034
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.0065344468141473,
+              1.4469602211780042
+            ],
+            [
+              -1.1571216089776775,
+              1.4469602211780042
+            ]
+          ],
+          "tokenInterval": [
+            193,
+            203
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 1,
+          "localEndpoints": [
+            [
+              0.3592722088019972,
+              0.33029199184952795
+            ],
+            [
+              0.34193855604043194,
+              2.0890113280381493
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.8652060115199031,
+              0.7287314427316436
+            ],
+            [
+              -0.15425132806363684,
+              0.7287314427316436
+            ]
+          ],
+          "tokenInterval": [
+            94,
+            121
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -0.29306431999758403,
+              0.11488800631447305
+            ],
+            [
+              -0.29355072145961236,
+              -0.3249719656742195
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.8087049423341275,
+              1.1960446513040737
+            ],
+            [
+              -1.6511937004657984,
+              1.1960446513040737
+            ]
+          ],
+          "tokenInterval": [
+            176,
+            226
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              3.5037329836621627,
+              1.467601261421426
+            ],
+            [
+              3.5017507751347905,
+              -0.32493896592447763
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -2.294606396258269,
+              2.5551178866825985
+            ],
+            [
+              -1.6527083939652834,
+              2.5551178866825985
+            ]
+          ],
+          "tokenInterval": [
+            60,
+            80
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              0.28263413220705513,
+              -0.3990649046642958
+            ],
+            [
+              -0.23056160469916054,
+              -0.39849740779566895
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.624889651447905,
+              1.4024021103933295
+            ],
+            [
+              -1.624889651447905,
+              1.218629766944655
+            ]
+          ],
+          "tokenInterval": [
+            234,
+            25
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": true,
+        "target_candidate_a": 3,
+        "target_candidate_b": 2,
+        "relative_transform_b_to_a": [
+          [
+            -0.8858220121078203,
+            0.009710174674924275,
+            -1.034455815746533
+          ],
+          [
+            -0.009710174674924275,
+            -0.8858220121078204,
+            -1.9161509587804764
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": -3.130631325417451,
+        "pose_valid": true,
+        "interface_endpoint_error": 0.03364970655960507
+      }
+    },
+    {
+      "id": "0673_floor_01_pano_34_pano_16_11",
+      "scene_id": "0673",
+      "floor_id": "floor_01",
+      "image_a": "0673/panos/floor_01_partial_room_09_pano_34.jpg",
+      "image_b": "0673/panos/floor_01_partial_room_16_pano_16.jpg",
+      "room_a": "complete_room_04",
+      "room_b": "complete_room_11",
+      "partial_room_a": "partial_room_09",
+      "partial_room_b": "partial_room_16",
+      "pano_a": "pano_34",
+      "pano_b": "pano_16",
+      "room_label_a": "kitchen",
+      "room_label_b": "primary bedroom",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.656803492185988,
+              3.2786573665841217
+            ],
+            [
+              0.17086236111699937,
+              3.292730874996697
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.5854972541762685,
+              0.10887042800235802
+            ],
+            [
+              -0.7820096756199056,
+              0.10887042800235802
+            ]
+          ],
+          "tokenInterval": [
+            119,
+            125
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              -0.12019648315752599,
+              3.3011603304009784
+            ],
+            [
+              -0.5081072708080991,
+              3.3123947482847242
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.899712571329002,
+              0.10887042800235824
+            ],
+            [
+              -1.0565819600502881,
+              0.10887042800235802
+            ]
+          ],
+          "tokenInterval": [
+            129,
+            134
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              0.705049336849627,
+              -0.632675552449101
+            ],
+            [
+              0.6953434953158755,
+              -0.9678064575951967
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.520232693229284,
+              -1.4709649729546912
+            ],
+            [
+              -0.520232693229284,
+              -1.606490413095932
+            ]
+          ],
+          "tokenInterval": [
+            25,
+            34
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              -1.695464730869954,
+              -0.423031529037176
+            ],
+            [
+              -1.2210474585742195,
+              -0.4367712910080086
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.4926295626896242,
+              -1.414347787456051
+            ],
+            [
+              -1.300777338226895,
+              -1.414347787456051
+            ]
+          ],
+          "tokenInterval": [
+            201,
+            205
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              -1.3329662354409435,
+              1.71302701026146
+            ],
+            [
+              -0.8501738359216396,
+              1.6990446933474432
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.3711558505720665,
+              -0.5470172194813663
+            ],
+            [
+              -1.1759167620935633,
+              -0.5470172194813663
+            ]
+          ],
+          "tokenInterval": [
+            146,
+            154
+          ]
+        },
+        {
+          "type": "door",
+          "index": 5,
+          "localEndpoints": [
+            [
+              -1.7232052674214362,
+              1.119726894234292
+            ],
+            [
+              -1.7368031090351106,
+              0.6502099592856743
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.5218917048099905,
+              -0.7913106475656219
+            ],
+            [
+              -1.5218917048099905,
+              -0.9811811975077065
+            ]
+          ],
+          "tokenInterval": [
+            168,
+            177
+          ]
+        },
+        {
+          "type": "door",
+          "index": 6,
+          "localEndpoints": [
+            [
+              -1.707260001349976,
+              1.670297541070141
+            ],
+            [
+              -1.7158618331270865,
+              1.373286750264111
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.5218917048099905,
+              -0.5686623388137083
+            ],
+            [
+              -1.5218917048099905,
+              -0.6887721750973471
+            ]
+          ],
+          "tokenInterval": [
+            160,
+            164
+          ]
+        },
+        {
+          "type": "door",
+          "index": 7,
+          "localEndpoints": [
+            [
+              1.73033246019219,
+              1.8295255347616273
+            ],
+            [
+              2.3147610629712694,
+              1.8125996967703724
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.1347729894616413,
+              -0.4640984271319699
+            ],
+            [
+              0.10156732534232138,
+              -0.4640984271319698
+            ]
+          ],
+          "tokenInterval": [
+            91,
+            97
+          ]
+        },
+        {
+          "type": "door",
+          "index": 8,
+          "localEndpoints": [
+            [
+              2.684268857525281,
+              1.4900893164169964
+            ],
+            [
+              2.669896999536482,
+              0.9938465372959353
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.25464342127582384,
+              -0.5900868939353164
+            ],
+            [
+              0.25464342127582407,
+              -0.790765255807004
+            ]
+          ],
+          "tokenInterval": [
+            78,
+            84
+          ]
+        },
+        {
+          "type": "door",
+          "index": 9,
+          "localEndpoints": [
+            [
+              1.315023246626774,
+              -3.097990202367597
+            ],
+            [
+              1.848714691536489,
+              -3.1134466240603516
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.24491952569901088,
+              -2.459953758981938
+            ],
+            [
+              -0.029097090762808198,
+              -2.459953758981938
+            ]
+          ],
+          "tokenInterval": [
+            16,
+            21
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.23675663847994294,
+              -0.47158238435330607
+            ],
+            [
+              -0.25540508664310974,
+              -0.4269376528355757
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.2821589608914863,
+              -0.788765272902773
+            ],
+            [
+              0.2821589608914863,
+              -0.5890038483158302
+            ]
+          ],
+          "tokenInterval": [
+            234,
+            18
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              2.553149615417016,
+              2.2691519554155
+            ],
+            [
+              2.5937176388557486,
+              2.716372214596804
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.4700950449128396,
+              -1.6211966720375774
+            ],
+            [
+              1.6516153694684772,
+              -1.6211966720375774
+            ]
+          ],
+          "tokenInterval": [
+            93,
+            96
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": true,
+        "target_candidate_a": 8,
+        "target_candidate_b": 0,
+        "relative_transform_b_to_a": [
+          [
+            0.06147188674027346,
+            0.998108815280474,
+            3.194218045369903
+          ],
+          [
+            -0.9981088152804738,
+            0.06147188674027343,
+            1.2621195315986078
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": -1.5092856591520025,
+        "pose_valid": true,
+        "interface_endpoint_error": 0.02756248759789666
+      }
+    },
+    {
+      "id": "0902_floor_01_pano_8_pano_58_12",
+      "scene_id": "0902",
+      "floor_id": "floor_01",
+      "image_a": "0902/panos/floor_01_partial_room_14_pano_8.jpg",
+      "image_b": "0902/panos/floor_01_partial_room_08_pano_58.jpg",
+      "room_a": "complete_room_01",
+      "room_b": "complete_room_05",
+      "partial_room_a": "partial_room_14",
+      "partial_room_b": "partial_room_08",
+      "pano_a": "pano_8",
+      "pano_b": "pano_58",
+      "room_label_a": "dining room",
+      "room_label_b": "patio",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              1.2629824022597627,
+              2.2579822375001375
+            ],
+            [
+              1.3291819214431357,
+              1.7233668521742505
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.6671935431462883,
+              1.5342776710858073
+            ],
+            [
+              1.6671935431462883,
+              1.3165217415134285
+            ]
+          ],
+          "tokenInterval": [
+            101,
+            107
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              1.858237080787891,
+              0.119109366050154
+            ],
+            [
+              2.3370021182658025,
+              -0.2521874357853596
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.7997398190626754,
+              0.6466736792820786
+            ],
+            [
+              1.9733582914054844,
+              0.47394101547163114
+            ]
+          ],
+          "tokenInterval": [
+            59,
+            66
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              0.7236816694396981,
+              1.3799206433123887
+            ],
+            [
+              0.7922382268675033,
+              0.8262702419498383
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.407229194009685,
+              1.2088220098342428
+            ],
+            [
+              1.407229194009685,
+              0.9833128660348509
+            ]
+          ],
+          "tokenInterval": [
+            96,
+            108
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              0.19630830374797315,
+              6.741679172095489
+            ],
+            [
+              -0.39504574199259235,
+              6.668453906662275
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.462009540804991,
+              3.3859540413969853
+            ],
+            [
+              1.2211432031141505,
+              3.3859540413969853
+            ]
+          ],
+          "tokenInterval": [
+            126,
+            130
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              -3.4901916126110195,
+              1.4057511530196871
+            ],
+            [
+              -3.4250386834667097,
+              0.8795878402150847
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.2819345071244306,
+              1.4285062439834983
+            ],
+            [
+              -0.2819345071244306,
+              1.214192955530704
+            ]
+          ],
+          "tokenInterval": [
+            176,
+            181
+          ]
+        },
+        {
+          "type": "door",
+          "index": 5,
+          "localEndpoints": [
+            [
+              -3.3364543637933597,
+              0.16419684070018079
+            ],
+            [
+              -3.280939660443216,
+              -0.2841298977551021
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.28193450712443036,
+              0.922804723199677
+            ],
+            [
+              -0.2819345071244306,
+              0.7401953027375763
+            ]
+          ],
+          "tokenInterval": [
+            189,
+            195
+          ]
+        },
+        {
+          "type": "door",
+          "index": 6,
+          "localEndpoints": [
+            [
+              -2.7486415172714476,
+              -1.1838121738035083
+            ],
+            [
+              -2.099344130488337,
+              -1.1034119908086601
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.1130878538489537,
+              0.35283511205201107
+            ],
+            [
+              0.1513795743409143,
+              0.3528351120520111
+            ]
+          ],
+          "tokenInterval": [
+            208,
+            211
+          ]
+        },
+        {
+          "type": "door",
+          "index": 7,
+          "localEndpoints": [
+            [
+              -3.905918751556176,
+              2.550504852601087
+            ],
+            [
+              -4.49696987423527,
+              2.477317097051744
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.39184347780432915,
+              1.9083892290949884
+            ],
+            [
+              -0.6325864309187987,
+              1.9083892290949884
+            ]
+          ],
+          "tokenInterval": [
+            168,
+            171
+          ]
+        },
+        {
+          "type": "door",
+          "index": 8,
+          "localEndpoints": [
+            [
+              0.6278940353701945,
+              1.3502248481110821
+            ],
+            [
+              0.6952574122487194,
+              0.8062103578093036
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.3673276892584854,
+              1.2016673802365605
+            ],
+            [
+              1.3673276892584854,
+              0.980083070678585
+            ]
+          ],
+          "tokenInterval": [
+            99,
+            110
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.8573450093662207,
+              3.172740712961608
+            ],
+            [
+              0.949650044881876,
+              2.427301882914697
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.549907301907914,
+              1.9213940553420776
+            ],
+            [
+              1.549907301907914,
+              1.6177669435311004
+            ]
+          ],
+          "tokenInterval": [
+            112,
+            117
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -0.988541566115842,
+              0.2068785852764763
+            ],
+            [
+              -1.019457998507989,
+              -0.4545731891177108
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.8483352164157089,
+              4.032014729317717
+            ],
+            [
+              0.8483352164157087,
+              3.7643467942362725
+            ]
+          ],
+          "tokenInterval": [
+            183,
+            209
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              0.4485332298695706,
+              -1.3579025591676444
+            ],
+            [
+              -0.12166358066382203,
+              -1.3312514081306408
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.4581369345411113,
+              3.427301189070522
+            ],
+            [
+              1.2273969036366905,
+              3.427301189070522
+            ]
+          ],
+          "tokenInterval": [
+            252,
+            12
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": true,
+        "target_candidate_a": 3,
+        "target_candidate_b": 1,
+        "relative_transform_b_to_a": [
+          [
+            0.9856007340484938,
+            -0.16908930493402025,
+            -0.4974507210720811
+          ],
+          [
+            0.16908930493402025,
+            0.9856007340484938,
+            8.104521370679324
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": 0.16990559576167596,
+        "pose_valid": true,
+        "interface_endpoint_error": 0.041672756354157216
+      }
+    },
+    {
+      "id": "0930_floor_01_pano_8_pano_22_6",
+      "scene_id": "0930",
+      "floor_id": "floor_01",
+      "image_a": "0930/panos/floor_01_partial_room_04_pano_8.jpg",
+      "image_b": "0930/panos/floor_01_partial_room_28_pano_22.jpg",
+      "room_a": "complete_room_01",
+      "room_b": "complete_room_17",
+      "partial_room_a": "partial_room_04",
+      "partial_room_b": "partial_room_28",
+      "pano_a": "pano_8",
+      "pano_b": "pano_22",
+      "room_label_a": "dining room",
+      "room_label_b": "bedroom",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              3.418423218210218,
+              -2.107687940697166
+            ],
+            [
+              3.2096969801045367,
+              -2.3635195583816233
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -2.5099142492319637,
+              1.044255624217112
+            ],
+            [
+              -2.509914249231964,
+              1.1777215258872644
+            ]
+          ],
+          "tokenInterval": [
+            38,
+            41
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              1.8585273248871756,
+              -1.6610747509831896
+            ],
+            [
+              2.3547764843066994,
+              -2.0659512910537763
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.9072162089335605,
+              1.3029854215787264
+            ],
+            [
+              -2.1661065764121927,
+              1.3029854215787267
+            ]
+          ],
+          "tokenInterval": [
+            34,
+            34
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              -0.4871102158552256,
+              -6.106802831488157
+            ],
+            [
+              0.0406137813222708,
+              -5.459981976026422
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -2.3085963612666562,
+              3.2948210758669645
+            ],
+            [
+              -2.3085963612666562,
+              2.957378309899947
+            ]
+          ],
+          "tokenInterval": [
+            252,
+            0
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              2.434665946538824,
+              -5.5105676498474345
+            ],
+            [
+              2.8172610333961443,
+              -5.041628426503241
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -3.07135855829856,
+              2.361451102905458
+            ],
+            [
+              -3.07135855829856,
+              2.1168081739406372
+            ]
+          ],
+          "tokenInterval": [
+            16,
+            20
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              2.034346822120115,
+              -5.84802919547875
+            ],
+            [
+              1.5674082646670344,
+              -5.467066398910402
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -3.0322097248387796,
+              2.569443370173232
+            ],
+            [
+              -2.7886105319043795,
+              2.569443370173232
+            ]
+          ],
+          "tokenInterval": [
+            11,
+            13
+          ]
+        },
+        {
+          "type": "door",
+          "index": 5,
+          "localEndpoints": [
+            [
+              1.4175829322745315,
+              -5.3448278801289115
+            ],
+            [
+              1.1385530947313347,
+              -5.117174829123052
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -2.710447507092257,
+              2.569443370173232
+            ],
+            [
+              -2.5648792259014934,
+              2.5694433701732318
+            ]
+          ],
+          "tokenInterval": [
+            8,
+            10
+          ]
+        },
+        {
+          "type": "door",
+          "index": 6,
+          "localEndpoints": [
+            [
+              2.803382174574097,
+              -4.9261789327299
+            ],
+            [
+              2.3367155905523993,
+              -4.545438032077745
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -3.0375098727896725,
+              2.0841950744799593
+            ],
+            [
+              -2.7940525668494542,
+              2.0841950744799593
+            ]
+          ],
+          "tokenInterval": [
+            19,
+            21
+          ]
+        },
+        {
+          "type": "door",
+          "index": 7,
+          "localEndpoints": [
+            [
+              0.36905361040900025,
+              5.2647381303310805
+            ],
+            [
+              1.4245458298111378,
+              4.403589995868066
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.32910605750087485,
+              -0.4856157344477119
+            ],
+            [
+              -0.22153823753731172,
+              -0.48561573444771167
+            ]
+          ],
+          "tokenInterval": [
+            115,
+            125
+          ]
+        },
+        {
+          "type": "door",
+          "index": 8,
+          "localEndpoints": [
+            [
+              -0.7262140226275657,
+              4.155666451931065
+            ],
+            [
+              0.02277804591158233,
+              5.073691201795907
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.38874251214899913,
+              0.14163646314842526
+            ],
+            [
+              0.38874251214899935,
+              -0.33729183392918527
+            ]
+          ],
+          "tokenInterval": [
+            127,
+            135
+          ]
+        },
+        {
+          "type": "door",
+          "index": 9,
+          "localEndpoints": [
+            [
+              -4.991897641240193,
+              -2.225604204054369
+            ],
+            [
+              -2.215401120650686,
+              -4.490874146454345
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.09413117130436655,
+              3.2303435282744797
+            ],
+            [
+              -1.3543512913347047,
+              3.23034352827448
+            ]
+          ],
+          "tokenInterval": [
+            209,
+            237
+          ]
+        },
+        {
+          "type": "door",
+          "index": 10,
+          "localEndpoints": [
+            [
+              -3.9480929332219374,
+              0.3698869875107587
+            ],
+            [
+              -3.5683208237090565,
+              0.835366143413173
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.4304498036796607,
+              2.1506839782992526
+            ],
+            [
+              0.4304498036796607,
+              1.9078461468635661
+            ]
+          ],
+          "tokenInterval": [
+            182,
+            188
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              3.0349178458689328,
+              -1.4838640634719933
+            ],
+            [
+              3.5707248720421383,
+              -1.921014818863243
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -2.230386767380159,
+              0.9468693169707717
+            ],
+            [
+              -2.5099142492319637,
+              0.9468693169707717
+            ]
+          ],
+          "tokenInterval": [
+            43,
+            45
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 1,
+          "localEndpoints": [
+            [
+              0.6947377786649472,
+              -5.267920450575618
+            ],
+            [
+              0.2804568374126489,
+              -5.31674461063844
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -2.464394056371234,
+              2.7300696918272713
+            ],
+            [
+              -2.34711448643771,
+              2.8512262723371093
+            ]
+          ],
+          "tokenInterval": [
+            2,
+            5
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 2,
+          "localEndpoints": [
+            [
+              -0.5868547692249577,
+              -6.346608233740769
+            ],
+            [
+              -0.5424570962407245,
+              -6.74806594236484
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -2.3386349619795403,
+              3.395418493595067
+            ],
+            [
+              -2.4551283107590534,
+              3.509812863117291
+            ]
+          ],
+          "tokenInterval": [
+            252,
+            252
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.3087279688090218,
+              -1.5299628043646434
+            ],
+            [
+              -0.1656237497833886,
+              -1.296869484594066
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -2.80632559279958,
+              2.608588469809059
+            ],
+            [
+              -3.019970451377864,
+              2.608588469809059
+            ]
+          ],
+          "tokenInterval": [
+            250,
+            8
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              1.3964785033546752,
+              0.8024828354976902
+            ],
+            [
+              0.9318296691351523,
+              1.0308082215996854
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -2.827511844024693,
+              3.6486956854051407
+            ],
+            [
+              -3.0367865880268177,
+              3.6486956854051407
+            ]
+          ],
+          "tokenInterval": [
+            85,
+            98
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              0.0725657322561865,
+              1.4530448779790268
+            ],
+            [
+              -0.4281654720127066,
+              1.6991009037948521
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -3.423793349213797,
+              3.6486956854051407
+            ],
+            [
+              -3.6493193526595302,
+              3.6486956854051407
+            ]
+          ],
+          "tokenInterval": [
+            125,
+            138
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": true,
+        "target_candidate_a": 4,
+        "target_candidate_b": 0,
+        "relative_transform_b_to_a": [
+          [
+            -0.9742092558216546,
+            -0.22564646212918493,
+            1.4956812956649217
+          ],
+          [
+            0.225646462129185,
+            -0.9742092558216546,
+            -7.129972689748225
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": 2.9139860920951866,
+        "pose_valid": true,
+        "interface_endpoint_error": 0.0419904366277326
+      }
+    },
+    {
+      "id": "0154_floor_01_pano_6_pano_27_9",
+      "scene_id": "0154",
+      "floor_id": "floor_01",
+      "image_a": "0154/panos/floor_01_partial_room_04_pano_6.jpg",
+      "image_b": "0154/panos/floor_01_partial_room_03_pano_27.jpg",
+      "room_a": "complete_room_01",
+      "room_b": "complete_room_02",
+      "partial_room_a": "partial_room_04",
+      "partial_room_b": "partial_room_03",
+      "pano_a": "pano_6",
+      "pano_b": "pano_27",
+      "room_label_a": "dining room",
+      "room_label_b": "laundry",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              4.735670772905272,
+              -0.3387615061435841
+            ],
+            [
+              4.767239586968589,
+              -0.8712969938403523
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.1834995337054008,
+              -1.9349090960601076
+            ],
+            [
+              1.183499533705401,
+              -2.1505517121077005
+            ]
+          ],
+          "tokenInterval": [
+            56,
+            61
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              4.513678351587729,
+              -0.2605681313113321
+            ],
+            [
+              3.7475667335089664,
+              -0.30598338678562387
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.0957921058498095,
+              -1.8980464947088533
+            ],
+            [
+              0.7855661822752493,
+              -1.8980464947088533
+            ]
+          ],
+          "tokenInterval": [
+            60,
+            61
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              2.0328577003366837,
+              -3.7816916182153877
+            ],
+            [
+              1.473361031972198,
+              -3.814858696655615
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.010509754019095485,
+              -3.2595392404924306
+            ],
+            [
+              -0.21605040586405277,
+              -3.2595392404924306
+            ]
+          ],
+          "tokenInterval": [
+            15,
+            20
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              2.0023725245391977,
+              1.386867484018621
+            ],
+            [
+              1.9665931634950455,
+              1.990430843887336
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.12184353474803888,
+              -1.173205172156718
+            ],
+            [
+              0.12184353474803888,
+              -0.9288008368973267
+            ]
+          ],
+          "tokenInterval": [
+            88,
+            96
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              2.068955138622391,
+              0.2636829135813999
+            ],
+            [
+              2.0395318145931522,
+              0.7600260508352731
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.121843534748039,
+              -1.6280226719648985
+            ],
+            [
+              0.1218435347480391,
+              -1.4270356296973223
+            ]
+          ],
+          "tokenInterval": [
+            69,
+            78
+          ]
+        },
+        {
+          "type": "door",
+          "index": 5,
+          "localEndpoints": [
+            [
+              1.265110821812799,
+              3.828658047147448
+            ],
+            [
+              1.872845996475999,
+              3.864684714237106
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.11724545789590768,
+              -0.17026382239466953
+            ],
+            [
+              0.12884819399445524,
+              -0.1702638223946693
+            ]
+          ],
+          "tokenInterval": [
+            109,
+            114
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.9444281093876009,
+              -3.846213949912555
+            ],
+            [
+              0.3385416850678708,
+              -3.8821310226987515
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.4302342147838233,
+              -3.2595392404924306
+            ],
+            [
+              -0.6755792417098502,
+              -3.2595392404924306
+            ]
+          ],
+          "tokenInterval": [
+            3,
+            9
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 1,
+          "localEndpoints": [
+            [
+              2.0281435696000374,
+              3.041244994924837
+            ],
+            [
+              1.979081867184386,
+              3.8688686608234075
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.17181632588574147,
+              -0.5062510989800737
+            ],
+            [
+              0.17181632588574147,
+              -0.17111675293083906
+            ]
+          ],
+          "tokenInterval": [
+            104,
+            108
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.5164698292407568,
+              0.566474436899767
+            ],
+            [
+              -0.04400478282180725,
+              0.5612355714830795
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.722572840644161,
+              -2.149280373289588
+            ],
+            [
+              1.722572840644161,
+              -1.9227120423720463
+            ]
+          ],
+          "tokenInterval": [
+            97,
+            131
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              0.4976662882529001,
+              -0.6665014059109996
+            ],
+            [
+              -0.022668048633135682,
+              -0.6713650723536162
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.224264711202919,
+              -2.1370213771187228
+            ],
+            [
+              1.224264711202919,
+              -1.92667949955622
+            ]
+          ],
+          "tokenInterval": [
+            254,
+            26
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": true,
+        "target_candidate_a": 0,
+        "target_candidate_b": 1,
+        "relative_transform_b_to_a": [
+          [
+            0.049843329685186566,
+            0.9987570487790781,
+            5.5067972066163815
+          ],
+          [
+            -0.9987570487790781,
+            0.049843329685186566,
+            -0.30164730664131767
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": -1.5209323358944964,
+        "pose_valid": true,
+        "interface_endpoint_error": 0.042269757836310096
+      }
+    },
+    {
+      "id": "0454_floor_01_pano_18_pano_15_0",
+      "scene_id": "0454",
+      "floor_id": "floor_01",
+      "image_a": "0454/panos/floor_01_partial_room_06_pano_18.jpg",
+      "image_b": "0454/panos/floor_01_partial_room_05_pano_15.jpg",
+      "room_a": "complete_room_01",
+      "room_b": "complete_room_02",
+      "partial_room_a": "partial_room_06",
+      "partial_room_b": "partial_room_05",
+      "pano_a": "pano_18",
+      "pano_b": "pano_15",
+      "room_label_a": "bedroom",
+      "room_label_b": "kitchen",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -1.2308474684425443,
+              1.6286148694049363
+            ],
+            [
+              -0.8477020975509149,
+              0.9296240815221091
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.2907091029211222,
+              3.618766450881433
+            ],
+            [
+              1.2914959471465117,
+              3.2965537405844314
+            ]
+          ],
+          "tokenInterval": [
+            154,
+            158
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              -1.7356348182068841,
+              2.549523052385071
+            ],
+            [
+              -1.364827110493451,
+              1.8730404652029113
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.2896724493650908,
+              4.043276082076254
+            ],
+            [
+              1.2904339564214473,
+              3.7314389424983427
+            ]
+          ],
+          "tokenInterval": [
+            152,
+            153
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              0.3944251058243165,
+              -0.20293133451462336
+            ],
+            [
+              -0.027449194137641186,
+              -0.4338713925429327
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.5133051757015072,
+              2.654296966289555
+            ],
+            [
+              1.3188937062722406,
+              2.653930842994961
+            ]
+          ],
+          "tokenInterval": [
+            253,
+            44
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              0.39719179143232236,
+              -0.0648214816403116
+            ],
+            [
+              0.1709761741704329,
+              0.35027640933643983
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.5410020159413094,
+              2.7027825993268566
+            ],
+            [
+              1.5410020159413094,
+              2.8938749890314885
+            ]
+          ],
+          "tokenInterval": [
+            57,
+            109
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -0.20770170248653433,
+              4.218629439351597
+            ],
+            [
+              -0.728328719255612,
+              4.175491267335326
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.32114594438178234,
+              2.4629281084416
+            ],
+            [
+              -0.32114594438178257,
+              2.251755923765574
+            ]
+          ],
+          "tokenInterval": [
+            130,
+            135
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              -0.3649469268611965,
+              0.7233075550719241
+            ],
+            [
+              -0.33130067490740756,
+              0.31723685338445407
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.0816802158996839,
+              2.282912145470962
+            ],
+            [
+              1.2463870683032048,
+              2.282912145470962
+            ]
+          ],
+          "tokenInterval": [
+            147,
+            160
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              -0.42104728391758656,
+              1.4003729050578244
+            ],
+            [
+              -0.3805960557692746,
+              0.9121741416156095
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.8070548804488774,
+              2.282912145470962
+            ],
+            [
+              1.0050738001584434,
+              2.282912145470962
+            ]
+          ],
+          "tokenInterval": [
+            139,
+            144
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              3.772712140384971,
+              4.588189790454755
+            ],
+            [
+              3.873986991698361,
+              3.365921408448793
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.337159365992586,
+              4.0787556582113
+            ],
+            [
+              0.15860646285435176,
+              4.0787556582113
+            ]
+          ],
+          "tokenInterval": [
+            93,
+            99
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              -2.801143157892308,
+              3.4800907006543067
+            ],
+            [
+              -2.7507503420569015,
+              2.871908662595637
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.11019544154612793,
+              1.3935200694565566
+            ],
+            [
+              0.13649004637685547,
+              1.3935200694565566
+            ]
+          ],
+          "tokenInterval": [
+            155,
+            159
+          ]
+        },
+        {
+          "type": "door",
+          "index": 5,
+          "localEndpoints": [
+            [
+              -1.3950120346641368,
+              3.727681621336374
+            ],
+            [
+              -2.254563858650233,
+              3.656460779455903
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.16300105994790925,
+              1.968238071875943
+            ],
+            [
+              -0.16300105994790903,
+              1.6195941662256979
+            ]
+          ],
+          "tokenInterval": [
+            142,
+            150
+          ]
+        },
+        {
+          "type": "door",
+          "index": 6,
+          "localEndpoints": [
+            [
+              0.5693661561998655,
+              -0.2758947217300495
+            ],
+            [
+              0.5282554227260194,
+              0.2202634955816213
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.5153908590058083,
+              2.625943614913532
+            ],
+            [
+              1.314143495115854,
+              2.625943614913532
+            ]
+          ],
+          "tokenInterval": [
+            45,
+            80
+          ]
+        },
+        {
+          "type": "door",
+          "index": 7,
+          "localEndpoints": [
+            [
+              -0.24262167571691784,
+              -0.41154847829323593
+            ],
+            [
+              -0.6731140530630875,
+              -0.4472182642004268
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.5429350112046576,
+              2.2943099439540497
+            ],
+            [
+              1.5429350112046576,
+              2.1196973847082266
+            ]
+          ],
+          "tokenInterval": [
+            215,
+            234
+          ]
+        },
+        {
+          "type": "door",
+          "index": 8,
+          "localEndpoints": [
+            [
+              -0.8081844400203344,
+              -0.4056250469808516
+            ],
+            [
+              -0.8490645507879011,
+              0.08774982541939846
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.5216708515481974,
+              2.066673221857299
+            ],
+            [
+              1.3215524437183783,
+              2.066673221857299
+            ]
+          ],
+          "tokenInterval": [
+            187,
+            210
+          ]
+        },
+        {
+          "type": "door",
+          "index": 9,
+          "localEndpoints": [
+            [
+              3.8828568107235237,
+              3.2588731214557667
+            ],
+            [
+              3.9796898681813047,
+              2.0902119688724397
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.20202645433007294,
+              4.0787556582113
+            ],
+            [
+              0.6760485868512631,
+              4.0787556582113
+            ]
+          ],
+          "tokenInterval": [
+            83,
+            92
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -0.5376319224272852,
+              2.8074124181255544
+            ],
+            [
+              -0.43611602650486064,
+              1.5822349110954144
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.23634379875371803,
+              2.282912145470962
+            ],
+            [
+              0.733289601491876,
+              2.282912145470962
+            ]
+          ],
+          "tokenInterval": [
+            135,
+            138
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": true,
+        "target_candidate_a": 2,
+        "target_candidate_b": 6,
+        "relative_transform_b_to_a": [
+          [
+            -0.4043823641235021,
+            -0.9145900193998877,
+            0.4104315405018296
+          ],
+          [
+            0.9145900193998877,
+            -0.4043823641235021,
+            -0.8943560502047472
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": 1.9870997420403467,
+        "pose_valid": true,
+        "interface_endpoint_error": 0.02840872356215883
+      }
+    },
+    {
+      "id": "0495_floor_02_pano_36_pano_29_7",
+      "scene_id": "0495",
+      "floor_id": "floor_02",
+      "image_a": "0495/panos/floor_02_partial_room_01_pano_36.jpg",
+      "image_b": "0495/panos/floor_02_partial_room_17_pano_29.jpg",
+      "room_a": "complete_room_01",
+      "room_b": "complete_room_05",
+      "partial_room_a": "partial_room_01",
+      "partial_room_b": "partial_room_17",
+      "pano_a": "pano_36",
+      "pano_b": "pano_29",
+      "room_label_a": "hallway",
+      "room_label_b": "other",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.6883849933596852,
+              0.5768715862479502
+            ],
+            [
+              0.6878128192288756,
+              1.4438734910147897
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.21025769533185418,
+              1.0048718196798807
+            ],
+            [
+              -0.5607225197843569,
+              1.0048718196798807
+            ]
+          ],
+          "tokenInterval": [
+            92,
+            109
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              -2.1521436516742902,
+              -0.20743408693025736
+            ],
+            [
+              -2.152668521912097,
+              0.5878893494688755
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.10602125364943746,
+              -0.14355280786996494
+            ],
+            [
+              -0.21546926094815413,
+              -0.14355280786996483
+            ]
+          ],
+          "tokenInterval": [
+            181,
+            195
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              0.5798007658217871,
+              -1.0430101459973489
+            ],
+            [
+              0.5811770629343574,
+              -1.4457962597833023
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.4445115760626142,
+              0.9605471255012032
+            ],
+            [
+              0.607328544196258,
+              0.9609960104074402
+            ]
+          ],
+          "tokenInterval": [
+            15,
+            20
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              -0.22663953369631595,
+              -2.300308241828323
+            ],
+            [
+              -0.2292254826618749,
+              -1.8041851596736052
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.9525289661503208,
+              0.6342276204861248
+            ],
+            [
+              0.7519824502668367,
+              0.6333146621437113
+            ]
+          ],
+          "tokenInterval": [
+            250,
+            251
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              -0.23345269226728213,
+              -0.9931806556093071
+            ],
+            [
+              -0.2304457124905361,
+              -1.5700799272829256
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.42415225347468954,
+              0.6318222636757653
+            ],
+            [
+              0.6573507139200023,
+              0.6328838651648943
+            ]
+          ],
+          "tokenInterval": [
+            246,
+            250
+          ]
+        },
+        {
+          "type": "door",
+          "index": 5,
+          "localEndpoints": [
+            [
+              0.5838318581624182,
+              -2.2227467038709685
+            ],
+            [
+              0.5820527250337852,
+              -1.7020668940793806
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.9213927866484354,
+              0.9618618826788721
+            ],
+            [
+              0.7109200193481215,
+              0.9612816111660314
+            ]
+          ],
+          "tokenInterval": [
+            10,
+            13
+          ]
+        },
+        {
+          "type": "door",
+          "index": 6,
+          "localEndpoints": [
+            [
+              0.9563800201917191,
+              -2.832546863823741
+            ],
+            [
+              0.5975268409709049,
+              -3.1931712171289983
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.1679892214867904,
+              1.1122928441195066
+            ],
+            [
+              1.3136672143869375,
+              0.9671388727765544
+            ]
+          ],
+          "tokenInterval": [
+            7,
+            13
+          ]
+        },
+        {
+          "type": "door",
+          "index": 7,
+          "localEndpoints": [
+            [
+              -0.10953591073714716,
+              -2.8587765093061046
+            ],
+            [
+              0.2889076587643658,
+              -3.250634792121016
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.178307573584084,
+              0.6814149631663875
+            ],
+            [
+              1.3368131533291758,
+              0.8423716601240325
+            ]
+          ],
+          "tokenInterval": [
+            254,
+            3
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -1.4390737061247034,
+              2.0995417631669144
+            ],
+            [
+              -2.082431565463248,
+              2.1012617043640365
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.8263280358795081,
+              0.14530399631559077
+            ],
+            [
+              -0.8271949074976368,
+              -0.11475748912294748
+            ]
+          ],
+          "tokenInterval": [
+            152,
+            159
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -0.675477951543735,
+              -3.1019719179433447
+            ],
+            [
+              0.2394421648491564,
+              -3.1155826507095146
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.13174365342337027,
+              -0.1779563588852482
+            ],
+            [
+              -0.23813180508706266,
+              -0.17795635888524797
+            ]
+          ],
+          "tokenInterval": [
+            247,
+            3
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              -0.7985227915202375,
+              -0.8070069306201325
+            ],
+            [
+              -0.8116994131772807,
+              -1.6927458858431614
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.19527517515202422,
+              -1.1047984964592983
+            ],
+            [
+              0.19527517515202428,
+              -0.7467201283988196
+            ]
+          ],
+          "tokenInterval": [
+            224,
+            237
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": true,
+        "target_candidate_a": 1,
+        "target_candidate_b": 0,
+        "relative_transform_b_to_a": [
+          [
+            -0.015534639943233397,
+            -0.9998793302003167,
+            -5.349302233584259
+          ],
+          [
+            0.9998793302003166,
+            -0.015534639943233394,
+            0.35608448134128146
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": 1.5863315916222553,
+        "pose_valid": true,
+        "interface_endpoint_error": 0.0420766790211617
+      }
+    },
+    {
+      "id": "0495_floor_02_pano_40_pano_42_5",
+      "scene_id": "0495",
+      "floor_id": "floor_02",
+      "image_a": "0495/panos/floor_02_partial_room_18_pano_40.jpg",
+      "image_b": "0495/panos/floor_02_partial_room_03_pano_42.jpg",
+      "room_a": "complete_room_01",
+      "room_b": "complete_room_02",
+      "partial_room_a": "partial_room_18",
+      "partial_room_b": "partial_room_03",
+      "pano_a": "pano_40",
+      "pano_b": "pano_42",
+      "room_label_a": "hallway",
+      "room_label_b": "laundry",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -0.5168615642070898,
+              -1.8655840649739577
+            ],
+            [
+              -0.5177555571570733,
+              -2.732585697630534
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.21025769533185412,
+              1.0048718196798807
+            ],
+            [
+              -0.5607225197843567,
+              1.0048718196798807
+            ]
+          ],
+          "tokenInterval": [
+            244,
+            248
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              2.32498933987511,
+              -1.0860830635600682
+            ],
+            [
+              2.3241692568496997,
+              -1.881406250345367
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.10602125364943749,
+              -0.14355280786996472
+            ],
+            [
+              -0.215469260948154,
+              -0.14355280786996472
+            ]
+          ],
+          "tokenInterval": [
+            36,
+            46
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              -0.4055381485308989,
+              -0.24588827314938844
+            ],
+            [
+              -0.4062333016759079,
+              0.15689959212790358
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.44451157606261416,
+              0.9605471255012032
+            ],
+            [
+              0.6073285441962579,
+              0.9609960104074402
+            ]
+          ],
+          "tokenInterval": [
+            176,
+            214
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              0.40302718473372656,
+              1.0100442729332844
+            ],
+            [
+              0.40477414807885764,
+              0.5139175271335644
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.9525289661503205,
+              0.6342276204861248
+            ],
+            [
+              0.7519824502668366,
+              0.6333146621437113
+            ]
+          ],
+          "tokenInterval": [
+            100,
+            112
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              0.40762988124729477,
+              -0.2970929658328931
+            ],
+            [
+              0.40559848638239643,
+              0.2798105659814234
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.42415225347468954,
+              0.6318222636757653
+            ],
+            [
+              0.6573507139200023,
+              0.6328838651648943
+            ]
+          ],
+          "tokenInterval": [
+            38,
+            88
+          ]
+        },
+        {
+          "type": "door",
+          "index": 5,
+          "localEndpoints": [
+            [
+              -0.40757421072475025,
+              0.9338534147381327
+            ],
+            [
+              -0.40667558935988446,
+              0.41317134080151613
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.9213927866484353,
+              0.9618618826788721
+            ],
+            [
+              0.7109200193481214,
+              0.9612816111660314
+            ]
+          ],
+          "tokenInterval": [
+            144,
+            159
+          ]
+        },
+        {
+          "type": "door",
+          "index": 6,
+          "localEndpoints": [
+            [
+              -0.7790906215380076,
+              1.544282710075662
+            ],
+            [
+              -0.4196281121796125,
+              1.9042996996740507
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.1679892214867904,
+              1.1122928441195066
+            ],
+            [
+              1.3136672143869372,
+              0.9671388727765542
+            ]
+          ],
+          "tokenInterval": [
+            136,
+            147
+          ]
+        },
+        {
+          "type": "door",
+          "index": 7,
+          "localEndpoints": [
+            [
+              0.2868681415977799,
+              1.5687097730203574
+            ],
+            [
+              -0.11091219597603098,
+              1.9612412939552035
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              1.1783075735840838,
+              0.6814149631663875
+            ],
+            [
+              1.3368131533291758,
+              0.8423716601240325
+            ]
+          ],
+          "tokenInterval": [
+            120,
+            130
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              1.6080191420324648,
+              -3.3918497593866728
+            ],
+            [
+              2.251373172901116,
+              -3.3946576652708154
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.8263280358795079,
+              0.14530399631559088
+            ],
+            [
+              -0.8271949074976362,
+              -0.11475748912294736
+            ]
+          ],
+          "tokenInterval": [
+            18,
+            23
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.21657630095673874,
+              -0.5053714729810153
+            ],
+            [
+              -0.3180636351356015,
+              -0.5051203727702721
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.433481917892822,
+              0.6007365696246629
+            ],
+            [
+              0.649597326844375,
+              0.6007365696246629
+            ]
+          ],
+          "tokenInterval": [
+            233,
+            16
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": true,
+        "target_candidate_a": 4,
+        "target_candidate_b": 0,
+        "relative_transform_b_to_a": [
+          [
+            -0.0005614691560205459,
+            0.9999998423761811,
+            0.9900483934455364
+          ],
+          [
+            -0.9999998423761811,
+            -0.0005614691560205461,
+            -0.05779944247720192
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": -1.5713577959804175,
+        "pose_valid": true,
+        "interface_endpoint_error": 0.032762313957223975
+      }
+    },
+    {
+      "id": "0902_floor_01_pano_30_pano_32_18",
+      "scene_id": "0902",
+      "floor_id": "floor_01",
+      "image_a": "0902/panos/floor_01_partial_room_10_pano_30.jpg",
+      "image_b": "0902/panos/floor_01_partial_room_16_pano_32.jpg",
+      "room_a": "complete_room_07",
+      "room_b": "complete_room_10",
+      "partial_room_a": "partial_room_10",
+      "partial_room_b": "partial_room_16",
+      "pano_a": "pano_30",
+      "pano_b": "pano_32",
+      "room_label_a": "primary bathroom",
+      "room_label_b": "closet",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.19765310425553032,
+              -1.3912542603737235
+            ],
+            [
+              -0.4323951878934869,
+              -1.4228175241833065
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.0424991176621534,
+              1.9106246087391439
+            ],
+            [
+              -0.7874978072521516,
+              1.910624608739144
+            ]
+          ],
+          "tokenInterval": [
+            243,
+            5
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              0.6336636633583065,
+              -0.7115024833532064
+            ],
+            [
+              0.3437446960057631,
+              -1.0390733217345196
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.2322731602432995,
+              1.645013690006618
+            ],
+            [
+              -1.10860203168778,
+              1.7713969047146705
+            ]
+          ],
+          "tokenInterval": [
+            13,
+            29
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              0.5737564203563298,
+              2.041176488531219
+            ],
+            [
+              -0.4947826020070474,
+              1.9876463393760615
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.2637602959053886,
+              0.5324911787428472
+            ],
+            [
+              -0.8312873341940068,
+              0.5324911787428472
+            ]
+          ],
+          "tokenInterval": [
+            116,
+            137
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              -0.5896678400526607,
+              -0.20886505255683674
+            ],
+            [
+              -0.5730038361791122,
+              -0.5415026164106173
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.7485558929387058,
+              1.4173471745683852
+            ],
+            [
+              -0.7485558929387058,
+              1.5519765604920956
+            ]
+          ],
+          "tokenInterval": [
+            205,
+            222
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.6840561223426714,
+              -0.9902759889852113
+            ],
+            [
+              -0.3310551662349148,
+              -0.8175447526959604
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.2562395738406298,
+              0.4905357084525118
+            ],
+            [
+              -0.8400070533166146,
+              0.4905357084525118
+            ]
+          ],
+          "tokenInterval": [
+            240,
+            24
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": true,
+        "target_candidate_a": 2,
+        "target_candidate_b": 0,
+        "relative_transform_b_to_a": [
+          [
+            0.9762019502036478,
+            -0.21686344186744533,
+            -0.3325502126917468
+          ],
+          [
+            0.21686344186744538,
+            0.976201950203648,
+            2.9622702878345706
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": 0.2186002956707008,
+        "pose_valid": true,
+        "interface_endpoint_error": 0.042738108217818156
+      }
+    },
+    {
+      "id": "1011_floor_01_pano_12_pano_17_6",
+      "scene_id": "1011",
+      "floor_id": "floor_01",
+      "image_a": "1011/panos/floor_01_partial_room_07_pano_12.jpg",
+      "image_b": "1011/panos/floor_01_partial_room_11_pano_17.jpg",
+      "room_a": "complete_room_06",
+      "room_b": "complete_room_09",
+      "partial_room_a": "partial_room_07",
+      "partial_room_b": "partial_room_11",
+      "pano_a": "pano_12",
+      "pano_b": "pano_17",
+      "room_label_a": "kitchen",
+      "room_label_b": "closet",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.3364936916369211,
+              -4.437243874337411
+            ],
+            [
+              -0.38174894177469754,
+              -4.3621978965645685
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.25890266690370023,
+              -2.300526337680349
+            ],
+            [
+              0.2589026669037007,
+              -2.592439225133269
+            ]
+          ],
+          "tokenInterval": [
+            252,
+            3
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              -1.5364514466376789,
+              -3.64292556759881
+            ],
+            [
+              -1.4661627995442537,
+              -2.970213924875828
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.018233974210331905,
+              -3.0868874007021425
+            ],
+            [
+              -0.25517390902503,
+              -3.0868874007021425
+            ]
+          ],
+          "tokenInterval": [
+            237,
+            239
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              -2.8590477704228934,
+              -4.583247142407788
+            ],
+            [
+              -2.159530825064065,
+              -4.656336556334349
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.4518368844170635,
+              -3.579120444248769
+            ],
+            [
+              0.45183688441706327,
+              -3.2948181738975766
+            ]
+          ],
+          "tokenInterval": [
+            233,
+            238
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              -1.8983258441601136,
+              -4.683628702858656
+            ],
+            [
+              -1.1842599726954823,
+              -4.758238269355344
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.4518368844170635,
+              -3.1886575303409868
+            ],
+            [
+              0.45183688441706327,
+              -2.89844218990551
+            ]
+          ],
+          "tokenInterval": [
+            240,
+            246
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              -2.897134346649116,
+              -3.8002895598853934
+            ],
+            [
+              -2.969115449183574,
+              -4.4891991880164515
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.13865853588486265,
+              -3.627322453168552
+            ],
+            [
+              0.41864971071478285,
+              -3.627322453168552
+            ]
+          ],
+          "tokenInterval": [
+            229,
+            232
+          ]
+        },
+        {
+          "type": "door",
+          "index": 5,
+          "localEndpoints": [
+            [
+              -5.233303166169297,
+              1.5809792951339168
+            ],
+            [
+              -5.399689605574785,
+              -0.011455608763443521
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.9266772877152765,
+              -4.792601278263467
+            ],
+            [
+              -1.2794694372574649,
+              -4.792601278263466
+            ]
+          ],
+          "tokenInterval": [
+            180,
+            192
+          ]
+        },
+        {
+          "type": "door",
+          "index": 6,
+          "localEndpoints": [
+            [
+              2.6965506177207703,
+              -3.3571037262453194
+            ],
+            [
+              2.6113079260984238,
+              -4.172936061660423
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.27449325750738574,
+              -1.397068671742772
+            ],
+            [
+              0.057082677462210185,
+              -1.3970686717427723
+            ]
+          ],
+          "tokenInterval": [
+            22,
+            27
+          ]
+        },
+        {
+          "type": "door",
+          "index": 7,
+          "localEndpoints": [
+            [
+              1.2061407140013207,
+              -4.5281094232126975
+            ],
+            [
+              1.8919377180719636,
+              -4.599765301505114
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.25890266690370045,
+              -1.947078684263568
+            ],
+            [
+              0.25890266690370045,
+              -1.6683525625435078
+            ]
+          ],
+          "tokenInterval": [
+            10,
+            15
+          ]
+        },
+        {
+          "type": "door",
+          "index": 8,
+          "localEndpoints": [
+            [
+              1.00063626697479,
+              -3.072416944875118
+            ],
+            [
+              1.7584551170138234,
+              -3.1515980654746225
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.31770755134646445,
+              -2.090848587823648
+            ],
+            [
+              -0.3177075513464642,
+              -1.7828508745294995
+            ]
+          ],
+          "tokenInterval": [
+            12,
+            20
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.4184909057909073,
+              0.46481814661328374
+            ],
+            [
+              -0.2731344437771862,
+              0.5571200265669548
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.30826457590818607,
+              -2.5988345166464564
+            ],
+            [
+              0.30826457590818607,
+              -2.316782841848669
+            ]
+          ],
+          "tokenInterval": [
+            98,
+            146
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": true,
+        "target_candidate_a": 0,
+        "target_candidate_b": 0,
+        "relative_transform_b_to_a": [
+          [
+            -0.9995920559180965,
+            0.028560842869789937,
+            -0.005129902748381099
+          ],
+          [
+            -0.028560842869789965,
+            -0.9995920559180965,
+            -4.005426243830839
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": -3.1130279263438783,
+        "pose_valid": true,
+        "interface_endpoint_error": 0.05087219188122032
+      }
+    },
+    {
+      "id": "1086_floor_01_pano_26_pano_9_9",
+      "scene_id": "1086",
+      "floor_id": "floor_01",
+      "image_a": "1086/panos/floor_01_partial_room_01_pano_26.jpg",
+      "image_b": "1086/panos/floor_01_partial_room_08_pano_9.jpg",
+      "room_a": "complete_room_01",
+      "room_b": "complete_room_05",
+      "partial_room_a": "partial_room_01",
+      "partial_room_b": "partial_room_08",
+      "pano_a": "pano_26",
+      "pano_b": "pano_9",
+      "room_label_a": "laundry",
+      "room_label_b": "breakfast nook",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.2678481361824348,
+              -1.2845476755501688
+            ],
+            [
+              -0.34439936313210495,
+              -1.2486618104068432
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.6965320776171702,
+              1.6284616531982836
+            ],
+            [
+              -1.4486209363922087,
+              1.6284616531982836
+            ]
+          ],
+          "tokenInterval": [
+            245,
+            8
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              0.41349835371150245,
+              1.3203609801835372
+            ],
+            [
+              -0.17343415769528198,
+              1.3547630495691347
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.6936943677916938,
+              0.5738488623244855
+            ],
+            [
+              -1.4560337666658492,
+              0.5738488623244854
+            ]
+          ],
+          "tokenInterval": [
+            115,
+            133
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              3.2116257564939126,
+              2.6780825153831014
+            ],
+            [
+              3.2362423945805228,
+              3.130444623217597
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.22891339326775584,
+              1.082945981098771
+            ],
+            [
+              -0.22891339326775606,
+              0.8998188887820284
+            ]
+          ],
+          "tokenInterval": [
+            92,
+            95
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              6.71859511032295,
+              0.27967788904479635
+            ],
+            [
+              6.165800725386816,
+              0.309759850099018
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.6971075599778913,
+              1.9739818437335186
+            ],
+            [
+              -1.4733230594436117,
+              1.9739818437335186
+            ]
+          ],
+          "tokenInterval": [
+            65,
+            66
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              6.750688900247516,
+              1.0434249900255608
+            ],
+            [
+              6.161023982440317,
+              1.0755133714850906
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.6932860849666602,
+              1.66500655252328
+            ],
+            [
+              -1.4545755034014796,
+              1.66500655252328
+            ]
+          ],
+          "tokenInterval": [
+            70,
+            71
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              6.787013008043368,
+              0.30764083113864893
+            ],
+            [
+              6.819849972704947,
+              0.9110619196291754
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.7241088002917515,
+              1.9611924169916102
+            ],
+            [
+              -1.724108800291751,
+              1.7169130057322053
+            ]
+          ],
+          "tokenInterval": [
+            65,
+            69
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              0.8429733725001751,
+              -1.4997885319380164
+            ],
+            [
+              0.24786561907618732,
+              -1.4674039622871613
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.6353774705750972,
+              2.8212819264576297
+            ],
+            [
+              0.8762914432802476,
+              2.8212819264576297
+            ]
+          ],
+          "tokenInterval": [
+            6,
+            20
+          ]
+        },
+        {
+          "type": "door",
+          "index": 5,
+          "localEndpoints": [
+            [
+              1.5080166717061816,
+              3.63836670880891
+            ],
+            [
+              1.2049381966763095,
+              3.999273263564399
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.47980470425880284,
+              0.732766793929736
+            ],
+            [
+              0.6100631136715947,
+              0.5937515166572607
+            ]
+          ],
+          "tokenInterval": [
+            111,
+            116
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              5.046120297812796,
+              -0.7300602627647168
+            ],
+            [
+              5.094273224411654,
+              0.15481115217101063
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.0442270471661377,
+              2.4182766499496435
+            ],
+            [
+              -1.0442270471661377,
+              2.060059357906544
+            ]
+          ],
+          "tokenInterval": [
+            58,
+            65
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 1,
+          "localEndpoints": [
+            [
+              3.2443152961343604,
+              3.2787944811626923
+            ],
+            [
+              3.284407295404177,
+              4.015536079799527
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.22891339326775606,
+              0.8397632880573394
+            ],
+            [
+              -0.22891339326775584,
+              0.5415125185730967
+            ]
+          ],
+          "tokenInterval": [
+            96,
+            100
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 2,
+          "localEndpoints": [
+            [
+              2.400413422002173,
+              4.497254620871212
+            ],
+            [
+              3.1616016493733747,
+              4.455832285126325
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.13847282413390805,
+              0.36649365466174944
+            ],
+            [
+              -0.1696745303196252,
+              0.3664936546617499
+            ]
+          ],
+          "tokenInterval": [
+            102,
+            108
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 3,
+          "localEndpoints": [
+            [
+              1.9372345908949176,
+              6.1230004044468735
+            ],
+            [
+              1.8647205253494987,
+              4.790462004103024
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.3611341342196378,
+              -0.27953067019851163
+            ],
+            [
+              0.3611341342196376,
+              0.25991301535583444
+            ]
+          ],
+          "tokenInterval": [
+            112,
+            115
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": true,
+        "target_candidate_a": 0,
+        "target_candidate_b": 2,
+        "relative_transform_b_to_a": [
+          [
+            0.9999912555587424,
+            0.004181961985763573,
+            -6.500451662025357
+          ],
+          [
+            -0.004181961985763587,
+            0.9999912555587421,
+            -2.3895147392949894
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": -0.004181974175446532,
+        "pose_valid": true,
+        "interface_endpoint_error": 0.03685780464947589
+      }
+    },
+    {
+      "id": "1099_floor_01_pano_29_pano_15_0",
+      "scene_id": "1099",
+      "floor_id": "floor_01",
+      "image_a": "1099/panos/floor_01_partial_room_04_pano_29.jpg",
+      "image_b": "1099/panos/floor_01_partial_room_08_pano_15.jpg",
+      "room_a": "complete_room_01",
+      "room_b": "complete_room_02",
+      "partial_room_a": "partial_room_04",
+      "partial_room_b": "partial_room_08",
+      "pano_a": "pano_29",
+      "pano_b": "pano_15",
+      "room_label_a": "kitchen",
+      "room_label_b": "living room",
+      "token_count": 256,
+      "candidates_a": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              2.5014186578923083,
+              0.1626322670406631
+            ],
+            [
+              3.004864346984536,
+              0.1396798049250488
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.6825361232572753,
+              2.6636913915008984
+            ],
+            [
+              -0.6825361232572753,
+              2.8674086349011905
+            ]
+          ],
+          "tokenInterval": [
+            65,
+            66
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              0.368524052028654,
+              0.13214416642457558
+            ],
+            [
+              0.3447516197076191,
+              -0.3892869772573914
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.6309585738503874,
+              1.8029757528339907
+            ],
+            [
+              -0.41996358965360675,
+              1.8029757528339907
+            ]
+          ],
+          "tokenInterval": [
+            29,
+            78
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              0.16068110375654127,
+              -0.44419616992290856
+            ],
+            [
+              -0.32498357686515833,
+              -0.42205435716260625
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.3944021860788789,
+              1.7296577331282141
+            ],
+            [
+              -0.3944021860788789,
+              1.5331355022366688
+            ]
+          ],
+          "tokenInterval": [
+            229,
+            14
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              -1.9968707245522381,
+              -1.1287210168772785
+            ],
+            [
+              -1.9746228723614332,
+              -0.6407304378882759
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.07826634602703919,
+              0.8710260585903129
+            ],
+            [
+              -0.27572974220032637,
+              0.8710260585903129
+            ]
+          ],
+          "tokenInterval": [
+            204,
+            212
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              -3.286581863084681,
+              -1.5552393939210303
+            ],
+            [
+              -3.2599900556695984,
+              -0.9719672926161792
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.11770796836874298,
+              0.35808432427272807
+            ],
+            [
+              -0.11831070694134149,
+              0.35808432427272807
+            ]
+          ],
+          "tokenInterval": [
+            203,
+            210
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              -0.1746828688470291,
+              2.234469661114483
+            ],
+            [
+              -0.6682355877293439,
+              2.2569710953856377
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.469891131078095,
+              1.5449217321742181
+            ],
+            [
+              -1.469891131078095,
+              1.3452076387936205
+            ]
+          ],
+          "tokenInterval": [
+            131,
+            139
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 1,
+          "localEndpoints": [
+            [
+              -0.1746357278171913,
+              2.235503665576909
+            ],
+            [
+              -0.1565310797752604,
+              2.632616052184075
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -1.4703095367637784,
+              1.5449217321742181
+            ],
+            [
+              -1.6309994432869486,
+              1.5449217321742181
+            ]
+          ],
+          "tokenInterval": [
+            130,
+            131
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 2,
+          "localEndpoints": [
+            [
+              -0.4132359778680508,
+              0.269787589603186
+            ],
+            [
+              -0.4197197300878286,
+              0.12757116472697677
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.6721478178339289,
+              1.4847618991369704
+            ],
+            [
+              -0.6146005219294473,
+              1.4847618991369704
+            ]
+          ],
+          "tokenInterval": [
+            168,
+            179
+          ]
+        }
+      ],
+      "candidates_b": [
+        {
+          "type": "door",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.35264316368239584,
+              -1.7459524626557221
+            ],
+            [
+              -0.12146395268629673,
+              -1.7774810718693157
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.08393133757227172,
+              0.9112002104739094
+            ],
+            [
+              -0.27600108039903587,
+              0.9112002104739095
+            ]
+          ],
+          "tokenInterval": [
+            253,
+            8
+          ]
+        },
+        {
+          "type": "door",
+          "index": 1,
+          "localEndpoints": [
+            [
+              -0.3289093725006826,
+              -1.680929986597451
+            ],
+            [
+              -0.36803854526471785,
+              -1.0925304432059029
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.3570814020544212,
+              0.9557068022665287
+            ],
+            [
+              -0.3570814020544212,
+              1.1940785648424657
+            ]
+          ],
+          "tokenInterval": [
+            242,
+            248
+          ]
+        },
+        {
+          "type": "door",
+          "index": 2,
+          "localEndpoints": [
+            [
+              0.5249672058432027,
+              -0.9217428887093738
+            ],
+            [
+              0.49857681878906396,
+              -0.5249010800102194
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.007680125963638984,
+              1.2390108117158902
+            ],
+            [
+              0.007680125963638984,
+              1.3997789198251989
+            ]
+          ],
+          "tokenInterval": [
+            21,
+            30
+          ]
+        },
+        {
+          "type": "door",
+          "index": 3,
+          "localEndpoints": [
+            [
+              -0.4211862918934942,
+              -0.2933285270998526
+            ],
+            [
+              -0.45421440406917785,
+              0.20332715842793356
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.35708140205442124,
+              1.517850348039607
+            ],
+            [
+              -0.3570814020544212,
+              1.7190549418947
+            ]
+          ],
+          "tokenInterval": [
+            174,
+            216
+          ]
+        },
+        {
+          "type": "door",
+          "index": 4,
+          "localEndpoints": [
+            [
+              0.843355092545288,
+              2.310937843242476
+            ],
+            [
+              0.30931390871642994,
+              2.27542355710843
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              0.22280477665250775,
+              2.5343247915754006
+            ],
+            [
+              0.006454611688641809,
+              2.5343247915754006
+            ]
+          ],
+          "tokenInterval": [
+            113,
+            122
+          ]
+        },
+        {
+          "type": "opening",
+          "index": 0,
+          "localEndpoints": [
+            [
+              0.22285798627338374,
+              0.48483038614481316
+            ],
+            [
+              -0.4670838315995887,
+              0.43894854804365896
+            ]
+          ],
+          "globalEndpoints": [
+            [
+              -0.07644375538278812,
+              1.8144345223707434
+            ],
+            [
+              -0.3559522102215872,
+              1.8144345223707434
+            ]
+          ],
+          "tokenInterval": [
+            110,
+            161
+          ]
+        }
+      ],
+      "supervision": {
+        "is_match": true,
+        "target_candidate_a": 2,
+        "target_candidate_b": 3,
+        "relative_transform_b_to_a": [
+          [
+            -0.11172867412029194,
+            0.9937387500642821,
+            -0.12252925223238886
+          ],
+          [
+            -0.9937387500642824,
+            -0.11172867412029196,
+            -0.963885271488622
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "relative_yaw_radians": -1.6827587735548906,
+        "pose_valid": true,
+        "interface_endpoint_error": 0.03956364221122635
+      }
+    }
+  ],
+  "preflightReferenceOnly": true,
+  "testDataAccessed": false
+}

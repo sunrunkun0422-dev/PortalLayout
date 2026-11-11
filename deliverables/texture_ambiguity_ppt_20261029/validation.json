@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "slides": [
+    {
+      "slide": 1,
+      "png": "png/01_main_0561_33_34.png",
+      "size": [
+        3840,
+        2160
+      ],
+      "source_photos_unchanged": true
+    },
+    {
+      "slide": 2,
+      "png": "png/02_main_0988_9_11.png",
+      "size": [
+        3840,
+        2160
+      ],
+      "source_photos_unchanged": true
+    },
+    {
+      "slide": 3,
+      "png": "png/03_related_0988_9_10.png",
+      "size": [
+        3840,
+        2160
+      ],
+      "source_photos_unchanged": true
+    },
+    {
+      "slide": 4,
+      "png": "png/04_mixed_0060_26_29.png",
+      "size": [
+        3840,
+        2160
+      ],
+      "source_photos_unchanged": true
+    },
+    {
+      "slide": 5,
+      "png": "png/05_counterexample_0726_7_27.png",
+      "size": [
+        3840,
+        2160
+      ],
+      "source_photos_unchanged": true
+    },
+    {
+      "slide": 6,
+      "png": "png/06_counterexample_0430_5_6.png",
+      "size": [
+        3840,
+        2160
+      ],
+      "source_photos_unchanged": true
+    }
+  ],
+  "editable_text_and_lines": true,
+  "raster_exports": "LibreOffice PDF then pdftoppm; no generative image processing"
+}

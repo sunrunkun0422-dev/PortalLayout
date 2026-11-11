@@ -1,0 +1,634 @@
+{
+  "cohort_manifest_sha256": {
+    "floor_068fa1bfa1df099540cce729": "c7f60da764455b6159a4968ba031b28547864eb3fba3e481ea532deea247b883",
+    "floor_0749823a2e688df5d8f6f9e6": "e693fc98c87d2ff1733743cbffc312a0e4adb2767821b0ae27dcc1a69381645b",
+    "floor_083e38e3ba82b90eca5940a5": "c67cac739e8008d8ba93432ae7898329a57e558c17cecc573763418335fca436",
+    "floor_0c329d3c9116f32396ee4463": "7bb9cd9aafaf42f49c2a6b816a61136794ece5f07fa47b7990881a655c836ce7",
+    "floor_182694debae2cc874400dcff": "c210d91050afa3175bb47c6cfb509d5807c32db17a03423dba951cc69536283d",
+    "floor_182df23771bd55bf0db88e1f": "bfed9d9b85b52da6e283860febab2b5fb648f53aa78981f4e18322cefd44a110",
+    "floor_183777d9c8c7effbac7539d0": "0bb77e7a0377ae552fbcba76beb69d68561d963456d50778c9e9bed217300f08",
+    "floor_1c85c58549352fa1394b1fb2": "deefc32bd8b9dfd1d87a6e08d8ff8437918ed21d04dc5a428db7e1d586e0e1d4",
+    "floor_20b85510ddd1625873318064": "608c956dfe647889774ecdd7df151d7cc987cf3f1550f7eb164a8b9e0758989b",
+    "floor_260ea8c19f28accd4daaf3b1": "e56f288653a4b306c834068c7addddc43e1f696cb7980269d9acf55c1e888921",
+    "floor_299b8a32fdf0d0fb68dec6c8": "675356f2f96ca0e9e4f7aff482c0b3946925090f60967c151a67b452fe723cc8",
+    "floor_31cda5935e09bced60a2e3df": "b5d627118a1b3ba640366786d2a08e2ef2b57b728e5178158813a93762e2f6a4",
+    "floor_360b06cb229899878bcbb69b": "cee445d78e65775306c43873d9c319728bf5ba96c2cd31dbd9a3a262378175de",
+    "floor_3e79ae330fc854cd567c6465": "1c9c11eca73346d5fcb0d869efbd32960f5d9ea5d86978732a45c554575d6e80",
+    "floor_3e84ba0422fd2bcdeb74aca4": "55c1a61aaa884b7e41b0ba34f304104bda18d63dca2ecba0a1ac3a1658bc7912",
+    "floor_42690e7292f35ad9411bfd5f": "61a5214c5da8e9c6fa4a155e1646b48f206f6bebcd601ce2d34e395c654719ce",
+    "floor_427711a3d766604832c9b379": "f02ad4c4ed5e2a433f449dba8f98f8afc536917cc25647f0f897165e9f1747ba",
+    "floor_44ff3a78e2f7680f227f22f0": "2d5ea587b2b129e695d64d8b71bb88dd2d413c495e4075386addb8ca7f2e161d",
+    "floor_49a57f3e2a71b572db881296": "2aac0e4ca96ba9ab016f1e512bc153cae0f81f2ef3f468e7b9ad0442a3a54dd6",
+    "floor_4ce11278717c163075ebfdbd": "e7309234ef33969aec111ad0f48a95d12018588d545121c7198153e1fd19ab68",
+    "floor_544e43e4808e28328ed44b83": "ab313f249f768ed2b6df0754d9b326ad24113eabce7111470d45a36bdf017df3",
+    "floor_560d1fa33b97ddec7f39bcd0": "e748e243fcb1e431db7b2b089a871fc41e2aa9a3467b47fa69f7e0300c7d95b2",
+    "floor_571ddcb8a0af482a7f5a2898": "fa35f6cde7c81d686f51319985f3c549d9595750d785ca7bbe575e0e32aed7ed",
+    "floor_59dd5be7235e061ab6ff1942": "fb4160ede4d95365f4cc836f5db7320f21e541dbada43155763d37c980c94707",
+    "floor_5bb178202dbb3d9516e4c672": "abd210b6b940fa67d2570d08c99d8eb4fc85d22bdc6cca1243a3fab34b41ee4f",
+    "floor_5d2e09fda497acf68358305d": "534483e7f597709283c148ebc5a4dbc53c67c08acb7f488bf2fb6ef1a34f9033",
+    "floor_68ac90c9e0f4dd844712fda0": "f94d4621bcdcbeffe48906cb47a060dd357d65e4b348572d1ab0c36ff273ef8e",
+    "floor_6c82181a725f97b1ca468e74": "3d9a70078614b7fbf93dc5139ddaa73ddadd51913d6889d2b3d8a99d9813ddcd",
+    "floor_6e06b3d320f25724e5728f28": "37f3cdec6f82ff18ad605590e4d6841657a70b1d393839a3d9b65f6d3746a938",
+    "floor_73f294cc080c9f03bbd23eb0": "a67b8677bee2b769b1812699c7c7ce58b0c3f724bdc742538145d5e80168b3fa",
+    "floor_7673123794d57dd359578de2": "6dd5aab32f16a9d2182e5ce8a809217e20ebe55087041a7d86c5c583a0708f8b",
+    "floor_7bda4e56e731a867c0f95512": "fe53efb4d2c4daf08e351c4b2a15aabac0c8c19819fb0d0f121bfc37339bafca",
+    "floor_7d40ca686628986aca2a0562": "110609bd1681cc280e0b406bc01139d159957258acf824ae789a8b9059ebcda2",
+    "floor_89175659cd57ff1c1a094a09": "b0ce10fb6e76db325ac59161e89d816b55c9492ae7e3ad12a75a121888037a72",
+    "floor_8fa4824a9386165d9626163d": "fdd2486db5dcf27b6a60a17af969c89b9bada2cee393e98547ddd163e3b3bf3d",
+    "floor_9477157c886aed7e6c8cacee": "8fab9776a6b857fafc494d69b615292f0c1247c8f2cc7c523371c1f44c967cc3",
+    "floor_9a74cebc916665856bfac4d7": "12f95f520183d7e4174fce33ae5db4e07ffcbe94d54232d472bc7f30b5dfc61a",
+    "floor_9bf954e7101cc521821500a9": "bd938aa32a623c87dea8cb8f959e099ea209530120aefbdfb88024dcf08ecd6b",
+    "floor_9f7fb6fb68d038533e101156": "0a1c5ec6d6a858332694aa3b2ef68025081885250a44037a49c3d01d04ad132b",
+    "floor_a33d790f917708b1b27a4f16": "920099bf29d8c7c293ba0e9974718ff8e23151d627d49b57632afc9e4d641871",
+    "floor_a58aa086e0db6d72844be49b": "30cea74307c0dd1c6828e59415dab0e676cd65441234367f7d954ba9be68f2b6",
+    "floor_a743e35b599d0e7260baf443": "ab09413f8762eabb19188359de083ce338df6b616b79392be3abe77462785f76",
+    "floor_a75d8d17ef45834e93edf62f": "64995bf435e4ba163e20d232270419df56c33095fe85a67fad0a28d488dd2bac",
+    "floor_ac1c867472a93630371dc745": "0b695b1e7f47c6cf17cba6e864c24041a0237f5c57b2a9670cc15e5eaa0d6bdc",
+    "floor_acda201943eecd0cab2c5363": "829731f8aad024f4715f45a578c068937f8161318a27669fadf3448bd29a3027",
+    "floor_b0f6ba0022f4f60e9e4cf85c": "87edcaed5a47af0a7632b692b784e35e8f2285c72adc899f1b2f03ee0f5fa920",
+    "floor_b2a8a696855e65d01261b3d1": "7c1b72d0f88ad1a8f3478a1131899a3996df308b230afda91b3ca11f167ce497",
+    "floor_b691a520939d33acba2c137c": "957b0ee557afbba96ba5809efa268a771cfdd29466417f9c56422835279415d9",
+    "floor_bac6ca60a8bb1d19c3941336": "51df04b56c6a1de4ce21b76ff8e8510e1a8fa351bebfc04e8e77f8336f76eed9",
+    "floor_bccec70fb516f1ac8c9599fa": "1c3acd1d648d1ef711426199fb9831f96ce4d6a40213c7edced686429e375d2e",
+    "floor_c045cd091b021b34a53ab848": "29a38022197de60771d6f4994f6152d039a79b9b6e469ba9e5ce9403035b32e5",
+    "floor_c08f83e68e92eb52846bdd8a": "401426fcb4fa2721948de8dd7b296db6d443c4d1ec6f5ebbf235d247e81c9e5e",
+    "floor_c0c0337df849a4d95919a01f": "7aad0d64156cde71bda7156c7f723cd14ef3264a4a7d4357597ec3760607f85c",
+    "floor_c790ef1715c90e876d952f7b": "f28906cb76cbfed79c83f5ba6de7cf17d50745a7a7dceb61dd82b451e1930abe",
+    "floor_c8c761f8ef82f6c93cd2d17d": "c16bc6e6d8d1d3cea676d70a98452951f9beceb4d83a3bc527d4ad6f9a3e35ab",
+    "floor_c95b9166f6abbaed6669f01a": "2aa4010828dc40b21ab524a8e0b6bbbb3bf220e48bb0bdedac9bd5f6238ef090",
+    "floor_d2d21cf1c94d9eb78b194bd1": "1c99c1bfe76fefc984cd32964417d3bb4c931dac8644e6e5bc41d106b98fb1cf",
+    "floor_d574a714c7eaa3e0b57e4945": "fc5d370ae9128525fe6386148d03ecca4ee74c38fb786f504c26d89226d909f5",
+    "floor_da1d64e8cf609e5a92e55d8c": "83134445bd5e15ef5ddfd5214959dc64b722d96c733ad595d5391881a2b8fad2",
+    "floor_de0ec07d012c66d596b514d9": "54fabde815b17db70ef71d91ed9aebaad18f1f623cfc01d372217f36b27a7c53",
+    "floor_e29573b71bc220a492fc87d4": "af74dfeac9d65176efa655a09b2b274563f251a54a65bcec71cd332746780cbf",
+    "floor_e651f3e20323423fc1833ffe": "2de6b8dd0c4c1bc73658d0d04ca1e4c80263c3ecc9c69d6707b04636e81d7b88",
+    "floor_ea2021be6534e91cbaab9385": "ab9cdcfc6abc50ade6ad0ac06a6619c7f85c20cdf2b656b0278b074870fecd75",
+    "floor_ec1e9b863c1e5fddbe9ead53": "a8e2a2609c5f0fbcd3f05393a6864699337834a50eb859283056dd9bcdf87ae1",
+    "floor_ecf7e2c5b26534ee1e1cd9be": "62924630ede53e5591fc7ea3415adede02728d873caaebd989c587ce852ab844",
+    "floor_ee27bdc77df8abd445e976ce": "a372ff3918be55310cd8a17019392b9646e2e20189c0c1e5e7d601742da3385e",
+    "floor_f8a738c2cc8fae616dab08e9": "e99a30ad84aea80519c7c83badbb6a10b5f9e006a09a03847ae163edf3ed4251",
+    "floor_fc0aeb9cb7276cbd17aafab1": "cfff4ff22a6211dc866cd40133079e1c5e93f4d646e5c9c5daf0312ece5c26d4",
+    "floor_fdcb5d02a7783dc607dbf84a": "1b40a77e1da7a3061f3fc8a7ea79189d9b711cb266e432ff4359e306c96738e9",
+    "floor_fec4c27da71f75619aff52ec": "57424eb2a31e61be452f2f459d9e91f0f72e55aa4abbed8e9f0016a98c44914d"
+  },
+  "layout_checkpoint": {
+    "house_exposure_status": "unknown_no_house_list_or_verified_training_provenance",
+    "metadata_keys": [
+      "acc_d",
+      "acc_d_new",
+      "acc_d_oracle",
+      "accuracy",
+      "average_accuracy",
+      "epoch",
+      "net",
+      "optimizer",
+      "oracle_accuracy"
+    ],
+    "recorded_epoch": 0
+  },
+  "limitations": [
+    "training cache membership demonstrates Opening Head exposure, not physical-label correctness",
+    "layout checkpoint house exposure cannot be inferred from Opening Head training exposure",
+    "images absent from this cache are not proven unseen by warm start or other pretraining",
+    "official test split is not read or used"
+  ],
+  "opening_training": {
+    "batch_size": 64,
+    "cache_contract_matches_checkpoint": true,
+    "completed_epoch_zero_based": 20,
+    "expected_steps_for_21_epochs": 7182,
+    "global_step": 7182,
+    "max_train_views": null,
+    "selection_threshold": 0.47000000000000003,
+    "steps_consistent_with_full_epoch_loading": true,
+    "train_cache_views": 21840,
+    "train_manifest_matches_checkpoint": true,
+    "val_cache_views": 2687,
+    "warm_started": true
+  },
+  "overlap": {
+    "audit": {
+      "cached_training_views_from_houses": 167,
+      "cohort_images": 318,
+      "cohort_images_in_training_cache": 126,
+      "house_count": 10,
+      "houses": {
+        "0005": {
+          "cached_train_views_in_house": 18,
+          "cohort_images": 27,
+          "cohort_images_in_train_cache": 18
+        },
+        "0242": {
+          "cached_train_views_in_house": 17,
+          "cohort_images": 68,
+          "cohort_images_in_train_cache": 17
+        },
+        "0273": {
+          "cached_train_views_in_house": 18,
+          "cohort_images": 33,
+          "cohort_images_in_train_cache": 10
+        },
+        "0313": {
+          "cached_train_views_in_house": 16,
+          "cohort_images": 39,
+          "cohort_images_in_train_cache": 16
+        },
+        "0317": {
+          "cached_train_views_in_house": 11,
+          "cohort_images": 42,
+          "cohort_images_in_train_cache": 11
+        },
+        "0359": {
+          "cached_train_views_in_house": 15,
+          "cohort_images": 15,
+          "cohort_images_in_train_cache": 9
+        },
+        "0798": {
+          "cached_train_views_in_house": 20,
+          "cohort_images": 11,
+          "cohort_images_in_train_cache": 8
+        },
+        "0910": {
+          "cached_train_views_in_house": 19,
+          "cohort_images": 35,
+          "cohort_images_in_train_cache": 19
+        },
+        "1087": {
+          "cached_train_views_in_house": 24,
+          "cohort_images": 28,
+          "cohort_images_in_train_cache": 9
+        },
+        "1140": {
+          "cached_train_views_in_house": 9,
+          "cohort_images": 20,
+          "cohort_images_in_train_cache": 9
+        }
+      },
+      "houses_with_training_cache_views": 10,
+      "matching_cohort_image_paths": [
+        "0005/panos/floor_01_partial_room_02_pano_12.jpg",
+        "0005/panos/floor_01_partial_room_03_pano_16.jpg",
+        "0005/panos/floor_01_partial_room_04_pano_13.jpg",
+        "0005/panos/floor_01_partial_room_05_pano_23.jpg",
+        "0005/panos/floor_01_partial_room_06_pano_8.jpg",
+        "0005/panos/floor_01_partial_room_07_pano_19.jpg",
+        "0005/panos/floor_01_partial_room_08_pano_24.jpg",
+        "0005/panos/floor_01_partial_room_09_pano_15.jpg",
+        "0005/panos/floor_01_partial_room_10_pano_18.jpg",
+        "0005/panos/floor_01_partial_room_11_pano_7.jpg",
+        "0005/panos/floor_01_partial_room_12_pano_17.jpg",
+        "0005/panos/floor_01_partial_room_13_pano_2.jpg",
+        "0005/panos/floor_01_partial_room_14_pano_22.jpg",
+        "0005/panos/floor_01_partial_room_15_pano_4.jpg",
+        "0005/panos/floor_01_partial_room_16_pano_26.jpg",
+        "0005/panos/floor_01_partial_room_17_pano_10.jpg",
+        "0005/panos/floor_01_partial_room_19_pano_21.jpg",
+        "0005/panos/floor_01_partial_room_20_pano_6.jpg",
+        "0242/panos/floor_01_partial_room_01_pano_8.jpg",
+        "0242/panos/floor_01_partial_room_02_pano_73.jpg",
+        "0242/panos/floor_01_partial_room_03_pano_11.jpg",
+        "0242/panos/floor_01_partial_room_04_pano_35.jpg",
+        "0242/panos/floor_01_partial_room_05_pano_59.jpg",
+        "0242/panos/floor_01_partial_room_06_pano_41.jpg",
+        "0242/panos/floor_01_partial_room_07_pano_65.jpg",
+        "0242/panos/floor_01_partial_room_08_pano_64.jpg",
+        "0242/panos/floor_01_partial_room_09_pano_29.jpg",
+        "0242/panos/floor_01_partial_room_10_pano_25.jpg",
+        "0242/panos/floor_01_partial_room_11_pano_68.jpg",
+        "0242/panos/floor_01_partial_room_12_pano_20.jpg",
+        "0242/panos/floor_01_partial_room_14_pano_56.jpg",
+        "0242/panos/floor_01_partial_room_15_pano_53.jpg",
+        "0242/panos/floor_01_partial_room_16_pano_50.jpg",
+        "0242/panos/floor_01_partial_room_17_pano_44.jpg",
+        "0242/panos/floor_01_partial_room_18_pano_38.jpg",
+        "0273/panos/floor_02_partial_room_01_pano_76.jpg",
+        "0273/panos/floor_02_partial_room_03_pano_86.jpg",
+        "0273/panos/floor_02_partial_room_05_pano_78.jpg",
+        "0273/panos/floor_02_partial_room_06_pano_64.jpg",
+        "0273/panos/floor_02_partial_room_07_pano_72.jpg",
+        "0273/panos/floor_02_partial_room_09_pano_52.jpg",
+        "0273/panos/floor_02_partial_room_10_pano_82.jpg",
+        "0273/panos/floor_02_partial_room_11_pano_84.jpg",
+        "0273/panos/floor_02_partial_room_12_pano_54.jpg",
+        "0273/panos/floor_02_partial_room_13_pano_91.jpg",
+        "0313/panos/floor_01_partial_room_01_pano_49.jpg",
+        "0313/panos/floor_01_partial_room_02_pano_46.jpg",
+        "0313/panos/floor_01_partial_room_03_pano_48.jpg",
+        "0313/panos/floor_01_partial_room_05_pano_36.jpg",
+        "0313/panos/floor_01_partial_room_06_pano_1.jpg",
+        "0313/panos/floor_01_partial_room_07_pano_24.jpg",
+        "0313/panos/floor_01_partial_room_08_pano_29.jpg",
+        "0313/panos/floor_01_partial_room_09_pano_40.jpg",
+        "0313/panos/floor_01_partial_room_10_pano_51.jpg",
+        "0313/panos/floor_01_partial_room_11_pano_2.jpg",
+        "0313/panos/floor_01_partial_room_12_pano_21.jpg",
+        "0313/panos/floor_01_partial_room_13_pano_32.jpg",
+        "0313/panos/floor_01_partial_room_14_pano_38.jpg",
+        "0313/panos/floor_01_partial_room_15_pano_19.jpg",
+        "0313/panos/floor_01_partial_room_16_pano_42.jpg",
+        "0313/panos/floor_01_partial_room_17_pano_27.jpg",
+        "0317/panos/floor_01_partial_room_01_pano_4.jpg",
+        "0317/panos/floor_01_partial_room_02_pano_33.jpg",
+        "0317/panos/floor_01_partial_room_04_pano_45.jpg",
+        "0317/panos/floor_01_partial_room_05_pano_38.jpg",
+        "0317/panos/floor_01_partial_room_06_pano_20.jpg",
+        "0317/panos/floor_01_partial_room_07_pano_23.jpg",
+        "0317/panos/floor_01_partial_room_08_pano_36.jpg",
+        "0317/panos/floor_01_partial_room_11_pano_41.jpg",
+        "0317/panos/floor_01_partial_room_12_pano_28.jpg",
+        "0317/panos/floor_01_partial_room_13_pano_16.jpg",
+        "0317/panos/floor_01_partial_room_14_pano_43.jpg",
+        "0359/panos/floor_02_partial_room_01_pano_34.jpg",
+        "0359/panos/floor_02_partial_room_02_pano_31.jpg",
+        "0359/panos/floor_02_partial_room_03_pano_28.jpg",
+        "0359/panos/floor_02_partial_room_05_pano_29.jpg",
+        "0359/panos/floor_02_partial_room_06_pano_33.jpg",
+        "0359/panos/floor_02_partial_room_07_pano_24.jpg",
+        "0359/panos/floor_02_partial_room_08_pano_22.jpg",
+        "0359/panos/floor_02_partial_room_09_pano_26.jpg",
+        "0359/panos/floor_02_partial_room_10_pano_20.jpg",
+        "0798/panos/floor_01_partial_room_01_pano_5.jpg",
+        "0798/panos/floor_01_partial_room_03_pano_19.jpg",
+        "0798/panos/floor_01_partial_room_04_pano_21.jpg",
+        "0798/panos/floor_01_partial_room_06_pano_8.jpg",
+        "0798/panos/floor_01_partial_room_07_pano_11.jpg",
+        "0798/panos/floor_01_partial_room_08_pano_23.jpg",
+        "0798/panos/floor_01_partial_room_09_pano_20.jpg",
+        "0798/panos/floor_01_partial_room_11_pano_16.jpg",
+        "0910/panos/floor_01_partial_room_01_pano_33.jpg",
+        "0910/panos/floor_01_partial_room_02_pano_15.jpg",
+        "0910/panos/floor_01_partial_room_03_pano_35.jpg",
+        "0910/panos/floor_01_partial_room_04_pano_7.jpg",
+        "0910/panos/floor_01_partial_room_05_pano_8.jpg",
+        "0910/panos/floor_01_partial_room_06_pano_4.jpg",
+        "0910/panos/floor_01_partial_room_07_pano_25.jpg",
+        "0910/panos/floor_01_partial_room_08_pano_9.jpg",
+        "0910/panos/floor_01_partial_room_09_pano_13.jpg",
+        "0910/panos/floor_01_partial_room_11_pano_16.jpg",
+        "0910/panos/floor_01_partial_room_12_pano_21.jpg",
+        "0910/panos/floor_01_partial_room_13_pano_24.jpg",
+        "0910/panos/floor_01_partial_room_14_pano_28.jpg",
+        "0910/panos/floor_01_partial_room_15_pano_26.jpg",
+        "0910/panos/floor_01_partial_room_16_pano_3.jpg",
+        "0910/panos/floor_01_partial_room_17_pano_36.jpg",
+        "0910/panos/floor_01_partial_room_20_pano_31.jpg",
+        "0910/panos/floor_01_partial_room_21_pano_29.jpg",
+        "0910/panos/floor_01_partial_room_22_pano_6.jpg",
+        "1087/panos/floor_01_partial_room_01_pano_6.jpg",
+        "1087/panos/floor_01_partial_room_02_pano_23.jpg",
+        "1087/panos/floor_01_partial_room_04_pano_17.jpg",
+        "1087/panos/floor_01_partial_room_05_pano_25.jpg",
+        "1087/panos/floor_01_partial_room_07_pano_1.jpg",
+        "1087/panos/floor_01_partial_room_08_pano_9.jpg",
+        "1087/panos/floor_01_partial_room_09_pano_13.jpg",
+        "1087/panos/floor_01_partial_room_10_pano_20.jpg",
+        "1087/panos/floor_01_partial_room_11_pano_21.jpg",
+        "1140/panos/floor_01_partial_room_01_pano_13.jpg",
+        "1140/panos/floor_01_partial_room_03_pano_1.jpg",
+        "1140/panos/floor_01_partial_room_04_pano_36.jpg",
+        "1140/panos/floor_01_partial_room_06_pano_28.jpg",
+        "1140/panos/floor_01_partial_room_07_pano_11.jpg",
+        "1140/panos/floor_01_partial_room_08_pano_29.jpg",
+        "1140/panos/floor_01_partial_room_09_pano_23.jpg",
+        "1140/panos/floor_01_partial_room_10_pano_6.jpg",
+        "1140/panos/floor_01_partial_room_11_pano_16.jpg"
+      ]
+    },
+    "calibration": {
+      "cached_training_views_from_houses": 167,
+      "cohort_images": 299,
+      "cohort_images_in_training_cache": 115,
+      "house_count": 10,
+      "houses": {
+        "0351": {
+          "cached_train_views_in_house": 10,
+          "cohort_images": 26,
+          "cohort_images_in_train_cache": 8
+        },
+        "0380": {
+          "cached_train_views_in_house": 18,
+          "cohort_images": 54,
+          "cohort_images_in_train_cache": 18
+        },
+        "0469": {
+          "cached_train_views_in_house": 17,
+          "cohort_images": 38,
+          "cohort_images_in_train_cache": 17
+        },
+        "0486": {
+          "cached_train_views_in_house": 6,
+          "cohort_images": 30,
+          "cohort_images_in_train_cache": 6
+        },
+        "0511": {
+          "cached_train_views_in_house": 23,
+          "cohort_images": 29,
+          "cohort_images_in_train_cache": 16
+        },
+        "0633": {
+          "cached_train_views_in_house": 13,
+          "cohort_images": 42,
+          "cohort_images_in_train_cache": 13
+        },
+        "0686": {
+          "cached_train_views_in_house": 24,
+          "cohort_images": 19,
+          "cohort_images_in_train_cache": 13
+        },
+        "1254": {
+          "cached_train_views_in_house": 25,
+          "cohort_images": 25,
+          "cohort_images_in_train_cache": 6
+        },
+        "1264": {
+          "cached_train_views_in_house": 15,
+          "cohort_images": 27,
+          "cohort_images_in_train_cache": 15
+        },
+        "1377": {
+          "cached_train_views_in_house": 16,
+          "cohort_images": 9,
+          "cohort_images_in_train_cache": 3
+        }
+      },
+      "houses_with_training_cache_views": 10
+    },
+    "fit": {
+      "cached_training_views_from_houses": 685,
+      "cohort_images": 947,
+      "cohort_images_in_training_cache": 386,
+      "house_count": 40,
+      "houses": {
+        "0001": {
+          "cached_train_views_in_house": 18,
+          "cohort_images": 28,
+          "cohort_images_in_train_cache": 7
+        },
+        "0002": {
+          "cached_train_views_in_house": 18,
+          "cohort_images": 53,
+          "cohort_images_in_train_cache": 18
+        },
+        "0012": {
+          "cached_train_views_in_house": 21,
+          "cohort_images": 17,
+          "cohort_images_in_train_cache": 6
+        },
+        "0024": {
+          "cached_train_views_in_house": 17,
+          "cohort_images": 27,
+          "cohort_images_in_train_cache": 4
+        },
+        "0033": {
+          "cached_train_views_in_house": 8,
+          "cohort_images": 20,
+          "cohort_images_in_train_cache": 8
+        },
+        "0061": {
+          "cached_train_views_in_house": 18,
+          "cohort_images": 9,
+          "cohort_images_in_train_cache": 3
+        },
+        "0079": {
+          "cached_train_views_in_house": 15,
+          "cohort_images": 16,
+          "cohort_images_in_train_cache": 10
+        },
+        "0153": {
+          "cached_train_views_in_house": 21,
+          "cohort_images": 3,
+          "cohort_images_in_train_cache": 0
+        },
+        "0216": {
+          "cached_train_views_in_house": 12,
+          "cohort_images": 28,
+          "cohort_images_in_train_cache": 12
+        },
+        "0236": {
+          "cached_train_views_in_house": 20,
+          "cohort_images": 30,
+          "cohort_images_in_train_cache": 16
+        },
+        "0401": {
+          "cached_train_views_in_house": 19,
+          "cohort_images": 6,
+          "cohort_images_in_train_cache": 2
+        },
+        "0419": {
+          "cached_train_views_in_house": 16,
+          "cohort_images": 21,
+          "cohort_images_in_train_cache": 9
+        },
+        "0449": {
+          "cached_train_views_in_house": 25,
+          "cohort_images": 9,
+          "cohort_images_in_train_cache": 4
+        },
+        "0549": {
+          "cached_train_views_in_house": 16,
+          "cohort_images": 30,
+          "cohort_images_in_train_cache": 8
+        },
+        "0652": {
+          "cached_train_views_in_house": 19,
+          "cohort_images": 58,
+          "cohort_images_in_train_cache": 19
+        },
+        "0676": {
+          "cached_train_views_in_house": 15,
+          "cohort_images": 12,
+          "cohort_images_in_train_cache": 10
+        },
+        "0694": {
+          "cached_train_views_in_house": 17,
+          "cohort_images": 3,
+          "cohort_images_in_train_cache": 0
+        },
+        "0732": {
+          "cached_train_views_in_house": 14,
+          "cohort_images": 30,
+          "cohort_images_in_train_cache": 4
+        },
+        "0786": {
+          "cached_train_views_in_house": 24,
+          "cohort_images": 28,
+          "cohort_images_in_train_cache": 15
+        },
+        "0818": {
+          "cached_train_views_in_house": 27,
+          "cohort_images": 18,
+          "cohort_images_in_train_cache": 17
+        },
+        "0839": {
+          "cached_train_views_in_house": 11,
+          "cohort_images": 19,
+          "cohort_images_in_train_cache": 11
+        },
+        "0858": {
+          "cached_train_views_in_house": 16,
+          "cohort_images": 8,
+          "cohort_images_in_train_cache": 8
+        },
+        "0937": {
+          "cached_train_views_in_house": 21,
+          "cohort_images": 16,
+          "cohort_images_in_train_cache": 7
+        },
+        "0951": {
+          "cached_train_views_in_house": 9,
+          "cohort_images": 21,
+          "cohort_images_in_train_cache": 9
+        },
+        "0958": {
+          "cached_train_views_in_house": 15,
+          "cohort_images": 40,
+          "cohort_images_in_train_cache": 15
+        },
+        "0993": {
+          "cached_train_views_in_house": 16,
+          "cohort_images": 45,
+          "cohort_images_in_train_cache": 16
+        },
+        "0998": {
+          "cached_train_views_in_house": 17,
+          "cohort_images": 25,
+          "cohort_images_in_train_cache": 10
+        },
+        "1011": {
+          "cached_train_views_in_house": 13,
+          "cohort_images": 23,
+          "cohort_images_in_train_cache": 13
+        },
+        "1018": {
+          "cached_train_views_in_house": 17,
+          "cohort_images": 15,
+          "cohort_images_in_train_cache": 10
+        },
+        "1067": {
+          "cached_train_views_in_house": 20,
+          "cohort_images": 16,
+          "cohort_images_in_train_cache": 5
+        },
+        "1150": {
+          "cached_train_views_in_house": 7,
+          "cohort_images": 3,
+          "cohort_images_in_train_cache": 0
+        },
+        "1156": {
+          "cached_train_views_in_house": 10,
+          "cohort_images": 13,
+          "cohort_images_in_train_cache": 10
+        },
+        "1191": {
+          "cached_train_views_in_house": 22,
+          "cohort_images": 22,
+          "cohort_images_in_train_cache": 7
+        },
+        "1242": {
+          "cached_train_views_in_house": 7,
+          "cohort_images": 21,
+          "cohort_images_in_train_cache": 7
+        },
+        "1281": {
+          "cached_train_views_in_house": 26,
+          "cohort_images": 21,
+          "cohort_images_in_train_cache": 13
+        },
+        "1472": {
+          "cached_train_views_in_house": 21,
+          "cohort_images": 47,
+          "cohort_images_in_train_cache": 21
+        },
+        "1482": {
+          "cached_train_views_in_house": 16,
+          "cohort_images": 48,
+          "cohort_images_in_train_cache": 16
+        },
+        "1484": {
+          "cached_train_views_in_house": 26,
+          "cohort_images": 37,
+          "cohort_images_in_train_cache": 9
+        },
+        "1487": {
+          "cached_train_views_in_house": 22,
+          "cohort_images": 29,
+          "cohort_images_in_train_cache": 14
+        },
+        "1505": {
+          "cached_train_views_in_house": 13,
+          "cohort_images": 32,
+          "cohort_images_in_train_cache": 13
+        }
+      },
+      "houses_with_training_cache_views": 40
+    },
+    "selection": {
+      "cached_training_views_from_houses": 196,
+      "cohort_images": 278,
+      "cohort_images_in_training_cache": 111,
+      "house_count": 10,
+      "houses": {
+        "0081": {
+          "cached_train_views_in_house": 13,
+          "cohort_images": 29,
+          "cohort_images_in_train_cache": 13
+        },
+        "0361": {
+          "cached_train_views_in_house": 21,
+          "cohort_images": 50,
+          "cohort_images_in_train_cache": 21
+        },
+        "0423": {
+          "cached_train_views_in_house": 18,
+          "cohort_images": 18,
+          "cohort_images_in_train_cache": 11
+        },
+        "0451": {
+          "cached_train_views_in_house": 20,
+          "cohort_images": 3,
+          "cohort_images_in_train_cache": 0
+        },
+        "0476": {
+          "cached_train_views_in_house": 21,
+          "cohort_images": 55,
+          "cohort_images_in_train_cache": 21
+        },
+        "0530": {
+          "cached_train_views_in_house": 32,
+          "cohort_images": 17,
+          "cohort_images_in_train_cache": 9
+        },
+        "0674": {
+          "cached_train_views_in_house": 22,
+          "cohort_images": 29,
+          "cohort_images_in_train_cache": 12
+        },
+        "0830": {
+          "cached_train_views_in_house": 15,
+          "cohort_images": 15,
+          "cohort_images_in_train_cache": 3
+        },
+        "1053": {
+          "cached_train_views_in_house": 11,
+          "cohort_images": 25,
+          "cohort_images_in_train_cache": 11
+        },
+        "1195": {
+          "cached_train_views_in_house": 23,
+          "cohort_images": 37,
+          "cohort_images_in_train_cache": 10
+        }
+      },
+      "houses_with_training_cache_views": 10
+    }
+  },
+  "schema_version": "research10.opening-exposure.v1",
+  "source_sha256": {
+    "audit_script": "8a0ff43715afea16c7740ab90d40b0c360d04943613b339217e1a242b9f5efc0",
+    "cohort": "41d39e371aa516144384452c207707bff025b36401550cc72177ab25e15383f6",
+    "layout_checkpoint": "377b84d120b28aaf4538cd867cd59f1caee165ca1e5e427e3d3b6d7b8d400f98",
+    "matching_train_manifest": "52d212b3f068d910492d6339f029622ddca9a52f153c80d2ba51fa23b744db3f",
+    "opening_checkpoint": "93a86b10acf8fc98593c0a3e654af8ab8849865bb620a1532e3c271e68ee5bfc",
+    "train_cache_metadata": "f1a385d8672a534960791dafa41613951571602a8e6e7aabd0624c2e4bf9b680"
+  }
+}

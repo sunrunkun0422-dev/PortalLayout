@@ -1,0 +1,216 @@
+{
+  "selection": {
+    "A_V0_rank": {
+      "counts": {
+        "overall": {
+          "incorrect": 834,
+          "accepted": 975,
+          "no_correct_pose_candidate": 830,
+          "ignored": 50,
+          "ignored_pose": 50,
+          "correct": 91,
+          "correct_pose": 91,
+          "wrong_hypothesis_selected": 4
+        },
+        "cross_room": {
+          "incorrect": 506,
+          "accepted": 555,
+          "no_correct_pose_candidate": 504,
+          "ignored": 21,
+          "ignored_pose": 21,
+          "correct": 28,
+          "correct_pose": 28,
+          "wrong_hypothesis_selected": 2
+        },
+        "same_room": {
+          "incorrect": 258,
+          "accepted": 345,
+          "no_correct_pose_candidate": 256,
+          "ignored": 27,
+          "ignored_pose": 27,
+          "correct": 60,
+          "correct_pose": 60,
+          "wrong_hypothesis_selected": 2
+        },
+        "unknown_room": {
+          "incorrect": 70,
+          "accepted": 75,
+          "no_correct_pose_candidate": 70,
+          "ignored": 2,
+          "ignored_pose": 2,
+          "correct": 3,
+          "correct_pose": 3
+        }
+      },
+      "connectivity_coverage_macro": 0.9649686303671267
+    },
+    "B_V1_rank": {
+      "counts": {
+        "overall": {
+          "incorrect": 739,
+          "accepted": 946,
+          "no_correct_pose_candidate": 732,
+          "ignored": 9,
+          "ignored_pose": 9,
+          "correct": 198,
+          "correct_pose": 198,
+          "wrong_hypothesis_selected": 7
+        },
+        "cross_room": {
+          "incorrect": 469,
+          "accepted": 548,
+          "no_correct_pose_candidate": 466,
+          "correct": 78,
+          "correct_pose": 78,
+          "wrong_hypothesis_selected": 3,
+          "ignored": 1,
+          "ignored_pose": 1
+        },
+        "same_room": {
+          "ignored": 6,
+          "accepted": 324,
+          "ignored_pose": 6,
+          "correct": 110,
+          "correct_pose": 110,
+          "incorrect": 208,
+          "no_correct_pose_candidate": 205,
+          "wrong_hypothesis_selected": 3
+        },
+        "unknown_room": {
+          "incorrect": 62,
+          "accepted": 74,
+          "no_correct_pose_candidate": 61,
+          "correct": 10,
+          "correct_pose": 10,
+          "wrong_hypothesis_selected": 1,
+          "ignored": 2,
+          "ignored_pose": 2
+        }
+      },
+      "connectivity_coverage_macro": 0.9192615834457939
+    },
+    "C_V0_filter": {
+      "counts": {
+        "overall": {},
+        "cross_room": {},
+        "same_room": {},
+        "unknown_room": {}
+      },
+      "connectivity_coverage_macro": 0.04240926951077327
+    },
+    "D_V1_filter": {
+      "counts": {
+        "overall": {},
+        "cross_room": {},
+        "same_room": {},
+        "unknown_room": {}
+      },
+      "connectivity_coverage_macro": 0.04240926951077327
+    }
+  },
+  "calibration": {
+    "A_V0_rank": {
+      "counts": {
+        "overall": {
+          "ignored": 72,
+          "accepted": 1097,
+          "ignored_pose": 72,
+          "incorrect": 910,
+          "no_correct_pose_candidate": 908,
+          "correct": 115,
+          "correct_pose": 115,
+          "wrong_hypothesis_selected": 2
+        },
+        "cross_room": {
+          "incorrect": 541,
+          "accepted": 598,
+          "no_correct_pose_candidate": 541,
+          "ignored": 29,
+          "ignored_pose": 29,
+          "correct": 28,
+          "correct_pose": 28
+        },
+        "same_room": {
+          "ignored": 34,
+          "accepted": 401,
+          "ignored_pose": 34,
+          "incorrect": 285,
+          "no_correct_pose_candidate": 283,
+          "correct": 82,
+          "correct_pose": 82,
+          "wrong_hypothesis_selected": 2
+        },
+        "unknown_room": {
+          "correct": 5,
+          "accepted": 98,
+          "correct_pose": 5,
+          "incorrect": 84,
+          "no_correct_pose_candidate": 84,
+          "ignored": 9,
+          "ignored_pose": 9
+        }
+      },
+      "connectivity_coverage_macro": 0.9590420832364567
+    },
+    "B_V1_rank": {
+      "counts": {
+        "overall": {
+          "correct": 266,
+          "accepted": 1031,
+          "correct_pose": 266,
+          "incorrect": 747,
+          "no_correct_pose_candidate": 741,
+          "ignored": 18,
+          "ignored_pose": 18,
+          "wrong_hypothesis_selected": 6
+        },
+        "cross_room": {
+          "incorrect": 480,
+          "accepted": 576,
+          "no_correct_pose_candidate": 475,
+          "correct": 88,
+          "correct_pose": 88,
+          "wrong_hypothesis_selected": 5,
+          "ignored": 8,
+          "ignored_pose": 8
+        },
+        "same_room": {
+          "correct": 157,
+          "accepted": 366,
+          "correct_pose": 157,
+          "incorrect": 199,
+          "no_correct_pose_candidate": 199,
+          "ignored": 10,
+          "ignored_pose": 10
+        },
+        "unknown_room": {
+          "correct": 21,
+          "accepted": 89,
+          "correct_pose": 21,
+          "incorrect": 68,
+          "no_correct_pose_candidate": 67,
+          "wrong_hypothesis_selected": 1
+        }
+      },
+      "connectivity_coverage_macro": 0.9424232617948366
+    },
+    "C_V0_filter": {
+      "counts": {
+        "overall": {},
+        "cross_room": {},
+        "same_room": {},
+        "unknown_room": {}
+      },
+      "connectivity_coverage_macro": 0.03592692539497499
+    },
+    "D_V1_filter": {
+      "counts": {
+        "overall": {},
+        "cross_room": {},
+        "same_room": {},
+        "unknown_room": {}
+      },
+      "connectivity_coverage_macro": 0.03592692539497499
+    }
+  }
+}

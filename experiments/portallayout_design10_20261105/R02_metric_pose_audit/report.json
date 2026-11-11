@@ -1,0 +1,200 @@
+{
+  "status": "diagnostic_only",
+  "unit": "meters",
+  "translation_threshold_m": 0.5,
+  "rotation_threshold_deg": 10.0,
+  "selection_pair_count": 4885,
+  "scopes": {
+    "cross_room": {
+      "pairs": 3651,
+      "gt_metric_pairs": 3227,
+      "predicted_poses": 230,
+      "evaluated_poses": 188,
+      "correct_50cm_10deg": 18,
+      "reasons": {
+        "no_pose": 3421,
+        "metric_scale_unavailable": 42
+      },
+      "houses": {
+        "0081": {
+          "pairs": 339,
+          "evaluated_poses": 36,
+          "correct": 0
+        },
+        "0361": {
+          "pairs": 948,
+          "evaluated_poses": 48,
+          "correct": 4
+        },
+        "0423": {
+          "pairs": 133,
+          "evaluated_poses": 17,
+          "correct": 4
+        },
+        "0476": {
+          "pairs": 1192,
+          "evaluated_poses": 54,
+          "correct": 3
+        },
+        "0530": {
+          "pairs": 93,
+          "evaluated_poses": 2,
+          "correct": 0
+        },
+        "0674": {
+          "pairs": 260,
+          "evaluated_poses": 19,
+          "correct": 2
+        },
+        "0830": {
+          "pairs": 57,
+          "evaluated_poses": 4,
+          "correct": 3
+        },
+        "1053": {
+          "pairs": 205,
+          "evaluated_poses": 8,
+          "correct": 2
+        },
+        "1195": {
+          "pairs": 424
+        }
+      }
+    },
+    "same_room": {
+      "pairs": 1030,
+      "gt_metric_pairs": 859,
+      "predicted_poses": 77,
+      "evaluated_poses": 65,
+      "correct_50cm_10deg": 7,
+      "reasons": {
+        "no_pose": 953,
+        "metric_scale_unavailable": 12
+      },
+      "houses": {
+        "0081": {
+          "pairs": 67,
+          "evaluated_poses": 7,
+          "correct": 0
+        },
+        "0361": {
+          "pairs": 277,
+          "evaluated_poses": 15,
+          "correct": 2
+        },
+        "0423": {
+          "pairs": 20,
+          "evaluated_poses": 5,
+          "correct": 1
+        },
+        "0451": {
+          "pairs": 3
+        },
+        "0476": {
+          "pairs": 239,
+          "evaluated_poses": 19,
+          "correct": 2
+        },
+        "0530": {
+          "pairs": 43,
+          "evaluated_poses": 1,
+          "correct": 0
+        },
+        "0674": {
+          "pairs": 91,
+          "evaluated_poses": 7,
+          "correct": 0
+        },
+        "0830": {
+          "pairs": 48,
+          "evaluated_poses": 7,
+          "correct": 2
+        },
+        "1053": {
+          "pairs": 71,
+          "evaluated_poses": 4,
+          "correct": 0
+        },
+        "1195": {
+          "pairs": 171
+        }
+      }
+    },
+    "unknown_room": {
+      "pairs": 204,
+      "gt_metric_pairs": 133,
+      "predicted_poses": 4,
+      "evaluated_poses": 1,
+      "correct_50cm_10deg": 0,
+      "reasons": {
+        "no_pose": 200,
+        "metric_scale_unavailable": 3
+      },
+      "houses": {
+        "0476": {
+          "pairs": 54
+        },
+        "0674": {
+          "pairs": 55
+        },
+        "1053": {
+          "pairs": 24,
+          "evaluated_poses": 1,
+          "correct": 0
+        },
+        "1195": {
+          "pairs": 71
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_182694debae2cc874400dcff/floor_gt.json": "9504e7945e815a32134c7700611d735652006cfc5bf485f728a1fb72bb0b6250",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_182694debae2cc874400dcff/observations_gt.jsonl": "3c8b4d0888191d481c60f2edbad0ea94edd14adcf9dbb93554b500e07b9b0739",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_182694debae2cc874400dcff.json": "c21a1964b0427e7a1b03eaf7bb7807dd4543a31b0d4e6c0e28f8ab282cdbd064",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_182694debae2cc874400dcff.json": "165ce70352a4687fb684715fbbaf85bad06a6247025bdec0b99b77939ea1a17f",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_183777d9c8c7effbac7539d0/floor_gt.json": "049c6ce66918b4e82bee3259051a0826333ac70d2db49a5b9499cf45b7f76a82",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_183777d9c8c7effbac7539d0/observations_gt.jsonl": "92f5bda21c1d800f68ffc1d1d7defd8328400085878092ccbc87ae92743a6e08",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_183777d9c8c7effbac7539d0.json": "f8eb6cc990ca106f433bda5fe4063912e3e3ac7a3a1251b68271d700473c5d01",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_183777d9c8c7effbac7539d0.json": "4bb8882320c88b948514cd0a1c80f993ad3196feab6f31a900ce36b545790732",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_8fa4824a9386165d9626163d/floor_gt.json": "be7845dd4fbdd2b289fb723a9473c67aed267c6e73d6ea4810653218f04c1e76",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_8fa4824a9386165d9626163d/observations_gt.jsonl": "19be34f35def493c9a731db253a4698df2da6308ce9d2c67dbad64a86ec06a71",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_8fa4824a9386165d9626163d.json": "93d2cf3da3b3a909b07527a9cf4fa8dcc819902fb8ddb193d4cb6522c2f45f89",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_8fa4824a9386165d9626163d.json": "7101553d19f671783c3680f9692d23066fcd2f719487b5bca19a32db450a3935",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_068fa1bfa1df099540cce729/floor_gt.json": "38c6c54fa1185f90294d77e6db5ee43e683c4267743ad88da6df4aec3686d7e7",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_068fa1bfa1df099540cce729/observations_gt.jsonl": "3a4d0b32d8834596f189328270028c03e2e2975cc39ca39b6a14e5d9b580aea9",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_068fa1bfa1df099540cce729.json": "8ac27cdf8a13e31fad31905822062feb7b9ae28087a8f3a4a0a51557e05e3253",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_068fa1bfa1df099540cce729.json": "3f8ea96d432557c7087afc832f2ec2bf95b5b08528eb94ffddf9215190f6e1a0",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_182df23771bd55bf0db88e1f/floor_gt.json": "01f924c7c41817897ebde38b1f6abbeba1fc46a04afcf2cc8d7ce6b594522cf7",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_182df23771bd55bf0db88e1f/observations_gt.jsonl": "0c288dcc8af06858348907fb0ef9784c1c508e4f9cafde07dc28a19cbdd1e275",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_182df23771bd55bf0db88e1f.json": "fa69e627962fb8cfadd9e5b770964a1ccb688d111b27d936e5ffc32f752506d4",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_182df23771bd55bf0db88e1f.json": "3b3fd6227971d1a96f6a6ac77184fd0fb87a09237dac1f9878f75400af037700",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_3e79ae330fc854cd567c6465/floor_gt.json": "226e6351381729fa0282776ff1a24aeaf8157e7940b39a5c5f01b8c4bc2f5c43",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_3e79ae330fc854cd567c6465/observations_gt.jsonl": "50a9e6e1ce2fdc32e8cbe689f517b331c2bce58511180afb4eeadc7b55942878",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_3e79ae330fc854cd567c6465.json": "7f7d2bb56c8510bfee53115579a7bf307c845163d9861710587dd9ef5ea935a1",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_3e79ae330fc854cd567c6465.json": "285264d80bed6d56628e050b2ba29f9db4b71d9767b14830e363a5e84f51f5d5",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_9bf954e7101cc521821500a9/floor_gt.json": "0c72ddf06ac71ab44e98aa761c83b9fc410fb598cff31a7dbd36fbe245bc5b10",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_9bf954e7101cc521821500a9/observations_gt.jsonl": "d3c7bcbd0cc2ffe6dc0cbbcfaaabe6c79241ff8ec7f629ef02c8c35b9dd743ce",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_9bf954e7101cc521821500a9.json": "cd88acc1d1b3a4277383ecca754228ca4b7a66fc0cd3293e88450d5fab73179d",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_9bf954e7101cc521821500a9.json": "fbc95c2211393e9e451a2f24681cc50c3b7ca462904b93cbbdab88f2bbefcc67",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_b0f6ba0022f4f60e9e4cf85c/floor_gt.json": "170373b6f0c15f37e002b1323d116f731d75fefb5e9d48fed6fb96d6e04c2d36",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_b0f6ba0022f4f60e9e4cf85c/observations_gt.jsonl": "886e874cde928af3b89fa1afd140752dade443740fc43deb8b1e348f077077da",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_b0f6ba0022f4f60e9e4cf85c.json": "a6537d0b635acc2f99a17d4cd502b6504d8ab2ced4398b5b714035e0276de815",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_b0f6ba0022f4f60e9e4cf85c.json": "a7e7d2721e668ae5a8bbf2abe41b989e4d4d5586e53ab48bf11af5b583ae7fd6",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_427711a3d766604832c9b379/floor_gt.json": "43d4dae384363b5645a424d2eba1e12534c88a86d4827f7a931b51adb7049392",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_427711a3d766604832c9b379/observations_gt.jsonl": "b4bb994c44988113314387e259f3e20619005544028e9285008d7640d913c8e7",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_427711a3d766604832c9b379.json": "b1a4fceda0358527ac7f20c5f7779cea890f49611a6014a82249e59eafefc8e3",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_427711a3d766604832c9b379.json": "dfee887a875ecf0c79ed0b2e6a46d6fe98bf13ce93f55e53f75f46711e9d5dfe",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_544e43e4808e28328ed44b83/floor_gt.json": "a0db141da1dc15d99fb310b0a270f860e225a0c651b2d452a755285e59c600d6",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021/labels/floor_544e43e4808e28328ed44b83/observations_gt.jsonl": "0ffc6864fb8c48fc46e4fb769663314a94c3b8730d41926a3e9337d3140f2d82",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/predictions/floor_544e43e4808e28328ed44b83.json": "a648a6190105e0da711b15919763d58b6732a9fbf29934e5940cab8db9be067a",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R02_R03_new_diagnostic/audits/floor_544e43e4808e28328ed44b83.json": "844f2d46de8ff5d5dd6488432af59f0e2bd4958bc7ffb07f4971e118a4471952"
+  },
+  "pairs_sha256": "71400e391ed0b1ba157db9827964ef78914016c6240ed7a58d89817e5f478c59",
+  "limitations": [
+    "uncalibrated exploratory poses, not accepted connection edges",
+    "GT anchor scale is used only to express evaluation translation in meters",
+    "metric pair accuracy does not establish physical adjacency",
+    "data and training weights are not independent of the opening frontend"
+  ]
+}

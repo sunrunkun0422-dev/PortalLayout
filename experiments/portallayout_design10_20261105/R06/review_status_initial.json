@@ -1,0 +1,28 @@
+{
+  "schema": "r06-review-support.v1",
+  "pack_id": "250b2aff9a0d9401649a8399ba1f2f144bc09a3142997d7ea674d732199261f8",
+  "reviewer": null,
+  "batches": {
+    "initial": {
+      "pairs": 200,
+      "houses": 54,
+      "counts": {
+        "shared_pending": 200,
+        "direction_pending": 400
+      },
+      "available_houses": 0,
+      "available_directions_by_role": {}
+    },
+    "reserve": {
+      "pairs": 200,
+      "houses": 51,
+      "counts": {
+        "shared_pending": 200,
+        "direction_pending": 400
+      },
+      "available_houses": 0,
+      "available_directions_by_role": {}
+    }
+  },
+  "qualification": "not_determined_requires_human_review_and_oracle_analysis"
+}

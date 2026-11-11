@@ -37,21 +37,21 @@ import torch.cuda
 from PIL import Image
 from tqdm import tqdm
 from torch.utils.tensorboard import SummaryWriter
-from config.defaults import get_config, get_rank_config
-from models.other.criterion import calc_criterion
-from models.build import build_model
-from models.other.init_env import init_env
-from utils.logger import build_logger
-from utils.misc import tensor2np_d, tensor2np
-from dataset.build import build_loader
-from evaluation.accuracy import calc_accuracy, show_heat_map, calc_ce, calc_pe, calc_rmse_delta_1, \
+from portallayout.config.defaults import get_config, get_rank_config
+from portallayout.models.other.criterion import calc_criterion
+from portallayout.models.build import build_model
+from portallayout.models.other.init_env import init_env
+from portallayout.utils.logger import build_logger
+from portallayout.utils.misc import tensor2np_d, tensor2np
+from portallayout.datasets.build import build_loader
+from portallayout.evaluation.accuracy import calc_accuracy, show_heat_map, calc_ce, calc_pe, calc_rmse_delta_1, \
     show_depth_normal_grad, calc_f1_score, show_opening, calc_ap, calc_tp_fp_fn, precision_recall_curve
-from postprocessing.post_process import post_process
+from portallayout.postprocessing.post_process import post_process
 
 # ambiguity 坐标转换函数: 深度图→3D点云、像素坐标转换等
-from utils.conversion import depth2xyz, uv2pixel
+from portallayout.geometry.conversion import depth2xyz, uv2pixel
 # 边界处理函数: corners坐标→边界多边形转换
-from utils.boundary import corners2boundaries
+from portallayout.geometry.boundary import corners2boundaries
 
 try:
     from apex import amp
@@ -81,7 +81,7 @@ def parse_option():
     # ===== 配置文件路径 =====
     parser.add_argument('--cfg',
                         type=str,
-                        default='/media/Pluto/frank/room_layout_project/src/config/zind.yaml',
+                        default='/media/Pluto/frank/room_layout_project/configs/layout/zind.yaml',
                         metavar='FILE',
                         help='path to config file - 指定YAML配置文件路径')
 
@@ -244,7 +244,7 @@ def main():
     # ===== STEP 1.2.5: 保存配置到文件 =====
     if config.MODE == 'train':
         # 将完整配置保存为YAML便于后续检查
-        with open(os.path.join(config.CKPT.DIR, "config.yaml"), "w") as f:
+        with open(os.path.join(config.CKPT.DIR, 'portallayout.config.yaml'), "w") as f:
             f.write(config.dump(allow_unicode=True))
 
     # ===== STEP 1.2.6: 启动单/多进程 =====

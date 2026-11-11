@@ -1,0 +1,28 @@
+{
+  "input_sha256": {
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R09/union_fixture_smoke/synthetic_union.json": "f7e651a037158ac25f9ba66fe94e3e3e884e292eb6e78da405ea850e0abfb66c",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R09/union_fixture_smoke/fixture_manifest.json": "95584bb8b1f7faf351ce83fcb1b73a76a86ae9e16eae74c040371e89b04171d6"
+  },
+  "verifier": {
+    "architecture": "official_SALVe_EarlyFusionCEResnet152",
+    "checkpoint_md5": "1200ffbe47d836557d88fef052952337",
+    "checkpoint_sha256": "e4b7dec606aa98af25af2cd84ce450494d0c6fb3fb95254ec11dab6219d15a18",
+    "device": "cpu",
+    "torch_version": "1.12.1+cpu",
+    "strict_state_dict_load": true
+  },
+  "image_sha256_or_missing": {
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R09/salve_verifier_smoke/inputs/ceiling_a.jpg": "9a17880a171a81b18cec7058f96581194867617b4e9c0c8d15da8fea4b3713e2",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R09/salve_verifier_smoke/inputs/ceiling_b.jpg": "e219a039800d0867efc04095e2cf86b3c80768d603dece420f515d8ed0c91246",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R09/salve_verifier_smoke/inputs/floor_a.jpg": "60377b855ee41556e49d816aefc27e98866a2acbf021b6e573023617119fd1c6",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R09/salve_verifier_smoke/inputs/floor_b.jpg": "66d9316cf144cb8f1683dc831b4d82a28fdd6c1a903639d12a2c6e99b8f173bf"
+  },
+  "source_sha256": {
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/tools/research10_salve_union_scores.py": "b2606f5448ceee385b71efd0580b58c23cb51b773bc5a5682243ffe780300bf1",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/tools/research10_salve_scoring.py": "1d42d6d52408a8353f19cdcf535c29ed9d5e69914f03392dd34c530d8cec3e67",
+    "/home/feixia/pythonProject/AAAsrk/PortalLayout/tools/research10_candidate_comparison.py": "c1c3c202bb5ecf06a4a4edf792f4fca51d4275976280f12dbe1c488253d627b5",
+    "/home/feixia/pythonProject/AAAsrk/salve/salve/models/early_fusion.py": "73b5674be08fb89807ab69dd577d518b1bcb5ce6f1aa16951d3d2323c70d035e",
+    "/home/feixia/pythonProject/AAAsrk/salve/salve/train_utils.py": "1703f7144e4cd7cc54496d19e687bdf6cf3c9c36445ffdbcd6c4dff50a2f38ae"
+  },
+  "scope": "verifier_only_upstream_rendering_and_coordinates_not_verified"
+}

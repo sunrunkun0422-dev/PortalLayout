@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "training_status": "initialized_untrained",
+  "contract_fingerprint": "3e589e93787904fb5efa3653b1295a67d25539f6eddca4a39b50802ce45c36c9",
+  "floor_samples": 1,
+  "unique_observations": 20,
+  "observations_encoded": 20,
+  "observations_reused": 0,
+  "openings": 51,
+  "source_errors": [],
+  "source_files_unchanged": true,
+  "source_files_verified": 42,
+  "ground_truth_read": false,
+  "floors": [
+    {
+      "floor_uid": "floor_1c68d80c249a3a23bdadf67f",
+      "sample_id": "sample_f06e1939dc1c7cd7538be569",
+      "representations_file": "floors/055a4260471234c6c0503fba3c116d6b8381ab9ed5eac842a004d2640fba63f3.json"
+    }
+  ],
+  "review": {
+    "index": "review/index.html",
+    "visualized_observations": 20
+  }
+}

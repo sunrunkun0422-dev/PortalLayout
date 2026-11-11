@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "floor_samples": 1,
+  "unique_observations": 13,
+  "observations_inferred": 13,
+  "observations_reused": 0,
+  "input_errors": [],
+  "floors": [
+    {
+      "sample_id": "sample_1fa1a12e0916511f1c73238e",
+      "floor_uid": "floor_a71328a43f233a1478b275ac",
+      "predictions_file": "floors/02eac23243d079ddf98bb0278c03ca37df65b87d5873cf74fb540080739cc925.json"
+    }
+  ],
+  "contract_fingerprint": "5f8009ac1e7925813ee86246f169851af359636389e99f35721c8a7855ed9e89",
+  "ground_truth_read": false,
+  "global_layout_status": "not_run"
+}

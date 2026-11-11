@@ -1,0 +1,6 @@
+{
+  "decision": "STOP_MEDIUM_GATE",
+  "formal_training_started": false,
+  "reason": "I1_M1 Harmonic 0.400295 is below the identical-proposal T3 baseline 0.419463; inherited Harmonic non-regression gate failed",
+  "test_data_accessed": false
+}

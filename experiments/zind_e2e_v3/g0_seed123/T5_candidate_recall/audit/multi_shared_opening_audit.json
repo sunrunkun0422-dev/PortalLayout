@@ -1,0 +1,21 @@
+{
+  "extra_physical_targets_marked_negative_by_current_dataset": false,
+  "manifest_supervision_target_capacity": 1,
+  "multiple_physical_shared_opening_pair_count": 7,
+  "pair_ids": [
+    "0246_floor_01_pano_23_pano_14_6",
+    "0417_floor_01_pano_39_pano_41_15",
+    "0417_floor_01_pano_54_pano_56_1",
+    "0804_floor_01_pano_46_pano_48_1",
+    "0894_floor_02_pano_47_pano_49_5",
+    "1094_floor_01_pano_14_pano_30_11",
+    "1238_floor_01_pano_3_pano_11_1"
+  ],
+  "runtime_affinity_marks_all_physical_matches": true,
+  "schema_limit_affects_current_dense_training_target": false,
+  "schema_limit_affects_manifest_serialization": true,
+  "schema_version": "zind-t5-multiple-shared-opening-audit-v1",
+  "test_data_accessed": false,
+  "val_positive_count": 1827,
+  "window_target_count": 0
+}

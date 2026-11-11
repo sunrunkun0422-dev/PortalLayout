@@ -1,0 +1,2773 @@
+{
+  "actual": 300,
+  "design": "stratum=(adjacency,relation scope,proxy pass/difficulty); SRS houses then one SRS pair per house-stratum; stable SHA256 randomization",
+  "human_reviews_completed": 0,
+  "population": "selected pairs in main index, not all camera combinations",
+  "requested": 300,
+  "reviewers_required": 2,
+  "samples": [
+    {
+      "house": "0327",
+      "house_stratum_pair_count": 5,
+      "id": "50e0bcbe29d55a1a6e3dc939",
+      "inclusion_probability": 0.0052128583840139004,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 191.83333333333334
+    },
+    {
+      "house": "0426",
+      "house_stratum_pair_count": 6,
+      "id": "a3d245c9e2bb0d680d85cee0",
+      "inclusion_probability": 0.006493506493506493,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 154.0
+    },
+    {
+      "house": "0378",
+      "house_stratum_pair_count": 8,
+      "id": "85a0bf3c5674aebd5000dffb",
+      "inclusion_probability": 0.0033097969991173876,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 302.1333333333333
+    },
+    {
+      "house": "1287",
+      "house_stratum_pair_count": 1,
+      "id": "c4d81cc791ab26b782279c7b",
+      "inclusion_probability": 0.025295109612141653,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 39.53333333333333
+    },
+    {
+      "house": "0017",
+      "house_stratum_pair_count": 30,
+      "id": "1c2d7ade1d49dce0cd6fc84e",
+      "inclusion_probability": 0.0008431703204047218,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 1186.0
+    },
+    {
+      "house": "0362",
+      "house_stratum_pair_count": 19,
+      "id": "5f10fc872e570a8178209c71",
+      "inclusion_probability": 0.0013960631020522127,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 716.3000000000001
+    },
+    {
+      "house": "1450",
+      "house_stratum_pair_count": 57,
+      "id": "d61a076e9395443b87e37865",
+      "inclusion_probability": 0.0004177109440267335,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 2394.0
+    },
+    {
+      "house": "0267",
+      "house_stratum_pair_count": 24,
+      "id": "65c2ba2301a4a657bcf5abe4",
+      "inclusion_probability": 0.001201923076923077,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 832.0
+    },
+    {
+      "house": "0750",
+      "house_stratum_pair_count": 17,
+      "id": "049572cb4a93a56897ae4b9a",
+      "inclusion_probability": 0.001978369823265629,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 505.4666666666667
+    },
+    {
+      "house": "0023",
+      "house_stratum_pair_count": 3,
+      "id": "ffc1222ebc6d749e960d3ad8",
+      "inclusion_probability": 0.011210762331838564,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 89.2
+    },
+    {
+      "house": "1009",
+      "house_stratum_pair_count": 44,
+      "id": "e224fef172bd38aa5af1d4f8",
+      "inclusion_probability": 0.0005923702709106706,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 1688.1333333333332
+    },
+    {
+      "house": "1126",
+      "house_stratum_pair_count": 3,
+      "id": "aae50bf88696c562565c9226",
+      "inclusion_probability": 0.011210762331838564,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 89.2
+    },
+    {
+      "house": "1480",
+      "house_stratum_pair_count": 6,
+      "id": "590aea76969b23f7e3286701",
+      "inclusion_probability": 0.0044130626654898504,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 226.59999999999997
+    },
+    {
+      "house": "1277",
+      "house_stratum_pair_count": 13,
+      "id": "b96b8f3c7b71f834b03877ca",
+      "inclusion_probability": 0.003428963310092582,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 291.6333333333333
+    },
+    {
+      "house": "0081",
+      "house_stratum_pair_count": 25,
+      "id": "f57c94f48ad4c4a614173b15",
+      "inclusion_probability": 0.0010610079575596818,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 942.4999999999999
+    },
+    {
+      "house": "0582",
+      "house_stratum_pair_count": 42,
+      "id": "4dd10a875ea9ab42cf902e12",
+      "inclusion_probability": 0.0005668934240362812,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 1764.0
+    },
+    {
+      "house": "1171",
+      "house_stratum_pair_count": 12,
+      "id": "18d24c2a9cb303d3b3e630c8",
+      "inclusion_probability": 0.0037147102526002974,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 269.2
+    },
+    {
+      "house": "1415",
+      "house_stratum_pair_count": 23,
+      "id": "ddceb23e7d3b7a82bab0af23",
+      "inclusion_probability": 0.0011512337388234393,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 868.6333333333332
+    },
+    {
+      "house": "1158",
+      "house_stratum_pair_count": 4,
+      "id": "3a872d9e1dc45da3b5a01606",
+      "inclusion_probability": 0.00974025974025974,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 102.66666666666667
+    },
+    {
+      "house": "0996",
+      "house_stratum_pair_count": 5,
+      "id": "5de01700a3c664edc420321c",
+      "inclusion_probability": 0.006726457399103139,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 148.66666666666666
+    },
+    {
+      "house": "0608",
+      "house_stratum_pair_count": 5,
+      "id": "1142bb657494a2cc2f04aaeb",
+      "inclusion_probability": 0.008915304606240713,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 112.16666666666667
+    },
+    {
+      "house": "0896",
+      "house_stratum_pair_count": 2,
+      "id": "ab9cfa021b1326277d87c74f",
+      "inclusion_probability": 0.0211864406779661,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 47.2
+    },
+    {
+      "house": "0745",
+      "house_stratum_pair_count": 10,
+      "id": "e3528f4cd3b76b540e071271",
+      "inclusion_probability": 0.0033632286995515697,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 297.3333333333333
+    },
+    {
+      "house": "1356",
+      "house_stratum_pair_count": 18,
+      "id": "620f6d5d9a2e38edb66dfb90",
+      "inclusion_probability": 0.001448016217781639,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 690.6000000000001
+    },
+    {
+      "house": "1435",
+      "house_stratum_pair_count": 67,
+      "id": "47d982fb2f80676847d0f50b",
+      "inclusion_probability": 0.00035536602700781805,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 2814.0
+    },
+    {
+      "house": "0166",
+      "house_stratum_pair_count": 65,
+      "id": "0404c5bb7a9dc90a0a56c2c2",
+      "inclusion_probability": 0.00040098910646260775,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 2493.8333333333335
+    },
+    {
+      "house": "1092",
+      "house_stratum_pair_count": 5,
+      "id": "e5b671287867059c899bede0",
+      "inclusion_probability": 0.00847457627118644,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 118.0
+    },
+    {
+      "house": "0177",
+      "house_stratum_pair_count": 4,
+      "id": "7fa34a02ec232637d0e775a9",
+      "inclusion_probability": 0.006619593998234775,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 151.06666666666666
+    },
+    {
+      "house": "0155",
+      "house_stratum_pair_count": 5,
+      "id": "a00b1e197e7ad318ebf1b2dc",
+      "inclusion_probability": 0.008915304606240713,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 112.16666666666667
+    },
+    {
+      "house": "0398",
+      "house_stratum_pair_count": 26,
+      "id": "cd30a0011f2ac3701d3ba66c",
+      "inclusion_probability": 0.001714481655046291,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 583.2666666666667
+    },
+    {
+      "house": "0683",
+      "house_stratum_pair_count": 166,
+      "id": "16cba2a28e4d2a34697ab81e",
+      "inclusion_probability": 0.00014343086632243257,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 6972.000000000001
+    },
+    {
+      "house": "0105",
+      "house_stratum_pair_count": 6,
+      "id": "7d0816005d576fc1d7e9fafe",
+      "inclusion_probability": 0.0042158516020236085,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 237.20000000000002
+    },
+    {
+      "house": "0232",
+      "house_stratum_pair_count": 5,
+      "id": "c002f1c85d9b03a58dd3fc78",
+      "inclusion_probability": 0.007792207792207792,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 128.33333333333334
+    },
+    {
+      "house": "0627",
+      "house_stratum_pair_count": 55,
+      "id": "e02c0b6701368ef76db53fdd",
+      "inclusion_probability": 0.0004329004329004329,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 2310.0
+    },
+    {
+      "house": "0996",
+      "house_stratum_pair_count": 5,
+      "id": "cc861ea00c44d245299c37db",
+      "inclusion_probability": 0.00847457627118644,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 118.0
+    },
+    {
+      "house": "1086",
+      "house_stratum_pair_count": 5,
+      "id": "8d7ce1bfce8b59dba1831b0e",
+      "inclusion_probability": 0.008915304606240713,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 112.16666666666667
+    },
+    {
+      "house": "0198",
+      "house_stratum_pair_count": 13,
+      "id": "540000d2106d6c4b5c4cd7e9",
+      "inclusion_probability": 0.0022189349112426036,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 450.66666666666663
+    },
+    {
+      "house": "0425",
+      "house_stratum_pair_count": 33,
+      "id": "7e154740deec7d42da8223ce",
+      "inclusion_probability": 0.0008037939072421831,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 1244.1
+    },
+    {
+      "house": "0256",
+      "house_stratum_pair_count": 5,
+      "id": "00b859d9ae862ebed2d3cb86",
+      "inclusion_probability": 0.007792207792207792,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 128.33333333333334
+    },
+    {
+      "house": "0452",
+      "house_stratum_pair_count": 18,
+      "id": "b288af3d5bb69501decbad14",
+      "inclusion_probability": 0.0014710208884966167,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 679.8
+    },
+    {
+      "house": "0600",
+      "house_stratum_pair_count": 3,
+      "id": "92dc31b7514901293761947c",
+      "inclusion_probability": 0.014124293785310734,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 70.8
+    },
+    {
+      "house": "0849",
+      "house_stratum_pair_count": 8,
+      "id": "15019a4fdcbba5671f9f57ec",
+      "inclusion_probability": 0.003605769230769231,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 277.3333333333333
+    },
+    {
+      "house": "1408",
+      "house_stratum_pair_count": 12,
+      "id": "e83249d062fe808ae4000ed6",
+      "inclusion_probability": 0.002403846153846154,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 416.0
+    },
+    {
+      "house": "0294",
+      "house_stratum_pair_count": 2,
+      "id": "6296aca205421755ca8c34b1",
+      "inclusion_probability": 0.01948051948051948,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 51.333333333333336
+    },
+    {
+      "house": "0561",
+      "house_stratum_pair_count": 30,
+      "id": "4a1298140dfeca5f170eb562",
+      "inclusion_probability": 0.00088261253309797,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 1133.0
+    },
+    {
+      "house": "0641",
+      "house_stratum_pair_count": 96,
+      "id": "f65f99d206fc97be8ced5fd2",
+      "inclusion_probability": 0.000248015873015873,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 4032.0
+    },
+    {
+      "house": "0396",
+      "house_stratum_pair_count": 19,
+      "id": "082e9cd2bdfd67195bf94754",
+      "inclusion_probability": 0.0013960631020522127,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 716.3000000000001
+    },
+    {
+      "house": "1149",
+      "house_stratum_pair_count": 5,
+      "id": "1097cc9d58a459a3a5f1af73",
+      "inclusion_probability": 0.008915304606240713,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 112.16666666666667
+    },
+    {
+      "house": "1231",
+      "house_stratum_pair_count": 24,
+      "id": "f10e5d18316d75c5cabca493",
+      "inclusion_probability": 0.0010860121633362292,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 920.8000000000001
+    },
+    {
+      "house": "0392",
+      "house_stratum_pair_count": 13,
+      "id": "3230f7abd7fe108264d17ac6",
+      "inclusion_probability": 0.0022189349112426036,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 450.66666666666663
+    },
+    {
+      "house": "0350",
+      "house_stratum_pair_count": 9,
+      "id": "a3f42ce06657cbd8ceb2dd68",
+      "inclusion_probability": 0.0029472443265546717,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 339.29999999999995
+    },
+    {
+      "house": "0118",
+      "house_stratum_pair_count": 16,
+      "id": "ba5addf6b5b678de878381d2",
+      "inclusion_probability": 0.0016578249336870027,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 603.1999999999999
+    },
+    {
+      "house": "0411",
+      "house_stratum_pair_count": 14,
+      "id": "3276c35e0d576b317a2676ce",
+      "inclusion_probability": 0.0027829313543599257,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 359.3333333333333
+    },
+    {
+      "house": "1392",
+      "house_stratum_pair_count": 3,
+      "id": "49444d2d0bfbf0226265fe68",
+      "inclusion_probability": 0.01485884101040119,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 67.3
+    },
+    {
+      "house": "1487",
+      "house_stratum_pair_count": 11,
+      "id": "4563069c8995e77442be65c4",
+      "inclusion_probability": 0.002407125090267191,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 415.43333333333334
+    },
+    {
+      "house": "0631",
+      "house_stratum_pair_count": 48,
+      "id": "242894425076dc1fe3087e1f",
+      "inclusion_probability": 0.0005269814502529511,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 1897.6000000000001
+    },
+    {
+      "house": "0268",
+      "house_stratum_pair_count": 18,
+      "id": "f8d1b67306495e6b6a820d64",
+      "inclusion_probability": 0.0014710208884966167,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 679.8
+    },
+    {
+      "house": "0707",
+      "house_stratum_pair_count": 23,
+      "id": "774c7dedd0339297282c4a9b",
+      "inclusion_probability": 0.001254180602006689,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 797.3333333333333
+    },
+    {
+      "house": "1086",
+      "house_stratum_pair_count": 45,
+      "id": "10cbee967ea5cebb11d551ed",
+      "inclusion_probability": 0.0005894488653109344,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 1696.4999999999998
+    },
+    {
+      "house": "0653",
+      "house_stratum_pair_count": 23,
+      "id": "7dbcf64f86eb345acdd06b5d",
+      "inclusion_probability": 0.0011332300834812827,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 882.4333333333334
+    },
+    {
+      "house": "0459",
+      "house_stratum_pair_count": 19,
+      "id": "0e1d70dac9ca94cdd5ed9626",
+      "inclusion_probability": 0.002050580997949419,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 487.66666666666663
+    },
+    {
+      "house": "0373",
+      "house_stratum_pair_count": 2,
+      "id": "7ddad08b0cbb559846a5094f",
+      "inclusion_probability": 0.022288261515601784,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 44.86666666666667
+    },
+    {
+      "house": "1443",
+      "house_stratum_pair_count": 2,
+      "id": "c47f3987095ffca981b89a0e",
+      "inclusion_probability": 0.016816143497757848,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 59.46666666666667
+    },
+    {
+      "house": "1550",
+      "house_stratum_pair_count": 21,
+      "id": "1c47eb8e62869cd8fbb3ca1a",
+      "inclusion_probability": 0.0011337868480725624,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 882.0
+    },
+    {
+      "house": "1060",
+      "house_stratum_pair_count": 9,
+      "id": "052803768ce26cc73001d323",
+      "inclusion_probability": 0.002810567734682406,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 355.79999999999995
+    },
+    {
+      "house": "0227",
+      "house_stratum_pair_count": 38,
+      "id": "68fc7931f62d53da2970f007",
+      "inclusion_probability": 0.0007591093117408907,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 1317.3333333333333
+    },
+    {
+      "house": "0106",
+      "house_stratum_pair_count": 8,
+      "id": "0bdc92ade189b8bd745825c3",
+      "inclusion_probability": 0.003605769230769231,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 277.3333333333333
+    },
+    {
+      "house": "1418",
+      "house_stratum_pair_count": 35,
+      "id": "6a533ddef5242eb983ebeec2",
+      "inclusion_probability": 0.0007578628268283441,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 1319.5
+    },
+    {
+      "house": "1360",
+      "house_stratum_pair_count": 44,
+      "id": "fb18c79a90523fffa15c8030",
+      "inclusion_probability": 0.0005411255411255411,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 1848.0
+    },
+    {
+      "house": "1433",
+      "house_stratum_pair_count": 3,
+      "id": "3d1f4f5b5319a2af1d9b7afc",
+      "inclusion_probability": 0.009615384615384616,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 104.0
+    },
+    {
+      "house": "0200",
+      "house_stratum_pair_count": 31,
+      "id": "a177e17f91a35e19769d4dba",
+      "inclusion_probability": 0.0007680491551459293,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 1302.0
+    },
+    {
+      "house": "1535",
+      "house_stratum_pair_count": 118,
+      "id": "34274ccf74ce9b9cabd8170d",
+      "inclusion_probability": 0.00022088382983109748,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 4527.266666666667
+    },
+    {
+      "house": "1548",
+      "house_stratum_pair_count": 12,
+      "id": "2d19d2791ed5eeff7847a52d",
+      "inclusion_probability": 0.002403846153846154,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 416.0
+    },
+    {
+      "house": "0976",
+      "house_stratum_pair_count": 9,
+      "id": "ec0d7383b30ca0664c792b53",
+      "inclusion_probability": 0.0029420417769932335,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 339.9
+    },
+    {
+      "house": "1020",
+      "house_stratum_pair_count": 12,
+      "id": "81886359ece9ad249b8b422b",
+      "inclusion_probability": 0.0037147102526002974,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 269.2
+    },
+    {
+      "house": "1438",
+      "house_stratum_pair_count": 6,
+      "id": "96cc792df0d46f9ebba072e8",
+      "inclusion_probability": 0.004807692307692308,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 208.0
+    },
+    {
+      "house": "0437",
+      "house_stratum_pair_count": 6,
+      "id": "a3100d14b4af071911b59af1",
+      "inclusion_probability": 0.006493506493506493,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 154.0
+    },
+    {
+      "house": "1049",
+      "house_stratum_pair_count": 124,
+      "id": "04e0ba44a8e4d99542469651",
+      "inclusion_probability": 0.00019201228878648233,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 5208.0
+    },
+    {
+      "house": "1215",
+      "house_stratum_pair_count": 10,
+      "id": "1866684bb20d0aa2e46b2892",
+      "inclusion_probability": 0.0026064291920069502,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 383.6666666666667
+    },
+    {
+      "house": "0175",
+      "house_stratum_pair_count": 11,
+      "id": "1798a3dfbb501504791c8c7b",
+      "inclusion_probability": 0.0026223776223776225,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 381.3333333333333
+    },
+    {
+      "house": "0786",
+      "house_stratum_pair_count": 10,
+      "id": "ad0814cfd849133ff1300183",
+      "inclusion_probability": 0.004457652303120356,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 224.33333333333334
+    },
+    {
+      "house": "0827",
+      "house_stratum_pair_count": 6,
+      "id": "7beffb0cb33f770dbad1a64e",
+      "inclusion_probability": 0.0042158516020236085,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 237.20000000000002
+    },
+    {
+      "house": "1107",
+      "house_stratum_pair_count": 4,
+      "id": "abf652c1a55accab843e0406",
+      "inclusion_probability": 0.006619593998234775,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 151.06666666666666
+    },
+    {
+      "house": "1266",
+      "house_stratum_pair_count": 4,
+      "id": "90451239b838b7d73dce9281",
+      "inclusion_probability": 0.01059322033898305,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 94.4
+    },
+    {
+      "house": "1406",
+      "house_stratum_pair_count": 11,
+      "id": "6660080521436b77d848504d",
+      "inclusion_probability": 0.002299555419285605,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 434.8666666666666
+    },
+    {
+      "house": "0366",
+      "house_stratum_pair_count": 3,
+      "id": "8942e746676ebb342960c189",
+      "inclusion_probability": 0.008431703204047217,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 118.60000000000001
+    },
+    {
+      "house": "0737",
+      "house_stratum_pair_count": 1,
+      "id": "195a6ecb3ae7f77afb90ac65",
+      "inclusion_probability": 0.0423728813559322,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 23.6
+    },
+    {
+      "house": "0895",
+      "house_stratum_pair_count": 27,
+      "id": "7e5208299e413248e8a4a83f",
+      "inclusion_probability": 0.0009824147755182239,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 1017.8999999999999
+    },
+    {
+      "house": "0346",
+      "house_stratum_pair_count": 18,
+      "id": "f1c7127f9754363080717314",
+      "inclusion_probability": 0.0016025641025641027,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 623.9999999999999
+    },
+    {
+      "house": "0886",
+      "house_stratum_pair_count": 4,
+      "id": "51a55d66c075f65b3a3c1b88",
+      "inclusion_probability": 0.00974025974025974,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 102.66666666666667
+    },
+    {
+      "house": "0368",
+      "house_stratum_pair_count": 179,
+      "id": "5c4148ca7f605ae3e0932a4d",
+      "inclusion_probability": 0.0001330140994945464,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 7518.000000000001
+    },
+    {
+      "house": "0948",
+      "house_stratum_pair_count": 12,
+      "id": "5a2a4df6c5deeea89d1f7925",
+      "inclusion_probability": 0.001984126984126984,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 504.0
+    },
+    {
+      "house": "1080",
+      "house_stratum_pair_count": 10,
+      "id": "d66052159a55833475dae2cf",
+      "inclusion_probability": 0.00264783759929391,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 377.66666666666663
+    },
+    {
+      "house": "0739",
+      "house_stratum_pair_count": 9,
+      "id": "8a15787bc45341bf07d56515",
+      "inclusion_probability": 0.0032051282051282055,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 311.99999999999994
+    },
+    {
+      "house": "0777",
+      "house_stratum_pair_count": 3,
+      "id": "a37294a325fc547c6274c46e",
+      "inclusion_probability": 0.014124293785310734,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 70.8
+    },
+    {
+      "house": "1165",
+      "house_stratum_pair_count": 30,
+      "id": "05dfdec875f713f56cc4acbd",
+      "inclusion_probability": 0.0008688097306689834,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 1151.0
+    },
+    {
+      "house": "1520",
+      "house_stratum_pair_count": 9,
+      "id": "28e6c5357faa9fa9ae2e9612",
+      "inclusion_probability": 0.0029420417769932335,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 339.9
+    },
+    {
+      "house": "0943",
+      "house_stratum_pair_count": 2,
+      "id": "b2706e21b89f430fbb39fe49",
+      "inclusion_probability": 0.0211864406779661,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 47.2
+    },
+    {
+      "house": "0158",
+      "house_stratum_pair_count": 3,
+      "id": "73baa26d749b1dd541d63148",
+      "inclusion_probability": 0.009615384615384616,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 104.0
+    },
+    {
+      "house": "0318",
+      "house_stratum_pair_count": 14,
+      "id": "cfb4947a8896c69fc7c1dd9b",
+      "inclusion_probability": 0.0017006802721088435,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 588.0
+    },
+    {
+      "house": "0323",
+      "house_stratum_pair_count": 12,
+      "id": "cc483433da3535d630e34b28",
+      "inclusion_probability": 0.0021079258010118043,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 474.40000000000003
+    },
+    {
+      "house": "0617",
+      "house_stratum_pair_count": 9,
+      "id": "fcd1f23845e349e45529c167",
+      "inclusion_probability": 0.0029472443265546717,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 339.29999999999995
+    },
+    {
+      "house": "0512",
+      "house_stratum_pair_count": 1,
+      "id": "ff3bd1f88a27d84c6f2208ab",
+      "inclusion_probability": 0.03896103896103896,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 25.666666666666668
+    },
+    {
+      "house": "0070",
+      "house_stratum_pair_count": 153,
+      "id": "7c43c820bd83c05f71026022",
+      "inclusion_probability": 0.00017035484915078108,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 5870.1
+    },
+    {
+      "house": "0698",
+      "house_stratum_pair_count": 7,
+      "id": "bde4bf01cc3307f9885a837a",
+      "inclusion_probability": 0.0037234702742956435,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 268.56666666666666
+    },
+    {
+      "house": "0885",
+      "house_stratum_pair_count": 3,
+      "id": "19a3b62f7fc64df3fb0ac85b",
+      "inclusion_probability": 0.008841732979664015,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 113.1
+    },
+    {
+      "house": "0868",
+      "house_stratum_pair_count": 90,
+      "id": "90e3a92a824ea0ee43b98f36",
+      "inclusion_probability": 0.0002896032435563278,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 3453.0
+    },
+    {
+      "house": "0647",
+      "house_stratum_pair_count": 5,
+      "id": "64a659d1132bc0b5df5a83af",
+      "inclusion_probability": 0.006726457399103139,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 148.66666666666666
+    },
+    {
+      "house": "0416",
+      "house_stratum_pair_count": 13,
+      "id": "8c2e488d76c45c07ec4a8146",
+      "inclusion_probability": 0.0018315018315018315,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 546.0
+    },
+    {
+      "house": "0404",
+      "house_stratum_pair_count": 46,
+      "id": "746e396eb030f169da2bc203",
+      "inclusion_probability": 0.0005498936872204707,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 1818.5333333333333
+    },
+    {
+      "house": "0853",
+      "house_stratum_pair_count": 1,
+      "id": "e11d0327e420e0669280cb55",
+      "inclusion_probability": 0.0423728813559322,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 23.6
+    },
+    {
+      "house": "1230",
+      "house_stratum_pair_count": 17,
+      "id": "00005de768eda67fa239e82b",
+      "inclusion_probability": 0.0014879476242436267,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 672.0666666666666
+    },
+    {
+      "house": "1556",
+      "house_stratum_pair_count": 2,
+      "id": "b24a5b5311a532ce71890bef",
+      "inclusion_probability": 0.0211864406779661,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 47.2
+    },
+    {
+      "house": "0781",
+      "house_stratum_pair_count": 9,
+      "id": "6fea58bd4d7c6f20e6664545",
+      "inclusion_probability": 0.004952947003467063,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 201.9
+    },
+    {
+      "house": "1033",
+      "house_stratum_pair_count": 3,
+      "id": "e3a42707355abd7ac0bcd921",
+      "inclusion_probability": 0.014124293785310734,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 70.8
+    },
+    {
+      "house": "0032",
+      "house_stratum_pair_count": 61,
+      "id": "83964060e4e2da11baa2caa9",
+      "inclusion_probability": 0.00039032006245121,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 2562.0
+    },
+    {
+      "house": "0970",
+      "house_stratum_pair_count": 3,
+      "id": "055603524cde608e266df172",
+      "inclusion_probability": 0.011210762331838564,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 89.2
+    },
+    {
+      "house": "0626",
+      "house_stratum_pair_count": 6,
+      "id": "4794a7fb1b255d2ac91e5d92",
+      "inclusion_probability": 0.0042158516020236085,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 237.20000000000002
+    },
+    {
+      "house": "0319",
+      "house_stratum_pair_count": 24,
+      "id": "b209b549360d63a5ae13581b",
+      "inclusion_probability": 0.0010860121633362292,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 920.8000000000001
+    },
+    {
+      "house": "1020",
+      "house_stratum_pair_count": 4,
+      "id": "8e7fd6c81e7eeefe01c05ffe",
+      "inclusion_probability": 0.00974025974025974,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 102.66666666666667
+    },
+    {
+      "house": "1188",
+      "house_stratum_pair_count": 21,
+      "id": "18928595041c5b3100e3680a",
+      "inclusion_probability": 0.0012631047113805735,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 791.6999999999999
+    },
+    {
+      "house": "0706",
+      "house_stratum_pair_count": 5,
+      "id": "6b98da051b0b95f3bfacb6f7",
+      "inclusion_probability": 0.00505902192242833,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 197.66666666666669
+    },
+    {
+      "house": "1193",
+      "house_stratum_pair_count": 39,
+      "id": "35fce3af5998237df94e229b",
+      "inclusion_probability": 0.0006105006105006105,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 1638.0
+    },
+    {
+      "house": "0158",
+      "house_stratum_pair_count": 8,
+      "id": "a4fb069d9b15123d381b7726",
+      "inclusion_probability": 0.005572065378900446,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 179.46666666666667
+    },
+    {
+      "house": "1441",
+      "house_stratum_pair_count": 2,
+      "id": "0c3780d3108d2f150b25540f",
+      "inclusion_probability": 0.016816143497757848,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 59.46666666666667
+    },
+    {
+      "house": "1092",
+      "house_stratum_pair_count": 6,
+      "id": "9f2e9eb37c9cc4917852338f",
+      "inclusion_probability": 0.0044130626654898504,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 226.59999999999997
+    },
+    {
+      "house": "0952",
+      "house_stratum_pair_count": 53,
+      "id": "74f9807dea8a5d6dcdd5b7c3",
+      "inclusion_probability": 0.0004917790928315001,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 2033.4333333333332
+    },
+    {
+      "house": "1236",
+      "house_stratum_pair_count": 6,
+      "id": "b2de63b103cd2338e065853a",
+      "inclusion_probability": 0.007429420505200595,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 134.6
+    },
+    {
+      "house": "0711",
+      "house_stratum_pair_count": 3,
+      "id": "7da486a1c5dc9c62e1acaf7a",
+      "inclusion_probability": 0.014124293785310734,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 70.8
+    },
+    {
+      "house": "0984",
+      "house_stratum_pair_count": 19,
+      "id": "a6e14fe2992b2f6ab92a3377",
+      "inclusion_probability": 0.002050580997949419,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 487.66666666666663
+    },
+    {
+      "house": "0400",
+      "house_stratum_pair_count": 6,
+      "id": "d97e77d8bcf16babdb9d5c6e",
+      "inclusion_probability": 0.007062146892655367,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 141.6
+    },
+    {
+      "house": "0275",
+      "house_stratum_pair_count": 123,
+      "id": "001b1af8eb41b994af838830",
+      "inclusion_probability": 0.00019357336430507162,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 5166.0
+    },
+    {
+      "house": "0168",
+      "house_stratum_pair_count": 31,
+      "id": "8a9a2bd9e06f0d1bec44c0d4",
+      "inclusion_probability": 0.0008407836103248227,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 1189.3666666666668
+    },
+    {
+      "house": "0395",
+      "house_stratum_pair_count": 1,
+      "id": "5a0cedc98abfbbe3bcd66178",
+      "inclusion_probability": 0.0423728813559322,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 23.6
+    },
+    {
+      "house": "0679",
+      "house_stratum_pair_count": 27,
+      "id": "9b5e94653fec29355972b6a1",
+      "inclusion_probability": 0.0008818342151675485,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 1134.0
+    },
+    {
+      "house": "0860",
+      "house_stratum_pair_count": 19,
+      "id": "ba121bf28166926717a06233",
+      "inclusion_probability": 0.001393598736470479,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 717.5666666666666
+    },
+    {
+      "house": "1416",
+      "house_stratum_pair_count": 6,
+      "id": "2be7182b0850898a0bb8fba7",
+      "inclusion_probability": 0.0044130626654898504,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 226.59999999999997
+    },
+    {
+      "house": "0523",
+      "house_stratum_pair_count": 15,
+      "id": "336ca37ff86ed01e1804308c",
+      "inclusion_probability": 0.0019230769230769232,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 520.0
+    },
+    {
+      "house": "0561",
+      "house_stratum_pair_count": 18,
+      "id": "00406f91d237b50105df782e",
+      "inclusion_probability": 0.0016025641025641027,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 623.9999999999999
+    },
+    {
+      "house": "1304",
+      "house_stratum_pair_count": 6,
+      "id": "bb42834f2ca56b2d5fec91c3",
+      "inclusion_probability": 0.007429420505200595,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 134.6
+    },
+    {
+      "house": "0024",
+      "house_stratum_pair_count": 1,
+      "id": "e272b8f098f64b138defc443",
+      "inclusion_probability": 0.033632286995515695,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 29.733333333333334
+    },
+    {
+      "house": "0736",
+      "house_stratum_pair_count": 9,
+      "id": "3720734ea017a725e46c1326",
+      "inclusion_probability": 0.0032051282051282055,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 311.99999999999994
+    },
+    {
+      "house": "0573",
+      "house_stratum_pair_count": 3,
+      "id": "0ead197d67911b00aaa61b2a",
+      "inclusion_probability": 0.009615384615384616,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 104.0
+    },
+    {
+      "house": "0145",
+      "house_stratum_pair_count": 4,
+      "id": "0ba6828360287340b14eefd5",
+      "inclusion_probability": 0.008408071748878924,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 118.93333333333334
+    },
+    {
+      "house": "0906",
+      "house_stratum_pair_count": 3,
+      "id": "7f3ffc361a6dbeb7e45e57fa",
+      "inclusion_probability": 0.014124293785310734,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 70.8
+    },
+    {
+      "house": "1060",
+      "house_stratum_pair_count": 8,
+      "id": "2c7dd66321ef7850625caf4f",
+      "inclusion_probability": 0.003605769230769231,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 277.3333333333333
+    },
+    {
+      "house": "1266",
+      "house_stratum_pair_count": 3,
+      "id": "2a1ddd04b8e038711c852997",
+      "inclusion_probability": 0.011210762331838564,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 89.2
+    },
+    {
+      "house": "0135",
+      "house_stratum_pair_count": 4,
+      "id": "058cc0b01cd526811e8a5afd",
+      "inclusion_probability": 0.007211538461538462,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 138.66666666666666
+    },
+    {
+      "house": "0839",
+      "house_stratum_pair_count": 4,
+      "id": "83fd939db479954634aa41a3",
+      "inclusion_probability": 0.008408071748878924,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 118.93333333333334
+    },
+    {
+      "house": "0823",
+      "house_stratum_pair_count": 64,
+      "id": "1fe1d81f6794945b13c878ce",
+      "inclusion_probability": 0.000407254561251086,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 2455.4666666666667
+    },
+    {
+      "house": "0985",
+      "house_stratum_pair_count": 6,
+      "id": "9fb153bcab8a2ff2af62eee7",
+      "inclusion_probability": 0.0042158516020236085,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 237.20000000000002
+    },
+    {
+      "house": "1045",
+      "house_stratum_pair_count": 4,
+      "id": "270c19319d7071a50c1e9c03",
+      "inclusion_probability": 0.006516072980017376,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 153.46666666666667
+    },
+    {
+      "house": "1245",
+      "house_stratum_pair_count": 23,
+      "id": "273b7de75518bd07404d7edb",
+      "inclusion_probability": 0.0011532695190866107,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 867.0999999999999
+    },
+    {
+      "house": "0656",
+      "house_stratum_pair_count": 13,
+      "id": "cdd5216d7f13e06ed3da187e",
+      "inclusion_probability": 0.002997002997002997,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 333.6666666666667
+    },
+    {
+      "house": "1064",
+      "house_stratum_pair_count": 2,
+      "id": "122300aa0ccd48fddb0447e2",
+      "inclusion_probability": 0.01948051948051948,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 51.333333333333336
+    },
+    {
+      "house": "1158",
+      "house_stratum_pair_count": 36,
+      "id": "e6c138f092a0df6901a2e93b",
+      "inclusion_probability": 0.0006613756613756613,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 1512.0
+    },
+    {
+      "house": "0659",
+      "house_stratum_pair_count": 3,
+      "id": "05871864bf15c8d3a6394511",
+      "inclusion_probability": 0.011210762331838564,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 89.2
+    },
+    {
+      "house": "1267",
+      "house_stratum_pair_count": 33,
+      "id": "1d73a9c8594a0b30972df906",
+      "inclusion_probability": 0.0008037939072421831,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 1244.1
+    },
+    {
+      "house": "0555",
+      "house_stratum_pair_count": 12,
+      "id": "34ff5fbacfd077cfa4cbc021",
+      "inclusion_probability": 0.0022065313327449252,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 453.19999999999993
+    },
+    {
+      "house": "1366",
+      "house_stratum_pair_count": 42,
+      "id": "d8ba08d9703a9e5944140d4d",
+      "inclusion_probability": 0.0006868131868131869,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 1456.0
+    },
+    {
+      "house": "0523",
+      "house_stratum_pair_count": 2,
+      "id": "3c6c46f97024ad0a952bbc17",
+      "inclusion_probability": 0.0211864406779661,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 47.2
+    },
+    {
+      "house": "0910",
+      "house_stratum_pair_count": 6,
+      "id": "bf7dd5ee479992838ccaaa1c",
+      "inclusion_probability": 0.007429420505200595,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 134.6
+    },
+    {
+      "house": "0419",
+      "house_stratum_pair_count": 12,
+      "id": "ec9c0c491008357ebd3cfae8",
+      "inclusion_probability": 0.0022065313327449252,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 453.19999999999993
+    },
+    {
+      "house": "1161",
+      "house_stratum_pair_count": 10,
+      "id": "324f2248dae7eaf578f61d9c",
+      "inclusion_probability": 0.002529510961214165,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 395.33333333333337
+    },
+    {
+      "house": "0460",
+      "house_stratum_pair_count": 27,
+      "id": "2aced51f687d771ab6192f2b",
+      "inclusion_probability": 0.0008818342151675485,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 1134.0
+    },
+    {
+      "house": "1269",
+      "house_stratum_pair_count": 22,
+      "id": "14cb90fe2c3bb7d81c1aadbf",
+      "inclusion_probability": 0.0011497777096428025,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 869.7333333333332
+    },
+    {
+      "house": "0596",
+      "house_stratum_pair_count": 55,
+      "id": "771785d8650b39e548e3414e",
+      "inclusion_probability": 0.0004329004329004329,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 2310.0
+    },
+    {
+      "house": "0595",
+      "house_stratum_pair_count": 33,
+      "id": "6afad8d0903c213cebb69010",
+      "inclusion_probability": 0.0007215007215007215,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 1386.0
+    },
+    {
+      "house": "1451",
+      "house_stratum_pair_count": 16,
+      "id": "2702ec381bc67a73927678e7",
+      "inclusion_probability": 0.0016548984995586938,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 604.2666666666667
+    },
+    {
+      "house": "0392",
+      "house_stratum_pair_count": 73,
+      "id": "00d1920d657f85cda4669556",
+      "inclusion_probability": 0.00032615786040443573,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 3066.0
+    },
+    {
+      "house": "1033",
+      "house_stratum_pair_count": 27,
+      "id": "fb35a354985c25562fa7b151",
+      "inclusion_probability": 0.001443001443001443,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 693.0
+    },
+    {
+      "house": "1408",
+      "house_stratum_pair_count": 4,
+      "id": "ad07a5c1b44a8e1c5bb26b5d",
+      "inclusion_probability": 0.006631299734748011,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 150.79999999999998
+    },
+    {
+      "house": "0694",
+      "house_stratum_pair_count": 10,
+      "id": "4056ec532cd9de2732540cc8",
+      "inclusion_probability": 0.003896103896103896,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 256.6666666666667
+    },
+    {
+      "house": "0936",
+      "house_stratum_pair_count": 21,
+      "id": "5a820c9b042d0c3e8a11f530",
+      "inclusion_probability": 0.0018552875695732839,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 539.0
+    },
+    {
+      "house": "0159",
+      "house_stratum_pair_count": 43,
+      "id": "4d5f5ceea1076213f7055ee2",
+      "inclusion_probability": 0.0005882583630730617,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 1699.9333333333334
+    },
+    {
+      "house": "0595",
+      "house_stratum_pair_count": 15,
+      "id": "c198020ad2308d881a555590",
+      "inclusion_probability": 0.0016863406408094436,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 593.0
+    },
+    {
+      "house": "1049",
+      "house_stratum_pair_count": 2,
+      "id": "cde4a9695a38202882b6d084",
+      "inclusion_probability": 0.016816143497757848,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 59.46666666666667
+    },
+    {
+      "house": "1304",
+      "house_stratum_pair_count": 30,
+      "id": "1ddc26983764e6f07ce2dd5d",
+      "inclusion_probability": 0.0008841732979664015,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 1131.0
+    },
+    {
+      "house": "0145",
+      "house_stratum_pair_count": 1,
+      "id": "30669695214b8ce49bad089c",
+      "inclusion_probability": 0.0423728813559322,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 23.6
+    },
+    {
+      "house": "1442",
+      "house_stratum_pair_count": 2,
+      "id": "8b55dda952c3894057b659e2",
+      "inclusion_probability": 0.01948051948051948,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 51.333333333333336
+    },
+    {
+      "house": "0828",
+      "house_stratum_pair_count": 1,
+      "id": "ba17efcf8dd26d341e75d63a",
+      "inclusion_probability": 0.0423728813559322,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 23.6
+    },
+    {
+      "house": "0306",
+      "house_stratum_pair_count": 87,
+      "id": "827e8b07ff8fd7c4f37e0115",
+      "inclusion_probability": 0.0002736726874657909,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 3654.0
+    },
+    {
+      "house": "0330",
+      "house_stratum_pair_count": 4,
+      "id": "781b390467bcdd4aa790a3ee",
+      "inclusion_probability": 0.00974025974025974,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 102.66666666666667
+    },
+    {
+      "house": "0168",
+      "house_stratum_pair_count": 9,
+      "id": "1cc2551f308845530cb4ca3b",
+      "inclusion_probability": 0.004329004329004329,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 231.0
+    },
+    {
+      "house": "0387",
+      "house_stratum_pair_count": 6,
+      "id": "96b2478e4c042a57d9c45c2d",
+      "inclusion_probability": 0.007429420505200595,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 134.6
+    },
+    {
+      "house": "1536",
+      "house_stratum_pair_count": 9,
+      "id": "12b2c67a15085ec21f2bc62d",
+      "inclusion_probability": 0.0029420417769932335,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 339.9
+    },
+    {
+      "house": "1179",
+      "house_stratum_pair_count": 3,
+      "id": "ce07dbe891e99248a7c93674",
+      "inclusion_probability": 0.012987012987012986,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 77.0
+    },
+    {
+      "house": "0705",
+      "house_stratum_pair_count": 3,
+      "id": "9bef1b77fd60ac0ae9fe4fd2",
+      "inclusion_probability": 0.011210762331838564,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 89.2
+    },
+    {
+      "house": "0088",
+      "house_stratum_pair_count": 20,
+      "id": "3321b126547469f30fe0078e",
+      "inclusion_probability": 0.0012647554806070826,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 790.6666666666667
+    },
+    {
+      "house": "0178",
+      "house_stratum_pair_count": 1,
+      "id": "a0572317be571c47f99e9af3",
+      "inclusion_probability": 0.0423728813559322,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 23.6
+    },
+    {
+      "house": "1245",
+      "house_stratum_pair_count": 17,
+      "id": "8449cf5f10ad439e0c362a1d",
+      "inclusion_probability": 0.0015575515289964178,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 642.0333333333333
+    },
+    {
+      "house": "0331",
+      "house_stratum_pair_count": 20,
+      "id": "5200cc734da4e2489e95f1c3",
+      "inclusion_probability": 0.0013262599469496023,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 753.9999999999999
+    },
+    {
+      "house": "1418",
+      "house_stratum_pair_count": 23,
+      "id": "bb655e9bb8d5e4c72e5033b2",
+      "inclusion_probability": 0.0011512337388234393,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 868.6333333333332
+    },
+    {
+      "house": "0048",
+      "house_stratum_pair_count": 13,
+      "id": "ecebdd0e4b547b288bbc8138",
+      "inclusion_probability": 0.003428963310092582,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 291.6333333333333
+    },
+    {
+      "house": "1032",
+      "house_stratum_pair_count": 8,
+      "id": "f128e9b79d6622b2260069aa",
+      "inclusion_probability": 0.003258036490008688,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 306.93333333333334
+    },
+    {
+      "house": "0626",
+      "house_stratum_pair_count": 1,
+      "id": "37a9069674f7a49ab643e7e1",
+      "inclusion_probability": 0.0264783759929391,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 37.766666666666666
+    },
+    {
+      "house": "0403",
+      "house_stratum_pair_count": 5,
+      "id": "ebf00a62d35c6622f7e2b83a",
+      "inclusion_probability": 0.008915304606240713,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 112.16666666666667
+    },
+    {
+      "house": "0704",
+      "house_stratum_pair_count": 3,
+      "id": "26296a6d22a42f24bf03e549",
+      "inclusion_probability": 0.012987012987012986,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 77.0
+    },
+    {
+      "house": "0235",
+      "house_stratum_pair_count": 4,
+      "id": "81610120164004888aebc4f9",
+      "inclusion_probability": 0.006619593998234775,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 151.06666666666666
+    },
+    {
+      "house": "0307",
+      "house_stratum_pair_count": 44,
+      "id": "4d66d425c9daeeec41a7eaad",
+      "inclusion_probability": 0.0006028454304316373,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 1658.8
+    },
+    {
+      "house": "0836",
+      "house_stratum_pair_count": 26,
+      "id": "7d23d77de7b3e11eada198ee",
+      "inclusion_probability": 0.0010201999591920017,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 980.1999999999999
+    },
+    {
+      "house": "1217",
+      "house_stratum_pair_count": 9,
+      "id": "d27dfa1c28b7b0036f12abce",
+      "inclusion_probability": 0.002896032435563278,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 345.30000000000007
+    },
+    {
+      "house": "1530",
+      "house_stratum_pair_count": 17,
+      "id": "da5bfdab5425f73c3ef50c9f",
+      "inclusion_probability": 0.00262214841360021,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 381.3666666666666
+    },
+    {
+      "house": "0739",
+      "house_stratum_pair_count": 8,
+      "id": "a1e8e502ae71f4f82b7e7cc5",
+      "inclusion_probability": 0.0033097969991173876,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 302.1333333333333
+    },
+    {
+      "house": "0483",
+      "house_stratum_pair_count": 5,
+      "id": "06b3684f6125d21274de1104",
+      "inclusion_probability": 0.006726457399103139,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 148.66666666666666
+    },
+    {
+      "house": "1430",
+      "house_stratum_pair_count": 15,
+      "id": "048194fc90efaf5adf77ce06",
+      "inclusion_probability": 0.0016863406408094436,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 593.0
+    },
+    {
+      "house": "1290",
+      "house_stratum_pair_count": 27,
+      "id": "b3d18ad5a8096081fe2fe6a9",
+      "inclusion_probability": 0.0010683760683760685,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 935.9999999999999
+    },
+    {
+      "house": "1422",
+      "house_stratum_pair_count": 2,
+      "id": "b0129f1c69a3a7a798348b7d",
+      "inclusion_probability": 0.0211864406779661,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 47.2
+    },
+    {
+      "house": "0647",
+      "house_stratum_pair_count": 1,
+      "id": "505559f6c232f992d6e19662",
+      "inclusion_probability": 0.0423728813559322,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 23.6
+    },
+    {
+      "house": "1249",
+      "house_stratum_pair_count": 83,
+      "id": "01b3da2e7b240ba8f6cf73b5",
+      "inclusion_probability": 0.0003140276134948133,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 3184.4333333333334
+    },
+    {
+      "house": "1362",
+      "house_stratum_pair_count": 1,
+      "id": "8eb4a35f3e1a6a2559195961",
+      "inclusion_probability": 0.0423728813559322,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 23.6
+    },
+    {
+      "house": "0223",
+      "house_stratum_pair_count": 11,
+      "id": "64a0a442a0093fb79ff2f933",
+      "inclusion_probability": 0.0035419126328217238,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 282.3333333333333
+    },
+    {
+      "house": "0837",
+      "house_stratum_pair_count": 35,
+      "id": "6a5cada1484d2fd8858595ac",
+      "inclusion_probability": 0.0006802721088435374,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 1470.0
+    },
+    {
+      "house": "0292",
+      "house_stratum_pair_count": 82,
+      "id": "1903273665d373e03efc02f7",
+      "inclusion_probability": 0.00031785721853743294,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 3146.066666666667
+    },
+    {
+      "house": "0687",
+      "house_stratum_pair_count": 28,
+      "id": "3fdd68422a57954ab4a983b8",
+      "inclusion_probability": 0.0009033967718622019,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 1106.9333333333334
+    },
+    {
+      "house": "1138",
+      "house_stratum_pair_count": 7,
+      "id": "6b44ef49d8bba268b284eae0",
+      "inclusion_probability": 0.004804612427930814,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 208.13333333333333
+    },
+    {
+      "house": "1176",
+      "house_stratum_pair_count": 1,
+      "id": "6c621a520c7ce212e3a149d8",
+      "inclusion_probability": 0.033632286995515695,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 29.733333333333334
+    },
+    {
+      "house": "1200",
+      "house_stratum_pair_count": 13,
+      "id": "aa22cea75a23733e43aeeadf",
+      "inclusion_probability": 0.003428963310092582,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 291.6333333333333
+    },
+    {
+      "house": "1298",
+      "house_stratum_pair_count": 4,
+      "id": "84974bfe92fd88f3fb30504f",
+      "inclusion_probability": 0.008408071748878924,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 118.93333333333334
+    },
+    {
+      "house": "1124",
+      "house_stratum_pair_count": 18,
+      "id": "2d263c75dc04ffb49e97bef3",
+      "inclusion_probability": 0.001405283867341203,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 711.5999999999999
+    },
+    {
+      "house": "1263",
+      "house_stratum_pair_count": 17,
+      "id": "ce6a9f89cbfb2d79c855e25e",
+      "inclusion_probability": 0.001978369823265629,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 505.4666666666667
+    },
+    {
+      "house": "0952",
+      "house_stratum_pair_count": 1,
+      "id": "0c3f8c64cf7ae708f85d2776",
+      "inclusion_probability": 0.0423728813559322,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 23.6
+    },
+    {
+      "house": "0893",
+      "house_stratum_pair_count": 25,
+      "id": "93eda01c98b5b375c3090174",
+      "inclusion_probability": 0.0017830609212481426,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 560.8333333333334
+    },
+    {
+      "house": "1300",
+      "house_stratum_pair_count": 15,
+      "id": "e9197dc75f4bbdb34a8d7c18",
+      "inclusion_probability": 0.0025974025974025974,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 385.0
+    },
+    {
+      "house": "0920",
+      "house_stratum_pair_count": 3,
+      "id": "011262c9dd992e5fba6d3267",
+      "inclusion_probability": 0.01485884101040119,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 67.3
+    },
+    {
+      "house": "0873",
+      "house_stratum_pair_count": 2,
+      "id": "1cfaea68f233fb8f529c9b1b",
+      "inclusion_probability": 0.022288261515601784,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 44.86666666666667
+    },
+    {
+      "house": "0810",
+      "house_stratum_pair_count": 6,
+      "id": "2cfdf06eff4eab6ef38bf725",
+      "inclusion_probability": 0.0042158516020236085,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 237.20000000000002
+    },
+    {
+      "house": "1016",
+      "house_stratum_pair_count": 36,
+      "id": "eb8cc56f4a0a935dbf81cb01",
+      "inclusion_probability": 0.0007368110816386679,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 1357.1999999999998
+    },
+    {
+      "house": "0810",
+      "house_stratum_pair_count": 17,
+      "id": "5c99983bf80193ea98e5327a",
+      "inclusion_probability": 0.0015603058199407085,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 640.9
+    },
+    {
+      "house": "0685",
+      "house_stratum_pair_count": 36,
+      "id": "1a875a26a059404376628767",
+      "inclusion_probability": 0.0007240081088908195,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 1381.2000000000003
+    },
+    {
+      "house": "1549",
+      "house_stratum_pair_count": 7,
+      "id": "0470177663e8311ef3737bf9",
+      "inclusion_probability": 0.0055658627087198514,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 179.66666666666666
+    },
+    {
+      "house": "1119",
+      "house_stratum_pair_count": 14,
+      "id": "8583b5394c18fb8c9799efae",
+      "inclusion_probability": 0.0020604395604395605,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 485.3333333333333
+    },
+    {
+      "house": "0816",
+      "house_stratum_pair_count": 27,
+      "id": "8e10e1f4c6ba28751c4bf8fd",
+      "inclusion_probability": 0.0009824147755182239,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 1017.8999999999999
+    },
+    {
+      "house": "1425",
+      "house_stratum_pair_count": 39,
+      "id": "a54ac42c6f7702af1c3df1ea",
+      "inclusion_probability": 0.0006801333061280011,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 1470.3
+    },
+    {
+      "house": "0129",
+      "house_stratum_pair_count": 1,
+      "id": "cfe5ffcf8098162c9b6d600b",
+      "inclusion_probability": 0.028846153846153848,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 34.666666666666664
+    },
+    {
+      "house": "0909",
+      "house_stratum_pair_count": 3,
+      "id": "304a240862c83222920a3e4e",
+      "inclusion_probability": 0.01485884101040119,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 67.3
+    },
+    {
+      "house": "0138",
+      "house_stratum_pair_count": 93,
+      "id": "488da9e478c8475c76342112",
+      "inclusion_probability": 0.00028026120344160755,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 3568.1000000000004
+    },
+    {
+      "house": "1292",
+      "house_stratum_pair_count": 4,
+      "id": "55fa920f00c10f6cf8f05bee",
+      "inclusion_probability": 0.007211538461538462,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 138.66666666666666
+    },
+    {
+      "house": "0258",
+      "house_stratum_pair_count": 21,
+      "id": "5a624eba3b6bf587139666e0",
+      "inclusion_probability": 0.0013736263736263737,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 728.0
+    },
+    {
+      "house": "1470",
+      "house_stratum_pair_count": 3,
+      "id": "9ca2b32ab4ed0b2cc66f18bd",
+      "inclusion_probability": 0.011210762331838564,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 89.2
+    },
+    {
+      "house": "0525",
+      "house_stratum_pair_count": 11,
+      "id": "7efccbd155ad0c1c81647026",
+      "inclusion_probability": 0.0024113817217265494,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 414.7
+    },
+    {
+      "house": "0803",
+      "house_stratum_pair_count": 2,
+      "id": "0242ad5a73d949ecb1337254",
+      "inclusion_probability": 0.016816143497757848,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 59.46666666666667
+    },
+    {
+      "house": "0249",
+      "house_stratum_pair_count": 1,
+      "id": "8d2a34900dbe574e7bc06485",
+      "inclusion_probability": 0.0423728813559322,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 23.6
+    },
+    {
+      "house": "0006",
+      "house_stratum_pair_count": 118,
+      "id": "2377007623f78015f25903ce",
+      "inclusion_probability": 0.0002143653356961157,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 4664.933333333333
+    },
+    {
+      "house": "0901",
+      "house_stratum_pair_count": 22,
+      "id": "4ee52185b73e34585e3393d1",
+      "inclusion_probability": 0.0017709563164108619,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 564.6666666666666
+    },
+    {
+      "house": "0051",
+      "house_stratum_pair_count": 2,
+      "id": "cc62c80b8e90b1143cc86645",
+      "inclusion_probability": 0.016816143497757848,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 59.46666666666667
+    },
+    {
+      "house": "0131",
+      "house_stratum_pair_count": 47,
+      "id": "e612bae351b148d8235ee67d",
+      "inclusion_probability": 0.0005065856129685916,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 1974.0000000000002
+    },
+    {
+      "house": "1019",
+      "house_stratum_pair_count": 51,
+      "id": "c94902178698ad26d27cb678",
+      "inclusion_probability": 0.0007639419404125286,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 1309.0
+    },
+    {
+      "house": "0066",
+      "house_stratum_pair_count": 65,
+      "id": "0b849082d4dc990b91742612",
+      "inclusion_probability": 0.0003663003663003663,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 2730.0
+    },
+    {
+      "house": "0267",
+      "house_stratum_pair_count": 6,
+      "id": "486efb23aff609845d51c4c4",
+      "inclusion_probability": 0.007429420505200595,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 134.6
+    },
+    {
+      "house": "0284",
+      "house_stratum_pair_count": 64,
+      "id": "dae2582a33cb782ad4dd150b",
+      "inclusion_probability": 0.0003720238095238095,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 2688.0
+    },
+    {
+      "house": "0166",
+      "house_stratum_pair_count": 15,
+      "id": "87f0647465d85724feca20ae",
+      "inclusion_probability": 0.0019230769230769232,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 520.0
+    },
+    {
+      "house": "0264",
+      "house_stratum_pair_count": 122,
+      "id": "a9f17d4f4ad96a068373564c",
+      "inclusion_probability": 0.00021364173704975002,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 4680.733333333334
+    },
+    {
+      "house": "0085",
+      "house_stratum_pair_count": 2,
+      "id": "cdbeb36ac61baf953da58218",
+      "inclusion_probability": 0.022288261515601784,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 44.86666666666667
+    },
+    {
+      "house": "0008",
+      "house_stratum_pair_count": 2,
+      "id": "00fec14912de48bfcb52bf79",
+      "inclusion_probability": 0.016816143497757848,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 59.46666666666667
+    },
+    {
+      "house": "0332",
+      "house_stratum_pair_count": 2,
+      "id": "aad583d42d2b33242fec0fb3",
+      "inclusion_probability": 0.016816143497757848,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 59.46666666666667
+    },
+    {
+      "house": "0146",
+      "house_stratum_pair_count": 5,
+      "id": "6319074eeb30e6db1df3af11",
+      "inclusion_probability": 0.005305039787798409,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 188.49999999999997
+    },
+    {
+      "house": "1018",
+      "house_stratum_pair_count": 67,
+      "id": "cd75cbadb955ae45130dd9b9",
+      "inclusion_probability": 0.00035536602700781805,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 2814.0
+    },
+    {
+      "house": "0096",
+      "house_stratum_pair_count": 9,
+      "id": "fee724b8f11ecca1960c8269",
+      "inclusion_probability": 0.0029472443265546717,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 339.29999999999995
+    },
+    {
+      "house": "0178",
+      "house_stratum_pair_count": 13,
+      "id": "57610afd8a4b0d08c0f7d62a",
+      "inclusion_probability": 0.0020367981533030077,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 490.96666666666664
+    },
+    {
+      "house": "1204",
+      "house_stratum_pair_count": 18,
+      "id": "dff1a4259c39eacacdd66900",
+      "inclusion_probability": 0.0014736221632773358,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 678.5999999999999
+    },
+    {
+      "house": "0202",
+      "house_stratum_pair_count": 17,
+      "id": "78c632ca28be771bdc1ebff3",
+      "inclusion_probability": 0.0015575515289964178,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 642.0333333333333
+    },
+    {
+      "house": "1247",
+      "house_stratum_pair_count": 2,
+      "id": "961059cfee31a1a568edeaf4",
+      "inclusion_probability": 0.022288261515601784,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 44.86666666666667
+    },
+    {
+      "house": "0241",
+      "house_stratum_pair_count": 3,
+      "id": "07b34f5458f7d17f9a8d62d6",
+      "inclusion_probability": 0.012987012987012986,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 77.0
+    },
+    {
+      "house": "0442",
+      "house_stratum_pair_count": 40,
+      "id": "0e17b84b0b55fbab7ed99ce7",
+      "inclusion_probability": 0.0006323777403035413,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 1581.3333333333335
+    },
+    {
+      "house": "0031",
+      "house_stratum_pair_count": 3,
+      "id": "a091bec649af8a1b0e011474",
+      "inclusion_probability": 0.01485884101040119,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 67.3
+    },
+    {
+      "house": "0065",
+      "house_stratum_pair_count": 3,
+      "id": "dbbf393b8a77eeb360105ff4",
+      "inclusion_probability": 0.014124293785310734,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 70.8
+    },
+    {
+      "house": "0219",
+      "house_stratum_pair_count": 8,
+      "id": "9421185df38aaa9c08ed9439",
+      "inclusion_probability": 0.0033156498673740055,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 301.59999999999997
+    },
+    {
+      "house": "0653",
+      "house_stratum_pair_count": 6,
+      "id": "63777cd56d83421a4edc6e96",
+      "inclusion_probability": 0.0042158516020236085,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 237.20000000000002
+    },
+    {
+      "house": "1417",
+      "house_stratum_pair_count": 6,
+      "id": "21544872d104c3049f2fe91a",
+      "inclusion_probability": 0.0042158516020236085,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 237.20000000000002
+    },
+    {
+      "house": "0600",
+      "house_stratum_pair_count": 4,
+      "id": "3ba7366baadd921edb1c4fde",
+      "inclusion_probability": 0.00974025974025974,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 102.66666666666667
+    },
+    {
+      "house": "0876",
+      "house_stratum_pair_count": 2,
+      "id": "8098ae94d52b08d4807f8abb",
+      "inclusion_probability": 0.016816143497757848,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 59.46666666666667
+    },
+    {
+      "house": "0235",
+      "house_stratum_pair_count": 3,
+      "id": "5c9f5e078f6bfd070d455e39",
+      "inclusion_probability": 0.014124293785310734,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 70.8
+    },
+    {
+      "house": "1254",
+      "house_stratum_pair_count": 37,
+      "id": "49449e34216bcbcc1cd60dca",
+      "inclusion_probability": 0.0007168972686214066,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 1394.9
+    },
+    {
+      "house": "1450",
+      "house_stratum_pair_count": 3,
+      "id": "baff93487f6dd56731469aa4",
+      "inclusion_probability": 0.008688097306689834,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 115.10000000000001
+    },
+    {
+      "house": "0167",
+      "house_stratum_pair_count": 2,
+      "id": "67dffdaa9ee6205a0ef1f525",
+      "inclusion_probability": 0.016816143497757848,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 59.46666666666667
+    },
+    {
+      "house": "0678",
+      "house_stratum_pair_count": 17,
+      "id": "5c15178ce33d3849a9822530",
+      "inclusion_probability": 0.0015603058199407085,
+      "population_house_count": 1131,
+      "stratum": "positive|cross_complete_room|pass",
+      "weight": 640.9
+    },
+    {
+      "house": "0332",
+      "house_stratum_pair_count": 12,
+      "id": "f90f5e1555501d6cdd0d0862",
+      "inclusion_probability": 0.0022065313327449252,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 453.19999999999993
+    },
+    {
+      "house": "1007",
+      "house_stratum_pair_count": 15,
+      "id": "51219462047160792699cc28",
+      "inclusion_probability": 0.0017376194613379669,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 575.5
+    },
+    {
+      "house": "1042",
+      "house_stratum_pair_count": 6,
+      "id": "e6370dd071894da181e10030",
+      "inclusion_probability": 0.007062146892655367,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 141.6
+    },
+    {
+      "house": "1426",
+      "house_stratum_pair_count": 8,
+      "id": "79d74fc6a9a985f3a1aefc17",
+      "inclusion_probability": 0.003258036490008688,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 306.93333333333334
+    },
+    {
+      "house": "0708",
+      "house_stratum_pair_count": 5,
+      "id": "e76f26247f87ada159ef474d",
+      "inclusion_probability": 0.00505902192242833,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 197.66666666666669
+    },
+    {
+      "house": "1171",
+      "house_stratum_pair_count": 1,
+      "id": "cf18a114adb5ba1966d9ef8e",
+      "inclusion_probability": 0.03896103896103896,
+      "population_house_count": 770,
+      "stratum": "negative|cross_complete_room|ordinary",
+      "weight": 25.666666666666668
+    },
+    {
+      "house": "0988",
+      "house_stratum_pair_count": 96,
+      "id": "8ab304c5083aa532928010e0",
+      "inclusion_probability": 0.0002715030408340573,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 3683.2000000000003
+    },
+    {
+      "house": "0548",
+      "house_stratum_pair_count": 48,
+      "id": "35d8733ce55d7cad6b726dde",
+      "inclusion_probability": 0.0005269814502529511,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 1897.6000000000001
+    },
+    {
+      "house": "1062",
+      "house_stratum_pair_count": 43,
+      "id": "a0fd3592bcedf2c6d9535698",
+      "inclusion_probability": 0.0005537098560354374,
+      "population_house_count": 1260,
+      "stratum": "unknown|cross_complete_room|ordinary",
+      "weight": 1806.0
+    },
+    {
+      "house": "0743",
+      "house_stratum_pair_count": 1,
+      "id": "7e59396c0f21aa3e9d6c226c",
+      "inclusion_probability": 0.0423728813559322,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 23.6
+    },
+    {
+      "house": "0232",
+      "house_stratum_pair_count": 42,
+      "id": "bdd4bb8b88f026087a73ec3b",
+      "inclusion_probability": 0.0006205783790492738,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 1611.4000000000003
+    },
+    {
+      "house": "1180",
+      "house_stratum_pair_count": 14,
+      "id": "dee77101c3a6f0a208847ef7",
+      "inclusion_probability": 0.0020604395604395605,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 485.3333333333333
+    },
+    {
+      "house": "0968",
+      "house_stratum_pair_count": 3,
+      "id": "5a0be6d45370c2841c9bfac8",
+      "inclusion_probability": 0.008431703204047217,
+      "population_house_count": 1186,
+      "stratum": "unknown|within_complete_partial|ordinary",
+      "weight": 118.60000000000001
+    },
+    {
+      "house": "0347",
+      "house_stratum_pair_count": 8,
+      "id": "51a98c43e74fda15ec01f991",
+      "inclusion_probability": 0.0033097969991173876,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 302.1333333333333
+    },
+    {
+      "house": "0593",
+      "house_stratum_pair_count": 25,
+      "id": "d8058ab5d8430b5073eb7037",
+      "inclusion_probability": 0.0017830609212481426,
+      "population_house_count": 673,
+      "stratum": "negative|within_complete_partial|ordinary",
+      "weight": 560.8333333333334
+    },
+    {
+      "house": "0582",
+      "house_stratum_pair_count": 9,
+      "id": "75eae7d993e5c9f903fdea2e",
+      "inclusion_probability": 0.004708097928436911,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 212.4
+    },
+    {
+      "house": "0580",
+      "house_stratum_pair_count": 5,
+      "id": "1cb6fb733a3acd7d6959fb7a",
+      "inclusion_probability": 0.006726457399103139,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 148.66666666666666
+    },
+    {
+      "house": "1361",
+      "house_stratum_pair_count": 6,
+      "id": "ad64211c32a067eab525f4c9",
+      "inclusion_probability": 0.007062146892655367,
+      "population_house_count": 708,
+      "stratum": "positive|within_complete_partial|not_pass",
+      "weight": 141.6
+    },
+    {
+      "house": "1549",
+      "house_stratum_pair_count": 1,
+      "id": "ac09cd3a4d96b15a29a6544c",
+      "inclusion_probability": 0.033632286995515695,
+      "population_house_count": 892,
+      "stratum": "positive|cross_complete_room|not_pass",
+      "weight": 29.733333333333334
+    },
+    {
+      "house": "0794",
+      "house_stratum_pair_count": 12,
+      "id": "fb3f2a0104f62d20ebcafb2f",
+      "inclusion_probability": 0.0022065313327449252,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 453.19999999999993
+    },
+    {
+      "house": "0380",
+      "house_stratum_pair_count": 15,
+      "id": "d0d674f564fc0911e3dd42fd",
+      "inclusion_probability": 0.00176522506619594,
+      "population_house_count": 1133,
+      "stratum": "positive|within_complete_partial|pass",
+      "weight": 566.5
+    },
+    {
+      "house": "1267",
+      "house_stratum_pair_count": 135,
+      "id": "e0e6e8b2561faeb344dddfd3",
+      "inclusion_probability": 0.00019306882903755187,
+      "population_house_count": 1151,
+      "stratum": "negative|cross_complete_room|hard_proxy",
+      "weight": 5179.500000000001
+    },
+    {
+      "house": "0023",
+      "house_stratum_pair_count": 21,
+      "id": "167fd7c95cddcd8adb81f337",
+      "inclusion_probability": 0.0013736263736263737,
+      "population_house_count": 1040,
+      "stratum": "negative|within_complete_partial|hard_proxy",
+      "weight": 728.0
+    }
+  ],
+  "split": "train",
+  "strata": [
+    {
+      "houses": 1151,
+      "pair_population": 68885,
+      "sampled_houses": 30,
+      "stratum": "negative|cross_complete_room|hard_proxy"
+    },
+    {
+      "houses": 770,
+      "pair_population": 7740,
+      "sampled_houses": 30,
+      "stratum": "negative|cross_complete_room|ordinary"
+    },
+    {
+      "houses": 1040,
+      "pair_population": 15864,
+      "sampled_houses": 30,
+      "stratum": "negative|within_complete_partial|hard_proxy"
+    },
+    {
+      "houses": 673,
+      "pair_population": 5810,
+      "sampled_houses": 30,
+      "stratum": "negative|within_complete_partial|ordinary"
+    },
+    {
+      "houses": 892,
+      "pair_population": 3643,
+      "sampled_houses": 30,
+      "stratum": "positive|cross_complete_room|not_pass"
+    },
+    {
+      "houses": 1131,
+      "pair_population": 22146,
+      "sampled_houses": 30,
+      "stratum": "positive|cross_complete_room|pass"
+    },
+    {
+      "houses": 708,
+      "pair_population": 1867,
+      "sampled_houses": 30,
+      "stratum": "positive|within_complete_partial|not_pass"
+    },
+    {
+      "houses": 1133,
+      "pair_population": 13513,
+      "sampled_houses": 30,
+      "stratum": "positive|within_complete_partial|pass"
+    },
+    {
+      "houses": 1260,
+      "pair_population": 90157,
+      "sampled_houses": 30,
+      "stratum": "unknown|cross_complete_room|ordinary"
+    },
+    {
+      "houses": 1186,
+      "pair_population": 22025,
+      "sampled_houses": 30,
+      "stratum": "unknown|within_complete_partial|ordinary"
+    }
+  ]
+}

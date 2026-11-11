@@ -9,9 +9,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from utils.cross_scene_estimator import polygon_validity
-from utils.cross_scene_pipeline import atomic_write_json
-from utils.joint_layout import DoorSpec, build_joint_layout, render_joint_boundary, render_joint_boundary_svg
+from portallayout.engine.cross_scene_estimator import polygon_validity
+from portallayout.engine.cross_scene_pipeline import atomic_write_json
+from portallayout.geometry.joint_layout import DoorSpec, build_joint_layout, render_joint_boundary, render_joint_boundary_svg
 
 
 def parse_option():
@@ -38,7 +38,7 @@ def parse_option():
         metavar="WALL:START:END",
         help="shared opening segment on room B, for example 3:0.30:0.60",
     )
-    parser.add_argument("--output_dir", default="src/output/joint_layout", help="output directory")
+    parser.add_argument("--output_dir", default="outputs/joint_layout", help="output directory")
     parser.add_argument("--name", default="a_b_joint", help="output file prefix")
     parser.add_argument(
         "--preserve_scale",

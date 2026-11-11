@@ -1,0 +1,259 @@
+{
+  "split": "train",
+  "validation_or_test_used_for_training": false,
+  "seed": 123,
+  "fixed_order": true,
+  "subset_size": 24,
+  "g1": {
+    "threshold": 0.55,
+    "min_width": 2,
+    "max_candidates": 12
+  },
+  "category_counts": {
+    "positive_with_target": 8,
+    "positive_without_target": 8,
+    "negative": 8
+  },
+  "samples": [
+    {
+      "dataset_index": 17,
+      "pair_id": "0422_floor_01_pano_29_pano_31_9",
+      "category": "positive_with_target",
+      "candidate_count_a": 2,
+      "candidate_count_b": 1,
+      "candidate_count_total": 3,
+      "has_target_at_selection": true,
+      "fixed_order": 0
+    },
+    {
+      "dataset_index": 8,
+      "pair_id": "0919_floor_02_pano_65_pano_73_1",
+      "category": "positive_without_target",
+      "candidate_count_a": 3,
+      "candidate_count_b": 1,
+      "candidate_count_total": 4,
+      "has_target_at_selection": false,
+      "fixed_order": 1
+    },
+    {
+      "dataset_index": 10,
+      "pair_id": "0919_floor_02_pano_76_pano_73_negative",
+      "category": "negative",
+      "candidate_count_a": 1,
+      "candidate_count_b": 1,
+      "candidate_count_total": 2,
+      "has_target_at_selection": false,
+      "fixed_order": 2
+    },
+    {
+      "dataset_index": 28,
+      "pair_id": "0422_floor_02_pano_43_pano_41_2",
+      "category": "positive_with_target",
+      "candidate_count_a": 1,
+      "candidate_count_b": 2,
+      "candidate_count_total": 3,
+      "has_target_at_selection": true,
+      "fixed_order": 3
+    },
+    {
+      "dataset_index": 18,
+      "pair_id": "0422_floor_01_pano_8_pano_21_7",
+      "category": "positive_without_target",
+      "candidate_count_a": 3,
+      "candidate_count_b": 1,
+      "candidate_count_total": 4,
+      "has_target_at_selection": false,
+      "fixed_order": 4
+    },
+    {
+      "dataset_index": 19,
+      "pair_id": "0422_floor_01_pano_17_pano_21_negative",
+      "category": "negative",
+      "candidate_count_a": 1,
+      "candidate_count_b": 1,
+      "candidate_count_total": 2,
+      "has_target_at_selection": false,
+      "fixed_order": 5
+    },
+    {
+      "dataset_index": 52,
+      "pair_id": "0673_floor_01_pano_21_pano_24_14",
+      "category": "positive_with_target",
+      "candidate_count_a": 2,
+      "candidate_count_b": 1,
+      "candidate_count_total": 3,
+      "has_target_at_selection": true,
+      "fixed_order": 6
+    },
+    {
+      "dataset_index": 37,
+      "pair_id": "0673_floor_00_pano_51_pano_57_2",
+      "category": "positive_without_target",
+      "candidate_count_a": 3,
+      "candidate_count_b": 1,
+      "candidate_count_total": 4,
+      "has_target_at_selection": false,
+      "fixed_order": 7
+    },
+    {
+      "dataset_index": 26,
+      "pair_id": "0422_floor_01_pano_31_pano_21_negative",
+      "category": "negative",
+      "candidate_count_a": 1,
+      "candidate_count_b": 1,
+      "candidate_count_total": 2,
+      "has_target_at_selection": false,
+      "fixed_order": 8
+    },
+    {
+      "dataset_index": 57,
+      "pair_id": "0673_floor_01_pano_78_pano_76_7",
+      "category": "positive_with_target",
+      "candidate_count_a": 1,
+      "candidate_count_b": 2,
+      "candidate_count_total": 3,
+      "has_target_at_selection": true,
+      "fixed_order": 9
+    },
+    {
+      "dataset_index": 12,
+      "pair_id": "0422_floor_01_pano_18_pano_17_6",
+      "category": "positive_without_target",
+      "candidate_count_a": 4,
+      "candidate_count_b": 1,
+      "candidate_count_total": 5,
+      "has_target_at_selection": false,
+      "fixed_order": 10
+    },
+    {
+      "dataset_index": 34,
+      "pair_id": "0422_floor_02_pano_43_pano_51_negative",
+      "category": "negative",
+      "candidate_count_a": 1,
+      "candidate_count_b": 1,
+      "candidate_count_total": 2,
+      "has_target_at_selection": false,
+      "fixed_order": 11
+    },
+    {
+      "dataset_index": 72,
+      "pair_id": "1308_floor_02_pano_22_pano_20_1",
+      "category": "positive_with_target",
+      "candidate_count_a": 1,
+      "candidate_count_b": 7,
+      "candidate_count_total": 8,
+      "has_target_at_selection": true,
+      "fixed_order": 12
+    },
+    {
+      "dataset_index": 54,
+      "pair_id": "0673_floor_01_pano_34_pano_16_11",
+      "category": "positive_without_target",
+      "candidate_count_a": 5,
+      "candidate_count_b": 3,
+      "candidate_count_total": 8,
+      "has_target_at_selection": false,
+      "fixed_order": 13
+    },
+    {
+      "dataset_index": 7,
+      "pair_id": "0919_floor_01_pano_41_pano_40_negative",
+      "category": "negative",
+      "candidate_count_a": 8,
+      "candidate_count_b": 1,
+      "candidate_count_total": 9,
+      "has_target_at_selection": false,
+      "fixed_order": 14
+    },
+    {
+      "dataset_index": 74,
+      "pair_id": "1308_floor_02_pano_26_pano_20_2",
+      "category": "positive_with_target",
+      "candidate_count_a": 1,
+      "candidate_count_b": 7,
+      "candidate_count_total": 8,
+      "has_target_at_selection": true,
+      "fixed_order": 15
+    },
+    {
+      "dataset_index": 82,
+      "pair_id": "1356_floor_01_pano_23_pano_46_14",
+      "category": "positive_without_target",
+      "candidate_count_a": 7,
+      "candidate_count_b": 1,
+      "candidate_count_total": 8,
+      "has_target_at_selection": false,
+      "fixed_order": 16
+    },
+    {
+      "dataset_index": 4,
+      "pair_id": "0919_floor_01_pano_35_pano_25_negative",
+      "category": "negative",
+      "candidate_count_a": 10,
+      "candidate_count_b": 1,
+      "candidate_count_total": 11,
+      "has_target_at_selection": false,
+      "fixed_order": 17
+    },
+    {
+      "dataset_index": 73,
+      "pair_id": "1308_floor_02_pano_24_pano_20_3",
+      "category": "positive_with_target",
+      "candidate_count_a": 2,
+      "candidate_count_b": 7,
+      "candidate_count_total": 9,
+      "has_target_at_selection": true,
+      "fixed_order": 18
+    },
+    {
+      "dataset_index": 49,
+      "pair_id": "0673_floor_01_pano_15_pano_42_10",
+      "category": "positive_without_target",
+      "candidate_count_a": 6,
+      "candidate_count_b": 3,
+      "candidate_count_total": 9,
+      "has_target_at_selection": false,
+      "fixed_order": 19
+    },
+    {
+      "dataset_index": 5,
+      "pair_id": "0919_floor_01_pano_35_pano_40_negative",
+      "category": "negative",
+      "candidate_count_a": 10,
+      "candidate_count_b": 1,
+      "candidate_count_total": 11,
+      "has_target_at_selection": false,
+      "fixed_order": 20
+    },
+    {
+      "dataset_index": 2,
+      "pair_id": "0919_floor_01_pano_41_pano_29_3",
+      "category": "positive_with_target",
+      "candidate_count_a": 8,
+      "candidate_count_b": 4,
+      "candidate_count_total": 12,
+      "has_target_at_selection": true,
+      "fixed_order": 21
+    },
+    {
+      "dataset_index": 0,
+      "pair_id": "0919_floor_01_pano_35_pano_29_4",
+      "category": "positive_without_target",
+      "candidate_count_a": 10,
+      "candidate_count_b": 4,
+      "candidate_count_total": 14,
+      "has_target_at_selection": false,
+      "fixed_order": 22
+    },
+    {
+      "dataset_index": 6,
+      "pair_id": "0919_floor_01_pano_41_pano_35_negative",
+      "category": "negative",
+      "candidate_count_a": 8,
+      "candidate_count_b": 10,
+      "candidate_count_total": 18,
+      "has_target_at_selection": false,
+      "fixed_order": 23
+    }
+  ]
+}

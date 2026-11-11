@@ -1,0 +1,21 @@
+{
+  "slides": 24,
+  "pdf_pages": 24,
+  "body_pages": 23,
+  "reference_pages": 1,
+  "missing_rendered_text": [],
+  "outside_slide": [],
+  "font_setting_issues": [],
+  "sources_unchanged": true,
+  "font_preview_limit": "PPTX使用Microsoft YaHei；本机无该字体，PDF由Noto Sans CJK替代渲染。",
+  "checked_commit": "8484b620d1850a27776445178c7f0f2e753213ac",
+  "visual_review": {
+    "all_24_pages_reviewed": true,
+    "template_18_pages_rendered_and_reviewed": true,
+    "original_title_coordinates_preserved": true,
+    "slide_17_labels_rebuilt_from_original_svg": true,
+    "body_tables_and_diagrams_editable": true,
+    "no_unresolved_overlap_observed": true,
+    "font_identity_limitation_disclosed": true
+  }
+}

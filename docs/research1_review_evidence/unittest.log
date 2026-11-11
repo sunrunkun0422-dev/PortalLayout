@@ -1,0 +1,85 @@
+/home/feixia/anaconda3/envs/bi_layout/lib/python3.8/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+  warnings.warn(
+..........................................................................................usage: python -m unittest [-h] [--split {val}] [--val_manifest VAL_MANIFEST]
+                          [--train_manifest TRAIN_MANIFEST]
+                          [--val_cache VAL_CACHE] [--data_root DATA_ROOT]
+                          [--sample_manifest SAMPLE_MANIFEST]
+                          [--geometry_modes GEOMETRY_MODES]
+                          [--checkpoint CHECKPOINT]
+                          [--bi_layout_config BI_LAYOUT_CONFIG]
+                          [--bi_layout_checkpoint BI_LAYOUT_CHECKPOINT]
+                          [--opening_checkpoint OPENING_CHECKPOINT]
+                          [--matcher_checkpoint MATCHER_CHECKPOINT]
+                          [--output_dir OUTPUT_DIR] [--device DEVICE]
+                          [--seed SEED] [--positive_count POSITIVE_COUNT]
+                          [--negative_count NEGATIVE_COUNT]
+                          [--workers WORKERS] [--torch_threads TORCH_THREADS]
+                          [--min_opening_width_tokens MIN_OPENING_WIDTH_TOKENS]
+                          [--max_openings_per_view MAX_OPENINGS_PER_VIEW]
+                          [--opening_probability_threshold OPENING_PROBABILITY_THRESHOLD]
+                          [--endpoint_tolerance ENDPOINT_TOLERANCE]
+                          [--prepare_sample] [--metadata_only] [--dry_run]
+                          [--resume]
+python -m unittest: error: argument --split: invalid choice: 'test' (choose from 'val')
+......usage: python -m unittest [-h] [--split {val}] [--val_manifest VAL_MANIFEST]
+                          [--train_manifest TRAIN_MANIFEST]
+                          [--val_cache VAL_CACHE] [--data_root DATA_ROOT]
+                          [--full_manifest FULL_MANIFEST]
+                          [--checkpoint CHECKPOINT]
+                          [--original_metrics ORIGINAL_METRICS]
+                          [--bi_layout_config BI_LAYOUT_CONFIG]
+                          [--bi_layout_checkpoint BI_LAYOUT_CHECKPOINT]
+                          [--opening_checkpoint OPENING_CHECKPOINT]
+                          [--matcher_checkpoint MATCHER_CHECKPOINT]
+                          [--geometry_modes GEOMETRY_MODES]
+                          [--output_dir OUTPUT_DIR] [--device DEVICE]
+                          [--seed SEED]
+                          [--bootstrap_resamples BOOTSTRAP_RESAMPLES]
+                          [--workers WORKERS] [--torch_threads TORCH_THREADS]
+                          [--min_opening_width_tokens MIN_OPENING_WIDTH_TOKENS]
+                          [--max_openings_per_view MAX_OPENINGS_PER_VIEW]
+                          [--progress_every PROGRESS_EVERY]
+                          [--prepare_manifest] [--metadata_only] [--dry_run]
+                          [--analyze_only] [--resume]
+python -m unittest: error: unrecognized arguments: --opening_probability_threshold 0.5
+........................................................[1/1] checkpoint-predicted views scored
+device: cpu
+pairs train/val/test=2/2/2; houses={'train': 1, 'val': 1, 'test': 1}; feature=[8, 4]
+epoch 1/1
+  train 1/1 pairs=2 loss=1.6829 elapsed=0.0s
+  val GT top1=1.0000; predicted recall=0.0000 top1=0.0000 negative_reject=0.0000 harmonic=0.0000 balanced=0.0000; epoch=0.0s BEST
+test predicted recall=0.0000 top1=0.0000 negative_reject=1.0000 harmonic=0.0000 balanced=0.5000
+training complete: /tmp/tmp3fwcms02/output/best.pt
+.........usage: python -m unittest [-h] [--audit-root AUDIT_ROOT] [--output OUTPUT]
+                          [--val-manifest VAL_MANIFEST]
+                          [--frozen-val-root FROZEN_VAL_ROOT]
+                          [--checkpoint CHECKPOINT]
+                          [--observations OBSERVATIONS]
+                          {render,finalize}
+python -m unittest: error: unrecognized arguments: --threshold 0.2
+usage: python -m unittest [-h] [--audit-root AUDIT_ROOT] [--output OUTPUT]
+                          [--val-manifest VAL_MANIFEST]
+                          [--frozen-val-root FROZEN_VAL_ROOT]
+                          [--checkpoint CHECKPOINT]
+                          [--observations OBSERVATIONS]
+                          {render,finalize}
+python -m unittest: error: unrecognized arguments: --device cuda:0
+...............................................device=cpu cached views train=/tmp/tmp9_hkaxft/cache/train val=/tmp/tmp9_hkaxft/cache/val
+warm-started Opening Head weights: /tmp/tmp9_hkaxft/warm.pt
+initial val_P=1.0000 val_R=1.0000 val_F1=1.0000 interval_R@0.3=1.0000 threshold=0.250
+epoch 1/1 loss=0.3235 val_P=1.0000 val_R=1.0000 val_F1=1.0000 interval_R@0.3=1.0000 threshold=0.250 BEST
+training complete: /tmp/tmp9_hkaxft/output/best.pt
+device=cpu cached views train=/tmp/tmp9_hkaxft/cache/train val=/tmp/tmp9_hkaxft/cache/val
+resumed: /tmp/tmp9_hkaxft/output/last.pt, next_epoch=1
+epoch 2/2 loss=0.3235 val_P=1.0000 val_R=1.0000 val_F1=1.0000 interval_R@0.3=1.0000 threshold=0.250
+training complete: /tmp/tmp9_hkaxft/output/best.pt
+device=cpu cached views train=/tmp/tmp9_hkaxft/cache/train val=/tmp/tmp9_hkaxft/cache/val
+cache cache inference [1/1], total complete 1/1
+....................................................epoch 1/1 loss=0.3109 val_P=1.0000 val_R=1.0000 val_F1=1.0000 interval_R@0.3=1.0000 threshold=0.150 BEST
+resumed: /tmp/tmpee32gl_s/output/last.pt, next_epoch=1
+epoch 2/2 loss=0.3107 val_P=1.0000 val_R=1.0000 val_F1=1.0000 interval_R@0.3=1.0000 threshold=0.150
+
+----------------------------------------------------------------------
+Ran 260 tests in 23.441s
+
+OK

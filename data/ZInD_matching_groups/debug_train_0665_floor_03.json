@@ -1,0 +1,84 @@
+{
+  "schema_version": "zind-room-group-v1",
+  "purpose": "debug/qualitative only, not a scientific evaluation",
+  "split": "train",
+  "group_id": "debug_train_0665_floor_03_rooms_04_01_05",
+  "house_id": "0665",
+  "floor_id": "floor_03",
+  "room_ids": [
+    "complete_room_04",
+    "complete_room_01",
+    "complete_room_05"
+  ],
+  "room_to_pano": {
+    "complete_room_04": {
+      "partial_room_id": "partial_room_04",
+      "pano_id": "pano_37"
+    },
+    "complete_room_01": {
+      "partial_room_id": "partial_room_01",
+      "pano_id": "pano_34"
+    },
+    "complete_room_05": {
+      "partial_room_id": "partial_room_05",
+      "pano_id": "pano_30"
+    }
+  },
+  "pair_order": [
+    ["complete_room_04", "complete_room_01"],
+    ["complete_room_01", "complete_room_05"],
+    ["complete_room_04", "complete_room_05"]
+  ],
+  "pair_ids": {
+    "complete_room_01|complete_room_04": "0665_floor_03_pano_34_pano_37_3",
+    "complete_room_01|complete_room_05": "0665_floor_03_pano_34_pano_30_4",
+    "complete_room_04|complete_room_05": "0665_floor_03_pano_37_pano_30_negative"
+  },
+  "positive_edges": [
+    ["complete_room_04", "complete_room_01"],
+    ["complete_room_01", "complete_room_05"]
+  ],
+  "negative_edges": [
+    ["complete_room_04", "complete_room_05"]
+  ],
+  "adjacency_matrix": [
+    [0, 1, 0],
+    [1, 0, 1],
+    [0, 1, 0]
+  ],
+  "connected": true,
+  "scale_meters_per_coordinate": 3.618019586948089,
+  "instance_layout_refs": {
+    "complete_room_04": {
+      "annotation_path": "0665/zind_data.json",
+      "json_pointer": "/merger/floor_03/complete_room_04/partial_room_04/pano_37",
+      "layouts": {
+        "raw": "layout_raw",
+        "visible": "layout_visible",
+        "complete": "layout_complete"
+      }
+    },
+    "complete_room_01": {
+      "annotation_path": "0665/zind_data.json",
+      "json_pointer": "/merger/floor_03/complete_room_01/partial_room_01/pano_34",
+      "layouts": {
+        "raw": "layout_raw",
+        "visible": "layout_visible",
+        "complete": "layout_complete"
+      }
+    },
+    "complete_room_05": {
+      "annotation_path": "0665/zind_data.json",
+      "json_pointer": "/merger/floor_03/complete_room_05/partial_room_05/pano_30",
+      "layouts": {
+        "raw": "layout_raw",
+        "visible": "layout_visible",
+        "complete": "layout_complete"
+      }
+    }
+  },
+  "scale": {
+    "scale_meters_per_coordinate": 3.618019586948089,
+    "source": "0665/zind_data.json#/scale_meters_per_coordinate/floor_03"
+  }
+}

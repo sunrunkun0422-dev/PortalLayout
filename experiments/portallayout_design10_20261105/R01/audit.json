@@ -1,0 +1,126 @@
+{
+  "schema_version": "research10.r01.audit.v1",
+  "created_at": "2026-11-05T21:20:52.114517+08:00",
+  "status": "diagnostic_only_exposure_unknown",
+  "role_counts": {
+    "fit": 40,
+    "selection": 10,
+    "calibration": 10,
+    "audit": 10
+  },
+  "official_house_counts": {
+    "train": 1260,
+    "val": 157,
+    "test": 158
+  },
+  "old_cohort_excluded": 60,
+  "missing_rgb_count": 0,
+  "exposure": {
+    "frontend_layout": {
+      "path": "/home/feixia/pythonProject/AAAsrk/PortalLayout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+      "exists": true,
+      "sha256": "377b84d120b28aaf4538cd867cd59f1caee165ca1e5e427e3d3b6d7b8d400f98",
+      "end_to_end_unseen_house_status": "unknown_unverified"
+    },
+    "frontend_opening": {
+      "path": "/home/feixia/pythonProject/AAAsrk/PortalLayout/checkpoints/Opening_Head/zind_matching_v1/best.pt",
+      "exists": true,
+      "sha256": "93a86b10acf8fc98593c0a3e654af8ab8849865bb620a1532e3c271e68ee5bfc",
+      "end_to_end_unseen_house_status": "unknown_unverified"
+    },
+    "historical_matcher_r3": {
+      "path": "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/research1_round2_20261024/R3/checkpoint.pt",
+      "exists": true,
+      "sha256": "752c8ea1f187741918777116ce73fcc54c6ae545f5f82c7c80950ceda50d3925",
+      "end_to_end_unseen_house_status": "unknown_unverified"
+    },
+    "salve_verifier": {
+      "path": "/home/feixia/pythonProject/AAAsrk/salve/checkpoints/salve/1200ffbe47d836557d88fef052952337.pth",
+      "exists": true,
+      "sha256": "e4b7dec606aa98af25af2cd84ce450494d0c6fb3fb95254ec11dab6219d15a18",
+      "end_to_end_unseen_house_status": "unknown_unverified"
+    },
+    "observable_joint_training_house_counts": {
+      "fit": 1160,
+      "internal_monitor": 100,
+      "note": "applies to joint observable experiment, not proof of frontend checkpoint origin"
+    }
+  },
+  "historical_cache": {
+    "fingerprint": "5f8009ac1e7925813ee86246f169851af359636389e99f35721c8a7855ed9e89",
+    "expected_unique": 1551,
+    "metadata_and_tensor_checked": 1551,
+    "errors": [],
+    "ok": true,
+    "historic_code_contract": "pre-refactor; do not force resume under current identity",
+    "contract_file_sha256": "1877bb7fa8a0986537d2733f1a9839ffdf2538e405e7207ef78462e5e4d69e58"
+  },
+  "geometry_recomputed": {
+    "r3": {
+      "denominator": 711,
+      "dominant_wall_s1p0_success": 30,
+      "local_m2_s0p0_success": 81,
+      "houses": 10
+    },
+    "weak": {
+      "denominator": 203,
+      "dominant_wall_s1p0_success": 47,
+      "local_m2_s0p0_success": 182,
+      "houses": 9
+    }
+  },
+  "observable_validation": {
+    "positive_pair_count": 1176.0,
+    "negative_pair_count": 1176.0,
+    "positive_candidate_recall": 0.8035714285714286,
+    "conditional_candidate_top1": 0.7513227513227513,
+    "end_to_end_candidate_top1": 0.6037414965986394,
+    "negative_rejection_rate": 0.9302721088435374
+  },
+  "observable_validation_scope": "internal train-house monitor, not official test",
+  "manual_review_counts": {
+    "正确": 7,
+    "不确定": 3,
+    "pending": 86
+  },
+  "historical_opening_calibration": {
+    "policy": "opening-cross-room.v2",
+    "minimum_cross_recall": 0.1,
+    "minimum_cross_true": 20,
+    "minimum_cross_positive_houses": 5,
+    "minimum_precision": 0.95,
+    "maximum_negative_pair_far": 0.01,
+    "all_positive_cells": 768,
+    "cross_positive_cells": 314,
+    "known_negative_pairs": 400,
+    "status": "calibration_infeasible",
+    "reason": "no_threshold_meets_quality_and_support",
+    "failed_threshold_counts": {
+      "overall_precision": 1275,
+      "cross_precision": 1276,
+      "negative_pair_far": 1214,
+      "cross_recall": 217,
+      "cross_true_support": 162,
+      "cross_house_support": 162
+    }
+  },
+  "source_sha256": {
+    "tools/research10_r01.py": "1a1285f576372214af7c851254fcef9916899ca548d9cc26ab24260729c49637",
+    "experiments/research1_main_20261024/cohort/cohort.json": "05a13098744e716526e70f225b2e66137ac3bb184fb4f13e3764cf461309e16b",
+    "docs/method_advantage_evidence_20261028/geometry_paired_selection.csv": "e7a332eb296337067a209448c128201efbb3a47dfe6453bd8289971bc8174fc2",
+    "experiments/zind_observable_v1/results/best_metrics.json": "5e6749702fdfdf9f98ae477465b9c3430f0d69df4b264a706eacff450640c385",
+    "experiments/research1_round2_20261024/review/review_template.json": "e738be324cd4acd4ff1a7ed31f0454d4aa467215889b888b684fb14f97273cff",
+    "experiments/research1_round2_20261024/R3_final_matching.json": "8da53fb338f033093ab0e2ca0b3ad67306fc8be6d48ef67b5d27a9095d97f7c0"
+  },
+  "dataset_source_sha256": {
+    "samples/all_panoramas.jsonl": "20135267ed4d06d256997923ae3b7b9b20f4601b60e182e3de5b7b09718ca66e",
+    "splits/official_house_split.json": "c1316ab454857bdf54c949b9782613f30741e1b77f2540274530a2d814316535",
+    "splits/derived_house_split.json": "9c9de62b6a4b2c1632a29365228a40a7ded3fce6a55dae303d14464733510ef1"
+  },
+  "limitations": [
+    "no claim of unseen-house end-to-end generalization",
+    "historic development data reused for historical diagnostic only",
+    "new cohort has not been encoded or trained",
+    "manual labels remain pending"
+  ]
+}

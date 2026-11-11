@@ -1,0 +1,14 @@
+{
+  "active_splits": [
+    "train",
+    "val"
+  ],
+  "algorithm": "lexicographic stable house_id order; take one positive per house; continue house round-robin by depth; lexicographic stable pair ID within house",
+  "schema_version": "zind-t5-train-sampling-v1",
+  "seed": 123,
+  "selected_positive_count": 4096,
+  "selection_uses_geometry_or_error": false,
+  "selection_uses_model_output": false,
+  "source_positive_count": 14741,
+  "test_data_accessed": false
+}

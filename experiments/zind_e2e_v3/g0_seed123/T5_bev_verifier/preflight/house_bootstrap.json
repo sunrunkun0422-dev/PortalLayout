@@ -1,0 +1,23 @@
+{
+  "V0_T3_final": {
+    "ci95_high": 0.0,
+    "ci95_low": 0.0,
+    "house_count": 155,
+    "observed": 0.0,
+    "replicates": 2000
+  },
+  "V1_logistic": {
+    "ci95_high": 0.2363125491223474,
+    "ci95_low": 0.1832834959605498,
+    "house_count": 155,
+    "observed": 0.2101851851851852,
+    "replicates": 2000
+  },
+  "V2_mlp": {
+    "ci95_high": 0.23398576466046966,
+    "ci95_low": 0.17887721922984035,
+    "house_count": 155,
+    "observed": 0.2074074074074074,
+    "replicates": 2000
+  }
+}

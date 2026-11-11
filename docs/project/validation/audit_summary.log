@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-11-05T19:49:39.401692+08:00",
+  "baseline_markdown_count": 391,
+  "current_markdown_count": 373,
+  "merged_source_count": 33,
+  "merged_archive_count": 6,
+  "baseline_integrity": {
+    "source_hash_recorded": 33,
+    "updated": 5,
+    "byte_identical": 353
+  },
+  "categories": {
+    "merged_to_archive": 33,
+    "retain_documentation": 25,
+    "retain_experiment_evidence": 331,
+    "retain_artifact_contract": 4,
+    "retain_deliverable": 7
+  },
+  "missing_baseline": [],
+  "cache_bytes": 5748920,
+  "cache_file_count": 486,
+  "finder_metadata_bytes": 18444,
+  "duplicate_markdown_groups": 3,
+  "static_review_candidates": 7,
+  "historical_link_redirects": 0
+}

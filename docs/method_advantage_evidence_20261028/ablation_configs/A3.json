@@ -1,0 +1,46 @@
+{
+  "group": "A3",
+  "context": true,
+  "pair_conditioned_retrieval": true,
+  "common": {
+    "seed": 123,
+    "max_steps": 6000,
+    "validation_interval": 500,
+    "early_stopping": false,
+    "selection_rule": [
+      "cross_room_house_macro_ap descending",
+      "overall_ap descending",
+      "balanced_loss ascending",
+      "step ascending"
+    ],
+    "objective": "known_cells",
+    "pair_batch_size": 2,
+    "optimizer": {
+      "name": "AdamW",
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "scheduler": null
+    },
+    "sampler": "alternate positive/proven-unmatched pair; uniform house then uniform pair; random.Random(seed)",
+    "frontend": "frozen main60_20261024",
+    "candidate_ids": "frozen",
+    "base_pooling": true,
+    "structure": true,
+    "geometry": true,
+    "intra_attention": true,
+    "dustbin": true,
+    "initialization": "identical initial shared weights and sampling order; train each variant from start",
+    "followup_seeds": [
+      456,
+      789
+    ],
+    "followup_gate": "primary contrast improves at feasible frozen workpoint"
+  },
+  "status": "specification_only_not_a_current_cli_config",
+  "training_started": false
+}

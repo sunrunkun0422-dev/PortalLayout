@@ -1,0 +1,18 @@
+{
+  "all_finite": true,
+  "candidate_geometry_hard_failure_count": 26,
+  "candidate_geometry_soft_failure_count": 2003,
+  "candidate_geometry_valid_count": 2990,
+  "candidate_row_count": 3016,
+  "feature_file_sha256": "25927eb29798a6ccc9344b7faf0437a5e4cf382870dd9235b60693ccc7b0e41e",
+  "geometry_failure_reasons": {
+    "M2 hard failure; polygon mapper fallback forbidden": 26
+  },
+  "input_uses_gt": false,
+  "pair_count": 1080,
+  "schema_version": "zind-salve-feature-generation-v1",
+  "shortlist_N": 3,
+  "shortlist_has_strict_target": 964,
+  "split": "val",
+  "test_data_accessed": false
+}

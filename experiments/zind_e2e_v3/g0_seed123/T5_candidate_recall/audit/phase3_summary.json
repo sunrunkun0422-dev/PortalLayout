@@ -1,0 +1,17 @@
+{
+  "o0_parity": {
+    "best_candidate_exact_count": 1827,
+    "candidate_score_max_abs_diff": 9.59634780883789e-06,
+    "interval_exact_count": 1827,
+    "pair_count": 1827,
+    "pair_match_probability_max_abs_diff": 3.7550926208496094e-06,
+    "pair_no_match_probability_max_abs_diff": 3.874301910400391e-06,
+    "passed": true
+  },
+  "optimizer_created": false,
+  "oracle_summary_sha256": "78d0d7ad8249b9281a21014b1ec8992d8bd93576f77f47896fb65b5a6027bd90",
+  "processed_pair_count": 12789,
+  "schema_version": "zind-t5-phase3-summary-v1",
+  "test_data_accessed": false,
+  "training_started": false
+}

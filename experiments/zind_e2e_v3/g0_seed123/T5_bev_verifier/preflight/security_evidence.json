@@ -1,0 +1,16 @@
+{
+  "T4_modified": false,
+  "active_splits": [
+    "train",
+    "val"
+  ],
+  "checkpoints_unchanged": true,
+  "cnn_training_started": false,
+  "end_to_end_training_started": false,
+  "formal_proposal_modified": false,
+  "lightweight_verifier_training_started": true,
+  "m2_unchanged": true,
+  "opening_or_matcher_training_started": false,
+  "schema_version": "zind-salve-security-v2",
+  "test_data_accessed": false
+}

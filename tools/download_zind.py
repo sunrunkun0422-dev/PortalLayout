@@ -313,7 +313,7 @@ def download_all(output_dir: Path, server_token: str, workers: int, partial_perc
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Download ZInD data for Bi_Layout")
-    parser.add_argument("-o", "--output-dir", default="src/dataset/ZInD")
+    parser.add_argument("-o", "--output-dir", default="data/ZInD")
     parser.add_argument("-s", "--server-token", default=os.environ.get("ZIND_SERVER_TOKEN"))
     parser.add_argument("-n", "--workers", type=int, default=min(16, (os.cpu_count() or 4)))
     parser.add_argument("-p", "--partial-download-percentage", type=float, default=100.0)

@@ -1,0 +1,204 @@
+{
+  "replicates": 2000,
+  "schema_version": "zind-t5-house-bootstrap-v2",
+  "seed": 123,
+  "test_data_accessed": false,
+  "train": {
+    "decision_failures": {
+      "categories": {
+        "A_opening_head_signal": {
+          "ci95_high": 0.2722405820639755,
+          "ci95_low": 0.23681988462437678,
+          "count": 620,
+          "proportion": 0.25503907856849034
+        },
+        "B_proposal_logic": {
+          "ci95_high": 0.6329131831810322,
+          "ci95_low": 0.5926384188757285,
+          "count": 1490,
+          "proportion": 0.6129164952694365
+        },
+        "C_target_mapping": {
+          "ci95_high": 0.0012610605736670412,
+          "ci95_low": 0.0,
+          "count": 1,
+          "proportion": 0.00041135335252982314
+        },
+        "D_matcher": {
+          "ci95_high": 0.14629057339799395,
+          "ci95_low": 0.11798436696513839,
+          "count": 320,
+          "proportion": 0.1316330728095434
+        }
+      },
+      "failure_pair_count": 2431,
+      "house_count": 1144,
+      "success_pair_count": 1665
+    },
+    "fine_grained_missing": {
+      "house_count": 1075,
+      "missing_pair_count": 2111,
+      "reasons": {
+        "below_threshold_A": {
+          "ci95_high": 0.01586614884393063,
+          "ci95_low": 0.0066100094428706326,
+          "count": 23,
+          "proportion": 0.010895310279488394
+        },
+        "below_threshold_B": {
+          "ci95_high": 0.009638786695261508,
+          "ci95_low": 0.0032476985255594643,
+          "count": 13,
+          "proportion": 0.006158218853623875
+        },
+        "dedup_removed": {
+          "ci95_high": 0.006052211999073671,
+          "ci95_low": 0.0013985525647536821,
+          "count": 7,
+          "proportion": 0.0033159639981051635
+        },
+        "interval_expansion_failure": {
+          "ci95_high": 0.004721546881442884,
+          "ci95_low": 0.0004743664477297467,
+          "count": 5,
+          "proportion": 0.0023685457129322598
+        },
+        "interval_merge": {
+          "ci95_high": 0.6829169363524161,
+          "ci95_low": 0.6386429767233348,
+          "count": 1395,
+          "proportion": 0.6608242539081004
+        },
+        "interval_split": {
+          "ci95_high": 0.028558169579111985,
+          "ci95_low": 0.01642905216848879,
+          "count": 47,
+          "proportion": 0.02226432970156324
+        },
+        "no_opening_signal_A": {
+          "ci95_high": 0.25648714044913273,
+          "ci95_low": 0.21889510112072758,
+          "count": 500,
+          "proportion": 0.23685457129322596
+        },
+        "no_opening_signal_B": {
+          "ci95_high": 0.06546567239048656,
+          "ci95_low": 0.044493658030152566,
+          "count": 116,
+          "proportion": 0.054950260540028426
+        },
+        "no_opening_signal_both": {
+          "ci95_high": 0.003820484984057925,
+          "ci95_low": 0.0004655493482309125,
+          "count": 4,
+          "proportion": 0.0018948365703458077
+        },
+        "side_candidates_present_pair_target_missing": {
+          "ci95_high": 0.001438883458763474,
+          "ci95_low": 0.0,
+          "count": 1,
+          "proportion": 0.0004737091425864519
+        }
+      }
+    }
+  },
+  "val": {
+    "decision_failures": {
+      "categories": {
+        "A_opening_head_signal": {
+          "ci95_high": 0.24742348771686218,
+          "ci95_low": 0.19577730641734545,
+          "count": 293,
+          "proportion": 0.2209653092006033
+        },
+        "B_proposal_logic": {
+          "ci95_high": 0.3734499948677797,
+          "ci95_low": 0.3133850328137257,
+          "count": 454,
+          "proportion": 0.34238310708898945
+        },
+        "C_target_mapping": {
+          "ci95_high": 0.0,
+          "ci95_low": 0.0,
+          "count": 0,
+          "proportion": 0.0
+        },
+        "D_matcher": {
+          "ci95_high": 0.4682127300034474,
+          "ci95_low": 0.40158637873754155,
+          "count": 579,
+          "proportion": 0.43665158371040724
+        }
+      },
+      "failure_pair_count": 1326,
+      "house_count": 157,
+      "success_pair_count": 501
+    },
+    "fine_grained_missing": {
+      "house_count": 156,
+      "missing_pair_count": 747,
+      "reasons": {
+        "below_threshold_A": {
+          "ci95_high": 0.029270940410553517,
+          "ci95_low": 0.009332095490716182,
+          "count": 14,
+          "proportion": 0.018741633199464525
+        },
+        "below_threshold_B": {
+          "ci95_high": 0.013717421124828532,
+          "ci95_low": 0.0013474833746486396,
+          "count": 5,
+          "proportion": 0.006693440428380187
+        },
+        "candidate_cap_removed": {
+          "ci95_high": 0.004261515178455967,
+          "ci95_low": 0.0,
+          "count": 1,
+          "proportion": 0.0013386880856760374
+        },
+        "dedup_removed": {
+          "ci95_high": 0.011126564673157162,
+          "ci95_low": 0.0012953367875647669,
+          "count": 4,
+          "proportion": 0.00535475234270415
+        },
+        "interval_expansion_failure": {
+          "ci95_high": 0.005025760113699809,
+          "ci95_low": 0.0,
+          "count": 1,
+          "proportion": 0.0013386880856760374
+        },
+        "interval_merge": {
+          "ci95_high": 0.5933707209543568,
+          "ci95_low": 0.5135125551082997,
+          "count": 413,
+          "proportion": 0.5528781793842035
+        },
+        "interval_split": {
+          "ci95_high": 0.031578947368421054,
+          "ci95_low": 0.012128971932103043,
+          "count": 16,
+          "proportion": 0.0214190093708166
+        },
+        "no_opening_signal_A": {
+          "ci95_high": 0.3372096793653666,
+          "ci95_low": 0.2584737508254457,
+          "count": 223,
+          "proportion": 0.29852744310575635
+        },
+        "no_opening_signal_B": {
+          "ci95_high": 0.10695187165775401,
+          "ci95_low": 0.06379762599412171,
+          "count": 63,
+          "proportion": 0.08433734939759036
+        },
+        "no_opening_signal_both": {
+          "ci95_high": 0.016562097838304517,
+          "ci95_low": 0.002812644044959756,
+          "count": 7,
+          "proportion": 0.009370816599732263
+        }
+      }
+    }
+  }
+}

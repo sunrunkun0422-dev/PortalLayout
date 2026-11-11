@@ -1,0 +1,48 @@
+{
+  "schema": "r06-review-pack.v1",
+  "seed": 123,
+  "initial_count": 200,
+  "reserve_count": 200,
+  "cohort_sha256": "41d39e371aa516144384452c207707bff025b36401550cc72177ab25e15383f6",
+  "dataset_meta_sha256": "72806c18bdf60c2129d92115de5c8e7eb61c573a1bda613f8e8d21fb034b48f0",
+  "cohort_file": "/home/feixia/pythonProject/AAAsrk/PortalLayout/experiments/portallayout_design10_20261105/R01/cohort.json",
+  "dataset_root": "/home/feixia/pythonProject/AAAsrk/PortalLayout/data/ZInD-FloorSet-v1/train_20261021",
+  "raw_root": "/home/feixia/pythonProject/AAAsrk/zind/data",
+  "sampling_rule": "eligible cross-room physical door/opening geometry proxy and valid GT pose; round-robin houses; sha256 order",
+  "data_use": "offline_human_review_only",
+  "source": "official_train_only",
+  "candidate_counts": {
+    "all_unordered_pairs": 30361,
+    "cross_room_pairs": 23533,
+    "eligible_pairs": 2090,
+    "excluded_same_complete_room": 6828,
+    "excluded_no_nonambiguous_door_or_opening_proxy": 21443
+  },
+  "universe_houses": 54,
+  "selected_houses_by_batch": {
+    "initial": 54,
+    "reserve": 51
+  },
+  "created_at": "2026-11-05T21:21:31.125942+08:00",
+  "human_reviews_completed": 0,
+  "pack_id": "250b2aff9a0d9401649a8399ba1f2f144bc09a3142997d7ea674d732199261f8",
+  "selected_case_counts_by_role": {
+    "audit": 61,
+    "calibration": 77,
+    "fit": 207,
+    "selection": 55
+  },
+  "selected_house_counts_by_role": {
+    "audit": 8,
+    "calibration": 10,
+    "fit": 28,
+    "selection": 8
+  },
+  "source_hashes_sha256": "3535f29bb0ab4305c54f552663336ee1d48782a3862fe9ed491436f6d7c41d35",
+  "code_sha256": {
+    "research10_r06_review.py": "b869e9a6b3d3c52f0199faecc9971ae34b485435157d3b7e52703b15b19db3d4",
+    "research10_r06_review.html": "a5da7fa4fbf4a3b2014b63ec0499753aa1ca1caebb01c4e7cb2c77cf1377fdb0"
+  },
+  "python_version": "3.8.20",
+  "pillow_version": "10.4.0"
+}

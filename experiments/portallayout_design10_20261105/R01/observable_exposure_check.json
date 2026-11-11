@@ -1,0 +1,104 @@
+{
+  "checkpoint_scope": "historical ObservablePairs joint-trained checkpoint only; not claim about modular frontend checkpoints",
+  "source": "experiments/zind_observable_v1/training/selection_summary.json",
+  "by_role": {
+    "fit": {
+      "joint_train": [
+        "0001",
+        "0002",
+        "0012",
+        "0024",
+        "0033",
+        "0061",
+        "0079",
+        "0153",
+        "0216",
+        "0236",
+        "0401",
+        "0419",
+        "0449",
+        "0652",
+        "0676",
+        "0694",
+        "0732",
+        "0786",
+        "0818",
+        "0839",
+        "0858",
+        "0937",
+        "0951",
+        "0958",
+        "0993",
+        "0998",
+        "1011",
+        "1018",
+        "1067",
+        "1150",
+        "1156",
+        "1191",
+        "1242",
+        "1281",
+        "1472",
+        "1482",
+        "1484",
+        "1487",
+        "1505"
+      ],
+      "joint_internal_monitor": [
+        "0549"
+      ],
+      "not_recorded": []
+    },
+    "selection": {
+      "joint_train": [
+        "0081",
+        "0423",
+        "0451",
+        "0476",
+        "0530",
+        "0674",
+        "0830"
+      ],
+      "joint_internal_monitor": [
+        "0361",
+        "1053",
+        "1195"
+      ],
+      "not_recorded": []
+    },
+    "calibration": {
+      "joint_train": [
+        "0351",
+        "0380",
+        "0469",
+        "0511",
+        "0633",
+        "0686",
+        "1254",
+        "1264",
+        "1377"
+      ],
+      "joint_internal_monitor": [
+        "0486"
+      ],
+      "not_recorded": []
+    },
+    "audit": {
+      "joint_train": [
+        "0005",
+        "0273",
+        "0359",
+        "0798",
+        "0910",
+        "1087",
+        "1140"
+      ],
+      "joint_internal_monitor": [
+        "0242",
+        "0313",
+        "0317"
+      ],
+      "not_recorded": []
+    }
+  }
+}

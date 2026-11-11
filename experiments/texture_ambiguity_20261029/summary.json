@@ -1,0 +1,21 @@
+{
+  "scope": "development selection houses; frozen R3; exploratory only",
+  "descriptor": "min(upper,lower); each band: 0.5 RGB histogram intersection + 0.5 gray horizontal-gradient histogram intersection",
+  "surface_masks": false,
+  "human_verified": false,
+  "pair_count": 3394,
+  "image_count": 273,
+  "source_sha256": "58387df4dffac10fe4e9626476b6a4e3320de925260796a4472583b1e2f5097b",
+  "groups": {
+    "accepted_weak_positive": 78,
+    "missed_weak_positive": 125,
+    "no_known_positive": 3191
+  },
+  "shortlist_count": 28,
+  "paired_comparison_count": 7,
+  "salve_adapted_positive_hypotheses": 1,
+  "salve_adapted_positive_rejected": 1,
+  "original_salve_available": false,
+  "conclusion": "7 adapted-baseline probes completed; original SALVe superiority and texture causality unverified",
+  "paired_comparison_report": "paired_probe.json"
+}

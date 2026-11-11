@@ -1,4 +1,73 @@
 checkpoints
 __pycache__
-src/dataset
+src/dataset/*
+!src/dataset/ZInD_matching_groups/
+src/dataset/ZInD_matching_groups/*
+!src/dataset/ZInD_matching_groups/debug_train_0665_floor_03.json
 mp3d.zip
+
+# Python runtime files.
+.pytest_cache/
+*.py[cod]
+
+# Keep readable experiment evidence; regenerated tensors, caches, logs, and
+# bulk visualizations remain local. The curated PPT examples are separate.
+experiments/zind_e2e_v2/full_ablation_g0_seed123/*.log
+experiments/zind_e2e_v3/**
+!experiments/zind_e2e_v3/**/
+!experiments/zind_e2e_v3/**/*.md
+!experiments/zind_e2e_v3/**/*.json
+!experiments/zind_e2e_v3/**/*.csv
+!experiments/zind_e2e_v3/**/*.txt
+!experiments/zind_e2e_v3/**/*.sh
+!experiments/zind_e2e_v3/**/raster_examples/*.svg
+!experiments/zind_e2e_v3/**/visual_audit/*observations.jsonl
+experiments/zind_e2e_v3/**/frozen_room_cache*/
+experiments/zind_e2e_v3/**/upstream_cache/
+experiments/zind_e2e_v3/**/*room_cache_index.json
+experiments/zind_e2e_v3/**/*room_cache_plan.json
+experiments/zind_e2e_v3/**/medium_diagnostic/train_medium.json
+experiments/zind_e2e_v3/**/medium_diagnostic/val_medium.json
+experiments/zind_e2e_v3/**/medium_diagnostic/factors/
+experiments/zind_e2e_v3/**/medium_diagnostic/medium_proposal_isolation.json
+experiments/zind_e2e_v3/**/negative_pair_manifest.json
+
+# Publish output reports, not per-pair predictions or raw data. Existing
+# tracked examples are unaffected by these ignore rules.
+src/output/**
+!src/output/**/
+!src/output/**/*.md
+!src/output/**/summary.json
+!src/output/**/run_metadata.json
+!src/output/**/metadata.json
+
+# Canonical PortalLayout runtime locations.
+data/*
+!data/ZInD_matching_groups/
+data/ZInD_matching_groups/*
+!data/ZInD_matching_groups/debug_train_0665_floor_03.json
+outputs/**
+!outputs/**/
+!outputs/**/*.md
+!outputs/**/summary.json
+!outputs/**/run_metadata.json
+!outputs/**/metadata.json
+*.egg-info/
+build/
+dist/
+
+# Retain previously versioned examples after migration.
+!/outputs/custom_panorama_test/u=745743147,2360825291&fm=253&fmt=auto&app=138&f=JPEG_3d.obj
+!/outputs/custom_panorama_test/u=745743147,2360825291&fm=253&fmt=auto&app=138&f=JPEG_pred.json
+!/outputs/custom_panorama_test/u=745743147,2360825291&fm=253&fmt=auto&app=138&f=JPEG_pred.png
+!/outputs/custom_panorama_test/u=745743147,2360825291&fm=253&fmt=auto&app=138&f=JPEG_vp.txt
+
+# Experiment directories can contain thousands of per-view predictions,
+# model checkpoints and feature caches. Publish small reports by default;
+# explicitly force-add other reviewed evidence when it is needed.
+/experiments/**
+!/experiments/**/
+!/experiments/**/*.md
+!/experiments/**/report.json
+!/experiments/**/summary.json
+!/experiments/**/*_report.json

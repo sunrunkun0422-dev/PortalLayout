@@ -1,0 +1,42 @@
+{
+  "T4_outputs_modified": false,
+  "T5_training_started": false,
+  "active_splits": [
+    "train",
+    "val"
+  ],
+  "backward_executed": false,
+  "batchnorm_updates": false,
+  "checkpoints": {
+    "T0": {
+      "mtime_ns": 1786418591863426196,
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T0/best.pt",
+      "sha256": "2504cc25391e356cbc2fc7566fd0efea1040c916e2c85be6fbbc488c84ee5120",
+      "size": 418836277
+    },
+    "T1": {
+      "mtime_ns": 1786521270460200002,
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T1/best.pt",
+      "sha256": "171052202a4a40b4d2dafc685aa38256b16f904a79d4f4dac993169f098c51bf",
+      "size": 418836277
+    },
+    "T2": {
+      "mtime_ns": 1786630977604574390,
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T2/best.pt",
+      "sha256": "966af20b2b83b3d170b014e122fac206518de161d88668222b72dff646d1dd51",
+      "size": 418836277
+    },
+    "T3": {
+      "mtime_ns": 1786733650604347717,
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T3/best.pt",
+      "sha256": "ca083dbbc5a05d738dad36404ad708c623c272aef7a64398b4de3a793278cc5d",
+      "size": 418836277
+    }
+  },
+  "formal_proposal_defaults_modified": false,
+  "model_training_started": false,
+  "optimizer_created": false,
+  "parameter_update_executed": false,
+  "schema_version": "zind-t5-audit-security-v1",
+  "test_data_accessed": false
+}

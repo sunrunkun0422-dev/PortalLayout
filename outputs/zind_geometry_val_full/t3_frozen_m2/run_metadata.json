@@ -1,0 +1,344 @@
+{
+  "aggregate_model_forward_count_from_frozen_artifacts": 3630,
+  "analysis": {
+    "bootstrap_resamples": 10000,
+    "complete": true,
+    "cpu_only": true,
+    "scale_diagnostic_count": 497,
+    "visualizations": {
+      "artifacts": [
+        {
+          "category": "fixed_pair_id",
+          "pair_id": "0003_floor_01_pano_103_pano_101_negative",
+          "path": null,
+          "reason": "no shared GT coordinate frame or predicted layout",
+          "selection_is_posthoc": false
+        },
+        {
+          "category": "fixed_pair_id",
+          "pair_id": "0003_floor_01_pano_103_pano_99_13",
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_geometry_val_full/t3_frozen_m2/visualizations/01_fixed_pair_id_0003_floor_01_pano_103_pano_99_13.svg",
+          "selection_is_posthoc": false
+        },
+        {
+          "category": "yaw_improved",
+          "pair_id": "0989_floor_01_pano_3_pano_5_1",
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_geometry_val_full/t3_frozen_m2/visualizations/02_yaw_improved_0989_floor_01_pano_3_pano_5_1.svg",
+          "selection_is_posthoc": true
+        },
+        {
+          "category": "yaw_improved",
+          "pair_id": "0547_floor_01_pano_20_pano_18_8",
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_geometry_val_full/t3_frozen_m2/visualizations/03_yaw_improved_0547_floor_01_pano_20_pano_18_8.svg",
+          "selection_is_posthoc": true
+        },
+        {
+          "category": "yaw_worsened",
+          "pair_id": "0979_floor_03_pano_37_pano_35_18",
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_geometry_val_full/t3_frozen_m2/visualizations/04_yaw_worsened_0979_floor_03_pano_37_pano_35_18.svg",
+          "selection_is_posthoc": true
+        },
+        {
+          "category": "yaw_worsened",
+          "pair_id": "1528_floor_01_pano_35_pano_34_13",
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_geometry_val_full/t3_frozen_m2/visualizations/05_yaw_worsened_1528_floor_01_pano_35_pano_34_13.svg",
+          "selection_is_posthoc": true
+        },
+        {
+          "category": "scale_extreme",
+          "pair_id": "0637_floor_01_pano_21_pano_20_2",
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_geometry_val_full/t3_frozen_m2/visualizations/06_scale_extreme_0637_floor_01_pano_21_pano_20_2.svg",
+          "selection_is_posthoc": true
+        },
+        {
+          "category": "scale_extreme",
+          "pair_id": "0161_floor_01_pano_25_pano_26_7",
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_geometry_val_full/t3_frozen_m2/visualizations/07_scale_extreme_0161_floor_01_pano_25_pano_26_7.svg",
+          "selection_is_posthoc": true
+        },
+        {
+          "category": "m2_hard_failure",
+          "pair_id": "0872_floor_02_pano_37_pano_32_negative",
+          "path": null,
+          "reason": "no shared GT coordinate frame or predicted layout",
+          "selection_is_posthoc": true
+        },
+        {
+          "category": "m2_hard_failure",
+          "pair_id": "0950_floor_02_pano_41_pano_23_1",
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_geometry_val_full/t3_frozen_m2/visualizations/09_m2_hard_failure_0950_floor_02_pano_41_pano_23_1.svg",
+          "selection_is_posthoc": true
+        },
+        {
+          "category": "matcher_false_positive",
+          "pair_id": "0003_floor_01_pano_75_pano_86_negative",
+          "path": null,
+          "reason": "no shared GT coordinate frame or predicted layout",
+          "selection_is_posthoc": true
+        },
+        {
+          "category": "matcher_false_positive",
+          "pair_id": "0025_floor_01_pano_11_pano_26_negative",
+          "path": null,
+          "reason": "no shared GT coordinate frame or predicted layout",
+          "selection_is_posthoc": true
+        },
+        {
+          "category": "matcher_false_negative",
+          "pair_id": "0003_floor_01_pano_10_pano_50_5",
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_geometry_val_full/t3_frozen_m2/visualizations/12_matcher_false_negative_0003_floor_01_pano_10_pano_50_5.svg",
+          "selection_is_posthoc": true
+        },
+        {
+          "category": "matcher_false_negative",
+          "pair_id": "0003_floor_01_pano_10_pano_75_2",
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_geometry_val_full/t3_frozen_m2/visualizations/13_matcher_false_negative_0003_floor_01_pano_10_pano_75_2.svg",
+          "selection_is_posthoc": true
+        },
+        {
+          "category": "pose_success_bev_failure",
+          "pair_id": "0069_floor_00_pano_6_pano_5_5",
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_geometry_val_full/t3_frozen_m2/visualizations/14_pose_success_bev_failure_0069_floor_00_pano_6_pano_5_5.svg",
+          "selection_is_posthoc": true
+        },
+        {
+          "category": "pose_success_bev_failure",
+          "pair_id": "0161_floor_01_pano_4_pano_6_0",
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_geometry_val_full/t3_frozen_m2/visualizations/15_pose_success_bev_failure_0161_floor_01_pano_4_pano_6_0.svg",
+          "selection_is_posthoc": true
+        }
+      ],
+      "bounded_diagnostic_selection": true,
+      "not_random_qualitative_examples": true
+    }
+  },
+  "bootstrap": {
+    "cluster": "house_id",
+    "resamples": 10000,
+    "seed": 123
+  },
+  "checkpoint": {
+    "allows_val": true,
+    "completed_epoch": 8,
+    "data_contract": {
+      "active_splits": [
+        "train",
+        "val"
+      ],
+      "dataset": "ZInD_matching formatVersion=2 complete-room pairs",
+      "feature_caches": {
+        "train": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Cross_Scene_Matcher/zind_matching_feature_cache/train",
+        "val": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Cross_Scene_Matcher/zind_matching_feature_cache/val"
+      },
+      "feature_dim": 512,
+      "house_counts": {
+        "train": 1260,
+        "val": 157
+      },
+      "manifests": {
+        "train": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD_matching/train.json",
+        "val": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD_matching/val.json"
+      },
+      "pair_counts": {
+        "train": 29325,
+        "val": 3630
+      },
+      "raw_image_live_forward": true,
+      "test_evaluation_enabled": false,
+      "token_count": 256,
+      "uses_ground_truth_depth_as_model_input": false
+    },
+    "format_version": 1,
+    "opening_probability_threshold": 0.47,
+    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T3/best.pt",
+    "sha256": "ca083dbbc5a05d738dad36404ad708c623c272aef7a64398b4de3a793278cc5d",
+    "task": "ZInD_matching full end-to-end joint fine-tuning",
+    "test_evaluation_enabled": false
+  },
+  "completed_pair_count": 3630,
+  "frozen_prediction_count": 3630,
+  "full_manifest": {
+    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/output/zind_geometry_val_full/t3_frozen_m2/full_val_manifest.json",
+    "sha256": "7d2d9412f2fda7c8238d8241f72e9f2162521917e85b4bed6d25ff28899087a9"
+  },
+  "geometry_fanout_after_frozen_prediction": true,
+  "geometry_modes": [
+    "legacy_polygon",
+    "frame_polygon",
+    "candidate_local_m2"
+  ],
+  "gpu_process_invocation_count": 1,
+  "gt_available_to_geometry": false,
+  "gt_available_to_prediction": false,
+  "house_split": {
+    "train_house_count": 1260,
+    "train_val_overlap_count": 0,
+    "val_house_count": 157
+  },
+  "invocation_start_state": {
+    "completed_pair_count": 0,
+    "frozen_prediction_count": 0
+  },
+  "m2": {
+    "config": {
+      "context_padding_tokens": 4,
+      "probability_weight_floor": 0.25,
+      "probability_weight_span": 0.75,
+      "quality_max_angular_dispersion_degrees": 25.0,
+      "quality_max_normalized_residual": 0.05,
+      "quality_min_inlier_ratio": 0.6,
+      "quality_min_ray_condition": 0.05,
+      "quality_min_support": 4,
+      "ransac_median_edge_multiplier": 2.5,
+      "ransac_min_inliers": 4,
+      "ransac_radius_max_fraction": 0.06,
+      "ransac_radius_min_fraction": 0.008,
+      "ray_parallel_epsilon": 1e-08,
+      "width_ratio_max": 2.5,
+      "width_ratio_min": 0.03
+    },
+    "sha256": "cdce025fd5ba709a3c5afc827137860d1082c7ab44e27a5467ea6686a7a02a4c",
+    "source": "utils.candidate_local_portal_geometry.CandidateLocalPortalConfig",
+    "tuned_on_val": false
+  },
+  "model": {
+    "bi_layout": {
+      "checkpoint": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+      "config": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+      "epoch": 0,
+      "loaded": true,
+      "missingKeys": [],
+      "modelArgs": {
+        "decoder_name": "Share_Feature_Guidance_Module",
+        "depth": 8,
+        "dropout": 0.0,
+        "feature_channel": 512,
+        "height_compression_scale": 16,
+        "output_name": "Bi_Layout",
+        "output_number": 2,
+        "rpe": "lr_parameter_mirror",
+        "share_TF": true,
+        "two_conv_out": false,
+        "use_same_head": false,
+        "win_size": 16
+      },
+      "unexpectedKeys": []
+    },
+    "end_to_end": {
+      "completedEpoch": 8,
+      "loaded": true,
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T3/best.pt",
+      "task": "ZInD_matching full end-to-end joint fine-tuning"
+    },
+    "feature_cache_role": "train-only identity/coverage validation",
+    "feature_cache_used_for_inference": false,
+    "matcher": {
+      "completedEpoch": 5,
+      "formatVersion": 2,
+      "loaded": true,
+      "model": {
+        "candidate_temperature": 0.2,
+        "dropout": 0.1,
+        "feature_dim": 512,
+        "has_dustbin": true,
+        "heads": 8,
+        "hidden_dim": 128,
+        "opening_bias_strength": 1.0,
+        "shift_temperature": 0.05
+      },
+      "openingHeadDependency": {
+        "backboneContractValidated": true,
+        "biLayoutCheckpoint": {
+          "mtimeNs": 1778459017793688163,
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+          "size": 1228718862
+        },
+        "biLayoutConfig": {
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+          "sha256": "867506b93ae973b3517d20a9b2e9899964684366b3644d1facc22110e1382cbd",
+          "size": 1380
+        },
+        "branchOrder": "extended_first"
+      },
+      "openingProbabilityThreshold": 0.47000000000000003,
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Cross_Scene_Matcher/zind_matching_v1/best.pt",
+      "task": "ZInD_matching complete-room cross-scene opening matcher"
+    },
+    "opening_head": {
+      "backboneContract": {
+        "biLayoutCheckpoint": {
+          "mtimeNs": 1778459017793688163,
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+          "savedPath": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Bi_Layout_Net/zind_all/zind_all_best_model.pkl",
+          "size": 1228718862
+        },
+        "biLayoutConfig": {
+          "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+          "savedPath": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/config/zind_all.yaml",
+          "sha256": "867506b93ae973b3517d20a9b2e9899964684366b3644d1facc22110e1382cbd",
+          "size": 1380
+        },
+        "featureDim": 512,
+        "tokenCount": 256,
+        "validated": true
+      },
+      "branchOrder": "extended_first",
+      "completedEpoch": 20,
+      "formatVersion": 1,
+      "loadOrder": "matcher_checkpoint_then_opening_override",
+      "loaded": true,
+      "model": {
+        "branch_order": "extended_first",
+        "feature_dim": 512,
+        "hidden_dim": 128,
+        "kernel_size": 5,
+        "prior_relative_scale": 0.1,
+        "prior_strength": 4.0
+      },
+      "operatingThreshold": 0.47000000000000003,
+      "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/Opening_Head/zind_matching_v1/best.pt",
+      "task": "ZInD_matching single-view Opening Head (doors+openings)",
+      "thresholdFallback": false,
+      "thresholdPolicy": "max_recall_at_precision>=0.80"
+    }
+  },
+  "new_live_model_forward_count_this_invocation": 3630,
+  "one_live_backbone_call_per_new_pair": true,
+  "opening_threshold": {
+    "frozen": true,
+    "source": "T3 checkpoint",
+    "value": 0.47
+  },
+  "original_metrics": {
+    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T3/best_metrics.json",
+    "sha256": "75e410007556eb61fdf1ba2e8121b6c4891a6505ba65f22e75622ad86b3520d3"
+  },
+  "pair_count": 3630,
+  "pose_thresholds": [
+    [
+      10.0,
+      0.5
+    ],
+    [
+      15.0,
+      1.0
+    ],
+    [
+      30.0,
+      2.0
+    ]
+  ],
+  "purpose": "full validation diagnostic; frozen protocol; not test evaluation",
+  "runtime_seconds_so_far": 4232.658249313943,
+  "scale_thresholds": [
+    0.1,
+    0.2
+  ],
+  "schema_version": "zind-full-val-geometry-run-v1",
+  "split": "val",
+  "test_data_accessed": false,
+  "val_manifest": {
+    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/src/dataset/ZInD_matching/val.json",
+    "sha256": "acae7ecbd55d4f8b8aea7c7a8db4b8cbb434fe92992858ac0a4d4a26da7da1ec"
+  }
+}

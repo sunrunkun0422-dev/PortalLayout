@@ -1,0 +1,52 @@
+{
+  "legacy_missing_count": 747,
+  "legacy_missing_primary_reason_counts": {
+    "below_threshold_A": 14,
+    "below_threshold_B": 5,
+    "candidate_cap_removed": 1,
+    "dedup_removed": 4,
+    "interval_expansion_failure": 1,
+    "interval_merge": 413,
+    "interval_split": 16,
+    "no_opening_signal_A": 223,
+    "no_opening_signal_B": 63,
+    "no_opening_signal_both": 7
+  },
+  "positive_pair_count": 1827,
+  "primary_reason_counts": {
+    "below_threshold_A": 14,
+    "below_threshold_B": 5,
+    "candidate_cap_removed": 1,
+    "dedup_removed": 4,
+    "interval_expansion_failure": 1,
+    "interval_merge": 413,
+    "interval_split": 16,
+    "no_opening_signal_A": 223,
+    "no_opening_signal_B": 63,
+    "no_opening_signal_both": 7,
+    "target_present_correct": 501,
+    "target_present_dustbin_reject": 437,
+    "target_present_wrong_selection": 142
+  },
+  "reason_A_counts": {
+    "below_threshold": 14,
+    "candidate_cap_removed": 1,
+    "dedup_removed": 2,
+    "interval_expansion_failure": 2,
+    "interval_merge": 333,
+    "interval_split": 10,
+    "no_opening_signal": 230,
+    "present": 1235
+  },
+  "reason_B_counts": {
+    "below_threshold": 5,
+    "dedup_removed": 2,
+    "interval_merge": 96,
+    "interval_split": 11,
+    "no_opening_signal": 70,
+    "present": 1643
+  },
+  "schema_version": "zind-t5-candidate-reason-counts-v1",
+  "split": "val",
+  "test_data_accessed": false
+}

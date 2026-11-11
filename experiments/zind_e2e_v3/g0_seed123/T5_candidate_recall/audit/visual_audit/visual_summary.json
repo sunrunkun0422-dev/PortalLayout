@@ -1,0 +1,224 @@
+{
+  "all_selected_figures_reviewed": true,
+  "by_category": {
+    "below_threshold": {
+      "assessment": {
+        "confirmed": 3,
+        "partially_confirmed": 1
+      },
+      "confidence": {
+        "high": 2,
+        "medium": 2
+      },
+      "count": 4,
+      "primary_mechanism": {
+        "probability exists but below threshold": 4
+      },
+      "visibility": {
+        "clear": 1,
+        "not_visible": 1,
+        "partial": 2
+      }
+    },
+    "candidate_cap_removed": {
+      "assessment": {
+        "partially_confirmed": 1
+      },
+      "confidence": {
+        "low": 1
+      },
+      "count": 1,
+      "primary_mechanism": {
+        "candidate score calibration": 1
+      },
+      "visibility": {
+        "not_visible": 1
+      }
+    },
+    "dedup_removed": {
+      "assessment": {
+        "indeterminate": 2,
+        "partially_confirmed": 2
+      },
+      "confidence": {
+        "low": 2,
+        "medium": 2
+      },
+      "count": 4,
+      "primary_mechanism": {
+        "annotation ambiguity": 2,
+        "oblique/edge-on viewpoint": 1,
+        "repeated door appearance": 1
+      },
+      "visibility": {
+        "clear": 1,
+        "not_visible": 1,
+        "partial": 1,
+        "uncertain": 1
+      }
+    },
+    "interval_expansion_failure": {
+      "assessment": {
+        "indeterminate": 1
+      },
+      "confidence": {
+        "low": 1
+      },
+      "count": 1,
+      "primary_mechanism": {
+        "annotation ambiguity": 1
+      },
+      "visibility": {
+        "not_visible": 1
+      }
+    },
+    "interval_merge": {
+      "assessment": {
+        "confirmed": 1,
+        "indeterminate": 3,
+        "partially_confirmed": 4
+      },
+      "confidence": {
+        "low": 4,
+        "medium": 4
+      },
+      "count": 8,
+      "primary_mechanism": {
+        "adjacent openings merged": 1,
+        "broad response bridge": 7
+      },
+      "visibility": {
+        "clear": 2,
+        "not_visible": 2,
+        "partial": 1,
+        "uncertain": 3
+      }
+    },
+    "interval_split": {
+      "assessment": {
+        "confirmed": 3,
+        "partially_confirmed": 1
+      },
+      "confidence": {
+        "high": 1,
+        "medium": 3
+      },
+      "count": 4,
+      "primary_mechanism": {
+        "true opening split into fragments": 4
+      },
+      "visibility": {
+        "clear": 1,
+        "partial": 1,
+        "uncertain": 2
+      }
+    },
+    "no_opening_signal": {
+      "assessment": {
+        "confirmed": 3,
+        "partially_confirmed": 5
+      },
+      "confidence": {
+        "high": 1,
+        "low": 1,
+        "medium": 6
+      },
+      "count": 8,
+      "primary_mechanism": {
+        "missing visual response": 5,
+        "oblique/edge-on viewpoint": 1,
+        "probability exists but below threshold": 2
+      },
+      "visibility": {
+        "clear": 1,
+        "not_visible": 3,
+        "partial": 3,
+        "uncertain": 1
+      }
+    },
+    "target_present_correct": {
+      "assessment": {
+        "confirmed": 6
+      },
+      "confidence": {
+        "high": 4,
+        "medium": 2
+      },
+      "count": 6,
+      "primary_mechanism": {
+        "broad response bridge": 1,
+        "repeated door appearance": 1,
+        "uncertain": 2,
+        "wrap/seam handling": 2
+      },
+      "visibility": {
+        "clear": 4,
+        "partial": 2
+      }
+    },
+    "target_present_dustbin_reject": {
+      "assessment": {
+        "confirmed": 8
+      },
+      "confidence": {
+        "high": 4,
+        "medium": 4
+      },
+      "count": 8,
+      "primary_mechanism": {
+        "annotation ambiguity": 3,
+        "candidate score calibration": 2,
+        "repeated door appearance": 3
+      },
+      "visibility": {
+        "clear": 3,
+        "not_visible": 1,
+        "partial": 2,
+        "uncertain": 2
+      }
+    },
+    "target_present_wrong_selection": {
+      "assessment": {
+        "confirmed": 8
+      },
+      "confidence": {
+        "high": 7,
+        "medium": 1
+      },
+      "count": 8,
+      "primary_mechanism": {
+        "annotation ambiguity": 3,
+        "repeated door appearance": 4,
+        "wrap/seam handling": 1
+      },
+      "visibility": {
+        "clear": 3,
+        "not_visible": 1,
+        "partial": 1,
+        "uncertain": 3
+      }
+    }
+  },
+  "checkpoint_after": {
+    "mtime_ns": 1786733650604347717,
+    "path": "/home/feixia/pythonProject/AAAsrk/Bi_Layout/checkpoints/End_To_End/zind_e2e_v2/g0_seed123/T3/best.pt",
+    "sha256": "ca083dbbc5a05d738dad36404ad708c623c272aef7a64398b4de3a793278cc5d",
+    "size": 418836277
+  },
+  "no_opening_signal": {
+    "clear_visibility": 1,
+    "sample_count": 8,
+    "visually_difficult_or_uncertain": 7
+  },
+  "proposal_automatic_attribution_assessment": {
+    "confirmed": 10,
+    "indeterminate": 6,
+    "partially_confirmed": 14
+  },
+  "proposal_missing_sample_count": 30,
+  "reviewed_figure_count": 52,
+  "sample_count": 52,
+  "sampling_caveat": "Observed sample proportions must not be extrapolated to all 747 candidate-missing or 579 Matcher-failure pairs.",
+  "schema_version": "zind-full-val-visual-summary-v1",
+  "test_data_accessed": false
+}
